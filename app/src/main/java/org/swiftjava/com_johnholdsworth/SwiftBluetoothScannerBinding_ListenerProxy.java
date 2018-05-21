@@ -5,10 +5,8 @@
 
 package org.swiftjava.com_johnholdsworth;
 
-import com.johnholdsworth.swiftbindings.SwiftBluetoothScannerBinding;
-
 @SuppressWarnings("JniMissingFunction")
-public class SwiftBluetoothScannerBinding_ListenerProxy implements SwiftBluetoothScannerBinding.Listener {
+public class SwiftBluetoothScannerBinding_ListenerProxy implements com.johnholdsworth.swiftbindings.SwiftBluetoothScannerBinding.Listener {
 
     // address of proxy object
     long __swiftObject;

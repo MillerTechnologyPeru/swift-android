@@ -5,10 +5,8 @@
 
 package org.swiftjava.com_johnholdsworth;
 
-import com.johnholdsworth.swiftbindings.SwiftActivityBinding;
-
 @SuppressWarnings("JniMissingFunction")
-public class SwiftActivityBinding_ListenerProxy implements SwiftActivityBinding.Listener {
+public class SwiftActivityBinding_ListenerProxy implements com.johnholdsworth.swiftbindings.SwiftActivityBinding.Listener {
 
     // address of proxy object
     long __swiftObject;
