@@ -1,4 +1,4 @@
-package com.jmarkstar.swiftandroid
+package swiftandroid.bluetooth.le
 
 import android.bluetooth.le.ScanCallback
 import android.bluetooth.le.ScanResult
@@ -8,7 +8,7 @@ import android.bluetooth.le.ScanResult
  */
 
 @SuppressWarnings("JniMissingFunction")
-class SwiftBluetoothScanCallback(private val __swiftObject: Long): ScanCallback() {
+class SwiftScanCallback(private val __swiftObject: Long): ScanCallback() {
 
     override fun onScanResult(callbackType: Int, result: android.bluetooth.le.ScanResult?) {
 

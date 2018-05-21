@@ -1,4 +1,4 @@
-package com.jmarkstar.swiftandroid
+package swiftandroid.widget
 
 import android.view.View
 import android.view.ViewGroup
@@ -7,7 +7,7 @@ import android.widget.BaseAdapter
 /**
  * Created by coleman on 3/18/18.
  */
-open class SwiftAdapter(private val __swiftObject: Long) : BaseAdapter() {
+open class SwiftBaseAdapter(private val __swiftObject: Long) : BaseAdapter() {
     
     override fun getCount(): Int {
 

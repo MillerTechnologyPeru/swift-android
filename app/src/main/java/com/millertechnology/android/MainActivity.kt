@@ -2,9 +2,9 @@ package com.millertechnology.android
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.jmarkstar.swiftandroid.SwiftAdapter
 import com.johnholdsworth.swiftbindings.SwiftBluetoothScannerBinding
 import kotlinx.android.synthetic.main.activity_main.*
+import swiftandroid.widget.SwiftBaseAdapter
 
 class MainActivity : AppCompatActivity(), SwiftBluetoothScannerBinding.Responder {
 
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity(), SwiftBluetoothScannerBinding.Responder
         }
 
 
-        val swiftAdapter = checkedAdapter as SwiftAdapter
+        val swiftAdapter = checkedAdapter as SwiftBaseAdapter
         lvDevices.adapter = swiftAdapter
     }
 }
