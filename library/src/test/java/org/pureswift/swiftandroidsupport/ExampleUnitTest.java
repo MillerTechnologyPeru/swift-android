@@ -1,4 +1,4 @@
-package com.millertechnology.swiftandroid;
+package org.pureswift.swiftandroidsupport;
 
 import org.junit.Test;
 

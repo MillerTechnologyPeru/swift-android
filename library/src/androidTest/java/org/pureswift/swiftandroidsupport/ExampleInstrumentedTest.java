@@ -1,4 +1,4 @@
-package com.millertechnology.swiftandroid;
+package org.pureswift.swiftandroidsupport;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

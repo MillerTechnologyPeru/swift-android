@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.johnholdsworth.swiftbindings.SwiftBluetoothScannerBinding
 import kotlinx.android.synthetic.main.activity_main.*
-import swiftandroid.widget.SwiftBaseAdapter
+import org.pureswift.swiftandroidsupport.widget.SwiftBaseAdapter
 
 class MainActivity : AppCompatActivity(), SwiftBluetoothScannerBinding.Responder {
 
@@ -46,7 +46,6 @@ class MainActivity : AppCompatActivity(), SwiftBluetoothScannerBinding.Responder
         val checkedAdapter = checkNotNull(adapter){
             "Adapter is Null"
         }
-
 
         val swiftAdapter = checkedAdapter as SwiftBaseAdapter
         lvDevices.adapter = swiftAdapter

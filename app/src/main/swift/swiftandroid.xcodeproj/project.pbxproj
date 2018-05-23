@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		519EA2A920B3751000B48A8F /* MainActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519EA2A820B3751000B48A8F /* MainActivity.swift */; };
+		519EA2AA20B3751000B48A8F /* MainActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519EA2A820B3751000B48A8F /* MainActivity.swift */; };
+		519EA2AD20B4853C00B48A8F /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519EA2AC20B4853C00B48A8F /* JavaVM.framework */; };
 		OBJ_42 /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Exception.swift */; };
 		OBJ_43 /* HashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* HashMap.swift */; };
 		OBJ_44 /* JNICore.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* JNICore.swift */; };
@@ -45,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		519EA2A820B3751000B48A8F /* MainActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActivity.swift; sourceTree = "<group>"; };
+		519EA2AC20B4853C00B48A8F /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = System/Library/Frameworks/JavaVM.framework; sourceTree = SDKROOT; };
 		OBJ_10 /* SwiftActivityBinding_Responder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftActivityBinding_Responder.swift; sourceTree = "<group>"; };
 		OBJ_11 /* SwiftBluetoothScannerBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBluetoothScannerBinding.swift; sourceTree = "<group>"; };
 		OBJ_12 /* SwiftBluetoothScannerBinding_Listener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBluetoothScannerBinding_Listener.swift; sourceTree = "<group>"; };
@@ -78,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				519EA2AD20B4853C00B48A8F /* JavaVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		519EA2AB20B4853B00B48A8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				519EA2AC20B4853C00B48A8F /* JavaVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		OBJ_14 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,7 +155,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -149,8 +163,8 @@
 				OBJ_14 /* Tests */,
 				OBJ_15 /* Dependencies */,
 				OBJ_34 /* Products */,
+				519EA2AB20B4853B00B48A8F /* Frameworks */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -162,6 +176,7 @@
 				OBJ_11 /* SwiftBluetoothScannerBinding.swift */,
 				OBJ_12 /* SwiftBluetoothScannerBinding_Listener.swift */,
 				OBJ_13 /* SwiftBluetoothScannerBinding_Responder.swift */,
+				519EA2A820B3751000B48A8F /* MainActivity.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -245,7 +260,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_34 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				519EA2A920B3751000B48A8F /* MainActivity.swift in Sources */,
 				OBJ_42 /* Exception.swift in Sources */,
 				OBJ_43 /* HashMap.swift in Sources */,
 				OBJ_44 /* JNICore.swift in Sources */,
@@ -299,6 +315,7 @@
 				OBJ_72 /* SwiftActivityBinding_Responder.swift in Sources */,
 				OBJ_73 /* SwiftBluetoothScannerBinding.swift in Sources */,
 				OBJ_74 /* SwiftBluetoothScannerBinding_Listener.swift in Sources */,
+				519EA2AA20B3751000B48A8F /* MainActivity.swift in Sources */,
 				OBJ_75 /* SwiftBluetoothScannerBinding_Responder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,4 +1,4 @@
-package swiftandroid.widget
+package org.pureswift.swiftandroidsupport.widget
 
 import android.view.View
 import android.view.ViewGroup

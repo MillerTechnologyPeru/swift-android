@@ -1,4 +1,4 @@
-package swiftandroid.bluetooth.le
+package org.pureswift.swiftandroidsupport.bluetooth.le
 
 import android.bluetooth.le.ScanCallback
 import android.bluetooth.le.ScanResult
