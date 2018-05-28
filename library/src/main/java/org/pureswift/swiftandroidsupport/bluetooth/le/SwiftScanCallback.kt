@@ -30,6 +30,7 @@ class SwiftScanCallback(private val __swiftObject: Long): ScanCallback() {
     }
 
     //Native Methods
+
     external fun __on_scan_result(swiftObject: Long, callbackType: Int, result: android.bluetooth.le.ScanResult?)
 
     external fun __on_batch_scan_results(swiftObject: Long, results: MutableList<ScanResult>?)
