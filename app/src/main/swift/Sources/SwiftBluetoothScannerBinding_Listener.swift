@@ -39,7 +39,6 @@ fileprivate class SwiftBluetoothScannerBinding_ListenerLocal_: JNILocalProxy<Swi
                 JNI.report( "Unable to register java natives" )
             }
         }
-        
 
         defer { JNI.DeleteLocalRef( clazz ) }
         return JNI.api.NewGlobalRef( JNI.env, clazz )!
