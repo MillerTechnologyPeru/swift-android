@@ -1,14 +1,18 @@
 package com.millertechnology.android
 
+import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat
 import com.johnholdsworth.swiftbindings.SwiftBluetoothScannerBinding
-import kotlinx.android.synthetic.main.activity_main.*
 import org.pureswift.swiftandroidsupport.widget.SwiftBaseAdapter
 
 class MainActivity : AppCompatActivity(), SwiftBluetoothScannerBinding.Responder {
 
     companion object {
+
+        const val LOCATION_REQUEST_PERMISSION_CODE = 1000
 
         fun loadNativeDependencies(){
             System.loadLibrary("swiftandroid")
@@ -27,11 +31,17 @@ class MainActivity : AppCompatActivity(), SwiftBluetoothScannerBinding.Responder
 
         listener = bind(this)
 
-        val checkedListener = checkNotNull(listener){
-            "Listener is null"
-        }
+        if ( ContextCompat.checkSelfPermission( this, android.Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
 
-        checkedListener.viewDidLoad()
+            ActivityCompat.requestPermissions( this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_REQUEST_PERMISSION_CODE )
+        } else {
+
+            val checkedListener = checkNotNull(listener){
+                "Listener is null"
+            }
+
+            checkedListener.viewDidLoad()
+        }
     }
 
     override fun getCellResource(): Int {
@@ -47,7 +57,20 @@ class MainActivity : AppCompatActivity(), SwiftBluetoothScannerBinding.Responder
             "Adapter is Null"
         }
 
-        val swiftAdapter = checkedAdapter as SwiftBaseAdapter
-        lvDevices.adapter = swiftAdapter
+        //val swiftAdapter = checkedAdapter as SwiftBaseAdapter
+        //lvDevices.adapter = swiftAdapter
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+
+        if(requestCode == LOCATION_REQUEST_PERMISSION_CODE && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+
+            val checkedListener = checkNotNull(listener){
+                "Listener is null"
+            }
+
+            checkedListener.viewDidLoad()
+        }
     }
 }
