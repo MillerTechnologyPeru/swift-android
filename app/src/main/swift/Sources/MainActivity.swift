@@ -39,21 +39,30 @@ final class SwiftBluetoothScannerBinding_ListenerImpl: SwiftBluetoothScannerBind
     }
     
     let responder: SwiftBluetoothScannerBinding_ResponderForward
-    
+    /*
     private lazy var layoutInflater: Android.View.LayoutInflater = Android.View.LayoutInflater(casting: self.responder.getLayoutInflater())!
     
     private lazy var listAdapter: ListAdapter = ListAdapter(layoutInflater: self.layoutInflater,
                                                             cellResource: self.responder.getCellResource(),
                                                             textViewResource: self.responder.getTextViewResource())
+    */
+    
+    private var data = [Android.Bluetooth.LE.ScanResult]() {
+        
+        didSet {
+            NSLog("\(type(of: self)): \(#function)")
+            
+        }
+    }
     
     override func viewDidLoad() {
         
         NSLog("\(type(of: self)): \(#function)")
-        
+        /*
         listAdapter.withJavaObject { [unowned self] in
             self.responder.setAdapter(adapter: JavaObject(javaObject: $0))
         }
-        
+ 
         let scanCallback = ScanCallback { [weak self] in
             
             self?.listAdapter.data.append($0)
@@ -62,18 +71,48 @@ final class SwiftBluetoothScannerBinding_ListenerImpl: SwiftBluetoothScannerBind
             self?.listAdapter.withJavaObject {
                 self?.responder.setAdapter(adapter: JavaObject(javaObject: $0))
             }
-        }
+        }*/
         
+        //Android.Bluetooth.Adapter.default?.lowEnergyScanner?.startScan(callback: scanCallback)
+        
+        let scanCallback = ScanCallback { [weak self] in
+            NSLog("\(type(of: self)): \(#function)")
+            self?.data.append($0)
+        }
+        // = Android.Bluetooth.LE.ScanSettings.Builder().build()
         Android.Bluetooth.Adapter.default?.lowEnergyScanner?.startScan(callback: scanCallback)
     }
 }
 
 extension SwiftBluetoothScannerBinding_ListenerImpl {
     
-    class DeviceAdapter: Android.Widget.Adapter{
+    struct ScanCallback: Android.Bluetooth.LE.ScanCallback {
         
+        var scanResult: (Android.Bluetooth.LE.ScanResult) -> ()
+        
+        func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType,
+                          result: Android.Bluetooth.LE.ScanResult) {
+            
+            scanResult(result)
+            
+            NSLog("\(#function) \(result.device.address)")
+        }
+        
+        func onScanFailed(error: AndroidBluetoothLowEnergyScanCallback.Error) {
+            
+            NSLog("\(#function) \(error)")
+        }
+        
+        func onBatchScanResults(results: [Android.Bluetooth.LE.ScanResult]) {
+            
+            NSLog("\(#function) \(results.count)")
+        }
     }
+}
+
+extension SwiftBluetoothScannerBinding_ListenerImpl {
     
+    /*
     class ListAdapter: Android.Widget.Adapter {
         
         let layoutInflater: Android.View.LayoutInflater
@@ -127,31 +166,5 @@ extension SwiftBluetoothScannerBinding_ListenerImpl {
             
             return view
         }
-    }
-}
-
-extension SwiftBluetoothScannerBinding_ListenerImpl {
-    
-    struct ScanCallback: Android.Bluetooth.LE.ScanCallback {
-        
-        var scanResult: (Android.Bluetooth.LE.ScanResult) -> ()
-        
-        func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType,
-                          result: Android.Bluetooth.LE.ScanResult) {
-            
-            scanResult(result)
-            
-            NSLog("\(#function) \(result.device.address)")
-        }
-        
-        func onScanFailed(error: AndroidBluetoothLowEnergyScanCallback.Error) {
-            
-            NSLog("\(#function) \(error)")
-        }
-        
-        func onBatchScanResults(results: [Android.Bluetooth.LE.ScanResult]) {
-            
-            NSLog("\(#function) \(results.count)")
-        }
-    }
+    }*/
 }
