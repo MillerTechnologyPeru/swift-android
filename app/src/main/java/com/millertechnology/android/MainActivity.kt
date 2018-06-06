@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import com.johnholdsworth.swiftbindings.SwiftBluetoothScannerBinding
+import kotlinx.android.synthetic.main.activity_main.*
 import org.pureswift.swiftandroidsupport.widget.SwiftBaseAdapter
 
 class MainActivity : AppCompatActivity(), SwiftBluetoothScannerBinding.Responder {
@@ -57,8 +58,8 @@ class MainActivity : AppCompatActivity(), SwiftBluetoothScannerBinding.Responder
             "Adapter is Null"
         }
 
-        //val swiftAdapter = checkedAdapter as SwiftBaseAdapter
-        //lvDevices.adapter = swiftAdapter
+        val swiftAdapter = checkedAdapter as SwiftBaseAdapter
+        lvDevices.adapter = swiftAdapter
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {

@@ -39,13 +39,12 @@ final class SwiftBluetoothScannerBinding_ListenerImpl: SwiftBluetoothScannerBind
     }
     
     let responder: SwiftBluetoothScannerBinding_ResponderForward
-    /*
+    
     private lazy var layoutInflater: Android.View.LayoutInflater = Android.View.LayoutInflater(casting: self.responder.getLayoutInflater())!
     
     private lazy var listAdapter: ListAdapter = ListAdapter(layoutInflater: self.layoutInflater,
                                                             cellResource: self.responder.getCellResource(),
                                                             textViewResource: self.responder.getTextViewResource())
-    */
     
     private var data = [Android.Bluetooth.LE.ScanResult]() {
         
@@ -58,7 +57,7 @@ final class SwiftBluetoothScannerBinding_ListenerImpl: SwiftBluetoothScannerBind
     override func viewDidLoad() {
         
         NSLog("\(type(of: self)): \(#function)")
-        /*
+        
         listAdapter.withJavaObject { [unowned self] in
             self.responder.setAdapter(adapter: JavaObject(javaObject: $0))
         }
@@ -71,16 +70,17 @@ final class SwiftBluetoothScannerBinding_ListenerImpl: SwiftBluetoothScannerBind
             self?.listAdapter.withJavaObject {
                 self?.responder.setAdapter(adapter: JavaObject(javaObject: $0))
             }
-        }*/
+        }
         
-        //Android.Bluetooth.Adapter.default?.lowEnergyScanner?.startScan(callback: scanCallback)
-        
+        Android.Bluetooth.Adapter.default?.lowEnergyScanner?.startScan(callback: scanCallback)
+        /*
         let scanCallback = ScanCallback { [weak self] in
             NSLog("\(type(of: self)): \(#function)")
             self?.data.append($0)
         }
         // = Android.Bluetooth.LE.ScanSettings.Builder().build()
         Android.Bluetooth.Adapter.default?.lowEnergyScanner?.startScan(callback: scanCallback)
+        */
     }
 }
 
@@ -112,8 +112,7 @@ extension SwiftBluetoothScannerBinding_ListenerImpl {
 
 extension SwiftBluetoothScannerBinding_ListenerImpl {
     
-    /*
-    class ListAdapter: Android.Widget.Adapter {
+    class ListAdapter: Android.Widget.BaseAdapter {
         
         let layoutInflater: Android.View.LayoutInflater
         
@@ -138,18 +137,20 @@ extension SwiftBluetoothScannerBinding_ListenerImpl {
             }
         }
         
-        override func getCount() -> Int {
+        func getCount() -> Int {
             
             NSLog("\(type(of: self)): \(#function)")
             
             return data.count
         }
         
-        override func getView(position row: Int, convertView: Android.View.View?, parent: Android.View.ViewGroup) -> Android.View.View {
+        func getView(position row: Int, convertView: Android.View.View?, parent: Android.View.ViewGroup) -> Android.View.View {
             
             NSLog("\(type(of: self)): \(#function)")
             
-            let view: Android.View.View = /* convertView ?? */ layoutInflater.inflate(resource: cellResource,
+            let itemViewId = Android.R.Layout.init(rawValue: cellResource)
+            
+            let view: Android.View.View = /* convertView ?? */ layoutInflater.inflate(resource: itemViewId,
                                                                                       root: parent,
                                                                                       attachToRoot: false)
             
@@ -166,5 +167,5 @@ extension SwiftBluetoothScannerBinding_ListenerImpl {
             
             return view
         }
-    }*/
+    }
 }
