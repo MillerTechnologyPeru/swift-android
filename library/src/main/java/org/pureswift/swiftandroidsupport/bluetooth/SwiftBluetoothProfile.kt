@@ -20,6 +20,10 @@ class SwiftBluetoothProfile(private val __swiftObject: Long): BluetoothProfile {
         return __get_connected_devices(__swiftObject)
     }
 
+    fun finalize() {
+        __finalize(__swiftObject)
+    }
+
     //Native Methods
 
     external fun __get_devices_matching_connection_states(swiftObject: Long, states: IntArray?): MutableList<BluetoothDevice>
@@ -27,4 +31,6 @@ class SwiftBluetoothProfile(private val __swiftObject: Long): BluetoothProfile {
     external fun __get_connection_state(swiftObject: Long, device: BluetoothDevice?): Int
 
     external  fun __get_connected_devices(swiftObject: Long): MutableList<BluetoothDevice>
+
+    external fun __finalize(__swiftObject: Long)
 }
