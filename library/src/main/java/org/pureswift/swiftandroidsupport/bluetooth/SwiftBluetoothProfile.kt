@@ -33,4 +33,25 @@ class SwiftBluetoothProfile(private val __swiftObject: Long): BluetoothProfile {
     external  fun __get_connected_devices(swiftObject: Long): MutableList<BluetoothDevice>
 
     external fun __finalize(__swiftObject: Long)
+
+    class ServiceListener(private val __swiftObject: Long): BluetoothProfile.ServiceListener {
+
+        override fun onServiceDisconnected(profile: Int) {
+            __on_service_disconnected(__swiftObject, profile)
+        }
+
+        override fun onServiceConnected(profile: Int, proxy: BluetoothProfile?) {
+            __on_service_connected(__swiftObject, profile, proxy)
+        }
+
+        fun finalize() {
+            __finalize(__swiftObject)
+        }
+
+        external fun __finalize(__swiftObject: Long)
+
+        external fun __on_service_disconnected(__swiftObject: Long, profile: Int)
+
+        external fun __on_service_connected(__swiftObject: Long, profile: Int, proxy: BluetoothProfile?)
+    }
 }
