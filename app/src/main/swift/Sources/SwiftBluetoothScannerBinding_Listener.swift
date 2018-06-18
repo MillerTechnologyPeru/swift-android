@@ -28,7 +28,6 @@ fileprivate class SwiftBluetoothScannerBinding_ListenerLocal_: JNILocalProxy<Swi
         var natives = [JNINativeMethod]()
 
         let SwiftBluetoothScannerBinding_Listener_viewDidLoad_0_thunk: SwiftBluetoothScannerBinding_Listener_viewDidLoad_0_type = SwiftBluetoothScannerBinding_Listener_viewDidLoad_0
-        
         natives.append( JNINativeMethod( name: strdup("__viewDidLoad"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( SwiftBluetoothScannerBinding_Listener_viewDidLoad_0_thunk, to: UnsafeMutableRawPointer.self ) ) )
 
         natives.append( JNINativeMethod( name: strdup("__finalize"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( JNIReleasableProxy__finalize_thunk, to: UnsafeMutableRawPointer.self ) ) )
