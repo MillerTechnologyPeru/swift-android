@@ -26,18 +26,6 @@ final class SwiftBluetoothScannerBinding_ListenerImpl: SwiftBluetoothScannerBind
         return SwiftBluetoothScannerBinding_ListenerImpl(responder: responder).localJavaObject( &locals )
     }
     
-    deinit {
-        
-        NSLog("\(type(of: self)): \(#function)")
-    }
-    
-    init(responder: SwiftBluetoothScannerBinding_ResponderForward) {
-        
-        NSLog("\(type(of: self)): \(#function)")
-        
-        self.responder = responder
-    }
-    
     let responder: SwiftBluetoothScannerBinding_ResponderForward
     
     private lazy var layoutInflater: Android.View.LayoutInflater = Android.View.LayoutInflater(casting: self.responder.getLayoutInflater())!
@@ -52,6 +40,18 @@ final class SwiftBluetoothScannerBinding_ListenerImpl: SwiftBluetoothScannerBind
             NSLog("\(type(of: self)): \(#function)")
             
         }
+    }
+    
+    init(responder: SwiftBluetoothScannerBinding_ResponderForward) {
+        
+        NSLog("\(type(of: self)): \(#function)")
+        
+        self.responder = responder
+    }
+    
+    deinit {
+        
+        NSLog("\(type(of: self)): \(#function)")
     }
     
     override func viewDidLoad() {
@@ -90,8 +90,7 @@ extension SwiftBluetoothScannerBinding_ListenerImpl {
         
         var scanResult: (Android.Bluetooth.LE.ScanResult) -> ()
         
-        func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType,
-                          result: Android.Bluetooth.LE.ScanResult) {
+        func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType, result: Android.Bluetooth.LE.ScanResult) {
             
             scanResult(result)
             
