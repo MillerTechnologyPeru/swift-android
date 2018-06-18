@@ -1,10 +1,9 @@
 package com.millertechnology.android
 
 import android.content.pm.PackageManager
+import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
 import com.johnholdsworth.swiftbindings.SwiftBluetoothScannerBinding
 import kotlinx.android.synthetic.main.activity_main.*
 import org.pureswift.swiftandroidsupport.widget.SwiftBaseAdapter
@@ -14,10 +13,6 @@ class MainActivity : AppCompatActivity(), SwiftBluetoothScannerBinding.Responder
     companion object {
 
         const val LOCATION_REQUEST_PERMISSION_CODE = 1000
-
-        fun loadNativeDependencies(){
-            System.loadLibrary("swiftandroid")
-        }
     }
 
     external fun bind(self: SwiftBluetoothScannerBinding.Responder) : SwiftBluetoothScannerBinding.Listener
@@ -28,13 +23,11 @@ class MainActivity : AppCompatActivity(), SwiftBluetoothScannerBinding.Responder
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        loadNativeDependencies()
-
         listener = bind(this)
 
-        if ( ContextCompat.checkSelfPermission( this, android.Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
+        if ( Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && checkSelfPermission(android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ) {
 
-            ActivityCompat.requestPermissions( this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_REQUEST_PERMISSION_CODE )
+            requestPermissions(arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_REQUEST_PERMISSION_CODE)
         } else {
 
             val checkedListener = checkNotNull(listener){
