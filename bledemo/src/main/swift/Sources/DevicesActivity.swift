@@ -35,7 +35,8 @@ final class DevicesActivityBinding_ListenerImpl: DevicesActivityBinding_Listener
         NSLog("\(type(of: self)): \(#function)")
         
         self.responder = responder
-        self.demoScanCallback = DemoScanCallback(responder: responder)
+        self.demoScanCallback = DemoScanCallback()
+        //self.demoScanCallback?.addResponse(responder: responder)
     }
     
     deinit {

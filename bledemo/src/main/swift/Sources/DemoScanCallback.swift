@@ -14,12 +14,13 @@ import Android
 extension DevicesActivityBinding_ListenerImpl {
     
     struct DemoScanCallback: Android.Bluetooth.LE.ScanCallback{
+        /*
+        var responder: DevicesActivityBinding_ResponderForward
         
-        let responder: DevicesActivityBinding_ResponderForward
-        
-        init(responder: DevicesActivityBinding_ResponderForward){
-            self.responder = responder
-        }
+        mutating func addResponse(responderParam: DevicesActivityBinding_ResponderForward){
+            
+            responder = responderParam
+        }*/
         
         func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType, result: Android.Bluetooth.LE.ScanResult) {
             
