@@ -1,10 +1,16 @@
 package com.jmarkstar.bledemo
 
+import android.Manifest
+import android.app.Activity
 import android.bluetooth.BluetoothAdapter
 import android.content.Intent
 import android.content.IntentFilter
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
+import android.view.View
 import android.widget.Toast
 import com.jmarkstar.bledemo.broadcastreceivers.BluetoothChangeStateReceiver
 import com.johnholdsworth.swiftbindings.DevicesActivityBinding
@@ -23,17 +29,21 @@ class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
 
     private var bluetoothChangeStateReceiver : BluetoothChangeStateReceiver? = null
 
+    private var isScanning = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_devices)
 
-        listener = bind(this)
-
         bluetoothChangeStateReceiver = BluetoothChangeStateReceiver(this)
 
         btnScanLeDevices.setOnClickListener {
+
+            //Call swift code
             listener?.validateBluetooth()
         }
+
+        listener = bind(this)
     }
 
     override fun onResume() {
@@ -49,12 +59,78 @@ class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
         unregisterReceiver(bluetoothChangeStateReceiver)
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        Log.v("onActivityResult","onActivityResult()")
+        Log.v("onActivityResult"," $requestCode and $resultCode")
+
+        if(requestCode == REQUEST_ENABLE_BT && resultCode == Activity.RESULT_OK){
+
+            verifyGpsPermission()
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if(requestCode == REQUEST_PERMISSION_GPS){
+            if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                startDiscovery()
+            }else{
+                Toast.makeText(this, "GPS Permission is required", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    // #1 VERIFY IF BLUETOOTH IS ENABLED
+    //This method is called from swift
     override fun activateBluetooth() {
         val enableBluetoothIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
         startActivityForResult(enableBluetoothIntent, REQUEST_ENABLE_BT)
     }
 
+    // #2 VERIFY IF THE GPS PERMISSION IS ALLOWED
+    //This method is called from swift
     override fun verifyGpsPermission() {
-        Toast.makeText(this, "Listo para verificar el permiso de gps", Toast.LENGTH_SHORT).show()
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
+                && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+            requestPermissions(arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION), 1200)
+        }else{
+            startDiscovery()
+        }
+    }
+
+    //#3 SCAN THE DEVICES
+    private fun startDiscovery() {
+
+        if(isScanning){
+            stopScan()
+        }else{
+            startScan()
+        }
+    }
+
+    private fun startScan(){
+        btnScanLeDevices.text = getString(R.string.scan_stop)
+        pgScanning.visibility = View.VISIBLE
+
+        /*
+        val filters = ArrayList<ScanFilter>()
+
+        val settings = ScanSettings.Builder()
+                .setScanMode(ScanSettings.SCAN_MODE_LOW_POWER)
+                .build()
+
+        bluetoothAdapter.bluetoothLeScanner.startScan(filters, settings, leScanCallback)
+        */
+        isScanning = true
+        //bleDeviceAdapter.refresh()
+    }
+
+    private fun stopScan(){
+        btnScanLeDevices.text = getString(R.string.scan_start)
+        pgScanning.visibility = View.GONE
+        //bluetoothAdapter.bluetoothLeScanner.stopScan(leScanCallback)
+        isScanning = false
     }
 }

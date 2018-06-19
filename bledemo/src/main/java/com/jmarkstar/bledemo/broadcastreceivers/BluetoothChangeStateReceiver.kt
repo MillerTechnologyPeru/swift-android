@@ -10,6 +10,7 @@ import com.jmarkstar.bledemo.DevicesActivity
 class BluetoothChangeStateReceiver(private val activity: DevicesActivity): BroadcastReceiver() {
 
     override fun onReceive(context: Context?, intent: Intent?) {
+
         val state = intent?.getIntExtra(BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR)
         val previousState = intent?.getIntExtra(BluetoothAdapter.EXTRA_PREVIOUS_STATE, -1)
 

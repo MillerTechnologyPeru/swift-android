@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BLeDemo</string>
+    <string name="scan_start">Start Scan</string>
+    <string name="scan_stop">Stop Scan</string>
 </resources>
