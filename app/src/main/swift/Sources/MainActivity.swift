@@ -73,6 +73,8 @@ final class SwiftBluetoothScannerBinding_ListenerImpl: SwiftBluetoothScannerBind
         }
         
         Android.Bluetooth.Adapter.default?.lowEnergyScanner?.startScan(callback: scanCallback)
+        
+        Android.Bluetooth.Adapter.default?.lowEnergyScanner?.stopScan(callback: scanCallback)
         /*
         let scanCallback = ScanCallback { [weak self] in
             NSLog("\(type(of: self)): \(#function)")

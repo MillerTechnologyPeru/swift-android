@@ -25,13 +25,17 @@ final class DevicesActivityBinding_ListenerImpl: DevicesActivityBinding_Listener
     }
     
     let responder: DevicesActivityBinding_ResponderForward
+    
     let bluetoothAdapter = Android.Bluetooth.Adapter.default
+    
+    var demoScanCallback: DemoScanCallback? = nil
     
     init(responder: DevicesActivityBinding_ResponderForward) {
         
         NSLog("\(type(of: self)): \(#function)")
         
         self.responder = responder
+        self.demoScanCallback = DemoScanCallback(responder: responder)
     }
     
     deinit {
@@ -52,9 +56,11 @@ final class DevicesActivityBinding_ListenerImpl: DevicesActivityBinding_Listener
     
     override func startScan() {
         NSLog("\(type(of: self)): \(#function)")
+        Android.Bluetooth.Adapter.default?.lowEnergyScanner?.startScan(callback: demoScanCallback!)
     }
     
     override func stopScan() {
         NSLog("\(type(of: self)): \(#function)")
+        Android.Bluetooth.Adapter.default?.lowEnergyScanner?.stopScan(callback: demoScanCallback!)
     }
 }
