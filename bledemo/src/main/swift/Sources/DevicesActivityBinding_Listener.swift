@@ -7,9 +7,13 @@ import java_swift
 
 public protocol DevicesActivityBinding_Listener: JavaProtocol {
 
-    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.startDiscovery()
+    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.startScan()
 
-    func startDiscovery()
+    func startScan()
+
+    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.stopScan()
+
+    func stopScan()
 
     /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.validateBluetooth()
 
@@ -22,39 +26,56 @@ open class DevicesActivityBinding_ListenerForward: JNIObjectForward, DevicesActi
 
     private static var DevicesActivityBinding_ListenerJNIClass: jclass?
 
-    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.startDiscovery()
+    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.startScan()
 
-    private static var startDiscovery_MethodID_3: jmethodID?
+    private static var startScan_MethodID_4: jmethodID?
 
-    open func startDiscovery() {
+    open func startScan() {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "startDiscovery", methodSig: "()V", methodCache: &DevicesActivityBinding_ListenerForward.startDiscovery_MethodID_3, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "startScan", methodSig: "()V", methodCache: &DevicesActivityBinding_ListenerForward.startScan_MethodID_4, args: &__args, locals: &__locals )
+    }
+
+
+    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.stopScan()
+
+    private static var stopScan_MethodID_5: jmethodID?
+
+    open func stopScan() {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "stopScan", methodSig: "()V", methodCache: &DevicesActivityBinding_ListenerForward.stopScan_MethodID_5, args: &__args, locals: &__locals )
     }
 
 
     /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.validateBluetooth()
 
-    private static var validateBluetooth_MethodID_4: jmethodID?
+    private static var validateBluetooth_MethodID_6: jmethodID?
 
     open func validateBluetooth() {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "validateBluetooth", methodSig: "()V", methodCache: &DevicesActivityBinding_ListenerForward.validateBluetooth_MethodID_4, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "validateBluetooth", methodSig: "()V", methodCache: &DevicesActivityBinding_ListenerForward.validateBluetooth_MethodID_6, args: &__args, locals: &__locals )
     }
 
 
 }
 
-private typealias DevicesActivityBinding_Listener_startDiscovery_0_type = @convention(c) ( _: UnsafeMutablePointer<JNIEnv?>, _: jobject?, _: jlong ) -> ()
+private typealias DevicesActivityBinding_Listener_startScan_0_type = @convention(c) ( _: UnsafeMutablePointer<JNIEnv?>, _: jobject?, _: jlong ) -> ()
 
-private func DevicesActivityBinding_Listener_startDiscovery_0( _ __env: UnsafeMutablePointer<JNIEnv?>, _ __this: jobject?, _ __swiftObject: jlong ) -> () {
-    DevicesActivityBinding_ListenerLocal_.swiftObject( jniEnv: __env, javaObject: __this, swiftObject: __swiftObject ).startDiscovery( )
+private func DevicesActivityBinding_Listener_startScan_0( _ __env: UnsafeMutablePointer<JNIEnv?>, _ __this: jobject?, _ __swiftObject: jlong ) -> () {
+    DevicesActivityBinding_ListenerLocal_.swiftObject( jniEnv: __env, javaObject: __this, swiftObject: __swiftObject ).startScan( )
 }
 
-private typealias DevicesActivityBinding_Listener_validateBluetooth_1_type = @convention(c) ( _: UnsafeMutablePointer<JNIEnv?>, _: jobject?, _: jlong ) -> ()
+private typealias DevicesActivityBinding_Listener_stopScan_1_type = @convention(c) ( _: UnsafeMutablePointer<JNIEnv?>, _: jobject?, _: jlong ) -> ()
 
-private func DevicesActivityBinding_Listener_validateBluetooth_1( _ __env: UnsafeMutablePointer<JNIEnv?>, _ __this: jobject?, _ __swiftObject: jlong ) -> () {
+private func DevicesActivityBinding_Listener_stopScan_1( _ __env: UnsafeMutablePointer<JNIEnv?>, _ __this: jobject?, _ __swiftObject: jlong ) -> () {
+    DevicesActivityBinding_ListenerLocal_.swiftObject( jniEnv: __env, javaObject: __this, swiftObject: __swiftObject ).stopScan( )
+}
+
+private typealias DevicesActivityBinding_Listener_validateBluetooth_2_type = @convention(c) ( _: UnsafeMutablePointer<JNIEnv?>, _: jobject?, _: jlong ) -> ()
+
+private func DevicesActivityBinding_Listener_validateBluetooth_2( _ __env: UnsafeMutablePointer<JNIEnv?>, _ __this: jobject?, _ __swiftObject: jlong ) -> () {
     DevicesActivityBinding_ListenerLocal_.swiftObject( jniEnv: __env, javaObject: __this, swiftObject: __swiftObject ).validateBluetooth( )
 }
 
@@ -63,11 +84,14 @@ fileprivate class DevicesActivityBinding_ListenerLocal_: JNILocalProxy<DevicesAc
     fileprivate static let _proxyClass: jclass = {
         var natives = [JNINativeMethod]()
 
-        let DevicesActivityBinding_Listener_startDiscovery_0_thunk: DevicesActivityBinding_Listener_startDiscovery_0_type = DevicesActivityBinding_Listener_startDiscovery_0
-        natives.append( JNINativeMethod( name: strdup("__startDiscovery"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( DevicesActivityBinding_Listener_startDiscovery_0_thunk, to: UnsafeMutableRawPointer.self ) ) )
+        let DevicesActivityBinding_Listener_startScan_0_thunk: DevicesActivityBinding_Listener_startScan_0_type = DevicesActivityBinding_Listener_startScan_0
+        natives.append( JNINativeMethod( name: strdup("__startScan"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( DevicesActivityBinding_Listener_startScan_0_thunk, to: UnsafeMutableRawPointer.self ) ) )
 
-        let DevicesActivityBinding_Listener_validateBluetooth_1_thunk: DevicesActivityBinding_Listener_validateBluetooth_1_type = DevicesActivityBinding_Listener_validateBluetooth_1
-        natives.append( JNINativeMethod( name: strdup("__validateBluetooth"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( DevicesActivityBinding_Listener_validateBluetooth_1_thunk, to: UnsafeMutableRawPointer.self ) ) )
+        let DevicesActivityBinding_Listener_stopScan_1_thunk: DevicesActivityBinding_Listener_stopScan_1_type = DevicesActivityBinding_Listener_stopScan_1
+        natives.append( JNINativeMethod( name: strdup("__stopScan"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( DevicesActivityBinding_Listener_stopScan_1_thunk, to: UnsafeMutableRawPointer.self ) ) )
+
+        let DevicesActivityBinding_Listener_validateBluetooth_2_thunk: DevicesActivityBinding_Listener_validateBluetooth_2_type = DevicesActivityBinding_Listener_validateBluetooth_2
+        natives.append( JNINativeMethod( name: strdup("__validateBluetooth"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( DevicesActivityBinding_Listener_validateBluetooth_2_thunk, to: UnsafeMutableRawPointer.self ) ) )
 
         natives.append( JNINativeMethod( name: strdup("__finalize"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( JNIReleasableProxy__finalize_thunk, to: UnsafeMutableRawPointer.self ) ) )
 
@@ -100,9 +124,15 @@ open class DevicesActivityBinding_ListenerBase: DevicesActivityBinding_Listener 
 
     public init() {}
 
-    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.startDiscovery()
+    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.startScan()
 
-    open func startDiscovery() /**/ {
+    open func startScan() /**/ {
+    }
+
+
+    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.stopScan()
+
+    open func stopScan() /**/ {
     }
 
 

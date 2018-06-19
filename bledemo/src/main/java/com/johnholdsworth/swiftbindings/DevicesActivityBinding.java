@@ -4,7 +4,8 @@ public interface DevicesActivityBinding {
     interface Listener {
 
         void validateBluetooth();
-        void startDiscovery();
+        void startScan();
+        void stopScan();
     }
 
     // Messages from Swift back to Java Activity

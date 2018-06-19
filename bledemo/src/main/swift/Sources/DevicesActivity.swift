@@ -50,10 +50,11 @@ final class DevicesActivityBinding_ListenerImpl: DevicesActivityBinding_Listener
         responder.verifyGpsPermission()
     }
     
-    override func startDiscovery() {
-        
+    override func startScan() {
         NSLog("\(type(of: self)): \(#function)")
-        
-        
+    }
+    
+    override func stopScan() {
+        NSLog("\(type(of: self)): \(#function)")
     }
 }

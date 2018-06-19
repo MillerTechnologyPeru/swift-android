@@ -15,12 +15,20 @@ public class DevicesActivityBinding_ListenerProxy implements com.johnholdsworth.
         this.__swiftObject = __swiftObject;
     }
 
-    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.startDiscovery()
+    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.startScan()
 
-    public native void __startDiscovery( long __swiftObject );
+    public native void __startScan( long __swiftObject );
 
-    public void startDiscovery() {
-        __startDiscovery( __swiftObject  );
+    public void startScan() {
+        __startScan( __swiftObject  );
+    }
+
+    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.stopScan()
+
+    public native void __stopScan( long __swiftObject );
+
+    public void stopScan() {
+        __stopScan( __swiftObject  );
     }
 
     /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.validateBluetooth()

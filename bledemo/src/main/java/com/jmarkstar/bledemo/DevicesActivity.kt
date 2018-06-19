@@ -114,15 +114,7 @@ class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
         btnScanLeDevices.text = getString(R.string.scan_stop)
         pgScanning.visibility = View.VISIBLE
 
-        /*
-        val filters = ArrayList<ScanFilter>()
-
-        val settings = ScanSettings.Builder()
-                .setScanMode(ScanSettings.SCAN_MODE_LOW_POWER)
-                .build()
-
-        bluetoothAdapter.bluetoothLeScanner.startScan(filters, settings, leScanCallback)
-        */
+        listener?.startScan()
         isScanning = true
         //bleDeviceAdapter.refresh()
     }
@@ -130,7 +122,8 @@ class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
     private fun stopScan(){
         btnScanLeDevices.text = getString(R.string.scan_start)
         pgScanning.visibility = View.GONE
-        //bluetoothAdapter.bluetoothLeScanner.stopScan(leScanCallback)
+
+        listener?.stopScan()
         isScanning = false
     }
 }
