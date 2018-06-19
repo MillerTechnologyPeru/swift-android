@@ -28,7 +28,11 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvDevices"
+        android:overScrollMode="never"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        tools:listitem="@layout/activity_devices_item"
+        tools:itemCount="5"/>
 
 </LinearLayout>

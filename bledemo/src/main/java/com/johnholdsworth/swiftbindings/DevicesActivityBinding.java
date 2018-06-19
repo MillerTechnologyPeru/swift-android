@@ -12,5 +12,6 @@ public interface DevicesActivityBinding {
     interface Responder{
         void activateBluetooth();
         void verifyGpsPermission();
+        void loadFoundDevice(Object device, Integer rssi);
     }
 }

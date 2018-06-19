@@ -3,18 +3,22 @@ package com.jmarkstar.bledemo
 import android.Manifest
 import android.app.Activity
 import android.bluetooth.BluetoothAdapter
+import android.bluetooth.BluetoothDevice
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.jmarkstar.bledemo.broadcastreceivers.BluetoothChangeStateReceiver
+import com.jmarkstar.bledemo.le.DemoLeDevice
 import com.johnholdsworth.swiftbindings.DevicesActivityBinding
 import kotlinx.android.synthetic.main.activity_devices.*
+import java.util.*
 
 class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
 
@@ -31,6 +35,10 @@ class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
 
     private var isScanning = false
 
+    private val bleDeviceAdapter = BleDeviceAdapter()
+
+    private val handler = Handler()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_devices)
@@ -42,6 +50,8 @@ class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
             //Call swift code
             listener?.validateBluetooth()
         }
+
+        rvDevices.adapter = bleDeviceAdapter
 
         listener = bind(this)
     }
@@ -100,6 +110,14 @@ class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
         }
     }
 
+    override fun loadFoundDevice(device: Any, rssi: Int) {
+        handler.post {
+
+            val leDevice = device as BluetoothDevice
+            bleDeviceAdapter.addDevice(DemoLeDevice(leDevice, rssi))
+        }
+    }
+
     //#3 SCAN THE DEVICES
     private fun startDiscovery() {
 
@@ -116,7 +134,7 @@ class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
 
         listener?.startScan()
         isScanning = true
-        //bleDeviceAdapter.refresh()
+        bleDeviceAdapter.refresh()
     }
 
     private fun stopScan(){

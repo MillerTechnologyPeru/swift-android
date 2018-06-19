@@ -14,22 +14,20 @@ import Android
 extension DevicesActivityBinding_ListenerImpl {
     
     struct DemoScanCallback: Android.Bluetooth.LE.ScanCallback{
-        /*
-        var responder: DevicesActivityBinding_ResponderForward
         
-        mutating func addResponse(responderParam: DevicesActivityBinding_ResponderForward){
-            
-            responder = responderParam
-        }*/
+        let responder: DevicesActivityBinding_ResponderForward
+        
+        init(responder: DevicesActivityBinding_ResponderForward){
+            self.responder = responder
+        }
         
         func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType, result: Android.Bluetooth.LE.ScanResult) {
             
             let device = result.device
             let rssi = result.rssi
             
-            NSLog("\(type(of: self)): \(#function)")
-            NSLog("\(device.address) - \(device.getName())")
-            NSLog("\(rssi)")
+            NSLog("Address: \(device.address) - rssi: \(rssi)")
+            responder.loadFoundDevice(device, java_lang.Integer(value: rssi))
         }
         
         func onBatchScanResults(results: [Android.Bluetooth.LE.ScanResult]) {
