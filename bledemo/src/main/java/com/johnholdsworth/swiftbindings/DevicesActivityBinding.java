@@ -15,5 +15,6 @@ public interface DevicesActivityBinding {
         void verifyGpsPermission();
         void loadFoundDevice(Object device, Integer rssi);
         void connectionFailure();
+        void showServices(Object services);
     }
 }

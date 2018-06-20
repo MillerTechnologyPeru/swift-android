@@ -4,6 +4,7 @@ import android.Manifest
 import android.app.Activity
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
+import android.bluetooth.BluetoothGattService
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.pm.PackageManager
@@ -120,6 +121,17 @@ class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
             val leDevice = device as BluetoothDevice
             bleDeviceAdapter.addDevice(DemoLeDevice(leDevice, rssi))
         }
+    }
+
+    override fun showServices(servicesParam: Any?) {
+        Log.i("devices","showServices()")
+                val services = servicesParam as? List<BluetoothGattService>
+        if(services!=null){
+            for(service in services){
+                Log.i("devices", "${service.uuid}")
+            }
+        }
+
     }
 
     override fun connectionFailure() {

@@ -20,6 +20,10 @@ public protocol DevicesActivityBinding_Responder: JavaProtocol {
 
     func loadFoundDevice( device: java_swift.JavaObject?, rssi: java_lang.Integer? )
 
+    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Responder.showServices(java.lang.Object)
+
+    func showServices( services: java_swift.JavaObject? )
+
     /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Responder.verifyGpsPermission()
 
     func verifyGpsPermission()
@@ -33,50 +37,65 @@ open class DevicesActivityBinding_ResponderForward: JNIObjectForward, DevicesAct
 
     /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Responder.activateBluetooth()
 
-    private static var activateBluetooth_MethodID_5: jmethodID?
+    private static var activateBluetooth_MethodID_6: jmethodID?
 
     open func activateBluetooth() {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "activateBluetooth", methodSig: "()V", methodCache: &DevicesActivityBinding_ResponderForward.activateBluetooth_MethodID_5, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "activateBluetooth", methodSig: "()V", methodCache: &DevicesActivityBinding_ResponderForward.activateBluetooth_MethodID_6, args: &__args, locals: &__locals )
     }
 
 
     /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Responder.connectionFailure()
 
-    private static var connectionFailure_MethodID_6: jmethodID?
+    private static var connectionFailure_MethodID_7: jmethodID?
 
     open func connectionFailure() {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "connectionFailure", methodSig: "()V", methodCache: &DevicesActivityBinding_ResponderForward.connectionFailure_MethodID_6, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "connectionFailure", methodSig: "()V", methodCache: &DevicesActivityBinding_ResponderForward.connectionFailure_MethodID_7, args: &__args, locals: &__locals )
     }
 
 
     /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Responder.loadFoundDevice(java.lang.Object,java.lang.Integer)
 
-    private static var loadFoundDevice_MethodID_7: jmethodID?
+    private static var loadFoundDevice_MethodID_8: jmethodID?
 
     open func loadFoundDevice( device: java_swift.JavaObject?, rssi: java_lang.Integer? ) {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: device, locals: &__locals )
         __args[1] = JNIType.toJava( value: rssi, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "loadFoundDevice", methodSig: "(Ljava/lang/Object;Ljava/lang/Integer;)V", methodCache: &DevicesActivityBinding_ResponderForward.loadFoundDevice_MethodID_7, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "loadFoundDevice", methodSig: "(Ljava/lang/Object;Ljava/lang/Integer;)V", methodCache: &DevicesActivityBinding_ResponderForward.loadFoundDevice_MethodID_8, args: &__args, locals: &__locals )
     }
 
     open func loadFoundDevice( _ _device: java_swift.JavaObject?, _ _rssi: java_lang.Integer? ) {
         loadFoundDevice( device: _device, rssi: _rssi )
     }
 
+    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Responder.showServices(java.lang.Object)
+
+    private static var showServices_MethodID_9: jmethodID?
+
+    open func showServices( services: java_swift.JavaObject? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: services, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "showServices", methodSig: "(Ljava/lang/Object;)V", methodCache: &DevicesActivityBinding_ResponderForward.showServices_MethodID_9, args: &__args, locals: &__locals )
+    }
+
+    open func showServices( _ _services: java_swift.JavaObject? ) {
+        showServices( services: _services )
+    }
+
     /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Responder.verifyGpsPermission()
 
-    private static var verifyGpsPermission_MethodID_8: jmethodID?
+    private static var verifyGpsPermission_MethodID_10: jmethodID?
 
     open func verifyGpsPermission() {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "verifyGpsPermission", methodSig: "()V", methodCache: &DevicesActivityBinding_ResponderForward.verifyGpsPermission_MethodID_8, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "verifyGpsPermission", methodSig: "()V", methodCache: &DevicesActivityBinding_ResponderForward.verifyGpsPermission_MethodID_10, args: &__args, locals: &__locals )
     }
 
 

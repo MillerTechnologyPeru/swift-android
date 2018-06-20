@@ -23,14 +23,12 @@ extension DevicesActivityBinding_ListenerImpl {
         
         func onConnectionStateChange(gatt: Android.Bluetooth.Gatt, status: AndroidBluetoothGatt.Status, newState: AndroidBluetoothDevice.State) {
             NSLog("Status: \(status) - newState = \(newState)")
-            if(status != AndroidBluetoothGatt.Status.success){
+            if(status.rawValue != AndroidBluetoothGatt.Status.success.rawValue){
                 //Show error message on Android
-                NSLog("Error: \(status)")
+                NSLog("Error: \(status.rawValue)")
                 return
             }
-            
-            if(newState == AndroidBluetoothDevice.State.connected){
-                
+            if(newState.rawValue == AndroidBluetoothDevice.State.connected.rawValue){
                 //connected
                 gatt.discoverServices()
             }
@@ -39,10 +37,14 @@ extension DevicesActivityBinding_ListenerImpl {
         func onServicesDiscovered(gatt: Android.Bluetooth.Gatt, status: AndroidBluetoothGatt.Status) {
             
             NSLog("Status: \(status)")
-            if(status != AndroidBluetoothGatt.Status.success){
+            if(status.rawValue != AndroidBluetoothGatt.Status.success.rawValue){
                 //Show error message on Android
                 NSLog("Error: \(status)")
                 return
+            }
+            
+            gatt.getServices()?.withJavaObject{
+                self.responder.showServices(services: JavaObject(javaObject: $0))
             }
             
             NSLog("Size: \(String(describing: gatt.getServices()?.size()))")
