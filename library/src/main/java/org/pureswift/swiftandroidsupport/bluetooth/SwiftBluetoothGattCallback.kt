@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothGattCallback
 import android.bluetooth.BluetoothGattCharacteristic
 import android.bluetooth.BluetoothGattDescriptor
 
+@SuppressWarnings("JniMissingFunction")
 class SwiftBluetoothGattCallback(private val __swiftObject: Long): BluetoothGattCallback() {
 
     override fun onCharacteristicChanged(gatt: BluetoothGatt?, characteristic: BluetoothGattCharacteristic?) {

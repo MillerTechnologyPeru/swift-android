@@ -2,6 +2,7 @@ package org.pureswift.swiftandroidsupport.bluetooth
 
 import android.bluetooth.*
 
+@SuppressWarnings("JniMissingFunction")
 class SwiftBluetoothGattServerCallback(private val __swiftObject: Long): BluetoothGattServerCallback() {
 
     override fun onCharacteristicReadRequest(device: BluetoothDevice?, requestId: Int, offset: Int, characteristic: BluetoothGattCharacteristic?) {
