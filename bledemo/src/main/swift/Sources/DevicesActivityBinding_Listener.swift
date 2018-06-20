@@ -7,6 +7,10 @@ import java_swift
 
 public protocol DevicesActivityBinding_Listener: JavaProtocol {
 
+    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.connectToDevice(java.lang.Object,java.lang.Object)
+
+    func connectToDevice( context: java_swift.JavaObject?, device: java_swift.JavaObject? )
+
     /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.startScan()
 
     func startScan()
@@ -26,56 +30,78 @@ open class DevicesActivityBinding_ListenerForward: JNIObjectForward, DevicesActi
 
     private static var DevicesActivityBinding_ListenerJNIClass: jclass?
 
+    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.connectToDevice(java.lang.Object,java.lang.Object)
+
+    private static var connectToDevice_MethodID_5: jmethodID?
+
+    open func connectToDevice( context: java_swift.JavaObject?, device: java_swift.JavaObject? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: context, locals: &__locals )
+        __args[1] = JNIType.toJava( value: device, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "connectToDevice", methodSig: "(Ljava/lang/Object;Ljava/lang/Object;)V", methodCache: &DevicesActivityBinding_ListenerForward.connectToDevice_MethodID_5, args: &__args, locals: &__locals )
+    }
+
+    open func connectToDevice( _ _context: java_swift.JavaObject?, _ _device: java_swift.JavaObject? ) {
+        connectToDevice( context: _context, device: _device )
+    }
+
     /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.startScan()
 
-    private static var startScan_MethodID_4: jmethodID?
+    private static var startScan_MethodID_6: jmethodID?
 
     open func startScan() {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "startScan", methodSig: "()V", methodCache: &DevicesActivityBinding_ListenerForward.startScan_MethodID_4, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "startScan", methodSig: "()V", methodCache: &DevicesActivityBinding_ListenerForward.startScan_MethodID_6, args: &__args, locals: &__locals )
     }
 
 
     /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.stopScan()
 
-    private static var stopScan_MethodID_5: jmethodID?
+    private static var stopScan_MethodID_7: jmethodID?
 
     open func stopScan() {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "stopScan", methodSig: "()V", methodCache: &DevicesActivityBinding_ListenerForward.stopScan_MethodID_5, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "stopScan", methodSig: "()V", methodCache: &DevicesActivityBinding_ListenerForward.stopScan_MethodID_7, args: &__args, locals: &__locals )
     }
 
 
     /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.validateBluetooth()
 
-    private static var validateBluetooth_MethodID_6: jmethodID?
+    private static var validateBluetooth_MethodID_8: jmethodID?
 
     open func validateBluetooth() {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "validateBluetooth", methodSig: "()V", methodCache: &DevicesActivityBinding_ListenerForward.validateBluetooth_MethodID_6, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "validateBluetooth", methodSig: "()V", methodCache: &DevicesActivityBinding_ListenerForward.validateBluetooth_MethodID_8, args: &__args, locals: &__locals )
     }
 
 
 }
 
-private typealias DevicesActivityBinding_Listener_startScan_0_type = @convention(c) ( _: UnsafeMutablePointer<JNIEnv?>, _: jobject?, _: jlong ) -> ()
+private typealias DevicesActivityBinding_Listener_connectToDevice_0_type = @convention(c) ( _: UnsafeMutablePointer<JNIEnv?>, _: jobject?, _: jlong, _: jobject?, _: jobject? ) -> ()
 
-private func DevicesActivityBinding_Listener_startScan_0( _ __env: UnsafeMutablePointer<JNIEnv?>, _ __this: jobject?, _ __swiftObject: jlong ) -> () {
+private func DevicesActivityBinding_Listener_connectToDevice_0( _ __env: UnsafeMutablePointer<JNIEnv?>, _ __this: jobject?, _ __swiftObject: jlong, _ context: jobject?, _ device: jobject? ) -> () {
+    DevicesActivityBinding_ListenerLocal_.swiftObject( jniEnv: __env, javaObject: __this, swiftObject: __swiftObject ).connectToDevice( context: context != nil ? java_swift.JavaObject( javaObject: context ) : nil, device: device != nil ? java_swift.JavaObject( javaObject: device ) : nil )
+}
+
+private typealias DevicesActivityBinding_Listener_startScan_1_type = @convention(c) ( _: UnsafeMutablePointer<JNIEnv?>, _: jobject?, _: jlong ) -> ()
+
+private func DevicesActivityBinding_Listener_startScan_1( _ __env: UnsafeMutablePointer<JNIEnv?>, _ __this: jobject?, _ __swiftObject: jlong ) -> () {
     DevicesActivityBinding_ListenerLocal_.swiftObject( jniEnv: __env, javaObject: __this, swiftObject: __swiftObject ).startScan( )
 }
 
-private typealias DevicesActivityBinding_Listener_stopScan_1_type = @convention(c) ( _: UnsafeMutablePointer<JNIEnv?>, _: jobject?, _: jlong ) -> ()
+private typealias DevicesActivityBinding_Listener_stopScan_2_type = @convention(c) ( _: UnsafeMutablePointer<JNIEnv?>, _: jobject?, _: jlong ) -> ()
 
-private func DevicesActivityBinding_Listener_stopScan_1( _ __env: UnsafeMutablePointer<JNIEnv?>, _ __this: jobject?, _ __swiftObject: jlong ) -> () {
+private func DevicesActivityBinding_Listener_stopScan_2( _ __env: UnsafeMutablePointer<JNIEnv?>, _ __this: jobject?, _ __swiftObject: jlong ) -> () {
     DevicesActivityBinding_ListenerLocal_.swiftObject( jniEnv: __env, javaObject: __this, swiftObject: __swiftObject ).stopScan( )
 }
 
-private typealias DevicesActivityBinding_Listener_validateBluetooth_2_type = @convention(c) ( _: UnsafeMutablePointer<JNIEnv?>, _: jobject?, _: jlong ) -> ()
+private typealias DevicesActivityBinding_Listener_validateBluetooth_3_type = @convention(c) ( _: UnsafeMutablePointer<JNIEnv?>, _: jobject?, _: jlong ) -> ()
 
-private func DevicesActivityBinding_Listener_validateBluetooth_2( _ __env: UnsafeMutablePointer<JNIEnv?>, _ __this: jobject?, _ __swiftObject: jlong ) -> () {
+private func DevicesActivityBinding_Listener_validateBluetooth_3( _ __env: UnsafeMutablePointer<JNIEnv?>, _ __this: jobject?, _ __swiftObject: jlong ) -> () {
     DevicesActivityBinding_ListenerLocal_.swiftObject( jniEnv: __env, javaObject: __this, swiftObject: __swiftObject ).validateBluetooth( )
 }
 
@@ -84,14 +110,17 @@ fileprivate class DevicesActivityBinding_ListenerLocal_: JNILocalProxy<DevicesAc
     fileprivate static let _proxyClass: jclass = {
         var natives = [JNINativeMethod]()
 
-        let DevicesActivityBinding_Listener_startScan_0_thunk: DevicesActivityBinding_Listener_startScan_0_type = DevicesActivityBinding_Listener_startScan_0
-        natives.append( JNINativeMethod( name: strdup("__startScan"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( DevicesActivityBinding_Listener_startScan_0_thunk, to: UnsafeMutableRawPointer.self ) ) )
+        let DevicesActivityBinding_Listener_connectToDevice_0_thunk: DevicesActivityBinding_Listener_connectToDevice_0_type = DevicesActivityBinding_Listener_connectToDevice_0
+        natives.append( JNINativeMethod( name: strdup("__connectToDevice"), signature: strdup("(JLjava/lang/Object;Ljava/lang/Object;)V"), fnPtr: unsafeBitCast( DevicesActivityBinding_Listener_connectToDevice_0_thunk, to: UnsafeMutableRawPointer.self ) ) )
 
-        let DevicesActivityBinding_Listener_stopScan_1_thunk: DevicesActivityBinding_Listener_stopScan_1_type = DevicesActivityBinding_Listener_stopScan_1
-        natives.append( JNINativeMethod( name: strdup("__stopScan"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( DevicesActivityBinding_Listener_stopScan_1_thunk, to: UnsafeMutableRawPointer.self ) ) )
+        let DevicesActivityBinding_Listener_startScan_1_thunk: DevicesActivityBinding_Listener_startScan_1_type = DevicesActivityBinding_Listener_startScan_1
+        natives.append( JNINativeMethod( name: strdup("__startScan"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( DevicesActivityBinding_Listener_startScan_1_thunk, to: UnsafeMutableRawPointer.self ) ) )
 
-        let DevicesActivityBinding_Listener_validateBluetooth_2_thunk: DevicesActivityBinding_Listener_validateBluetooth_2_type = DevicesActivityBinding_Listener_validateBluetooth_2
-        natives.append( JNINativeMethod( name: strdup("__validateBluetooth"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( DevicesActivityBinding_Listener_validateBluetooth_2_thunk, to: UnsafeMutableRawPointer.self ) ) )
+        let DevicesActivityBinding_Listener_stopScan_2_thunk: DevicesActivityBinding_Listener_stopScan_2_type = DevicesActivityBinding_Listener_stopScan_2
+        natives.append( JNINativeMethod( name: strdup("__stopScan"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( DevicesActivityBinding_Listener_stopScan_2_thunk, to: UnsafeMutableRawPointer.self ) ) )
+
+        let DevicesActivityBinding_Listener_validateBluetooth_3_thunk: DevicesActivityBinding_Listener_validateBluetooth_3_type = DevicesActivityBinding_Listener_validateBluetooth_3
+        natives.append( JNINativeMethod( name: strdup("__validateBluetooth"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( DevicesActivityBinding_Listener_validateBluetooth_3_thunk, to: UnsafeMutableRawPointer.self ) ) )
 
         natives.append( JNINativeMethod( name: strdup("__finalize"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( JNIReleasableProxy__finalize_thunk, to: UnsafeMutableRawPointer.self ) ) )
 
@@ -123,6 +152,12 @@ extension DevicesActivityBinding_Listener {
 open class DevicesActivityBinding_ListenerBase: DevicesActivityBinding_Listener {
 
     public init() {}
+
+    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.connectToDevice(java.lang.Object,java.lang.Object)
+
+    open func connectToDevice( context: java_swift.JavaObject?, device: java_swift.JavaObject? ) /**/ {
+    }
+
 
     /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.startScan()
 

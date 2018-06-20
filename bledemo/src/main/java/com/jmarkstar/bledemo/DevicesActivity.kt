@@ -51,6 +51,10 @@ class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
             listener?.validateBluetooth()
         }
 
+        bleDeviceAdapter.onDeviceClick = {
+            listener?.connectToDevice(this, it.data)
+        }
+
         rvDevices.adapter = bleDeviceAdapter
 
         listener = bind(this)
@@ -116,6 +120,10 @@ class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
             val leDevice = device as BluetoothDevice
             bleDeviceAdapter.addDevice(DemoLeDevice(leDevice, rssi))
         }
+    }
+
+    override fun connectionFailure() {
+
     }
 
     //#3 SCAN THE DEVICES

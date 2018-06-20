@@ -50,18 +50,37 @@ final class DevicesActivityBinding_ListenerImpl: DevicesActivityBinding_Listener
             responder.activateBluetooth()
             return
         }
-        
         responder.verifyGpsPermission()
     }
     
     override func startScan() {
         NSLog("\(type(of: self)): \(#function)")
-        
-        bluetoothAdapter?.lowEnergyScanner?.startScan(callback: demoScanCallback!)
+        if(!bluetoothAdapter!.isEnabled()){
+            let success = bluetoothAdapter!.enable()
+            NSLog("\(type(of: self)): \(#function) - enable = \(success)")
+        }
+        if(bluetoothAdapter!.getState() == 12){
+            bluetoothAdapter?.lowEnergyScanner?.startScan(callback: demoScanCallback!)
+        }
     }
     
     override func stopScan() {
-        NSLog("\(type(of: self)): \(#function) - state = \(bluetoothAdapter!.getState())")
+        NSLog("\(type(of: self)): \(#function)")
         bluetoothAdapter?.lowEnergyScanner?.stopScan(callback: demoScanCallback!)
+        /*
+        if(bluetoothAdapter!.isEnabled()){
+            bluetoothAdapter?.lowEnergyScanner?.stopScan(callback: demoScanCallback!)
+            let success = bluetoothAdapter!.disable()
+            NSLog("\(type(of: self)): \(#function) - disable = \(success)")
+        }*/
+    }
+    
+    override func connectToDevice(context: JavaObject?, device: JavaObject?) {
+        
+        let gattCallback = DemoGattCallback(responder: responder)
+        let contextSwift = Android.Content.Context.init(casting: context!)
+        let deviceSwift = Android.Bluetooth.Device(casting: device!)
+        
+        let gatt = deviceSwift?.connectGatt(context: contextSwift!, autoConnect: false, callback: gattCallback)
     }
 }

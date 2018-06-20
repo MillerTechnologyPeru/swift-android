@@ -70,6 +70,10 @@ class SwiftBluetoothGattServerCallback(private val __swiftObject: Long): Bluetoo
         __onServiceAdded(__swiftObject, status, service)
     }
 
+    fun finalize() {
+        __finalize(__swiftObject)
+    }
+
     //Native Methods
 
     external fun __onCharacteristicReadRequest(__swiftObject: Long, device: BluetoothDevice?, requestId: Int, offset: Int, characteristic: BluetoothGattCharacteristic?)
@@ -93,4 +97,6 @@ class SwiftBluetoothGattServerCallback(private val __swiftObject: Long): Bluetoo
     external fun __onPhyUpdate(__swiftObject: Long, device: BluetoothDevice?, txPhy: Int, rxPhy: Int, status: Int)
 
     external fun __onServiceAdded(__swiftObject: Long, status: Int, service: BluetoothGattService?)
+
+    external fun __finalize(__swiftObject: Long)
 }

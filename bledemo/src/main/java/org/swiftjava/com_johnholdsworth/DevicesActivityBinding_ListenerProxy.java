@@ -15,6 +15,14 @@ public class DevicesActivityBinding_ListenerProxy implements com.johnholdsworth.
         this.__swiftObject = __swiftObject;
     }
 
+    /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.connectToDevice(java.lang.Object,java.lang.Object)
+
+    public native void __connectToDevice( long __swiftObject, java.lang.Object context, java.lang.Object device );
+
+    public void connectToDevice( java.lang.Object context, java.lang.Object device ) {
+        __connectToDevice( __swiftObject, context, device );
+    }
+
     /// public abstract void com.johnholdsworth.swiftbindings.DevicesActivityBinding$Listener.startScan()
 
     public native void __startScan( long __swiftObject );

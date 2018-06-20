@@ -79,6 +79,10 @@ class SwiftBluetoothGattCallback(private val __swiftObject: Long): BluetoothGatt
         __onServicesDiscovered(__swiftObject, gatt, status)
     }
 
+    fun finalize() {
+        __finalize(__swiftObject)
+    }
+
     //Native methods
 
     external fun __onCharacteristicChanged(__swiftObject: Long, gatt: BluetoothGatt?, characteristic: BluetoothGattCharacteristic?)
@@ -104,4 +108,6 @@ class SwiftBluetoothGattCallback(private val __swiftObject: Long): BluetoothGatt
     external  fun __onReliableWriteCompleted(__swiftObject: Long, gatt: BluetoothGatt?, status: Int)
 
     external  fun __onServicesDiscovered(__swiftObject: Long, gatt: BluetoothGatt?, status: Int)
+
+    external fun __finalize(__swiftObject: Long)
 }

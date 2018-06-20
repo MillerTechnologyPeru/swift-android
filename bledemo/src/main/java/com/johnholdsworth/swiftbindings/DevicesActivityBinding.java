@@ -6,6 +6,7 @@ public interface DevicesActivityBinding {
         void validateBluetooth();
         void startScan();
         void stopScan();
+        void connectToDevice(Object context, Object device);
     }
 
     // Messages from Swift back to Java Activity
@@ -13,5 +14,6 @@ public interface DevicesActivityBinding {
         void activateBluetooth();
         void verifyGpsPermission();
         void loadFoundDevice(Object device, Integer rssi);
+        void connectionFailure();
     }
 }
