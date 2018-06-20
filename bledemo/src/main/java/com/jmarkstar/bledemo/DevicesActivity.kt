@@ -11,6 +11,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.os.Parcelable
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
@@ -20,6 +21,7 @@ import com.jmarkstar.bledemo.le.DemoLeDevice
 import com.johnholdsworth.swiftbindings.DevicesActivityBinding
 import kotlinx.android.synthetic.main.activity_devices.*
 import java.util.*
+import kotlin.collections.ArrayList
 
 class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
 
@@ -40,6 +42,8 @@ class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
 
     private val handler = Handler()
 
+    private lateinit var selectedDevice: BluetoothDevice
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_devices)
@@ -53,6 +57,7 @@ class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
         }
 
         bleDeviceAdapter.onDeviceClick = {
+            selectedDevice = it.data
             listener?.connectToDevice(this, it.data)
         }
 
@@ -125,13 +130,29 @@ class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
 
     override fun showServices(servicesParam: Any?) {
         Log.i("devices","showServices()")
-                val services = servicesParam as? List<BluetoothGattService>
+
+        val services = servicesParam as? ArrayList<BluetoothGattService>
+
         if(services!=null){
-            for(service in services){
-                Log.i("devices", "${service.uuid}")
+            val gattInfoList = ArrayList<GattInfoItem>()
+
+            services.forEach {service ->
+
+                gattInfoList.add(GattService(service.uuid.toString()))
+
+                service.characteristics.forEach { characteristic ->
+
+                    gattInfoList.add(GattCharacteristic(characteristic?.uuid.toString()))
+                }
+            }
+
+            handler.post {
+                val intent = Intent(this, DeviceDetailActivity::class.java)
+                intent.putExtra("device", selectedDevice)
+                intent.putParcelableArrayListExtra("services", gattInfoList as java.util.ArrayList<out Parcelable>)
+                startActivity(intent)
             }
         }
-
     }
 
     override fun connectionFailure() {
