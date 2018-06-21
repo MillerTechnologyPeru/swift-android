@@ -4,11 +4,17 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 
-class SwiftBroadcastReceiver: BroadcastReceiver() {
+class SwiftBroadcastReceiver(private val __swiftObject: Long): BroadcastReceiver() {
 
     override fun onReceive(context: Context?, intent: Intent?) {
-        __onReceive(context, intent)
+        __onReceive(__swiftObject, context, intent)
     }
 
-    external fun __onReceive(context: Context?, intent: Intent?)
+    fun finalize() {
+        __finalize(__swiftObject)
+    }
+
+    external fun __onReceive(__swiftObject: Long, context: Context?, intent: Intent?)
+
+    external fun __finalize(__swiftObject: Long)
 }
