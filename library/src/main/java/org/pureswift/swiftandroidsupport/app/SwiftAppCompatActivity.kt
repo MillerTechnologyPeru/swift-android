@@ -31,15 +31,17 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
     }
 
     fun finalize() {
-        //__finalize()
+        __finalize()
     }
 
-    external fun __onCreate(savedInstanceState: Bundle?)
+    external fun __onCreate(InstanceState: Bundle?)
 
     external fun __onResume()
 
     external fun __onPause()
 
     external fun __onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray)
+
+    external fun __finalize()
 
 }

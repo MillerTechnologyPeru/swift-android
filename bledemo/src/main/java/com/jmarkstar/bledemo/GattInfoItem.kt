@@ -1,7 +1,6 @@
 package com.jmarkstar.bledemo
 
 import android.os.Parcelable
-import java.io.Serializable
 
 interface GattInfoItem: Parcelable {
 
