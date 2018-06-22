@@ -6,42 +6,57 @@ import android.util.Log
 
 open class SwiftAppCompatActivity: AppCompatActivity() {
 
+    private var __swiftObject: Long = 0L
+
+    init{
+        __swiftObject = bind()
+        Log.v("SwiftAppCompatActivity", "__swiftObject = $__swiftObject")
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        __onCreate(savedInstanceState)
-        Log.v("SwiftAppCompatActivity", "onCreate()")
+        Log.v("SwiftAppCompatActivity", "onCreate() $savedInstanceState")
+        if(savedInstanceState != null){
+            onCreateNative(__swiftObject, savedInstanceState)
+        }else{
+            onCreateNotSavedInstanceStateNative(__swiftObject)
+        }
     }
 
     override fun onResume() {
         super.onResume()
-        __onResume()
+        //__onResume(__swiftObject)
         Log.v("SwiftAppCompatActivity", "onResume()")
     }
 
     override fun onPause() {
         super.onPause()
-        __onPause()
+       // __onPause(__swiftObject)
         Log.v("SwiftAppCompatActivity", "onPause()")
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        __onRequestPermissionsResult(requestCode, permissions, grantResults)
+        //__onRequestPermissionsResult(__swiftObject, requestCode, permissions, grantResults)
         Log.v("SwiftAppCompatActivity", "onRequestPermissionsResult()")
     }
 
     fun finalize() {
-        __finalize()
+        finalizeNative(__swiftObject)
     }
 
-    external fun __onCreate(InstanceState: Bundle?)
+    external fun bind(): Long
 
-    external fun __onResume()
+    external fun onCreateNative(__swiftObject: Long, savedInstanceState: Bundle?)
 
-    external fun __onPause()
+    external fun onCreateNotSavedInstanceStateNative(__swiftObject: Long)
 
-    external fun __onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray)
+    external fun __onResume(__swiftObject: Long)
 
-    external fun __finalize()
+    external fun __onPause(__swiftObject: Long)
+
+    external fun __onRequestPermissionsResult(__swiftObject: Long, requestCode: Int, permissions: Array<out String>, grantResults: IntArray)
+
+    external fun finalizeNative(__swiftObject: Long)
 
 }
