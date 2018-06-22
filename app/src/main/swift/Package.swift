@@ -7,7 +7,7 @@ let package = Package(
         .library(name: "swiftandroid", type: .dynamic, targets: ["swiftandroid"]),
     ],
     dependencies: [
-        .package(url: "git@github.com:PureSwift/Android.git", .revision("535a81faf9e9ef2b9edd66c4e285c8dfbd270e6b"))
+        .package(url: "git@github.com:PureSwift/Android.git", .revision("ecac0b9d645a99e053934e3e0efe36fae6dbb700"))
     ],
     targets: [
         .target(

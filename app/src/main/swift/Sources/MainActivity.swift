@@ -22,27 +22,22 @@ public func SwiftAndroidMainActivity() -> SwiftSupportAppCompatActivity {
 // Like AppDelegate in iOS
 final class MainActivity: SwiftSupportAppCompatActivity {
     
-    init() {
-        super.init()
-        NSLog("Swift \(#function)")
-    }
-    
-    override func onCreate(savedInstanceState: Android.OS.Bundle?) {
+    func onCreate(savedInstanceState: Android.OS.Bundle?) {
         
         NSLog("Swift \(#function)")
     }
     
-    override func onResume() {
+    func onResume() {
         
         NSLog("Swift \(#function)")
     }
     
-    override func onPause() {
+    func onPause() {
         
         NSLog("Swift \(#function)")
     }
     
-    override func onRequestPermissionsResult(requestCode: Int, permissions: [String], grantResults: [Int]) {
+    func onRequestPermissionsResult(requestCode: Int, permissions: [String], grantResults: [Int]) {
         
         NSLog("Swift \(#function)")
     }
