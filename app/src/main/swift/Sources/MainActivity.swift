@@ -15,29 +15,34 @@ import Android
 /// Needs to be implemented by app.
 @_silgen_name("SwiftAndroidMainActivity")
 public func SwiftAndroidMainActivity() -> SwiftSupportAppCompatActivity {
-    
+    NSLog("Swift \(#function)")
     return MainActivity()
 }
 
 // Like AppDelegate in iOS
 final class MainActivity: SwiftSupportAppCompatActivity {
     
-    func onCreate(savedInstanceState: Android.OS.Bundle?) {
+    init() {
+        super.init()
+        NSLog("Swift \(#function)")
+    }
+    
+    override func onCreate(savedInstanceState: Android.OS.Bundle?) {
         
         NSLog("Swift \(#function)")
     }
     
-    func onResume() {
+    override func onResume() {
         
         NSLog("Swift \(#function)")
     }
     
-    func onPause() {
+    override func onPause() {
         
         NSLog("Swift \(#function)")
     }
     
-    func onRequestPermissionsResult(requestCode: Int, permissions: [String], grantResults: [Int]) {
+    override func onRequestPermissionsResult(requestCode: Int, permissions: [String], grantResults: [Int]) {
         
         NSLog("Swift \(#function)")
     }

@@ -1,8 +1,8 @@
 package org.pureswift.swiftandroidsupport.app
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 
 open class SwiftAppCompatActivity: AppCompatActivity() {
 
@@ -10,35 +10,51 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
 
     init{
         __swiftObject = bind()
-        Log.v("SwiftAppCompatActivity", "__swiftObject = $__swiftObject")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.v("SwiftAppCompatActivity", "onCreate() $savedInstanceState")
-        if(savedInstanceState != null){
-            onCreateNative(__swiftObject, savedInstanceState)
-        }else{
-            onCreateNotSavedInstanceStateNative(__swiftObject)
-        }
+        onCreateNative(__swiftObject, savedInstanceState)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        onStartNative(__swiftObject)
     }
 
     override fun onResume() {
         super.onResume()
-        //__onResume(__swiftObject)
-        Log.v("SwiftAppCompatActivity", "onResume()")
+        onResumeNative(__swiftObject)
     }
 
     override fun onPause() {
         super.onPause()
-       // __onPause(__swiftObject)
-        Log.v("SwiftAppCompatActivity", "onPause()")
+        onPauseNative(__swiftObject)
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        onRestartNative(__swiftObject)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        onStopNative(__swiftObject)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        onDestroyNative(__swiftObject)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        onActivityResultNative(__swiftObject, requestCode, resultCode, data)
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        //__onRequestPermissionsResult(__swiftObject, requestCode, permissions, grantResults)
-        Log.v("SwiftAppCompatActivity", "onRequestPermissionsResult()")
+        onRequestPermissionsResultNative(__swiftObject, requestCode, permissions, grantResults)
     }
 
     fun finalize() {
@@ -49,13 +65,21 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
 
     external fun onCreateNative(__swiftObject: Long, savedInstanceState: Bundle?)
 
-    external fun onCreateNotSavedInstanceStateNative(__swiftObject: Long)
+    external fun onStartNative(__swiftObject: Long)
 
-    external fun __onResume(__swiftObject: Long)
+    external fun onResumeNative(__swiftObject: Long)
 
-    external fun __onPause(__swiftObject: Long)
+    external fun onPauseNative(__swiftObject: Long)
 
-    external fun __onRequestPermissionsResult(__swiftObject: Long, requestCode: Int, permissions: Array<out String>, grantResults: IntArray)
+    external fun onRestartNative(__swiftObject: Long)
+
+    external fun onStopNative(__swiftObject: Long)
+
+    external fun onDestroyNative(__swiftObject: Long)
+
+    external fun onActivityResultNative(__swiftObject: Long, requestCode: Int, resultCode: Int, data: Intent?)
+
+    external fun onRequestPermissionsResultNative(__swiftObject: Long, requestCode: Int, permissions: Array<out String>, grantResults: IntArray)
 
     external fun finalizeNative(__swiftObject: Long)
 
