@@ -20,7 +20,6 @@ import com.jmarkstar.bledemo.broadcastreceivers.BluetoothChangeStateReceiver
 import com.jmarkstar.bledemo.le.DemoLeDevice
 import com.johnholdsworth.swiftbindings.DevicesActivityBinding
 import kotlinx.android.synthetic.main.activity_devices.*
-import java.util.*
 import kotlin.collections.ArrayList
 
 class DevicesActivity: AppCompatActivity(), DevicesActivityBinding.Responder {
