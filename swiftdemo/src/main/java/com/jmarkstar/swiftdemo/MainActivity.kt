@@ -1,9 +1,9 @@
 package com.jmarkstar.swiftdemo
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import org.pureswift.swiftandroidsupport.app.SwiftAppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : SwiftAppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
