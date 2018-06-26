@@ -1,10 +1,12 @@
 package org.pureswift.swiftandroidsupport.app
 
-import android.content.Intent
+import android.content.*
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 
 open class SwiftAppCompatActivity: AppCompatActivity() {
+
+
 
     private var __swiftObject: Long = 0L
 
@@ -59,6 +61,14 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
 
     fun finalize() {
         finalizeNative(__swiftObject)
+    }
+
+    override fun registerReceiver(receiver: BroadcastReceiver?, filter: IntentFilter?): Intent {
+        return super.registerReceiver(receiver, filter)
+    }
+
+    override fun unregisterReceiver(receiver: BroadcastReceiver?) {
+        super.unregisterReceiver(receiver)
     }
 
     external fun bind(): Long
