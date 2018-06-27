@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity
 
 open class SwiftAppCompatActivity: AppCompatActivity() {
 
-
-
     private var __swiftObject: Long = 0L
 
     init{

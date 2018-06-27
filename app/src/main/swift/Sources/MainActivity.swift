@@ -159,6 +159,8 @@ extension SwiftBluetoothScannerBinding_ListenerImpl {
             self.layoutInflater = layoutInflater
             self.cellResource = cellResource
             self.textViewResource = textViewResource
+            
+            super.init()
         }
         
         var data = [Android.Bluetooth.LE.ScanResult]() {
@@ -169,14 +171,14 @@ extension SwiftBluetoothScannerBinding_ListenerImpl {
             }
         }
         
-        func getCount() -> Int {
+        override func getCount() -> Int {
             
             NSLog("\(type(of: self)): \(#function)")
             
             return data.count
         }
         
-        func getView(position row: Int, convertView: Android.View.View?, parent: Android.View.ViewGroup) -> Android.View.View {
+        override func getView(position row: Int, convertView: Android.View.View?, parent: Android.View.ViewGroup) -> Android.View.View {
             
             NSLog("\(type(of: self)): \(#function)")
             
