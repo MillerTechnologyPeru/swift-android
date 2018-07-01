@@ -3,6 +3,7 @@ package org.pureswift.swiftandroidsupport.app
 import android.app.Application
 import android.content.ComponentCallbacks
 import android.content.res.Configuration
+import android.util.Log
 
 class SwiftApplication: Application() {
 
@@ -27,9 +28,10 @@ class SwiftApplication: Application() {
     override fun onCreate() {
         super.onCreate()
 
-        loadNativeDependencies()
-
-        __swiftObject = bind()
+        //loadNativeDependencies()
+        Log.v("SwiftApplication","onCreate()")
+                __swiftObject = bind()
+        Log.v("SwiftApplication", "__swiftObject = &__swiftObject")
 
         onCreateNative(__swiftObject)
     }
