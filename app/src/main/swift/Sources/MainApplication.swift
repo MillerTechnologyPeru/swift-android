@@ -13,9 +13,9 @@ import Android
 
 /// Needs to be implemented by app.
 @_silgen_name("SwiftAndroidMainApplication")
-public func SwiftAndroidMainApplication() -> SwiftApplication {
+public func SwiftAndroidMainApplication() -> SwiftApplication.Type {
     NSLog("Swift \(#function)")
-    return MainApplication()
+    return MainApplication.self
 }
 
 // Like AppDelegate in iOS
