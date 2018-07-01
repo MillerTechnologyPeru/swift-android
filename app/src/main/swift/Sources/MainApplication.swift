@@ -13,7 +13,7 @@ import Android
 
 /// Needs to be implemented by app.
 @_silgen_name("SwiftAndroidMainApplication")
-public func SwiftAndroidMainApplication() -> SwiftApplication.Type {
+public func SwiftAndroidMainApplication() -> SwiftApplication {
     NSLog("Swift \(#function)")
     return MainApplication()
 }
