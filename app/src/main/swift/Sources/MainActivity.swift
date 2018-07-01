@@ -22,22 +22,22 @@ public func SwiftAndroidMainActivity() -> SwiftSupportAppCompatActivity {
 // Like AppDelegate in iOS
 final class MainActivity: SwiftSupportAppCompatActivity {
     
-    func onCreate(savedInstanceState: Android.OS.Bundle?) {
+    override func onCreate(savedInstanceState: Android.OS.Bundle?) {
         
         NSLog("Swift \(#function)")
     }
     
-    func onResume() {
+    override func onResume() {
         
         NSLog("Swift \(#function)")
     }
     
-    func onPause() {
+    override func onPause() {
         
         NSLog("Swift \(#function)")
     }
     
-    func onRequestPermissionsResult(requestCode: Int, permissions: [String], grantResults: [Int]) {
+    override func onRequestPermissionsResult(requestCode: Int, permissions: [String], grantResults: [Int]) {
         
         NSLog("Swift \(#function)")
     }
@@ -146,21 +146,26 @@ extension SwiftBluetoothScannerBinding_ListenerImpl {
     
     class ListAdapter: Android.Widget.BaseAdapter {
         
-        let layoutInflater: Android.View.LayoutInflater
+        var layoutInflater: Android.View.LayoutInflater? = nil
         
-        let cellResource: Int
+        var cellResource: Int = 0
         
-        let textViewResource: Int
+        var textViewResource: Int = 0
         
-        init(layoutInflater: Android.View.LayoutInflater,
+        public convenience init(layoutInflater: Android.View.LayoutInflater,
              cellResource: Int,
              textViewResource: Int) {
+            
+            self.init(javaObject: nil)
+            self.bindNewJavaObject()
             
             self.layoutInflater = layoutInflater
             self.cellResource = cellResource
             self.textViewResource = textViewResource
-            
-            super.init()
+        }
+        
+        public required init(javaObject: jobject?){
+            super.init(javaObject: javaObject)
         }
         
         var data = [Android.Bluetooth.LE.ScanResult]() {
@@ -184,7 +189,7 @@ extension SwiftBluetoothScannerBinding_ListenerImpl {
             
             let itemViewId = Android.R.Layout.init(rawValue: cellResource)
             
-            let view: Android.View.View = /* convertView ?? */ layoutInflater.inflate(resource: itemViewId,
+            let view: Android.View.View = /* convertView ?? */ layoutInflater!.inflate(resource: itemViewId,
                                                                                       root: parent,
                                                                                       attachToRoot: false)
             
