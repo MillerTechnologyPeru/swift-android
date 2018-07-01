@@ -7,7 +7,7 @@ import android.content.res.Configuration
 class SwiftApplication: Application() {
 
     companion object {
-        @JvmStatic fun loadNativeDependencies(libName: String = "swiftandroid"){
+        fun loadNativeDependencies(libName: String = "swiftandroid"){
             System.loadLibrary(libName)
         }
 
@@ -21,7 +21,7 @@ class SwiftApplication: Application() {
     override fun onConfigurationChanged(newConfig: Configuration?) {
         super.onConfigurationChanged(newConfig)
 
-        onConfigurationChangedNative(newConfig)
+        onConfigurationChangedNative(__swiftObject, newConfig)
     }
 
     override fun onCreate() {
@@ -31,62 +31,62 @@ class SwiftApplication: Application() {
 
         __swiftObject = bind()
 
-        onCreateNative()
+        onCreateNative(__swiftObject)
     }
 
     override fun onLowMemory() {
         super.onLowMemory()
 
-        onLowMemoryNative()
+        onLowMemoryNative(__swiftObject)
     }
 
     override fun onTerminate() {
         super.onTerminate()
 
-        onTerminateNative()
+        onTerminateNative(__swiftObject)
     }
 
     override fun onTrimMemory(level: Int) {
         super.onTrimMemory(level)
 
-        onTrimMemoryNative(level)
+        onTrimMemoryNative(__swiftObject, level)
     }
 
     override fun registerActivityLifecycleCallbacks(callback: ActivityLifecycleCallbacks?) {
         super.registerActivityLifecycleCallbacks(callback)
 
-        registerActivityLifecycleCallbacksNative(callback)
+        registerActivityLifecycleCallbacksNative(__swiftObject, callback)
 
     }
 
     override fun unregisterActivityLifecycleCallbacks(callback: ActivityLifecycleCallbacks?) {
         super.unregisterActivityLifecycleCallbacks(callback)
 
-        unregisterActivityLifecycleCallbacksNative(callback)
+        unregisterActivityLifecycleCallbacksNative(__swiftObject, callback)
     }
 
     override fun registerComponentCallbacks(callback: ComponentCallbacks?) {
         super.registerComponentCallbacks(callback)
 
-        registerComponentCallbacksNative(callback)
+        registerComponentCallbacksNative(__swiftObject, callback)
     }
 
     override fun unregisterComponentCallbacks(callback: ComponentCallbacks?) {
         super.unregisterComponentCallbacks(callback)
 
-        unregisterComponentCallbacksNative(callback)
+        unregisterComponentCallbacksNative(__swiftObject, callback)
     }
 
     override fun registerOnProvideAssistDataListener(callback: OnProvideAssistDataListener?) {
         super.registerOnProvideAssistDataListener(callback)
 
-        registerOnProvideAssistDataListenerNative(callback)
+        registerOnProvideAssistDataListenerNative(__swiftObject, callback)
     }
 
     override fun unregisterOnProvideAssistDataListener(callback: OnProvideAssistDataListener?) {
         super.unregisterOnProvideAssistDataListener(callback)
 
-        unregisterOnProvideAssistDataListenerNative(callback)
+        unregisterOnProvideAssistDataListenerNative(__swiftObject, callback)
     }
 
     fun finalize() {
@@ -96,27 +96,27 @@ class SwiftApplication: Application() {
 
     external fun bind(): Long
 
-    external fun onConfigurationChangedNative(newConfig: Configuration?)
+    external fun onConfigurationChangedNative(__swiftObject: Long, newConfig: Configuration?)
 
-    external fun onCreateNative()
+    external fun onCreateNative(__swiftObject: Long)
 
-    external fun onLowMemoryNative()
+    external fun onLowMemoryNative(__swiftObject: Long)
 
-    external fun onTerminateNative()
+    external fun onTerminateNative(__swiftObject: Long)
 
-    external fun onTrimMemoryNative(level: Int)
+    external fun onTrimMemoryNative(__swiftObject: Long, level: Int)
 
-    external fun registerActivityLifecycleCallbacksNative(callback: ActivityLifecycleCallbacks?)
+    external fun registerActivityLifecycleCallbacksNative(__swiftObject: Long, callback: ActivityLifecycleCallbacks?)
 
-    external fun unregisterActivityLifecycleCallbacksNative(callback: ActivityLifecycleCallbacks?)
+    external fun unregisterActivityLifecycleCallbacksNative(__swiftObject: Long, callback: ActivityLifecycleCallbacks?)
 
-    external fun registerComponentCallbacksNative(callback: ComponentCallbacks?)
+    external fun registerComponentCallbacksNative(__swiftObject: Long, callback: ComponentCallbacks?)
 
-    external fun unregisterComponentCallbacksNative(callback: ComponentCallbacks?)
+    external fun unregisterComponentCallbacksNative(__swiftObject: Long, callback: ComponentCallbacks?)
 
-    external fun registerOnProvideAssistDataListenerNative(callback: OnProvideAssistDataListener?)
+    external fun registerOnProvideAssistDataListenerNative(__swiftObject: Long, callback: OnProvideAssistDataListener?)
 
-    external fun unregisterOnProvideAssistDataListenerNative(callback: OnProvideAssistDataListener?)
+    external fun unregisterOnProvideAssistDataListenerNative(__swiftObject: Long, callback: OnProvideAssistDataListener?)
 
     external fun finalizeNative(__swiftObject: Long)
 }
