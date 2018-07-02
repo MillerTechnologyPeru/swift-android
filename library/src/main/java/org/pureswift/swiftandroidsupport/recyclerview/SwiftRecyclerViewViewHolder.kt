@@ -3,7 +3,7 @@ package org.pureswift.swiftandroidsupport.recyclerview
 import android.support.v7.widget.RecyclerView
 import android.view.View
 
-class SwiftRecyclerViewViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+class SwiftRecyclerViewViewHolder(private val __swiftObject: Long, itemView: View): RecyclerView.ViewHolder(itemView) {
 
     fun obtainAdapterPosition(): Int {
         return this.adapterPosition
@@ -32,4 +32,10 @@ class SwiftRecyclerViewViewHolder(itemView: View): RecyclerView.ViewHolder(itemV
     fun putIsRecyclable(recyclable: Boolean) {
         this.setIsRecyclable(recyclable)
     }
+
+    fun finalize() {
+        __finalize(__swiftObject)
+    }
+
+    private external fun __finalize(__swiftObject: Long)
 }

@@ -21,6 +21,10 @@ class SwiftRecyclerViewAdapter(private val __swiftObject: Long): RecyclerView.Ad
         __onBindViewHolder(__swiftObject, holder, position)
     }
 
+    fun finalize() {
+        __finalize(__swiftObject)
+    }
+
     private external fun __onCreateViewHolder(__swiftObject: Long, parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder
 
     private external fun __getItemCount(__swiftObject: Long): Int
@@ -28,4 +32,6 @@ class SwiftRecyclerViewAdapter(private val __swiftObject: Long): RecyclerView.Ad
     private external fun __onBindViewHolder(__swiftObject: Long, holder: RecyclerView.ViewHolder, position: Int)
 
     private external fun __getItemViewType(__swiftObject: Long, position: Int): Int
+
+    private external fun __finalize(__swiftObject: Long)
 }
