@@ -82,29 +82,29 @@ open class SwiftApplication: Application() {
         finalizeNative(__swiftObject)
     }
 
-    external fun bind(): Long
+    private external fun bind(): Long
 
-    external fun onConfigurationChangedNative(__swiftObject: Long, newConfig: Configuration?)
+    private external fun onConfigurationChangedNative(__swiftObject: Long, newConfig: Configuration?)
 
-    external fun onCreateNative(__swiftObject: Long)
+    private external fun onCreateNative(__swiftObject: Long)
 
-    external fun onLowMemoryNative(__swiftObject: Long)
+    private external fun onLowMemoryNative(__swiftObject: Long)
 
-    external fun onTerminateNative(__swiftObject: Long)
+    private external fun onTerminateNative(__swiftObject: Long)
 
-    external fun onTrimMemoryNative(__swiftObject: Long, level: Int)
+    private external fun onTrimMemoryNative(__swiftObject: Long, level: Int)
 
-    external fun registerActivityLifecycleCallbacksNative(__swiftObject: Long, callback: ActivityLifecycleCallbacks?)
+    private external fun registerActivityLifecycleCallbacksNative(__swiftObject: Long, callback: ActivityLifecycleCallbacks?)
 
-    external fun unregisterActivityLifecycleCallbacksNative(__swiftObject: Long, callback: ActivityLifecycleCallbacks?)
+    private external fun unregisterActivityLifecycleCallbacksNative(__swiftObject: Long, callback: ActivityLifecycleCallbacks?)
 
-    external fun registerComponentCallbacksNative(__swiftObject: Long, callback: ComponentCallbacks?)
+    private external fun registerComponentCallbacksNative(__swiftObject: Long, callback: ComponentCallbacks?)
 
-    external fun unregisterComponentCallbacksNative(__swiftObject: Long, callback: ComponentCallbacks?)
+    private external fun unregisterComponentCallbacksNative(__swiftObject: Long, callback: ComponentCallbacks?)
 
-    external fun registerOnProvideAssistDataListenerNative(__swiftObject: Long, callback: OnProvideAssistDataListener?)
+    private external fun registerOnProvideAssistDataListenerNative(__swiftObject: Long, callback: OnProvideAssistDataListener?)
 
-    external fun unregisterOnProvideAssistDataListenerNative(__swiftObject: Long, callback: OnProvideAssistDataListener?)
+    private external fun unregisterOnProvideAssistDataListenerNative(__swiftObject: Long, callback: OnProvideAssistDataListener?)
 
-    external fun finalizeNative(__swiftObject: Long)
+    private external fun finalizeNative(__swiftObject: Long)
 }

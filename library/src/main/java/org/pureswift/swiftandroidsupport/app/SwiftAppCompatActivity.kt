@@ -69,26 +69,26 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
         super.unregisterReceiver(receiver)
     }
 
-    external fun bind(): Long
+    private external fun bind(): Long
 
-    external fun onCreateNative(__swiftObject: Long, savedInstanceState: Bundle?)
+    private external fun onCreateNative(__swiftObject: Long, savedInstanceState: Bundle?)
 
-    external fun onStartNative(__swiftObject: Long)
+    private external fun onStartNative(__swiftObject: Long)
 
-    external fun onResumeNative(__swiftObject: Long)
+    private external fun onResumeNative(__swiftObject: Long)
 
-    external fun onPauseNative(__swiftObject: Long)
+    private external fun onPauseNative(__swiftObject: Long)
 
-    external fun onRestartNative(__swiftObject: Long)
+    private external fun onRestartNative(__swiftObject: Long)
 
-    external fun onStopNative(__swiftObject: Long)
+    private external fun onStopNative(__swiftObject: Long)
 
-    external fun onDestroyNative(__swiftObject: Long)
+    private external fun onDestroyNative(__swiftObject: Long)
 
-    external fun onActivityResultNative(__swiftObject: Long, requestCode: Int, resultCode: Int, data: Intent?)
+    private external fun onActivityResultNative(__swiftObject: Long, requestCode: Int, resultCode: Int, data: Intent?)
 
-    external fun onRequestPermissionsResultNative(__swiftObject: Long, requestCode: Int, permissions: Array<out String>, grantResults: IntArray)
+    private external fun onRequestPermissionsResultNative(__swiftObject: Long, requestCode: Int, permissions: Array<out String>, grantResults: IntArray)
 
-    external fun finalizeNative(__swiftObject: Long)
+    private external fun finalizeNative(__swiftObject: Long)
 
 }

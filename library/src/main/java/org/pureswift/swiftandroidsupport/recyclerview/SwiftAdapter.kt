@@ -21,11 +21,11 @@ class SwiftAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         __onBindViewHolder(holder, position)
     }
 
-    external fun __onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder
+    private external fun __onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder
 
-    external fun __getItemCount(): Int
+    private external fun __getItemCount(): Int
 
-    external fun __onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int)
+    private external fun __onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int)
 
-    external fun __getItemViewType(position: Int): Int
+    private external fun __getItemViewType(position: Int): Int
 }

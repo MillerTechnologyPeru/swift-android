@@ -41,5 +41,5 @@ open class SwiftBaseAdapter(private val __swiftObject: Long) : BaseAdapter() {
 
     private external fun __get_view(__swiftObject: Long, position: Int, convertView: View?, parent: ViewGroup): View
 
-    external fun __finalize(__swiftObject: Long)
+    private external fun __finalize(__swiftObject: Long)
 }

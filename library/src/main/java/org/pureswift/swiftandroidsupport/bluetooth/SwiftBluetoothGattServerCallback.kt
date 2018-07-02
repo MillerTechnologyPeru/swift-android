@@ -77,27 +77,27 @@ class SwiftBluetoothGattServerCallback(private val __swiftObject: Long): Bluetoo
 
     //Native Methods
 
-    external fun __onCharacteristicReadRequest(__swiftObject: Long, device: BluetoothDevice?, requestId: Int, offset: Int, characteristic: BluetoothGattCharacteristic?)
+    private external fun __onCharacteristicReadRequest(__swiftObject: Long, device: BluetoothDevice?, requestId: Int, offset: Int, characteristic: BluetoothGattCharacteristic?)
 
-    external fun __onCharacteristicWriteRequest(__swiftObject: Long, device: BluetoothDevice?, requestId: Int, characteristic: BluetoothGattCharacteristic?, preparedWrite: Boolean, responseNeeded: Boolean, offset: Int, value: ByteArray?)
+    private external fun __onCharacteristicWriteRequest(__swiftObject: Long, device: BluetoothDevice?, requestId: Int, characteristic: BluetoothGattCharacteristic?, preparedWrite: Boolean, responseNeeded: Boolean, offset: Int, value: ByteArray?)
 
-    external fun __onConnectionStateChange(__swiftObject: Long, device: BluetoothDevice?, status: Int, newState: Int)
+    private external fun __onConnectionStateChange(__swiftObject: Long, device: BluetoothDevice?, status: Int, newState: Int)
 
-    external fun __onDescriptorReadRequest(__swiftObject: Long, device: BluetoothDevice?, requestId: Int, offset: Int, descriptor: BluetoothGattDescriptor?)
+    private external fun __onDescriptorReadRequest(__swiftObject: Long, device: BluetoothDevice?, requestId: Int, offset: Int, descriptor: BluetoothGattDescriptor?)
 
-    external fun __onDescriptorWriteRequest(__swiftObject: Long, device: BluetoothDevice?, requestId: Int, descriptor: BluetoothGattDescriptor?, preparedWrite: Boolean, responseNeeded: Boolean, offset: Int, value: ByteArray?)
+    private external fun __onDescriptorWriteRequest(__swiftObject: Long, device: BluetoothDevice?, requestId: Int, descriptor: BluetoothGattDescriptor?, preparedWrite: Boolean, responseNeeded: Boolean, offset: Int, value: ByteArray?)
 
-    external fun __onExecuteWrite(__swiftObject: Long, device: BluetoothDevice?, requestId: Int, execute: Boolean)
+    private external fun __onExecuteWrite(__swiftObject: Long, device: BluetoothDevice?, requestId: Int, execute: Boolean)
 
-    external fun __onMtuChanged(__swiftObject: Long, device: BluetoothDevice?, mtu: Int)
+    private external fun __onMtuChanged(__swiftObject: Long, device: BluetoothDevice?, mtu: Int)
 
-    external fun __onNotificationSent(__swiftObject: Long, device: BluetoothDevice?, status: Int)
+    private external fun __onNotificationSent(__swiftObject: Long, device: BluetoothDevice?, status: Int)
 
-    external fun __onPhyRead(__swiftObject: Long, device: BluetoothDevice?, txPhy: Int, rxPhy: Int, status: Int)
+    private external fun __onPhyRead(__swiftObject: Long, device: BluetoothDevice?, txPhy: Int, rxPhy: Int, status: Int)
 
-    external fun __onPhyUpdate(__swiftObject: Long, device: BluetoothDevice?, txPhy: Int, rxPhy: Int, status: Int)
+    private external fun __onPhyUpdate(__swiftObject: Long, device: BluetoothDevice?, txPhy: Int, rxPhy: Int, status: Int)
 
-    external fun __onServiceAdded(__swiftObject: Long, status: Int, service: BluetoothGattService?)
+    private external fun __onServiceAdded(__swiftObject: Long, status: Int, service: BluetoothGattService?)
 
-    external fun __finalize(__swiftObject: Long)
+    private external fun __finalize(__swiftObject: Long)
 }

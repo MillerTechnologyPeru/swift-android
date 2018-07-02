@@ -86,29 +86,29 @@ class SwiftBluetoothGattCallback(private val __swiftObject: Long): BluetoothGatt
 
     //Native methods
 
-    external fun __onCharacteristicChanged(__swiftObject: Long, gatt: BluetoothGatt?, characteristic: BluetoothGattCharacteristic?)
+    private external fun __onCharacteristicChanged(__swiftObject: Long, gatt: BluetoothGatt?, characteristic: BluetoothGattCharacteristic?)
 
-    external fun __onCharacteristicRead(__swiftObject: Long, gatt: BluetoothGatt?, characteristic: BluetoothGattCharacteristic?, status: Int)
+    private external fun __onCharacteristicRead(__swiftObject: Long, gatt: BluetoothGatt?, characteristic: BluetoothGattCharacteristic?, status: Int)
 
-    external fun __onCharacteristicWrite(__swiftObject: Long, gatt: BluetoothGatt?, characteristic: BluetoothGattCharacteristic?, status: Int)
+    private external fun __onCharacteristicWrite(__swiftObject: Long, gatt: BluetoothGatt?, characteristic: BluetoothGattCharacteristic?, status: Int)
 
-    external fun __onConnectionStateChange(__swiftObject: Long, gatt: BluetoothGatt?, status: Int, newState: Int)
+    private external fun __onConnectionStateChange(__swiftObject: Long, gatt: BluetoothGatt?, status: Int, newState: Int)
 
-    external fun __onDescriptorRead(__swiftObject: Long, gatt: BluetoothGatt?, descriptor: BluetoothGattDescriptor?, status: Int)
+    private external fun __onDescriptorRead(__swiftObject: Long, gatt: BluetoothGatt?, descriptor: BluetoothGattDescriptor?, status: Int)
 
-    external fun __onDescriptorWrite(__swiftObject: Long, gatt: BluetoothGatt?, descriptor: BluetoothGattDescriptor?, status: Int)
+    private external fun __onDescriptorWrite(__swiftObject: Long, gatt: BluetoothGatt?, descriptor: BluetoothGattDescriptor?, status: Int)
 
-    external fun __onMtuChanged(__swiftObject: Long, gatt: BluetoothGatt?, mtu: Int, status: Int)
+    private external fun __onMtuChanged(__swiftObject: Long, gatt: BluetoothGatt?, mtu: Int, status: Int)
 
-    external fun __onPhyRead(__swiftObject: Long, gatt: BluetoothGatt?, txPhy: Int, rxPhy: Int, status: Int)
+    private external fun __onPhyRead(__swiftObject: Long, gatt: BluetoothGatt?, txPhy: Int, rxPhy: Int, status: Int)
 
-    external fun __onPhyUpdate(__swiftObject: Long, gatt: BluetoothGatt?, txPhy: Int, rxPhy: Int, status: Int)
+    private external fun __onPhyUpdate(__swiftObject: Long, gatt: BluetoothGatt?, txPhy: Int, rxPhy: Int, status: Int)
 
-    external fun __onReadRemoteRssi(__swiftObject: Long, gatt: BluetoothGatt?, rssi: Int, status: Int)
+    private external fun __onReadRemoteRssi(__swiftObject: Long, gatt: BluetoothGatt?, rssi: Int, status: Int)
 
-    external  fun __onReliableWriteCompleted(__swiftObject: Long, gatt: BluetoothGatt?, status: Int)
+    private external  fun __onReliableWriteCompleted(__swiftObject: Long, gatt: BluetoothGatt?, status: Int)
 
-    external  fun __onServicesDiscovered(__swiftObject: Long, gatt: BluetoothGatt?, status: Int)
+    private external  fun __onServicesDiscovered(__swiftObject: Long, gatt: BluetoothGatt?, status: Int)
 
-    external fun __finalize(__swiftObject: Long)
+    private external fun __finalize(__swiftObject: Long)
 }

@@ -15,8 +15,8 @@ class SwiftBluetoothAdapter {
             __finalize(__swiftObject)
         }
 
-        external fun __on_le_scan(__swiftObject: Long, device: BluetoothDevice?, rssi: Int, scanRecord: ByteArray?)
+        private external fun __on_le_scan(__swiftObject: Long, device: BluetoothDevice?, rssi: Int, scanRecord: ByteArray?)
 
-        external fun __finalize(__swiftObject: Long)
+        private external fun __finalize(__swiftObject: Long)
     }
 }

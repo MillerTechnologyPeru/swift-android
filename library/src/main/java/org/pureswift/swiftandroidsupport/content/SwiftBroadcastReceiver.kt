@@ -14,7 +14,7 @@ class SwiftBroadcastReceiver(private val __swiftObject: Long): BroadcastReceiver
         __finalize(__swiftObject)
     }
 
-    external fun __onReceive(__swiftObject: Long, context: Context?, intent: Intent?)
+    private external fun __onReceive(__swiftObject: Long, context: Context?, intent: Intent?)
 
-    external fun __finalize(__swiftObject: Long)
+    private external fun __finalize(__swiftObject: Long)
 }
