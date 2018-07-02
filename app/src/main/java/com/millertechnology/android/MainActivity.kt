@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity(), SwiftBluetoothScannerBinding.Responder
 
     override fun setAdapter(adapter: Any?) {
         val checkedAdapter = checkNotNull(adapter){
-            "SwiftAdapter is Null"
+            "SwiftRecyclerViewAdapter is Null"
         }
 
         val swiftAdapter = checkedAdapter as SwiftBaseAdapter
