@@ -2,16 +2,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "swiftandroid",
+    name: "swiftandroidsimple",
     products: [
-        .library(name: "swiftandroid", type: .dynamic, targets: ["swiftandroid"]),
+        .library(name: "swiftandroidsimple", type: .dynamic, targets: ["swiftandroidtarget"]),
     ],
     dependencies: [
-        .package(url: "git@github.com:PureSwift/Android.git", .revision("d310ec3a2b4855d8a4100b74b83619cb52d60dd9"))
+        .package(url: "git@github.com:PureSwift/Android.git", .revision("57893419bb642991ac189173785a60b672aee6f8"))
     ],
     targets: [
         .target(
-            name: "swiftandroid",
+            name: "swiftandroidtarget",
             dependencies: ["Android"],
             path: "Sources"
         ),

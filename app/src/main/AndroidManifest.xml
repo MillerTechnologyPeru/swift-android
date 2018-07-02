@@ -12,7 +12,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name="org.pureswift.swiftandroidsupport.app.SwiftApplication"
+        android:name=".MyApplication"
         android:hardwareAccelerated="false"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,7 +22,7 @@
         android:theme="@style/AppTheme">
 
 
-        <activity android:name=".TestActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".TestActivity"/>
     </application>
 
 </manifest>

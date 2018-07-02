@@ -23,6 +23,7 @@ final class MainApplication: SwiftApplication {
     
     override func onCreate(){
         NSLog("Swift \(#function)")
+        
     }
     
 }

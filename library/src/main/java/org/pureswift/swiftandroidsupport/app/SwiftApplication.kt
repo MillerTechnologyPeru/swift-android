@@ -3,19 +3,8 @@ package org.pureswift.swiftandroidsupport.app
 import android.app.Application
 import android.content.ComponentCallbacks
 import android.content.res.Configuration
-import android.util.Log
 
-class SwiftApplication: Application() {
-
-    companion object {
-        fun loadNativeDependencies(libName: String = "swiftandroid"){
-            System.loadLibrary(libName)
-        }
-
-        init {
-            loadNativeDependencies()
-        }
-    }
+open class SwiftApplication: Application() {
 
     private var __swiftObject: Long = 0L
 
@@ -28,10 +17,7 @@ class SwiftApplication: Application() {
     override fun onCreate() {
         super.onCreate()
 
-        //loadNativeDependencies()
-        Log.v("SwiftApplication","onCreate()")
-                __swiftObject = bind()
-        Log.v("SwiftApplication", "__swiftObject = &__swiftObject")
+        __swiftObject = bind()
 
         onCreateNative(__swiftObject)
     }
