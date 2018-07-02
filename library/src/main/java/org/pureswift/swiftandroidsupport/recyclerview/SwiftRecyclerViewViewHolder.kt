@@ -1,9 +1,9 @@
 package org.pureswift.swiftandroidsupport.recyclerview
 
-import android.support.v7.widget.RecyclerView
+import android.support.v7.widget.RecyclerView.ViewHolder
 import android.view.View
 
-class SwiftRecyclerViewViewHolder(private val __swiftObject: Long, itemView: View): RecyclerView.ViewHolder(itemView) {
+class SwiftRecyclerViewViewHolder(private val __swiftObject: Long, itemView: View): ViewHolder(itemView) {
 
     fun obtainAdapterPosition(): Int {
         return this.adapterPosition
