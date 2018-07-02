@@ -3,6 +3,8 @@ package org.pureswift.swiftandroidsupport.app
 import android.content.*
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
+import android.view.ViewGroup
 
 open class SwiftAppCompatActivity: AppCompatActivity() {
 
@@ -15,6 +17,21 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         onCreateNative(__swiftObject, savedInstanceState)
+    }
+
+    override fun setContentView(layoutResID: Int) {
+        super.setContentView(layoutResID)
+
+    }
+
+    override fun setContentView(view: View?) {
+        super.setContentView(view)
+
+    }
+
+    override fun setContentView(view: View?, params: ViewGroup.LayoutParams?) {
+        super.setContentView(view, params)
+
     }
 
     override fun onStart() {
@@ -89,6 +106,6 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
 
     private external fun onRequestPermissionsResultNative(__swiftObject: Long, requestCode: Int, permissions: Array<out String>, grantResults: IntArray)
 
-    private external fun finalizeNative(__swiftObject: Long)
+    external fun finalizeNative(__swiftObject: Long)
 
 }
