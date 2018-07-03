@@ -1,7 +1,9 @@
 package org.pureswift.swiftandroidsupport.app
 
 import android.content.*
+import android.os.Build
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.ViewGroup
@@ -84,6 +86,24 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
 
     override fun unregisterReceiver(receiver: BroadcastReceiver?) {
         super.unregisterReceiver(receiver)
+    }
+
+    override fun checkSelfPermission(permission: String?): Int {
+        return super.checkSelfPermission(permission)
+    }
+
+    override fun startActivity(intent: Intent?) {
+        super.startActivity(intent)
+    }
+
+    override fun startActivityForResult(intent: Intent?, requestCode: Int) {
+        super.startActivityForResult(intent, requestCode)
+    }
+
+    fun askPermissions(permissions: Array<String> , requestCode: Int){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(permissions, requestCode)
+        }
     }
 
     private external fun bind(): Long
