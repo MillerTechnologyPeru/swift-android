@@ -3,7 +3,6 @@ package org.pureswift.swiftandroidsupport.app
 import android.content.*
 import android.os.Build
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
@@ -44,6 +43,7 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+
         onResumeNative(__swiftObject)
     }
 
@@ -99,7 +99,7 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
         }
     }
 
-    override fun startService(service: Intent): ComponentName {
+    override fun startService(service: Intent): ComponentName? {
         return super.startService(service)
     }
 
