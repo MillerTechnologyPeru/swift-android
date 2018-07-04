@@ -26,7 +26,7 @@ class BluetoothChangeStateReceiver: Android.Content.BroadcastReceiver {
         super.init(javaObject: javaObject)
     }
     
-    override func onReceive(context: Android.Content.Context, intent: JavaObject) {
+    override func onReceive(context: Android.Content.Context?, intent: Android.Content.Intent?) {
         NSLog("\(type(of: self)) \(#function)")
         
         activity?.showLog()

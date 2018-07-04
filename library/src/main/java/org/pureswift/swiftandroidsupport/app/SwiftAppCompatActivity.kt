@@ -5,6 +5,7 @@ import android.os.Build
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 
@@ -80,23 +81,24 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
         finalizeNative(__swiftObject)
     }
 
-    override fun registerReceiver(receiver: BroadcastReceiver?, filter: IntentFilter?): Intent {
+    override fun registerReceiver(receiver: BroadcastReceiver, filter: IntentFilter): Intent {
+        Log.e("SwiftAppCompatActivity", "registerReceiver( $receiver , $filter )")
         return super.registerReceiver(receiver, filter)
     }
 
-    override fun unregisterReceiver(receiver: BroadcastReceiver?) {
+    override fun unregisterReceiver(receiver: BroadcastReceiver) {
         super.unregisterReceiver(receiver)
-    }
+    }*/
 
-    override fun checkSelfPermission(permission: String?): Int {
+    override fun checkSelfPermission(permission: String): Int {
         return super.checkSelfPermission(permission)
     }
 
-    override fun startActivity(intent: Intent?) {
+    override fun startActivity(intent: Intent) {
         super.startActivity(intent)
     }
 
-    override fun startActivityForResult(intent: Intent?, requestCode: Int) {
+    override fun startActivityForResult(intent: Intent, requestCode: Int) {
         super.startActivityForResult(intent, requestCode)
     }
 
@@ -106,11 +108,11 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
         }
     }
 
-    override fun startService(service: Intent?): ComponentName {
+    override fun startService(service: Intent): ComponentName {
         return super.startService(service)
     }
 
-    override fun stopService(name: Intent?): Boolean {
+    override fun stopService(name: Intent): Boolean {
         return super.stopService(name)
     }
 
