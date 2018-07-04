@@ -123,8 +123,8 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
     }
 
     //return 0 if the id is not found
-    fun findViewIdByName(name: String): Int {
-        return resources.getIdentifier(name, "id", packageName)
+    fun getIdentifier(name: String, type: String): Int {
+        return resources.getIdentifier(name, type, packageName)
     }
 
     private external fun bind(): Long
