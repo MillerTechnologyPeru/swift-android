@@ -2,4 +2,4 @@
 /src/main/jniLibs
 /src/main/swift/.build
 /src/main/swift/Package.resolved
-/src/main/swift/swiftandroid.xcodeproj
+/src/main/swift/bledemoswift.xcodeproj
