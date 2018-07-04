@@ -20,6 +20,8 @@ class BluetoothChangeStateReceiver: Android.Content.BroadcastReceiver {
         super.bindNewJavaObject()
         
         activity = mainActivity
+        
+        NSLog("\(type(of: self)) \(#function)")
     }
     
     required init(javaObject: jobject?) {

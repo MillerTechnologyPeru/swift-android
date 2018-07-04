@@ -34,7 +34,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         
         NSLog("MainActivity \(#function)")
         
-        let intentFilter = Android.Content.IntentFilter(action: "android.bluetooth.adapter.action.STATE_CHANGED")
+        let intentFilter = Android.Content.IntentFilter(action: Android.Bluetooth.Adapter.ACTION_STATE_CHANGED)
         registerReceiver(receiver: bluetoothChangeStateReceiver!, filter: intentFilter)
     }
     
