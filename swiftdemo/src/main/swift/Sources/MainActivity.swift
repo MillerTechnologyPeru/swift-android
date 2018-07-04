@@ -21,23 +21,36 @@ public func SwiftAndroidMainActivity() -> SwiftSupportAppCompatActivity.Type {
 // Like AppDelegate in iOS
 final class MainActivity: SwiftSupportAppCompatActivity {
     
+    private var bluetoothChangeStateReceiver: BluetoothChangeStateReceiver?
+    
     override func onCreate(savedInstanceState: Android.OS.Bundle?) {
         
-        NSLog("Swift \(#function)")
+        NSLog("MainActivity \(#function)")
+        
+        bluetoothChangeStateReceiver = BluetoothChangeStateReceiver(mainActivity: self)
     }
     
     override func onResume() {
         
-        NSLog("Swift \(#function)")
+        NSLog("MainActivity \(#function)")
+        
+        let intentFilter = Android.Content.IntentFilter.init(action: "android.bluetooth.adapter.action.STATE_CHANGED")
+        registerReceiver(receiver: bluetoothChangeStateReceiver!, filter: intentFilter)
     }
     
     override func onPause() {
         
-        NSLog("Swift \(#function)")
+        NSLog("MainActivity \(#function)")
+        
+        unregisterReceiver(receiver: bluetoothChangeStateReceiver!)
     }
     
     override func onRequestPermissionsResult(requestCode: Int, permissions: [String], grantResults: [Int]) {
         
-        NSLog("Swift \(#function)")
+        NSLog("MainActivity \(#function)")
+    }
+    
+    public func showLog(){
+        NSLog("MainActivity \(#function)")
     }
 }
