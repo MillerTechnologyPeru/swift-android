@@ -106,6 +106,27 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
         }
     }
 
+    override fun startService(service: Intent?): ComponentName {
+        return super.startService(service)
+    }
+
+    override fun stopService(name: Intent?): Boolean {
+        return super.stopService(name)
+    }
+
+    override fun finish() {
+        super.finish()
+    }
+
+    override fun isFinishing(): Boolean {
+        return super.isFinishing()
+    }
+
+    //return 0 if the id is not found
+    fun findViewIdByName(name: String): Int {
+        return resources.getIdentifier(name, "id", packageName)
+    }
+
     private external fun bind(): Long
 
     private external fun onCreateNative(__swiftObject: Long, savedInstanceState: Bundle?)
