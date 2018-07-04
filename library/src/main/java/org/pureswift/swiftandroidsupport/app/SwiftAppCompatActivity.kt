@@ -81,15 +81,6 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
         finalizeNative(__swiftObject)
     }
 
-    override fun registerReceiver(receiver: BroadcastReceiver, filter: IntentFilter): Intent {
-        Log.e("SwiftAppCompatActivity", "registerReceiver( $receiver , $filter )")
-        return super.registerReceiver(receiver, filter)
-    }
-
-    override fun unregisterReceiver(receiver: BroadcastReceiver) {
-        super.unregisterReceiver(receiver)
-    }*/
-
     override fun checkSelfPermission(permission: String): Int {
         return super.checkSelfPermission(permission)
     }
@@ -149,6 +140,6 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
 
     private external fun onRequestPermissionsResultNative(__swiftObject: Long, requestCode: Int, permissions: Array<out String>, grantResults: IntArray)
 
-    external fun finalizeNative(__swiftObject: Long)
+    private external fun finalizeNative(__swiftObject: Long)
 
 }

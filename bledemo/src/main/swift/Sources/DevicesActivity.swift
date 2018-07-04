@@ -11,6 +11,39 @@ import java_lang
 import java_util
 import Android
 
+
+/// Needs to be implemented by app.
+@_silgen_name("SwiftAndroidMainApplication")
+public func SwiftAndroidMainApplication() -> SwiftApplication.Type {
+    NSLog("SwiftDemoApplication bind \(#function)")
+    return SwiftDemoApplication.self
+}
+
+// Like AppDelegate in iOS
+final class SwiftDemoApplication: SwiftApplication {
+
+    override func onCreate() {
+         NSLog("SwiftDemoApplication \(#function)")
+    }
+}
+
+/// Needs to be implemented by app.
+@_silgen_name("SwiftAndroidMainActivity")
+public func SwiftAndroidMainActivity() -> SwiftSupportAppCompatActivity.Type {
+    NSLog("MainActivity bind \(#function)")
+    return MainActivity.self
+}
+
+// Like AppDelegate in iOS
+final class MainActivity: SwiftSupportAppCompatActivity {
+
+    override func onCreate(savedInstanceState: Android.OS.Bundle?) {
+
+        NSLog("MainActivity \(#function)")
+
+    }
+}
+
 final class DevicesActivityBinding_ListenerImpl: DevicesActivityBinding_ListenerBase {
     
     @_silgen_name("Java_com_jmarkstar_bledemo_DevicesActivity_bind")
