@@ -81,10 +81,6 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
         finalizeNative(__swiftObject)
     }
 
-    override fun checkSelfPermission(permission: String): Int {
-        return super.checkSelfPermission(permission)
-    }
-
     override fun startActivity(intent: Intent) {
         super.startActivity(intent)
     }

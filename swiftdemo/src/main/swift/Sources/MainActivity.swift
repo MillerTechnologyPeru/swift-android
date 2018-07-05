@@ -22,6 +22,7 @@ public func SwiftAndroidMainActivity() -> SwiftSupportAppCompatActivity.Type {
 final class MainActivity: SwiftSupportAppCompatActivity {
     
     private let REQUEST_ENABLE_BT = 1000
+    private let REQUEST_GPS_PERMISSION = 2000
     
     private var bluetoothChangeStateReceiver: BluetoothChangeStateReceiver?
     
@@ -29,17 +30,14 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     
     override func onCreate(savedInstanceState: Android.OS.Bundle?) {
         
-        NSLog("MainActivity \(#function)")
-        
-        
+        NSLog("\(type(of: self)) \(#function)")
         
         bluetoothChangeStateReceiver = BluetoothChangeStateReceiver(mainActivity: self)
-        
     }
     
     override func onResume() {
         
-        NSLog("MainActivity \(#function)")
+        NSLog("\(type(of: self)) \(#function)")
         
         let intentFilter = Android.Content.IntentFilter(action: Android.Bluetooth.Adapter.Action.stateChanged.rawValue)
         registerReceiver(receiver: bluetoothChangeStateReceiver!, filter: intentFilter)
@@ -54,15 +52,15 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     
     override func onPause() {
         
-        NSLog("MainActivity \(#function)")
+        NSLog("\(type(of: self)) \(#function)")
         
         unregisterReceiver(receiver: bluetoothChangeStateReceiver!)
     }
     
     override func onActivityResult(requestCode: Int, resultCode: Int, data: Android.Content.Intent?) {
         
-        NSLog("MainActivity \(#function) - requestCode = \(requestCode) - resultCode = \(resultCode)")
-        NSLog("MainActivity \(#function) - \(REQUEST_ENABLE_BT) - \(SwiftSupportAppCompatActivity.RESULT_OK)")
+        NSLog("\(type(of: self)) \(#function) - requestCode = \(requestCode) - resultCode = \(resultCode)")
+        NSLog("\(type(of: self)) \(#function) - \(REQUEST_ENABLE_BT) - \(SwiftSupportAppCompatActivity.RESULT_OK)")
         if(resultCode == REQUEST_ENABLE_BT && resultCode == SwiftSupportAppCompatActivity.RESULT_OK){
             
             verifyGspPermission()
@@ -71,14 +69,45 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     
     override func onRequestPermissionsResult(requestCode: Int, permissions: [String], grantResults: [Int]) {
         
-        NSLog("MainActivity \(#function)")
+        NSLog("\(type(of: self)) \(#function)")
+        
+        if(requestCode == REQUEST_GPS_PERMISSION){
+            
+            if(grantResults[0] == Android.Content.PM.PackageManager.Permission.granted.rawValue){
+                
+                startDiscovery()
+            }else{
+                NSLog(" \(type(of: self)) \(#function) GPS Permission is required")
+            }
+        }
     }
     
     private func verifyGspPermission() {
-        NSLog("MainActivity \(#function)")
+        NSLog("\(type(of: self)) \(#function)")
+        
+        if(Android.OS.Build.Version.Sdk.sdkInt.rawValue >= Android.OS.Build.VersionCodes.m.rawValue
+            && checkSelfPermission(permission: Android.ManifestPermission.accessCoarseLocation.rawValue) != Android.Content.PM.PackageManager.Permission.granted.rawValue) {
+            
+            NSLog("\(type(of: self)) \(#function) request permission")
+            
+            let permissions = [Android.ManifestPermission.accessCoarseLocation.rawValue]
+            
+            requestPermissions(permissions: permissions, requestCode: REQUEST_GPS_PERMISSION)
+        }else{
+            
+            NSLog("\(type(of: self)) \(#function) dont request permission")
+            startDiscovery()
+        }
+    }
+    
+    public func startDiscovery() {
+        
+        NSLog("\(type(of: self)) \(#function)...")
+        NSLog("\(type(of: self)) \(#function)...")
+        NSLog("\(type(of: self)) \(#function)...")
     }
     
     public func showLog() {
-        NSLog("MainActivity \(#function)")
+        NSLog("\(type(of: self)) \(#function)")
     }
 }
