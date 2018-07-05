@@ -60,7 +60,6 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     override func onActivityResult(requestCode: Int, resultCode: Int, data: Android.Content.Intent?) {
         
         NSLog("\(type(of: self)) \(#function) - requestCode = \(requestCode) - resultCode = \(resultCode)")
-        NSLog("\(type(of: self)) \(#function) - \(REQUEST_ENABLE_BT) - \(SwiftSupportAppCompatActivity.RESULT_OK)")
         if(resultCode == REQUEST_ENABLE_BT && resultCode == SwiftSupportAppCompatActivity.RESULT_OK){
             
             verifyGspPermission()

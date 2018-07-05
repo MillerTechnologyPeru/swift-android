@@ -89,12 +89,6 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
         super.startActivityForResult(intent, requestCode)
     }
 
-    fun askPermissions(permissions: Array<String> , requestCode: Int){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            requestPermissions(permissions, requestCode)
-        }
-    }
-
     override fun startService(service: Intent): ComponentName? {
         return super.startService(service)
     }
