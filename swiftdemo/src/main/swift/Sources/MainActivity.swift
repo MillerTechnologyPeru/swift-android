@@ -31,6 +31,8 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         
         NSLog("MainActivity \(#function)")
         
+        
+        
         bluetoothChangeStateReceiver = BluetoothChangeStateReceiver(mainActivity: self)
         
     }
@@ -59,8 +61,8 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     
     override func onActivityResult(requestCode: Int, resultCode: Int, data: Android.Content.Intent?) {
         
-        NSLog("MainActivity \(#function) - resultCode = \(resultCode) - resultCode = \(resultCode)")
-        
+        NSLog("MainActivity \(#function) - requestCode = \(requestCode) - resultCode = \(resultCode)")
+        NSLog("MainActivity \(#function) - \(REQUEST_ENABLE_BT) - \(SwiftSupportAppCompatActivity.RESULT_OK)")
         if(resultCode == REQUEST_ENABLE_BT && resultCode == SwiftSupportAppCompatActivity.RESULT_OK){
             
             verifyGspPermission()
@@ -72,11 +74,11 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         NSLog("MainActivity \(#function)")
     }
     
-    private func verifyGspPermission(){
+    private func verifyGspPermission() {
         NSLog("MainActivity \(#function)")
     }
     
-    public func showLog(){
+    public func showLog() {
         NSLog("MainActivity \(#function)")
     }
 }
