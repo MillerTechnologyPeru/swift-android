@@ -46,10 +46,21 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         
         deviceAdapter = DeviceAdapter(mainActivity: self)
         
+        let viewId = getIdentifier(name: "activity_devices", type: "layout")
+        
+        setContentView(layoutResID: viewId)
+        
         let context = Android.Content.Context(casting: self)
         let linearLayoutManager = Android.Widget.RecyclerView.LinearLayoutManager(context: context!)
         
         
+        let rvId = getIdentifier(name: "rvDevices", type: "id")
+
+        let rvDevices = Android.Widget.RecyclerView(casting: findViewById(rvId)!)
+        
+        rvDevices?.adapter = deviceAdapter!
+        
+        rvDevices?.layoutManager = linearLayoutManager
     }
     
     override func onResume() {
