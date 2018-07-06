@@ -14,7 +14,7 @@ import Android
 class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
 
     private var mainActivity: MainActivity?
-    private var devices: [DeviceModel]?
+    private var devices: [DeviceModel] = [DeviceModel]()
     
     convenience init(mainActivity: MainActivity) {
         
@@ -24,8 +24,28 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
         self.mainActivity = mainActivity
     }
     
-    func addDeviceList(devices: [DeviceModel]){
-        self.devices = devices
+    func addDevice(newDevice: DeviceModel){
+        
+        var alreadyExists = false
+        var indextExistingItem = -1
+        
+        for (index, deviceItem) in devices.enumerated() {
+            print("Item \(index): \(deviceItem)")
+            
+            if(deviceItem.device?.getAddress() == newDevice.device?.getAddress()){
+                alreadyExists = true
+                indextExistingItem = index
+                break
+            }
+        }
+        
+        if(!alreadyExists){
+            devices.append(newDevice)
+            notifyItemInserted(position: devices.count-1)
+        } else {
+            devices[indextExistingItem] = newDevice
+            notifyItemChanged(position: indextExistingItem)
+        }
     }
     
     public required init(javaObject: jobject?) {
@@ -42,16 +62,16 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
     }
     
     public override func getItemCount() -> Int {
-        return devices != nil ? devices!.count : 0
+        return devices.count
     }
     
     public override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int) {
         
         let deviceViewHolder = DeviceViewHolder.init(casting: holder)
         
-        let deviceModelItem = devices?[position]
+        let deviceModelItem = devices[position]
         
-        deviceViewHolder?.bind(deviceModel: deviceModelItem!)
+        deviceViewHolder?.bind(deviceModel: deviceModelItem)
     }
     
     class DeviceViewHolder: Android.Widget.RecyclerView.ViewHolder {
@@ -88,7 +108,7 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
             super.init(javaObject: javaObject)
         }
         
-        public func bind(deviceModel: DeviceModel){
+        public func bind(deviceModel: DeviceModel) {
             
             guard let device = deviceModel.device
                 else { fatalError("No device") }

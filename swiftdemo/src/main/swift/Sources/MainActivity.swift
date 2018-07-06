@@ -32,6 +32,8 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     
     private var gattCallback: MySwiftGattCallback?
     
+    public var deviceAdapter: DeviceAdapter?
+    
     override func onCreate(savedInstanceState: Android.OS.Bundle?) {
         
         NSLog("\(type(of: self)) \(#function)")
@@ -41,6 +43,13 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         scanCallback = MySwiftScanCallback(mainActivity: self)
         
         gattCallback = MySwiftGattCallback(mainActivity: self)
+        
+        deviceAdapter = DeviceAdapter(mainActivity: self)
+        
+        let context = Android.Content.Context(casting: self)
+        let linearLayoutManager = Android.Widget.RecyclerView.LinearLayoutManager(context: context!)
+        
+        
     }
     
     override func onResume() {

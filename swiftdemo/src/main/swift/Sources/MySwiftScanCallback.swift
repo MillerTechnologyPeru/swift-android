@@ -25,7 +25,11 @@ public struct MySwiftScanCallback: Android.Bluetooth.LE.ScanCallback {
         let device = result.device
         let rssi = result.rssi
         
+        let deviceModel = DeviceModel(device: device, rssi: rssi)
+        
         NSLog("Address: \(device.address) - rssi: \(rssi)")
+        
+        activity?.deviceAdapter?.addDevice(newDevice: deviceModel)
     }
     
     public func onBatchScanResults(results: [Android.Bluetooth.LE.ScanResult]) {
