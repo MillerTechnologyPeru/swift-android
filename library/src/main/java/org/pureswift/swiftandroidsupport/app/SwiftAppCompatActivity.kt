@@ -1,10 +1,8 @@
 package org.pureswift.swiftandroidsupport.app
 
 import android.content.*
-import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 
@@ -31,9 +29,8 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
 
     }
 
-    override fun setContentView(view: View?, params: ViewGroup.LayoutParams?) {
-        super.setContentView(view, params)
-
+    override fun <T : View> findViewById(id: Int): T {
+        return super.findViewById(id)
     }
 
     override fun onStart() {
