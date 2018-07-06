@@ -7,8 +7,6 @@
 
 import Foundation
 import java_swift
-import java_lang
-import java_util
 import Android
 
 class BluetoothChangeStateReceiver: Android.Content.BroadcastReceiver {

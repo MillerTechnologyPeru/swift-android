@@ -1,1 +1,1 @@
-include ':app', ':library', ':bledemo', ':swiftdemo'
+include ':library', ':swiftdemo'

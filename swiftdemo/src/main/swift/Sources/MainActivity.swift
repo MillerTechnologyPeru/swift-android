@@ -28,11 +28,19 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     
     private let bluetoothAdapter = Android.Bluetooth.Adapter.default
     
+    private var scanCallback: MySwiftScanCallback?
+    
+    private var gattCallback: MySwiftGattCallback?
+    
     override func onCreate(savedInstanceState: Android.OS.Bundle?) {
         
         NSLog("\(type(of: self)) \(#function)")
         
         bluetoothChangeStateReceiver = BluetoothChangeStateReceiver(mainActivity: self)
+        
+        scanCallback = MySwiftScanCallback(mainActivity: self)
+        
+        gattCallback = MySwiftGattCallback(mainActivity: self)
     }
     
     override func onResume() {
@@ -101,12 +109,29 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     
     public func startDiscovery() {
         
-        NSLog("\(type(of: self)) \(#function)...")
-        NSLog("\(type(of: self)) \(#function)...")
-        NSLog("\(type(of: self)) \(#function)...")
+        NSLog("\(type(of: self)) \(#function)")
+        
+        startScanning()
+    }
+    
+    public func startScanning(){
+        
+        NSLog("\(type(of: self)) \(#function)")
+        
+        bluetoothAdapter?.lowEnergyScanner?.startScan(callback: scanCallback!)
+    }
+    
+    public func stopScanning(){
+        
+        bluetoothAdapter?.lowEnergyScanner?.stopScan(callback: scanCallback!)
     }
     
     public func showLog() {
         NSLog("\(type(of: self)) \(#function)")
+    }
+    
+    deinit {
+        
+        NSLog("\(type(of: self)): \(#function)")
     }
 }
