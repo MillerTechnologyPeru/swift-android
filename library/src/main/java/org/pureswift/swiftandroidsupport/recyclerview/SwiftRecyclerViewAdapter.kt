@@ -3,9 +3,9 @@ package org.pureswift.swiftandroidsupport.recyclerview
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
 
-class SwiftRecyclerViewAdapter(private val __swiftObject: Long): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class SwiftRecyclerViewAdapter(private val __swiftObject: Long): RecyclerView.Adapter<SwiftRecyclerViewViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SwiftRecyclerViewViewHolder {
         return __onCreateViewHolder(__swiftObject, parent, viewType)
     }
 
@@ -17,7 +17,7 @@ class SwiftRecyclerViewAdapter(private val __swiftObject: Long): RecyclerView.Ad
         return __getItemCount(__swiftObject)
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SwiftRecyclerViewViewHolder, position: Int) {
         __onBindViewHolder(__swiftObject, holder, position)
     }
 
@@ -25,11 +25,11 @@ class SwiftRecyclerViewAdapter(private val __swiftObject: Long): RecyclerView.Ad
         __finalize(__swiftObject)
     }
 
-    private external fun __onCreateViewHolder(__swiftObject: Long, parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder
+    private external fun __onCreateViewHolder(__swiftObject: Long, parent: ViewGroup, viewType: Int): SwiftRecyclerViewViewHolder
 
     private external fun __getItemCount(__swiftObject: Long): Int
 
-    private external fun __onBindViewHolder(__swiftObject: Long, holder: RecyclerView.ViewHolder, position: Int)
+    private external fun __onBindViewHolder(__swiftObject: Long, holder: SwiftRecyclerViewViewHolder, position: Int)
 
     private external fun __getItemViewType(__swiftObject: Long, position: Int): Int
 

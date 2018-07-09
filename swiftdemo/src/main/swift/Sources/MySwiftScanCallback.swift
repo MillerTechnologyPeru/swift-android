@@ -20,15 +20,11 @@ public struct MySwiftScanCallback: Android.Bluetooth.LE.ScanCallback {
     
     public func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType, result: Android.Bluetooth.LE.ScanResult) {
         
-        NSLog("\(type(of: self)): \(#function)")
-        
         let device = result.device
         let rssi = result.rssi
         
         let deviceModel = DeviceModel(device: device, rssi: rssi)
-        
-        NSLog("Address: \(device.address) - rssi: \(rssi)")
-        
+
         activity?.deviceAdapter?.addDevice(newDevice: deviceModel)
     }
     

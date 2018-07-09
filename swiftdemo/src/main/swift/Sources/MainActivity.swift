@@ -40,6 +40,8 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         
         let viewId = getIdentifier(name: "activity_devices", type: "layout")
         
+        NSLog("\(type(of: self)) viewId = \(viewId)")
+        
         setContentView(layoutResID: viewId)
         
         bluetoothChangeStateReceiver = BluetoothChangeStateReceiver(mainActivity: self)
@@ -53,8 +55,8 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         let context = Android.Content.Context(casting: self)
         let linearLayoutManager = Android.Widget.RecyclerView.LinearLayoutManager(context: context!)
         
-        
         let rvId = getIdentifier(name: "rvDevices", type: "id")
+        NSLog("\(type(of: self)) rvId = \(rvId)")
 
         let rvDevices = Android.Widget.RecyclerView(casting: findViewById(rvId)!)
         
