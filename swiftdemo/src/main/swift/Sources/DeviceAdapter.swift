@@ -55,7 +55,7 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
     public override func onCreateViewHolder(parent: Android.View.ViewGroup, viewType: Int?) -> AndroidWidgetRecyclerView.ViewHolder {
         
         let itemViewResource = mainActivity?.getIdentifier(name: "activity_devices_item", type: "layout")
-
+        
         let itemView = Android.View.LayoutInflater.from(context: parent.context).inflate(resource: Android.R.Layout(rawValue: itemViewResource!), root: parent, attachToRoot: false)
         
         return DeviceViewHolder(itemView: itemView, mainActivity: mainActivity!)
@@ -71,7 +71,7 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
         let deviceViewHolder = DeviceViewHolder(casting: holder)
         
         let deviceModelItem = devices[position]
-    
+        
         deviceViewHolder?.bind(deviceModel: deviceModelItem)
     }
     
@@ -86,12 +86,12 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
             
             self.init(javaObject: nil)
             
-            super.bindNewJavaObject(itemView: itemView)
+            bindNewJavaObject(itemView: itemView)
  
             let tvNameId = mainActivity.getIdentifier(name: "tvName", type: "id")
             let tvAddressId = mainActivity.getIdentifier(name: "tvAddress", type: "id")
             let tvRssiId = mainActivity.getIdentifier(name: "tvRssi", type: "id")
-NSLog("\(type(of: self)) \(#function) 2")
+
             guard let tvNameObject = itemView.findViewById(tvNameId)
                 else { fatalError("No view for \(tvNameId)") }
             
@@ -100,11 +100,11 @@ NSLog("\(type(of: self)) \(#function) 2")
             
             guard let tvRssiObject = itemView.findViewById(tvRssiId)
                 else { fatalError("No view for \(tvRssiId)") }
-            NSLog("\(type(of: self)) \(#function) 3")
-            tvName = Android.Widget.TextView(casting: tvNameObject)
-            tvAddress = Android.Widget.TextView(casting: tvAddressObject)
-            tvRssi = Android.Widget.TextView(casting: tvRssiObject)
-            NSLog("\(type(of: self)) \(#function) 4")
+            
+            self.tvName = Android.Widget.TextView(casting: tvNameObject)
+            self.tvAddress = Android.Widget.TextView(casting: tvAddressObject)
+            self.tvRssi = Android.Widget.TextView(casting: tvRssiObject)
+            
         }
         
         required init(javaObject: jobject?) {
