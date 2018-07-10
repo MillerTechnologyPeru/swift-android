@@ -4,7 +4,7 @@ import android.support.v7.widget.RecyclerView.ViewHolder
 import android.util.Log
 import android.view.View
 
-class SwiftRecyclerViewViewHolder(private val __swiftObject: Long, itemView: View): ViewHolder(itemView) {
+class SwiftRecyclerViewViewHolder(internal val __swiftObject: Long, itemView: View): ViewHolder(itemView) {
 
     init {
         Log.e("Swift","ViewHolder init($__swiftObject, $itemView)")

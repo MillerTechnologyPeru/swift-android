@@ -71,11 +71,11 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
     public override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int) {
         NSLog("\(type(of: self)) \(#function)")
         
-        let deviceViewHolder = DeviceViewHolder(casting: holder)
+        let deviceViewHolder = holder as! DeviceViewHolder
         
         let deviceModelItem = devices[position]
         
-        deviceViewHolder?.bind(deviceModel: deviceModelItem)
+        deviceViewHolder.bind(deviceModel: deviceModelItem)
     }
     
     class DeviceViewHolder: Android.Widget.RecyclerView.ViewHolder {
@@ -107,10 +107,6 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
             self.tvName = Android.Widget.TextView(casting: tvNameObject)
             self.tvAddress = Android.Widget.TextView(casting: tvAddressObject)
             self.tvRssi = Android.Widget.TextView(casting: tvRssiObject)
-            
-            self.tvName?.text = "Hello Name"
-            self.tvAddress?.text = "Hello Address"
-            self.tvRssi?.text = "Hello Rssi"
         }
         
         required init(javaObject: jobject?) {
@@ -124,7 +120,7 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
             guard let device = deviceModel.device
                 else { fatalError("No device") }
             
-            tvName?.text = "Hello"
+            tvName?.text = device.getName() ?? "No Name"
             tvAddress?.text = device.getAddress()
             tvRssi?.text = "\(deviceModel.rssi!)"
         }

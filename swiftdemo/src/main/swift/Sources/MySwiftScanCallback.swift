@@ -36,5 +36,7 @@ public struct MySwiftScanCallback: Android.Bluetooth.LE.ScanCallback {
     public func onScanFailed(error: AndroidBluetoothLowEnergyScanCallback.Error) {
         
         NSLog("\(type(of: self)): \(#function)")
+        
+        NSLog("Scan failed \(error)")
     }
 }

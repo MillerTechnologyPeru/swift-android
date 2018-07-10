@@ -25,7 +25,8 @@ class SwiftRecyclerViewAdapter(private val __swiftObject: Long): RecyclerView.Ad
 
     override fun onBindViewHolder(holder: SwiftRecyclerViewViewHolder, position: Int) {
         Log.e("Swift","onBindViewHolder()")
-        __onBindViewHolder(__swiftObject, holder, position)
+
+        __onBindViewHolder(__swiftObject, holder.__swiftObject, position)
     }
 
     fun finalize() {
@@ -37,7 +38,7 @@ class SwiftRecyclerViewAdapter(private val __swiftObject: Long): RecyclerView.Ad
 
     private external fun __getItemCount(__swiftObject: Long): Int
 
-    private external fun __onBindViewHolder(__swiftObject: Long, holder: SwiftRecyclerViewViewHolder, position: Int)
+    private external fun __onBindViewHolder(__swiftObject: Long, holder: Long, position: Int)
 
     private external fun __getItemViewType(__swiftObject: Long, position: Int): Int
 
