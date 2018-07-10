@@ -18,6 +18,8 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
     
     convenience init(mainActivity: MainActivity) {
         
+        NSLog("\(type(of: self)) \(#function)")
+        
         self.init(javaObject: nil)
         bindNewJavaObject()
         
@@ -53,6 +55,7 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
     }
     
     public override func onCreateViewHolder(parent: Android.View.ViewGroup, viewType: Int?) -> AndroidWidgetRecyclerView.ViewHolder {
+        NSLog("\(type(of: self)) \(#function)")
         
         let itemViewResource = mainActivity?.getIdentifier(name: "activity_devices_item", type: "layout")
         
@@ -105,6 +108,9 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
             self.tvAddress = Android.Widget.TextView(casting: tvAddressObject)
             self.tvRssi = Android.Widget.TextView(casting: tvRssiObject)
             
+            self.tvName?.text = "Hello Name"
+            self.tvAddress?.text = "Hello Address"
+            self.tvRssi?.text = "Hello Rssi"
         }
         
         required init(javaObject: jobject?) {
@@ -113,14 +119,22 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
         
         public func bind(deviceModel: DeviceModel) {
 
-            tvName!.text = "Hello"
+            //tvName!.text = "Hello"
             
             guard let device = deviceModel.device
                 else { fatalError("No device") }
-
+            
             tvName?.text = "Hello"
             tvAddress?.text = device.getAddress()
             tvRssi?.text = "\(deviceModel.rssi!)"
         }
+        
+        deinit {
+            NSLog("\(type(of: self)) \(#function)")
+        }
+    }
+    
+    deinit {
+        NSLog("\(type(of: self)) \(#function)")
     }
 }

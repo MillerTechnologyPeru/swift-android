@@ -1,11 +1,17 @@
 package org.pureswift.swiftandroidsupport.recyclerview
 
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.ViewGroup
 
 class SwiftRecyclerViewAdapter(private val __swiftObject: Long): RecyclerView.Adapter<SwiftRecyclerViewViewHolder>() {
 
+    init {
+        Log.e("Swift","RecyclerViewAdapter init")
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SwiftRecyclerViewViewHolder {
+        Log.e("Swift","onCreateViewHolder()")
         return __onCreateViewHolder(__swiftObject, parent, viewType)
     }
 
@@ -18,10 +24,12 @@ class SwiftRecyclerViewAdapter(private val __swiftObject: Long): RecyclerView.Ad
     }
 
     override fun onBindViewHolder(holder: SwiftRecyclerViewViewHolder, position: Int) {
+        Log.e("Swift","onBindViewHolder()")
         __onBindViewHolder(__swiftObject, holder, position)
     }
 
     fun finalize() {
+        Log.e("Swift","finalize()")
         __finalize(__swiftObject)
     }
 
