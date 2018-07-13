@@ -27,7 +27,12 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
 
     }
 
-    override fun setContentView(view: View?) {
+    override fun setContentView(view: View) {
+        super.setContentView(view)
+
+    }
+
+    fun setContentView(view: SwiftView) {
         super.setContentView(view)
 
     }
