@@ -47,11 +47,11 @@ class SwiftView(context: Context): FrameLayout(context) {
         super.addView(child, index)
     }
 
-    fun addView(child: SwiftView, params: ViewGroup.LayoutParams) {
+    fun addView(child: SwiftView, params: SwiftViewLayoutParams) {
         super.addView(child, params)
     }
 
-    fun addView(child: SwiftView, index: Int, params: ViewGroup.LayoutParams) {
+    fun addView(child: SwiftView, index: Int, params: SwiftViewLayoutParams) {
         super.addView(child, index, params)
     }
 }
