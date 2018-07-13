@@ -3,8 +3,11 @@ package org.pureswift.swiftandroidsupport.app
 import android.content.*
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
+import org.pureswift.swiftandroidsupport.view.SwiftView
+import org.pureswift.swiftandroidsupport.view.SwiftViewLayoutParams
 
 open class SwiftAppCompatActivity: AppCompatActivity() {
 
@@ -76,6 +79,15 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
 
     fun finalize() {
         finalizeNative(__swiftObject)
+    }
+
+    public fun getDensity(): Float {
+        val metrics = resources.displayMetrics
+        return metrics.density
+    }
+
+    fun addContentView(view: SwiftView, params: SwiftViewLayoutParams) {
+        super.addContentView(view, params)
     }
 
     override fun startActivity(intent: Intent) {
