@@ -1,6 +1,8 @@
 package org.pureswift.swiftandroidsupport.view
 
 import android.content.Context
+import android.view.View
+import android.view.ViewGroup
 import android.widget.FrameLayout
 
 class SwiftView(context: Context): FrameLayout(context) {
@@ -31,5 +33,25 @@ class SwiftView(context: Context): FrameLayout(context) {
 
     override fun getLayoutParams(): SwiftViewLayoutParams {
         return super.getLayoutParams() as SwiftViewLayoutParams
+    }
+
+    fun addView(child: SwiftView) {
+        super.addView(child)
+    }
+
+    fun addView(child: SwiftView, width: Int, height: Int) {
+        super.addView(child, width, height)
+    }
+
+    fun addView(child: SwiftView, index: Int) {
+        super.addView(child, index)
+    }
+
+    fun addView(child: SwiftView, params: ViewGroup.LayoutParams) {
+        super.addView(child, params)
+    }
+
+    fun addView(child: SwiftView, index: Int, params: ViewGroup.LayoutParams) {
+        super.addView(child, index, params)
     }
 }
