@@ -21,7 +21,11 @@ public func SwiftAndroidMainApplication() -> SwiftApplication.Type {
 // Like AppDelegate in iOS
 final class SwiftDemoApplication: SwiftApplication {
     
+    public static var context: Android.Content.Context?
+    
     override func onCreate() {
          NSLog("SwiftDemoApplication \(#function)")
+        
+        SwiftDemoApplication.context = Android.Content.Context.init(casting: self)
     }
 }
