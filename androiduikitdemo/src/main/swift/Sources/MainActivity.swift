@@ -35,6 +35,9 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
         rootView.addView(view.androidView)
         
+        let view2 = UIView(frame: CGRect(x: 200, y: 100, width: 100, height: 100))
+        rootView.addView(view2.androidView)
+        
         setContentView(view: rootView)
     }
     

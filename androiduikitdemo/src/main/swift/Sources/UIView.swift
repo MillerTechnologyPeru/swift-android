@@ -12,6 +12,13 @@ open class UIView {
     
     internal var androidView: Android.View.SwiftView!
     
+    /*
+    var backgroundColor: UIColor? {
+        set{
+            androidView.setBackgroundColor(newValue?.androidColor)
+        }
+    }*/
+    
     open var frame: CGRect {
         get { return _frame }
         set {
@@ -40,8 +47,9 @@ open class UIView {
         androidView = Android.View.SwiftView(context: UIApplication.context!)
         androidView.x = Float(frame.minX)
         androidView.y = Float(frame.minY)
-        androidView.setBackgroundColor(Android.Graphics.Color.BLUE)
+        
         androidView.layoutParams = Android.View.ViewParamsLayout(width: Int(frame.width), height: Int(frame.height))
+        
     }
     
     func addSubview(_ view: UIView) {
