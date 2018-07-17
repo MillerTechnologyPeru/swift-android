@@ -27,8 +27,10 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     var rootView: Android.View.SwiftView!
     
     override func onCreate(savedInstanceState: Android.OS.Bundle?) {
+        NSLog("\(type(of: self)) \(#function)")
         
         rootView = Android.View.SwiftView(context: UIApplication.context!)
+        rootView.layoutParams = Android.View.ViewParamsLayout(width: -1, height: -1)
         
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
         rootView.addView(view.androidView)
