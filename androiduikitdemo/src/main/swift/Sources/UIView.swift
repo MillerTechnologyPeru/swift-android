@@ -40,7 +40,7 @@ open class UIView {
         androidView = Android.View.SwiftView(context: UIApplication.context!)
         androidView.x = Float(frame.minX)
         androidView.y = Float(frame.minY)
-        androidView.setBackgroundColor(.max)
+        androidView.setBackgroundColor(Android.Graphics.Color.BLUE)
         androidView.layoutParams = Android.View.ViewParamsLayout(width: Int(frame.width), height: Int(frame.height))
     }
     
