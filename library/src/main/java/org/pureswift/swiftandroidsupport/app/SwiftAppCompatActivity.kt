@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
-import org.pureswift.swiftandroidsupport.view.SwiftView
-import org.pureswift.swiftandroidsupport.view.SwiftViewLayoutParams
 
 open class SwiftAppCompatActivity: AppCompatActivity() {
 
@@ -28,11 +26,6 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
     }
 
     override fun setContentView(view: View) {
-        super.setContentView(view)
-
-    }
-
-    fun setContentView(view: SwiftView) {
         super.setContentView(view)
 
     }
@@ -91,7 +84,7 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
         return metrics.density
     }
 
-    fun addContentView(view: SwiftView, params: SwiftViewLayoutParams) {
+    override fun addContentView(view: View?, params: ViewGroup.LayoutParams?) {
         super.addContentView(view, params)
     }
 

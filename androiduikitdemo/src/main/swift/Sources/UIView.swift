@@ -10,7 +10,7 @@ import Android
 
 open class UIView {
     
-    internal var androidView: Android.View.SwiftView!
+    internal var androidView: Android.Widget.FragmentLayout!
     
     /*
     var backgroundColor: UIColor? {
@@ -44,17 +44,17 @@ open class UIView {
         
         self.frame = frame
         
-        androidView = Android.View.SwiftView(context: UIApplication.context!)
-        androidView.x = Float(frame.minX)
-        androidView.y = Float(frame.minY)
+        androidView = Android.Widget.FragmentLayout(context: UIApplication.context!)
+        androidView.setX(x: Float(frame.minX))
+        androidView.setY(y: Float(frame.minY))
         
-        androidView.layoutParams = Android.View.ViewParamsLayout(width: Int(frame.width), height: Int(frame.height))
+        androidView.layoutParams = Android.Widget.FragmentLayout.FLayoutParams(width: Int(frame.width), height: Int(frame.height))
         
     }
     
     func addSubview(_ view: UIView) {
         
-        androidView.addView(view.androidView)
+        androidView.addView(child: view.androidView)
     }
     
 }
