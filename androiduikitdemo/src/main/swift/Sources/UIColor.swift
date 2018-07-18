@@ -18,7 +18,7 @@ public struct UIColor {
     
     // MARK: - Initialization
     
-    private init( color: Int) {
+    internal init( color: Int) {
         
         self.androidColor = Android.Graphics.Drawable.ColorDrawable.init(color: color)
     }
