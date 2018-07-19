@@ -12,15 +12,17 @@ open class UIView {
     
     internal var androidView: Android.Widget.FrameLayout!
     
-    var backgroundColor: UIColor? {
+    /// The view’s background color.
+    var backgroundColor: UIColor {
         get {
-            return UIColor(color: ((androidView.background as? AndroidGraphicsDrawableColorDrawable)?.color)!)
+            return androidView.background != nil ? UIColor.init(androidColor: androidView.background! as! Android.Graphics.Drawable.ColorDrawable) :  UIColor.clear
         }
         set{
-            androidView.background = newValue?.androidColor
+            androidView.background = newValue.androidColor
         }
     }
     
+    /// The frame rectangle, which describes the view’s location and size in its superview’s coordinate system.
     open var frame: CGRect {
         get { return _frame }
         set {
@@ -29,6 +31,7 @@ open class UIView {
         }
     }
     
+    /// The bounds rectangle, which describes the view’s location and size in its own coordinate system.
     public final var bounds: CGRect {
         get { return _bounds }
         set {

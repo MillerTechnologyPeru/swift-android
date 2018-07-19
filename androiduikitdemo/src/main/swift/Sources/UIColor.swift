@@ -18,9 +18,13 @@ public struct UIColor {
     
     // MARK: - Initialization
     
+    internal init(androidColor: Android.Graphics.Drawable.ColorDrawable){
+        self.androidColor = androidColor
+    }
+    
     internal init( color: Int) {
         
-        self.androidColor = Android.Graphics.Drawable.ColorDrawable.init(color: color)
+        self.androidColor = Android.Graphics.Drawable.ColorDrawable(color: color)
     }
     
     /*
@@ -35,7 +39,8 @@ public struct UIColor {
                 blue: CGFloat,
                 alpha: CGFloat = 1.0) {
         
-        //self.cgColor = CGColor(red: red, green: green, blue: blue, alpha: alpha)
+        let color = Android.Graphics.Color.argb(alpha: Float(alpha), red: Float(red), green: Float(green), blue: Float(blue))
+        self.androidColor = Android.Graphics.Drawable.ColorDrawable(color: color)
     }
     
     static let black = UIColor(color: Android.Graphics.Color.BLACK)
@@ -58,7 +63,7 @@ public struct UIColor {
     
     static let magenta = UIColor(color: Android.Graphics.Color.argb(alpha: 1.0, red: 1.0, green: 0.0, blue: 1.0))
     
-    static let orange = UIColor(color: Android.Graphics.Color.argb(alpha: 1.0, red: 1.0, green: 0.5, blue: 1.0))
+    static let orange = UIColor(color: Android.Graphics.Color.argb(alpha: 1.0, red: 1.0, green: 0.65, blue: 0.0))
     
     static let purple = UIColor(color: Android.Graphics.Color.argb(alpha: 1.0, red: 0.5, green: 0.0, blue: 0.5))
     

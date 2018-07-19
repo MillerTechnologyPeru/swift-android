@@ -7,7 +7,7 @@ let package = Package(
         .library(name: "androiduikit", type: .dynamic, targets: ["androiduikittarget"]),
     ],
     dependencies: [
-        .package(url: "git@github.com:PureSwift/Android.git", .revision("69b779c5eccb6f87f38682e876b93c260081adf5"))
+        .package(url: "git@github.com:PureSwift/Android.git", .revision("4d1c40b5e1e44314688e4635e544254763faec04"))
     ],
     targets: [
         .target(
