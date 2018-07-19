@@ -8,7 +8,7 @@
 import Foundation
 import Android
 
-public struct UIColor {
+public final class UIColor {
     
     // MARK: - Properties
     
@@ -43,33 +43,33 @@ public struct UIColor {
         self.androidColor = Android.Graphics.Drawable.ColorDrawable(color: color)
     }
     
-    static let black = UIColor(color: Android.Graphics.Color.BLACK)
+    public static let black = UIColor(color: Android.Graphics.Color.BLACK)
     
-    static let blue = UIColor(color: Android.Graphics.Color.BLUE)
+    public static let blue = UIColor(color: Android.Graphics.Color.BLUE)
     
-    static let brown = UIColor(color: Android.Graphics.Color.argb(alpha: 1.0, red: 0.6, green: 0.4, blue: 0.2))
+    public static let brown = UIColor(color: Android.Graphics.Color.argb(alpha: 1.0, red: 0.6, green: 0.4, blue: 0.2))
     
-    static let clear = UIColor(color: Android.Graphics.Color.TRANSPARENT)
+    public static let clear = UIColor(color: Android.Graphics.Color.TRANSPARENT)
     
-    static let cyan = UIColor(color: Android.Graphics.Color.CYAN)
+    public static let cyan = UIColor(color: Android.Graphics.Color.CYAN)
     
-    static let darkGray = UIColor(color: Android.Graphics.Color.DKGRAY)
+    public static let darkGray = UIColor(color: Android.Graphics.Color.DKGRAY)
     
-    static let gray = UIColor(color: Android.Graphics.Color.GRAY)
+    public static let gray = UIColor(color: Android.Graphics.Color.GRAY)
     
-    static let green = UIColor(color: Android.Graphics.Color.GREEN)
+    public static let green = UIColor(color: Android.Graphics.Color.GREEN)
     
-    static let lightGray = UIColor(color: Android.Graphics.Color.LTGRAY)
+    public static let lightGray = UIColor(color: Android.Graphics.Color.LTGRAY)
     
-    static let magenta = UIColor(color: Android.Graphics.Color.argb(alpha: 1.0, red: 1.0, green: 0.0, blue: 1.0))
+    public static let magenta = UIColor(color: Android.Graphics.Color.argb(alpha: 1.0, red: 1.0, green: 0.0, blue: 1.0))
     
-    static let orange = UIColor(color: Android.Graphics.Color.argb(alpha: 1.0, red: 1.0, green: 0.65, blue: 0.0))
+    public static let orange = UIColor(color: Android.Graphics.Color.argb(alpha: 1.0, red: 1.0, green: 0.65, blue: 0.0))
     
-    static let purple = UIColor(color: Android.Graphics.Color.argb(alpha: 1.0, red: 0.5, green: 0.0, blue: 0.5))
+    public static let purple = UIColor(color: Android.Graphics.Color.argb(alpha: 1.0, red: 0.5, green: 0.0, blue: 0.5))
     
-    static let red = UIColor(color: Android.Graphics.Color.RED)
+    public static let red = UIColor(color: Android.Graphics.Color.RED)
     
-    static let white = UIColor(color: Android.Graphics.Color.WHITE)
+    public static let white = UIColor(color: Android.Graphics.Color.WHITE)
     
-    static let yellow = UIColor(color: Android.Graphics.Color.YELLOW)
+    public static let yellow = UIColor(color: Android.Graphics.Color.YELLOW)
 }

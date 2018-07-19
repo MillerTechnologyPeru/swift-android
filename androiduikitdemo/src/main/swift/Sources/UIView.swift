@@ -13,13 +13,18 @@ open class UIView {
     internal var androidView: Android.Widget.FrameLayout!
     
     /// The view’s background color.
-    var backgroundColor: UIColor {
+    var backgroundColor: UIColor? { // @NSCopying var backgroundColor: UIColor? { get set }
+        
         get {
-            return androidView.background != nil ? UIColor.init(androidColor: androidView.background! as! Android.Graphics.Drawable.ColorDrawable) :  UIColor.clear
+            
+            guard let background = self.androidView?.background,
+                let color = Android.Graphics.Drawable.ColorDrawable(casting: background)
+                else { return nil }
+            
+            return UIColor(androidColor: color)
         }
-        set{
-            androidView.background = newValue.androidColor
-        }
+        
+        set { androidView.background = newValue?.androidColor }
     }
     
     /// The frame rectangle, which describes the view’s location and size in its superview’s coordinate system.
@@ -45,6 +50,7 @@ open class UIView {
     private var _frame = CGRect()
     
     public init(){
+        
         androidView = Android.Widget.FrameLayout(context: UIApplication.context!)
         androidView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: AndroidViewGroupLayoutParams.MATCH_PARENT, height: AndroidViewGroupLayoutParams.MATCH_PARENT)
     }
