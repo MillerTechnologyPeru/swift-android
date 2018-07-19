@@ -11,6 +11,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    
 }
 
 #else
@@ -29,7 +30,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     override func onCreate(savedInstanceState: Android.OS.Bundle?) {
         NSLog("\(type(of: self)) \(#function)")
         
-        view = UIView(frame: CGRect(x: 0, y: 0, width: AndroidViewGroupLayoutParams.MATCH_PARENT, height: AndroidViewGroupLayoutParams.MATCH_PARENT))
+        view = UIView()
         
          let uiView1 = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
          uiView1.backgroundColor = UIColor.purple
@@ -37,10 +38,17 @@ final class MainActivity: SwiftSupportAppCompatActivity {
          view.addSubview(uiView1)
          
          let uiView2 = UIView(frame: CGRect(x: 200, y: 100, width: 100, height: 100))
-         uiView2.backgroundColor = UIColor.orange
+         uiView2.backgroundColor = uiView1.backgroundColor
          view.addSubview(uiView2)
 
         setContentView(view: view.androidView)
+        /*
+        DispatchQueue.global(qos: .background).async {
+            sleep(5)
+            DispatchQueue.main.async {
+                uiView1.backgroundColor = UIColor.green
+            }
+        }*/
     }
 }
 

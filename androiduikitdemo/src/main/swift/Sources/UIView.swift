@@ -44,6 +44,11 @@ open class UIView {
     
     private var _frame = CGRect()
     
+    public init(){
+        androidView = Android.Widget.FrameLayout(context: UIApplication.context!)
+        androidView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: AndroidViewGroupLayoutParams.MATCH_PARENT, height: AndroidViewGroupLayoutParams.MATCH_PARENT)
+    }
+    
     /// Initializes and returns a newly allocated view object with the specified frame rectangle.
     public init(frame: CGRect) {
         
