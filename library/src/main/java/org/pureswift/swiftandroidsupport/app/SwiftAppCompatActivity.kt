@@ -1,6 +1,7 @@
 package org.pureswift.swiftandroidsupport.app
 
 import android.content.*
+import android.content.res.Resources
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -115,6 +116,10 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
     //return 0 if the id is not found
     fun getIdentifier(name: String, type: String): Int {
         return resources.getIdentifier(name, type, packageName)
+    }
+
+    override fun getResources(): Resources {
+        return super.getResources()
     }
 
     private external fun bind(): Long
