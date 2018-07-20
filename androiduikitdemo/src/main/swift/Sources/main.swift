@@ -20,18 +20,25 @@ import java_lang
 import java_util
 import Android
 
+let delegate = AppDelegate()
+
 /// Needs to be implemented by app.
 @_silgen_name("SwiftAndroidMainApplication")
 public func SwiftAndroidMainApplication() -> SwiftApplication.Type {
-    NSLog("SwiftDemoApplication bind \(#function)")
-    return UIApplication.self
+    
+    NSLog("\(#function)")
+    
+    UIApplication.shared.delegate = delegate
+    return AndroidUIKitApplication.self
 }
 
 /// Needs to be implemented by app.
 @_silgen_name("SwiftAndroidMainActivity")
 public func SwiftAndroidMainActivity() -> SwiftSupportAppCompatActivity.Type {
-    //    NSLog("MainActivity bind \(#function)")
-    return MainActivity.self
+    
+    NSLog("\(#function)")
+    
+    return AndroidUIKitMainActivity.self
 }
 
 #endif
