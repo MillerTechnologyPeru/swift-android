@@ -15,12 +15,18 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        NSLog("UIScreen scale: \(UIScreen.main.scale)")
+        NSLog("UIScreen native scale: \(UIScreen.main.nativeScale)")
+        NSLog("UIScreen size: \(UIScreen.main.bounds.size)")
+        NSLog("UIScreen native size: \(UIScreen.main.nativeBounds.size)")
+        
         let tableController = MainViewController()
         
-        self.window = UIWindow(frame: CGRect(x: 0, y: 0, width: 600, height: 800))//UIScreen.main.bounds)
+        self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = .red
         self.window?.rootViewController = tableController
         self.window?.makeKeyAndVisible()
+        
         return true
     }
     

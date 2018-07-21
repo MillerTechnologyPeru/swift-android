@@ -53,6 +53,9 @@ public final class UIScreen {
         self.activity = activity
         
         assert(activity.javaObject != nil, "Java object not initialized")
+        
+        updateSize()
+        update()
     }
     
     fileprivate static func mainScreen(for activity: SwiftSupport.App.AppCompatActivity) -> UIScreen  {
@@ -83,11 +86,21 @@ public final class UIScreen {
     public var mirrored: UIScreen? { return nil }
     
     // FIXME: Get size from window
-    public var bounds: CGRect { return CGRect(origin: .zero, size: .zero) }
+    public var bounds: CGRect {
+        
+        return CGRect(x: 0, y: 0,
+                      width: size.width,
+                      height: size.height)
+    }
     
-    public var nativeBounds: CGRect { return CGRect(origin: .zero, size: .zero) }
+    public var nativeBounds: CGRect {
+        
+        return CGRect(x: 0, y: 0,
+                      width: bounds.size.width * scale,
+                      height: bounds.size.height * scale)
+    }
     
-    public var scale: CGFloat { return 1 }
+    public private(set) var scale: CGFloat = 1.0
     
     public var nativeScale: CGFloat { return scale }
     
@@ -95,6 +108,8 @@ public final class UIScreen {
         
         return 60
     }
+    
+    private var size: CGSize = .zero { didSet { sizeChanged() } }
     
     internal var needsLayout: Bool = true
     internal var needsDisplay: Bool = true
@@ -128,5 +143,68 @@ public final class UIScreen {
         keyWindow?.resignKey()
         keyWindow = window
         keyWindow?.becomeKey()
+    }
+    
+    internal func updateSize() {
+        
+        let size: CGSize
+        
+        let scale = CGFloat(activity.getResources()?.getDisplayMetrics()?.density ?? 1.0)
+        
+        if let displayMetrics = activity.getResources()?.getDisplayMetrics() {
+            
+            size = CGSize(width: CGFloat(displayMetrics.widthPixels),
+                          height: CGFloat(displayMetrics.heightPixels))
+            
+        } else {
+            
+            size = .zero
+        }
+        
+        self.size = size
+        self.scale = scale
+        self.needsLayout = true
+        self.needsDisplay = true
+    }
+    
+    /// Layout (if needed) and redraw the screen
+    internal func update() {
+        
+        /*
+        // apply animations
+        if UIView.animations.isEmpty == false {
+            
+            needsDisplay = true
+            needsLayout = true
+            
+            UIView.animations = UIView.animations.filter { $0.frameChange() }
+        }*/
+        
+        // layout views
+        if needsLayout {
+            
+            defer { needsLayout = false }
+            
+            windows.forEach { $0.layoutIfNeeded() }
+            
+            needsDisplay = true // also render views
+        }
+        /*
+        // render views
+        if needsDisplay {
+            
+            defer { needsDisplay = false }
+        }*/
+        
+        needsDisplay = false
+    }
+    
+    private func sizeChanged() {
+        
+        // update windows
+        windows.forEach { $0.frame = CGRect(origin: .zero, size: size) }
+        
+        needsDisplay = true
+        needsLayout = true
     }
 }
