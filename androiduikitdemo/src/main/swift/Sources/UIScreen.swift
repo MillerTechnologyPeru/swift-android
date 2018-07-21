@@ -11,19 +11,15 @@ import java_swift
 
 public final class AndroidUIKitMainActivity: SwiftSupportAppCompatActivity {
     
-    public required init(javaObject: jobject?) {
-        super.init(javaObject: javaObject)
-        
-        // initialize
-        let _ = self.screen
-    }
-    
     public lazy var screen: UIScreen = UIScreen.mainScreen(for: self)
     
     public override func onCreate(savedInstanceState: Android.OS.Bundle?) {
         
         // load app
         let app = UIApplication.shared
+        
+        // load screen
+        let _ = screen
         
         guard let delegate = app.delegate
             else { assertionFailure("Missing UIApplicationDelegate"); return }

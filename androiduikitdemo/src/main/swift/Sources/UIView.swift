@@ -278,6 +278,7 @@ open class UIView: UIResponder {
         
         // FIXME: Do the docs state this happens?
         setNeedsLayout()
+        updateAndroidView()
         
         // Autoresize subviews
         if autoresizesSubviews, oldBounds.size != newBounds.size {
