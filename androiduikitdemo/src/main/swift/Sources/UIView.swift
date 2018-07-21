@@ -59,7 +59,6 @@ open class UIView: UIResponder {
     internal func updateAndroidView() {
                 
         // set origin
-        let scale = window?.screen.scale ?? 1.0
         androidView.setX(x: Float(frame.minX))
         androidView.setY(y: Float(frame.minY))
         
