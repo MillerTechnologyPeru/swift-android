@@ -38,7 +38,7 @@ final class MainViewController: UIViewController {
     
     override func loadView() {
         
-        self.view = UIView(frame: CGRect(x: 0, y: 0, width: 720, height: 1280))
+        self.view = UIView(frame: CGRect(x: 0, y: 0, width: 600, height: 800))
     }
     
     override func viewDidLoad() {
@@ -59,6 +59,7 @@ final class MainViewController: UIViewController {
         let view2 = UIView(frame: CGRect(x: 10, y: 10,
                                          width: view1.bounds.size.width - 20,
                                          height: view1.bounds.size.height - 20))
+        view2.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view2.backgroundColor = .green
         view1.addSubview(view2)
         self.view2 = view2
@@ -66,6 +67,7 @@ final class MainViewController: UIViewController {
         let view3 = UIView(frame: CGRect(x: 50, y: 50,
                                          width: view2.bounds.size.width - 100,
                                          height: view2.bounds.size.height - 100))
+        view3.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view3.backgroundColor = .yellow
         view2.addSubview(view3)
         self.view3 = view3
@@ -74,6 +76,7 @@ final class MainViewController: UIViewController {
                                          y: view1.frame.origin.y + view1.frame.size.height + 20,
                                          width: view1.frame.size.width - 80,
                                          height: 100))
+        //view4.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
         view4.backgroundColor = .white
         view.addSubview(view4)
         self.view4 = view4
