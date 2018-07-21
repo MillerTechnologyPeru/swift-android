@@ -34,6 +34,10 @@ final class MainViewController: UIViewController {
         NSLog("\(#function)")
         
         view.backgroundColor = .blue
+
+        let view0 = UIView(frame: CGRect(x: 100, y: 100, width: 30, height: 30))
+        view0.backgroundColor = .red
+        view.addSubview(view0)
         
         let uiView1 = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
         uiView1.backgroundColor = .purple

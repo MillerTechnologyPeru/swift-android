@@ -59,8 +59,8 @@ open class UIView: UIResponder {
     internal func updateAndroidView() {
                 
         // set origin
-        androidView.setX(x: Float(frame.minX))
-        androidView.setY(y: Float(frame.minY))
+        androidView.setLeft(left: Int(frame.origin.x))
+        androidView.setTop(top: Int(frame.origin.y))
         
         // set size
         androidView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Int(frame.width), height: Int(frame.height))
