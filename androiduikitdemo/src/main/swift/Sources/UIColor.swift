@@ -12,17 +12,18 @@ public final class UIColor {
     
     // MARK: - Properties
     
-    internal var androidColor: Android.Graphics.Drawable.ColorDrawable?
+    internal let androidColor: Android.Graphics.Drawable.ColorDrawable
     
     //public let cgColor: CGColor
     
     // MARK: - Initialization
     
-    internal init(androidColor: Android.Graphics.Drawable.ColorDrawable){
+    internal init(androidColor: Android.Graphics.Drawable.ColorDrawable) {
+        
         self.androidColor = androidColor
     }
     
-    internal init( color: Int) {
+    internal init(color: Int) {
         
         self.androidColor = Android.Graphics.Drawable.ColorDrawable(color: color)
     }
@@ -40,6 +41,7 @@ public final class UIColor {
                 alpha: CGFloat = 1.0) {
         
         let color = Android.Graphics.Color.argb(alpha: Float(alpha), red: Float(red), green: Float(green), blue: Float(blue))
+        
         self.androidColor = Android.Graphics.Drawable.ColorDrawable(color: color)
     }
     

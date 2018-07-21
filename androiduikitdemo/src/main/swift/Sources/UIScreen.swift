@@ -16,6 +16,11 @@ public final class AndroidUIKitMainActivity: SwiftSupportAppCompatActivity {
         
         // initialize
         let _ = self.screen
+    }
+    
+    public lazy var screen: UIScreen = UIScreen.mainScreen(for: self)
+    
+    public override func onCreate(savedInstanceState: Android.OS.Bundle?) {
         
         // load app
         let app = UIApplication.shared
@@ -34,8 +39,6 @@ public final class AndroidUIKitMainActivity: SwiftSupportAppCompatActivity {
             
         }
     }
-    
-    public lazy var screen: UIScreen = UIScreen.mainScreen(for: AndroidContext(casting: self))
 }
 
 public final class UIScreen {

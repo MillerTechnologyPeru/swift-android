@@ -21,7 +21,7 @@ public final class AndroidUIKitApplication: SwiftApplication {
     
     public override func onCreate() {
         
-        
+       
     }
 }
 

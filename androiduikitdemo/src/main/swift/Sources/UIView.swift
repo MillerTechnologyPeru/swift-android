@@ -31,7 +31,11 @@ open class UIView: UIResponder {
     /// Initializes and returns a newly allocated view object with the specified frame rectangle.
     public init(frame: CGRect) {
         
-        self.androidView = Android.Widget.FrameLayout(context: UIScreen.main.activity)
+        guard let context = AndroidContext(casting: UIScreen.main.activity)
+            else { fatalError("Missing context") }
+        
+        self.androidView = Android.Widget.FrameLayout(context: context)
+        
         super.init()
         
         assert(androidView.javaObject != nil, "Android View not initialized")
@@ -53,6 +57,8 @@ open class UIView: UIResponder {
     internal let androidView: Android.Widget.FrameLayout
     
     internal func updateAndroidView() {
+        
+        NSLog("\(self) \(#function)")
         
         // set origin
         androidView.setX(x: Float(frame.minX))

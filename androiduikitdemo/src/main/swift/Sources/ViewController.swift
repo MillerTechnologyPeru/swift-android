@@ -31,7 +31,9 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .red
+        NSLog("\(#function)")
+        
+        view.backgroundColor = .blue
         
         let uiView1 = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
         uiView1.backgroundColor = .purple
