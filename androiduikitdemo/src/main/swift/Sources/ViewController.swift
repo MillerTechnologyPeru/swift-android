@@ -30,6 +30,11 @@ final class MainViewController: UIViewController {
     
     //override var prefersStatusBarHidden: Bool { return true }
     
+    override func loadView() {
+        
+        self.view = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 480))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +42,10 @@ final class MainViewController: UIViewController {
         
         view.backgroundColor = .blue
 
-        let view1 = UIView()
+        let view1 = UIView(frame: CGRect(x: 20, y: 20,
+                                         width: view.bounds.size.width - 40,
+                                         height: view.bounds.size.height / 2.0))
+        //view1.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view1.backgroundColor = .red
         view.addSubview(view1)
         self.view1 = view1
@@ -45,15 +53,32 @@ final class MainViewController: UIViewController {
         //let view2 = UIView(frame: CGRect(x: 10, y: 10, width: 580, height: 580))
         //view2.backgroundColor = .green
         //view1.addSubview(view2)
+        
+        printViews()
     }
     
+    /*
     override func viewWillLayoutSubviews() {
         
         NSLog("\(#function) \(view.frame)")
         
         view1.frame = CGRect(x: 20, y: 20,
                              width: view.bounds.size.width - 40,
-                             height: 512)
+                             height: view.bounds.size.height / 2.0)
+    }*/
+    
+    override func viewDidLayoutSubviews() {
+        
+        NSLog("\(#function)")
+        
+        printViews()
+    }
+    
+    private func printViews() {
+        
+        NSLog("\(#function)")
+        NSLog("View: \(view.frame)")
+        NSLog("View1: \(view1.frame)")
     }
     
     /*
