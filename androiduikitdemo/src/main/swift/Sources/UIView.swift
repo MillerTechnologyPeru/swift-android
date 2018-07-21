@@ -34,17 +34,19 @@ open class UIView: UIResponder {
         self.androidView = Android.Widget.FrameLayout(context: UIScreen.main.activity)
         super.init()
         
+        assert(androidView.javaObject != nil, "Android View not initialized")
+        
         self.frame = frame
         self.updateAndroidView()
     }
     
     // MARK: - CustomStringConvertible
-    
+    /*
      open override var description: String {
      
         return String(format: "<%@: %p; frame = %@; hidden = %@; layer = %@>", NSStringFromClass(type(of: self)), Unmanaged<UIView>.passUnretained(self).toOpaque().debugDescription, "\(frame)", (isHidden ? "YES" : "NO"), "\(androidView.javaObject!)")
      }
-    
+    */
     // MARK: - Properties
     
     /// The backing Android View

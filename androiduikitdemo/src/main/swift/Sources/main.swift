@@ -20,15 +20,14 @@ import java_lang
 import java_util
 import Android
 
-let delegate = AppDelegate()
-
 /// Needs to be implemented by app.
 @_silgen_name("SwiftAndroidMainApplication")
 public func SwiftAndroidMainApplication() -> SwiftApplication.Type {
     
     NSLog("\(#function)")
     
-    UIApplication.shared.delegate = delegate
+    UIApplication.shared.delegate = AppDelegate()
+    
     return AndroidUIKitApplication.self
 }
 

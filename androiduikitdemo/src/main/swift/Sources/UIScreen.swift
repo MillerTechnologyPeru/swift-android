@@ -16,9 +16,26 @@ public final class AndroidUIKitMainActivity: SwiftSupportAppCompatActivity {
         
         // initialize
         let _ = self.screen
+        
+        // load app
+        let app = UIApplication.shared
+        
+        guard let delegate = app.delegate
+            else { assertionFailure("Missing UIApplicationDelegate"); return }
+        
+        // Tells the delegate that the launch process has begun but that state restoration has not yet occurred.
+        if delegate.application(app, willFinishLaunchingWithOptions: nil) == false {
+            
+            
+        }
+        
+        if delegate.application(app, didFinishLaunchingWithOptions: nil) == false {
+            
+            
+        }
     }
     
-    public lazy var screen: UIScreen = UIScreen.mainScreen(for: self)
+    public lazy var screen: UIScreen = UIScreen.mainScreen(for: AndroidContext(casting: self))
 }
 
 public final class UIScreen {
@@ -31,6 +48,8 @@ public final class UIScreen {
     fileprivate init(activity: SwiftSupport.App.AppCompatActivity) {
         
         self.activity = activity
+        
+        assert(activity.javaObject != nil, "Java object not initialized")
     }
     
     fileprivate static func mainScreen(for activity: SwiftSupport.App.AppCompatActivity) -> UIScreen  {

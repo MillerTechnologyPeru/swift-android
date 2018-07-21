@@ -13,23 +13,15 @@ import Android
 
 public final class AndroidUIKitApplication: SwiftApplication {
     
+    public required init(javaObject: jobject?) {
+        super.init(javaObject: javaObject)
+        
+        
+    }
+    
     public override func onCreate() {
         
-        let app = UIApplication.shared
         
-        guard let delegate = app.delegate
-            else { assertionFailure("Missing UIApplicationDelegate"); return }
-        
-        // Tells the delegate that the launch process has begun but that state restoration has not yet occurred.
-        if delegate.application(app, willFinishLaunchingWithOptions: nil) == false {
-            
-            
-        }
-        
-        if delegate.application(app, didFinishLaunchingWithOptions: nil) == false {
-            
-            
-        }
     }
 }
 
@@ -49,7 +41,7 @@ public final class UIApplication: UIResponder {
     
     // MARK: - Getting the App Delegate
     
-    public weak var delegate: UIApplicationDelegate?
+    public var delegate: UIApplicationDelegate?
     
     // MARK: - Getting App Windows
     

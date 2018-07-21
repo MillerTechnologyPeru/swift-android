@@ -235,12 +235,12 @@ open class UIResponder: NSObject {
     /// When you request an undo manager, the request goes up the responder chain and the `UIWindow`
     /// object returns a usable instance.
     /// You may add undo managers to your view controllers to perform undo and redo operations local to the managed view.
-    open var undoManager: UndoManager? { return nil }
+    //open var undoManager: UndoManager? { return nil }
     
     // MARK: - Validating Commands
     
     /// Requests the receiving responder to enable or disable the specified command in the user interface.
-    open func canPerformAction(_ action: Selector,
+    open func canPerformAction(_ action: String,
                                withSender sender: Any?) -> Bool {
         
         return false
@@ -253,7 +253,7 @@ open class UIResponder: NSObject {
     /// to determine whether it can invoke the action. If the object can invoke the action,
     /// it returns itself, otherwise it passes the request up the responder chain.
     /// Your app should override this method if it wants to override how a target is selected.
-    open func target(forAction action: Selector,
+    open func target(forAction action: String,
                      withSender sender: Any?) -> Any? {
         
         return nil
