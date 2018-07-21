@@ -32,7 +32,7 @@ final class MainViewController: UIViewController {
     
     override func loadView() {
         
-        self.view = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 480))
+        self.view = UIView(frame: CGRect(x: 0, y: 0, width: 720, height: 1280))
     }
     
     override func viewDidLoad() {
@@ -41,7 +41,7 @@ final class MainViewController: UIViewController {
         NSLog("\(#function) \(view.frame)")
         
         view.backgroundColor = .blue
-
+        
         let view1 = UIView(frame: CGRect(x: 20, y: 20,
                                          width: view.bounds.size.width - 40,
                                          height: view.bounds.size.height / 2.0))

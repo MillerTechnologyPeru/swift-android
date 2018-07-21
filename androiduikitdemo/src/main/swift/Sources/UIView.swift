@@ -60,8 +60,8 @@ open class UIView: UIResponder {
                 
         // set origin
         let scale = window?.screen.scale ?? 1.0
-        androidView.setX(x: Float(frame.minX * scale))
-        androidView.setY(y: Float(frame.minY * scale))
+        androidView.setX(x: Float(frame.minX))
+        androidView.setY(y: Float(frame.minY))
         
         // set size
         androidView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Int(frame.width), height: Int(frame.height))
