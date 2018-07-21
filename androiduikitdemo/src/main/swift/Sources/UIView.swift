@@ -57,9 +57,7 @@ open class UIView: UIResponder {
     internal let androidView: Android.Widget.FrameLayout
     
     internal func updateAndroidView() {
-        
-        NSLog("\(self) \(#function)")
-        
+                
         // set origin
         androidView.setX(x: Float(frame.minX))
         androidView.setY(y: Float(frame.minY))
@@ -369,9 +367,6 @@ open class UIView: UIResponder {
     public func addSubview(_ view: UIView) {
         
         addSubview(view, { $0.append($1) })
-        
-        // Android
-        androidView.addView(view.androidView)
     }
     
     @inline(__always)
@@ -398,6 +393,11 @@ open class UIView: UIResponder {
             didMoveToScreen()
         }
         view.didMoveToSuperview()
+        
+        // Android
+        androidView.addView(view.androidView)
+        
+        // inform
         didAddSubview(view)
         
         // force redraw

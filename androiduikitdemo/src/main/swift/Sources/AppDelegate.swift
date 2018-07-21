@@ -18,6 +18,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         let tableController = MainViewController()
         
         self.window = UIWindow(frame: CGRect(x: 0, y: 0, width: 600, height: 800))//UIScreen.main.bounds)
+        self.window?.backgroundColor = .red
         self.window?.rootViewController = tableController
         self.window?.makeKeyAndVisible()
         return true
