@@ -44,10 +44,31 @@ open class UITableViewCell: UIView {
 
 // MARK: - Supporting Types
 
+public enum UITableViewCellSeparatorStyle: Int {
+    
+    case none
+    case singleLine
+    case singleLineEtched
+}
+
 public enum UITableViewCellStyle: Int {
     
     case `default`
     case value1
     case value2
     case subtitle
+}
+
+public enum UITableViewCellSelectionStyle: Int {
+    
+    case none
+    case blue
+    case gray
+}
+
+public enum UITableViewCellEditingStyle: Int {
+    
+    case none
+    case delete
+    case insert
 }
