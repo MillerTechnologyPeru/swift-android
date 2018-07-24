@@ -19,7 +19,11 @@ enum AndroidCentralError: Error {
 }
 
 class AndroidCentral: CentralProtocol {
-
+    init() {
+        NSLog("\(type(of: self)) \(#function)")
+    }
+    
+    
     var log: ((String) -> ())?
     
     //I created my own peripheral because I got `Type alias 'Peripheral' references itself`
@@ -31,21 +35,30 @@ class AndroidCentral: CentralProtocol {
     
     func scan(filterDuplicates: Bool, shouldContinueScanning: () -> (Bool), foundDevice: @escaping (ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ()) throws {
         
+        NSLog("\(type(of: self)) \(#function) 1")
+        
         guard bluetoothAdapter!.isEnabled()
             else { throw AndroidCentralError.BluetoothDisabled }
         
+        NSLog("\(type(of: self)) \(#function) 2")
         self.log?("Scanning...")
         
         //let filters = [Android.Bluetooth.LE.ScanSettings]()
         
         let scanCallback = ScanCallback(filterDuplicates, foundDevice)
         
+        NSLog("\(type(of: self)) \(#function) 3")
+        
         bluetoothAdapter?.lowEnergyScanner?.startScan(callback: scanCallback)
         
-        // sleep until scan finishes
-        while shouldContinueScanning() { usleep(200) }
+        NSLog("\(type(of: self)) \(#function) 4")
         
-        bluetoothAdapter?.lowEnergyScanner?.stopScan(callback: scanCallback)
+        // sleep until scan finishes
+        //while shouldContinueScanning() { usleep(200) }
+        
+        NSLog("\(type(of: self)) \(#function) 5")
+        //FIXME: stop is not working
+        //bluetoothAdapter?.lowEnergyScanner?.stopScan(callback: scanCallback)
     }
     
     func connect(to peripheral: AndroidPeripheral, timeout: TimeInterval) throws {
@@ -89,6 +102,7 @@ class AndroidCentral: CentralProtocol {
         private let foundDevice: (ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ()
         
         init(_ filterDuplicates: Bool, _ foundDevice: @escaping (ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ()) {
+            NSLog("\(type(of: self)) \(#function)")
             self.filterDuplicates = filterDuplicates
             self.foundDevice = foundDevice
         }

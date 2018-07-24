@@ -140,7 +140,21 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         
         NSLog("\(type(of: self)) \(#function)")
         
-        bluetoothAdapter?.lowEnergyScanner?.startScan(callback: scanCallback!)
+        //bluetoothAdapter?.lowEnergyScanner?.startScan(callback: scanCallback!)
+
+        do {
+            let androidCentral = AndroidCentral()
+            
+            try androidCentral.scan(filterDuplicates: false, shouldContinueScanning: { true }, foundDevice: {
+                (scanData) in
+                
+                NSLog("\(scanData.peripheral.identifier.rawValue) - \(scanData.rssi)")
+            })
+        } catch {
+            NSLog("\(type(of: self)) \(#function) Error")
+            assertionFailure("Scanning error ")
+            return
+        }
     }
     
     public func stopScanning(){
