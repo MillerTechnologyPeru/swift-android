@@ -15,6 +15,4 @@ public struct AndroidAdvertisementData: AdvertisementDataProtocol {
     public var manufacturerData: Data?
     
     public var isConnectable: Bool?
-    
-    
 }

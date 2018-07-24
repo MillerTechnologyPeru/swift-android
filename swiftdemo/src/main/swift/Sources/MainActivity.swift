@@ -149,6 +149,10 @@ final class MainActivity: SwiftSupportAppCompatActivity {
                 (scanData) in
                 
                 NSLog("\(scanData.peripheral.identifier.rawValue) - \(scanData.rssi)")
+                
+                let deviceModel = DeviceModel(device: scanData.peripheral.device, rssi: Int(scanData.rssi))
+                
+                self.deviceAdapter?.addDevice(newDevice: deviceModel)
             })
         } catch {
             NSLog("\(type(of: self)) \(#function) Error")

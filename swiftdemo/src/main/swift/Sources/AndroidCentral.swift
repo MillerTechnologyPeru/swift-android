@@ -19,10 +19,10 @@ enum AndroidCentralError: Error {
 }
 
 class AndroidCentral: CentralProtocol {
+
     init() {
         NSLog("\(type(of: self)) \(#function)")
     }
-    
     
     var log: ((String) -> ())?
     
@@ -32,6 +32,8 @@ class AndroidCentral: CentralProtocol {
     typealias Advertisement = AndroidAdvertisementData
     
     private let bluetoothAdapter = Android.Bluetooth.Adapter.default
+    
+    private var gattCallback: Android.Bluetooth.GattCallback?
     
     func scan(filterDuplicates: Bool, shouldContinueScanning: () -> (Bool), foundDevice: @escaping (ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ()) throws {
         
@@ -53,16 +55,30 @@ class AndroidCentral: CentralProtocol {
         
         NSLog("\(type(of: self)) \(#function) 4")
         
+        DispatchQueue.global(qos: .background).async {
+            NSLog("background thread log starting")
+            usleep(useconds_t(5*1000000))
+            NSLog("background thread log finished")
+            self.bluetoothAdapter?.lowEnergyScanner?.stopScan(callback: scanCallback)
+            /*DispatchQueue.main.async {
+                NSLog("main thread log")
+                
+            }*/
+        }
         // sleep until scan finishes
         //while shouldContinueScanning() { usleep(200) }
         
         NSLog("\(type(of: self)) \(#function) 5")
         //FIXME: stop is not working
-        //bluetoothAdapter?.lowEnergyScanner?.stopScan(callback: scanCallback)
+        
     }
     
     func connect(to peripheral: AndroidPeripheral, timeout: TimeInterval) throws {
         
+        gattCallback = GattCallback(peripheral: peripheral)
+        
+        peripheral.device.connectGatt(context: SwiftDemoApplication.context!, autoConnect: false, callback: gattCallback!)
+        fatalError("not implemented")
     }
     
     func disconnect(peripheral: AndroidPeripheral) {
@@ -115,7 +131,7 @@ class AndroidCentral: CentralProtocol {
                 
             }else{
                 
-                let peripheral = AndroidPeripheral(identifier: result.device.address)
+                let peripheral = AndroidPeripheral(identifier: result.device.address, device: result.device)
                 
                 let advertisement = AndroidAdvertisementData.init(localName: result.device.getName(), manufacturerData: nil, isConnectable: true)
                 
@@ -138,6 +154,88 @@ class AndroidCentral: CentralProtocol {
         }
     }
     
+    public class GattCallback: Android.Bluetooth.GattCallback {
+
+        private var peripheral: AndroidPeripheral
+        
+        init(peripheral: AndroidPeripheral) {
+            self.peripheral = peripheral
+        }
+        
+        public func onConnectionStateChange(gatt: Android.Bluetooth.Gatt, status: AndroidBluetoothGatt.Status, newState: AndroidBluetoothDevice.State) {
+            
+            NSLog("Status: \(status) - newState = \(newState)")
+            
+            if(status.rawValue != AndroidBluetoothGatt.Status.success.rawValue){
+                 NSLog("Error: \(status.rawValue)")
+                return
+            }
+            
+            if(newState.rawValue == AndroidBluetoothDevice.State.connected.rawValue){
+                
+                peripheral.gatt = gatt
+                NSLog("Got GATT")
+            }
+        }
+        
+        public func onServicesDiscovered(gatt: Android.Bluetooth.Gatt, status: AndroidBluetoothGatt.Status) {
+            
+            NSLog("Status: \(status)")
+            
+            if(status.rawValue != AndroidBluetoothGatt.Status.success.rawValue){
+                //Show error message on Android
+                NSLog("Error: \(status)")
+                return
+            }
+            
+            /*
+             gatt.getServices()?.withJavaObject{
+             self.responder.showServices(services: JavaObject(javaObject: $0))
+             }*/
+            
+            NSLog("Size: \(String(describing: gatt.getServices()?.size()))")
+        }
+        
+        public func onCharacteristicChanged(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic) {
+            
+        }
+        
+        public func onCharacteristicRead(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic, status: AndroidBluetoothGatt.Status) {
+            
+        }
+        
+        public func onCharacteristicWrite(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic, status: AndroidBluetoothGatt.Status) {
+            
+        }
+        
+        public func onDescriptorRead(gatt: Android.Bluetooth.Gatt, descriptor: Android.Bluetooth.GattDescriptor, status: AndroidBluetoothGatt.Status) {
+            
+        }
+        
+        public func onDescriptorWrite(gatt: Android.Bluetooth.Gatt, descriptor: Android.Bluetooth.GattDescriptor, status: AndroidBluetoothGatt.Status) {
+            
+        }
+        
+        public func onMtuChanged(gatt: Android.Bluetooth.Gatt, mtu: Int, status: AndroidBluetoothGatt.Status) {
+            
+        }
+        
+        public func onPhyRead(gatt: Android.Bluetooth.Gatt, txPhy: AndroidBluetoothGatt.TxPhy, rxPhy: AndroidBluetoothGatt.RxPhy, status: AndroidBluetoothGatt.Status) {
+            
+        }
+        
+        public func onPhyUpdate(gatt: Android.Bluetooth.Gatt, txPhy: AndroidBluetoothGatt.TxPhy, rxPhy: AndroidBluetoothGatt.RxPhy, status: AndroidBluetoothGatt.Status) {
+            
+        }
+        
+        public func onReadRemoteRssi(gatt: Android.Bluetooth.Gatt, rssi: Int, status: AndroidBluetoothGatt.Status) {
+            
+        }
+        
+        public func onReliableWriteCompleted(gatt: Android.Bluetooth.Gatt, status: AndroidBluetoothGatt.Status) {
+            
+        }
+    }
     
 }
 
