@@ -13,6 +13,11 @@ import Bluetooth
 
 import Android
 
+enum AndroidCentralError: Error {
+    case BluetoothDisabled
+    case ScanningError
+}
+
 class AndroidCentral: CentralProtocol {
 
     var log: ((String) -> ())?
@@ -24,19 +29,23 @@ class AndroidCentral: CentralProtocol {
     
     private let bluetoothAdapter = Android.Bluetooth.Adapter.default
     
-    func scan(duration: TimeInterval, filterDuplicates: Bool) throws -> [ScanData<AndroidCentral.Peripheral, AndroidCentral.Advertisement>] {
+    func scan(filterDuplicates: Bool, shouldContinueScanning: () -> (Bool), foundDevice: @escaping (ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ()) throws {
         
-        let filters = [Android.Bluetooth.LE.ScanSettings]()
+        guard bluetoothAdapter!.isEnabled()
+            else { throw AndroidCentralError.BluetoothDisabled }
         
-        let scanCallback = ScanCallback()
+        self.log?("Scanning...")
+        
+        //let filters = [Android.Bluetooth.LE.ScanSettings]()
+        
+        let scanCallback = ScanCallback(filterDuplicates, foundDevice)
         
         bluetoothAdapter?.lowEnergyScanner?.startScan(callback: scanCallback)
         
-        fatalError("not implemented")
-    }
-    
-    func scan(filterDuplicates: Bool, shouldContinueScanning: () -> (Bool), foundDevice: @escaping (ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ()) throws {
+        // sleep until scan finishes
+        while shouldContinueScanning() { usleep(200) }
         
+        bluetoothAdapter?.lowEnergyScanner?.stopScan(callback: scanCallback)
     }
     
     func connect(to peripheral: AndroidPeripheral, timeout: TimeInterval) throws {
@@ -76,13 +85,30 @@ class AndroidCentral: CentralProtocol {
     
     private struct ScanCallback: Android.Bluetooth.LE.ScanCallback {
         
+        private let filterDuplicates: Bool
+        private let foundDevice: (ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ()
+        
+        init(_ filterDuplicates: Bool, _ foundDevice: @escaping (ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ()) {
+            self.filterDuplicates = filterDuplicates
+            self.foundDevice = foundDevice
+        }
+        
         public func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType, result: Android.Bluetooth.LE.ScanResult) {
+            NSLog("\(type(of: self)) \(#function) scanning")
             
-            let device = result.device
-            let rssi = result.rssi
-            
-            let deviceModel = DeviceModel(device: device, rssi: rssi)
-            
+            if(filterDuplicates){
+                
+                
+            }else{
+                
+                let peripheral = AndroidPeripheral(identifier: result.device.address)
+                
+                let advertisement = AndroidAdvertisementData.init(localName: result.device.getName(), manufacturerData: nil, isConnectable: true)
+                
+                let scandata = ScanData<AndroidPeripheral, AndroidAdvertisementData>(peripheral: peripheral, rssi: Double(result.rssi), advertisementData: advertisement);
+                
+                foundDevice(scandata)
+            }
         }
         
         public func onBatchScanResults(results: [Android.Bluetooth.LE.ScanResult]) {
