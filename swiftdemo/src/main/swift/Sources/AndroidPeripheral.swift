@@ -16,8 +16,8 @@ import Bluetooth
 public class AndroidPeripheral: Peer {
     
     public let identifier: Bluetooth.Address
-    public var device: Android.Bluetooth.Device
-    public var gatt: Android.Bluetooth.Gatt?
+    internal var device: Android.Bluetooth.Device
+    internal var gatt: Android.Bluetooth.Gatt?
     
     internal init(identifier: Bluetooth.Address, device: Android.Bluetooth.Device) {
         

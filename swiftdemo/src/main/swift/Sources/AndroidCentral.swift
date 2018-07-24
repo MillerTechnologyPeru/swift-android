@@ -59,11 +59,11 @@ class AndroidCentral: CentralProtocol {
             NSLog("background thread log starting")
             usleep(useconds_t(5*1000000))
             NSLog("background thread log finished")
-            self.bluetoothAdapter?.lowEnergyScanner?.stopScan(callback: scanCallback)
-            /*DispatchQueue.main.async {
+            
+            DispatchQueue.main.async {
                 NSLog("main thread log")
-                
-            }*/
+                self.bluetoothAdapter?.lowEnergyScanner?.stopScan(callback: scanCallback)
+            }
         }
         // sleep until scan finishes
         //while shouldContinueScanning() { usleep(200) }
