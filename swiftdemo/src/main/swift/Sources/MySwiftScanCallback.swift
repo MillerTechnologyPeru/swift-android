@@ -7,18 +7,27 @@
 
 import Foundation
 import Android
+import java_swift
 
-public struct MySwiftScanCallback: Android.Bluetooth.LE.ScanCallback {
+public class MySwiftScanCallback: Android.Bluetooth.LE.ScanCallback {
     
     private var activity: MainActivity?
     
     init(mainActivity: MainActivity){
+        
+        super.init(javaObject: nil)
+        bindNewJavaObject()
+        
         activity = mainActivity
         
         NSLog("\(type(of: self)) \(#function)")
     }
     
-    public func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType, result: Android.Bluetooth.LE.ScanResult) {
+    required public init(javaObject: jobject?) {
+        super.init(javaObject: javaObject)
+    }
+    
+    public override func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType, result: Android.Bluetooth.LE.ScanResult) {
         
         let device = result.device
         let rssi = result.rssi
@@ -28,12 +37,12 @@ public struct MySwiftScanCallback: Android.Bluetooth.LE.ScanCallback {
         activity?.deviceAdapter?.addDevice(newDevice: deviceModel)
     }
     
-    public func onBatchScanResults(results: [Android.Bluetooth.LE.ScanResult]) {
+    public override func onBatchScanResults(results: [Android.Bluetooth.LE.ScanResult]) {
         
         NSLog("\(type(of: self)): \(#function)")
     }
     
-    public func onScanFailed(error: AndroidBluetoothLowEnergyScanCallback.Error) {
+    public override func onScanFailed(error: AndroidBluetoothLowEnergyScanCallback.Error) {
         
         NSLog("\(type(of: self)): \(#function)")
         

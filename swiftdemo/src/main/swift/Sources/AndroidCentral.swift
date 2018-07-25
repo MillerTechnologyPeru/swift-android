@@ -12,6 +12,7 @@ import Bluetooth
 //#if os(android)
 
 import Android
+import java_swift
 
 enum AndroidCentralError: Error {
     case BluetoothDisabled
@@ -56,14 +57,15 @@ class AndroidCentral: CentralProtocol {
         NSLog("\(type(of: self)) \(#function) 4")
         
         DispatchQueue.global(qos: .background).async {
-            NSLog("background thread log starting")
-            usleep(useconds_t(5*1000000))
-            NSLog("background thread log finished")
+            NSLog("The thread feel asleep")
+            usleep(useconds_t(10*1000000))
+            NSLog("The thread woke up")
             
-            DispatchQueue.main.async {
-                NSLog("main thread log")
-                self.bluetoothAdapter?.lowEnergyScanner?.stopScan(callback: scanCallback)
-            }
+            NSLog("Stopping the scanning")
+            self.bluetoothAdapter?.lowEnergyScanner?.stopScan(callback: scanCallback)
+            /*DispatchQueue.main.async {
+                
+            }*/
         }
         // sleep until scan finishes
         //while shouldContinueScanning() { usleep(200) }
@@ -112,21 +114,29 @@ class AndroidCentral: CentralProtocol {
     
     //MARK: Android
     
-    private struct ScanCallback: Android.Bluetooth.LE.ScanCallback {
+    private class ScanCallback: Android.Bluetooth.LE.ScanCallback {
         
-        private let filterDuplicates: Bool
-        private let foundDevice: (ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ()
+        private var filterDuplicates: Bool?
+        private var foundDevice: ((ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ())?
         
-        init(_ filterDuplicates: Bool, _ foundDevice: @escaping (ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ()) {
+        public required init(javaObject: jobject?) {
+            super.init(javaObject: javaObject)
+        }
+        
+        convenience init(_ filterDuplicates: Bool, _ foundDevice: @escaping (ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ()) {
+
+            self.init(javaObject: nil)
+            bindNewJavaObject()
+            
             NSLog("\(type(of: self)) \(#function)")
             self.filterDuplicates = filterDuplicates
             self.foundDevice = foundDevice
         }
         
-        public func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType, result: Android.Bluetooth.LE.ScanResult) {
+        public override func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType, result: Android.Bluetooth.LE.ScanResult) {
             NSLog("\(type(of: self)) \(#function) scanning")
             
-            if(filterDuplicates){
+            if(filterDuplicates!){
                 
                 
             }else{
@@ -137,20 +147,18 @@ class AndroidCentral: CentralProtocol {
                 
                 let scandata = ScanData<AndroidPeripheral, AndroidAdvertisementData>(peripheral: peripheral, rssi: Double(result.rssi), advertisementData: advertisement);
                 
-                foundDevice(scandata)
+                foundDevice!(scandata)
             }
         }
         
-        public func onBatchScanResults(results: [Android.Bluetooth.LE.ScanResult]) {
+        public override func onBatchScanResults(results: [Android.Bluetooth.LE.ScanResult]) {
             
             NSLog("\(type(of: self)): \(#function)")
         }
         
-        public func onScanFailed(error: AndroidBluetoothLowEnergyScanCallback.Error) {
-            
+        public override func onScanFailed(error: AndroidBluetoothLowEnergyScanCallback.Error) {
+ 
             NSLog("\(type(of: self)): \(#function)")
-            
-            NSLog("Scan failed \(error)")
         }
     }
     

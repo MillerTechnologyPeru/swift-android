@@ -16,6 +16,10 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
     private var mainActivity: MainActivity?
     private var devices: [DeviceModel] = [DeviceModel]()
     
+    public required init(javaObject: jobject?) {
+        super.init(javaObject: javaObject)
+    }
+    
     convenience init(mainActivity: MainActivity) {
         
         NSLog("\(type(of: self)) \(#function)")
@@ -48,10 +52,6 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
             devices[indextExistingItem] = newDevice
             notifyItemChanged(position: indextExistingItem)
         }
-    }
-    
-    public required init(javaObject: jobject?) {
-        super.init(javaObject: javaObject)
     }
     
     public override func onCreateViewHolder(parent: Android.View.ViewGroup, viewType: Int?) -> AndroidWidgetRecyclerView.ViewHolder {
