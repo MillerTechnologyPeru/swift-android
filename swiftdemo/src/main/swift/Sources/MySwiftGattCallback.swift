@@ -7,15 +7,24 @@
 
 import Foundation
 import Android
+import java_swift
 
-public struct MySwiftGattCallback: Android.Bluetooth.GattCallback {
+public class MySwiftGattCallback: Android.Bluetooth.GattCallback {
     
     private var activity: MainActivity?
     
-    init(mainActivity: MainActivity){
+    convenience init(mainActivity: MainActivity){
+        
+        self.init(javaObject: nil)
+        bindNewJavaObject()
+        
         activity = mainActivity
         
         NSLog("\(type(of: self)) \(#function)")
+    }
+    
+    public required init(javaObject: jobject?) {
+        super.init(javaObject: javaObject)
     }
     
     public func onConnectionStateChange(gatt: Android.Bluetooth.Gatt, status: AndroidBluetoothGatt.Status, newState: AndroidBluetoothDevice.State) {

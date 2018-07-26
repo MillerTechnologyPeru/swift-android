@@ -164,10 +164,17 @@ class AndroidCentral: CentralProtocol {
     
     public class GattCallback: Android.Bluetooth.GattCallback {
 
-        private var peripheral: AndroidPeripheral
+        private var peripheral: AndroidPeripheral?
         
-        init(peripheral: AndroidPeripheral) {
+        convenience init(peripheral: AndroidPeripheral) {
+            self.init(javaObject: nil)
+            bindNewJavaObject()
+            
             self.peripheral = peripheral
+        }
+        
+        public required init(javaObject: jobject?) {
+            super.init(javaObject: javaObject)
         }
         
         public func onConnectionStateChange(gatt: Android.Bluetooth.Gatt, status: AndroidBluetoothGatt.Status, newState: AndroidBluetoothDevice.State) {
@@ -181,7 +188,7 @@ class AndroidCentral: CentralProtocol {
             
             if(newState.rawValue == AndroidBluetoothDevice.State.connected.rawValue){
                 
-                peripheral.gatt = gatt
+                peripheral?.gatt = gatt
                 NSLog("Got GATT")
             }
         }
