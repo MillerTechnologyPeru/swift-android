@@ -38,28 +38,22 @@ class AndroidCentral: CentralProtocol {
     
     func scan(filterDuplicates: Bool, shouldContinueScanning: () -> (Bool), foundDevice: @escaping (ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ()) throws {
         
-        NSLog("\(type(of: self)) \(#function) 1")
+        NSLog("\(type(of: self)) \(#function)")
         
         guard bluetoothAdapter!.isEnabled()
             else { throw AndroidCentralError.BluetoothDisabled }
-        
-        NSLog("\(type(of: self)) \(#function) 2")
+
         self.log?("Scanning...")
         
         //let filters = [Android.Bluetooth.LE.ScanSettings]()
         
         let scanCallback = ScanCallback(filterDuplicates, foundDevice)
-        
-        NSLog("\(type(of: self)) \(#function) 3")
-        
+
         bluetoothAdapter?.lowEnergyScanner?.startScan(callback: scanCallback)
         
-        NSLog("\(type(of: self)) \(#function) 4")
-        
+        // sleep until scan finishes
         DispatchQueue.global(qos: .background).async {
-            NSLog("The thread feel asleep")
             usleep(useconds_t(10*1000000))
-            NSLog("The thread woke up")
             
             NSLog("Stopping the scanning")
             self.bluetoothAdapter?.lowEnergyScanner?.stopScan(callback: scanCallback)
@@ -67,48 +61,57 @@ class AndroidCentral: CentralProtocol {
                 
             }*/
         }
-        // sleep until scan finishes
-        //while shouldContinueScanning() { usleep(200) }
-        
-        NSLog("\(type(of: self)) \(#function) 5")
-        //FIXME: stop is not working
-        
     }
     
     func connect(to peripheral: AndroidPeripheral, timeout: TimeInterval) throws {
         
+        NSLog("\(type(of: self)) \(#function)")
+        
+        guard bluetoothAdapter!.isEnabled()
+            else { throw AndroidCentralError.BluetoothDisabled }
+        
         gattCallback = GattCallback(peripheral: peripheral)
         
-        peripheral.device.connectGatt(context: SwiftDemoApplication.context!, autoConnect: false, callback: gattCallback!)
-        fatalError("not implemented")
+        peripheral.gatt = peripheral.device.connectGatt(context: SwiftDemoApplication.context!, autoConnect: false, callback: gattCallback!)
+        
     }
     
     func disconnect(peripheral: AndroidPeripheral) {
+        NSLog("\(type(of: self)) \(#function)")
         
+        peripheral.gatt?.disconnect()
     }
     
     func disconnectAll() {
+        NSLog("\(type(of: self)) \(#function)")
         
     }
     
     func discoverServices(_ services: [BluetoothUUID], for peripheral: AndroidPeripheral, timeout: TimeInterval) throws -> [Service<AndroidPeripheral>] {
+        NSLog("\(type(of: self)) \(#function)")
+        
         fatalError("not implemented")
     }
     
     func discoverCharacteristics(_ characteristics: [BluetoothUUID], for service: Service<AndroidPeripheral>, timeout: TimeInterval) throws -> [Characteristic<AndroidPeripheral>] {
+        NSLog("\(type(of: self)) \(#function)")
+        
         fatalError("not implemented")
     }
     
     func readValue(for characteristic: Characteristic<AndroidPeripheral>, timeout: TimeInterval) throws -> Data {
+        NSLog("\(type(of: self)) \(#function)")
         
         fatalError("not implemented")
     }
     
     func writeValue(_ data: Data, for characteristic: Characteristic<AndroidPeripheral>, withResponse: Bool, timeout: TimeInterval) throws {
+        NSLog("\(type(of: self)) \(#function)")
         
     }
     
     func notify(_ notification: ((Data) -> ())?, for characteristic: Characteristic<AndroidPeripheral>, timeout: TimeInterval) throws {
+        NSLog("\(type(of: self)) \(#function)")
         
     }
     
@@ -134,7 +137,7 @@ class AndroidCentral: CentralProtocol {
         }
         
         public override func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType, result: Android.Bluetooth.LE.ScanResult) {
-            NSLog("\(type(of: self)) \(#function) scanning")
+            NSLog("\(type(of: self)) \(#function)")
             
             if(filterDuplicates!){
                 
@@ -178,22 +181,27 @@ class AndroidCentral: CentralProtocol {
         }
         
         public func onConnectionStateChange(gatt: Android.Bluetooth.Gatt, status: AndroidBluetoothGatt.Status, newState: AndroidBluetoothDevice.State) {
+            NSLog("\(type(of: self)): \(#function)")
             
             NSLog("Status: \(status) - newState = \(newState)")
             
             if(status.rawValue != AndroidBluetoothGatt.Status.success.rawValue){
-                 NSLog("Error: \(status.rawValue)")
+                peripheral?.gatt = nil
                 return
             }
             
             if(newState.rawValue == AndroidBluetoothDevice.State.connected.rawValue){
                 
                 peripheral?.gatt = gatt
-                NSLog("Got GATT")
+                NSLog("GATT Connected")
+            } else if(newState.rawValue == AndroidBluetoothDevice.State.disconnected.rawValue){
+                peripheral?.gatt = nil
+                NSLog("GATT Disconnected")
             }
         }
         
         public func onServicesDiscovered(gatt: Android.Bluetooth.Gatt, status: AndroidBluetoothGatt.Status) {
+            NSLog("\(type(of: self)): \(#function)")
             
             NSLog("Status: \(status)")
             
@@ -203,6 +211,7 @@ class AndroidCentral: CentralProtocol {
                 return
             }
             
+            peripheral?.gatt = gatt
             /*
              gatt.getServices()?.withJavaObject{
              self.responder.showServices(services: JavaObject(javaObject: $0))
@@ -212,42 +221,52 @@ class AndroidCentral: CentralProtocol {
         }
         
         public func onCharacteristicChanged(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic) {
+            NSLog("\(type(of: self)): \(#function)")
             
         }
         
         public func onCharacteristicRead(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic, status: AndroidBluetoothGatt.Status) {
+            NSLog("\(type(of: self)): \(#function)")
             
         }
         
         public func onCharacteristicWrite(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic, status: AndroidBluetoothGatt.Status) {
+            NSLog("\(type(of: self)): \(#function)")
             
         }
         
         public func onDescriptorRead(gatt: Android.Bluetooth.Gatt, descriptor: Android.Bluetooth.GattDescriptor, status: AndroidBluetoothGatt.Status) {
+            NSLog("\(type(of: self)): \(#function)")
             
         }
         
         public func onDescriptorWrite(gatt: Android.Bluetooth.Gatt, descriptor: Android.Bluetooth.GattDescriptor, status: AndroidBluetoothGatt.Status) {
+            NSLog("\(type(of: self)): \(#function)")
             
         }
         
         public func onMtuChanged(gatt: Android.Bluetooth.Gatt, mtu: Int, status: AndroidBluetoothGatt.Status) {
+            NSLog("\(type(of: self)): \(#function)")
             
         }
         
         public func onPhyRead(gatt: Android.Bluetooth.Gatt, txPhy: AndroidBluetoothGatt.TxPhy, rxPhy: AndroidBluetoothGatt.RxPhy, status: AndroidBluetoothGatt.Status) {
+            NSLog("\(type(of: self)): \(#function)")
             
         }
         
         public func onPhyUpdate(gatt: Android.Bluetooth.Gatt, txPhy: AndroidBluetoothGatt.TxPhy, rxPhy: AndroidBluetoothGatt.RxPhy, status: AndroidBluetoothGatt.Status) {
+            NSLog("\(type(of: self)): \(#function)")
             
         }
         
         public func onReadRemoteRssi(gatt: Android.Bluetooth.Gatt, rssi: Int, status: AndroidBluetoothGatt.Status) {
+            NSLog("\(type(of: self)): \(#function)")
             
         }
         
         public func onReliableWriteCompleted(gatt: Android.Bluetooth.Gatt, status: AndroidBluetoothGatt.Status) {
+            NSLog("\(type(of: self)): \(#function)")
             
         }
     }

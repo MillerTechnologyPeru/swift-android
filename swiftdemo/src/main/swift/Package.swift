@@ -8,7 +8,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "git@github.com:PureSwift/Android.git", .branch("master")),
-        .package(url: "git@github.com:PureSwift/GATT.git", from: "2.0.0")
+        .package(url: "git@github.com:PureSwift/GATT.git", from: "2.0.1")
     ],
     targets: [
         .target(
