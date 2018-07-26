@@ -1,0 +1,383 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GATTReferenceTimeInformation"
+- "=="
+- "=="
+- "=="
+provides-nominal:
+- "9Bluetooth28GATTReferenceTimeInformationV"
+- "9Bluetooth28GATTReferenceTimeInformationV3DayV"
+- "9Bluetooth28GATTReferenceTimeInformationV4HourV"
+provides-member:
+- ["9Bluetooth28GATTReferenceTimeInformationV", ""]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", ""]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", ""]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "Day"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "Hour"]
+depends-top-level:
+- !private "&&"
+- "+"
+- !private "..<"
+- !private "<="
+- "=="
+- !private ">="
+- !private "Array"
+- "AssignmentPrecedence"
+- "BluetoothUUID"
+- "BluetoothUnit"
+- "Bool"
+- "CustomStringConvertible"
+- "Data"
+- "Equatable"
+- "ExpressibleByIntegerLiteral"
+- "FloatLiteralType"
+- "GATTCharacteristic"
+- "GATTReferenceTimeInformation"
+- "GATTTimeAccuracy"
+- "GATTTimeSource"
+- "IntegerLiteralType"
+- "String"
+- "UInt8"
+- "UnitIdentifier"
+- !private "||"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subdata"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s13BinaryIntegerP", "description"]
+- !private ["9Bluetooth0A4UUIDO", "referenceTimeInformation"]
+- ["9Bluetooth0A4UnitP", "Hour"]
+- ["9Bluetooth0A4UnitP", "IntegerLiteralType"]
+- ["9Bluetooth0A4UnitP", "RawValue"]
+- ["9Bluetooth0A4UnitP", ""]
+- ["9Bluetooth0A4UnitP", "_Default_IntegerLiteralType"]
+- ["9Bluetooth0A4UnitP", "_Default_RawValue"]
+- ["9Bluetooth0A4UnitP", "description"]
+- ["9Bluetooth0A4UnitP", "init"]
+- !private ["9Bluetooth0A4UnitP", "max"]
+- !private ["9Bluetooth0A4UnitP", "min"]
+- !private ["9Bluetooth0A4UnitP", "moreHours"]
+- ["9Bluetooth0A4UnitP", "rawValue"]
+- ["9Bluetooth0A4UnitP", "unitType"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["9Bluetooth8ByteSwapP", "referenceTimeInformation"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "description"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subdata"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "description"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subdata"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "description"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "description"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subdata"]
+- !private ["s17CustomReflectableP", "subscript"]
+- ["s23CustomStringConvertibleP", "Hour"]
+- ["s23CustomStringConvertibleP", "IntegerLiteralType"]
+- ["s23CustomStringConvertibleP", "RawValue"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "_Default_IntegerLiteralType"]
+- ["s23CustomStringConvertibleP", "_Default_RawValue"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "data"]
+- !private ["s23CustomStringConvertibleP", "day"]
+- ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "hour"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "length"]
+- !private ["s23CustomStringConvertibleP", "max"]
+- !private ["s23CustomStringConvertibleP", "min"]
+- !private ["s23CustomStringConvertibleP", "moreHours"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- !private ["s23CustomStringConvertibleP", "referenceTimeInformation"]
+- !private ["s23CustomStringConvertibleP", "subdata"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- ["s23CustomStringConvertibleP", "unitType"]
+- !private ["10Foundation4DataV", "count"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["10Foundation4DataV", "subdata"]
+- !private ["10Foundation4DataV", "subscript"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "=="]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "Bool"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "Day"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "GATTReferenceTimeInformation"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "IntegerLiteralType"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "RawValue"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "String"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "UInt8"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "UnitIdentifier"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "_Default_IntegerLiteralType"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "_Default_RawValue"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "deinit"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "description"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "init"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "moreDays"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "rawValue"]
+- ["9Bluetooth28GATTReferenceTimeInformationV3DayV", "unitType"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "description"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subdata"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "description"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subdata"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "Data"]
+- ["s9EquatableP", "Day"]
+- ["s9EquatableP", "GATTTimeAccuracy"]
+- ["s9EquatableP", "GATTTimeSource"]
+- ["s9EquatableP", "Hour"]
+- ["s9EquatableP", "IntegerLiteralType"]
+- ["s9EquatableP", "RawValue"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_IntegerLiteralType"]
+- ["s9EquatableP", "_Default_RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "count"]
+- ["s9EquatableP", "data"]
+- !private ["s9EquatableP", "day"]
+- !private ["s9EquatableP", "daysSinceUpdate"]
+- ["s9EquatableP", "description"]
+- !private ["s9EquatableP", "hour"]
+- !private ["s9EquatableP", "hoursSinceUpdate"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "length"]
+- !private ["s9EquatableP", "max"]
+- !private ["s9EquatableP", "min"]
+- !private ["s9EquatableP", "moreHours"]
+- ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "referenceTimeInformation"]
+- !private ["s9EquatableP", "subdata"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "timeAccuracy"]
+- !private ["s9EquatableP", "timeSource"]
+- ["s9EquatableP", "unitType"]
+- ["s9EquatableP", "uuid"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
+- ["s27ExpressibleByIntegerLiteralP", "RawValue"]
+- ["s27ExpressibleByIntegerLiteralP", ""]
+- ["s27ExpressibleByIntegerLiteralP", "_Default_IntegerLiteralType"]
+- ["s27ExpressibleByIntegerLiteralP", "_Default_RawValue"]
+- !private ["s27ExpressibleByIntegerLiteralP", "data"]
+- !private ["s27ExpressibleByIntegerLiteralP", "day"]
+- ["s27ExpressibleByIntegerLiteralP", "description"]
+- !private ["s27ExpressibleByIntegerLiteralP", "hour"]
+- ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", "length"]
+- ["s27ExpressibleByIntegerLiteralP", "rawValue"]
+- ["s27ExpressibleByIntegerLiteralP", "unitType"]
+- !private ["s17FixedWidthIntegerP", "description"]
+- !private ["9Bluetooth18GATTCharacteristicP", "Data"]
+- ["9Bluetooth18GATTCharacteristicP", "Day"]
+- ["9Bluetooth18GATTCharacteristicP", "GATTTimeAccuracy"]
+- ["9Bluetooth18GATTCharacteristicP", "GATTTimeSource"]
+- ["9Bluetooth18GATTCharacteristicP", "Hour"]
+- ["9Bluetooth18GATTCharacteristicP", ""]
+- ["9Bluetooth18GATTCharacteristicP", "data"]
+- !private ["9Bluetooth18GATTCharacteristicP", "daysSinceUpdate"]
+- !private ["9Bluetooth18GATTCharacteristicP", "hoursSinceUpdate"]
+- ["9Bluetooth18GATTCharacteristicP", "init"]
+- ["9Bluetooth18GATTCharacteristicP", "length"]
+- !private ["9Bluetooth18GATTCharacteristicP", "timeAccuracy"]
+- !private ["9Bluetooth18GATTCharacteristicP", "timeSource"]
+- ["9Bluetooth18GATTCharacteristicP", "uuid"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "=="]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "BluetoothUUID"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "BluetoothUnit"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "Bool"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "Data"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "Day"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "GATTReferenceTimeInformation"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "GATTTimeAccuracy"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "GATTTimeSource"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "Hour"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "UInt8"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "UnitIdentifier"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "data"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "daysSinceUpdate"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "deinit"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "hoursSinceUpdate"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "init"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "length"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "timeAccuracy"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "timeSource"]
+- ["9Bluetooth28GATTReferenceTimeInformationV", "uuid"]
+- !private ["9Bluetooth16GATTTimeAccuracyV", "data"]
+- ["9Bluetooth16GATTTimeAccuracyV", "deinit"]
+- !private ["9Bluetooth16GATTTimeAccuracyV", "init"]
+- ["9Bluetooth16GATTTimeAccuracyV", "length"]
+- !private ["9Bluetooth14GATTTimeSourceO", "data"]
+- ["9Bluetooth14GATTTimeSourceO", "deinit"]
+- !private ["9Bluetooth14GATTTimeSourceO", "init"]
+- ["9Bluetooth14GATTTimeSourceO", "length"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "count"]
+- !private ["s8HashableP", "data"]
+- !private ["s8HashableP", "day"]
+- !private ["s8HashableP", "description"]
+- !private ["s8HashableP", "hour"]
+- !private ["s8HashableP", "init"]
+- ["s8HashableP", "length"]
+- !private ["s8HashableP", "referenceTimeInformation"]
+- !private ["s8HashableP", "subdata"]
+- !private ["s8HashableP", "subscript"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "=="]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "Bool"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "GATTReferenceTimeInformation"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "Hour"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "RawValue"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "String"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "UInt8"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "UnitIdentifier"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "_Default_RawValue"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "deinit"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "description"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "init"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "max"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "min"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "moreHours"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "rawValue"]
+- ["9Bluetooth28GATTReferenceTimeInformationV4HourV", "unitType"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "description"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subdata"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["s7NumericP", "description"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subdata"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subdata"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- ["s16RawRepresentableP", "Hour"]
+- ["s16RawRepresentableP", "IntegerLiteralType"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_IntegerLiteralType"]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- !private ["s16RawRepresentableP", "data"]
+- !private ["s16RawRepresentableP", "day"]
+- ["s16RawRepresentableP", "description"]
+- !private ["s16RawRepresentableP", "hour"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "length"]
+- !private ["s16RawRepresentableP", "max"]
+- !private ["s16RawRepresentableP", "min"]
+- !private ["s16RawRepresentableP", "moreHours"]
+- ["s16RawRepresentableP", "rawValue"]
+- !private ["s16RawRepresentableP", "referenceTimeInformation"]
+- ["s16RawRepresentableP", "unitType"]
+- !private ["10Foundation20ReferenceConvertibleP", "count"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "subdata"]
+- !private ["10Foundation20ReferenceConvertibleP", "subscript"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subdata"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s10StrideableP", "description"]
+- !private ["s5UInt8V", "description"]
+- !private ["9Bluetooth14UnitIdentifierV", "day"]
+- !private ["9Bluetooth14UnitIdentifierV", "hour"]
+- !private ["s15UnsignedIntegerP", "description"]
+- !private ["s18_BitwiseOperationsP", "description"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "count"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "subdata"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "description"]
+- !private ["10Foundation13_NSBridgeableP", "count"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "subdata"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "count"]
+- !private ["10Foundation17_ObjectBridgeableP", "description"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "subdata"]
+- !private ["10Foundation17_ObjectBridgeableP", "subscript"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "count"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "description"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subdata"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+- !private ["s14_StringElementP", "description"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "9Bluetooth0A4UUIDO"
+- "9Bluetooth0A4UnitP"
+- !private "Sb"
+- !private "9Bluetooth8ByteSwapP"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- "9Bluetooth28GATTReferenceTimeInformationV3DayV"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "9Bluetooth18GATTCharacteristicP"
+- "9Bluetooth28GATTReferenceTimeInformationV"
+- "9Bluetooth16GATTTimeAccuracyV"
+- "9Bluetooth14GATTTimeSourceO"
+- "s8HashableP"
+- "9Bluetooth28GATTReferenceTimeInformationV4HourV"
+- !private "s25LosslessStringConvertibleP"
+- !private "s17MutableCollectionP"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- !private "s10StrideableP"
+- !private "s5UInt8V"
+- !private "9Bluetooth14UnitIdentifierV"
+- !private "s15UnsignedIntegerP"
+- !private "s18_BitwiseOperationsP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+- !private "s14_StringElementP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "0a29f9b56aad906136feba2c4c9b5284"

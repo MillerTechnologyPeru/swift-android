@@ -1,0 +1,35 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "L2CAPSocketProtocol"
+provides-nominal:
+- "9Bluetooth19L2CAPSocketProtocolP"
+provides-member:
+- ["9Bluetooth19L2CAPSocketProtocolP", ""]
+depends-top-level:
+- "Data"
+- "Int"
+- "L2CAPSocketProtocol"
+- "SecurityLevel"
+- "UInt16"
+depends-member:
+- ["9Bluetooth19L2CAPSocketProtocolP", "Data"]
+- ["9Bluetooth19L2CAPSocketProtocolP", "Int"]
+- ["9Bluetooth19L2CAPSocketProtocolP", "SecurityLevel"]
+- ["9Bluetooth19L2CAPSocketProtocolP", "UInt16"]
+- ["9Bluetooth19L2CAPSocketProtocolP", "channelIdentifier"]
+- ["9Bluetooth19L2CAPSocketProtocolP", "protocolServiceMultiplexer"]
+- ["9Bluetooth19L2CAPSocketProtocolP", "recieve"]
+- ["9Bluetooth19L2CAPSocketProtocolP", "securityLevel"]
+- ["9Bluetooth19L2CAPSocketProtocolP", "send"]
+- ["9Bluetooth19L2CAPSocketProtocolP", "setSecurityLevel"]
+depends-nominal:
+- "9Bluetooth19L2CAPSocketProtocolP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "65ac07abdc5824a03d9af1a7fc0d4677"

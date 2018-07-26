@@ -1,0 +1,336 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GAPAppearance"
+- "=="
+- "=="
+- "=="
+provides-nominal:
+- "9Bluetooth13GAPAppearanceV"
+- "9Bluetooth13GAPAppearanceV8CategoryV"
+- "9Bluetooth13GAPAppearanceV11SubcategoryV"
+- "9Bluetooth13GAPAppearanceV7UnknownO"
+- "9Bluetooth13GAPAppearanceV5PhoneO"
+- "9Bluetooth13GAPAppearanceV8ComputerO"
+- "9Bluetooth13GAPAppearanceV5WatchO"
+- "9Bluetooth13GAPAppearanceV5ClockO"
+- "9Bluetooth13GAPAppearanceV7DisplayO"
+- "9Bluetooth13GAPAppearanceV13RemoteControlO"
+- "9Bluetooth13GAPAppearanceV10EyeGlassesO"
+- "9Bluetooth13GAPAppearanceV3TagO"
+- "9Bluetooth13GAPAppearanceV7KeyringO"
+- "9Bluetooth13GAPAppearanceV11MediaPlayerO"
+- "9Bluetooth13GAPAppearanceV14BarcodeScannerO"
+- "9Bluetooth13GAPAppearanceV11ThermometerO"
+- "9Bluetooth13GAPAppearanceV15HeartrateSensorO"
+provides-member:
+- ["9Bluetooth3GAPO", ""]
+- ["9Bluetooth13GAPAppearanceV", ""]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", ""]
+- ["9Bluetooth13GAPAppearanceV11SubcategoryV", ""]
+- ["9Bluetooth13GAPAppearanceV7UnknownO", ""]
+- ["9Bluetooth13GAPAppearanceV5PhoneO", ""]
+- ["9Bluetooth13GAPAppearanceV8ComputerO", ""]
+- ["9Bluetooth13GAPAppearanceV5WatchO", ""]
+- ["9Bluetooth13GAPAppearanceV5ClockO", ""]
+- ["9Bluetooth13GAPAppearanceV7DisplayO", ""]
+- ["9Bluetooth13GAPAppearanceV13RemoteControlO", ""]
+- ["9Bluetooth13GAPAppearanceV10EyeGlassesO", ""]
+- ["9Bluetooth13GAPAppearanceV3TagO", ""]
+- ["9Bluetooth13GAPAppearanceV7KeyringO", ""]
+- ["9Bluetooth13GAPAppearanceV11MediaPlayerO", ""]
+- ["9Bluetooth13GAPAppearanceV14BarcodeScannerO", ""]
+- ["9Bluetooth13GAPAppearanceV11ThermometerO", ""]
+- ["9Bluetooth13GAPAppearanceV15HeartrateSensorO", ""]
+- ["9Bluetooth3GAPO", "Appearance"]
+- ["9Bluetooth13GAPAppearanceV", "Category"]
+- ["9Bluetooth13GAPAppearanceV", "Subcategory"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "unknown"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "phone"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "computer"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "watch"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "clock"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "display"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "remoteControl"]
+- ["9Bluetooth13GAPAppearanceV", "Unknown"]
+- ["9Bluetooth13GAPAppearanceV", "Phone"]
+- ["9Bluetooth13GAPAppearanceV", "Computer"]
+- ["9Bluetooth13GAPAppearanceV", "Watch"]
+- ["9Bluetooth13GAPAppearanceV", "Clock"]
+- ["9Bluetooth13GAPAppearanceV", "Display"]
+- ["9Bluetooth13GAPAppearanceV", "RemoteControl"]
+- ["9Bluetooth13GAPAppearanceV", "EyeGlasses"]
+- ["9Bluetooth13GAPAppearanceV", "Tag"]
+- ["9Bluetooth13GAPAppearanceV", "Keyring"]
+- ["9Bluetooth13GAPAppearanceV", "MediaPlayer"]
+- ["9Bluetooth13GAPAppearanceV", "BarcodeScanner"]
+- ["9Bluetooth13GAPAppearanceV", "Thermometer"]
+- ["9Bluetooth13GAPAppearanceV", "HeartrateSensor"]
+depends-top-level:
+- !private "+"
+- !private "-"
+- !private "<<"
+- "=="
+- !private ">>"
+- "AssignmentPrecedence"
+- "Bool"
+- "Equatable"
+- "ExpressibleByIntegerLiteral"
+- "FloatLiteralType"
+- "GAP"
+- "GAPAppearance"
+- "Hashable"
+- "Int"
+- "IntegerLiteralType"
+- "RawRepresentable"
+- "UInt16"
+depends-member:
+- ["9Bluetooth13GAPAppearanceV14BarcodeScannerO", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV14BarcodeScannerO", "category"]
+- ["9Bluetooth13GAPAppearanceV14BarcodeScannerO", "generic"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["s7CVarArgP", "init"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "=="]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "Bool"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "Int"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "IntegerLiteralType"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "RawValue"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "UInt16"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "_Default_IntegerLiteralType"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "_Default_RawValue"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "clock"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "computer"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "deinit"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "display"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "hashValue"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "init"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "phone"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "rawValue"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "remoteControl"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "unknown"]
+- ["9Bluetooth13GAPAppearanceV8CategoryV", "watch"]
+- ["9Bluetooth13GAPAppearanceV5ClockO", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV5ClockO", "category"]
+- ["9Bluetooth13GAPAppearanceV5ClockO", "generic"]
+- !private ["s10ComparableP", "init"]
+- ["9Bluetooth13GAPAppearanceV8ComputerO", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV8ComputerO", "category"]
+- ["9Bluetooth13GAPAppearanceV8ComputerO", "generic"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s9DecodableP", "init"]
+- ["9Bluetooth13GAPAppearanceV7DisplayO", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV7DisplayO", "category"]
+- ["9Bluetooth13GAPAppearanceV7DisplayO", "generic"]
+- !private ["s9EncodableP", "init"]
+- ["s9EquatableP", "Category"]
+- !private ["s9EquatableP", "Int"]
+- ["s9EquatableP", "IntegerLiteralType"]
+- ["s9EquatableP", "RawValue"]
+- ["s9EquatableP", "Subcategory"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_IntegerLiteralType"]
+- ["s9EquatableP", "_Default_RawValue"]
+- ["s9EquatableP", "clock"]
+- ["s9EquatableP", "computer"]
+- ["s9EquatableP", "display"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "phone"]
+- ["s9EquatableP", "rawValue"]
+- ["s9EquatableP", "unknown"]
+- ["s9EquatableP", "watch"]
+- ["s27ExpressibleByIntegerLiteralP", "Category"]
+- !private ["s27ExpressibleByIntegerLiteralP", "Int"]
+- ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
+- ["s27ExpressibleByIntegerLiteralP", "RawValue"]
+- ["s27ExpressibleByIntegerLiteralP", "Subcategory"]
+- ["s27ExpressibleByIntegerLiteralP", ""]
+- ["s27ExpressibleByIntegerLiteralP", "_Default_IntegerLiteralType"]
+- ["s27ExpressibleByIntegerLiteralP", "_Default_RawValue"]
+- ["s27ExpressibleByIntegerLiteralP", "clock"]
+- ["s27ExpressibleByIntegerLiteralP", "computer"]
+- ["s27ExpressibleByIntegerLiteralP", "display"]
+- ["s27ExpressibleByIntegerLiteralP", "hashValue"]
+- ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", "phone"]
+- ["s27ExpressibleByIntegerLiteralP", "rawValue"]
+- ["s27ExpressibleByIntegerLiteralP", "unknown"]
+- ["s27ExpressibleByIntegerLiteralP", "watch"]
+- ["9Bluetooth13GAPAppearanceV10EyeGlassesO", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV10EyeGlassesO", "category"]
+- ["9Bluetooth13GAPAppearanceV10EyeGlassesO", "generic"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- ["9Bluetooth3GAPO", "Appearance"]
+- ["9Bluetooth3GAPO", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV", "=="]
+- ["9Bluetooth13GAPAppearanceV", "BarcodeScanner"]
+- ["9Bluetooth13GAPAppearanceV", "Bool"]
+- ["9Bluetooth13GAPAppearanceV", "Category"]
+- ["9Bluetooth13GAPAppearanceV", "Clock"]
+- ["9Bluetooth13GAPAppearanceV", "Computer"]
+- ["9Bluetooth13GAPAppearanceV", "Display"]
+- ["9Bluetooth13GAPAppearanceV", "EyeGlasses"]
+- ["9Bluetooth13GAPAppearanceV", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV", "HeartrateSensor"]
+- ["9Bluetooth13GAPAppearanceV", "Int"]
+- ["9Bluetooth13GAPAppearanceV", "IntegerLiteralType"]
+- ["9Bluetooth13GAPAppearanceV", "Keyring"]
+- ["9Bluetooth13GAPAppearanceV", "MediaPlayer"]
+- ["9Bluetooth13GAPAppearanceV", "Phone"]
+- ["9Bluetooth13GAPAppearanceV", "RawRepresentable"]
+- ["9Bluetooth13GAPAppearanceV", "RawValue"]
+- ["9Bluetooth13GAPAppearanceV", "RemoteControl"]
+- ["9Bluetooth13GAPAppearanceV", "Subcategory"]
+- ["9Bluetooth13GAPAppearanceV", "Tag"]
+- ["9Bluetooth13GAPAppearanceV", "Thermometer"]
+- ["9Bluetooth13GAPAppearanceV", "UInt16"]
+- ["9Bluetooth13GAPAppearanceV", "Unknown"]
+- ["9Bluetooth13GAPAppearanceV", "Watch"]
+- ["9Bluetooth13GAPAppearanceV", "_Default_IntegerLiteralType"]
+- ["9Bluetooth13GAPAppearanceV", "_Default_RawValue"]
+- ["9Bluetooth13GAPAppearanceV", "category"]
+- ["9Bluetooth13GAPAppearanceV", "deinit"]
+- ["9Bluetooth13GAPAppearanceV", "hashValue"]
+- ["9Bluetooth13GAPAppearanceV", "init"]
+- ["9Bluetooth13GAPAppearanceV", "rawValue"]
+- ["9Bluetooth13GAPAppearanceV", "subcategory"]
+- ["s8HashableP", "Category"]
+- !private ["s8HashableP", "Int"]
+- ["s8HashableP", "IntegerLiteralType"]
+- ["s8HashableP", "RawValue"]
+- ["s8HashableP", "Subcategory"]
+- ["s8HashableP", ""]
+- ["s8HashableP", "_Default_IntegerLiteralType"]
+- ["s8HashableP", "_Default_RawValue"]
+- ["s8HashableP", "clock"]
+- ["s8HashableP", "computer"]
+- ["s8HashableP", "display"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "phone"]
+- ["s8HashableP", "rawValue"]
+- ["s8HashableP", "unknown"]
+- ["s8HashableP", "watch"]
+- ["9Bluetooth13GAPAppearanceV15HeartrateSensorO", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV15HeartrateSensorO", "category"]
+- ["9Bluetooth13GAPAppearanceV15HeartrateSensorO", "generic"]
+- !private ["Si", "init"]
+- ["9Bluetooth13GAPAppearanceV7KeyringO", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV7KeyringO", "category"]
+- ["9Bluetooth13GAPAppearanceV7KeyringO", "generic"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- ["9Bluetooth13GAPAppearanceV11MediaPlayerO", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV11MediaPlayerO", "category"]
+- ["9Bluetooth13GAPAppearanceV11MediaPlayerO", "generic"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s7NumericP", "init"]
+- ["9Bluetooth13GAPAppearanceV5PhoneO", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV5PhoneO", "category"]
+- ["9Bluetooth13GAPAppearanceV5PhoneO", "generic"]
+- ["s16RawRepresentableP", "Category"]
+- !private ["s16RawRepresentableP", "Int"]
+- ["s16RawRepresentableP", "IntegerLiteralType"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", "Subcategory"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_IntegerLiteralType"]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- ["s16RawRepresentableP", "clock"]
+- ["s16RawRepresentableP", "computer"]
+- ["s16RawRepresentableP", "display"]
+- ["s16RawRepresentableP", "hashValue"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "phone"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s16RawRepresentableP", "unknown"]
+- ["s16RawRepresentableP", "watch"]
+- ["9Bluetooth13GAPAppearanceV13RemoteControlO", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV13RemoteControlO", "category"]
+- ["9Bluetooth13GAPAppearanceV13RemoteControlO", "generic"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s10StrideableP", "init"]
+- ["9Bluetooth13GAPAppearanceV11SubcategoryV", "=="]
+- ["9Bluetooth13GAPAppearanceV11SubcategoryV", "Bool"]
+- ["9Bluetooth13GAPAppearanceV11SubcategoryV", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV11SubcategoryV", "Int"]
+- ["9Bluetooth13GAPAppearanceV11SubcategoryV", "IntegerLiteralType"]
+- ["9Bluetooth13GAPAppearanceV11SubcategoryV", "RawValue"]
+- ["9Bluetooth13GAPAppearanceV11SubcategoryV", "UInt16"]
+- ["9Bluetooth13GAPAppearanceV11SubcategoryV", "_Default_IntegerLiteralType"]
+- ["9Bluetooth13GAPAppearanceV11SubcategoryV", "_Default_RawValue"]
+- ["9Bluetooth13GAPAppearanceV11SubcategoryV", "deinit"]
+- ["9Bluetooth13GAPAppearanceV11SubcategoryV", "hashValue"]
+- ["9Bluetooth13GAPAppearanceV11SubcategoryV", "init"]
+- ["9Bluetooth13GAPAppearanceV11SubcategoryV", "rawValue"]
+- ["9Bluetooth13GAPAppearanceV3TagO", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV3TagO", "category"]
+- ["9Bluetooth13GAPAppearanceV3TagO", "generic"]
+- ["9Bluetooth13GAPAppearanceV11ThermometerO", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV11ThermometerO", "category"]
+- ["9Bluetooth13GAPAppearanceV11ThermometerO", "generic"]
+- ["9Bluetooth13GAPAppearanceV7UnknownO", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV7UnknownO", "category"]
+- ["9Bluetooth13GAPAppearanceV7UnknownO", "unknown"]
+- ["9Bluetooth13GAPAppearanceV5WatchO", "GAPAppearance"]
+- ["9Bluetooth13GAPAppearanceV5WatchO", "category"]
+- ["9Bluetooth13GAPAppearanceV5WatchO", "generic"]
+- ["9Bluetooth13GAPAppearanceV5WatchO", "sports"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+depends-nominal:
+- "9Bluetooth13GAPAppearanceV14BarcodeScannerO"
+- !private "s13BinaryIntegerP"
+- !private "s7CVarArgP"
+- "9Bluetooth13GAPAppearanceV8CategoryV"
+- "9Bluetooth13GAPAppearanceV5ClockO"
+- !private "s10ComparableP"
+- "9Bluetooth13GAPAppearanceV8ComputerO"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- "9Bluetooth13GAPAppearanceV7DisplayO"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- "s27ExpressibleByIntegerLiteralP"
+- "9Bluetooth13GAPAppearanceV10EyeGlassesO"
+- !private "s17FixedWidthIntegerP"
+- "9Bluetooth3GAPO"
+- "9Bluetooth13GAPAppearanceV"
+- "s8HashableP"
+- "9Bluetooth13GAPAppearanceV15HeartrateSensorO"
+- !private "Si"
+- "9Bluetooth13GAPAppearanceV7KeyringO"
+- !private "s25LosslessStringConvertibleP"
+- "9Bluetooth13GAPAppearanceV11MediaPlayerO"
+- !private "s10MirrorPathP"
+- !private "s7NumericP"
+- "9Bluetooth13GAPAppearanceV5PhoneO"
+- "s16RawRepresentableP"
+- "9Bluetooth13GAPAppearanceV13RemoteControlO"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s10StrideableP"
+- "9Bluetooth13GAPAppearanceV11SubcategoryV"
+- "9Bluetooth13GAPAppearanceV3TagO"
+- "9Bluetooth13GAPAppearanceV11ThermometerO"
+- "9Bluetooth13GAPAppearanceV7UnknownO"
+- "9Bluetooth13GAPAppearanceV5WatchO"
+- !private "s18_BitwiseOperationsP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "bb4b87e1e6567d6caa73950fae23bd94"

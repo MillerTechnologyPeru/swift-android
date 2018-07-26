@@ -1,0 +1,249 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GATTIndoorPositioningConfiguration"
+provides-nominal:
+- "9Bluetooth34GATTIndoorPositioningConfigurationV"
+- "9Bluetooth34GATTIndoorPositioningConfigurationV0D0O"
+provides-member:
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", ""]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", ""]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", "Configuration"]
+depends-top-level:
+- "=="
+- "Array"
+- "AssignmentPrecedence"
+- "BitMaskOption"
+- "BitMaskOptionSet"
+- "BluetoothUUID"
+- "Data"
+- "FloatLiteralType"
+- "GATTCharacteristic"
+- "GATTIndoorPositioningConfiguration"
+- "IntegerLiteralType"
+- "MemoryLayout"
+- "Set"
+- "UInt8"
+- !private "~="
+depends-member:
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- ["9Bluetooth13BitMaskOptionP", "RawValue"]
+- ["9Bluetooth13BitMaskOptionP", ""]
+- ["9Bluetooth13BitMaskOptionP", "_Default_RawValue"]
+- ["9Bluetooth13BitMaskOptionP", "all"]
+- ["9Bluetooth13BitMaskOptionP", "altitudeField"]
+- ["9Bluetooth13BitMaskOptionP", "coordinateSystemUsed"]
+- ["9Bluetooth13BitMaskOptionP", "coordinates"]
+- ["9Bluetooth13BitMaskOptionP", "floorNumber"]
+- ["9Bluetooth13BitMaskOptionP", "hashValue"]
+- ["9Bluetooth13BitMaskOptionP", "init"]
+- ["9Bluetooth13BitMaskOptionP", "locationName"]
+- ["9Bluetooth13BitMaskOptionP", "rawValue"]
+- ["9Bluetooth13BitMaskOptionP", "txPowerField"]
+- !private ["9Bluetooth16BitMaskOptionSetV", "deinit"]
+- !private ["9Bluetooth16BitMaskOptionSetV", "init"]
+- !private ["9Bluetooth16BitMaskOptionSetV", "rawValue"]
+- !private ["9Bluetooth0A4UUIDO", "indoorPositioningConfiguration"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["9Bluetooth8ByteSwapP", "indoorPositioningConfiguration"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", "Configuration"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", "RawValue"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", "Set"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", "_Default_RawValue"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", "all"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", "altitudeField"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", "coordinateSystemUsed"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", "coordinates"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", "deinit"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", "floorNumber"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", "hashValue"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", "init"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", "locationName"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", "rawValue"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV0D0O", "txPowerField"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "indoorPositioningConfiguration"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "rawValue"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["10Foundation4DataV", "count"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["10Foundation4DataV", "subscript"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- ["s9EquatableP", "RawValue"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- ["s9EquatableP", "all"]
+- ["s9EquatableP", "altitudeField"]
+- ["s9EquatableP", "coordinateSystemUsed"]
+- ["s9EquatableP", "coordinates"]
+- !private ["s9EquatableP", "count"]
+- ["s9EquatableP", "floorNumber"]
+- ["s9EquatableP", "hashValue"]
+- !private ["s9EquatableP", "indoorPositioningConfiguration"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "locationName"]
+- ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "subscript"]
+- ["s9EquatableP", "txPowerField"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "rawValue"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "rawValue"]
+- !private ["9Bluetooth18GATTCharacteristicP", "BitMaskOptionSet"]
+- !private ["9Bluetooth18GATTCharacteristicP", "Data"]
+- ["9Bluetooth18GATTCharacteristicP", "MemoryLayout"]
+- ["9Bluetooth18GATTCharacteristicP", ""]
+- !private ["9Bluetooth18GATTCharacteristicP", "configurations"]
+- ["9Bluetooth18GATTCharacteristicP", "data"]
+- ["9Bluetooth18GATTCharacteristicP", "init"]
+- !private ["9Bluetooth18GATTCharacteristicP", "length"]
+- ["9Bluetooth18GATTCharacteristicP", "uuid"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", "BitMaskOption"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", "BitMaskOptionSet"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", "BluetoothUUID"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", "Configuration"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", "Data"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", "MemoryLayout"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", "Set"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", "UInt8"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", "configurations"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", "data"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", "deinit"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", "init"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", "length"]
+- ["9Bluetooth34GATTIndoorPositioningConfigurationV", "uuid"]
+- ["s8HashableP", "RawValue"]
+- ["s8HashableP", ""]
+- ["s8HashableP", "_Default_RawValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- ["s8HashableP", "all"]
+- ["s8HashableP", "altitudeField"]
+- ["s8HashableP", "coordinateSystemUsed"]
+- ["s8HashableP", "coordinates"]
+- !private ["s8HashableP", "count"]
+- ["s8HashableP", "floorNumber"]
+- ["s8HashableP", "hashValue"]
+- !private ["s8HashableP", "indoorPositioningConfiguration"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "locationName"]
+- ["s8HashableP", "rawValue"]
+- !private ["s8HashableP", "subscript"]
+- ["s8HashableP", "txPowerField"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s12MemoryLayoutO", "size"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- ["s16RawRepresentableP", "all"]
+- ["s16RawRepresentableP", "altitudeField"]
+- ["s16RawRepresentableP", "coordinateSystemUsed"]
+- ["s16RawRepresentableP", "coordinates"]
+- ["s16RawRepresentableP", "floorNumber"]
+- ["s16RawRepresentableP", "hashValue"]
+- !private ["s16RawRepresentableP", "indoorPositioningConfiguration"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "locationName"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s16RawRepresentableP", "txPowerField"]
+- !private ["10Foundation20ReferenceConvertibleP", "count"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "subscript"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "rawValue"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "count"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_NSBridgeableP", "count"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "count"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "subscript"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "count"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- "9Bluetooth13BitMaskOptionP"
+- !private "9Bluetooth16BitMaskOptionSetV"
+- !private "9Bluetooth0A4UUIDO"
+- !private "Sb"
+- !private "9Bluetooth8ByteSwapP"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- "9Bluetooth34GATTIndoorPositioningConfigurationV0D0O"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "9Bluetooth18GATTCharacteristicP"
+- "9Bluetooth34GATTIndoorPositioningConfigurationV"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- "s12MemoryLayoutO"
+- !private "s17MutableCollectionP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "cf6f76fc67c9056b127bb70ec9b0c7d5"

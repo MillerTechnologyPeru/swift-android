@@ -1,0 +1,134 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HCILESetRandomAddress"
+provides-nominal:
+- "9Bluetooth21HCILESetRandomAddressV"
+provides-member:
+- ["9Bluetooth0A23HostControllerInterfaceP", ""]
+- ["9Bluetooth21HCILESetRandomAddressV", ""]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergySetRandomAddress"]
+depends-top-level:
+- "Address"
+- !private "Array"
+- "AssignmentPrecedence"
+- "BluetoothHostControllerInterface"
+- "Data"
+- "FloatLiteralType"
+- "HCICommandParameter"
+- "HCICommandTimeout"
+- "HCILESetRandomAddress"
+- "HCILowEnergyCommand"
+- "IntegerLiteralType"
+depends-member:
+- !private ["9Bluetooth7AddressV", "bytes"]
+- !private ["9Bluetooth7AddressV", "deinit"]
+- !private ["9Bluetooth7AddressV", "littleEndian"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "Address"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "HCICommandTimeout"]
+- !private ["9Bluetooth0A23HostControllerInterfaceP", "HCILESetRandomAddress"]
+- !private ["9Bluetooth0A23HostControllerInterfaceP", "deviceRequest"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergySetRandomAddress"]
+- !private ["9Bluetooth8ByteSwapP", "bytes"]
+- !private ["9Bluetooth8ByteSwapP", "littleEndian"]
+- !private ["9Bluetooth9ByteValueP", "bytes"]
+- !private ["9Bluetooth9ByteValueP", "littleEndian"]
+- !private ["s10CollectionP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "bytes"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "littleEndian"]
+- ["s23CustomStringConvertibleP", "setRandomAddress"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "bytes"]
+- !private ["s9EquatableP", "default"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "littleEndian"]
+- ["s9EquatableP", "setRandomAddress"]
+- !private ["s27ExpressibleByIntegerLiteralP", "default"]
+- ["9Bluetooth10HCICommandP", "setRandomAddress"]
+- !private ["9Bluetooth19HCICommandParameterP", "Data"]
+- ["9Bluetooth19HCICommandParameterP", "HCICommandType"]
+- ["9Bluetooth19HCICommandParameterP", "HCILowEnergyCommand"]
+- ["9Bluetooth19HCICommandParameterP", ""]
+- ["9Bluetooth19HCICommandParameterP", "_Default_HCICommandType"]
+- !private ["9Bluetooth19HCICommandParameterP", "address"]
+- ["9Bluetooth19HCICommandParameterP", "command"]
+- ["9Bluetooth19HCICommandParameterP", "data"]
+- !private ["9Bluetooth19HCICommandParameterP", "init"]
+- !private ["9Bluetooth17HCICommandTimeoutV", "default"]
+- ["9Bluetooth21HCILESetRandomAddressV", "Address"]
+- ["9Bluetooth21HCILESetRandomAddressV", "Data"]
+- ["9Bluetooth21HCILESetRandomAddressV", "HCICommandType"]
+- ["9Bluetooth21HCILESetRandomAddressV", "HCILowEnergyCommand"]
+- ["9Bluetooth21HCILESetRandomAddressV", "_Default_HCICommandType"]
+- ["9Bluetooth21HCILESetRandomAddressV", "address"]
+- ["9Bluetooth21HCILESetRandomAddressV", "command"]
+- ["9Bluetooth21HCILESetRandomAddressV", "data"]
+- ["9Bluetooth21HCILESetRandomAddressV", "deinit"]
+- ["9Bluetooth21HCILESetRandomAddressV", "init"]
+- ["9Bluetooth21HCILESetRandomAddressV", "length"]
+- ["9Bluetooth19HCILowEnergyCommandO", "deinit"]
+- ["9Bluetooth19HCILowEnergyCommandO", "setRandomAddress"]
+- !private ["s8HashableP", "bytes"]
+- !private ["s8HashableP", "default"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "littleEndian"]
+- ["s8HashableP", "setRandomAddress"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "bytes"]
+- !private ["s16RawRepresentableP", "default"]
+- !private ["s16RawRepresentableP", "littleEndian"]
+- ["s16RawRepresentableP", "setRandomAddress"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+depends-nominal:
+- !private "9Bluetooth7AddressV"
+- !private "s23BidirectionalCollectionP"
+- "9Bluetooth0A23HostControllerInterfaceP"
+- !private "9Bluetooth8ByteSwapP"
+- !private "9Bluetooth9ByteValueP"
+- !private "s10CollectionP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "9Bluetooth10HCICommandP"
+- "9Bluetooth19HCICommandParameterP"
+- !private "9Bluetooth17HCICommandTimeoutV"
+- "9Bluetooth21HCILESetRandomAddressV"
+- "9Bluetooth19HCILowEnergyCommandO"
+- "s8HashableP"
+- !private "s17MutableCollectionP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "edd757187ccf6ed790d91b01eedc17db"

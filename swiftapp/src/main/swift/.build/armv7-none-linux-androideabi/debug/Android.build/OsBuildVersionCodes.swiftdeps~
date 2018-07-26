@@ -1,0 +1,428 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AndroidBuildVersionCodes"
+provides-nominal:
+- "7Android0A17BuildVersionCodesV"
+provides-member:
+- ["7Android0A5BuildC", ""]
+- ["7Android0A17BuildVersionCodesV", ""]
+- ["7Android0A5BuildC", "VersionCodes"]
+depends-top-level:
+- "Android"
+- "AndroidBuild"
+- "AndroidBuildVersionCodes"
+- "AndroidBuildVersionCodesConstants"
+- "AssignmentPrecedence"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- !private "JNI"
+- !private "JNIField"
+- !private "JNIMethod"
+- "JavaObject"
+- "RawRepresentable"
+- "StaticString"
+- "StringLiteralType"
+- !private "UnicodeScalarType"
+- "java_swift"
+- "jclass"
+- "jfieldID"
+- "jmethodID"
+- "jobject"
+- !private "jvalue"
+depends-member:
+- ["7AndroidAAO", "OS"]
+- ["7Android0A5BuildC", "AndroidBuildVersionCodes"]
+- ["7Android0A5BuildC", "VersionCodes"]
+- ["7Android0A17BuildVersionCodesV", "Android"]
+- ["7Android0A17BuildVersionCodesV", "AndroidBuildVersionCodesConstants"]
+- ["7Android0A17BuildVersionCodesV", "CurDevelopment"]
+- ["7Android0A17BuildVersionCodesV", "Int"]
+- ["7Android0A17BuildVersionCodesV", "RawValue"]
+- ["7Android0A17BuildVersionCodesV", "_Default_RawValue"]
+- ["7Android0A17BuildVersionCodesV", "base"]
+- ["7Android0A17BuildVersionCodesV", "base11"]
+- ["7Android0A17BuildVersionCodesV", "cupcake"]
+- ["7Android0A17BuildVersionCodesV", "deinit"]
+- ["7Android0A17BuildVersionCodesV", "donut"]
+- ["7Android0A17BuildVersionCodesV", "eclair"]
+- ["7Android0A17BuildVersionCodesV", "eclair01"]
+- ["7Android0A17BuildVersionCodesV", "eclairMr1"]
+- ["7Android0A17BuildVersionCodesV", "froyo"]
+- ["7Android0A17BuildVersionCodesV", "gingerbread"]
+- ["7Android0A17BuildVersionCodesV", "gingerbreadMr1"]
+- ["7Android0A17BuildVersionCodesV", "honeycomb"]
+- ["7Android0A17BuildVersionCodesV", "honeycombMr1"]
+- ["7Android0A17BuildVersionCodesV", "honeycombMr2"]
+- ["7Android0A17BuildVersionCodesV", "iceCreamSandwich"]
+- ["7Android0A17BuildVersionCodesV", "iceCreamSandwichMr1"]
+- ["7Android0A17BuildVersionCodesV", "init"]
+- ["7Android0A17BuildVersionCodesV", "jellyBean"]
+- ["7Android0A17BuildVersionCodesV", "jellyBeanMr1"]
+- ["7Android0A17BuildVersionCodesV", "jellyBeanMr2"]
+- ["7Android0A17BuildVersionCodesV", "kitkat"]
+- ["7Android0A17BuildVersionCodesV", "kitkatWatch"]
+- ["7Android0A17BuildVersionCodesV", "lollipop"]
+- ["7Android0A17BuildVersionCodesV", "lollipopMr1"]
+- ["7Android0A17BuildVersionCodesV", "m"]
+- ["7Android0A17BuildVersionCodesV", "n"]
+- ["7Android0A17BuildVersionCodesV", "nMr1"]
+- ["7Android0A17BuildVersionCodesV", "o"]
+- ["7Android0A17BuildVersionCodesV", "oMr1"]
+- ["7Android0A17BuildVersionCodesV", "p"]
+- ["7Android0A17BuildVersionCodesV", "rawValue"]
+- !private ["Sa", "init"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["s7CVarArgP", "init"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s9DecodableP", "init"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "BASE"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "BASE_1_1"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "CUPCAKE"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "CUR_DEVELOPMENT"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "DONUT"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "ECLAIR"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "ECLAIR_0_1"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "ECLAIR_MR1"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "FROYO"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "GINGERBREAD"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "GINGERBREAD_MR1"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "HONEYCOMB"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "HONEYCOMB_MR1"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "HONEYCOMB_MR2"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "ICE_CREAM_SANDWICH"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "ICE_CREAM_SANDWICH_MR1"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "JELLY_BEAN"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "JELLY_BEAN_MR1"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "JELLY_BEAN_MR2"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "KITKAT"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "KITKAT_WATCH"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "LOLLIPOP"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "LOLLIPOP_MR1"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "M"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "N"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "N_MR1"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "O"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "O_MR1"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "P"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "init"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV", "jfieldID"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- ["s8HashableP", "init"]
+- !private ["Si", "init"]
+- !private ["10java_swift7JNICoreC", "DeleteLocalRef"]
+- !private ["10java_swift8JNIFieldC", "GetStaticIntField"]
+- !private ["10java_swift9JNIMethodC", "NewObject"]
+- ["10java_swift9JNIObjectC", "AndroidBuildVersionCodes"]
+- ["10java_swift9JNIObjectC", "BASE"]
+- ["10java_swift9JNIObjectC", "BASE_1_1"]
+- ["10java_swift9JNIObjectC", "CUPCAKE"]
+- ["10java_swift9JNIObjectC", "CUR_DEVELOPMENT"]
+- ["10java_swift9JNIObjectC", "DONUT"]
+- ["10java_swift9JNIObjectC", "ECLAIR"]
+- ["10java_swift9JNIObjectC", "ECLAIR_0_1"]
+- ["10java_swift9JNIObjectC", "ECLAIR_MR1"]
+- ["10java_swift9JNIObjectC", "FROYO"]
+- ["10java_swift9JNIObjectC", "GINGERBREAD"]
+- ["10java_swift9JNIObjectC", "GINGERBREAD_MR1"]
+- ["10java_swift9JNIObjectC", "HONEYCOMB"]
+- ["10java_swift9JNIObjectC", "HONEYCOMB_MR1"]
+- ["10java_swift9JNIObjectC", "HONEYCOMB_MR2"]
+- ["10java_swift9JNIObjectC", "ICE_CREAM_SANDWICH"]
+- ["10java_swift9JNIObjectC", "ICE_CREAM_SANDWICH_MR1"]
+- ["10java_swift9JNIObjectC", "Int"]
+- ["10java_swift9JNIObjectC", "JELLY_BEAN"]
+- ["10java_swift9JNIObjectC", "JELLY_BEAN_MR1"]
+- ["10java_swift9JNIObjectC", "JELLY_BEAN_MR2"]
+- !private ["10java_swift9JNIObjectC", "JNI"]
+- !private ["10java_swift9JNIObjectC", "JNICache"]
+- !private ["10java_swift9JNIObjectC", "JNIField"]
+- !private ["10java_swift9JNIObjectC", "JNIMethod"]
+- ["10java_swift9JNIObjectC", "KITKAT"]
+- ["10java_swift9JNIObjectC", "KITKAT_WATCH"]
+- ["10java_swift9JNIObjectC", "LOLLIPOP"]
+- ["10java_swift9JNIObjectC", "LOLLIPOP_MR1"]
+- ["10java_swift9JNIObjectC", "M"]
+- ["10java_swift9JNIObjectC", "N"]
+- ["10java_swift9JNIObjectC", "N_MR1"]
+- ["10java_swift9JNIObjectC", "O"]
+- ["10java_swift9JNIObjectC", "O_MR1"]
+- ["10java_swift9JNIObjectC", "P"]
+- ["10java_swift9JNIObjectC", "StaticString"]
+- ["10java_swift9JNIObjectC", "VersionCodes"]
+- ["10java_swift9JNIObjectC", "init"]
+- !private ["10java_swift9JNIObjectC", "javaObject"]
+- ["10java_swift9JNIObjectC", "java_swift"]
+- ["10java_swift9JNIObjectC", "jclass"]
+- ["10java_swift9JNIObjectC", "jfieldID"]
+- ["10java_swift9JNIObjectC", "jmethodID"]
+- ["10java_swift9JNIObjectC", "jobject"]
+- !private ["10java_swift9JNIObjectC", "jvalue"]
+- !private ["10java_swift9JNIObjectC", "withJavaObject"]
+- ["10java_swift13JNIObjectInitP", "BASE"]
+- ["10java_swift13JNIObjectInitP", "BASE_1_1"]
+- ["10java_swift13JNIObjectInitP", "CUPCAKE"]
+- ["10java_swift13JNIObjectInitP", "CUR_DEVELOPMENT"]
+- ["10java_swift13JNIObjectInitP", "DONUT"]
+- ["10java_swift13JNIObjectInitP", "ECLAIR"]
+- ["10java_swift13JNIObjectInitP", "ECLAIR_0_1"]
+- ["10java_swift13JNIObjectInitP", "ECLAIR_MR1"]
+- ["10java_swift13JNIObjectInitP", "FROYO"]
+- ["10java_swift13JNIObjectInitP", "GINGERBREAD"]
+- ["10java_swift13JNIObjectInitP", "GINGERBREAD_MR1"]
+- ["10java_swift13JNIObjectInitP", "HONEYCOMB"]
+- ["10java_swift13JNIObjectInitP", "HONEYCOMB_MR1"]
+- ["10java_swift13JNIObjectInitP", "HONEYCOMB_MR2"]
+- ["10java_swift13JNIObjectInitP", "ICE_CREAM_SANDWICH"]
+- ["10java_swift13JNIObjectInitP", "ICE_CREAM_SANDWICH_MR1"]
+- !private ["10java_swift13JNIObjectInitP", "Int"]
+- ["10java_swift13JNIObjectInitP", "JELLY_BEAN"]
+- ["10java_swift13JNIObjectInitP", "JELLY_BEAN_MR1"]
+- ["10java_swift13JNIObjectInitP", "JELLY_BEAN_MR2"]
+- !private ["10java_swift13JNIObjectInitP", "JNI"]
+- !private ["10java_swift13JNIObjectInitP", "JNICache"]
+- !private ["10java_swift13JNIObjectInitP", "JNIField"]
+- !private ["10java_swift13JNIObjectInitP", "JNIMethod"]
+- ["10java_swift13JNIObjectInitP", "KITKAT"]
+- ["10java_swift13JNIObjectInitP", "KITKAT_WATCH"]
+- ["10java_swift13JNIObjectInitP", "LOLLIPOP"]
+- ["10java_swift13JNIObjectInitP", "LOLLIPOP_MR1"]
+- ["10java_swift13JNIObjectInitP", "M"]
+- ["10java_swift13JNIObjectInitP", "N"]
+- ["10java_swift13JNIObjectInitP", "N_MR1"]
+- ["10java_swift13JNIObjectInitP", "O"]
+- ["10java_swift13JNIObjectInitP", "O_MR1"]
+- ["10java_swift13JNIObjectInitP", "P"]
+- ["10java_swift13JNIObjectInitP", "VersionCodes"]
+- !private ["10java_swift13JNIObjectInitP", ""]
+- ["10java_swift13JNIObjectInitP", "init"]
+- !private ["10java_swift13JNIObjectInitP", "javaObject"]
+- !private ["10java_swift13JNIObjectInitP", "jobject"]
+- !private ["10java_swift13JNIObjectInitP", "jvalue"]
+- !private ["10java_swift13JNIObjectInitP", "withJavaObject"]
+- ["10java_swift17JNIObjectProtocolP", "BASE"]
+- ["10java_swift17JNIObjectProtocolP", "BASE_1_1"]
+- ["10java_swift17JNIObjectProtocolP", "CUPCAKE"]
+- ["10java_swift17JNIObjectProtocolP", "CUR_DEVELOPMENT"]
+- ["10java_swift17JNIObjectProtocolP", "DONUT"]
+- ["10java_swift17JNIObjectProtocolP", "ECLAIR"]
+- ["10java_swift17JNIObjectProtocolP", "ECLAIR_0_1"]
+- ["10java_swift17JNIObjectProtocolP", "ECLAIR_MR1"]
+- ["10java_swift17JNIObjectProtocolP", "FROYO"]
+- ["10java_swift17JNIObjectProtocolP", "GINGERBREAD"]
+- ["10java_swift17JNIObjectProtocolP", "GINGERBREAD_MR1"]
+- ["10java_swift17JNIObjectProtocolP", "HONEYCOMB"]
+- ["10java_swift17JNIObjectProtocolP", "HONEYCOMB_MR1"]
+- ["10java_swift17JNIObjectProtocolP", "HONEYCOMB_MR2"]
+- ["10java_swift17JNIObjectProtocolP", "ICE_CREAM_SANDWICH"]
+- ["10java_swift17JNIObjectProtocolP", "ICE_CREAM_SANDWICH_MR1"]
+- !private ["10java_swift17JNIObjectProtocolP", "Int"]
+- ["10java_swift17JNIObjectProtocolP", "JELLY_BEAN"]
+- ["10java_swift17JNIObjectProtocolP", "JELLY_BEAN_MR1"]
+- ["10java_swift17JNIObjectProtocolP", "JELLY_BEAN_MR2"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNICache"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIField"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIMethod"]
+- ["10java_swift17JNIObjectProtocolP", "KITKAT"]
+- ["10java_swift17JNIObjectProtocolP", "KITKAT_WATCH"]
+- ["10java_swift17JNIObjectProtocolP", "LOLLIPOP"]
+- ["10java_swift17JNIObjectProtocolP", "LOLLIPOP_MR1"]
+- ["10java_swift17JNIObjectProtocolP", "M"]
+- ["10java_swift17JNIObjectProtocolP", "N"]
+- ["10java_swift17JNIObjectProtocolP", "N_MR1"]
+- ["10java_swift17JNIObjectProtocolP", "O"]
+- ["10java_swift17JNIObjectProtocolP", "O_MR1"]
+- ["10java_swift17JNIObjectProtocolP", "P"]
+- ["10java_swift17JNIObjectProtocolP", "VersionCodes"]
+- !private ["10java_swift17JNIObjectProtocolP", ""]
+- ["10java_swift17JNIObjectProtocolP", "init"]
+- !private ["10java_swift17JNIObjectProtocolP", "javaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jobject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jvalue"]
+- !private ["10java_swift17JNIObjectProtocolP", "withJavaObject"]
+- ["10java_swift10JavaObjectC", "AndroidBuildVersionCodes"]
+- ["10java_swift10JavaObjectC", "BASE"]
+- ["10java_swift10JavaObjectC", "BASE_1_1"]
+- ["10java_swift10JavaObjectC", "CUPCAKE"]
+- ["10java_swift10JavaObjectC", "CUR_DEVELOPMENT"]
+- ["10java_swift10JavaObjectC", "DONUT"]
+- ["10java_swift10JavaObjectC", "ECLAIR"]
+- ["10java_swift10JavaObjectC", "ECLAIR_0_1"]
+- ["10java_swift10JavaObjectC", "ECLAIR_MR1"]
+- ["10java_swift10JavaObjectC", "FROYO"]
+- ["10java_swift10JavaObjectC", "GINGERBREAD"]
+- ["10java_swift10JavaObjectC", "GINGERBREAD_MR1"]
+- ["10java_swift10JavaObjectC", "HONEYCOMB"]
+- ["10java_swift10JavaObjectC", "HONEYCOMB_MR1"]
+- ["10java_swift10JavaObjectC", "HONEYCOMB_MR2"]
+- ["10java_swift10JavaObjectC", "ICE_CREAM_SANDWICH"]
+- ["10java_swift10JavaObjectC", "ICE_CREAM_SANDWICH_MR1"]
+- ["10java_swift10JavaObjectC", "Int"]
+- ["10java_swift10JavaObjectC", "JELLY_BEAN"]
+- ["10java_swift10JavaObjectC", "JELLY_BEAN_MR1"]
+- ["10java_swift10JavaObjectC", "JELLY_BEAN_MR2"]
+- !private ["10java_swift10JavaObjectC", "JNI"]
+- !private ["10java_swift10JavaObjectC", "JNICache"]
+- !private ["10java_swift10JavaObjectC", "JNIField"]
+- !private ["10java_swift10JavaObjectC", "JNIMethod"]
+- ["10java_swift10JavaObjectC", "KITKAT"]
+- ["10java_swift10JavaObjectC", "KITKAT_WATCH"]
+- ["10java_swift10JavaObjectC", "LOLLIPOP"]
+- ["10java_swift10JavaObjectC", "LOLLIPOP_MR1"]
+- ["10java_swift10JavaObjectC", "M"]
+- ["10java_swift10JavaObjectC", "N"]
+- ["10java_swift10JavaObjectC", "N_MR1"]
+- ["10java_swift10JavaObjectC", "O"]
+- ["10java_swift10JavaObjectC", "O_MR1"]
+- ["10java_swift10JavaObjectC", "P"]
+- ["10java_swift10JavaObjectC", "StaticString"]
+- ["10java_swift10JavaObjectC", "VersionCodes"]
+- !private ["10java_swift10JavaObjectC", ""]
+- ["10java_swift10JavaObjectC", "init"]
+- !private ["10java_swift10JavaObjectC", "javaObject"]
+- ["10java_swift10JavaObjectC", "java_swift"]
+- ["10java_swift10JavaObjectC", "jclass"]
+- ["10java_swift10JavaObjectC", "jfieldID"]
+- ["10java_swift10JavaObjectC", "jmethodID"]
+- ["10java_swift10JavaObjectC", "jobject"]
+- !private ["10java_swift10JavaObjectC", "jvalue"]
+- !private ["10java_swift10JavaObjectC", "withJavaObject"]
+- ["7Android11JavaPackageP", "Build"]
+- ["7Android11JavaPackageP", "OS"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV8MethodIDV", "init"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV8MethodIDV", "init_method1"]
+- ["7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV8MethodIDV", "jmethodID"]
+- ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s7NumericP", "init"]
+- ["7AndroidAAO2OSO", "Build"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["s16RawRepresentableP", "Android"]
+- ["s16RawRepresentableP", "AndroidBuildVersionCodesConstants"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s8SequenceP", "init"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- ["10Foundation13_CFBridgeableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation13_NSBridgeableP", "init"]
+- ["10Foundation17_ObjectBridgeableP", "init"]
+- ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["SC6jvalueV", "init"]
+depends-nominal:
+- "7AndroidAAO"
+- "7Android0A5BuildC"
+- "7Android0A17BuildVersionCodesV"
+- !private "Sa"
+- "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV7FieldIDV"
+- !private "s17FixedWidthIntegerP"
+- "s8HashableP"
+- !private "Si"
+- !private "10java_swift7JNICoreC"
+- !private "10java_swift8JNIFieldC"
+- !private "10java_swift9JNIMethodC"
+- "10java_swift9JNIObjectC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- "10java_swift10JavaObjectC"
+- "7Android11JavaPackageP"
+- "s25LosslessStringConvertibleP"
+- "7Android0A26BuildVersionCodesConstants33_358CAC27DFCB9CAE7F343CED3E062A15LLC8JNICacheV8MethodIDV"
+- "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "s7NumericP"
+- "7AndroidAAO2OSO"
+- !private "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "s14_ArrayProtocolP"
+- !private "s18_BitwiseOperationsP"
+- "10Foundation13_CFBridgeableP"
+- !private "s24_DestructorSafeContainerP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation13_NSBridgeableP"
+- "10Foundation17_ObjectBridgeableP"
+- "10Foundation21_ObjectTypeBridgeableP"
+- "s16_SwiftStringViewP"
+- !private "SC6jvalueV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/JNI.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Bluetooth.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_util.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "b5c9d13d89e85225526221847fa73ee4"

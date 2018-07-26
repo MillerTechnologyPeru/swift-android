@@ -1,0 +1,58 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "MainActivityBindings_Responder"
+- "MainActivityBindings_ResponderForward"
+provides-nominal:
+- "14swiftapptarget30MainActivityBindings_ResponderP"
+- "14swiftapptarget37MainActivityBindings_ResponderForwardC"
+provides-member:
+- ["14swiftapptarget30MainActivityBindings_ResponderP", ""]
+- ["14swiftapptarget37MainActivityBindings_ResponderForwardC", ""]
+depends-top-level:
+- "JNIObjectForward"
+- "JavaProtocol"
+- "MainActivityBindings_Responder"
+- "MainActivityBindings_ResponderForward"
+- "jclass"
+depends-member:
+- ["10java_swift9JNIObjectC", "MainActivityBindings_ResponderJNIClass"]
+- ["10java_swift9JNIObjectC", "init"]
+- ["10java_swift9JNIObjectC", "jclass"]
+- ["10java_swift16JNIObjectForwardC", "MainActivityBindings_ResponderJNIClass"]
+- ["10java_swift16JNIObjectForwardC", ""]
+- ["10java_swift16JNIObjectForwardC", "init"]
+- ["10java_swift16JNIObjectForwardC", "jclass"]
+- ["10java_swift13JNIObjectInitP", ""]
+- !private ["10java_swift13JNIObjectInitP", "init"]
+- ["10java_swift17JNIObjectProtocolP", ""]
+- !private ["10java_swift17JNIObjectProtocolP", "init"]
+- ["10java_swift12JavaProtocolP", ""]
+- ["14swiftapptarget30MainActivityBindings_ResponderP", ""]
+- !private ["14swiftapptarget37MainActivityBindings_ResponderForwardC", "MainActivityBindings_ResponderJNIClass"]
+- ["14swiftapptarget37MainActivityBindings_ResponderForwardC", "deinit"]
+- ["14swiftapptarget37MainActivityBindings_ResponderForwardC", "init"]
+- ["14swiftapptarget37MainActivityBindings_ResponderForwardC", "jclass"]
+depends-nominal:
+- "10java_swift9JNIObjectC"
+- "10java_swift16JNIObjectForwardC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- "10java_swift12JavaProtocolP"
+- "14swiftapptarget30MainActivityBindings_ResponderP"
+- "14swiftapptarget37MainActivityBindings_ResponderForwardC"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/JNI.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Bluetooth.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_util.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "c65130ad180dcd6d285998d148717bc4"

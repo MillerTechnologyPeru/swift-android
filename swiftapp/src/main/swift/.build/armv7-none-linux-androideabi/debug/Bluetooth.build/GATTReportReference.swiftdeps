@@ -1,0 +1,284 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GATTReportReference"
+- "=="
+provides-nominal:
+- "9Bluetooth19GATTReportReferenceV"
+- "9Bluetooth19GATTReportReferenceV10ReportTypeO"
+- "9Bluetooth19GATTReportReferenceV10IdentifierV"
+provides-member:
+- ["9Bluetooth19GATTReportReferenceV", ""]
+- ["9Bluetooth19GATTReportReferenceV10ReportTypeO", ""]
+- ["9Bluetooth19GATTReportReferenceV10IdentifierV", ""]
+- ["9Bluetooth19GATTReportReferenceV", "ReportType"]
+- ["9Bluetooth19GATTReportReferenceV", "Identifier"]
+depends-top-level:
+- "=="
+- !private "Array"
+- "AssignmentPrecedence"
+- "BluetoothUUID"
+- "Bool"
+- "CustomStringConvertible"
+- "Data"
+- "Equatable"
+- "ExpressibleByIntegerLiteral"
+- "FloatLiteralType"
+- "GATT"
+- "GATTDescriptor"
+- "GATTReportReference"
+- "IntegerLiteralType"
+- "RawRepresentable"
+- "String"
+- "UInt8"
+- !private "~="
+depends-member:
+- !private ["9Bluetooth22ATTAttributePermissionO", "deinit"]
+- !private ["9Bluetooth22ATTAttributePermissionO", "read"]
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s13BinaryIntegerP", "description"]
+- !private ["9Bluetooth13BitMaskOptionP", "read"]
+- !private ["9Bluetooth16BitMaskOptionSetV", "deinit"]
+- ["9Bluetooth0A4UUIDO", "reportReference"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["9Bluetooth8ByteSwapP", "reportReference"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "description"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "description"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "description"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "description"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- ["s23CustomStringConvertibleP", "IntegerLiteralType"]
+- ["s23CustomStringConvertibleP", "RawValue"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "_Default_IntegerLiteralType"]
+- ["s23CustomStringConvertibleP", "_Default_RawValue"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- ["s23CustomStringConvertibleP", "description"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- !private ["s23CustomStringConvertibleP", "read"]
+- ["s23CustomStringConvertibleP", "reportReference"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["10Foundation4DataV", "count"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["10Foundation4DataV", "subscript"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "description"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["9Bluetooth4GATTO10DescriptorV", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "description"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- ["s9EquatableP", "IntegerLiteralType"]
+- ["s9EquatableP", "RawValue"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_IntegerLiteralType"]
+- ["s9EquatableP", "_Default_RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "count"]
+- ["s9EquatableP", "description"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "read"]
+- ["s9EquatableP", "reportReference"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
+- ["s27ExpressibleByIntegerLiteralP", "RawValue"]
+- ["s27ExpressibleByIntegerLiteralP", ""]
+- ["s27ExpressibleByIntegerLiteralP", "_Default_IntegerLiteralType"]
+- ["s27ExpressibleByIntegerLiteralP", "_Default_RawValue"]
+- ["s27ExpressibleByIntegerLiteralP", "description"]
+- ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", "rawValue"]
+- !private ["s17FixedWidthIntegerP", "description"]
+- ["9Bluetooth4GATTO", "Descriptor"]
+- !private ["9Bluetooth14GATTDescriptorP", "Data"]
+- !private ["9Bluetooth14GATTDescriptorP", "GATT"]
+- ["9Bluetooth14GATTDescriptorP", "Identifier"]
+- !private ["9Bluetooth14GATTDescriptorP", "ReportType"]
+- ["9Bluetooth14GATTDescriptorP", ""]
+- ["9Bluetooth14GATTDescriptorP", "data"]
+- !private ["9Bluetooth14GATTDescriptorP", "identifier"]
+- ["9Bluetooth14GATTDescriptorP", "init"]
+- !private ["9Bluetooth14GATTDescriptorP", "length"]
+- !private ["9Bluetooth14GATTDescriptorP", "type"]
+- ["9Bluetooth14GATTDescriptorP", "uuid"]
+- ["9Bluetooth19GATTReportReferenceV", "BluetoothUUID"]
+- ["9Bluetooth19GATTReportReferenceV", "Data"]
+- ["9Bluetooth19GATTReportReferenceV", "GATT"]
+- ["9Bluetooth19GATTReportReferenceV", "Identifier"]
+- ["9Bluetooth19GATTReportReferenceV", "RawRepresentable"]
+- ["9Bluetooth19GATTReportReferenceV", "ReportType"]
+- ["9Bluetooth19GATTReportReferenceV", "UInt8"]
+- ["9Bluetooth19GATTReportReferenceV", "data"]
+- ["9Bluetooth19GATTReportReferenceV", "deinit"]
+- ["9Bluetooth19GATTReportReferenceV", "descriptor"]
+- ["9Bluetooth19GATTReportReferenceV", "identifier"]
+- ["9Bluetooth19GATTReportReferenceV", "init"]
+- ["9Bluetooth19GATTReportReferenceV", "length"]
+- ["9Bluetooth19GATTReportReferenceV", "type"]
+- ["9Bluetooth19GATTReportReferenceV", "uuid"]
+- ["s8HashableP", "RawValue"]
+- ["s8HashableP", ""]
+- ["s8HashableP", "_Default_RawValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "count"]
+- !private ["s8HashableP", "description"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "rawValue"]
+- !private ["s8HashableP", "read"]
+- ["s8HashableP", "reportReference"]
+- !private ["s8HashableP", "subscript"]
+- ["9Bluetooth19GATTReportReferenceV10IdentifierV", "=="]
+- ["9Bluetooth19GATTReportReferenceV10IdentifierV", "Bool"]
+- ["9Bluetooth19GATTReportReferenceV10IdentifierV", "GATTReportReference"]
+- ["9Bluetooth19GATTReportReferenceV10IdentifierV", "IntegerLiteralType"]
+- ["9Bluetooth19GATTReportReferenceV10IdentifierV", "RawValue"]
+- ["9Bluetooth19GATTReportReferenceV10IdentifierV", "String"]
+- ["9Bluetooth19GATTReportReferenceV10IdentifierV", "UInt8"]
+- ["9Bluetooth19GATTReportReferenceV10IdentifierV", "_Default_IntegerLiteralType"]
+- ["9Bluetooth19GATTReportReferenceV10IdentifierV", "_Default_RawValue"]
+- ["9Bluetooth19GATTReportReferenceV10IdentifierV", "deinit"]
+- ["9Bluetooth19GATTReportReferenceV10IdentifierV", "description"]
+- ["9Bluetooth19GATTReportReferenceV10IdentifierV", "init"]
+- ["9Bluetooth19GATTReportReferenceV10IdentifierV", "rawValue"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "description"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["s7NumericP", "description"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- ["s16RawRepresentableP", "IntegerLiteralType"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_IntegerLiteralType"]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- ["s16RawRepresentableP", "description"]
+- ["s16RawRepresentableP", "hashValue"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "rawValue"]
+- !private ["s16RawRepresentableP", "read"]
+- ["s16RawRepresentableP", "reportReference"]
+- !private ["10Foundation20ReferenceConvertibleP", "count"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "subscript"]
+- ["9Bluetooth19GATTReportReferenceV10ReportTypeO", "RawValue"]
+- ["9Bluetooth19GATTReportReferenceV10ReportTypeO", "_Default_RawValue"]
+- ["9Bluetooth19GATTReportReferenceV10ReportTypeO", "deinit"]
+- ["9Bluetooth19GATTReportReferenceV10ReportTypeO", "feature"]
+- ["9Bluetooth19GATTReportReferenceV10ReportTypeO", "hashValue"]
+- ["9Bluetooth19GATTReportReferenceV10ReportTypeO", "init"]
+- ["9Bluetooth19GATTReportReferenceV10ReportTypeO", "input"]
+- ["9Bluetooth19GATTReportReferenceV10ReportTypeO", "output"]
+- ["9Bluetooth19GATTReportReferenceV10ReportTypeO", "rawValue"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s10StrideableP", "description"]
+- !private ["s5UInt8V", "description"]
+- !private ["s15UnsignedIntegerP", "description"]
+- !private ["s18_BitwiseOperationsP", "description"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "count"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "description"]
+- !private ["10Foundation13_NSBridgeableP", "count"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "count"]
+- !private ["10Foundation17_ObjectBridgeableP", "description"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "subscript"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "count"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "description"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+- !private ["s14_StringElementP", "description"]
+depends-nominal:
+- !private "9Bluetooth22ATTAttributePermissionO"
+- !private "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "9Bluetooth13BitMaskOptionP"
+- !private "9Bluetooth16BitMaskOptionSetV"
+- "9Bluetooth0A4UUIDO"
+- !private "Sb"
+- "9Bluetooth8ByteSwapP"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "s9DecodableP"
+- !private "9Bluetooth4GATTO10DescriptorV"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "9Bluetooth4GATTO"
+- "9Bluetooth14GATTDescriptorP"
+- "9Bluetooth19GATTReportReferenceV"
+- "s8HashableP"
+- "9Bluetooth19GATTReportReferenceV10IdentifierV"
+- !private "s25LosslessStringConvertibleP"
+- !private "s17MutableCollectionP"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- "9Bluetooth19GATTReportReferenceV10ReportTypeO"
+- !private "s8SequenceP"
+- !private "s10StrideableP"
+- !private "s5UInt8V"
+- !private "s15UnsignedIntegerP"
+- !private "s18_BitwiseOperationsP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+- !private "s14_StringElementP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "0b35cf74df27a3290aeec9403fb9643b"

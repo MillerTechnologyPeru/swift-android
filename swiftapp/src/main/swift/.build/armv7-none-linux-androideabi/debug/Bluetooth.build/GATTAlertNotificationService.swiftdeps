@@ -1,0 +1,42 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GATTAlertNotificationService"
+provides-nominal:
+- "9Bluetooth28GATTAlertNotificationServiceV"
+provides-member:
+- ["9Bluetooth28GATTAlertNotificationServiceV", ""]
+depends-top-level:
+- "BluetoothUUID"
+- "GATTAlertNotificationService"
+- "GATTService"
+depends-member:
+- !private ["9Bluetooth0A4UUIDO", "alertNotificationService"]
+- !private ["9Bluetooth8ByteSwapP", "alertNotificationService"]
+- !private ["s23CustomStringConvertibleP", "alertNotificationService"]
+- !private ["s9EquatableP", "alertNotificationService"]
+- ["9Bluetooth28GATTAlertNotificationServiceV", "BluetoothUUID"]
+- ["9Bluetooth28GATTAlertNotificationServiceV", "deinit"]
+- ["9Bluetooth28GATTAlertNotificationServiceV", "init"]
+- ["9Bluetooth28GATTAlertNotificationServiceV", "uuid"]
+- ["9Bluetooth11GATTServiceP", ""]
+- ["9Bluetooth11GATTServiceP", "uuid"]
+- !private ["s8HashableP", "alertNotificationService"]
+- !private ["s16RawRepresentableP", "alertNotificationService"]
+depends-nominal:
+- !private "9Bluetooth0A4UUIDO"
+- !private "9Bluetooth8ByteSwapP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9EquatableP"
+- "9Bluetooth28GATTAlertNotificationServiceV"
+- "9Bluetooth11GATTServiceP"
+- !private "s8HashableP"
+- !private "s16RawRepresentableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "591cba355746e98a08c1ab72c054aa53"

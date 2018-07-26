@@ -1,0 +1,470 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GAPTransportDiscoveryBlock"
+- "GAPTransportDiscoveryData"
+- "GAPTransportDiscoveryDataFlag"
+- "=="
+- "=="
+provides-nominal:
+- "9Bluetooth26GAPTransportDiscoveryBlockV"
+- "9Bluetooth25GAPTransportDiscoveryDataV"
+- "9Bluetooth29GAPTransportDiscoveryDataFlagO"
+provides-member:
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", ""]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", ""]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", ""]
+depends-top-level:
+- !private "&&"
+- !private "+"
+- !private "+="
+- !private "<"
+- "=="
+- !private ">="
+- "Array"
+- "AssignmentPrecedence"
+- "BitMaskOption"
+- "BitMaskOptionSet"
+- "Bool"
+- "CustomStringConvertible"
+- "Data"
+- "Equatable"
+- "FloatLiteralType"
+- "GAPData"
+- "GAPDataType"
+- "GAPTransportDiscoveryBlock"
+- "GAPTransportDiscoveryData"
+- "GAPTransportDiscoveryDataFlag"
+- !private "Int"
+- "IntegerLiteralType"
+- "Set"
+- "String"
+- !private "StringLiteralType"
+- "UInt8"
+- !private "UnicodeScalarType"
+- !private "stride"
+- !private "~="
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "count"]
+- !private ["Sa", "description"]
+- !private ["Sa", "init"]
+- !private ["Sa", "reduce"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "description"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "reduce"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s13BinaryIntegerP", "description"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["9Bluetooth13BitMaskOptionP", "Data"]
+- ["9Bluetooth13BitMaskOptionP", "RawValue"]
+- ["9Bluetooth13BitMaskOptionP", ""]
+- ["9Bluetooth13BitMaskOptionP", "_Default_RawValue"]
+- ["9Bluetooth13BitMaskOptionP", "all"]
+- ["9Bluetooth13BitMaskOptionP", "dataIncomplete"]
+- ["9Bluetooth13BitMaskOptionP", "hashValue"]
+- ["9Bluetooth13BitMaskOptionP", "init"]
+- ["9Bluetooth13BitMaskOptionP", "provider"]
+- ["9Bluetooth13BitMaskOptionP", "rawValue"]
+- ["9Bluetooth13BitMaskOptionP", "seeker"]
+- ["9Bluetooth13BitMaskOptionP", "stateOn"]
+- ["9Bluetooth13BitMaskOptionP", "temporalilyUnavailable"]
+- ["9Bluetooth16BitMaskOptionSetV", "deinit"]
+- !private ["9Bluetooth16BitMaskOptionSetV", "init"]
+- !private ["9Bluetooth16BitMaskOptionSetV", "rawValue"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "description"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "description"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "reduce"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "description"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "description"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "reduce"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "description"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "description"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "map"]
+- !private ["s17CustomReflectableP", "reduce"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "BitMaskOptionSet"]
+- !private ["s23CustomStringConvertibleP", "Data"]
+- !private ["s23CustomStringConvertibleP", "GAPTransportDiscoveryBlock"]
+- !private ["s23CustomStringConvertibleP", "GAPTransportDiscoveryData"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "blocks"]
+- !private ["s23CustomStringConvertibleP", "code"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- ["s23CustomStringConvertibleP", "data"]
+- !private ["s23CustomStringConvertibleP", "dataLength"]
+- ["s23CustomStringConvertibleP", "dataType"]
+- ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "flags"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "minBlocks"]
+- !private ["s23CustomStringConvertibleP", "minLength"]
+- !private ["s23CustomStringConvertibleP", "organizationID"]
+- !private ["s23CustomStringConvertibleP", "rawValue"]
+- !private ["s23CustomStringConvertibleP", "reduce"]
+- !private ["s23CustomStringConvertibleP", "stride"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "transportData"]
+- ["s23CustomStringConvertibleP", "transportDiscoveryData"]
+- !private ["10Foundation4DataV", "count"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["10Foundation4DataV", "subscript"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "description"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "reduce"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "description"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "reduce"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "BitMaskOptionSet"]
+- !private ["s9EquatableP", "Data"]
+- !private ["s9EquatableP", "GAPTransportDiscoveryBlock"]
+- !private ["s9EquatableP", "GAPTransportDiscoveryData"]
+- !private ["s9EquatableP", "Int"]
+- ["s9EquatableP", "RawValue"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- ["s9EquatableP", "all"]
+- !private ["s9EquatableP", "append"]
+- !private ["s9EquatableP", "blocks"]
+- !private ["s9EquatableP", "code"]
+- !private ["s9EquatableP", "count"]
+- ["s9EquatableP", "data"]
+- ["s9EquatableP", "dataIncomplete"]
+- !private ["s9EquatableP", "dataLength"]
+- ["s9EquatableP", "dataType"]
+- ["s9EquatableP", "description"]
+- !private ["s9EquatableP", "flags"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "minBlocks"]
+- !private ["s9EquatableP", "minLength"]
+- !private ["s9EquatableP", "organizationID"]
+- ["s9EquatableP", "provider"]
+- ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "reduce"]
+- ["s9EquatableP", "seeker"]
+- ["s9EquatableP", "stateOn"]
+- !private ["s9EquatableP", "stride"]
+- !private ["s9EquatableP", "subscript"]
+- ["s9EquatableP", "temporalilyUnavailable"]
+- !private ["s9EquatableP", "transportData"]
+- ["s9EquatableP", "transportDiscoveryData"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "description"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "rawValue"]
+- !private ["s25ExpressibleByArrayLiteralP", "reduce"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "description"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "rawValue"]
+- ["s27ExpressibleByIntegerLiteralP", "transportDiscoveryData"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "description"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["9Bluetooth7GAPDataP", "BitMaskOptionSet"]
+- !private ["9Bluetooth7GAPDataP", "Data"]
+- !private ["9Bluetooth7GAPDataP", "GAPTransportDiscoveryBlock"]
+- !private ["9Bluetooth7GAPDataP", "GAPTransportDiscoveryData"]
+- !private ["9Bluetooth7GAPDataP", "Int"]
+- ["9Bluetooth7GAPDataP", ""]
+- !private ["9Bluetooth7GAPDataP", "blocks"]
+- !private ["9Bluetooth7GAPDataP", "code"]
+- ["9Bluetooth7GAPDataP", "data"]
+- ["9Bluetooth7GAPDataP", "dataType"]
+- ["9Bluetooth7GAPDataP", "description"]
+- ["9Bluetooth7GAPDataP", "init"]
+- !private ["9Bluetooth7GAPDataP", "minBlocks"]
+- !private ["9Bluetooth7GAPDataP", "stride"]
+- ["9Bluetooth11GAPDataTypeV", "transportDiscoveryData"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "=="]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "BitMaskOptionSet"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "Bool"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "Data"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "GAPTransportDiscoveryBlock"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "GAPTransportDiscoveryDataFlag"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "String"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "UInt8"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "data"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "dataLength"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "deinit"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "description"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "flags"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "init"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "minLength"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "organizationID"]
+- ["9Bluetooth26GAPTransportDiscoveryBlockV", "transportData"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "=="]
+- !private ["9Bluetooth25GAPTransportDiscoveryDataV", "BitMaskOptionSet"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "Bool"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "Data"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "GAPDataType"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "GAPTransportDiscoveryBlock"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "GAPTransportDiscoveryData"]
+- !private ["9Bluetooth25GAPTransportDiscoveryDataV", "GAPTransportDiscoveryDataFlag"]
+- !private ["9Bluetooth25GAPTransportDiscoveryDataV", "Int"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "String"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "UInt8"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "blocks"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "code"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "data"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "dataType"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "deinit"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "description"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "init"]
+- ["9Bluetooth25GAPTransportDiscoveryDataV", "minBlocks"]
+- !private ["9Bluetooth25GAPTransportDiscoveryDataV", "stride"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "Data"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "GAPTransportDiscoveryDataFlag"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "RawValue"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "Set"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "_Default_RawValue"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "all"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "data"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "dataIncomplete"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "deinit"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "hashValue"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "init"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "provider"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "rawValue"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "seeker"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "stateOn"]
+- ["9Bluetooth29GAPTransportDiscoveryDataFlagO", "temporalilyUnavailable"]
+- !private ["s8HashableP", "Data"]
+- ["s8HashableP", "RawValue"]
+- ["s8HashableP", ""]
+- ["s8HashableP", "_Default_RawValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- ["s8HashableP", "all"]
+- !private ["s8HashableP", "count"]
+- ["s8HashableP", "dataIncomplete"]
+- !private ["s8HashableP", "description"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "provider"]
+- ["s8HashableP", "rawValue"]
+- ["s8HashableP", "seeker"]
+- ["s8HashableP", "stateOn"]
+- !private ["s8HashableP", "subscript"]
+- ["s8HashableP", "temporalilyUnavailable"]
+- ["s8HashableP", "transportDiscoveryData"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "description"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "description"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "reduce"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["s7NumericP", "description"]
+- !private ["s7NumericP", "init"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "description"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "reduce"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "description"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "reduce"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["s16RawRepresentableP", "Data"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- ["s16RawRepresentableP", "all"]
+- ["s16RawRepresentableP", "dataIncomplete"]
+- ["s16RawRepresentableP", "hashValue"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "provider"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s16RawRepresentableP", "seeker"]
+- ["s16RawRepresentableP", "stateOn"]
+- ["s16RawRepresentableP", "temporalilyUnavailable"]
+- ["s16RawRepresentableP", "transportDiscoveryData"]
+- !private ["10Foundation20ReferenceConvertibleP", "count"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "subscript"]
+- !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "description"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "map"]
+- !private ["s8SequenceP", "rawValue"]
+- !private ["s8SequenceP", "reduce"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s8StrideToV", "map"]
+- !private ["s10StrideableP", "description"]
+- !private ["s10StrideableP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s5UInt8V", "description"]
+- !private ["s15UnsignedIntegerP", "description"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "description"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "reduce"]
+- !private ["s18_BitwiseOperationsP", "description"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "append"]
+- !private ["10Foundation13_CFBridgeableP", "count"]
+- !private ["10Foundation13_CFBridgeableP", "description"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "reduce"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "description"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "reduce"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "description"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "append"]
+- !private ["10Foundation13_NSBridgeableP", "count"]
+- !private ["10Foundation13_NSBridgeableP", "description"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "reduce"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "append"]
+- !private ["10Foundation17_ObjectBridgeableP", "count"]
+- !private ["10Foundation17_ObjectBridgeableP", "description"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "reduce"]
+- !private ["10Foundation17_ObjectBridgeableP", "subscript"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "append"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "count"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "description"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "reduce"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+- !private ["s14_StringElementP", "description"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- "9Bluetooth13BitMaskOptionP"
+- "9Bluetooth16BitMaskOptionSetV"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "9Bluetooth7GAPDataP"
+- "9Bluetooth11GAPDataTypeV"
+- "9Bluetooth26GAPTransportDiscoveryBlockV"
+- "9Bluetooth25GAPTransportDiscoveryDataV"
+- "9Bluetooth29GAPTransportDiscoveryDataFlagO"
+- "s8HashableP"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s8StrideToV"
+- !private "s10StrideableP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s5UInt8V"
+- !private "s15UnsignedIntegerP"
+- !private "s14_ArrayProtocolP"
+- !private "s18_BitwiseOperationsP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+- !private "s14_StringElementP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "efa28f6d03d859ebb6bf6f47551cc593"

@@ -1,0 +1,61 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SafeVarargs"
+- "SafeVarargsForward"
+provides-nominal:
+- "9java_lang11SafeVarargsP"
+- "9java_lang18SafeVarargsForwardC"
+provides-member:
+- ["9java_lang11SafeVarargsP", ""]
+- ["9java_lang18SafeVarargsForwardC", ""]
+depends-top-level:
+- "Annotation"
+- "AnnotationForward"
+- "SafeVarargs"
+- "SafeVarargsForward"
+- "jclass"
+depends-member:
+- ["9java_lang10AnnotationP", ""]
+- !private ["9java_lang10AnnotationP", "init"]
+- ["9java_lang17AnnotationForwardC", "SafeVarargsJNIClass"]
+- ["9java_lang17AnnotationForwardC", ""]
+- ["9java_lang17AnnotationForwardC", "init"]
+- ["9java_lang17AnnotationForwardC", "jclass"]
+- ["10java_swift9JNIObjectC", "SafeVarargsJNIClass"]
+- ["10java_swift9JNIObjectC", "init"]
+- ["10java_swift9JNIObjectC", "jclass"]
+- ["10java_swift16JNIObjectForwardC", "SafeVarargsJNIClass"]
+- ["10java_swift16JNIObjectForwardC", "init"]
+- ["10java_swift16JNIObjectForwardC", "jclass"]
+- ["10java_swift13JNIObjectInitP", ""]
+- !private ["10java_swift13JNIObjectInitP", "init"]
+- ["10java_swift17JNIObjectProtocolP", ""]
+- !private ["10java_swift17JNIObjectProtocolP", "init"]
+- ["10java_swift12JavaProtocolP", ""]
+- !private ["10java_swift12JavaProtocolP", "init"]
+- ["9java_lang11SafeVarargsP", ""]
+- !private ["9java_lang18SafeVarargsForwardC", "SafeVarargsJNIClass"]
+- ["9java_lang18SafeVarargsForwardC", "deinit"]
+- ["9java_lang18SafeVarargsForwardC", "init"]
+- ["9java_lang18SafeVarargsForwardC", "jclass"]
+depends-nominal:
+- "9java_lang10AnnotationP"
+- "9java_lang17AnnotationForwardC"
+- "10java_swift9JNIObjectC"
+- "10java_swift16JNIObjectForwardC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- "10java_swift12JavaProtocolP"
+- "9java_lang11SafeVarargsP"
+- "9java_lang18SafeVarargsForwardC"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "eae8a92cf8b42147600c2e432af1ec1e"

@@ -1,0 +1,329 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CalendarNameProvider"
+provides-nominal:
+- "9java_util20CalendarNameProviderC"
+provides-member:
+- ["9java_util20CalendarNameProviderC", ""]
+depends-top-level:
+- !private "!="
+- "AssignmentPrecedence"
+- "CalendarNameProvider"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- !private "JNI"
+- !private "JNIMethod"
+- !private "JNIType"
+- "JavaLocale"
+- "LocaleServiceProvider"
+- "StaticString"
+- "String"
+- "StringLiteralType"
+- "TernaryPrecedence"
+- "java_swift"
+- "jclass"
+- !private "jint"
+- "jmethodID"
+- !private "jobject"
+- !private "jvalue"
+depends-member:
+- !private ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "init"]
+- !private ["9java_util20CalendarNameProviderC", "CalendarNameProvider"]
+- !private ["9java_util20CalendarNameProviderC", "CalendarNameProviderJNIClass"]
+- ["9java_util20CalendarNameProviderC", "Int"]
+- !private ["9java_util20CalendarNameProviderC", "JNI"]
+- !private ["9java_util20CalendarNameProviderC", "JNIMethod"]
+- !private ["9java_util20CalendarNameProviderC", "JNIType"]
+- ["9java_util20CalendarNameProviderC", "JavaLocale"]
+- ["9java_util20CalendarNameProviderC", "StaticString"]
+- ["9java_util20CalendarNameProviderC", "String"]
+- ["9java_util20CalendarNameProviderC", "deinit"]
+- ["9java_util20CalendarNameProviderC", "getDisplayName"]
+- !private ["9java_util20CalendarNameProviderC", "getDisplayName_MethodID_2"]
+- ["9java_util20CalendarNameProviderC", "getDisplayNames"]
+- !private ["9java_util20CalendarNameProviderC", "getDisplayNames_MethodID_3"]
+- ["9java_util20CalendarNameProviderC", "init"]
+- !private ["9java_util20CalendarNameProviderC", "javaObject"]
+- ["9java_util20CalendarNameProviderC", "java_swift"]
+- ["9java_util20CalendarNameProviderC", "jclass"]
+- !private ["9java_util20CalendarNameProviderC", "jint"]
+- ["9java_util20CalendarNameProviderC", "jmethodID"]
+- !private ["9java_util20CalendarNameProviderC", "jobject"]
+- !private ["9java_util20CalendarNameProviderC", "jvalue"]
+- !private ["9java_util20CalendarNameProviderC", "new_MethodID_1"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "init"]
+- !private ["Si", "init"]
+- !private ["10java_swift7JNICoreC", "DeleteLocalRef"]
+- !private ["10java_swift9JNIMethodC", "CallObjectMethod"]
+- !private ["10java_swift9JNIMethodC", "NewObject"]
+- !private ["10java_swift9JNIObjectC", "CalendarNameProvider"]
+- ["10java_swift9JNIObjectC", "CalendarNameProviderJNIClass"]
+- ["10java_swift9JNIObjectC", "Int"]
+- !private ["10java_swift9JNIObjectC", "JNI"]
+- !private ["10java_swift9JNIObjectC", "JNIMethod"]
+- !private ["10java_swift9JNIObjectC", "JNIType"]
+- ["10java_swift9JNIObjectC", "JavaLocale"]
+- ["10java_swift9JNIObjectC", "StaticString"]
+- ["10java_swift9JNIObjectC", "String"]
+- ["10java_swift9JNIObjectC", "getDisplayName"]
+- ["10java_swift9JNIObjectC", "getDisplayName_MethodID_2"]
+- ["10java_swift9JNIObjectC", "getDisplayNames"]
+- ["10java_swift9JNIObjectC", "getDisplayNames_MethodID_3"]
+- ["10java_swift9JNIObjectC", "init"]
+- !private ["10java_swift9JNIObjectC", "javaObject"]
+- ["10java_swift9JNIObjectC", "java_swift"]
+- ["10java_swift9JNIObjectC", "jclass"]
+- !private ["10java_swift9JNIObjectC", "jint"]
+- ["10java_swift9JNIObjectC", "jmethodID"]
+- !private ["10java_swift9JNIObjectC", "jobject"]
+- !private ["10java_swift9JNIObjectC", "jvalue"]
+- ["10java_swift9JNIObjectC", "new_MethodID_1"]
+- !private ["10java_swift9JNIObjectC", "withJavaObject"]
+- !private ["10java_swift13JNIObjectInitP", "CalendarNameProvider"]
+- !private ["10java_swift13JNIObjectInitP", "CalendarNameProviderJNIClass"]
+- !private ["10java_swift13JNIObjectInitP", "JNI"]
+- !private ["10java_swift13JNIObjectInitP", "JNIMethod"]
+- !private ["10java_swift13JNIObjectInitP", "JNIType"]
+- !private ["10java_swift13JNIObjectInitP", "String"]
+- ["10java_swift13JNIObjectInitP", ""]
+- !private ["10java_swift13JNIObjectInitP", "getDisplayName"]
+- !private ["10java_swift13JNIObjectInitP", "getDisplayName_MethodID_2"]
+- !private ["10java_swift13JNIObjectInitP", "getDisplayNames"]
+- !private ["10java_swift13JNIObjectInitP", "getDisplayNames_MethodID_3"]
+- !private ["10java_swift13JNIObjectInitP", "init"]
+- !private ["10java_swift13JNIObjectInitP", "javaObject"]
+- !private ["10java_swift13JNIObjectInitP", "java_swift"]
+- !private ["10java_swift13JNIObjectInitP", "jint"]
+- !private ["10java_swift13JNIObjectInitP", "jobject"]
+- !private ["10java_swift13JNIObjectInitP", "jvalue"]
+- !private ["10java_swift13JNIObjectInitP", "new_MethodID_1"]
+- !private ["10java_swift13JNIObjectInitP", "withJavaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "CalendarNameProvider"]
+- !private ["10java_swift17JNIObjectProtocolP", "CalendarNameProviderJNIClass"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIMethod"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIType"]
+- !private ["10java_swift17JNIObjectProtocolP", "String"]
+- ["10java_swift17JNIObjectProtocolP", ""]
+- !private ["10java_swift17JNIObjectProtocolP", "getDisplayName"]
+- !private ["10java_swift17JNIObjectProtocolP", "getDisplayName_MethodID_2"]
+- !private ["10java_swift17JNIObjectProtocolP", "getDisplayNames"]
+- !private ["10java_swift17JNIObjectProtocolP", "getDisplayNames_MethodID_3"]
+- !private ["10java_swift17JNIObjectProtocolP", "init"]
+- !private ["10java_swift17JNIObjectProtocolP", "javaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "java_swift"]
+- !private ["10java_swift17JNIObjectProtocolP", "jint"]
+- !private ["10java_swift17JNIObjectProtocolP", "jobject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jvalue"]
+- !private ["10java_swift17JNIObjectProtocolP", "new_MethodID_1"]
+- !private ["10java_swift17JNIObjectProtocolP", "withJavaObject"]
+- !private ["10java_swift7JNITypeC", "toJava"]
+- !private ["10java_swift7JNITypeC", "toSwift"]
+- !private ["9java_util10JavaLocaleC", "deinit"]
+- !private ["10java_swift10JavaObjectC", "CalendarNameProvider"]
+- ["10java_swift10JavaObjectC", "CalendarNameProviderJNIClass"]
+- ["10java_swift10JavaObjectC", "Int"]
+- !private ["10java_swift10JavaObjectC", "JNI"]
+- !private ["10java_swift10JavaObjectC", "JNIMethod"]
+- !private ["10java_swift10JavaObjectC", "JNIType"]
+- ["10java_swift10JavaObjectC", "JavaLocale"]
+- ["10java_swift10JavaObjectC", "StaticString"]
+- ["10java_swift10JavaObjectC", "String"]
+- ["10java_swift10JavaObjectC", "getDisplayName"]
+- ["10java_swift10JavaObjectC", "getDisplayName_MethodID_2"]
+- ["10java_swift10JavaObjectC", "getDisplayNames"]
+- ["10java_swift10JavaObjectC", "getDisplayNames_MethodID_3"]
+- ["10java_swift10JavaObjectC", "init"]
+- !private ["10java_swift10JavaObjectC", "javaObject"]
+- ["10java_swift10JavaObjectC", "java_swift"]
+- ["10java_swift10JavaObjectC", "jclass"]
+- !private ["10java_swift10JavaObjectC", "jint"]
+- ["10java_swift10JavaObjectC", "jmethodID"]
+- !private ["10java_swift10JavaObjectC", "jobject"]
+- !private ["10java_swift10JavaObjectC", "jvalue"]
+- ["10java_swift10JavaObjectC", "new_MethodID_1"]
+- !private ["10java_swift10JavaObjectC", "withJavaObject"]
+- !private ["9java_util21LocaleServiceProviderC", "CalendarNameProvider"]
+- ["9java_util21LocaleServiceProviderC", "CalendarNameProviderJNIClass"]
+- ["9java_util21LocaleServiceProviderC", "Int"]
+- !private ["9java_util21LocaleServiceProviderC", "JNI"]
+- !private ["9java_util21LocaleServiceProviderC", "JNIMethod"]
+- !private ["9java_util21LocaleServiceProviderC", "JNIType"]
+- ["9java_util21LocaleServiceProviderC", "JavaLocale"]
+- ["9java_util21LocaleServiceProviderC", "StaticString"]
+- ["9java_util21LocaleServiceProviderC", "String"]
+- ["9java_util21LocaleServiceProviderC", ""]
+- ["9java_util21LocaleServiceProviderC", "getDisplayName"]
+- ["9java_util21LocaleServiceProviderC", "getDisplayName_MethodID_2"]
+- ["9java_util21LocaleServiceProviderC", "getDisplayNames"]
+- ["9java_util21LocaleServiceProviderC", "getDisplayNames_MethodID_3"]
+- ["9java_util21LocaleServiceProviderC", "init"]
+- !private ["9java_util21LocaleServiceProviderC", "javaObject"]
+- ["9java_util21LocaleServiceProviderC", "java_swift"]
+- ["9java_util21LocaleServiceProviderC", "jclass"]
+- !private ["9java_util21LocaleServiceProviderC", "jint"]
+- ["9java_util21LocaleServiceProviderC", "jmethodID"]
+- !private ["9java_util21LocaleServiceProviderC", "jobject"]
+- !private ["9java_util21LocaleServiceProviderC", "jvalue"]
+- ["9java_util21LocaleServiceProviderC", "new_MethodID_1"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["s7NumericP", "init"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "subscript"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["SC6jvalueV", "init"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "Sb"
+- !private "s7CVarArgP"
+- "9java_util20CalendarNameProviderC"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- !private "s8HashableP"
+- !private "Si"
+- !private "10java_swift7JNICoreC"
+- !private "10java_swift9JNIMethodC"
+- "10java_swift9JNIObjectC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- !private "10java_swift7JNITypeC"
+- !private "9java_util10JavaLocaleC"
+- "10java_swift10JavaObjectC"
+- "9java_util21LocaleServiceProviderC"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s14_ArrayProtocolP"
+- !private "s18_BitwiseOperationsP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+- !private "s16_SwiftStringViewP"
+- !private "SC6jvalueV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "62e72ba0450fa242d2f92933d10f1733"

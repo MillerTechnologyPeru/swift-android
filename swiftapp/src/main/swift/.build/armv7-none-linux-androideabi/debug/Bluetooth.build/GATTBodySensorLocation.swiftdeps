@@ -1,0 +1,295 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GATTBodySensorLocation"
+provides-nominal:
+- "9Bluetooth22GATTBodySensorLocationO"
+provides-member:
+- ["9Bluetooth22GATTBodySensorLocationO", ""]
+depends-top-level:
+- "=="
+- !private "Array"
+- "BluetoothUUID"
+- "CustomStringConvertible"
+- "Data"
+- "FloatLiteralType"
+- "GATTBodySensorLocation"
+- "GATTCharacteristic"
+- "IntegerLiteralType"
+- "MemoryLayout"
+- "String"
+- !private "StringLiteralType"
+- "UInt8"
+- !private "~="
+depends-member:
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["9Bluetooth0A4UUIDO", "bodySensorLocation"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["9Bluetooth8ByteSwapP", "bodySensorLocation"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "Data"]
+- ["s23CustomStringConvertibleP", "MemoryLayout"]
+- ["s23CustomStringConvertibleP", "RawValue"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "_Default_RawValue"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "bodySensorLocation"]
+- ["s23CustomStringConvertibleP", "chest"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- ["s23CustomStringConvertibleP", "data"]
+- ["s23CustomStringConvertibleP", "description"]
+- ["s23CustomStringConvertibleP", "earLobe"]
+- ["s23CustomStringConvertibleP", "finger"]
+- ["s23CustomStringConvertibleP", "foot"]
+- ["s23CustomStringConvertibleP", "hand"]
+- ["s23CustomStringConvertibleP", "hashValue"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "length"]
+- !private ["s23CustomStringConvertibleP", "name"]
+- ["s23CustomStringConvertibleP", "other"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- ["s23CustomStringConvertibleP", "uuid"]
+- ["s23CustomStringConvertibleP", "wrist"]
+- !private ["10Foundation4DataV", "count"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["10Foundation4DataV", "subscript"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "Data"]
+- ["s9EquatableP", "MemoryLayout"]
+- ["s9EquatableP", "RawValue"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "bodySensorLocation"]
+- ["s9EquatableP", "chest"]
+- !private ["s9EquatableP", "count"]
+- ["s9EquatableP", "data"]
+- ["s9EquatableP", "description"]
+- ["s9EquatableP", "earLobe"]
+- ["s9EquatableP", "finger"]
+- ["s9EquatableP", "foot"]
+- ["s9EquatableP", "hand"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "length"]
+- !private ["s9EquatableP", "name"]
+- ["s9EquatableP", "other"]
+- ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "subscript"]
+- ["s9EquatableP", "uuid"]
+- ["s9EquatableP", "wrist"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["9Bluetooth22GATTBodySensorLocationO", "BluetoothUUID"]
+- ["9Bluetooth22GATTBodySensorLocationO", "Data"]
+- ["9Bluetooth22GATTBodySensorLocationO", "MemoryLayout"]
+- ["9Bluetooth22GATTBodySensorLocationO", "RawValue"]
+- ["9Bluetooth22GATTBodySensorLocationO", "String"]
+- ["9Bluetooth22GATTBodySensorLocationO", "UInt8"]
+- ["9Bluetooth22GATTBodySensorLocationO", "_Default_RawValue"]
+- ["9Bluetooth22GATTBodySensorLocationO", "chest"]
+- ["9Bluetooth22GATTBodySensorLocationO", "data"]
+- ["9Bluetooth22GATTBodySensorLocationO", "deinit"]
+- ["9Bluetooth22GATTBodySensorLocationO", "description"]
+- ["9Bluetooth22GATTBodySensorLocationO", "earLobe"]
+- ["9Bluetooth22GATTBodySensorLocationO", "finger"]
+- ["9Bluetooth22GATTBodySensorLocationO", "foot"]
+- ["9Bluetooth22GATTBodySensorLocationO", "hand"]
+- ["9Bluetooth22GATTBodySensorLocationO", "hashValue"]
+- ["9Bluetooth22GATTBodySensorLocationO", "init"]
+- ["9Bluetooth22GATTBodySensorLocationO", "length"]
+- ["9Bluetooth22GATTBodySensorLocationO", "name"]
+- ["9Bluetooth22GATTBodySensorLocationO", "other"]
+- ["9Bluetooth22GATTBodySensorLocationO", "rawValue"]
+- ["9Bluetooth22GATTBodySensorLocationO", "uuid"]
+- ["9Bluetooth22GATTBodySensorLocationO", "wrist"]
+- !private ["9Bluetooth18GATTCharacteristicP", "Data"]
+- ["9Bluetooth18GATTCharacteristicP", "MemoryLayout"]
+- ["9Bluetooth18GATTCharacteristicP", "RawValue"]
+- ["9Bluetooth18GATTCharacteristicP", ""]
+- ["9Bluetooth18GATTCharacteristicP", "_Default_RawValue"]
+- ["9Bluetooth18GATTCharacteristicP", "chest"]
+- ["9Bluetooth18GATTCharacteristicP", "data"]
+- ["9Bluetooth18GATTCharacteristicP", "description"]
+- ["9Bluetooth18GATTCharacteristicP", "earLobe"]
+- ["9Bluetooth18GATTCharacteristicP", "finger"]
+- ["9Bluetooth18GATTCharacteristicP", "foot"]
+- ["9Bluetooth18GATTCharacteristicP", "hand"]
+- ["9Bluetooth18GATTCharacteristicP", "hashValue"]
+- ["9Bluetooth18GATTCharacteristicP", "init"]
+- !private ["9Bluetooth18GATTCharacteristicP", "length"]
+- !private ["9Bluetooth18GATTCharacteristicP", "name"]
+- ["9Bluetooth18GATTCharacteristicP", "other"]
+- ["9Bluetooth18GATTCharacteristicP", "rawValue"]
+- ["9Bluetooth18GATTCharacteristicP", "uuid"]
+- ["9Bluetooth18GATTCharacteristicP", "wrist"]
+- !private ["s8HashableP", "Data"]
+- ["s8HashableP", "MemoryLayout"]
+- ["s8HashableP", "RawValue"]
+- ["s8HashableP", ""]
+- ["s8HashableP", "_Default_RawValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "bodySensorLocation"]
+- ["s8HashableP", "chest"]
+- !private ["s8HashableP", "count"]
+- ["s8HashableP", "data"]
+- ["s8HashableP", "description"]
+- ["s8HashableP", "earLobe"]
+- ["s8HashableP", "finger"]
+- ["s8HashableP", "foot"]
+- ["s8HashableP", "hand"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "length"]
+- !private ["s8HashableP", "name"]
+- ["s8HashableP", "other"]
+- ["s8HashableP", "rawValue"]
+- !private ["s8HashableP", "subscript"]
+- ["s8HashableP", "uuid"]
+- ["s8HashableP", "wrist"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- ["s12MemoryLayoutO", "size"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["s16RawRepresentableP", "Data"]
+- ["s16RawRepresentableP", "MemoryLayout"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- !private ["s16RawRepresentableP", "bodySensorLocation"]
+- ["s16RawRepresentableP", "chest"]
+- ["s16RawRepresentableP", "data"]
+- ["s16RawRepresentableP", "description"]
+- ["s16RawRepresentableP", "earLobe"]
+- ["s16RawRepresentableP", "finger"]
+- ["s16RawRepresentableP", "foot"]
+- ["s16RawRepresentableP", "hand"]
+- ["s16RawRepresentableP", "hashValue"]
+- ["s16RawRepresentableP", "init"]
+- !private ["s16RawRepresentableP", "length"]
+- !private ["s16RawRepresentableP", "name"]
+- ["s16RawRepresentableP", "other"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s16RawRepresentableP", "uuid"]
+- ["s16RawRepresentableP", "wrist"]
+- !private ["10Foundation20ReferenceConvertibleP", "count"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "subscript"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "count"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "count"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "count"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "subscript"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "count"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "9Bluetooth0A4UUIDO"
+- !private "Sb"
+- !private "9Bluetooth8ByteSwapP"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "9Bluetooth22GATTBodySensorLocationO"
+- "9Bluetooth18GATTCharacteristicP"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- "s12MemoryLayoutO"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "a20fdb65048b3a270e71ade8dedc4c76"

@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/master.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/MainActivity.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivity.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivity.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivity~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivity.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/MainActivityBindings.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivityBindings.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivityBindings.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivityBindings~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivityBindings.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/MainActivityBindings_Listener.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivityBindings_Listener.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivityBindings_Listener.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivityBindings_Listener~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivityBindings_Listener.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/MainActivityBindings_Responder.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivityBindings_Responder.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivityBindings_Responder.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivityBindings_Responder~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/MainActivityBindings_Responder.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/NewView.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/NewView.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/NewView.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/NewView~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/NewView.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/NewViewGroup.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/NewViewGroup.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/NewViewGroup.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/NewViewGroup~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/NewViewGroup.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/SwiftApplication.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/SwiftApplication.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/SwiftApplication.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/SwiftApplication~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/swiftapptarget.build/SwiftApplication.swiftdeps"
+  }
+}

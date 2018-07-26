@@ -1,0 +1,13 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "45fd2639c184833c1983a23a8968c9f9"
+build_time: [1532531371, 70089000]
+inputs:
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/JNI.git-5137285128640422888/Sources/ClassName.swift": [1532527762, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/JNI.git-5137285128640422888/Sources/JNI.swift": [1532527762, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/JNI.git-5137285128640422888/Sources/JNIClassNameComponent.swift": [1532527762, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/JNI.git-5137285128640422888/Sources/MetaClass.swift": [1532527762, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/JNI.git-5137285128640422888/Sources/MethodSignature.swift": [1532527762, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/JNI.git-5137285128640422888/Sources/Package.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/JNI.git-5137285128640422888/Sources/Parser.swift": [1532527762, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/JNI.git-5137285128640422888/Sources/String.swift": [1532527762, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/JNI.git-5137285128640422888/Sources/ValueType.swift": [1532527762, 0]

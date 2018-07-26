@@ -1,0 +1,147 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+- "9Bluetooth4GATTO7ServiceV"
+- "9Bluetooth4GATTO7IncludeV"
+- "9Bluetooth4GATTO14CharacteristicV"
+- "9Bluetooth4GATTO10DescriptorV"
+provides-member:
+- ["9Bluetooth4GATTO", ""]
+- ["9Bluetooth4GATTO7ServiceV", ""]
+- ["9Bluetooth4GATTO7IncludeV", ""]
+- ["9Bluetooth4GATTO14CharacteristicV", ""]
+- ["9Bluetooth4GATTO10DescriptorV", ""]
+- ["9Bluetooth4GATTO", "Permission"]
+- ["9Bluetooth4GATTO", "Service"]
+- ["9Bluetooth4GATTO", "Include"]
+- ["9Bluetooth4GATTO", "Characteristic"]
+- ["9Bluetooth4GATTO", "Descriptor"]
+depends-top-level:
+- "ATT"
+- "Array"
+- "AssignmentPrecedence"
+- "BitMaskOptionSet"
+- "BluetoothUUID"
+- "Bool"
+- "BooleanLiteralType"
+- "Data"
+- "GATT"
+- "UInt16"
+depends-member:
+- ["9Bluetooth3ATTO", "AttributePermission"]
+- ["9Bluetooth22ATTAttributePermissionO", "deinit"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["9Bluetooth16BitMaskOptionSetV", "deinit"]
+- !private ["9Bluetooth0A4UUIDO", "deinit"]
+- !private ["9Bluetooth0A4UUIDO", "init"]
+- !private ["9Bluetooth8ByteSwapP", "init"]
+- ["9Bluetooth4GATTO14CharacteristicV", "BitMaskOptionSet"]
+- ["9Bluetooth4GATTO14CharacteristicV", "BluetoothUUID"]
+- ["9Bluetooth4GATTO14CharacteristicV", "Data"]
+- ["9Bluetooth4GATTO14CharacteristicV", "Descriptor"]
+- ["9Bluetooth4GATTO14CharacteristicV", "GATT"]
+- ["9Bluetooth4GATTO14CharacteristicV", "Permission"]
+- ["9Bluetooth4GATTO14CharacteristicV", "Property"]
+- ["9Bluetooth4GATTO14CharacteristicV", "descriptors"]
+- ["9Bluetooth4GATTO14CharacteristicV", "init"]
+- ["9Bluetooth4GATTO14CharacteristicV", "permissions"]
+- ["9Bluetooth4GATTO14CharacteristicV", "properties"]
+- ["9Bluetooth4GATTO14CharacteristicV", "uuid"]
+- ["9Bluetooth4GATTO14CharacteristicV", "value"]
+- ["9Bluetooth4GATTO22CharacteristicPropertyO", "deinit"]
+- !private ["s10CollectionP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["s9DecodableP", "init"]
+- ["9Bluetooth4GATTO10DescriptorV", "BitMaskOptionSet"]
+- ["9Bluetooth4GATTO10DescriptorV", "BluetoothUUID"]
+- ["9Bluetooth4GATTO10DescriptorV", "Data"]
+- ["9Bluetooth4GATTO10DescriptorV", "Permission"]
+- ["9Bluetooth4GATTO10DescriptorV", "init"]
+- ["9Bluetooth4GATTO10DescriptorV", "permissions"]
+- ["9Bluetooth4GATTO10DescriptorV", "uuid"]
+- ["9Bluetooth4GATTO10DescriptorV", "value"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "init"]
+- ["9Bluetooth4GATTO", "ATT"]
+- ["9Bluetooth4GATTO", "BitMaskOptionSet"]
+- ["9Bluetooth4GATTO", "BluetoothUUID"]
+- ["9Bluetooth4GATTO", "Bool"]
+- ["9Bluetooth4GATTO", "Characteristic"]
+- ["9Bluetooth4GATTO", "CharacteristicProperty"]
+- ["9Bluetooth4GATTO", "Data"]
+- ["9Bluetooth4GATTO", "Descriptor"]
+- ["9Bluetooth4GATTO", "GATT"]
+- ["9Bluetooth4GATTO", "Include"]
+- ["9Bluetooth4GATTO", "Permission"]
+- ["9Bluetooth4GATTO", "Service"]
+- ["9Bluetooth4GATTO", "UInt16"]
+- !private ["s8HashableP", "init"]
+- ["9Bluetooth4GATTO7IncludeV", "BluetoothUUID"]
+- ["9Bluetooth4GATTO7IncludeV", "UInt16"]
+- ["9Bluetooth4GATTO7IncludeV", "endGroupHandle"]
+- ["9Bluetooth4GATTO7IncludeV", "init"]
+- ["9Bluetooth4GATTO7IncludeV", "serviceHandle"]
+- ["9Bluetooth4GATTO7IncludeV", "serviceUUID"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["s8SequenceP", "init"]
+- ["9Bluetooth4GATTO7ServiceV", "BluetoothUUID"]
+- ["9Bluetooth4GATTO7ServiceV", "Bool"]
+- ["9Bluetooth4GATTO7ServiceV", "Characteristic"]
+- ["9Bluetooth4GATTO7ServiceV", "Include"]
+- ["9Bluetooth4GATTO7ServiceV", "characteristics"]
+- ["9Bluetooth4GATTO7ServiceV", "includedServices"]
+- ["9Bluetooth4GATTO7ServiceV", "init"]
+- ["9Bluetooth4GATTO7ServiceV", "primary"]
+- ["9Bluetooth4GATTO7ServiceV", "uuid"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+depends-nominal:
+- "9Bluetooth3ATTO"
+- "9Bluetooth22ATTAttributePermissionO"
+- !private "s23BidirectionalCollectionP"
+- !private "9Bluetooth16BitMaskOptionSetV"
+- !private "9Bluetooth0A4UUIDO"
+- !private "9Bluetooth8ByteSwapP"
+- "9Bluetooth4GATTO14CharacteristicV"
+- "9Bluetooth4GATTO22CharacteristicPropertyO"
+- !private "s10CollectionP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "s9DecodableP"
+- "9Bluetooth4GATTO10DescriptorV"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- "9Bluetooth4GATTO"
+- !private "s8HashableP"
+- "9Bluetooth4GATTO7IncludeV"
+- !private "s17MutableCollectionP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- "9Bluetooth4GATTO7ServiceV"
+- !private "10Foundation13_CFBridgeableP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "9b865fae815dd0f1572715421e771ca5"

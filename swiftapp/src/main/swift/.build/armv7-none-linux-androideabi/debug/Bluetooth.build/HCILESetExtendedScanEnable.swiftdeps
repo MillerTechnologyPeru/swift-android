@@ -1,0 +1,375 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HCILESetExtendedScanEnable"
+- "=="
+- "<"
+- "=="
+- "<"
+provides-nominal:
+- "9Bluetooth26HCILESetExtendedScanEnableV"
+- "9Bluetooth26HCILESetExtendedScanEnableV0E0O"
+- "9Bluetooth26HCILESetExtendedScanEnableV16FilterDuplicatesO"
+- "9Bluetooth26HCILESetExtendedScanEnableV8DurationV"
+- "9Bluetooth26HCILESetExtendedScanEnableV6PeriodV"
+provides-member:
+- ["9Bluetooth0A23HostControllerInterfaceP", ""]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", ""]
+- ["9Bluetooth26HCILESetExtendedScanEnableV0E0O", ""]
+- ["9Bluetooth26HCILESetExtendedScanEnableV16FilterDuplicatesO", ""]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", ""]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", ""]
+- ["9Bluetooth0A23HostControllerInterfaceP", "setLowEnergyExtendedScanEnable"]
+depends-top-level:
+- !private "*"
+- "<"
+- "<="
+- "=="
+- ">"
+- ">="
+- !private "Array"
+- "AssignmentPrecedence"
+- "BluetoothHostControllerInterface"
+- "Bool"
+- "Comparable"
+- "Data"
+- "Double"
+- "Equatable"
+- "FloatLiteralType"
+- "HCICommandParameter"
+- "HCICommandTimeout"
+- "HCILESetExtendedScanEnable"
+- "HCILowEnergyCommand"
+- "Hashable"
+- "Int"
+- "IntegerLiteralType"
+- "RawRepresentable"
+- "UInt16"
+- "UInt8"
+- !private "~="
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s19BinaryFloatingPointP", "init"]
+- !private ["s13BinaryIntegerP", "bytes"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["s13BinaryIntegerP", "littleEndian"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "HCICommandTimeout"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "HCILESetExtendedScanEnable"]
+- !private ["9Bluetooth0A23HostControllerInterfaceP", "deviceRequest"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "setLowEnergyExtendedScanEnable"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "bytes"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "littleEndian"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "Double"]
+- ["s10ComparableP", "Duration"]
+- !private ["s10ComparableP", "Int"]
+- !private ["s10ComparableP", "Period"]
+- ["s10ComparableP", "RawValue"]
+- ["s10ComparableP", ""]
+- ["s10ComparableP", "_Default_RawValue"]
+- !private ["s10ComparableP", "bytes"]
+- ["s10ComparableP", "hashValue"]
+- ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "littleEndian"]
+- !private ["s10ComparableP", "max"]
+- !private ["s10ComparableP", "min"]
+- ["s10ComparableP", "rawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "bytes"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "littleEndian"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "bytes"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "littleEndian"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "bytes"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "littleEndian"]
+- ["s23CustomStringConvertibleP", "setExtendedScanEnable"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "bytes"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "littleEndian"]
+- !private ["Sd", "init"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "<"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "=="]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "Bool"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "Double"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "Duration"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "Int"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "RawValue"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "UInt16"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "_Default_RawValue"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "deinit"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "hashValue"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "init"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "max"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "miliseconds"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "min"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV8DurationV", "rawValue"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV0E0O", "RawValue"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV0E0O", "_Default_RawValue"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV0E0O", "deinit"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV0E0O", "disabled"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV0E0O", "enabled"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV0E0O", "hashValue"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV0E0O", "init"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV0E0O", "rawValue"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "bytes"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "littleEndian"]
+- !private ["s9EquatableP", "Double"]
+- ["s9EquatableP", "Duration"]
+- !private ["s9EquatableP", "Int"]
+- !private ["s9EquatableP", "Period"]
+- ["s9EquatableP", "RawValue"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "bytes"]
+- !private ["s9EquatableP", "default"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "littleEndian"]
+- !private ["s9EquatableP", "max"]
+- !private ["s9EquatableP", "min"]
+- ["s9EquatableP", "rawValue"]
+- ["s9EquatableP", "setExtendedScanEnable"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "bytes"]
+- !private ["s27ExpressibleByIntegerLiteralP", "default"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "littleEndian"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "bytes"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "littleEndian"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV16FilterDuplicatesO", "RawValue"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV16FilterDuplicatesO", "_Default_RawValue"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV16FilterDuplicatesO", "deinit"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV16FilterDuplicatesO", "disabled"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV16FilterDuplicatesO", "enabled"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV16FilterDuplicatesO", "hashValue"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV16FilterDuplicatesO", "init"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV16FilterDuplicatesO", "rawValue"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV16FilterDuplicatesO", "reset"]
+- !private ["s17FixedWidthIntegerP", "bytes"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["s17FixedWidthIntegerP", "littleEndian"]
+- !private ["s13FloatingPointP", "init"]
+- ["9Bluetooth10HCICommandP", "setExtendedScanEnable"]
+- !private ["9Bluetooth19HCICommandParameterP", "Data"]
+- !private ["9Bluetooth19HCICommandParameterP", "Double"]
+- ["9Bluetooth19HCICommandParameterP", "Duration"]
+- ["9Bluetooth19HCICommandParameterP", "Enable"]
+- ["9Bluetooth19HCICommandParameterP", "FilterDuplicates"]
+- ["9Bluetooth19HCICommandParameterP", "HCICommandType"]
+- ["9Bluetooth19HCICommandParameterP", "HCILowEnergyCommand"]
+- !private ["9Bluetooth19HCICommandParameterP", "Int"]
+- ["9Bluetooth19HCICommandParameterP", "Period"]
+- ["9Bluetooth19HCICommandParameterP", ""]
+- ["9Bluetooth19HCICommandParameterP", "_Default_HCICommandType"]
+- ["9Bluetooth19HCICommandParameterP", "command"]
+- ["9Bluetooth19HCICommandParameterP", "data"]
+- !private ["9Bluetooth19HCICommandParameterP", "duration"]
+- !private ["9Bluetooth19HCICommandParameterP", "enable"]
+- !private ["9Bluetooth19HCICommandParameterP", "filterDuplicates"]
+- !private ["9Bluetooth19HCICommandParameterP", "init"]
+- !private ["9Bluetooth19HCICommandParameterP", "period"]
+- !private ["9Bluetooth17HCICommandTimeoutV", "default"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "Bool"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "Comparable"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "Data"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "Double"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "Duration"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "Enable"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "Equatable"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "FilterDuplicates"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "HCICommandType"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "HCILowEnergyCommand"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "Hashable"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "Int"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "Period"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "RawRepresentable"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "UInt16"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "UInt8"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "_Default_HCICommandType"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "command"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "data"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "deinit"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "duration"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "enable"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "filterDuplicates"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "init"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV", "period"]
+- ["9Bluetooth19HCILowEnergyCommandO", "deinit"]
+- ["9Bluetooth19HCILowEnergyCommandO", "setExtendedScanEnable"]
+- !private ["s8HashableP", "Double"]
+- ["s8HashableP", "Duration"]
+- !private ["s8HashableP", "Int"]
+- !private ["s8HashableP", "Period"]
+- ["s8HashableP", "RawValue"]
+- ["s8HashableP", ""]
+- ["s8HashableP", "_Default_RawValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "bytes"]
+- !private ["s8HashableP", "default"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "littleEndian"]
+- !private ["s8HashableP", "max"]
+- !private ["s8HashableP", "min"]
+- ["s8HashableP", "rawValue"]
+- ["s8HashableP", "setExtendedScanEnable"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "bytes"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "littleEndian"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s7NumericP", "bytes"]
+- !private ["s7NumericP", "init"]
+- !private ["s7NumericP", "littleEndian"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "<"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "=="]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "Bool"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "Double"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "Duration"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "Int"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "Period"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "RawValue"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "UInt16"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "_Default_RawValue"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "deinit"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "hashValue"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "init"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "max"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "miliseconds"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "min"]
+- ["9Bluetooth26HCILESetExtendedScanEnableV6PeriodV", "rawValue"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "Double"]
+- ["s16RawRepresentableP", "Duration"]
+- !private ["s16RawRepresentableP", "Int"]
+- !private ["s16RawRepresentableP", "Period"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- !private ["s16RawRepresentableP", "default"]
+- ["s16RawRepresentableP", "hashValue"]
+- ["s16RawRepresentableP", "init"]
+- !private ["s16RawRepresentableP", "max"]
+- !private ["s16RawRepresentableP", "min"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s16RawRepresentableP", "setExtendedScanEnable"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s10StrideableP", "bytes"]
+- !private ["s10StrideableP", "init"]
+- !private ["s10StrideableP", "littleEndian"]
+- !private ["s6UInt16V", "bytes"]
+- !private ["s6UInt16V", "littleEndian"]
+- !private ["s15UnsignedIntegerP", "bytes"]
+- !private ["s15UnsignedIntegerP", "littleEndian"]
+- !private ["s18_BitwiseOperationsP", "bytes"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["s18_BitwiseOperationsP", "littleEndian"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "bytes"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "littleEndian"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "bytes"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "littleEndian"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "bytes"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "littleEndian"]
+- !private ["s14_StringElementP", "bytes"]
+- !private ["s14_StringElementP", "littleEndian"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "s19BinaryFloatingPointP"
+- !private "s13BinaryIntegerP"
+- "9Bluetooth0A23HostControllerInterfaceP"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "s9DecodableP"
+- !private "Sd"
+- "9Bluetooth26HCILESetExtendedScanEnableV8DurationV"
+- "9Bluetooth26HCILESetExtendedScanEnableV0E0O"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "9Bluetooth26HCILESetExtendedScanEnableV16FilterDuplicatesO"
+- !private "s17FixedWidthIntegerP"
+- !private "s13FloatingPointP"
+- "9Bluetooth10HCICommandP"
+- "9Bluetooth19HCICommandParameterP"
+- !private "9Bluetooth17HCICommandTimeoutV"
+- "9Bluetooth26HCILESetExtendedScanEnableV"
+- "9Bluetooth19HCILowEnergyCommandO"
+- "s8HashableP"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "s7NumericP"
+- "9Bluetooth26HCILESetExtendedScanEnableV6PeriodV"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s10StrideableP"
+- !private "s6UInt16V"
+- !private "s15UnsignedIntegerP"
+- !private "s18_BitwiseOperationsP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+- !private "s14_StringElementP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "172c6787f1e3f945fa63a3783f172b64"

@@ -1,0 +1,332 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SwiftApplication"
+- "SwiftAndroidMainApplication"
+- "SwiftApplication_onConfigurationChanged"
+- "SwiftApplication_onCreate"
+- "SwiftApplication_onLowMemory"
+- "SwiftApplication_onTerminate"
+- "SwiftApplication_onTrimMemory"
+- "SwiftApplication_registerActivityLifecycleCallbacks"
+- "SwiftApplication_unregisterActivityLifecycleCallbacks"
+- "SwiftApplication_registerComponentCallbacks"
+- "SwiftApplication_unregisterComponentCallbacks"
+- "SwiftApplication_registerOnProvideAssistDataListener"
+- "SwiftApplication_unregisterOnProvideAssistDataListener"
+- "SwiftApplication_finalize"
+provides-nominal:
+- "7Android16SwiftApplicationC"
+provides-member:
+- ["7Android12SwiftSupportO3AppO", ""]
+- ["7Android16SwiftApplicationC", ""]
+- ["7Android12SwiftSupportO3AppO", "Application"]
+depends-top-level:
+- !private "!="
+- "Int"
+- "JNIEnv"
+- "JNIListener"
+- "JavaObject"
+- !private "NSLog"
+- !private "StringLiteralType"
+- "SwiftAndroidMainApplication"
+- "SwiftApplication"
+- "SwiftApplication_finalize"
+- "SwiftApplication_onConfigurationChanged"
+- "SwiftApplication_onCreate"
+- "SwiftApplication_onLowMemory"
+- "SwiftApplication_onTerminate"
+- "SwiftApplication_onTrimMemory"
+- "SwiftApplication_registerActivityLifecycleCallbacks"
+- "SwiftApplication_registerComponentCallbacks"
+- "SwiftApplication_registerOnProvideAssistDataListener"
+- "SwiftApplication_unregisterActivityLifecycleCallbacks"
+- "SwiftApplication_unregisterComponentCallbacks"
+- "SwiftApplication_unregisterOnProvideAssistDataListener"
+- "SwiftSupport"
+- "TernaryPrecedence"
+- !private "UnicodeScalarType"
+- "UnsafeMutablePointer"
+- "jint"
+- "jlong"
+- "jobject"
+depends-member:
+- ["7Android12SwiftSupportO3AppO", "Application"]
+- ["7Android12SwiftSupportO3AppO", "SwiftApplication"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "init"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "init"]
+- !private ["Si", "init"]
+- !private ["7Android11JNIListenerP", "NSLog"]
+- !private ["7Android11JNIListenerP", "SwiftAndroidMainApplication"]
+- ["7Android11JNIListenerP", ""]
+- !private ["7Android11JNIListenerP", "init"]
+- !private ["7Android11JNIListenerP", "onConfigurationChanged"]
+- !private ["7Android11JNIListenerP", "onCreate"]
+- !private ["7Android11JNIListenerP", "onLowMemory"]
+- !private ["7Android11JNIListenerP", "onTerminate"]
+- !private ["7Android11JNIListenerP", "onTrimMemory"]
+- !private ["7Android11JNIListenerP", "registerActivityLifecycleCallbacks"]
+- !private ["7Android11JNIListenerP", "registerComponentCallbacks"]
+- !private ["7Android11JNIListenerP", "registerOnProvideAssistDataListener"]
+- !private ["7Android11JNIListenerP", "release"]
+- !private ["7Android11JNIListenerP", "swiftObject"]
+- !private ["7Android11JNIListenerP", "swiftValue"]
+- !private ["7Android11JNIListenerP", "unregisterActivityLifecycleCallbacks"]
+- !private ["7Android11JNIListenerP", "unregisterComponentCallbacks"]
+- !private ["7Android11JNIListenerP", "unregisterOnProvideAssistDataListener"]
+- ["10java_swift9JNIObjectC", "Int"]
+- ["10java_swift9JNIObjectC", "JNIEnv"]
+- ["10java_swift9JNIObjectC", "JavaObject"]
+- !private ["10java_swift9JNIObjectC", "NSLog"]
+- !private ["10java_swift9JNIObjectC", "SwiftAndroidMainApplication"]
+- ["10java_swift9JNIObjectC", "UnsafeMutablePointer"]
+- ["10java_swift9JNIObjectC", "bind"]
+- ["10java_swift9JNIObjectC", "init"]
+- ["10java_swift9JNIObjectC", "jlong"]
+- ["10java_swift9JNIObjectC", "jobject"]
+- ["10java_swift9JNIObjectC", "onConfigurationChanged"]
+- ["10java_swift9JNIObjectC", "onCreate"]
+- ["10java_swift9JNIObjectC", "onLowMemory"]
+- ["10java_swift9JNIObjectC", "onTerminate"]
+- ["10java_swift9JNIObjectC", "onTrimMemory"]
+- ["10java_swift9JNIObjectC", "registerActivityLifecycleCallbacks"]
+- ["10java_swift9JNIObjectC", "registerComponentCallbacks"]
+- ["10java_swift9JNIObjectC", "registerOnProvideAssistDataListener"]
+- !private ["10java_swift9JNIObjectC", "release"]
+- !private ["10java_swift9JNIObjectC", "swiftObject"]
+- !private ["10java_swift9JNIObjectC", "swiftValue"]
+- ["10java_swift9JNIObjectC", "unregisterActivityLifecycleCallbacks"]
+- ["10java_swift9JNIObjectC", "unregisterComponentCallbacks"]
+- ["10java_swift9JNIObjectC", "unregisterOnProvideAssistDataListener"]
+- !private ["10java_swift13JNIObjectInitP", "NSLog"]
+- !private ["10java_swift13JNIObjectInitP", "SwiftAndroidMainApplication"]
+- ["10java_swift13JNIObjectInitP", ""]
+- !private ["10java_swift13JNIObjectInitP", "init"]
+- !private ["10java_swift13JNIObjectInitP", "onConfigurationChanged"]
+- !private ["10java_swift13JNIObjectInitP", "onCreate"]
+- !private ["10java_swift13JNIObjectInitP", "onLowMemory"]
+- !private ["10java_swift13JNIObjectInitP", "onTerminate"]
+- !private ["10java_swift13JNIObjectInitP", "onTrimMemory"]
+- !private ["10java_swift13JNIObjectInitP", "registerActivityLifecycleCallbacks"]
+- !private ["10java_swift13JNIObjectInitP", "registerComponentCallbacks"]
+- !private ["10java_swift13JNIObjectInitP", "registerOnProvideAssistDataListener"]
+- !private ["10java_swift13JNIObjectInitP", "release"]
+- !private ["10java_swift13JNIObjectInitP", "swiftObject"]
+- !private ["10java_swift13JNIObjectInitP", "swiftValue"]
+- !private ["10java_swift13JNIObjectInitP", "unregisterActivityLifecycleCallbacks"]
+- !private ["10java_swift13JNIObjectInitP", "unregisterComponentCallbacks"]
+- !private ["10java_swift13JNIObjectInitP", "unregisterOnProvideAssistDataListener"]
+- !private ["10java_swift17JNIObjectProtocolP", "NSLog"]
+- !private ["10java_swift17JNIObjectProtocolP", "SwiftAndroidMainApplication"]
+- ["10java_swift17JNIObjectProtocolP", ""]
+- !private ["10java_swift17JNIObjectProtocolP", "init"]
+- !private ["10java_swift17JNIObjectProtocolP", "onConfigurationChanged"]
+- !private ["10java_swift17JNIObjectProtocolP", "onCreate"]
+- !private ["10java_swift17JNIObjectProtocolP", "onLowMemory"]
+- !private ["10java_swift17JNIObjectProtocolP", "onTerminate"]
+- !private ["10java_swift17JNIObjectProtocolP", "onTrimMemory"]
+- !private ["10java_swift17JNIObjectProtocolP", "registerActivityLifecycleCallbacks"]
+- !private ["10java_swift17JNIObjectProtocolP", "registerComponentCallbacks"]
+- !private ["10java_swift17JNIObjectProtocolP", "registerOnProvideAssistDataListener"]
+- !private ["10java_swift17JNIObjectProtocolP", "release"]
+- !private ["10java_swift17JNIObjectProtocolP", "swiftObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "swiftValue"]
+- !private ["10java_swift17JNIObjectProtocolP", "unregisterActivityLifecycleCallbacks"]
+- !private ["10java_swift17JNIObjectProtocolP", "unregisterComponentCallbacks"]
+- !private ["10java_swift17JNIObjectProtocolP", "unregisterOnProvideAssistDataListener"]
+- ["10java_swift10JavaObjectC", "Int"]
+- ["10java_swift10JavaObjectC", "JNIEnv"]
+- ["10java_swift10JavaObjectC", "JavaObject"]
+- !private ["10java_swift10JavaObjectC", "NSLog"]
+- !private ["10java_swift10JavaObjectC", "SwiftAndroidMainApplication"]
+- ["10java_swift10JavaObjectC", "UnsafeMutablePointer"]
+- ["10java_swift10JavaObjectC", ""]
+- ["10java_swift10JavaObjectC", "bind"]
+- ["10java_swift10JavaObjectC", "init"]
+- ["10java_swift10JavaObjectC", "jlong"]
+- ["10java_swift10JavaObjectC", "jobject"]
+- ["10java_swift10JavaObjectC", "onConfigurationChanged"]
+- ["10java_swift10JavaObjectC", "onCreate"]
+- ["10java_swift10JavaObjectC", "onLowMemory"]
+- ["10java_swift10JavaObjectC", "onTerminate"]
+- ["10java_swift10JavaObjectC", "onTrimMemory"]
+- ["10java_swift10JavaObjectC", "registerActivityLifecycleCallbacks"]
+- ["10java_swift10JavaObjectC", "registerComponentCallbacks"]
+- ["10java_swift10JavaObjectC", "registerOnProvideAssistDataListener"]
+- !private ["10java_swift10JavaObjectC", "release"]
+- !private ["10java_swift10JavaObjectC", "swiftObject"]
+- !private ["10java_swift10JavaObjectC", "swiftValue"]
+- ["10java_swift10JavaObjectC", "unregisterActivityLifecycleCallbacks"]
+- ["10java_swift10JavaObjectC", "unregisterComponentCallbacks"]
+- ["10java_swift10JavaObjectC", "unregisterOnProvideAssistDataListener"]
+- !private ["10java_swift12JavaProtocolP", "NSLog"]
+- !private ["10java_swift12JavaProtocolP", "SwiftAndroidMainApplication"]
+- ["10java_swift12JavaProtocolP", ""]
+- !private ["10java_swift12JavaProtocolP", "init"]
+- !private ["10java_swift12JavaProtocolP", "onConfigurationChanged"]
+- !private ["10java_swift12JavaProtocolP", "onCreate"]
+- !private ["10java_swift12JavaProtocolP", "onLowMemory"]
+- !private ["10java_swift12JavaProtocolP", "onTerminate"]
+- !private ["10java_swift12JavaProtocolP", "onTrimMemory"]
+- !private ["10java_swift12JavaProtocolP", "registerActivityLifecycleCallbacks"]
+- !private ["10java_swift12JavaProtocolP", "registerComponentCallbacks"]
+- !private ["10java_swift12JavaProtocolP", "registerOnProvideAssistDataListener"]
+- !private ["10java_swift12JavaProtocolP", "release"]
+- !private ["10java_swift12JavaProtocolP", "swiftObject"]
+- !private ["10java_swift12JavaProtocolP", "swiftValue"]
+- !private ["10java_swift12JavaProtocolP", "unregisterActivityLifecycleCallbacks"]
+- !private ["10java_swift12JavaProtocolP", "unregisterComponentCallbacks"]
+- !private ["10java_swift12JavaProtocolP", "unregisterOnProvideAssistDataListener"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s7NumericP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s10StrideableP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- ["7Android16SwiftApplicationC", "Int"]
+- ["7Android16SwiftApplicationC", "JNIEnv"]
+- ["7Android16SwiftApplicationC", "JavaObject"]
+- !private ["7Android16SwiftApplicationC", "NSLog"]
+- !private ["7Android16SwiftApplicationC", "SwiftAndroidMainApplication"]
+- ["7Android16SwiftApplicationC", "UnsafeMutablePointer"]
+- ["7Android16SwiftApplicationC", "bind"]
+- ["7Android16SwiftApplicationC", "deinit"]
+- ["7Android16SwiftApplicationC", "init"]
+- ["7Android16SwiftApplicationC", "jlong"]
+- ["7Android16SwiftApplicationC", "jobject"]
+- ["7Android16SwiftApplicationC", "onConfigurationChanged"]
+- ["7Android16SwiftApplicationC", "onCreate"]
+- ["7Android16SwiftApplicationC", "onLowMemory"]
+- ["7Android16SwiftApplicationC", "onTerminate"]
+- ["7Android16SwiftApplicationC", "onTrimMemory"]
+- ["7Android16SwiftApplicationC", "registerActivityLifecycleCallbacks"]
+- ["7Android16SwiftApplicationC", "registerComponentCallbacks"]
+- ["7Android16SwiftApplicationC", "registerOnProvideAssistDataListener"]
+- !private ["7Android16SwiftApplicationC", "release"]
+- !private ["7Android16SwiftApplicationC", "swiftObject"]
+- !private ["7Android16SwiftApplicationC", "swiftValue"]
+- ["7Android16SwiftApplicationC", "unregisterActivityLifecycleCallbacks"]
+- ["7Android16SwiftApplicationC", "unregisterComponentCallbacks"]
+- ["7Android16SwiftApplicationC", "unregisterOnProvideAssistDataListener"]
+- ["7Android12SwiftSupportO", "App"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["SC6jvalueV", "j"]
+depends-nominal:
+- "7Android12SwiftSupportO3AppO"
+- !private "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- !private "s8HashableP"
+- !private "Si"
+- "7Android11JNIListenerP"
+- "10java_swift9JNIObjectC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- "10java_swift10JavaObjectC"
+- "10java_swift12JavaProtocolP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s7NumericP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s10StrideableP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- "7Android16SwiftApplicationC"
+- "7Android12SwiftSupportO"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s18_BitwiseOperationsP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+- !private "s16_SwiftStringViewP"
+- !private "SC6jvalueV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/JNI.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Bluetooth.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_util.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "b6f918e327572af19b36564e2bc749c7"

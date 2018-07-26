@@ -1,0 +1,485 @@
+{
+  "": {
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/master.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/AndroidManifestPermission.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AndroidManifestPermission.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AndroidManifestPermission.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AndroidManifestPermission~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AndroidManifestPermission.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/AndroidManifestPermissionGroup.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AndroidManifestPermissionGroup.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AndroidManifestPermissionGroup.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AndroidManifestPermissionGroup~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AndroidManifestPermissionGroup.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/AndroidNamespace.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AndroidNamespace.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AndroidNamespace.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AndroidNamespace~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AndroidNamespace.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/AppCompatActivity.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AppCompatActivity.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AppCompatActivity.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AppCompatActivity~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/AppCompatActivity.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/Application.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/Application.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/Application.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/Application~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/Application.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothA2dp.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothA2dp.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothA2dp.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothA2dp~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothA2dp.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothAdapter.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothAdapter.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothAdapter.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothAdapter~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothAdapter.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothAdapterLeScanCallback.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothAdapterLeScanCallback.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothAdapterLeScanCallback.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothAdapterLeScanCallback~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothAdapterLeScanCallback.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothClass.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClass.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClass.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClass~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClass.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothClassDevice.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClassDevice.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClassDevice.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClassDevice~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClassDevice.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothClassDeviceMajor.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClassDeviceMajor.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClassDeviceMajor.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClassDeviceMajor~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClassDeviceMajor.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothClassService.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClassService.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClassService.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClassService~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothClassService.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothDevice.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothDevice.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothDevice.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothDevice~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothDevice.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothGatt.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGatt.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGatt.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGatt~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGatt.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothGattCallback.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattCallback.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattCallback.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattCallback~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattCallback.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothGattCharacteristic.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattCharacteristic.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattCharacteristic.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattCharacteristic~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattCharacteristic.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothGattDescriptor.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattDescriptor.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattDescriptor.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattDescriptor~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattDescriptor.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothGattServer.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattServer.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattServer.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattServer~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattServer.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothGattServerCallback.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattServerCallback.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattServerCallback.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattServerCallback~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattServerCallback.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothGattService.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattService.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattService.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattService~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothGattService.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeAdvertiseCallback.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseCallback.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseCallback.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseCallback~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseCallback.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeAdvertiseData.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseData.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseData.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseData~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseData.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeAdvertiseDataBuilder.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseDataBuilder.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseDataBuilder.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseDataBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseDataBuilder.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeAdvertiseSettings.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseSettings.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseSettings.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseSettings~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseSettings.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeAdvertiseSettingsBuilder.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseSettingsBuilder.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseSettingsBuilder.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseSettingsBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertiseSettingsBuilder.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeAdvertisingSet.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSet.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSet.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSet~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSet.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeAdvertisingSetCallback.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSetCallback.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSetCallback.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSetCallback~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSetCallback.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeAdvertisingSetParameters.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSetParameters.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSetParameters.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSetParameters~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSetParameters.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeAdvertisingSetParametersBuilder.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSetParametersBuilder.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSetParametersBuilder.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSetParametersBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeAdvertisingSetParametersBuilder.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLePeriodicAdvertisingParameters.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLePeriodicAdvertisingParameters.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLePeriodicAdvertisingParameters.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLePeriodicAdvertisingParameters~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLePeriodicAdvertisingParameters.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLePeriodicAdvertisingParametersBuilder.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLePeriodicAdvertisingParametersBuilder.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLePeriodicAdvertisingParametersBuilder.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLePeriodicAdvertisingParametersBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLePeriodicAdvertisingParametersBuilder.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeScanCallback.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanCallback.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanCallback.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanCallback~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanCallback.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeScanFilter.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanFilter.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanFilter.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanFilter~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanFilter.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeScanFilterBuilder.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanFilterBuilder.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanFilterBuilder.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanFilterBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanFilterBuilder.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeScanRecord.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanRecord.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanRecord.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanRecord~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanRecord.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeScanResult.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanResult.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanResult.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanResult~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanResult.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeScanSettings.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanSettings.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanSettings.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanSettings~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanSettings.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLeScanSettingsBuilder.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanSettingsBuilder.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanSettingsBuilder.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanSettingsBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLeScanSettingsBuilder.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLowEnergyAdvertiser.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLowEnergyAdvertiser.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLowEnergyAdvertiser.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLowEnergyAdvertiser~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLowEnergyAdvertiser.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothLowEnergyScanner.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLowEnergyScanner.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLowEnergyScanner.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLowEnergyScanner~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothLowEnergyScanner.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothManager.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothManager.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothManager.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothManager.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothProfile.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothProfile.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothProfile.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothProfile~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothProfile.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothProfileServiceListener.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothProfileServiceListener.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothProfileServiceListener.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothProfileServiceListener~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothProfileServiceListener.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothServerSocket.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothServerSocket.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothServerSocket.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothServerSocket~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothServerSocket.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/BluetoothSocket.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothSocket.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothSocket.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothSocket~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/BluetoothSocket.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/ContentBroadcastReceiver.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentBroadcastReceiver.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentBroadcastReceiver.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentBroadcastReceiver~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentBroadcastReceiver.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/ContentContext.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentContext.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentContext.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentContext~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentContext.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/ContentContextWrapper.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentContextWrapper.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentContextWrapper.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentContextWrapper~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentContextWrapper.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/ContentIntent.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentIntent.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentIntent.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentIntent~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentIntent.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/ContentIntentFilter.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentIntentFilter.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentIntentFilter.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentIntentFilter~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentIntentFilter.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/ContentPmPackageManager.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentPmPackageManager.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentPmPackageManager.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentPmPackageManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentPmPackageManager.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/ContentResResources.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentResResources.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentResResources.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentResResources~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContentResResources.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/ContextSystemService.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContextSystemService.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContextSystemService.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContextSystemService~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ContextSystemService.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/GraphicsColor.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/GraphicsColor.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/GraphicsColor.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/GraphicsColor~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/GraphicsColor.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/GraphicsDrawableColorDrawable.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/GraphicsDrawableColorDrawable.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/GraphicsDrawableColorDrawable.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/GraphicsDrawableColorDrawable~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/GraphicsDrawableColorDrawable.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/GraphicsDrawableDrawable.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/GraphicsDrawableDrawable.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/GraphicsDrawableDrawable.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/GraphicsDrawableDrawable~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/GraphicsDrawableDrawable.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/JNI.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/JNI.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/JNI.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/JNI~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/JNI.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/JNIListener.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/JNIListener.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/JNIListener.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/JNIListener~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/JNIListener.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/OsBuild.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBuild.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBuild.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBuild~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBuild.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/OsBuildVersion.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBuildVersion.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBuildVersion.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBuildVersion~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBuildVersion.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/OsBuildVersionCodes.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBuildVersionCodes.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBuildVersionCodes.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBuildVersionCodes~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBuildVersionCodes.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/OsBundle.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBundle.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBundle.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBundle~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsBundle.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/OsParcelUuid.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsParcelUuid.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsParcelUuid.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsParcelUuid~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/OsParcelUuid.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/RecyclerView.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerView.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerView.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerView~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerView.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/RecyclerViewAdapter.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewAdapter.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewAdapter.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewAdapter~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewAdapter.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/RecyclerViewLayoutManager.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewLayoutManager.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewLayoutManager.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewLayoutManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewLayoutManager.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/RecyclerViewLinearLayoutManager.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewLinearLayoutManager.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewLinearLayoutManager.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewLinearLayoutManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewLinearLayoutManager.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/RecyclerViewViewHolder.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewViewHolder.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewViewHolder.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewViewHolder~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/RecyclerViewViewHolder.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/Resource.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/Resource.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/Resource.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/Resource~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/Resource.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/TextView.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/TextView.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/TextView.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/TextView~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/TextView.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/UtilDisplayMetrics.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/UtilDisplayMetrics.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/UtilDisplayMetrics.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/UtilDisplayMetrics~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/UtilDisplayMetrics.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/UtilSparseArray.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/UtilSparseArray.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/UtilSparseArray.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/UtilSparseArray~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/UtilSparseArray.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/View.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/View.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/View.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/View~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/View.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/ViewGroup.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewGroup.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewGroup.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewGroup~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewGroup.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/ViewGroupLayoutParams.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewGroupLayoutParams.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewGroupLayoutParams.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewGroupLayoutParams~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewGroupLayoutParams.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/ViewGroupMarginLayoutParams.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewGroupMarginLayoutParams.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewGroupMarginLayoutParams.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewGroupMarginLayoutParams~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewGroupMarginLayoutParams.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/ViewLayoutInflater.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewLayoutInflater.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewLayoutInflater.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewLayoutInflater~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/ViewLayoutInflater.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/WidgetBaseAdapter.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/WidgetBaseAdapter.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/WidgetBaseAdapter.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/WidgetBaseAdapter~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/WidgetBaseAdapter.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/WidgetFrameLayout.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/WidgetFrameLayout.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/WidgetFrameLayout.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/WidgetFrameLayout~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/WidgetFrameLayout.swiftdeps"
+  },
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Android.git--7233497289629108340/Sources/WidgetFrameLayoutLayoutParams.swift": {
+    "dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/WidgetFrameLayoutLayoutParams.d",
+    "object": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/WidgetFrameLayoutLayoutParams.swift.o",
+    "swiftmodule": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/WidgetFrameLayoutLayoutParams~partial.swiftmodule",
+    "swift-dependencies": "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.build/WidgetFrameLayoutLayoutParams.swiftdeps"
+  }
+}

@@ -1,0 +1,400 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HCILEPeriodicAdvertisingCreateSync"
+- "=="
+- "<"
+provides-nominal:
+- "9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV"
+- "9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV"
+- "9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0C11AddressTypeO"
+- "9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV12FilterPolicyO"
+provides-member:
+- ["9Bluetooth0A23HostControllerInterfaceP", ""]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", ""]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", ""]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0C11AddressTypeO", ""]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV12FilterPolicyO", ""]
+- ["9Bluetooth0A23HostControllerInterfaceP", "setPeriodicAdvertisingCreateSyncParameters"]
+depends-top-level:
+- !private "*"
+- !private "..."
+- "<"
+- "<="
+- "=="
+- ">"
+- ">="
+- "Address"
+- !private "Array"
+- "AssignmentPrecedence"
+- "BluetoothHostControllerInterface"
+- "Bool"
+- "Comparable"
+- "Data"
+- "Double"
+- "Equatable"
+- "FloatLiteralType"
+- "HCICommandParameter"
+- "HCICommandTimeout"
+- "HCILEPeriodicAdvertisingCreateSync"
+- "HCILowEnergyCommand"
+- "Hashable"
+- "Int"
+- "IntegerLiteralType"
+- "RawRepresentable"
+- !private "StringLiteralType"
+- "UInt16"
+- "UInt8"
+- !private "assert"
+- !private "~="
+depends-member:
+- !private ["9Bluetooth7AddressV", "bytes"]
+- !private ["9Bluetooth7AddressV", "deinit"]
+- !private ["9Bluetooth7AddressV", "littleEndian"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0C11AddressTypeO", "RawValue"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0C11AddressTypeO", "_Default_RawValue"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0C11AddressTypeO", "deinit"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0C11AddressTypeO", "hashValue"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0C11AddressTypeO", "init"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0C11AddressTypeO", "publicDeviceAddress"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0C11AddressTypeO", "randomDeviceAddress"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0C11AddressTypeO", "rawValue"]
+- !private ["s23BidirectionalCollectionP", "contains"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s19BinaryFloatingPointP", "init"]
+- !private ["s13BinaryIntegerP", "bytes"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["s13BinaryIntegerP", "littleEndian"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "HCICommandTimeout"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "HCILEPeriodicAdvertisingCreateSync"]
+- !private ["9Bluetooth0A23HostControllerInterfaceP", "deviceRequest"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "setPeriodicAdvertisingCreateSyncParameters"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["9Bluetooth8ByteSwapP", "bytes"]
+- !private ["9Bluetooth8ByteSwapP", "littleEndian"]
+- !private ["9Bluetooth9ByteValueP", "bytes"]
+- !private ["9Bluetooth9ByteValueP", "littleEndian"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "bytes"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "littleEndian"]
+- !private ["s11ClosedRangeV", "contains"]
+- !private ["s10CollectionP", "contains"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "Double"]
+- !private ["s10ComparableP", "Int"]
+- ["s10ComparableP", "RawValue"]
+- ["s10ComparableP", "SyncTimeout"]
+- ["s10ComparableP", ""]
+- ["s10ComparableP", "_Default_RawValue"]
+- !private ["s10ComparableP", "assert"]
+- !private ["s10ComparableP", "bytes"]
+- ["s10ComparableP", "hashValue"]
+- ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "littleEndian"]
+- !private ["s10ComparableP", "max"]
+- !private ["s10ComparableP", "min"]
+- ["s10ComparableP", "rawValue"]
+- !private ["s20CountableClosedRangeV", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "bytes"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "littleEndian"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "bytes"]
+- !private ["s17CustomReflectableP", "contains"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "littleEndian"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "bytes"]
+- !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "littleEndian"]
+- ["s23CustomStringConvertibleP", "periodicAdvertisingCreateSync"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "bytes"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "littleEndian"]
+- !private ["Sd", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "bytes"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "littleEndian"]
+- !private ["s9EquatableP", "Double"]
+- !private ["s9EquatableP", "Int"]
+- ["s9EquatableP", "RawValue"]
+- ["s9EquatableP", "SyncTimeout"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "assert"]
+- !private ["s9EquatableP", "bytes"]
+- !private ["s9EquatableP", "contains"]
+- !private ["s9EquatableP", "default"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "littleEndian"]
+- !private ["s9EquatableP", "max"]
+- !private ["s9EquatableP", "min"]
+- ["s9EquatableP", "periodicAdvertisingCreateSync"]
+- ["s9EquatableP", "rawValue"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "bytes"]
+- !private ["s27ExpressibleByIntegerLiteralP", "default"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "littleEndian"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "bytes"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "littleEndian"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV12FilterPolicyO", "RawValue"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV12FilterPolicyO", "_Default_RawValue"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV12FilterPolicyO", "deinit"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV12FilterPolicyO", "hashValue"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV12FilterPolicyO", "init"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV12FilterPolicyO", "rawValue"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV12FilterPolicyO", "useAdvertisingSIDAndAddressTypeAndAddress"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV12FilterPolicyO", "usePeriodicAdvertiserList"]
+- !private ["s17FixedWidthIntegerP", "bytes"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["s17FixedWidthIntegerP", "littleEndian"]
+- !private ["s13FloatingPointP", "init"]
+- ["9Bluetooth10HCICommandP", "periodicAdvertisingCreateSync"]
+- !private ["9Bluetooth19HCICommandParameterP", "Data"]
+- !private ["9Bluetooth19HCICommandParameterP", "Double"]
+- ["9Bluetooth19HCICommandParameterP", "HCICommandType"]
+- ["9Bluetooth19HCICommandParameterP", "HCILowEnergyCommand"]
+- !private ["9Bluetooth19HCICommandParameterP", "Int"]
+- ["9Bluetooth19HCICommandParameterP", "SyncTimeout"]
+- ["9Bluetooth19HCICommandParameterP", ""]
+- ["9Bluetooth19HCICommandParameterP", "_Default_HCICommandType"]
+- !private ["9Bluetooth19HCICommandParameterP", "address"]
+- !private ["9Bluetooth19HCICommandParameterP", "advertisingAddressType"]
+- !private ["9Bluetooth19HCICommandParameterP", "advertisingSid"]
+- !private ["9Bluetooth19HCICommandParameterP", "assert"]
+- ["9Bluetooth19HCICommandParameterP", "command"]
+- ["9Bluetooth19HCICommandParameterP", "data"]
+- !private ["9Bluetooth19HCICommandParameterP", "filterPolicy"]
+- !private ["9Bluetooth19HCICommandParameterP", "skip"]
+- !private ["9Bluetooth19HCICommandParameterP", "syncTimeout"]
+- !private ["9Bluetooth19HCICommandParameterP", "unused"]
+- !private ["9Bluetooth17HCICommandTimeoutV", "default"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "Address"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "AdvertisingAddressType"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "Bool"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "Comparable"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "Data"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "Double"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "Equatable"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "FilterPolicy"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "HCICommandType"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "HCILowEnergyCommand"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "Hashable"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "Int"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "RawRepresentable"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "SyncTimeout"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "UInt16"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "UInt8"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "_Default_HCICommandType"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "address"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "advertisingAddressType"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "advertisingSid"]
+- !private ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "assert"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "command"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "data"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "deinit"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "filterPolicy"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "init"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "skip"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "syncTimeout"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV", "unused"]
+- ["9Bluetooth19HCILowEnergyCommandO", "deinit"]
+- ["9Bluetooth19HCILowEnergyCommandO", "periodicAdvertisingCreateSync"]
+- !private ["s8HashableP", "Double"]
+- !private ["s8HashableP", "Int"]
+- ["s8HashableP", "RawValue"]
+- ["s8HashableP", "SyncTimeout"]
+- ["s8HashableP", ""]
+- ["s8HashableP", "_Default_RawValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "assert"]
+- !private ["s8HashableP", "bytes"]
+- !private ["s8HashableP", "default"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "littleEndian"]
+- !private ["s8HashableP", "max"]
+- !private ["s8HashableP", "min"]
+- ["s8HashableP", "periodicAdvertisingCreateSync"]
+- ["s8HashableP", "rawValue"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "bytes"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "littleEndian"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s7NumericP", "bytes"]
+- !private ["s7NumericP", "init"]
+- !private ["s7NumericP", "littleEndian"]
+- !private ["s22RandomAccessCollectionP", "contains"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s15RangeExpressionP", "contains"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "Double"]
+- !private ["s16RawRepresentableP", "Int"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", "SyncTimeout"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- !private ["s16RawRepresentableP", "assert"]
+- !private ["s16RawRepresentableP", "bytes"]
+- !private ["s16RawRepresentableP", "default"]
+- ["s16RawRepresentableP", "hashValue"]
+- ["s16RawRepresentableP", "init"]
+- !private ["s16RawRepresentableP", "littleEndian"]
+- !private ["s16RawRepresentableP", "max"]
+- !private ["s16RawRepresentableP", "min"]
+- ["s16RawRepresentableP", "periodicAdvertisingCreateSync"]
+- ["s16RawRepresentableP", "rawValue"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["s8SequenceP", "contains"]
+- !private ["s8SequenceP", "init"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "bytes"]
+- !private ["s10StrideableP", "init"]
+- !private ["s10StrideableP", "littleEndian"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "<"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "=="]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "Bool"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "Double"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "Int"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "RawValue"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "SyncTimeout"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "UInt16"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "_Default_RawValue"]
+- !private ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "assert"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "deinit"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "hashValue"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "init"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "max"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "miliseconds"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "min"]
+- ["9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV", "rawValue"]
+- !private ["s6UInt16V", "bytes"]
+- !private ["s6UInt16V", "littleEndian"]
+- !private ["s15UnsignedIntegerP", "bytes"]
+- !private ["s15UnsignedIntegerP", "littleEndian"]
+- !private ["s18_BitwiseOperationsP", "bytes"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["s18_BitwiseOperationsP", "littleEndian"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "bytes"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "littleEndian"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "bytes"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "littleEndian"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "bytes"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "littleEndian"]
+- !private ["s14_StringElementP", "bytes"]
+- !private ["s14_StringElementP", "littleEndian"]
+depends-nominal:
+- !private "9Bluetooth7AddressV"
+- "9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0C11AddressTypeO"
+- !private "s23BidirectionalCollectionP"
+- !private "s19BinaryFloatingPointP"
+- !private "s13BinaryIntegerP"
+- "9Bluetooth0A23HostControllerInterfaceP"
+- !private "Sb"
+- !private "9Bluetooth8ByteSwapP"
+- !private "9Bluetooth9ByteValueP"
+- !private "s7CVarArgP"
+- !private "s11ClosedRangeV"
+- !private "s10CollectionP"
+- "s10ComparableP"
+- !private "s20CountableClosedRangeV"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "s9DecodableP"
+- !private "Sd"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV12FilterPolicyO"
+- !private "s17FixedWidthIntegerP"
+- !private "s13FloatingPointP"
+- "9Bluetooth10HCICommandP"
+- "9Bluetooth19HCICommandParameterP"
+- !private "9Bluetooth17HCICommandTimeoutV"
+- "9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV"
+- "9Bluetooth19HCILowEnergyCommandO"
+- "s8HashableP"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- !private "s15RangeExpressionP"
+- !private "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- "9Bluetooth34HCILEPeriodicAdvertisingCreateSyncV0E7TimeoutV"
+- !private "s6UInt16V"
+- !private "s15UnsignedIntegerP"
+- !private "s18_BitwiseOperationsP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+- !private "s14_StringElementP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "afa21f214d71984406c7b457a2892cba"

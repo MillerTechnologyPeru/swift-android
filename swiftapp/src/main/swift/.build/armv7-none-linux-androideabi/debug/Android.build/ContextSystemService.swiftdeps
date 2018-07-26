@@ -1,0 +1,141 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AndroidContextSystemService"
+- "AndroidContextSystemServiceName"
+provides-nominal:
+- "7Android0A20ContextSystemServiceP"
+- "7Android0A24ContextSystemServiceNameV"
+provides-member:
+- ["7Android0A7ContextC", ""]
+- ["7Android0A20ContextSystemServiceP", ""]
+- ["7Android0A24ContextSystemServiceNameV", ""]
+- ["7Android0A7ContextC", "SystemService"]
+- ["7Android0A20ContextSystemServiceP", "Name"]
+depends-top-level:
+- "Android"
+- "AndroidContextSystemService"
+- "AndroidContextSystemServiceName"
+- "AssignmentPrecedence"
+- "ExpressibleByStringLiteral"
+- "RawRepresentable"
+- "String"
+depends-member:
+- ["7AndroidAAO", "Content"]
+- ["7Android0A7ContextC", "AndroidContextSystemService"]
+- ["7Android0A7ContextC", "SystemService"]
+- ["7Android0A7ContextC", "bluetoothService"]
+- ["7Android0A7ContextC", "layoutInflaterService"]
+- ["7Android0A20ContextSystemServiceP", "Android"]
+- ["7Android0A20ContextSystemServiceP", "AndroidContextSystemServiceName"]
+- ["7Android0A20ContextSystemServiceP", "Name"]
+- ["7Android0A20ContextSystemServiceP", "systemServiceName"]
+- ["7Android0A24ContextSystemServiceNameV", "Android"]
+- ["7Android0A24ContextSystemServiceNameV", "ExtendedGraphemeClusterLiteralType"]
+- ["7Android0A24ContextSystemServiceNameV", "RawValue"]
+- ["7Android0A24ContextSystemServiceNameV", "String"]
+- ["7Android0A24ContextSystemServiceNameV", "StringLiteralType"]
+- ["7Android0A24ContextSystemServiceNameV", "UnicodeScalarLiteralType"]
+- ["7Android0A24ContextSystemServiceNameV", "_Default_ExtendedGraphemeClusterLiteralType"]
+- ["7Android0A24ContextSystemServiceNameV", "_Default_RawValue"]
+- ["7Android0A24ContextSystemServiceNameV", "_Default_StringLiteralType"]
+- ["7Android0A24ContextSystemServiceNameV", "_Default_UnicodeScalarLiteralType"]
+- ["7Android0A24ContextSystemServiceNameV", "bluetooth"]
+- ["7Android0A24ContextSystemServiceNameV", "deinit"]
+- ["7Android0A24ContextSystemServiceNameV", "init"]
+- ["7Android0A24ContextSystemServiceNameV", "layoutInflater"]
+- ["7Android0A24ContextSystemServiceNameV", "rawValue"]
+- ["7AndroidAAO7ContentO", "Context"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "Android"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "ExtendedGraphemeClusterLiteralType"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "RawValue"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "StringLiteralType"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "UnicodeScalarLiteralType"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "_Default_ExtendedGraphemeClusterLiteralType"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "_Default_RawValue"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "_Default_StringLiteralType"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "_Default_UnicodeScalarLiteralType"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "rawValue"]
+- ["s26ExpressibleByStringLiteralP", "Android"]
+- ["s26ExpressibleByStringLiteralP", "ExtendedGraphemeClusterLiteralType"]
+- ["s26ExpressibleByStringLiteralP", "RawValue"]
+- ["s26ExpressibleByStringLiteralP", "StringLiteralType"]
+- ["s26ExpressibleByStringLiteralP", "UnicodeScalarLiteralType"]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s26ExpressibleByStringLiteralP", "_Default_ExtendedGraphemeClusterLiteralType"]
+- ["s26ExpressibleByStringLiteralP", "_Default_RawValue"]
+- ["s26ExpressibleByStringLiteralP", "_Default_StringLiteralType"]
+- ["s26ExpressibleByStringLiteralP", "_Default_UnicodeScalarLiteralType"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "rawValue"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "Android"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "ExtendedGraphemeClusterLiteralType"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "RawValue"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "StringLiteralType"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "UnicodeScalarLiteralType"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "_Default_ExtendedGraphemeClusterLiteralType"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "_Default_RawValue"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "_Default_StringLiteralType"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "_Default_UnicodeScalarLiteralType"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "rawValue"]
+- ["10java_swift9JNIObjectC", "AndroidContextSystemService"]
+- ["10java_swift9JNIObjectC", "SystemService"]
+- ["10java_swift9JNIObjectC", "bluetoothService"]
+- ["10java_swift9JNIObjectC", "layoutInflaterService"]
+- ["10java_swift13JNIObjectInitP", "SystemService"]
+- ["10java_swift13JNIObjectInitP", "bluetoothService"]
+- ["10java_swift13JNIObjectInitP", "layoutInflaterService"]
+- ["10java_swift17JNIObjectProtocolP", "SystemService"]
+- ["10java_swift17JNIObjectProtocolP", "bluetoothService"]
+- ["10java_swift17JNIObjectProtocolP", "layoutInflaterService"]
+- ["10java_swift10JavaObjectC", "AndroidContextSystemService"]
+- ["10java_swift10JavaObjectC", "SystemService"]
+- ["10java_swift10JavaObjectC", "bluetoothService"]
+- ["10java_swift10JavaObjectC", "layoutInflaterService"]
+- ["7Android11JavaPackageP", "Content"]
+- ["7Android11JavaPackageP", "Context"]
+- ["s16RawRepresentableP", "Android"]
+- ["s16RawRepresentableP", "ExtendedGraphemeClusterLiteralType"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", "StringLiteralType"]
+- ["s16RawRepresentableP", "UnicodeScalarLiteralType"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_ExtendedGraphemeClusterLiteralType"]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- ["s16RawRepresentableP", "_Default_StringLiteralType"]
+- ["s16RawRepresentableP", "_Default_UnicodeScalarLiteralType"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "rawValue"]
+depends-nominal:
+- "7AndroidAAO"
+- "7Android0A7ContextC"
+- "7Android0A20ContextSystemServiceP"
+- "7Android0A24ContextSystemServiceNameV"
+- "7AndroidAAO7ContentO"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "10java_swift9JNIObjectC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- "10java_swift10JavaObjectC"
+- "7Android11JavaPackageP"
+- "s16RawRepresentableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/JNI.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Bluetooth.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_util.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "915321dbe7364ac929b04b5caa5a56ba"

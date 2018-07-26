@@ -1,0 +1,75 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["9Bluetooth0A23HostControllerInterfaceP", ""]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergyCreateConnectionCancel"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergyReadLocalP256PublicKey"]
+depends-top-level:
+- "BluetoothHostControllerInterface"
+- "HCICommandTimeout"
+- !private "HCILEReadLocalP256PublicKeyComplete"
+- !private "HCILowEnergyCommand"
+- "UInt512"
+depends-member:
+- ["9Bluetooth0A23HostControllerInterfaceP", "HCICommandTimeout"]
+- !private ["9Bluetooth0A23HostControllerInterfaceP", "HCILEReadLocalP256PublicKeyComplete"]
+- !private ["9Bluetooth0A23HostControllerInterfaceP", "HCILowEnergyCommand"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "UInt512"]
+- !private ["9Bluetooth0A23HostControllerInterfaceP", "deviceRequest"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergyCreateConnectionCancel"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergyReadLocalP256PublicKey"]
+- !private ["s23CustomStringConvertibleP", "createConnectionCancel"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- ["s23CustomStringConvertibleP", "error"]
+- !private ["s23CustomStringConvertibleP", "readLocalP256PublicKeyCommand"]
+- ["s23CustomStringConvertibleP", "success"]
+- !private ["s9EquatableP", "createConnectionCancel"]
+- !private ["s9EquatableP", "default"]
+- !private ["s9EquatableP", "readLocalP256PublicKeyCommand"]
+- !private ["s27ExpressibleByIntegerLiteralP", "default"]
+- !private ["9Bluetooth10HCICommandP", "createConnectionCancel"]
+- !private ["9Bluetooth10HCICommandP", "readLocalP256PublicKeyCommand"]
+- !private ["9Bluetooth17HCICommandTimeoutV", "default"]
+- !private ["9Bluetooth8HCIErrorO", "deinit"]
+- !private ["9Bluetooth17HCIEventParameterP", "localP256PublicKey"]
+- !private ["9Bluetooth17HCIEventParameterP", "status"]
+- !private ["9Bluetooth35HCILEReadLocalP256PublicKeyCompleteV", "deinit"]
+- !private ["9Bluetooth35HCILEReadLocalP256PublicKeyCompleteV", "localP256PublicKey"]
+- !private ["9Bluetooth35HCILEReadLocalP256PublicKeyCompleteV", "status"]
+- !private ["9Bluetooth19HCILowEnergyCommandO", "createConnectionCancel"]
+- !private ["9Bluetooth19HCILowEnergyCommandO", "deinit"]
+- !private ["9Bluetooth19HCILowEnergyCommandO", "readLocalP256PublicKeyCommand"]
+- ["9Bluetooth9HCIStatusO", "error"]
+- ["9Bluetooth9HCIStatusO", "success"]
+- !private ["s8HashableP", "createConnectionCancel"]
+- !private ["s8HashableP", "default"]
+- !private ["s8HashableP", "readLocalP256PublicKeyCommand"]
+- !private ["s16RawRepresentableP", "createConnectionCancel"]
+- !private ["s16RawRepresentableP", "default"]
+- ["s16RawRepresentableP", "error"]
+- !private ["s16RawRepresentableP", "readLocalP256PublicKeyCommand"]
+- ["s16RawRepresentableP", "success"]
+depends-nominal:
+- "9Bluetooth0A23HostControllerInterfaceP"
+- "s23CustomStringConvertibleP"
+- !private "s9EquatableP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "9Bluetooth10HCICommandP"
+- !private "9Bluetooth17HCICommandTimeoutV"
+- !private "9Bluetooth8HCIErrorO"
+- !private "9Bluetooth17HCIEventParameterP"
+- !private "9Bluetooth35HCILEReadLocalP256PublicKeyCompleteV"
+- !private "9Bluetooth19HCILowEnergyCommandO"
+- "9Bluetooth9HCIStatusO"
+- !private "s8HashableP"
+- "s16RawRepresentableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "f3cfbc7ce6ced5d6d58539963ef754cb"

@@ -1,0 +1,113 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HCICommand"
+- "HCIOpcodeCommandField"
+- "HCICommandParameter"
+- "HCICommandReturnParameter"
+provides-nominal:
+- "9Bluetooth10HCICommandP"
+- "9Bluetooth19HCICommandParameterP"
+- "9Bluetooth25HCICommandReturnParameterP"
+provides-member:
+- ["9Bluetooth10HCICommandP", ""]
+- ["9Bluetooth19HCICommandParameterP", ""]
+- ["9Bluetooth25HCICommandReturnParameterP", ""]
+- ["9Bluetooth10HCICommandP", "description"]
+- ["9Bluetooth10HCICommandP", "opcode"]
+depends-top-level:
+- !private "&"
+- !private "<<"
+- "CustomStringConvertible"
+- "Data"
+- !private "FloatLiteralType"
+- "HCICommand"
+- "HCICommandParameter"
+- "HCICommandReturnParameter"
+- "HCIOpcodeCommandField"
+- "HCIOpcodeGroupField"
+- "Hashable"
+- "Int"
+- !private "IntegerLiteralType"
+- "RawRepresentable"
+- "String"
+- "UInt16"
+- !private "|"
+depends-member:
+- ["s23CustomStringConvertibleP", "HCIOpcodeCommandField"]
+- ["s23CustomStringConvertibleP", "HCIOpcodeGroupField"]
+- !private ["s23CustomStringConvertibleP", "Self"]
+- ["s23CustomStringConvertibleP", "String"]
+- ["s23CustomStringConvertibleP", "UInt16"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "opcodeGroupField"]
+- !private ["s23CustomStringConvertibleP", "rawValue"]
+- ["s9EquatableP", "HCIOpcodeCommandField"]
+- ["s9EquatableP", "HCIOpcodeGroupField"]
+- !private ["s9EquatableP", "Self"]
+- ["s9EquatableP", "String"]
+- ["s9EquatableP", "UInt16"]
+- !private ["s9EquatableP", "name"]
+- !private ["s9EquatableP", "opcodeGroupField"]
+- !private ["s9EquatableP", "rawValue"]
+- ["9Bluetooth10HCICommandP", "HCIOpcodeCommandField"]
+- ["9Bluetooth10HCICommandP", "HCIOpcodeGroupField"]
+- !private ["9Bluetooth10HCICommandP", "Self"]
+- ["9Bluetooth10HCICommandP", "String"]
+- ["9Bluetooth10HCICommandP", "UInt16"]
+- ["9Bluetooth10HCICommandP", "description"]
+- ["9Bluetooth10HCICommandP", "init"]
+- ["9Bluetooth10HCICommandP", "name"]
+- ["9Bluetooth10HCICommandP", "opcode"]
+- ["9Bluetooth10HCICommandP", "opcodeGroupField"]
+- ["9Bluetooth10HCICommandP", "rawValue"]
+- ["9Bluetooth19HCICommandParameterP", "Data"]
+- ["9Bluetooth19HCICommandParameterP", "HCICommand"]
+- ["9Bluetooth19HCICommandParameterP", "HCICommandType"]
+- ["9Bluetooth19HCICommandParameterP", "command"]
+- ["9Bluetooth19HCICommandParameterP", "data"]
+- ["9Bluetooth25HCICommandReturnParameterP", "Data"]
+- ["9Bluetooth25HCICommandReturnParameterP", "HCICommand"]
+- ["9Bluetooth25HCICommandReturnParameterP", "HCICommandType"]
+- ["9Bluetooth25HCICommandReturnParameterP", "Int"]
+- ["9Bluetooth25HCICommandReturnParameterP", "command"]
+- ["9Bluetooth25HCICommandReturnParameterP", "init"]
+- ["9Bluetooth25HCICommandReturnParameterP", "length"]
+- !private ["9Bluetooth19HCIOpcodeGroupFieldO", "deinit"]
+- !private ["9Bluetooth19HCIOpcodeGroupFieldO", "rawValue"]
+- ["s8HashableP", "HCIOpcodeCommandField"]
+- ["s8HashableP", "HCIOpcodeGroupField"]
+- !private ["s8HashableP", "Self"]
+- ["s8HashableP", "String"]
+- ["s8HashableP", "UInt16"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "name"]
+- !private ["s8HashableP", "opcodeGroupField"]
+- !private ["s8HashableP", "rawValue"]
+- ["s16RawRepresentableP", "HCIOpcodeCommandField"]
+- ["s16RawRepresentableP", "HCIOpcodeGroupField"]
+- !private ["s16RawRepresentableP", "Self"]
+- ["s16RawRepresentableP", "String"]
+- ["s16RawRepresentableP", "UInt16"]
+- ["s16RawRepresentableP", ""]
+- !private ["s16RawRepresentableP", "name"]
+- !private ["s16RawRepresentableP", "opcodeGroupField"]
+- !private ["s16RawRepresentableP", "rawValue"]
+depends-nominal:
+- "s23CustomStringConvertibleP"
+- "s9EquatableP"
+- "9Bluetooth10HCICommandP"
+- "9Bluetooth19HCICommandParameterP"
+- "9Bluetooth25HCICommandReturnParameterP"
+- !private "9Bluetooth19HCIOpcodeGroupFieldO"
+- "s8HashableP"
+- "s16RawRepresentableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "89298355d64db112382d66952e744229"

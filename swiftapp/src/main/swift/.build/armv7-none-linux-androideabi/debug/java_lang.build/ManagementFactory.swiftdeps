@@ -1,0 +1,589 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ManagementFactory"
+provides-nominal:
+- "9java_lang17ManagementFactoryC"
+provides-member:
+- ["9java_lang17ManagementFactoryC", ""]
+depends-top-level:
+- !private "!="
+- "AssignmentPrecedence"
+- "ClassLoadingMXBean"
+- !private "ClassLoadingMXBeanForward"
+- "CompilationMXBean"
+- !private "CompilationMXBeanForward"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- !private "JNI"
+- !private "JNIField"
+- !private "JNIMethod"
+- !private "JNIType"
+- "ManagementFactory"
+- "MemoryMXBean"
+- !private "MemoryMXBeanForward"
+- "OperatingSystemMXBean"
+- !private "OperatingSystemMXBeanForward"
+- "PlatformManagedObject"
+- !private "PlatformManagedObjectForward"
+- "RuntimeMXBean"
+- !private "RuntimeMXBeanForward"
+- "StaticString"
+- "String"
+- !private "StringLiteralType"
+- "TernaryPrecedence"
+- "ThreadMXBean"
+- !private "ThreadMXBeanForward"
+- !private "UnavailableObject"
+- "UnavailableProtocol"
+- !private "UnavailableProtocolForward"
+- "java_swift"
+- "jclass"
+- "jfieldID"
+- "jmethodID"
+- !private "jobject"
+- !private "jvalue"
+depends-member:
+- !private ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["9java_lang18ClassLoadingMXBeanP", "init"]
+- !private ["9java_lang25ClassLoadingMXBeanForwardC", "deinit"]
+- !private ["9java_lang25ClassLoadingMXBeanForwardC", "init"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "init"]
+- !private ["9java_lang17CompilationMXBeanP", "init"]
+- !private ["9java_lang24CompilationMXBeanForwardC", "deinit"]
+- !private ["9java_lang24CompilationMXBeanForwardC", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s5ErrorP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "init"]
+- !private ["10java_swift7JNICoreC", "DeleteLocalRef"]
+- !private ["10java_swift7JNICoreC", "ExceptionCheck"]
+- !private ["10java_swift8JNIFieldC", "GetStaticObjectField"]
+- !private ["10java_swift9JNIMethodC", "CallStaticObjectMethod"]
+- ["10java_swift9JNIObjectC", "CLASS_LOADING_MXBEAN_NAME"]
+- ["10java_swift9JNIObjectC", "CLASS_LOADING_MXBEAN_NAME_FieldID"]
+- ["10java_swift9JNIObjectC", "COMPILATION_MXBEAN_NAME"]
+- ["10java_swift9JNIObjectC", "COMPILATION_MXBEAN_NAME_FieldID"]
+- ["10java_swift9JNIObjectC", "ClassLoadingMXBean"]
+- !private ["10java_swift9JNIObjectC", "ClassLoadingMXBeanForward"]
+- ["10java_swift9JNIObjectC", "CompilationMXBean"]
+- !private ["10java_swift9JNIObjectC", "CompilationMXBeanForward"]
+- ["10java_swift9JNIObjectC", "GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE"]
+- ["10java_swift9JNIObjectC", "GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE_FieldID"]
+- ["10java_swift9JNIObjectC", "Int"]
+- !private ["10java_swift9JNIObjectC", "JNI"]
+- !private ["10java_swift9JNIObjectC", "JNIField"]
+- !private ["10java_swift9JNIObjectC", "JNIMethod"]
+- !private ["10java_swift9JNIObjectC", "JNIType"]
+- ["10java_swift9JNIObjectC", "MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE"]
+- ["10java_swift9JNIObjectC", "MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE_FieldID"]
+- ["10java_swift9JNIObjectC", "MEMORY_MXBEAN_NAME"]
+- ["10java_swift9JNIObjectC", "MEMORY_MXBEAN_NAME_FieldID"]
+- ["10java_swift9JNIObjectC", "MEMORY_POOL_MXBEAN_DOMAIN_TYPE"]
+- ["10java_swift9JNIObjectC", "MEMORY_POOL_MXBEAN_DOMAIN_TYPE_FieldID"]
+- ["10java_swift9JNIObjectC", "ManagementFactoryJNIClass"]
+- ["10java_swift9JNIObjectC", "MemoryMXBean"]
+- !private ["10java_swift9JNIObjectC", "MemoryMXBeanForward"]
+- ["10java_swift9JNIObjectC", "OPERATING_SYSTEM_MXBEAN_NAME"]
+- ["10java_swift9JNIObjectC", "OPERATING_SYSTEM_MXBEAN_NAME_FieldID"]
+- ["10java_swift9JNIObjectC", "OperatingSystemMXBean"]
+- !private ["10java_swift9JNIObjectC", "OperatingSystemMXBeanForward"]
+- ["10java_swift9JNIObjectC", "PlatformManagedObject"]
+- !private ["10java_swift9JNIObjectC", "PlatformManagedObjectForward"]
+- ["10java_swift9JNIObjectC", "RUNTIME_MXBEAN_NAME"]
+- ["10java_swift9JNIObjectC", "RUNTIME_MXBEAN_NAME_FieldID"]
+- ["10java_swift9JNIObjectC", "RuntimeMXBean"]
+- !private ["10java_swift9JNIObjectC", "RuntimeMXBeanForward"]
+- ["10java_swift9JNIObjectC", "StaticString"]
+- ["10java_swift9JNIObjectC", "String"]
+- ["10java_swift9JNIObjectC", "THREAD_MXBEAN_NAME"]
+- ["10java_swift9JNIObjectC", "THREAD_MXBEAN_NAME_FieldID"]
+- ["10java_swift9JNIObjectC", "ThreadMXBean"]
+- !private ["10java_swift9JNIObjectC", "ThreadMXBeanForward"]
+- !private ["10java_swift9JNIObjectC", "UnavailableObject"]
+- ["10java_swift9JNIObjectC", "UnavailableProtocol"]
+- !private ["10java_swift9JNIObjectC", "UnavailableProtocolForward"]
+- ["10java_swift9JNIObjectC", "getClassLoadingMXBean"]
+- ["10java_swift9JNIObjectC", "getClassLoadingMXBean_MethodID_1"]
+- ["10java_swift9JNIObjectC", "getCompilationMXBean"]
+- ["10java_swift9JNIObjectC", "getCompilationMXBean_MethodID_2"]
+- ["10java_swift9JNIObjectC", "getGarbageCollectorMXBeans"]
+- ["10java_swift9JNIObjectC", "getGarbageCollectorMXBeans_MethodID_3"]
+- ["10java_swift9JNIObjectC", "getMemoryMXBean"]
+- ["10java_swift9JNIObjectC", "getMemoryMXBean_MethodID_4"]
+- ["10java_swift9JNIObjectC", "getMemoryManagerMXBeans"]
+- ["10java_swift9JNIObjectC", "getMemoryManagerMXBeans_MethodID_5"]
+- ["10java_swift9JNIObjectC", "getMemoryPoolMXBeans"]
+- ["10java_swift9JNIObjectC", "getMemoryPoolMXBeans_MethodID_6"]
+- ["10java_swift9JNIObjectC", "getOperatingSystemMXBean"]
+- ["10java_swift9JNIObjectC", "getOperatingSystemMXBean_MethodID_7"]
+- ["10java_swift9JNIObjectC", "getPlatformMBeanServer"]
+- ["10java_swift9JNIObjectC", "getPlatformMBeanServer_MethodID_8"]
+- ["10java_swift9JNIObjectC", "getPlatformMXBean"]
+- ["10java_swift9JNIObjectC", "getPlatformMXBean_MethodID_10"]
+- ["10java_swift9JNIObjectC", "getPlatformMXBean_MethodID_9"]
+- ["10java_swift9JNIObjectC", "getPlatformMXBeans"]
+- ["10java_swift9JNIObjectC", "getPlatformMXBeans_MethodID_11"]
+- ["10java_swift9JNIObjectC", "getPlatformMXBeans_MethodID_12"]
+- ["10java_swift9JNIObjectC", "getPlatformManagementInterfaces"]
+- ["10java_swift9JNIObjectC", "getPlatformManagementInterfaces_MethodID_13"]
+- ["10java_swift9JNIObjectC", "getRuntimeMXBean"]
+- ["10java_swift9JNIObjectC", "getRuntimeMXBean_MethodID_14"]
+- ["10java_swift9JNIObjectC", "getThreadMXBean"]
+- ["10java_swift9JNIObjectC", "getThreadMXBean_MethodID_15"]
+- ["10java_swift9JNIObjectC", "init"]
+- !private ["10java_swift9JNIObjectC", "javaObject"]
+- ["10java_swift9JNIObjectC", "java_swift"]
+- ["10java_swift9JNIObjectC", "jclass"]
+- ["10java_swift9JNIObjectC", "jfieldID"]
+- ["10java_swift9JNIObjectC", "jmethodID"]
+- !private ["10java_swift9JNIObjectC", "jobject"]
+- !private ["10java_swift9JNIObjectC", "jvalue"]
+- ["10java_swift9JNIObjectC", "newPlatformMXBeanProxy"]
+- ["10java_swift9JNIObjectC", "newPlatformMXBeanProxy_MethodID_16"]
+- !private ["10java_swift9JNIObjectC", "withJavaObject"]
+- !private ["10java_swift16JNIObjectForwardC", "init"]
+- !private ["10java_swift13JNIObjectInitP", "CLASS_LOADING_MXBEAN_NAME_FieldID"]
+- !private ["10java_swift13JNIObjectInitP", "COMPILATION_MXBEAN_NAME_FieldID"]
+- !private ["10java_swift13JNIObjectInitP", "ClassLoadingMXBeanForward"]
+- !private ["10java_swift13JNIObjectInitP", "CompilationMXBeanForward"]
+- !private ["10java_swift13JNIObjectInitP", "GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE_FieldID"]
+- !private ["10java_swift13JNIObjectInitP", "JNI"]
+- !private ["10java_swift13JNIObjectInitP", "JNIField"]
+- !private ["10java_swift13JNIObjectInitP", "JNIMethod"]
+- !private ["10java_swift13JNIObjectInitP", "JNIType"]
+- !private ["10java_swift13JNIObjectInitP", "MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE_FieldID"]
+- !private ["10java_swift13JNIObjectInitP", "MEMORY_MXBEAN_NAME_FieldID"]
+- !private ["10java_swift13JNIObjectInitP", "MEMORY_POOL_MXBEAN_DOMAIN_TYPE_FieldID"]
+- !private ["10java_swift13JNIObjectInitP", "ManagementFactoryJNIClass"]
+- !private ["10java_swift13JNIObjectInitP", "MemoryMXBeanForward"]
+- !private ["10java_swift13JNIObjectInitP", "OPERATING_SYSTEM_MXBEAN_NAME_FieldID"]
+- !private ["10java_swift13JNIObjectInitP", "OperatingSystemMXBeanForward"]
+- !private ["10java_swift13JNIObjectInitP", "PlatformManagedObjectForward"]
+- !private ["10java_swift13JNIObjectInitP", "RUNTIME_MXBEAN_NAME_FieldID"]
+- !private ["10java_swift13JNIObjectInitP", "RuntimeMXBeanForward"]
+- !private ["10java_swift13JNIObjectInitP", "String"]
+- !private ["10java_swift13JNIObjectInitP", "THREAD_MXBEAN_NAME_FieldID"]
+- !private ["10java_swift13JNIObjectInitP", "ThreadMXBeanForward"]
+- !private ["10java_swift13JNIObjectInitP", "UnavailableObject"]
+- !private ["10java_swift13JNIObjectInitP", "UnavailableProtocolForward"]
+- ["10java_swift13JNIObjectInitP", ""]
+- !private ["10java_swift13JNIObjectInitP", "getClassLoadingMXBean_MethodID_1"]
+- !private ["10java_swift13JNIObjectInitP", "getCompilationMXBean_MethodID_2"]
+- !private ["10java_swift13JNIObjectInitP", "getGarbageCollectorMXBeans_MethodID_3"]
+- !private ["10java_swift13JNIObjectInitP", "getMemoryMXBean_MethodID_4"]
+- !private ["10java_swift13JNIObjectInitP", "getMemoryManagerMXBeans_MethodID_5"]
+- !private ["10java_swift13JNIObjectInitP", "getMemoryPoolMXBeans_MethodID_6"]
+- !private ["10java_swift13JNIObjectInitP", "getOperatingSystemMXBean_MethodID_7"]
+- !private ["10java_swift13JNIObjectInitP", "getPlatformMBeanServer_MethodID_8"]
+- !private ["10java_swift13JNIObjectInitP", "getPlatformMXBean"]
+- !private ["10java_swift13JNIObjectInitP", "getPlatformMXBean_MethodID_10"]
+- !private ["10java_swift13JNIObjectInitP", "getPlatformMXBean_MethodID_9"]
+- !private ["10java_swift13JNIObjectInitP", "getPlatformMXBeans"]
+- !private ["10java_swift13JNIObjectInitP", "getPlatformMXBeans_MethodID_11"]
+- !private ["10java_swift13JNIObjectInitP", "getPlatformMXBeans_MethodID_12"]
+- !private ["10java_swift13JNIObjectInitP", "getPlatformManagementInterfaces_MethodID_13"]
+- !private ["10java_swift13JNIObjectInitP", "getRuntimeMXBean_MethodID_14"]
+- !private ["10java_swift13JNIObjectInitP", "getThreadMXBean_MethodID_15"]
+- !private ["10java_swift13JNIObjectInitP", "init"]
+- !private ["10java_swift13JNIObjectInitP", "javaObject"]
+- !private ["10java_swift13JNIObjectInitP", "java_swift"]
+- !private ["10java_swift13JNIObjectInitP", "jobject"]
+- !private ["10java_swift13JNIObjectInitP", "jvalue"]
+- !private ["10java_swift13JNIObjectInitP", "newPlatformMXBeanProxy"]
+- !private ["10java_swift13JNIObjectInitP", "newPlatformMXBeanProxy_MethodID_16"]
+- !private ["10java_swift13JNIObjectInitP", "withJavaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "CLASS_LOADING_MXBEAN_NAME_FieldID"]
+- !private ["10java_swift17JNIObjectProtocolP", "COMPILATION_MXBEAN_NAME_FieldID"]
+- !private ["10java_swift17JNIObjectProtocolP", "ClassLoadingMXBeanForward"]
+- !private ["10java_swift17JNIObjectProtocolP", "CompilationMXBeanForward"]
+- !private ["10java_swift17JNIObjectProtocolP", "GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE_FieldID"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIField"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIMethod"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIType"]
+- !private ["10java_swift17JNIObjectProtocolP", "MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE_FieldID"]
+- !private ["10java_swift17JNIObjectProtocolP", "MEMORY_MXBEAN_NAME_FieldID"]
+- !private ["10java_swift17JNIObjectProtocolP", "MEMORY_POOL_MXBEAN_DOMAIN_TYPE_FieldID"]
+- !private ["10java_swift17JNIObjectProtocolP", "ManagementFactoryJNIClass"]
+- !private ["10java_swift17JNIObjectProtocolP", "MemoryMXBeanForward"]
+- !private ["10java_swift17JNIObjectProtocolP", "OPERATING_SYSTEM_MXBEAN_NAME_FieldID"]
+- !private ["10java_swift17JNIObjectProtocolP", "OperatingSystemMXBeanForward"]
+- !private ["10java_swift17JNIObjectProtocolP", "PlatformManagedObjectForward"]
+- !private ["10java_swift17JNIObjectProtocolP", "RUNTIME_MXBEAN_NAME_FieldID"]
+- !private ["10java_swift17JNIObjectProtocolP", "RuntimeMXBeanForward"]
+- !private ["10java_swift17JNIObjectProtocolP", "String"]
+- !private ["10java_swift17JNIObjectProtocolP", "THREAD_MXBEAN_NAME_FieldID"]
+- !private ["10java_swift17JNIObjectProtocolP", "ThreadMXBeanForward"]
+- !private ["10java_swift17JNIObjectProtocolP", "UnavailableObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "UnavailableProtocolForward"]
+- ["10java_swift17JNIObjectProtocolP", ""]
+- !private ["10java_swift17JNIObjectProtocolP", "getClassLoadingMXBean_MethodID_1"]
+- !private ["10java_swift17JNIObjectProtocolP", "getCompilationMXBean_MethodID_2"]
+- !private ["10java_swift17JNIObjectProtocolP", "getGarbageCollectorMXBeans_MethodID_3"]
+- !private ["10java_swift17JNIObjectProtocolP", "getMemoryMXBean_MethodID_4"]
+- !private ["10java_swift17JNIObjectProtocolP", "getMemoryManagerMXBeans_MethodID_5"]
+- !private ["10java_swift17JNIObjectProtocolP", "getMemoryPoolMXBeans_MethodID_6"]
+- !private ["10java_swift17JNIObjectProtocolP", "getOperatingSystemMXBean_MethodID_7"]
+- !private ["10java_swift17JNIObjectProtocolP", "getPlatformMBeanServer_MethodID_8"]
+- !private ["10java_swift17JNIObjectProtocolP", "getPlatformMXBean"]
+- !private ["10java_swift17JNIObjectProtocolP", "getPlatformMXBean_MethodID_10"]
+- !private ["10java_swift17JNIObjectProtocolP", "getPlatformMXBean_MethodID_9"]
+- !private ["10java_swift17JNIObjectProtocolP", "getPlatformMXBeans"]
+- !private ["10java_swift17JNIObjectProtocolP", "getPlatformMXBeans_MethodID_11"]
+- !private ["10java_swift17JNIObjectProtocolP", "getPlatformMXBeans_MethodID_12"]
+- !private ["10java_swift17JNIObjectProtocolP", "getPlatformManagementInterfaces_MethodID_13"]
+- !private ["10java_swift17JNIObjectProtocolP", "getRuntimeMXBean_MethodID_14"]
+- !private ["10java_swift17JNIObjectProtocolP", "getThreadMXBean_MethodID_15"]
+- !private ["10java_swift17JNIObjectProtocolP", "init"]
+- !private ["10java_swift17JNIObjectProtocolP", "javaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "java_swift"]
+- !private ["10java_swift17JNIObjectProtocolP", "jobject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jvalue"]
+- !private ["10java_swift17JNIObjectProtocolP", "newPlatformMXBeanProxy"]
+- !private ["10java_swift17JNIObjectProtocolP", "newPlatformMXBeanProxy_MethodID_16"]
+- !private ["10java_swift17JNIObjectProtocolP", "withJavaObject"]
+- !private ["10java_swift7JNITypeC", "toJava"]
+- ["10java_swift10JavaObjectC", "CLASS_LOADING_MXBEAN_NAME"]
+- ["10java_swift10JavaObjectC", "CLASS_LOADING_MXBEAN_NAME_FieldID"]
+- ["10java_swift10JavaObjectC", "COMPILATION_MXBEAN_NAME"]
+- ["10java_swift10JavaObjectC", "COMPILATION_MXBEAN_NAME_FieldID"]
+- ["10java_swift10JavaObjectC", "ClassLoadingMXBean"]
+- !private ["10java_swift10JavaObjectC", "ClassLoadingMXBeanForward"]
+- ["10java_swift10JavaObjectC", "CompilationMXBean"]
+- !private ["10java_swift10JavaObjectC", "CompilationMXBeanForward"]
+- ["10java_swift10JavaObjectC", "GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE"]
+- ["10java_swift10JavaObjectC", "GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE_FieldID"]
+- ["10java_swift10JavaObjectC", "Int"]
+- !private ["10java_swift10JavaObjectC", "JNI"]
+- !private ["10java_swift10JavaObjectC", "JNIField"]
+- !private ["10java_swift10JavaObjectC", "JNIMethod"]
+- !private ["10java_swift10JavaObjectC", "JNIType"]
+- ["10java_swift10JavaObjectC", "MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE"]
+- ["10java_swift10JavaObjectC", "MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE_FieldID"]
+- ["10java_swift10JavaObjectC", "MEMORY_MXBEAN_NAME"]
+- ["10java_swift10JavaObjectC", "MEMORY_MXBEAN_NAME_FieldID"]
+- ["10java_swift10JavaObjectC", "MEMORY_POOL_MXBEAN_DOMAIN_TYPE"]
+- ["10java_swift10JavaObjectC", "MEMORY_POOL_MXBEAN_DOMAIN_TYPE_FieldID"]
+- ["10java_swift10JavaObjectC", "ManagementFactoryJNIClass"]
+- ["10java_swift10JavaObjectC", "MemoryMXBean"]
+- !private ["10java_swift10JavaObjectC", "MemoryMXBeanForward"]
+- ["10java_swift10JavaObjectC", "OPERATING_SYSTEM_MXBEAN_NAME"]
+- ["10java_swift10JavaObjectC", "OPERATING_SYSTEM_MXBEAN_NAME_FieldID"]
+- ["10java_swift10JavaObjectC", "OperatingSystemMXBean"]
+- !private ["10java_swift10JavaObjectC", "OperatingSystemMXBeanForward"]
+- ["10java_swift10JavaObjectC", "PlatformManagedObject"]
+- !private ["10java_swift10JavaObjectC", "PlatformManagedObjectForward"]
+- ["10java_swift10JavaObjectC", "RUNTIME_MXBEAN_NAME"]
+- ["10java_swift10JavaObjectC", "RUNTIME_MXBEAN_NAME_FieldID"]
+- ["10java_swift10JavaObjectC", "RuntimeMXBean"]
+- !private ["10java_swift10JavaObjectC", "RuntimeMXBeanForward"]
+- ["10java_swift10JavaObjectC", "StaticString"]
+- ["10java_swift10JavaObjectC", "String"]
+- ["10java_swift10JavaObjectC", "THREAD_MXBEAN_NAME"]
+- ["10java_swift10JavaObjectC", "THREAD_MXBEAN_NAME_FieldID"]
+- ["10java_swift10JavaObjectC", "ThreadMXBean"]
+- !private ["10java_swift10JavaObjectC", "ThreadMXBeanForward"]
+- !private ["10java_swift10JavaObjectC", "UnavailableObject"]
+- ["10java_swift10JavaObjectC", "UnavailableProtocol"]
+- !private ["10java_swift10JavaObjectC", "UnavailableProtocolForward"]
+- ["10java_swift10JavaObjectC", ""]
+- ["10java_swift10JavaObjectC", "getClassLoadingMXBean"]
+- ["10java_swift10JavaObjectC", "getClassLoadingMXBean_MethodID_1"]
+- ["10java_swift10JavaObjectC", "getCompilationMXBean"]
+- ["10java_swift10JavaObjectC", "getCompilationMXBean_MethodID_2"]
+- ["10java_swift10JavaObjectC", "getGarbageCollectorMXBeans"]
+- ["10java_swift10JavaObjectC", "getGarbageCollectorMXBeans_MethodID_3"]
+- ["10java_swift10JavaObjectC", "getMemoryMXBean"]
+- ["10java_swift10JavaObjectC", "getMemoryMXBean_MethodID_4"]
+- ["10java_swift10JavaObjectC", "getMemoryManagerMXBeans"]
+- ["10java_swift10JavaObjectC", "getMemoryManagerMXBeans_MethodID_5"]
+- ["10java_swift10JavaObjectC", "getMemoryPoolMXBeans"]
+- ["10java_swift10JavaObjectC", "getMemoryPoolMXBeans_MethodID_6"]
+- ["10java_swift10JavaObjectC", "getOperatingSystemMXBean"]
+- ["10java_swift10JavaObjectC", "getOperatingSystemMXBean_MethodID_7"]
+- ["10java_swift10JavaObjectC", "getPlatformMBeanServer"]
+- ["10java_swift10JavaObjectC", "getPlatformMBeanServer_MethodID_8"]
+- ["10java_swift10JavaObjectC", "getPlatformMXBean"]
+- ["10java_swift10JavaObjectC", "getPlatformMXBean_MethodID_10"]
+- ["10java_swift10JavaObjectC", "getPlatformMXBean_MethodID_9"]
+- ["10java_swift10JavaObjectC", "getPlatformMXBeans"]
+- ["10java_swift10JavaObjectC", "getPlatformMXBeans_MethodID_11"]
+- ["10java_swift10JavaObjectC", "getPlatformMXBeans_MethodID_12"]
+- ["10java_swift10JavaObjectC", "getPlatformManagementInterfaces"]
+- ["10java_swift10JavaObjectC", "getPlatformManagementInterfaces_MethodID_13"]
+- ["10java_swift10JavaObjectC", "getRuntimeMXBean"]
+- ["10java_swift10JavaObjectC", "getRuntimeMXBean_MethodID_14"]
+- ["10java_swift10JavaObjectC", "getThreadMXBean"]
+- ["10java_swift10JavaObjectC", "getThreadMXBean_MethodID_15"]
+- ["10java_swift10JavaObjectC", "init"]
+- !private ["10java_swift10JavaObjectC", "javaObject"]
+- ["10java_swift10JavaObjectC", "java_swift"]
+- ["10java_swift10JavaObjectC", "jclass"]
+- ["10java_swift10JavaObjectC", "jfieldID"]
+- ["10java_swift10JavaObjectC", "jmethodID"]
+- !private ["10java_swift10JavaObjectC", "jobject"]
+- !private ["10java_swift10JavaObjectC", "jvalue"]
+- ["10java_swift10JavaObjectC", "newPlatformMXBeanProxy"]
+- ["10java_swift10JavaObjectC", "newPlatformMXBeanProxy_MethodID_16"]
+- !private ["10java_swift10JavaObjectC", "withJavaObject"]
+- !private ["10java_swift12JavaProtocolP", "init"]
+- !private ["10java_swift7JavaSetP", "init"]
+- !private ["10java_swift14JavaSetForwardC", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- ["9java_lang17ManagementFactoryC", "CLASS_LOADING_MXBEAN_NAME"]
+- !private ["9java_lang17ManagementFactoryC", "CLASS_LOADING_MXBEAN_NAME_FieldID"]
+- ["9java_lang17ManagementFactoryC", "COMPILATION_MXBEAN_NAME"]
+- !private ["9java_lang17ManagementFactoryC", "COMPILATION_MXBEAN_NAME_FieldID"]
+- ["9java_lang17ManagementFactoryC", "ClassLoadingMXBean"]
+- !private ["9java_lang17ManagementFactoryC", "ClassLoadingMXBeanForward"]
+- ["9java_lang17ManagementFactoryC", "CompilationMXBean"]
+- !private ["9java_lang17ManagementFactoryC", "CompilationMXBeanForward"]
+- ["9java_lang17ManagementFactoryC", "GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE"]
+- !private ["9java_lang17ManagementFactoryC", "GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE_FieldID"]
+- ["9java_lang17ManagementFactoryC", "Int"]
+- !private ["9java_lang17ManagementFactoryC", "JNI"]
+- !private ["9java_lang17ManagementFactoryC", "JNIField"]
+- !private ["9java_lang17ManagementFactoryC", "JNIMethod"]
+- !private ["9java_lang17ManagementFactoryC", "JNIType"]
+- ["9java_lang17ManagementFactoryC", "MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE"]
+- !private ["9java_lang17ManagementFactoryC", "MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE_FieldID"]
+- ["9java_lang17ManagementFactoryC", "MEMORY_MXBEAN_NAME"]
+- !private ["9java_lang17ManagementFactoryC", "MEMORY_MXBEAN_NAME_FieldID"]
+- ["9java_lang17ManagementFactoryC", "MEMORY_POOL_MXBEAN_DOMAIN_TYPE"]
+- !private ["9java_lang17ManagementFactoryC", "MEMORY_POOL_MXBEAN_DOMAIN_TYPE_FieldID"]
+- !private ["9java_lang17ManagementFactoryC", "ManagementFactoryJNIClass"]
+- ["9java_lang17ManagementFactoryC", "MemoryMXBean"]
+- !private ["9java_lang17ManagementFactoryC", "MemoryMXBeanForward"]
+- ["9java_lang17ManagementFactoryC", "OPERATING_SYSTEM_MXBEAN_NAME"]
+- !private ["9java_lang17ManagementFactoryC", "OPERATING_SYSTEM_MXBEAN_NAME_FieldID"]
+- ["9java_lang17ManagementFactoryC", "OperatingSystemMXBean"]
+- !private ["9java_lang17ManagementFactoryC", "OperatingSystemMXBeanForward"]
+- ["9java_lang17ManagementFactoryC", "PlatformManagedObject"]
+- !private ["9java_lang17ManagementFactoryC", "PlatformManagedObjectForward"]
+- ["9java_lang17ManagementFactoryC", "RUNTIME_MXBEAN_NAME"]
+- !private ["9java_lang17ManagementFactoryC", "RUNTIME_MXBEAN_NAME_FieldID"]
+- ["9java_lang17ManagementFactoryC", "RuntimeMXBean"]
+- !private ["9java_lang17ManagementFactoryC", "RuntimeMXBeanForward"]
+- ["9java_lang17ManagementFactoryC", "StaticString"]
+- ["9java_lang17ManagementFactoryC", "String"]
+- ["9java_lang17ManagementFactoryC", "THREAD_MXBEAN_NAME"]
+- !private ["9java_lang17ManagementFactoryC", "THREAD_MXBEAN_NAME_FieldID"]
+- ["9java_lang17ManagementFactoryC", "ThreadMXBean"]
+- !private ["9java_lang17ManagementFactoryC", "ThreadMXBeanForward"]
+- !private ["9java_lang17ManagementFactoryC", "UnavailableObject"]
+- ["9java_lang17ManagementFactoryC", "UnavailableProtocol"]
+- !private ["9java_lang17ManagementFactoryC", "UnavailableProtocolForward"]
+- ["9java_lang17ManagementFactoryC", "deinit"]
+- ["9java_lang17ManagementFactoryC", "getClassLoadingMXBean"]
+- !private ["9java_lang17ManagementFactoryC", "getClassLoadingMXBean_MethodID_1"]
+- ["9java_lang17ManagementFactoryC", "getCompilationMXBean"]
+- !private ["9java_lang17ManagementFactoryC", "getCompilationMXBean_MethodID_2"]
+- ["9java_lang17ManagementFactoryC", "getGarbageCollectorMXBeans"]
+- !private ["9java_lang17ManagementFactoryC", "getGarbageCollectorMXBeans_MethodID_3"]
+- ["9java_lang17ManagementFactoryC", "getMemoryMXBean"]
+- !private ["9java_lang17ManagementFactoryC", "getMemoryMXBean_MethodID_4"]
+- ["9java_lang17ManagementFactoryC", "getMemoryManagerMXBeans"]
+- !private ["9java_lang17ManagementFactoryC", "getMemoryManagerMXBeans_MethodID_5"]
+- ["9java_lang17ManagementFactoryC", "getMemoryPoolMXBeans"]
+- !private ["9java_lang17ManagementFactoryC", "getMemoryPoolMXBeans_MethodID_6"]
+- ["9java_lang17ManagementFactoryC", "getOperatingSystemMXBean"]
+- !private ["9java_lang17ManagementFactoryC", "getOperatingSystemMXBean_MethodID_7"]
+- ["9java_lang17ManagementFactoryC", "getPlatformMBeanServer"]
+- !private ["9java_lang17ManagementFactoryC", "getPlatformMBeanServer_MethodID_8"]
+- ["9java_lang17ManagementFactoryC", "getPlatformMXBean"]
+- !private ["9java_lang17ManagementFactoryC", "getPlatformMXBean_MethodID_10"]
+- !private ["9java_lang17ManagementFactoryC", "getPlatformMXBean_MethodID_9"]
+- ["9java_lang17ManagementFactoryC", "getPlatformMXBeans"]
+- !private ["9java_lang17ManagementFactoryC", "getPlatformMXBeans_MethodID_11"]
+- !private ["9java_lang17ManagementFactoryC", "getPlatformMXBeans_MethodID_12"]
+- ["9java_lang17ManagementFactoryC", "getPlatformManagementInterfaces"]
+- !private ["9java_lang17ManagementFactoryC", "getPlatformManagementInterfaces_MethodID_13"]
+- ["9java_lang17ManagementFactoryC", "getRuntimeMXBean"]
+- !private ["9java_lang17ManagementFactoryC", "getRuntimeMXBean_MethodID_14"]
+- ["9java_lang17ManagementFactoryC", "getThreadMXBean"]
+- !private ["9java_lang17ManagementFactoryC", "getThreadMXBean_MethodID_15"]
+- ["9java_lang17ManagementFactoryC", "init"]
+- !private ["9java_lang17ManagementFactoryC", "javaObject"]
+- ["9java_lang17ManagementFactoryC", "java_swift"]
+- ["9java_lang17ManagementFactoryC", "jclass"]
+- ["9java_lang17ManagementFactoryC", "jfieldID"]
+- ["9java_lang17ManagementFactoryC", "jmethodID"]
+- !private ["9java_lang17ManagementFactoryC", "jobject"]
+- !private ["9java_lang17ManagementFactoryC", "jvalue"]
+- ["9java_lang17ManagementFactoryC", "newPlatformMXBeanProxy"]
+- !private ["9java_lang17ManagementFactoryC", "newPlatformMXBeanProxy_MethodID_16"]
+- !private ["9java_lang12MemoryMXBeanP", "init"]
+- !private ["9java_lang19MemoryMXBeanForwardC", "deinit"]
+- !private ["9java_lang19MemoryMXBeanForwardC", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["9java_lang21OperatingSystemMXBeanP", "init"]
+- !private ["9java_lang28OperatingSystemMXBeanForwardC", "deinit"]
+- !private ["9java_lang28OperatingSystemMXBeanForwardC", "init"]
+- !private ["9java_lang21PlatformManagedObjectP", "init"]
+- !private ["9java_lang28PlatformManagedObjectForwardC", "deinit"]
+- !private ["9java_lang28PlatformManagedObjectForwardC", "init"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["9java_lang13RuntimeMXBeanP", "init"]
+- !private ["9java_lang20RuntimeMXBeanForwardC", "deinit"]
+- !private ["9java_lang20RuntimeMXBeanForwardC", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s12StaticStringV", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["9java_lang12ThreadMXBeanP", "init"]
+- !private ["9java_lang19ThreadMXBeanForwardC", "deinit"]
+- !private ["9java_lang19ThreadMXBeanForwardC", "init"]
+- !private ["10java_swift17UnavailableObjectC", "init"]
+- !private ["10java_swift19UnavailableProtocolP", "init"]
+- !private ["10java_swift26UnavailableProtocolForwardC", "init"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "subscript"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["SC6jvalueV", "init"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "9java_lang18ClassLoadingMXBeanP"
+- !private "9java_lang25ClassLoadingMXBeanForwardC"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "9java_lang17CompilationMXBeanP"
+- !private "9java_lang24CompilationMXBeanForwardC"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s8HashableP"
+- !private "10java_swift7JNICoreC"
+- !private "10java_swift8JNIFieldC"
+- !private "10java_swift9JNIMethodC"
+- "10java_swift9JNIObjectC"
+- !private "10java_swift16JNIObjectForwardC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- !private "10java_swift7JNITypeC"
+- "10java_swift10JavaObjectC"
+- !private "10java_swift12JavaProtocolP"
+- !private "10java_swift7JavaSetP"
+- !private "10java_swift14JavaSetForwardC"
+- !private "s25LosslessStringConvertibleP"
+- "9java_lang17ManagementFactoryC"
+- !private "9java_lang12MemoryMXBeanP"
+- !private "9java_lang19MemoryMXBeanForwardC"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "9java_lang21OperatingSystemMXBeanP"
+- !private "9java_lang28OperatingSystemMXBeanForwardC"
+- !private "9java_lang21PlatformManagedObjectP"
+- !private "9java_lang28PlatformManagedObjectForwardC"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "9java_lang13RuntimeMXBeanP"
+- !private "9java_lang20RuntimeMXBeanForwardC"
+- !private "s8SequenceP"
+- !private "s12StaticStringV"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "9java_lang12ThreadMXBeanP"
+- !private "9java_lang19ThreadMXBeanForwardC"
+- !private "10java_swift17UnavailableObjectC"
+- !private "10java_swift19UnavailableProtocolP"
+- !private "10java_swift26UnavailableProtocolForwardC"
+- !private "s14_ArrayProtocolP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+- !private "s16_SwiftStringViewP"
+- !private "SC6jvalueV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "d00ec6b92eba31f30872e7e7409b2b20"

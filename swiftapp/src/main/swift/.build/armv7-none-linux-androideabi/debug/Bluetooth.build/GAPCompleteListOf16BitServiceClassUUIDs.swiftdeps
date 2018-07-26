@@ -1,0 +1,138 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GAPCompleteListOf16BitServiceClassUUIDs"
+- "=="
+provides-nominal:
+- "9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV"
+provides-member:
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", ""]
+depends-top-level:
+- "=="
+- "AssignmentPrecedence"
+- !private "Bit16UUIDList"
+- "Bool"
+- "CustomStringConvertible"
+- "Data"
+- "Equatable"
+- "ExpressibleByArrayLiteral"
+- "GAPCompleteListOf16BitServiceClassUUIDs"
+- "GAPData"
+- "GAPDataType"
+- "String"
+- "UInt16"
+depends-member:
+- !private ["Sa", "description"]
+- !private ["s23BidirectionalCollectionP", "description"]
+- !private ["9Bluetooth13Bit16UUIDListV", "data"]
+- !private ["9Bluetooth13Bit16UUIDListV", "init"]
+- !private ["9Bluetooth13Bit16UUIDListV", "uuids"]
+- !private ["s10CollectionP", "description"]
+- !private ["s28CustomDebugStringConvertibleP", "description"]
+- !private ["s17CustomReflectableP", "description"]
+- ["s23CustomStringConvertibleP", "ArrayLiteralElement"]
+- !private ["s23CustomStringConvertibleP", "Bit16UUIDList"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "_Default_ArrayLiteralElement"]
+- ["s23CustomStringConvertibleP", "completeListOf16CitServiceClassUUIDs"]
+- ["s23CustomStringConvertibleP", "data"]
+- ["s23CustomStringConvertibleP", "dataType"]
+- ["s23CustomStringConvertibleP", "description"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "uuids"]
+- !private ["s9DecodableP", "description"]
+- !private ["s9EncodableP", "description"]
+- ["s9EquatableP", "ArrayLiteralElement"]
+- !private ["s9EquatableP", "Bit16UUIDList"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_ArrayLiteralElement"]
+- ["s9EquatableP", "completeListOf16CitServiceClassUUIDs"]
+- ["s9EquatableP", "data"]
+- ["s9EquatableP", "dataType"]
+- ["s9EquatableP", "description"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "uuids"]
+- ["s25ExpressibleByArrayLiteralP", "ArrayLiteralElement"]
+- !private ["s25ExpressibleByArrayLiteralP", "Bit16UUIDList"]
+- ["s25ExpressibleByArrayLiteralP", ""]
+- ["s25ExpressibleByArrayLiteralP", "_Default_ArrayLiteralElement"]
+- ["s25ExpressibleByArrayLiteralP", "data"]
+- ["s25ExpressibleByArrayLiteralP", "dataType"]
+- ["s25ExpressibleByArrayLiteralP", "description"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "uuids"]
+- ["s27ExpressibleByIntegerLiteralP", "completeListOf16CitServiceClassUUIDs"]
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "=="]
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "ArrayLiteralElement"]
+- !private ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "Bit16UUIDList"]
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "Bool"]
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "Data"]
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "GAPCompleteListOf16BitServiceClassUUIDs"]
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "GAPDataType"]
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "String"]
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "UInt16"]
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "_Default_ArrayLiteralElement"]
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "data"]
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "dataType"]
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "deinit"]
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "description"]
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "init"]
+- ["9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV", "uuids"]
+- ["9Bluetooth7GAPDataP", "ArrayLiteralElement"]
+- !private ["9Bluetooth7GAPDataP", "Bit16UUIDList"]
+- ["9Bluetooth7GAPDataP", ""]
+- ["9Bluetooth7GAPDataP", "_Default_ArrayLiteralElement"]
+- ["9Bluetooth7GAPDataP", "data"]
+- ["9Bluetooth7GAPDataP", "dataType"]
+- ["9Bluetooth7GAPDataP", "description"]
+- ["9Bluetooth7GAPDataP", "init"]
+- !private ["9Bluetooth7GAPDataP", "uuids"]
+- ["9Bluetooth11GAPDataTypeV", "completeListOf16CitServiceClassUUIDs"]
+- ["s8HashableP", "completeListOf16CitServiceClassUUIDs"]
+- !private ["s17MutableCollectionP", "description"]
+- !private ["s22RandomAccessCollectionP", "description"]
+- !private ["s26RangeReplaceableCollectionP", "description"]
+- ["s16RawRepresentableP", "completeListOf16CitServiceClassUUIDs"]
+- !private ["s8SequenceP", "description"]
+- !private ["s14_ArrayProtocolP", "description"]
+- !private ["10Foundation13_CFBridgeableP", "description"]
+- !private ["s24_DestructorSafeContainerP", "description"]
+- !private ["10Foundation13_NSBridgeableP", "description"]
+- !private ["10Foundation17_ObjectBridgeableP", "description"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "description"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "9Bluetooth13Bit16UUIDListV"
+- !private "s10CollectionP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- "s25ExpressibleByArrayLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- "9Bluetooth39GAPCompleteListOf16BitServiceClassUUIDsV"
+- "9Bluetooth7GAPDataP"
+- "9Bluetooth11GAPDataTypeV"
+- "s8HashableP"
+- !private "s17MutableCollectionP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "s8SequenceP"
+- !private "s14_ArrayProtocolP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "b17ffdbb605b29b30fcb8a8f816271aa"

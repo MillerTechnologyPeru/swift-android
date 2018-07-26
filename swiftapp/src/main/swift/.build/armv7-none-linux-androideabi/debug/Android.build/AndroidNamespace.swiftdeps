@@ -1,0 +1,348 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Android"
+- "SupportV7"
+- "SwiftSupport"
+- "JavaPackage"
+- "+"
+provides-nominal:
+- "7AndroidAAO"
+- "7AndroidAAO4UtilO"
+- "7AndroidAAO2OSO"
+- "7AndroidAAO7ContentO"
+- "7AndroidAAO7ContentO2PMO"
+- "7AndroidAAO7ContentO3ResO"
+- "7AndroidAAO6WidgetO"
+- "7AndroidAAO4ViewO"
+- "7AndroidAAO3AppO"
+- "7AndroidAAO9BluetoothO"
+- "7AndroidAAO9BluetoothO2LEO"
+- "7AndroidAAO8GraphicsO"
+- "7AndroidAAO8GraphicsO8DrawableO"
+- "7Android9SupportV7O"
+- "7Android9SupportV7O6WidgetO"
+- "7Android12SwiftSupportO"
+- "7Android12SwiftSupportO9BluetoothO"
+- "7Android12SwiftSupportO9BluetoothO2LEO"
+- "7Android12SwiftSupportO6WidgetO"
+- "7Android12SwiftSupportO3AppO"
+- "7Android12SwiftSupportO7ContentO"
+- "7Android12SwiftSupportO12RecyclerViewO"
+- "7Android12SwiftSupportO4ViewO"
+- "7Android11JavaPackageP"
+provides-member:
+- ["7AndroidAAO", ""]
+- ["7AndroidAAO4UtilO", ""]
+- ["7AndroidAAO2OSO", ""]
+- ["7AndroidAAO7ContentO", ""]
+- ["7AndroidAAO7ContentO2PMO", ""]
+- ["7AndroidAAO7ContentO3ResO", ""]
+- ["7AndroidAAO6WidgetO", ""]
+- ["7AndroidAAO4ViewO", ""]
+- ["7AndroidAAO3AppO", ""]
+- ["7AndroidAAO9BluetoothO", ""]
+- ["7AndroidAAO9BluetoothO2LEO", ""]
+- ["7AndroidAAO8GraphicsO", ""]
+- ["7AndroidAAO8GraphicsO8DrawableO", ""]
+- ["7Android9SupportV7O", ""]
+- ["7Android9SupportV7O6WidgetO", ""]
+- ["7Android12SwiftSupportO", ""]
+- ["7Android12SwiftSupportO9BluetoothO", ""]
+- ["7Android12SwiftSupportO9BluetoothO2LEO", ""]
+- ["7Android12SwiftSupportO6WidgetO", ""]
+- ["7Android12SwiftSupportO3AppO", ""]
+- ["7Android12SwiftSupportO7ContentO", ""]
+- ["7Android12SwiftSupportO12RecyclerViewO", ""]
+- ["7Android12SwiftSupportO4ViewO", ""]
+- ["7Android11JavaPackageP", ""]
+- ["3JNI10JNIPackageV", ""]
+- ["7Android11JavaPackageP", "className"]
+- ["3JNI10JNIPackageV", "+"]
+depends-top-level:
+- "+"
+- "Android"
+- "Array"
+- "JNIClassName"
+- "JNIMetaClass"
+- "JNIPackage"
+- "JavaPackage"
+- "String"
+- "StringLiteralType"
+- "SupportV7"
+- "SwiftSupport"
+- !private "\u2615\uFE0F"
+depends-member:
+- ["7AndroidAAO", "Android"]
+- ["7AndroidAAO", "App"]
+- ["7AndroidAAO", "Bluetooth"]
+- ["7AndroidAAO", "Content"]
+- ["7AndroidAAO", "Graphics"]
+- ["7AndroidAAO", "JNIPackage"]
+- ["7AndroidAAO", "JavaPackage"]
+- ["7AndroidAAO", "OS"]
+- ["7AndroidAAO", "Util"]
+- ["7AndroidAAO", "View"]
+- ["7AndroidAAO", "Widget"]
+- ["7AndroidAAO", "deinit"]
+- ["7AndroidAAO", "package"]
+- ["7Android12SwiftSupportO3AppO", "JNIPackage"]
+- ["7Android12SwiftSupportO3AppO", "SwiftSupport"]
+- ["7Android12SwiftSupportO3AppO", "deinit"]
+- ["7Android12SwiftSupportO3AppO", "package"]
+- ["7AndroidAAO3AppO", "Android"]
+- ["7AndroidAAO3AppO", "JNIPackage"]
+- ["7AndroidAAO3AppO", "deinit"]
+- ["7AndroidAAO3AppO", "package"]
+- !private ["s23BidirectionalCollectionP", "JNIPackage"]
+- !private ["s23BidirectionalCollectionP", "elements"]
+- ["s23BidirectionalCollectionP", "init"]
+- ["7Android12SwiftSupportO9BluetoothO", "JNIPackage"]
+- ["7Android12SwiftSupportO9BluetoothO", "JavaPackage"]
+- ["7Android12SwiftSupportO9BluetoothO", "LE"]
+- ["7Android12SwiftSupportO9BluetoothO", "SwiftSupport"]
+- ["7Android12SwiftSupportO9BluetoothO", "deinit"]
+- ["7Android12SwiftSupportO9BluetoothO", "package"]
+- ["7AndroidAAO9BluetoothO", "Android"]
+- ["7AndroidAAO9BluetoothO", "JNIPackage"]
+- ["7AndroidAAO9BluetoothO", "JavaPackage"]
+- ["7AndroidAAO9BluetoothO", "LE"]
+- ["7AndroidAAO9BluetoothO", "deinit"]
+- ["7AndroidAAO9BluetoothO", "package"]
+- !private ["s10CollectionP", "JNIPackage"]
+- !private ["s10CollectionP", "elements"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- ["7Android12SwiftSupportO7ContentO", "JNIPackage"]
+- ["7Android12SwiftSupportO7ContentO", "SwiftSupport"]
+- ["7Android12SwiftSupportO7ContentO", "deinit"]
+- ["7Android12SwiftSupportO7ContentO", "package"]
+- ["7AndroidAAO7ContentO", "Android"]
+- ["7AndroidAAO7ContentO", "JNIPackage"]
+- ["7AndroidAAO7ContentO", "JavaPackage"]
+- ["7AndroidAAO7ContentO", "PM"]
+- ["7AndroidAAO7ContentO", "Res"]
+- ["7AndroidAAO7ContentO", "deinit"]
+- ["7AndroidAAO7ContentO", "package"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "JNIPackage"]
+- !private ["s23CustomStringConvertibleP", "elements"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s9DecodableP", "init"]
+- ["7AndroidAAO8GraphicsO8DrawableO", "Android"]
+- ["7AndroidAAO8GraphicsO8DrawableO", "JNIPackage"]
+- ["7AndroidAAO8GraphicsO8DrawableO", "deinit"]
+- ["7AndroidAAO8GraphicsO8DrawableO", "package"]
+- ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "JNIPackage"]
+- !private ["s9EquatableP", "elements"]
+- ["s9EquatableP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "JNIPackage"]
+- !private ["s25ExpressibleByArrayLiteralP", "elements"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["7AndroidAAO8GraphicsO", "Android"]
+- ["7AndroidAAO8GraphicsO", "Drawable"]
+- ["7AndroidAAO8GraphicsO", "JNIPackage"]
+- ["7AndroidAAO8GraphicsO", "JavaPackage"]
+- ["7AndroidAAO8GraphicsO", "deinit"]
+- ["7AndroidAAO8GraphicsO", "package"]
+- !private ["s8HashableP", "JNIPackage"]
+- !private ["s8HashableP", "elements"]
+- ["s8HashableP", "init"]
+- !private ["3JNI21JNIClassNameComponentP", "JNIPackage"]
+- !private ["3JNI21JNIClassNameComponentP", "elements"]
+- !private ["3JNI21JNIClassNameComponentP", "init"]
+- ["10java_swift13JNIObjectInitP", "init"]
+- ["10java_swift17JNIObjectProtocolP", "init"]
+- ["3JNI10JNIPackageV", "+"]
+- ["3JNI10JNIPackageV", "JNIPackage"]
+- ["3JNI10JNIPackageV", "String"]
+- !private ["3JNI10JNIPackageV", "elements"]
+- !private ["3JNI10JNIPackageV", "init"]
+- ["7Android11JavaPackageP", "Android"]
+- ["7Android11JavaPackageP", "Bluetooth"]
+- ["7Android11JavaPackageP", "Content"]
+- ["7Android11JavaPackageP", "Graphics"]
+- ["7Android11JavaPackageP", "JNIClassName"]
+- ["7Android11JavaPackageP", "JNIMetaClass"]
+- ["7Android11JavaPackageP", "JNIPackage"]
+- !private ["7Android11JavaPackageP", "Self"]
+- ["7Android11JavaPackageP", "SupportV7"]
+- ["7Android11JavaPackageP", "SwiftSupport"]
+- ["7Android11JavaPackageP", ""]
+- ["7Android11JavaPackageP", "className"]
+- ["7Android11JavaPackageP", "package"]
+- ["7Android12SwiftSupportO9BluetoothO2LEO", "JNIPackage"]
+- ["7Android12SwiftSupportO9BluetoothO2LEO", "SwiftSupport"]
+- ["7Android12SwiftSupportO9BluetoothO2LEO", "deinit"]
+- ["7Android12SwiftSupportO9BluetoothO2LEO", "package"]
+- ["7AndroidAAO9BluetoothO2LEO", "Android"]
+- ["7AndroidAAO9BluetoothO2LEO", "JNIPackage"]
+- ["7AndroidAAO9BluetoothO2LEO", "deinit"]
+- ["7AndroidAAO9BluetoothO2LEO", "package"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["7AndroidAAO2OSO", "Android"]
+- ["7AndroidAAO2OSO", "JNIPackage"]
+- ["7AndroidAAO2OSO", "deinit"]
+- ["7AndroidAAO2OSO", "package"]
+- ["7AndroidAAO7ContentO2PMO", "Android"]
+- ["7AndroidAAO7ContentO2PMO", "JNIPackage"]
+- ["7AndroidAAO7ContentO2PMO", "deinit"]
+- ["7AndroidAAO7ContentO2PMO", "package"]
+- !private ["s22RandomAccessCollectionP", "JNIPackage"]
+- !private ["s22RandomAccessCollectionP", "elements"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "JNIPackage"]
+- !private ["s16RawRepresentableP", "elements"]
+- !private ["s16RawRepresentableP", "init"]
+- ["7Android12SwiftSupportO12RecyclerViewO", "JNIPackage"]
+- ["7Android12SwiftSupportO12RecyclerViewO", "SwiftSupport"]
+- ["7Android12SwiftSupportO12RecyclerViewO", "deinit"]
+- ["7Android12SwiftSupportO12RecyclerViewO", "package"]
+- ["7AndroidAAO7ContentO3ResO", "Android"]
+- ["7AndroidAAO7ContentO3ResO", "JNIPackage"]
+- ["7AndroidAAO7ContentO3ResO", "deinit"]
+- ["7AndroidAAO7ContentO3ResO", "package"]
+- !private ["s8SequenceP", "JNIPackage"]
+- !private ["s8SequenceP", "elements"]
+- ["s8SequenceP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["7Android9SupportV7O", "JNIPackage"]
+- ["7Android9SupportV7O", "JavaPackage"]
+- ["7Android9SupportV7O", "SupportV7"]
+- ["7Android9SupportV7O", "Widget"]
+- ["7Android9SupportV7O", "deinit"]
+- ["7Android9SupportV7O", "package"]
+- ["7Android12SwiftSupportO", "App"]
+- ["7Android12SwiftSupportO", "Bluetooth"]
+- ["7Android12SwiftSupportO", "Content"]
+- ["7Android12SwiftSupportO", "JNIPackage"]
+- ["7Android12SwiftSupportO", "JavaPackage"]
+- ["7Android12SwiftSupportO", "RecyclerView"]
+- ["7Android12SwiftSupportO", "SwiftSupport"]
+- ["7Android12SwiftSupportO", "View"]
+- ["7Android12SwiftSupportO", "Widget"]
+- ["7Android12SwiftSupportO", "deinit"]
+- ["7Android12SwiftSupportO", "package"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["7AndroidAAO4UtilO", "Android"]
+- ["7AndroidAAO4UtilO", "JNIPackage"]
+- ["7AndroidAAO4UtilO", "deinit"]
+- ["7AndroidAAO4UtilO", "package"]
+- ["7Android12SwiftSupportO4ViewO", "JNIPackage"]
+- ["7Android12SwiftSupportO4ViewO", "SwiftSupport"]
+- ["7Android12SwiftSupportO4ViewO", "deinit"]
+- ["7Android12SwiftSupportO4ViewO", "package"]
+- ["7AndroidAAO4ViewO", "Android"]
+- ["7AndroidAAO4ViewO", "JNIPackage"]
+- ["7AndroidAAO4ViewO", "deinit"]
+- ["7AndroidAAO4ViewO", "package"]
+- ["7Android12SwiftSupportO6WidgetO", "JNIPackage"]
+- ["7Android12SwiftSupportO6WidgetO", "SwiftSupport"]
+- ["7Android12SwiftSupportO6WidgetO", "deinit"]
+- ["7Android12SwiftSupportO6WidgetO", "package"]
+- ["7Android9SupportV7O6WidgetO", "JNIPackage"]
+- ["7Android9SupportV7O6WidgetO", "SupportV7"]
+- ["7Android9SupportV7O6WidgetO", "deinit"]
+- ["7Android9SupportV7O6WidgetO", "package"]
+- ["7AndroidAAO6WidgetO", "Android"]
+- ["7AndroidAAO6WidgetO", "JNIPackage"]
+- ["7AndroidAAO6WidgetO", "deinit"]
+- ["7AndroidAAO6WidgetO", "package"]
+- ["10Foundation13_CFBridgeableP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation13_NSBridgeableP", "init"]
+- ["10Foundation17_ObjectBridgeableP", "init"]
+- ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "7AndroidAAO"
+- "7Android12SwiftSupportO3AppO"
+- "7AndroidAAO3AppO"
+- "s23BidirectionalCollectionP"
+- "7Android12SwiftSupportO9BluetoothO"
+- "7AndroidAAO9BluetoothO"
+- "s10CollectionP"
+- "s10ComparableP"
+- "7Android12SwiftSupportO7ContentO"
+- "7AndroidAAO7ContentO"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "7AndroidAAO8GraphicsO8DrawableO"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "7AndroidAAO8GraphicsO"
+- "s8HashableP"
+- !private "3JNI21JNIClassNameComponentP"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- "3JNI10JNIPackageV"
+- "7Android11JavaPackageP"
+- "7Android12SwiftSupportO9BluetoothO2LEO"
+- "7AndroidAAO9BluetoothO2LEO"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "7AndroidAAO2OSO"
+- "7AndroidAAO7ContentO2PMO"
+- !private "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- "7Android12SwiftSupportO12RecyclerViewO"
+- "7AndroidAAO7ContentO3ResO"
+- "s8SequenceP"
+- "SS"
+- "s14StringProtocolP"
+- "7Android9SupportV7O"
+- "7Android12SwiftSupportO"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "7AndroidAAO4UtilO"
+- "7Android12SwiftSupportO4ViewO"
+- "7AndroidAAO4ViewO"
+- "7Android12SwiftSupportO6WidgetO"
+- "7Android9SupportV7O6WidgetO"
+- "7AndroidAAO6WidgetO"
+- "10Foundation13_CFBridgeableP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation13_NSBridgeableP"
+- "10Foundation17_ObjectBridgeableP"
+- "10Foundation21_ObjectTypeBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/JNI.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Bluetooth.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_util.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "a1ff892d8920d5b0008906100ab61845"

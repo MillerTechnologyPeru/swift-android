@@ -1,0 +1,147 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HCILEAddDeviceToPeriodicAdvertiserList"
+provides-nominal:
+- "9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV"
+provides-member:
+- ["9Bluetooth0A23HostControllerInterfaceP", ""]
+- ["9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV", ""]
+- ["9Bluetooth0A23HostControllerInterfaceP", "addDeviceToPeriodicAdvertiserList"]
+depends-top-level:
+- "Address"
+- !private "Array"
+- "AssignmentPrecedence"
+- "BluetoothHostControllerInterface"
+- "Data"
+- "HCICommandParameter"
+- "HCICommandTimeout"
+- "HCILEAddDeviceToPeriodicAdvertiserList"
+- "HCILowEnergyCommand"
+- "LowEnergyAdvertiserAddressType"
+- "UInt8"
+depends-member:
+- !private ["9Bluetooth7AddressV", "bytes"]
+- !private ["9Bluetooth7AddressV", "deinit"]
+- !private ["9Bluetooth7AddressV", "littleEndian"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "Address"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "HCICommandTimeout"]
+- !private ["9Bluetooth0A23HostControllerInterfaceP", "HCILEAddDeviceToPeriodicAdvertiserList"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "LowEnergyAdvertiserAddressType"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "UInt8"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "addDeviceToPeriodicAdvertiserList"]
+- !private ["9Bluetooth0A23HostControllerInterfaceP", "deviceRequest"]
+- !private ["9Bluetooth8ByteSwapP", "bytes"]
+- !private ["9Bluetooth8ByteSwapP", "littleEndian"]
+- !private ["9Bluetooth9ByteValueP", "bytes"]
+- !private ["9Bluetooth9ByteValueP", "littleEndian"]
+- !private ["s10CollectionP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "addDeviceToPeriodicAdvertiserList"]
+- !private ["s23CustomStringConvertibleP", "bytes"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "littleEndian"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "init"]
+- ["s9EquatableP", "addDeviceToPeriodicAdvertiserList"]
+- !private ["s9EquatableP", "bytes"]
+- !private ["s9EquatableP", "default"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "littleEndian"]
+- !private ["s9EquatableP", "rawValue"]
+- !private ["s27ExpressibleByIntegerLiteralP", "default"]
+- ["9Bluetooth10HCICommandP", "addDeviceToPeriodicAdvertiserList"]
+- !private ["9Bluetooth19HCICommandParameterP", "Data"]
+- ["9Bluetooth19HCICommandParameterP", "HCICommandType"]
+- ["9Bluetooth19HCICommandParameterP", "HCILowEnergyCommand"]
+- ["9Bluetooth19HCICommandParameterP", ""]
+- ["9Bluetooth19HCICommandParameterP", "_Default_HCICommandType"]
+- !private ["9Bluetooth19HCICommandParameterP", "address"]
+- !private ["9Bluetooth19HCICommandParameterP", "advertiserAddressType"]
+- !private ["9Bluetooth19HCICommandParameterP", "advertisingSid"]
+- ["9Bluetooth19HCICommandParameterP", "command"]
+- ["9Bluetooth19HCICommandParameterP", "data"]
+- !private ["9Bluetooth19HCICommandParameterP", "init"]
+- !private ["9Bluetooth17HCICommandTimeoutV", "default"]
+- ["9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV", "Address"]
+- ["9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV", "Data"]
+- ["9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV", "HCICommandType"]
+- ["9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV", "HCILowEnergyCommand"]
+- ["9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV", "LowEnergyAdvertiserAddressType"]
+- ["9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV", "UInt8"]
+- ["9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV", "_Default_HCICommandType"]
+- ["9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV", "address"]
+- ["9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV", "advertiserAddressType"]
+- ["9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV", "advertisingSid"]
+- ["9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV", "command"]
+- ["9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV", "data"]
+- ["9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV", "deinit"]
+- ["9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV", "init"]
+- ["9Bluetooth19HCILowEnergyCommandO", "addDeviceToPeriodicAdvertiserList"]
+- ["9Bluetooth19HCILowEnergyCommandO", "deinit"]
+- ["s8HashableP", "addDeviceToPeriodicAdvertiserList"]
+- !private ["s8HashableP", "bytes"]
+- !private ["s8HashableP", "default"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "littleEndian"]
+- !private ["s8HashableP", "rawValue"]
+- !private ["9Bluetooth30LowEnergyAdvertiserAddressTypeO", "deinit"]
+- !private ["9Bluetooth30LowEnergyAdvertiserAddressTypeO", "rawValue"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- ["s16RawRepresentableP", "addDeviceToPeriodicAdvertiserList"]
+- !private ["s16RawRepresentableP", "bytes"]
+- !private ["s16RawRepresentableP", "default"]
+- !private ["s16RawRepresentableP", "littleEndian"]
+- !private ["s16RawRepresentableP", "rawValue"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+depends-nominal:
+- !private "9Bluetooth7AddressV"
+- !private "s23BidirectionalCollectionP"
+- "9Bluetooth0A23HostControllerInterfaceP"
+- !private "9Bluetooth8ByteSwapP"
+- !private "9Bluetooth9ByteValueP"
+- !private "s10CollectionP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "9Bluetooth10HCICommandP"
+- "9Bluetooth19HCICommandParameterP"
+- !private "9Bluetooth17HCICommandTimeoutV"
+- "9Bluetooth38HCILEAddDeviceToPeriodicAdvertiserListV"
+- "9Bluetooth19HCILowEnergyCommandO"
+- "s8HashableP"
+- !private "9Bluetooth30LowEnergyAdvertiserAddressTypeO"
+- !private "s17MutableCollectionP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "cd04b21bd1a054cd3c509027ed819d9a"

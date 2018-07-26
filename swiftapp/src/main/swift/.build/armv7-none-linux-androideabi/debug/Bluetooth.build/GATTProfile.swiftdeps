@@ -1,0 +1,24 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GATTProfile"
+provides-nominal:
+- "9Bluetooth11GATTProfileP"
+provides-member:
+- ["9Bluetooth11GATTProfileP", ""]
+depends-top-level:
+- "GATTProfile"
+- "GATTService"
+depends-member:
+- ["9Bluetooth11GATTProfileP", "GATTService"]
+- ["9Bluetooth11GATTProfileP", "services"]
+depends-nominal:
+- "9Bluetooth11GATTProfileP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "bf9e56266e6511dff81f8e832be77c9c"

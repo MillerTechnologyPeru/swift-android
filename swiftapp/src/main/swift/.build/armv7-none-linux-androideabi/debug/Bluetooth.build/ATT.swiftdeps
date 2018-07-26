@@ -1,0 +1,503 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ATT"
+- "ATTOpcode"
+- "ATTOpcodeType"
+- "ATTAttributePermission"
+provides-nominal:
+- "9Bluetooth3ATTO"
+- "9Bluetooth9ATTOpcodeO"
+- "9Bluetooth13ATTOpcodeTypeO"
+- "9Bluetooth22ATTAttributePermissionO"
+provides-member:
+- ["9Bluetooth3ATTO", ""]
+- ["9Bluetooth9ATTOpcodeO", ""]
+- ["9Bluetooth13ATTOpcodeTypeO", ""]
+- ["9Bluetooth22ATTAttributePermissionO", ""]
+- ["9Bluetooth22ATTAttributePermissionO", "name"]
+depends-top-level:
+- "=="
+- "ATT"
+- "ATTAttributePermission"
+- "ATTError"
+- "ATTMaximumTransmissionUnit"
+- "ATTOpcode"
+- "ATTOpcodeType"
+- "Array"
+- "AssignmentPrecedence"
+- "BitMaskOption"
+- "BitMaskOptionSet"
+- "CustomStringConvertible"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- "ProtocolServiceMultiplexer"
+- "Set"
+- "String"
+- !private "StringLiteralType"
+- "UInt16"
+- "UInt8"
+- !private "~="
+depends-member:
+- ["9Bluetooth3ATTO", "ATTAttributePermission"]
+- ["9Bluetooth3ATTO", "ATTError"]
+- ["9Bluetooth3ATTO", "ATTMaximumTransmissionUnit"]
+- ["9Bluetooth3ATTO", "ATTOpcode"]
+- ["9Bluetooth3ATTO", "ATTOpcodeType"]
+- ["9Bluetooth3ATTO", "AttributePermission"]
+- ["9Bluetooth3ATTO", "CID"]
+- ["9Bluetooth3ATTO", "Error"]
+- ["9Bluetooth3ATTO", "Int"]
+- ["9Bluetooth3ATTO", "MaximumTransmissionUnit"]
+- ["9Bluetooth3ATTO", "Opcode"]
+- ["9Bluetooth3ATTO", "OpcodeType"]
+- ["9Bluetooth3ATTO", "PSM"]
+- ["9Bluetooth3ATTO", "ProtocolServiceMultiplexer"]
+- ["9Bluetooth3ATTO", "UInt16"]
+- ["9Bluetooth3ATTO", "maximumValueLength"]
+- ["9Bluetooth3ATTO", "minimumPDULength"]
+- ["9Bluetooth3ATTO", "signatureLength"]
+- ["9Bluetooth3ATTO", "timeout"]
+- ["9Bluetooth22ATTAttributePermissionO", "ATTAttributePermission"]
+- ["9Bluetooth22ATTAttributePermissionO", "BitMaskOptionSet"]
+- ["9Bluetooth22ATTAttributePermissionO", "RawValue"]
+- ["9Bluetooth22ATTAttributePermissionO", "Set"]
+- ["9Bluetooth22ATTAttributePermissionO", "String"]
+- ["9Bluetooth22ATTAttributePermissionO", "_Default_RawValue"]
+- ["9Bluetooth22ATTAttributePermissionO", "all"]
+- ["9Bluetooth22ATTAttributePermissionO", "authentication"]
+- ["9Bluetooth22ATTAttributePermissionO", "authorized"]
+- ["9Bluetooth22ATTAttributePermissionO", "deinit"]
+- ["9Bluetooth22ATTAttributePermissionO", "description"]
+- ["9Bluetooth22ATTAttributePermissionO", "encrypt"]
+- ["9Bluetooth22ATTAttributePermissionO", "hashValue"]
+- ["9Bluetooth22ATTAttributePermissionO", "init"]
+- ["9Bluetooth22ATTAttributePermissionO", "name"]
+- ["9Bluetooth22ATTAttributePermissionO", "noAuthorization"]
+- ["9Bluetooth22ATTAttributePermissionO", "rawValue"]
+- ["9Bluetooth22ATTAttributePermissionO", "read"]
+- ["9Bluetooth22ATTAttributePermissionO", "readAuthentication"]
+- ["9Bluetooth22ATTAttributePermissionO", "readEncrypt"]
+- ["9Bluetooth22ATTAttributePermissionO", "write"]
+- ["9Bluetooth22ATTAttributePermissionO", "writeAuthentication"]
+- ["9Bluetooth22ATTAttributePermissionO", "writeEncrypt"]
+- ["9Bluetooth9ATTOpcodeO", "ATT"]
+- ["9Bluetooth9ATTOpcodeO", "ATTOpcode"]
+- ["9Bluetooth9ATTOpcodeO", "RawValue"]
+- ["9Bluetooth9ATTOpcodeO", "_Default_RawValue"]
+- ["9Bluetooth9ATTOpcodeO", "deinit"]
+- ["9Bluetooth9ATTOpcodeO", "errorResponse"]
+- ["9Bluetooth9ATTOpcodeO", "executeWriteRequest"]
+- ["9Bluetooth9ATTOpcodeO", "executeWriteResponse"]
+- ["9Bluetooth9ATTOpcodeO", "findByTypeRequest"]
+- ["9Bluetooth9ATTOpcodeO", "findByTypeResponse"]
+- ["9Bluetooth9ATTOpcodeO", "findInformationRequest"]
+- ["9Bluetooth9ATTOpcodeO", "findInformationResponse"]
+- ["9Bluetooth9ATTOpcodeO", "handleValueConfirmation"]
+- ["9Bluetooth9ATTOpcodeO", "handleValueIndication"]
+- ["9Bluetooth9ATTOpcodeO", "handleValueNotification"]
+- ["9Bluetooth9ATTOpcodeO", "hashValue"]
+- ["9Bluetooth9ATTOpcodeO", "init"]
+- ["9Bluetooth9ATTOpcodeO", "maximumTransmissionUnitRequest"]
+- ["9Bluetooth9ATTOpcodeO", "maximumTransmissionUnitResponse"]
+- ["9Bluetooth9ATTOpcodeO", "preparedWriteRequest"]
+- ["9Bluetooth9ATTOpcodeO", "preparedWriteResponse"]
+- ["9Bluetooth9ATTOpcodeO", "rawValue"]
+- ["9Bluetooth9ATTOpcodeO", "readBlobRequest"]
+- ["9Bluetooth9ATTOpcodeO", "readBlobResponse"]
+- ["9Bluetooth9ATTOpcodeO", "readByGroupTypeRequest"]
+- ["9Bluetooth9ATTOpcodeO", "readByGroupTypeResponse"]
+- ["9Bluetooth9ATTOpcodeO", "readByTypeRequest"]
+- ["9Bluetooth9ATTOpcodeO", "readByTypeResponse"]
+- ["9Bluetooth9ATTOpcodeO", "readMultipleRequest"]
+- ["9Bluetooth9ATTOpcodeO", "readMultipleResponse"]
+- ["9Bluetooth9ATTOpcodeO", "readRequest"]
+- ["9Bluetooth9ATTOpcodeO", "readResponse"]
+- ["9Bluetooth9ATTOpcodeO", "request"]
+- ["9Bluetooth9ATTOpcodeO", "requestResponseMap"]
+- !private ["9Bluetooth9ATTOpcodeO", "requestsByResponse"]
+- ["9Bluetooth9ATTOpcodeO", "response"]
+- !private ["9Bluetooth9ATTOpcodeO", "responsesByRequest"]
+- ["9Bluetooth9ATTOpcodeO", "signedWriteCommand"]
+- ["9Bluetooth9ATTOpcodeO", "type"]
+- ["9Bluetooth9ATTOpcodeO", "writeCommand"]
+- ["9Bluetooth9ATTOpcodeO", "writeRequest"]
+- ["9Bluetooth9ATTOpcodeO", "writeResponse"]
+- ["9Bluetooth13ATTOpcodeTypeO", "__derived_enum_equals"]
+- ["9Bluetooth13ATTOpcodeTypeO", "command"]
+- ["9Bluetooth13ATTOpcodeTypeO", "confirmation"]
+- ["9Bluetooth13ATTOpcodeTypeO", "deinit"]
+- ["9Bluetooth13ATTOpcodeTypeO", "hashValue"]
+- ["9Bluetooth13ATTOpcodeTypeO", "indication"]
+- ["9Bluetooth13ATTOpcodeTypeO", "notification"]
+- ["9Bluetooth13ATTOpcodeTypeO", "request"]
+- ["9Bluetooth13ATTOpcodeTypeO", "response"]
+- ["Sa", "count"]
+- ["Sa", "forEach"]
+- ["s23BidirectionalCollectionP", "count"]
+- ["s23BidirectionalCollectionP", "forEach"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- ["9Bluetooth13BitMaskOptionP", "BitMaskOptionSet"]
+- ["9Bluetooth13BitMaskOptionP", "RawValue"]
+- ["9Bluetooth13BitMaskOptionP", ""]
+- ["9Bluetooth13BitMaskOptionP", "_Default_RawValue"]
+- ["9Bluetooth13BitMaskOptionP", "all"]
+- ["9Bluetooth13BitMaskOptionP", "authorized"]
+- ["9Bluetooth13BitMaskOptionP", "description"]
+- ["9Bluetooth13BitMaskOptionP", "hashValue"]
+- ["9Bluetooth13BitMaskOptionP", "init"]
+- !private ["9Bluetooth13BitMaskOptionP", "name"]
+- ["9Bluetooth13BitMaskOptionP", "noAuthorization"]
+- ["9Bluetooth13BitMaskOptionP", "rawValue"]
+- ["9Bluetooth13BitMaskOptionP", "read"]
+- ["9Bluetooth13BitMaskOptionP", "readAuthentication"]
+- ["9Bluetooth13BitMaskOptionP", "readEncrypt"]
+- ["9Bluetooth13BitMaskOptionP", "write"]
+- ["9Bluetooth13BitMaskOptionP", "writeAuthentication"]
+- ["9Bluetooth13BitMaskOptionP", "writeEncrypt"]
+- ["9Bluetooth16BitMaskOptionSetV", "deinit"]
+- ["9Bluetooth16BitMaskOptionSetV", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- ["s10CollectionP", "count"]
+- ["s10CollectionP", "forEach"]
+- ["s10CollectionP", "init"]
+- ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "count"]
+- ["s28CustomDebugStringConvertibleP", "forEach"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- ["s17CustomReflectableP", "count"]
+- ["s17CustomReflectableP", "forEach"]
+- ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "subscript"]
+- ["s23CustomStringConvertibleP", "BitMaskOptionSet"]
+- ["s23CustomStringConvertibleP", "RawValue"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "_Default_RawValue"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s23CustomStringConvertibleP", "all"]
+- ["s23CustomStringConvertibleP", "authorized"]
+- ["s23CustomStringConvertibleP", "count"]
+- ["s23CustomStringConvertibleP", "description"]
+- ["s23CustomStringConvertibleP", "forEach"]
+- ["s23CustomStringConvertibleP", "hashValue"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "name"]
+- ["s23CustomStringConvertibleP", "noAuthorization"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- ["s23CustomStringConvertibleP", "read"]
+- ["s23CustomStringConvertibleP", "readAuthentication"]
+- ["s23CustomStringConvertibleP", "readEncrypt"]
+- ["s23CustomStringConvertibleP", "subscript"]
+- ["s23CustomStringConvertibleP", "write"]
+- ["s23CustomStringConvertibleP", "writeAuthentication"]
+- ["s23CustomStringConvertibleP", "writeEncrypt"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- ["s9DecodableP", "count"]
+- ["s9DecodableP", "forEach"]
+- ["s9DecodableP", "init"]
+- ["s9DecodableP", "subscript"]
+- ["s10DictionaryV", "init"]
+- ["s10DictionaryV", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- ["s9EncodableP", "count"]
+- ["s9EncodableP", "forEach"]
+- ["s9EncodableP", "init"]
+- ["s9EncodableP", "subscript"]
+- ["s9EquatableP", "ATTOpcode"]
+- ["s9EquatableP", "BitMaskOptionSet"]
+- ["s9EquatableP", "RawValue"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- ["s9EquatableP", "all"]
+- ["s9EquatableP", "att"]
+- ["s9EquatableP", "authorized"]
+- !private ["s9EquatableP", "command"]
+- !private ["s9EquatableP", "confirmation"]
+- ["s9EquatableP", "count"]
+- ["s9EquatableP", "description"]
+- ["s9EquatableP", "errorResponse"]
+- ["s9EquatableP", "executeWriteRequest"]
+- ["s9EquatableP", "executeWriteResponse"]
+- ["s9EquatableP", "findByTypeRequest"]
+- ["s9EquatableP", "findByTypeResponse"]
+- ["s9EquatableP", "findInformationRequest"]
+- ["s9EquatableP", "findInformationResponse"]
+- ["s9EquatableP", "forEach"]
+- ["s9EquatableP", "handleValueConfirmation"]
+- ["s9EquatableP", "handleValueIndication"]
+- ["s9EquatableP", "handleValueNotification"]
+- ["s9EquatableP", "hashValue"]
+- !private ["s9EquatableP", "indication"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "maximumTransmissionUnitRequest"]
+- ["s9EquatableP", "maximumTransmissionUnitResponse"]
+- !private ["s9EquatableP", "name"]
+- ["s9EquatableP", "noAuthorization"]
+- !private ["s9EquatableP", "notification"]
+- ["s9EquatableP", "preparedWriteRequest"]
+- ["s9EquatableP", "preparedWriteResponse"]
+- ["s9EquatableP", "rawValue"]
+- ["s9EquatableP", "read"]
+- ["s9EquatableP", "readAuthentication"]
+- ["s9EquatableP", "readBlobRequest"]
+- ["s9EquatableP", "readBlobResponse"]
+- ["s9EquatableP", "readByGroupTypeRequest"]
+- ["s9EquatableP", "readByGroupTypeResponse"]
+- ["s9EquatableP", "readByTypeRequest"]
+- ["s9EquatableP", "readByTypeResponse"]
+- ["s9EquatableP", "readEncrypt"]
+- ["s9EquatableP", "readMultipleRequest"]
+- ["s9EquatableP", "readMultipleResponse"]
+- ["s9EquatableP", "readRequest"]
+- ["s9EquatableP", "readResponse"]
+- !private ["s9EquatableP", "request"]
+- ["s9EquatableP", "requestResponseMap"]
+- !private ["s9EquatableP", "requestsByResponse"]
+- !private ["s9EquatableP", "response"]
+- !private ["s9EquatableP", "responsesByRequest"]
+- ["s9EquatableP", "signedWriteCommand"]
+- ["s9EquatableP", "subscript"]
+- ["s9EquatableP", "write"]
+- ["s9EquatableP", "writeAuthentication"]
+- ["s9EquatableP", "writeCommand"]
+- ["s9EquatableP", "writeEncrypt"]
+- ["s9EquatableP", "writeRequest"]
+- ["s9EquatableP", "writeResponse"]
+- ["s25ExpressibleByArrayLiteralP", "count"]
+- ["s25ExpressibleByArrayLiteralP", "forEach"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s30ExpressibleByDictionaryLiteralP", "init"]
+- ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s8HashableP", "ATTOpcode"]
+- ["s8HashableP", "BitMaskOptionSet"]
+- ["s8HashableP", "RawValue"]
+- ["s8HashableP", ""]
+- ["s8HashableP", "_Default_RawValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- ["s8HashableP", "all"]
+- ["s8HashableP", "att"]
+- ["s8HashableP", "authorized"]
+- !private ["s8HashableP", "command"]
+- !private ["s8HashableP", "confirmation"]
+- ["s8HashableP", "description"]
+- ["s8HashableP", "errorResponse"]
+- ["s8HashableP", "executeWriteRequest"]
+- ["s8HashableP", "executeWriteResponse"]
+- ["s8HashableP", "findByTypeRequest"]
+- ["s8HashableP", "findByTypeResponse"]
+- ["s8HashableP", "findInformationRequest"]
+- ["s8HashableP", "findInformationResponse"]
+- ["s8HashableP", "handleValueConfirmation"]
+- ["s8HashableP", "handleValueIndication"]
+- ["s8HashableP", "handleValueNotification"]
+- ["s8HashableP", "hashValue"]
+- !private ["s8HashableP", "indication"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "maximumTransmissionUnitRequest"]
+- ["s8HashableP", "maximumTransmissionUnitResponse"]
+- !private ["s8HashableP", "name"]
+- ["s8HashableP", "noAuthorization"]
+- !private ["s8HashableP", "notification"]
+- ["s8HashableP", "preparedWriteRequest"]
+- ["s8HashableP", "preparedWriteResponse"]
+- ["s8HashableP", "rawValue"]
+- ["s8HashableP", "read"]
+- ["s8HashableP", "readAuthentication"]
+- ["s8HashableP", "readBlobRequest"]
+- ["s8HashableP", "readBlobResponse"]
+- ["s8HashableP", "readByGroupTypeRequest"]
+- ["s8HashableP", "readByGroupTypeResponse"]
+- ["s8HashableP", "readByTypeRequest"]
+- ["s8HashableP", "readByTypeResponse"]
+- ["s8HashableP", "readEncrypt"]
+- ["s8HashableP", "readMultipleRequest"]
+- ["s8HashableP", "readMultipleResponse"]
+- ["s8HashableP", "readRequest"]
+- ["s8HashableP", "readResponse"]
+- !private ["s8HashableP", "request"]
+- ["s8HashableP", "requestResponseMap"]
+- !private ["s8HashableP", "requestsByResponse"]
+- !private ["s8HashableP", "response"]
+- !private ["s8HashableP", "responsesByRequest"]
+- ["s8HashableP", "signedWriteCommand"]
+- ["s8HashableP", "write"]
+- ["s8HashableP", "writeAuthentication"]
+- ["s8HashableP", "writeCommand"]
+- ["s8HashableP", "writeEncrypt"]
+- ["s8HashableP", "writeRequest"]
+- ["s8HashableP", "writeResponse"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- ["s17MutableCollectionP", "count"]
+- ["s17MutableCollectionP", "forEach"]
+- ["9Bluetooth26ProtocolServiceMultiplexerO", "att"]
+- ["s22RandomAccessCollectionP", "count"]
+- ["s22RandomAccessCollectionP", "forEach"]
+- ["s26RangeReplaceableCollectionP", "count"]
+- ["s26RangeReplaceableCollectionP", "forEach"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- ["s16RawRepresentableP", "ATTOpcode"]
+- ["s16RawRepresentableP", "BitMaskOptionSet"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- ["s16RawRepresentableP", "all"]
+- ["s16RawRepresentableP", "att"]
+- ["s16RawRepresentableP", "authorized"]
+- ["s16RawRepresentableP", "description"]
+- ["s16RawRepresentableP", "errorResponse"]
+- ["s16RawRepresentableP", "executeWriteRequest"]
+- ["s16RawRepresentableP", "executeWriteResponse"]
+- ["s16RawRepresentableP", "findByTypeRequest"]
+- ["s16RawRepresentableP", "findByTypeResponse"]
+- ["s16RawRepresentableP", "findInformationRequest"]
+- ["s16RawRepresentableP", "findInformationResponse"]
+- ["s16RawRepresentableP", "handleValueConfirmation"]
+- ["s16RawRepresentableP", "handleValueIndication"]
+- ["s16RawRepresentableP", "handleValueNotification"]
+- ["s16RawRepresentableP", "hashValue"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "maximumTransmissionUnitRequest"]
+- ["s16RawRepresentableP", "maximumTransmissionUnitResponse"]
+- !private ["s16RawRepresentableP", "name"]
+- ["s16RawRepresentableP", "noAuthorization"]
+- ["s16RawRepresentableP", "preparedWriteRequest"]
+- ["s16RawRepresentableP", "preparedWriteResponse"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s16RawRepresentableP", "read"]
+- ["s16RawRepresentableP", "readAuthentication"]
+- ["s16RawRepresentableP", "readBlobRequest"]
+- ["s16RawRepresentableP", "readBlobResponse"]
+- ["s16RawRepresentableP", "readByGroupTypeRequest"]
+- ["s16RawRepresentableP", "readByGroupTypeResponse"]
+- ["s16RawRepresentableP", "readByTypeRequest"]
+- ["s16RawRepresentableP", "readByTypeResponse"]
+- ["s16RawRepresentableP", "readEncrypt"]
+- ["s16RawRepresentableP", "readMultipleRequest"]
+- ["s16RawRepresentableP", "readMultipleResponse"]
+- ["s16RawRepresentableP", "readRequest"]
+- ["s16RawRepresentableP", "readResponse"]
+- ["s16RawRepresentableP", "requestResponseMap"]
+- !private ["s16RawRepresentableP", "requestsByResponse"]
+- !private ["s16RawRepresentableP", "responsesByRequest"]
+- ["s16RawRepresentableP", "signedWriteCommand"]
+- ["s16RawRepresentableP", "write"]
+- ["s16RawRepresentableP", "writeAuthentication"]
+- ["s16RawRepresentableP", "writeCommand"]
+- ["s16RawRepresentableP", "writeEncrypt"]
+- ["s16RawRepresentableP", "writeRequest"]
+- ["s16RawRepresentableP", "writeResponse"]
+- ["s8SequenceP", "count"]
+- ["s8SequenceP", "forEach"]
+- ["s8SequenceP", "init"]
+- ["s8SequenceP", "subscript"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- ["s14_ArrayProtocolP", "count"]
+- ["s14_ArrayProtocolP", "forEach"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- ["10Foundation13_CFBridgeableP", "count"]
+- ["10Foundation13_CFBridgeableP", "forEach"]
+- ["10Foundation13_CFBridgeableP", "init"]
+- ["10Foundation13_CFBridgeableP", "subscript"]
+- ["s24_DestructorSafeContainerP", "count"]
+- ["s24_DestructorSafeContainerP", "forEach"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation13_NSBridgeableP", "count"]
+- ["10Foundation13_NSBridgeableP", "forEach"]
+- ["10Foundation13_NSBridgeableP", "init"]
+- ["10Foundation13_NSBridgeableP", "subscript"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- ["10Foundation17_ObjectBridgeableP", "count"]
+- ["10Foundation17_ObjectBridgeableP", "forEach"]
+- ["10Foundation17_ObjectBridgeableP", "init"]
+- ["10Foundation17_ObjectBridgeableP", "subscript"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- ["10Foundation21_ObjectTypeBridgeableP", "count"]
+- ["10Foundation21_ObjectTypeBridgeableP", "forEach"]
+- ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "9Bluetooth3ATTO"
+- "9Bluetooth22ATTAttributePermissionO"
+- "9Bluetooth9ATTOpcodeO"
+- "9Bluetooth13ATTOpcodeTypeO"
+- "Sa"
+- "s23BidirectionalCollectionP"
+- "9Bluetooth13BitMaskOptionP"
+- "9Bluetooth16BitMaskOptionSetV"
+- !private "Sb"
+- !private "s7CVarArgP"
+- "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s10DictionaryV"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "s17MutableCollectionP"
+- "9Bluetooth26ProtocolServiceMultiplexerO"
+- "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "s14_ArrayProtocolP"
+- "10Foundation13_CFBridgeableP"
+- "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- "10Foundation13_NSBridgeableP"
+- "10Foundation17_ObjectBridgeableP"
+- "10Foundation21_ObjectTypeBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "6b1eec20d53880ddebe888980fe68779"

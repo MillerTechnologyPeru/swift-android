@@ -1,0 +1,92 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AdvertisingChannelHeader"
+provides-nominal:
+- "9Bluetooth24AdvertisingChannelHeaderO"
+provides-member:
+- ["9Bluetooth24AdvertisingChannelHeaderO", ""]
+depends-top-level:
+- "=="
+- "AdvertisingChannelHeader"
+- "AssignmentPrecedence"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "UInt8"
+- !private "~="
+depends-member:
+- ["9Bluetooth24AdvertisingChannelHeaderO", "RawValue"]
+- ["9Bluetooth24AdvertisingChannelHeaderO", "_Default_RawValue"]
+- ["9Bluetooth24AdvertisingChannelHeaderO", "connectionRequest"]
+- ["9Bluetooth24AdvertisingChannelHeaderO", "deinit"]
+- ["9Bluetooth24AdvertisingChannelHeaderO", "directedAdvertising"]
+- ["9Bluetooth24AdvertisingChannelHeaderO", "hashValue"]
+- ["9Bluetooth24AdvertisingChannelHeaderO", "init"]
+- ["9Bluetooth24AdvertisingChannelHeaderO", "nonConnectableAdvertising"]
+- ["9Bluetooth24AdvertisingChannelHeaderO", "rawValue"]
+- ["9Bluetooth24AdvertisingChannelHeaderO", "scanRequest"]
+- ["9Bluetooth24AdvertisingChannelHeaderO", "scanResponse"]
+- ["9Bluetooth24AdvertisingChannelHeaderO", "scannableAdvertising"]
+- ["9Bluetooth24AdvertisingChannelHeaderO", "undirectedAdvertising"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- ["s9EquatableP", "RawValue"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "undirectedAdvertising"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s8HashableP", "RawValue"]
+- ["s8HashableP", ""]
+- ["s8HashableP", "_Default_RawValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "rawValue"]
+- !private ["s8HashableP", "undirectedAdvertising"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- ["s16RawRepresentableP", "hashValue"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "rawValue"]
+- !private ["s16RawRepresentableP", "undirectedAdvertising"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+depends-nominal:
+- "9Bluetooth24AdvertisingChannelHeaderO"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- "s16RawRepresentableP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "c8e6b5c8bd7a95a518367efb5a615cfd"

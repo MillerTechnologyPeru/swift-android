@@ -1,0 +1,205 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GAPURI"
+- "=="
+provides-nominal:
+- "9Bluetooth6GAPURIV"
+provides-member:
+- ["9Bluetooth6GAPURIV", ""]
+depends-top-level:
+- "=="
+- "AssignmentPrecedence"
+- "Bool"
+- "CustomStringConvertible"
+- "Data"
+- "Equatable"
+- !private "FloatLiteralType"
+- "GAPData"
+- "GAPDataType"
+- "GAPURI"
+- !private "IntegerLiteralType"
+- "String"
+- !private "StringLiteralType"
+- "URL"
+- !private "fatalError"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "data"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s10CollectionP", "data"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "data"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "absoluteString"]
+- !private ["s28CustomDebugStringConvertibleP", "data"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "absoluteString"]
+- !private ["s29CustomPlaygroundQuickLookableP", "data"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "data"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "String"]
+- !private ["s23CustomStringConvertibleP", "URL"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "absoluteString"]
+- ["s23CustomStringConvertibleP", "data"]
+- ["s23CustomStringConvertibleP", "dataType"]
+- ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "uri"]
+- !private ["s23CustomStringConvertibleP", "utf8"]
+- !private ["s9DecodableP", "absoluteString"]
+- !private ["s9DecodableP", "data"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "absoluteString"]
+- !private ["s9EncodableP", "data"]
+- !private ["s9EncodableP", "init"]
+- !private ["SS10FoundationE8EncodingV", "utf8"]
+- !private ["s9EquatableP", "String"]
+- !private ["s9EquatableP", "URL"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "absoluteString"]
+- ["s9EquatableP", "data"]
+- ["s9EquatableP", "dataType"]
+- ["s9EquatableP", "description"]
+- !private ["s9EquatableP", "fatalError"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "uri"]
+- !private ["s9EquatableP", "utf8"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "data"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", "uri"]
+- !private ["s26ExpressibleByStringLiteralP", "data"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "data"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["9Bluetooth7GAPDataP", "String"]
+- !private ["9Bluetooth7GAPDataP", "URL"]
+- ["9Bluetooth7GAPDataP", ""]
+- ["9Bluetooth7GAPDataP", "data"]
+- ["9Bluetooth7GAPDataP", "dataType"]
+- ["9Bluetooth7GAPDataP", "description"]
+- !private ["9Bluetooth7GAPDataP", "fatalError"]
+- ["9Bluetooth7GAPDataP", "init"]
+- !private ["9Bluetooth7GAPDataP", "uri"]
+- ["9Bluetooth11GAPDataTypeV", "uri"]
+- ["9Bluetooth6GAPURIV", "=="]
+- ["9Bluetooth6GAPURIV", "Bool"]
+- ["9Bluetooth6GAPURIV", "Data"]
+- ["9Bluetooth6GAPURIV", "GAPDataType"]
+- ["9Bluetooth6GAPURIV", "GAPURI"]
+- ["9Bluetooth6GAPURIV", "String"]
+- ["9Bluetooth6GAPURIV", "URL"]
+- ["9Bluetooth6GAPURIV", "data"]
+- ["9Bluetooth6GAPURIV", "dataType"]
+- ["9Bluetooth6GAPURIV", "deinit"]
+- ["9Bluetooth6GAPURIV", "description"]
+- !private ["9Bluetooth6GAPURIV", "fatalError"]
+- ["9Bluetooth6GAPURIV", "init"]
+- ["9Bluetooth6GAPURIV", "uri"]
+- !private ["s8HashableP", "absoluteString"]
+- !private ["s8HashableP", "data"]
+- !private ["s8HashableP", "init"]
+- ["s8HashableP", "uri"]
+- !private ["s8HashableP", "utf8"]
+- !private ["s25LosslessStringConvertibleP", "data"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "data"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "data"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- ["s16RawRepresentableP", "uri"]
+- !private ["s16RawRepresentableP", "utf8"]
+- !private ["10Foundation20ReferenceConvertibleP", "absoluteString"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["s8SequenceP", "data"]
+- !private ["s8SequenceP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["SS", "data"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "data"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "data"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "data"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["10Foundation3URLV", "absoluteString"]
+- !private ["10Foundation3URLV", "init"]
+- !private ["10Foundation13_CFBridgeableP", "absoluteString"]
+- !private ["10Foundation13_CFBridgeableP", "data"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "data"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "data"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "data"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "data"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "absoluteString"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "data"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "absoluteString"]
+- !private ["10Foundation13_NSBridgeableP", "data"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "absoluteString"]
+- !private ["10Foundation17_ObjectBridgeableP", "data"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "absoluteString"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "data"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["s16_SwiftStringViewP", "data"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "SS10FoundationE8EncodingV"
+- "s9EquatableP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "9Bluetooth7GAPDataP"
+- "9Bluetooth11GAPDataTypeV"
+- "9Bluetooth6GAPURIV"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- !private "s12StaticStringV"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "10Foundation3URLV"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s34_ExpressibleByFileReferenceLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "0317ff8002d119ec41457956aa550023"

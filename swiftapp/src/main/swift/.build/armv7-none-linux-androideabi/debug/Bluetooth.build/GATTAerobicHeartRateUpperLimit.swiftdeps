@@ -1,0 +1,211 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GATTAerobicHeartRateUpperLimit"
+- "=="
+provides-nominal:
+- "9Bluetooth30GATTAerobicHeartRateUpperLimitV"
+provides-member:
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", ""]
+depends-top-level:
+- "=="
+- !private "Array"
+- "AssignmentPrecedence"
+- "BluetoothUUID"
+- "Bool"
+- "CustomStringConvertible"
+- "Data"
+- "Equatable"
+- !private "FloatLiteralType"
+- "GATTAerobicHeartRateUpperLimit"
+- "GATTBeatsPerMinute"
+- "GATTCharacteristic"
+- !private "IntegerLiteralType"
+- "MemoryLayout"
+- "String"
+- "UInt8"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["9Bluetooth0A4UUIDO", "aerobicHeartRateUpperLimit"]
+- !private ["9Bluetooth0A4UnitP", "description"]
+- !private ["9Bluetooth0A4UnitP", "init"]
+- !private ["9Bluetooth0A4UnitP", "rawValue"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "deinit"]
+- !private ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "description"]
+- !private ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "init"]
+- !private ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "rawValue"]
+- !private ["9Bluetooth8ByteSwapP", "aerobicHeartRateUpperLimit"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "BeatsPerMinute"]
+- !private ["s23CustomStringConvertibleP", "Data"]
+- ["s23CustomStringConvertibleP", "MemoryLayout"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "aerobicHeartRateUpperLimit"]
+- !private ["s23CustomStringConvertibleP", "beats"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- ["s23CustomStringConvertibleP", "data"]
+- ["s23CustomStringConvertibleP", "description"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "length"]
+- !private ["s23CustomStringConvertibleP", "rawValue"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- ["s23CustomStringConvertibleP", "uuid"]
+- !private ["10Foundation4DataV", "count"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["10Foundation4DataV", "subscript"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "BeatsPerMinute"]
+- !private ["s9EquatableP", "Data"]
+- ["s9EquatableP", "MemoryLayout"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "aerobicHeartRateUpperLimit"]
+- !private ["s9EquatableP", "beats"]
+- !private ["s9EquatableP", "count"]
+- ["s9EquatableP", "data"]
+- ["s9EquatableP", "description"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "length"]
+- !private ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "subscript"]
+- ["s9EquatableP", "uuid"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s27ExpressibleByIntegerLiteralP", "description"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "rawValue"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "=="]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "BeatsPerMinute"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "BluetoothUUID"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "Bool"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "Data"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "GATTAerobicHeartRateUpperLimit"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "GATTBeatsPerMinute"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "MemoryLayout"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "String"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "UInt8"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "beats"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "data"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "deinit"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "description"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "init"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "length"]
+- ["9Bluetooth30GATTAerobicHeartRateUpperLimitV", "uuid"]
+- ["9Bluetooth18GATTBeatsPerMinuteO", "Byte"]
+- !private ["9Bluetooth18GATTCharacteristicP", "BeatsPerMinute"]
+- !private ["9Bluetooth18GATTCharacteristicP", "Data"]
+- ["9Bluetooth18GATTCharacteristicP", "MemoryLayout"]
+- ["9Bluetooth18GATTCharacteristicP", ""]
+- !private ["9Bluetooth18GATTCharacteristicP", "beats"]
+- ["9Bluetooth18GATTCharacteristicP", "data"]
+- ["9Bluetooth18GATTCharacteristicP", "description"]
+- ["9Bluetooth18GATTCharacteristicP", "init"]
+- !private ["9Bluetooth18GATTCharacteristicP", "length"]
+- ["9Bluetooth18GATTCharacteristicP", "uuid"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "aerobicHeartRateUpperLimit"]
+- !private ["s8HashableP", "count"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "subscript"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s12MemoryLayoutO", "size"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["s16RawRepresentableP", "aerobicHeartRateUpperLimit"]
+- !private ["s16RawRepresentableP", "description"]
+- !private ["s16RawRepresentableP", "init"]
+- !private ["s16RawRepresentableP", "rawValue"]
+- !private ["10Foundation20ReferenceConvertibleP", "count"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "subscript"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "count"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_NSBridgeableP", "count"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "count"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "subscript"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "count"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "9Bluetooth0A4UUIDO"
+- !private "9Bluetooth0A4UnitP"
+- !private "Sb"
+- "9Bluetooth18GATTBeatsPerMinuteO4ByteV"
+- !private "9Bluetooth8ByteSwapP"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "9Bluetooth30GATTAerobicHeartRateUpperLimitV"
+- "9Bluetooth18GATTBeatsPerMinuteO"
+- "9Bluetooth18GATTCharacteristicP"
+- !private "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- "s12MemoryLayoutO"
+- !private "s17MutableCollectionP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "5566be12e3076fe9a746220e6afe4111"

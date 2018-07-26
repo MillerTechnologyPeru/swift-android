@@ -1,0 +1,527 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Runtime"
+provides-nominal:
+- "9java_lang7RuntimeC"
+provides-member:
+- ["9java_lang7RuntimeC", ""]
+depends-top-level:
+- !private "!="
+- "AssignmentPrecedence"
+- "Bool"
+- "FloatLiteralType"
+- "Int"
+- "Int64"
+- "IntegerLiteralType"
+- !private "JNI"
+- !private "JNIMethod"
+- !private "JNIType"
+- !private "JNI_FALSE"
+- !private "JNI_TRUE"
+- "Process"
+- "Runtime"
+- "StaticString"
+- "String"
+- "StringLiteralType"
+- "TernaryPrecedence"
+- "UnavailableObject"
+- "java_swift"
+- !private "jboolean"
+- "jclass"
+- !private "jint"
+- "jmethodID"
+- !private "jobject"
+- !private "jvalue"
+depends-member:
+- !private ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s5ErrorP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "init"]
+- !private ["Si", "init"]
+- !private ["10java_swift7JNICoreC", "DeleteLocalRef"]
+- !private ["10java_swift7JNICoreC", "ExceptionCheck"]
+- !private ["10java_swift9JNIMethodC", "CallBooleanMethod"]
+- !private ["10java_swift9JNIMethodC", "CallIntMethod"]
+- !private ["10java_swift9JNIMethodC", "CallLongMethod"]
+- !private ["10java_swift9JNIMethodC", "CallObjectMethod"]
+- !private ["10java_swift9JNIMethodC", "CallStaticObjectMethod"]
+- !private ["10java_swift9JNIMethodC", "CallStaticVoidMethod"]
+- !private ["10java_swift9JNIMethodC", "CallVoidMethod"]
+- ["10java_swift9JNIObjectC", "Bool"]
+- ["10java_swift9JNIObjectC", "Int"]
+- ["10java_swift9JNIObjectC", "Int64"]
+- !private ["10java_swift9JNIObjectC", "JNI"]
+- !private ["10java_swift9JNIObjectC", "JNIMethod"]
+- !private ["10java_swift9JNIObjectC", "JNIType"]
+- !private ["10java_swift9JNIObjectC", "JNI_FALSE"]
+- !private ["10java_swift9JNIObjectC", "JNI_TRUE"]
+- ["10java_swift9JNIObjectC", "Process"]
+- ["10java_swift9JNIObjectC", "Runtime"]
+- ["10java_swift9JNIObjectC", "RuntimeJNIClass"]
+- ["10java_swift9JNIObjectC", "StaticString"]
+- ["10java_swift9JNIObjectC", "String"]
+- ["10java_swift9JNIObjectC", "UnavailableObject"]
+- ["10java_swift9JNIObjectC", "addShutdownHook"]
+- ["10java_swift9JNIObjectC", "addShutdownHook_MethodID_3"]
+- ["10java_swift9JNIObjectC", "availableProcessors"]
+- ["10java_swift9JNIObjectC", "availableProcessors_MethodID_4"]
+- ["10java_swift9JNIObjectC", "exec"]
+- ["10java_swift9JNIObjectC", "exec_MethodID_10"]
+- ["10java_swift9JNIObjectC", "exec_MethodID_5"]
+- ["10java_swift9JNIObjectC", "exec_MethodID_6"]
+- ["10java_swift9JNIObjectC", "exec_MethodID_7"]
+- ["10java_swift9JNIObjectC", "exec_MethodID_8"]
+- ["10java_swift9JNIObjectC", "exec_MethodID_9"]
+- ["10java_swift9JNIObjectC", "exit"]
+- ["10java_swift9JNIObjectC", "exit_MethodID_11"]
+- ["10java_swift9JNIObjectC", "freeMemory"]
+- ["10java_swift9JNIObjectC", "freeMemory_MethodID_12"]
+- ["10java_swift9JNIObjectC", "gc"]
+- ["10java_swift9JNIObjectC", "gc_MethodID_13"]
+- ["10java_swift9JNIObjectC", "getLocalizedInputStream"]
+- ["10java_swift9JNIObjectC", "getLocalizedInputStream_MethodID_14"]
+- ["10java_swift9JNIObjectC", "getLocalizedOutputStream"]
+- ["10java_swift9JNIObjectC", "getLocalizedOutputStream_MethodID_15"]
+- ["10java_swift9JNIObjectC", "getRuntime"]
+- ["10java_swift9JNIObjectC", "getRuntime_MethodID_1"]
+- ["10java_swift9JNIObjectC", "halt"]
+- ["10java_swift9JNIObjectC", "halt_MethodID_16"]
+- ["10java_swift9JNIObjectC", "init"]
+- !private ["10java_swift9JNIObjectC", "javaObject"]
+- ["10java_swift9JNIObjectC", "java_swift"]
+- !private ["10java_swift9JNIObjectC", "jboolean"]
+- ["10java_swift9JNIObjectC", "jclass"]
+- !private ["10java_swift9JNIObjectC", "jint"]
+- ["10java_swift9JNIObjectC", "jmethodID"]
+- !private ["10java_swift9JNIObjectC", "jobject"]
+- !private ["10java_swift9JNIObjectC", "jvalue"]
+- ["10java_swift9JNIObjectC", "load"]
+- ["10java_swift9JNIObjectC", "loadLibrary"]
+- ["10java_swift9JNIObjectC", "loadLibrary_MethodID_18"]
+- ["10java_swift9JNIObjectC", "load_MethodID_17"]
+- ["10java_swift9JNIObjectC", "maxMemory"]
+- ["10java_swift9JNIObjectC", "maxMemory_MethodID_19"]
+- ["10java_swift9JNIObjectC", "removeShutdownHook"]
+- ["10java_swift9JNIObjectC", "removeShutdownHook_MethodID_20"]
+- ["10java_swift9JNIObjectC", "runFinalization"]
+- ["10java_swift9JNIObjectC", "runFinalization_MethodID_21"]
+- ["10java_swift9JNIObjectC", "runFinalizersOnExit"]
+- ["10java_swift9JNIObjectC", "runFinalizersOnExit_MethodID_2"]
+- ["10java_swift9JNIObjectC", "totalMemory"]
+- ["10java_swift9JNIObjectC", "totalMemory_MethodID_22"]
+- ["10java_swift9JNIObjectC", "traceInstructions"]
+- ["10java_swift9JNIObjectC", "traceInstructions_MethodID_23"]
+- ["10java_swift9JNIObjectC", "traceMethodCalls"]
+- ["10java_swift9JNIObjectC", "traceMethodCalls_MethodID_24"]
+- !private ["10java_swift9JNIObjectC", "withJavaObject"]
+- !private ["10java_swift13JNIObjectInitP", "Int"]
+- !private ["10java_swift13JNIObjectInitP", "JNI"]
+- !private ["10java_swift13JNIObjectInitP", "JNIMethod"]
+- !private ["10java_swift13JNIObjectInitP", "JNIType"]
+- !private ["10java_swift13JNIObjectInitP", "JNI_FALSE"]
+- !private ["10java_swift13JNIObjectInitP", "JNI_TRUE"]
+- !private ["10java_swift13JNIObjectInitP", "Process"]
+- !private ["10java_swift13JNIObjectInitP", "Runtime"]
+- !private ["10java_swift13JNIObjectInitP", "RuntimeJNIClass"]
+- !private ["10java_swift13JNIObjectInitP", "UnavailableObject"]
+- ["10java_swift13JNIObjectInitP", ""]
+- !private ["10java_swift13JNIObjectInitP", "addShutdownHook"]
+- !private ["10java_swift13JNIObjectInitP", "addShutdownHook_MethodID_3"]
+- !private ["10java_swift13JNIObjectInitP", "availableProcessors_MethodID_4"]
+- !private ["10java_swift13JNIObjectInitP", "exec"]
+- !private ["10java_swift13JNIObjectInitP", "exec_MethodID_10"]
+- !private ["10java_swift13JNIObjectInitP", "exec_MethodID_5"]
+- !private ["10java_swift13JNIObjectInitP", "exec_MethodID_6"]
+- !private ["10java_swift13JNIObjectInitP", "exec_MethodID_7"]
+- !private ["10java_swift13JNIObjectInitP", "exec_MethodID_8"]
+- !private ["10java_swift13JNIObjectInitP", "exec_MethodID_9"]
+- !private ["10java_swift13JNIObjectInitP", "exit"]
+- !private ["10java_swift13JNIObjectInitP", "exit_MethodID_11"]
+- !private ["10java_swift13JNIObjectInitP", "freeMemory_MethodID_12"]
+- !private ["10java_swift13JNIObjectInitP", "gc_MethodID_13"]
+- !private ["10java_swift13JNIObjectInitP", "getLocalizedInputStream"]
+- !private ["10java_swift13JNIObjectInitP", "getLocalizedInputStream_MethodID_14"]
+- !private ["10java_swift13JNIObjectInitP", "getLocalizedOutputStream"]
+- !private ["10java_swift13JNIObjectInitP", "getLocalizedOutputStream_MethodID_15"]
+- !private ["10java_swift13JNIObjectInitP", "getRuntime_MethodID_1"]
+- !private ["10java_swift13JNIObjectInitP", "halt"]
+- !private ["10java_swift13JNIObjectInitP", "halt_MethodID_16"]
+- !private ["10java_swift13JNIObjectInitP", "init"]
+- !private ["10java_swift13JNIObjectInitP", "javaObject"]
+- !private ["10java_swift13JNIObjectInitP", "jboolean"]
+- !private ["10java_swift13JNIObjectInitP", "jint"]
+- !private ["10java_swift13JNIObjectInitP", "jobject"]
+- !private ["10java_swift13JNIObjectInitP", "jvalue"]
+- !private ["10java_swift13JNIObjectInitP", "load"]
+- !private ["10java_swift13JNIObjectInitP", "loadLibrary"]
+- !private ["10java_swift13JNIObjectInitP", "loadLibrary_MethodID_18"]
+- !private ["10java_swift13JNIObjectInitP", "load_MethodID_17"]
+- !private ["10java_swift13JNIObjectInitP", "maxMemory_MethodID_19"]
+- !private ["10java_swift13JNIObjectInitP", "removeShutdownHook"]
+- !private ["10java_swift13JNIObjectInitP", "removeShutdownHook_MethodID_20"]
+- !private ["10java_swift13JNIObjectInitP", "runFinalization_MethodID_21"]
+- !private ["10java_swift13JNIObjectInitP", "runFinalizersOnExit"]
+- !private ["10java_swift13JNIObjectInitP", "runFinalizersOnExit_MethodID_2"]
+- !private ["10java_swift13JNIObjectInitP", "totalMemory_MethodID_22"]
+- !private ["10java_swift13JNIObjectInitP", "traceInstructions"]
+- !private ["10java_swift13JNIObjectInitP", "traceInstructions_MethodID_23"]
+- !private ["10java_swift13JNIObjectInitP", "traceMethodCalls"]
+- !private ["10java_swift13JNIObjectInitP", "traceMethodCalls_MethodID_24"]
+- !private ["10java_swift13JNIObjectInitP", "withJavaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "Int"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIMethod"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIType"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI_FALSE"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI_TRUE"]
+- !private ["10java_swift17JNIObjectProtocolP", "Process"]
+- !private ["10java_swift17JNIObjectProtocolP", "Runtime"]
+- !private ["10java_swift17JNIObjectProtocolP", "RuntimeJNIClass"]
+- !private ["10java_swift17JNIObjectProtocolP", "UnavailableObject"]
+- ["10java_swift17JNIObjectProtocolP", ""]
+- !private ["10java_swift17JNIObjectProtocolP", "addShutdownHook"]
+- !private ["10java_swift17JNIObjectProtocolP", "addShutdownHook_MethodID_3"]
+- !private ["10java_swift17JNIObjectProtocolP", "availableProcessors_MethodID_4"]
+- !private ["10java_swift17JNIObjectProtocolP", "exec"]
+- !private ["10java_swift17JNIObjectProtocolP", "exec_MethodID_10"]
+- !private ["10java_swift17JNIObjectProtocolP", "exec_MethodID_5"]
+- !private ["10java_swift17JNIObjectProtocolP", "exec_MethodID_6"]
+- !private ["10java_swift17JNIObjectProtocolP", "exec_MethodID_7"]
+- !private ["10java_swift17JNIObjectProtocolP", "exec_MethodID_8"]
+- !private ["10java_swift17JNIObjectProtocolP", "exec_MethodID_9"]
+- !private ["10java_swift17JNIObjectProtocolP", "exit"]
+- !private ["10java_swift17JNIObjectProtocolP", "exit_MethodID_11"]
+- !private ["10java_swift17JNIObjectProtocolP", "freeMemory_MethodID_12"]
+- !private ["10java_swift17JNIObjectProtocolP", "gc_MethodID_13"]
+- !private ["10java_swift17JNIObjectProtocolP", "getLocalizedInputStream"]
+- !private ["10java_swift17JNIObjectProtocolP", "getLocalizedInputStream_MethodID_14"]
+- !private ["10java_swift17JNIObjectProtocolP", "getLocalizedOutputStream"]
+- !private ["10java_swift17JNIObjectProtocolP", "getLocalizedOutputStream_MethodID_15"]
+- !private ["10java_swift17JNIObjectProtocolP", "getRuntime_MethodID_1"]
+- !private ["10java_swift17JNIObjectProtocolP", "halt"]
+- !private ["10java_swift17JNIObjectProtocolP", "halt_MethodID_16"]
+- !private ["10java_swift17JNIObjectProtocolP", "init"]
+- !private ["10java_swift17JNIObjectProtocolP", "javaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jboolean"]
+- !private ["10java_swift17JNIObjectProtocolP", "jint"]
+- !private ["10java_swift17JNIObjectProtocolP", "jobject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jvalue"]
+- !private ["10java_swift17JNIObjectProtocolP", "load"]
+- !private ["10java_swift17JNIObjectProtocolP", "loadLibrary"]
+- !private ["10java_swift17JNIObjectProtocolP", "loadLibrary_MethodID_18"]
+- !private ["10java_swift17JNIObjectProtocolP", "load_MethodID_17"]
+- !private ["10java_swift17JNIObjectProtocolP", "maxMemory_MethodID_19"]
+- !private ["10java_swift17JNIObjectProtocolP", "removeShutdownHook"]
+- !private ["10java_swift17JNIObjectProtocolP", "removeShutdownHook_MethodID_20"]
+- !private ["10java_swift17JNIObjectProtocolP", "runFinalization_MethodID_21"]
+- !private ["10java_swift17JNIObjectProtocolP", "runFinalizersOnExit"]
+- !private ["10java_swift17JNIObjectProtocolP", "runFinalizersOnExit_MethodID_2"]
+- !private ["10java_swift17JNIObjectProtocolP", "totalMemory_MethodID_22"]
+- !private ["10java_swift17JNIObjectProtocolP", "traceInstructions"]
+- !private ["10java_swift17JNIObjectProtocolP", "traceInstructions_MethodID_23"]
+- !private ["10java_swift17JNIObjectProtocolP", "traceMethodCalls"]
+- !private ["10java_swift17JNIObjectProtocolP", "traceMethodCalls_MethodID_24"]
+- !private ["10java_swift17JNIObjectProtocolP", "withJavaObject"]
+- !private ["10java_swift7JNITypeC", "toJava"]
+- ["10java_swift10JavaObjectC", "Bool"]
+- ["10java_swift10JavaObjectC", "Int"]
+- ["10java_swift10JavaObjectC", "Int64"]
+- !private ["10java_swift10JavaObjectC", "JNI"]
+- !private ["10java_swift10JavaObjectC", "JNIMethod"]
+- !private ["10java_swift10JavaObjectC", "JNIType"]
+- !private ["10java_swift10JavaObjectC", "JNI_FALSE"]
+- !private ["10java_swift10JavaObjectC", "JNI_TRUE"]
+- ["10java_swift10JavaObjectC", "Process"]
+- ["10java_swift10JavaObjectC", "Runtime"]
+- ["10java_swift10JavaObjectC", "RuntimeJNIClass"]
+- ["10java_swift10JavaObjectC", "StaticString"]
+- ["10java_swift10JavaObjectC", "String"]
+- ["10java_swift10JavaObjectC", "UnavailableObject"]
+- ["10java_swift10JavaObjectC", ""]
+- ["10java_swift10JavaObjectC", "addShutdownHook"]
+- ["10java_swift10JavaObjectC", "addShutdownHook_MethodID_3"]
+- ["10java_swift10JavaObjectC", "availableProcessors"]
+- ["10java_swift10JavaObjectC", "availableProcessors_MethodID_4"]
+- ["10java_swift10JavaObjectC", "exec"]
+- ["10java_swift10JavaObjectC", "exec_MethodID_10"]
+- ["10java_swift10JavaObjectC", "exec_MethodID_5"]
+- ["10java_swift10JavaObjectC", "exec_MethodID_6"]
+- ["10java_swift10JavaObjectC", "exec_MethodID_7"]
+- ["10java_swift10JavaObjectC", "exec_MethodID_8"]
+- ["10java_swift10JavaObjectC", "exec_MethodID_9"]
+- ["10java_swift10JavaObjectC", "exit"]
+- ["10java_swift10JavaObjectC", "exit_MethodID_11"]
+- ["10java_swift10JavaObjectC", "freeMemory"]
+- ["10java_swift10JavaObjectC", "freeMemory_MethodID_12"]
+- ["10java_swift10JavaObjectC", "gc"]
+- ["10java_swift10JavaObjectC", "gc_MethodID_13"]
+- ["10java_swift10JavaObjectC", "getLocalizedInputStream"]
+- ["10java_swift10JavaObjectC", "getLocalizedInputStream_MethodID_14"]
+- ["10java_swift10JavaObjectC", "getLocalizedOutputStream"]
+- ["10java_swift10JavaObjectC", "getLocalizedOutputStream_MethodID_15"]
+- ["10java_swift10JavaObjectC", "getRuntime"]
+- ["10java_swift10JavaObjectC", "getRuntime_MethodID_1"]
+- ["10java_swift10JavaObjectC", "halt"]
+- ["10java_swift10JavaObjectC", "halt_MethodID_16"]
+- ["10java_swift10JavaObjectC", "init"]
+- !private ["10java_swift10JavaObjectC", "javaObject"]
+- ["10java_swift10JavaObjectC", "java_swift"]
+- !private ["10java_swift10JavaObjectC", "jboolean"]
+- ["10java_swift10JavaObjectC", "jclass"]
+- !private ["10java_swift10JavaObjectC", "jint"]
+- ["10java_swift10JavaObjectC", "jmethodID"]
+- !private ["10java_swift10JavaObjectC", "jobject"]
+- !private ["10java_swift10JavaObjectC", "jvalue"]
+- ["10java_swift10JavaObjectC", "load"]
+- ["10java_swift10JavaObjectC", "loadLibrary"]
+- ["10java_swift10JavaObjectC", "loadLibrary_MethodID_18"]
+- ["10java_swift10JavaObjectC", "load_MethodID_17"]
+- ["10java_swift10JavaObjectC", "maxMemory"]
+- ["10java_swift10JavaObjectC", "maxMemory_MethodID_19"]
+- ["10java_swift10JavaObjectC", "removeShutdownHook"]
+- ["10java_swift10JavaObjectC", "removeShutdownHook_MethodID_20"]
+- ["10java_swift10JavaObjectC", "runFinalization"]
+- ["10java_swift10JavaObjectC", "runFinalization_MethodID_21"]
+- ["10java_swift10JavaObjectC", "runFinalizersOnExit"]
+- ["10java_swift10JavaObjectC", "runFinalizersOnExit_MethodID_2"]
+- ["10java_swift10JavaObjectC", "totalMemory"]
+- ["10java_swift10JavaObjectC", "totalMemory_MethodID_22"]
+- ["10java_swift10JavaObjectC", "traceInstructions"]
+- ["10java_swift10JavaObjectC", "traceInstructions_MethodID_23"]
+- ["10java_swift10JavaObjectC", "traceMethodCalls"]
+- ["10java_swift10JavaObjectC", "traceMethodCalls_MethodID_24"]
+- !private ["10java_swift10JavaObjectC", "withJavaObject"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["s7NumericP", "init"]
+- !private ["9java_lang7ProcessC", "init"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- ["9java_lang7RuntimeC", "Bool"]
+- ["9java_lang7RuntimeC", "Int"]
+- ["9java_lang7RuntimeC", "Int64"]
+- !private ["9java_lang7RuntimeC", "JNI"]
+- !private ["9java_lang7RuntimeC", "JNIMethod"]
+- !private ["9java_lang7RuntimeC", "JNIType"]
+- !private ["9java_lang7RuntimeC", "JNI_FALSE"]
+- !private ["9java_lang7RuntimeC", "JNI_TRUE"]
+- ["9java_lang7RuntimeC", "Process"]
+- ["9java_lang7RuntimeC", "Runtime"]
+- !private ["9java_lang7RuntimeC", "RuntimeJNIClass"]
+- ["9java_lang7RuntimeC", "StaticString"]
+- ["9java_lang7RuntimeC", "String"]
+- ["9java_lang7RuntimeC", "UnavailableObject"]
+- ["9java_lang7RuntimeC", "addShutdownHook"]
+- !private ["9java_lang7RuntimeC", "addShutdownHook_MethodID_3"]
+- ["9java_lang7RuntimeC", "availableProcessors"]
+- !private ["9java_lang7RuntimeC", "availableProcessors_MethodID_4"]
+- ["9java_lang7RuntimeC", "deinit"]
+- ["9java_lang7RuntimeC", "exec"]
+- !private ["9java_lang7RuntimeC", "exec_MethodID_10"]
+- !private ["9java_lang7RuntimeC", "exec_MethodID_5"]
+- !private ["9java_lang7RuntimeC", "exec_MethodID_6"]
+- !private ["9java_lang7RuntimeC", "exec_MethodID_7"]
+- !private ["9java_lang7RuntimeC", "exec_MethodID_8"]
+- !private ["9java_lang7RuntimeC", "exec_MethodID_9"]
+- ["9java_lang7RuntimeC", "exit"]
+- !private ["9java_lang7RuntimeC", "exit_MethodID_11"]
+- ["9java_lang7RuntimeC", "freeMemory"]
+- !private ["9java_lang7RuntimeC", "freeMemory_MethodID_12"]
+- ["9java_lang7RuntimeC", "gc"]
+- !private ["9java_lang7RuntimeC", "gc_MethodID_13"]
+- ["9java_lang7RuntimeC", "getLocalizedInputStream"]
+- !private ["9java_lang7RuntimeC", "getLocalizedInputStream_MethodID_14"]
+- ["9java_lang7RuntimeC", "getLocalizedOutputStream"]
+- !private ["9java_lang7RuntimeC", "getLocalizedOutputStream_MethodID_15"]
+- ["9java_lang7RuntimeC", "getRuntime"]
+- !private ["9java_lang7RuntimeC", "getRuntime_MethodID_1"]
+- ["9java_lang7RuntimeC", "halt"]
+- !private ["9java_lang7RuntimeC", "halt_MethodID_16"]
+- ["9java_lang7RuntimeC", "init"]
+- !private ["9java_lang7RuntimeC", "javaObject"]
+- ["9java_lang7RuntimeC", "java_swift"]
+- !private ["9java_lang7RuntimeC", "jboolean"]
+- ["9java_lang7RuntimeC", "jclass"]
+- !private ["9java_lang7RuntimeC", "jint"]
+- ["9java_lang7RuntimeC", "jmethodID"]
+- !private ["9java_lang7RuntimeC", "jobject"]
+- !private ["9java_lang7RuntimeC", "jvalue"]
+- ["9java_lang7RuntimeC", "load"]
+- ["9java_lang7RuntimeC", "loadLibrary"]
+- !private ["9java_lang7RuntimeC", "loadLibrary_MethodID_18"]
+- !private ["9java_lang7RuntimeC", "load_MethodID_17"]
+- ["9java_lang7RuntimeC", "maxMemory"]
+- !private ["9java_lang7RuntimeC", "maxMemory_MethodID_19"]
+- ["9java_lang7RuntimeC", "removeShutdownHook"]
+- !private ["9java_lang7RuntimeC", "removeShutdownHook_MethodID_20"]
+- ["9java_lang7RuntimeC", "runFinalization"]
+- !private ["9java_lang7RuntimeC", "runFinalization_MethodID_21"]
+- ["9java_lang7RuntimeC", "runFinalizersOnExit"]
+- !private ["9java_lang7RuntimeC", "runFinalizersOnExit_MethodID_2"]
+- ["9java_lang7RuntimeC", "totalMemory"]
+- !private ["9java_lang7RuntimeC", "totalMemory_MethodID_22"]
+- ["9java_lang7RuntimeC", "traceInstructions"]
+- !private ["9java_lang7RuntimeC", "traceInstructions_MethodID_23"]
+- ["9java_lang7RuntimeC", "traceMethodCalls"]
+- !private ["9java_lang7RuntimeC", "traceMethodCalls_MethodID_24"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s5UInt8V", "init"]
+- !private ["10java_swift17UnavailableObjectC", "init"]
+- !private ["s15UnsignedIntegerP", "init"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "subscript"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+- !private ["s14_StringElementP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["SC6jvalueV", "init"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- !private "s8HashableP"
+- !private "Si"
+- !private "10java_swift7JNICoreC"
+- !private "10java_swift9JNIMethodC"
+- "10java_swift9JNIObjectC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- !private "10java_swift7JNITypeC"
+- "10java_swift10JavaObjectC"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "s7NumericP"
+- !private "9java_lang7ProcessC"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- "9java_lang7RuntimeC"
+- !private "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s5UInt8V"
+- !private "10java_swift17UnavailableObjectC"
+- !private "s15UnsignedIntegerP"
+- !private "s14_ArrayProtocolP"
+- !private "s18_BitwiseOperationsP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+- !private "s14_StringElementP"
+- !private "s16_SwiftStringViewP"
+- !private "SC6jvalueV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "cc5033fec245463196e329fb4421a897"

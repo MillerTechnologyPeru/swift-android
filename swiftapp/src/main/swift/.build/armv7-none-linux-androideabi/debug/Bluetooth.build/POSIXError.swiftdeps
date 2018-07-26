@@ -1,0 +1,247 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "POSIXError"
+- "POSIXErrorCode"
+provides-nominal:
+- "9Bluetooth10POSIXErrorV"
+- "9Bluetooth14POSIXErrorCodeO"
+provides-member:
+- ["9Bluetooth10POSIXErrorV", ""]
+- ["9Bluetooth14POSIXErrorCodeO", ""]
+- ["9Bluetooth10POSIXErrorV", "fromErrno"]
+depends-top-level:
+- "=="
+- "AssignmentPrecedence"
+- "Error"
+- "FloatLiteralType"
+- "Int32"
+- "IntegerLiteralType"
+- "POSIXError"
+- "POSIXErrorCode"
+- !private "errno"
+- !private "~="
+depends-member:
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "EAGAIN"]
+- !private ["s9EquatableP", "EDEADLK"]
+- ["s9EquatableP", "RawValue"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "rawValue"]
+- !private ["s5ErrorP", "POSIXErrorCode"]
+- ["s5ErrorP", ""]
+- ["s5ErrorP", "_code"]
+- ["s5ErrorP", "_domain"]
+- ["s5ErrorP", "_userInfo"]
+- !private ["s5ErrorP", "code"]
+- !private ["s5ErrorP", "errno"]
+- !private ["s5ErrorP", "init"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "EAGAIN"]
+- !private ["s8HashableP", "EDEADLK"]
+- ["s8HashableP", "RawValue"]
+- ["s8HashableP", ""]
+- ["s8HashableP", "_Default_RawValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "rawValue"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["9Bluetooth10POSIXErrorV", "POSIXError"]
+- ["9Bluetooth10POSIXErrorV", "POSIXErrorCode"]
+- ["9Bluetooth10POSIXErrorV", "_code"]
+- ["9Bluetooth10POSIXErrorV", "_domain"]
+- ["9Bluetooth10POSIXErrorV", "_userInfo"]
+- ["9Bluetooth10POSIXErrorV", "code"]
+- ["9Bluetooth10POSIXErrorV", "deinit"]
+- !private ["9Bluetooth10POSIXErrorV", "errno"]
+- ["9Bluetooth10POSIXErrorV", "fromErrno"]
+- ["9Bluetooth10POSIXErrorV", "init"]
+- ["9Bluetooth14POSIXErrorCodeO", "E2BIG"]
+- ["9Bluetooth14POSIXErrorCodeO", "EACCES"]
+- ["9Bluetooth14POSIXErrorCodeO", "EADDRINUSE"]
+- ["9Bluetooth14POSIXErrorCodeO", "EADDRNOTAVAIL"]
+- ["9Bluetooth14POSIXErrorCodeO", "EADV"]
+- ["9Bluetooth14POSIXErrorCodeO", "EAFNOSUPPORT"]
+- ["9Bluetooth14POSIXErrorCodeO", "EAGAIN"]
+- ["9Bluetooth14POSIXErrorCodeO", "EALREADY"]
+- ["9Bluetooth14POSIXErrorCodeO", "EBADE"]
+- ["9Bluetooth14POSIXErrorCodeO", "EBADF"]
+- ["9Bluetooth14POSIXErrorCodeO", "EBADFD"]
+- ["9Bluetooth14POSIXErrorCodeO", "EBADMSG"]
+- ["9Bluetooth14POSIXErrorCodeO", "EBADR"]
+- ["9Bluetooth14POSIXErrorCodeO", "EBADRQC"]
+- ["9Bluetooth14POSIXErrorCodeO", "EBADSLT"]
+- ["9Bluetooth14POSIXErrorCodeO", "EBFONT"]
+- ["9Bluetooth14POSIXErrorCodeO", "EBUSY"]
+- ["9Bluetooth14POSIXErrorCodeO", "ECANCELED"]
+- ["9Bluetooth14POSIXErrorCodeO", "ECHILD"]
+- ["9Bluetooth14POSIXErrorCodeO", "ECHRNG"]
+- ["9Bluetooth14POSIXErrorCodeO", "ECOMM"]
+- ["9Bluetooth14POSIXErrorCodeO", "ECONNABORTED"]
+- ["9Bluetooth14POSIXErrorCodeO", "ECONNREFUSED"]
+- ["9Bluetooth14POSIXErrorCodeO", "ECONNRESET"]
+- ["9Bluetooth14POSIXErrorCodeO", "EDEADLK"]
+- ["9Bluetooth14POSIXErrorCodeO", "EDEADLOCK"]
+- ["9Bluetooth14POSIXErrorCodeO", "EDESTADDRREQ"]
+- ["9Bluetooth14POSIXErrorCodeO", "EDOM"]
+- ["9Bluetooth14POSIXErrorCodeO", "EDOTDOT"]
+- ["9Bluetooth14POSIXErrorCodeO", "EDQUOT"]
+- ["9Bluetooth14POSIXErrorCodeO", "EEXIST"]
+- ["9Bluetooth14POSIXErrorCodeO", "EFAULT"]
+- ["9Bluetooth14POSIXErrorCodeO", "EFBIG"]
+- ["9Bluetooth14POSIXErrorCodeO", "EHOSTDOWN"]
+- ["9Bluetooth14POSIXErrorCodeO", "EHOSTUNREACH"]
+- ["9Bluetooth14POSIXErrorCodeO", "EIDRM"]
+- ["9Bluetooth14POSIXErrorCodeO", "EILSEQ"]
+- ["9Bluetooth14POSIXErrorCodeO", "EINPROGRESS"]
+- ["9Bluetooth14POSIXErrorCodeO", "EINTR"]
+- ["9Bluetooth14POSIXErrorCodeO", "EINVAL"]
+- ["9Bluetooth14POSIXErrorCodeO", "EIO"]
+- ["9Bluetooth14POSIXErrorCodeO", "EISCONN"]
+- ["9Bluetooth14POSIXErrorCodeO", "EISDIR"]
+- ["9Bluetooth14POSIXErrorCodeO", "EISNAM"]
+- ["9Bluetooth14POSIXErrorCodeO", "EKEYEXPIRED"]
+- ["9Bluetooth14POSIXErrorCodeO", "EKEYREJECTED"]
+- ["9Bluetooth14POSIXErrorCodeO", "EKEYREVOKED"]
+- ["9Bluetooth14POSIXErrorCodeO", "EL2HLT"]
+- ["9Bluetooth14POSIXErrorCodeO", "EL2NSYNC"]
+- ["9Bluetooth14POSIXErrorCodeO", "EL3HLT"]
+- ["9Bluetooth14POSIXErrorCodeO", "EL3RST"]
+- ["9Bluetooth14POSIXErrorCodeO", "ELIBACC"]
+- ["9Bluetooth14POSIXErrorCodeO", "ELIBBAD"]
+- ["9Bluetooth14POSIXErrorCodeO", "ELIBEXEC"]
+- ["9Bluetooth14POSIXErrorCodeO", "ELIBMAX"]
+- ["9Bluetooth14POSIXErrorCodeO", "ELIBSCN"]
+- ["9Bluetooth14POSIXErrorCodeO", "ELNRNG"]
+- ["9Bluetooth14POSIXErrorCodeO", "ELOOP"]
+- ["9Bluetooth14POSIXErrorCodeO", "EMEDIUMTYPE"]
+- ["9Bluetooth14POSIXErrorCodeO", "EMFILE"]
+- ["9Bluetooth14POSIXErrorCodeO", "EMLINK"]
+- ["9Bluetooth14POSIXErrorCodeO", "EMSGSIZE"]
+- ["9Bluetooth14POSIXErrorCodeO", "EMULTIHOP"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENAMETOOLONG"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENAVAIL"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENETDOWN"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENETRESET"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENETUNREACH"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENFILE"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOANO"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOBUFS"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOCSI"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENODATA"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENODEV"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOENT"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOEXEC"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOKEY"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOLCK"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOLINK"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOMEDIUM"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOMEM"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOMSG"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENONET"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOPKG"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOPROTOOPT"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOSPC"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOSR"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOSTR"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOSYS"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOTBLK"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOTCONN"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOTDIR"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOTEMPTY"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOTNAM"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOTRECOVERABLE"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOTSOCK"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOTTY"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENOTUNIQ"]
+- ["9Bluetooth14POSIXErrorCodeO", "ENXIO"]
+- ["9Bluetooth14POSIXErrorCodeO", "EOPNOTSUPP"]
+- ["9Bluetooth14POSIXErrorCodeO", "EOVERFLOW"]
+- ["9Bluetooth14POSIXErrorCodeO", "EOWNERDEAD"]
+- ["9Bluetooth14POSIXErrorCodeO", "EPERM"]
+- ["9Bluetooth14POSIXErrorCodeO", "EPFNOSUPPORT"]
+- ["9Bluetooth14POSIXErrorCodeO", "EPIPE"]
+- ["9Bluetooth14POSIXErrorCodeO", "EPROTO"]
+- ["9Bluetooth14POSIXErrorCodeO", "EPROTONOSUPPORT"]
+- ["9Bluetooth14POSIXErrorCodeO", "EPROTOTYPE"]
+- ["9Bluetooth14POSIXErrorCodeO", "ERANGE"]
+- ["9Bluetooth14POSIXErrorCodeO", "EREMCHG"]
+- ["9Bluetooth14POSIXErrorCodeO", "EREMOTE"]
+- ["9Bluetooth14POSIXErrorCodeO", "EREMOTEIO"]
+- ["9Bluetooth14POSIXErrorCodeO", "ERESTART"]
+- ["9Bluetooth14POSIXErrorCodeO", "EROFS"]
+- ["9Bluetooth14POSIXErrorCodeO", "ESHUTDOWN"]
+- ["9Bluetooth14POSIXErrorCodeO", "ESOCKTNOSUPPORT"]
+- ["9Bluetooth14POSIXErrorCodeO", "ESPIPE"]
+- ["9Bluetooth14POSIXErrorCodeO", "ESRCH"]
+- ["9Bluetooth14POSIXErrorCodeO", "ESRMNT"]
+- ["9Bluetooth14POSIXErrorCodeO", "ESTALE"]
+- ["9Bluetooth14POSIXErrorCodeO", "ESTRPIPE"]
+- ["9Bluetooth14POSIXErrorCodeO", "ETIME"]
+- ["9Bluetooth14POSIXErrorCodeO", "ETIMEDOUT"]
+- ["9Bluetooth14POSIXErrorCodeO", "ETOOMANYREFS"]
+- ["9Bluetooth14POSIXErrorCodeO", "ETXTBSY"]
+- ["9Bluetooth14POSIXErrorCodeO", "EUCLEAN"]
+- ["9Bluetooth14POSIXErrorCodeO", "EUNATCH"]
+- ["9Bluetooth14POSIXErrorCodeO", "EUSERS"]
+- ["9Bluetooth14POSIXErrorCodeO", "EWOULDBLOCK"]
+- ["9Bluetooth14POSIXErrorCodeO", "EXDEV"]
+- ["9Bluetooth14POSIXErrorCodeO", "EXFULL"]
+- ["9Bluetooth14POSIXErrorCodeO", "POSIXErrorCode"]
+- ["9Bluetooth14POSIXErrorCodeO", "RawValue"]
+- ["9Bluetooth14POSIXErrorCodeO", "_Default_RawValue"]
+- ["9Bluetooth14POSIXErrorCodeO", "deinit"]
+- ["9Bluetooth14POSIXErrorCodeO", "hashValue"]
+- ["9Bluetooth14POSIXErrorCodeO", "init"]
+- ["9Bluetooth14POSIXErrorCodeO", "rawValue"]
+- !private ["s16RawRepresentableP", "EAGAIN"]
+- !private ["s16RawRepresentableP", "EDEADLK"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- ["s16RawRepresentableP", "hashValue"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "rawValue"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+depends-nominal:
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- "s5ErrorP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- "9Bluetooth10POSIXErrorV"
+- "9Bluetooth14POSIXErrorCodeO"
+- "s16RawRepresentableP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "a8380b27993895f7f094531e867b933b"

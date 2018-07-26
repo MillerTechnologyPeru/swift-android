@@ -1,0 +1,12 @@
+# pack-refs with: peeled fully-peeled sorted 
+59060e7193a140285a8211202d298a7dcd07c658 refs/heads/feature/Button
+2f9e470dc8af3f8f8c51b62faf7cf9668a57570c refs/heads/feature/TextView
+cb13117a2f76ad117bf3a058b74e59daf725de2d refs/heads/feature/ViewGroup
+36aa7ae52f0aa5057ecd1326fa6892d218779853 refs/heads/master
+1128087be59ec2aa504d8c8fdb0094bb17f47587 refs/pull/2/head
+79f87925cb2d391186401b28bb59ac09ebaf0df8 refs/pull/3/head
+6b9d9f548e7919c852090fac0a09eeafc252107f refs/pull/4/head
+7d3fb8d021b9e5ce5711d6a153b64d2f6fd2be92 refs/tags/0.1.0
+75411917e3b75145294e05d7dd3c36db8832d0c6 refs/tags/0.1.1
+4f07273cae00632fb8e686b28a2fffedb7138c29 refs/tags/0.1.2
+7798de54bdd3df8d62c448bef37c415baf8e022a refs/tags/0.1.3

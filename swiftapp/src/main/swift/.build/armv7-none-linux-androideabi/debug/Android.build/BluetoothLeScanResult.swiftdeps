@@ -1,0 +1,566 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AndroidBluetoothLowEnergyScanResult"
+provides-nominal:
+- "7Android0A28BluetoothLowEnergyScanResultC"
+- "7Android0A28BluetoothLowEnergyScanResultC8JNICacheV"
+- "7Android0A28BluetoothLowEnergyScanResultC8JNICacheV7FieldIDV"
+- "7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV"
+- "7Android0A28BluetoothLowEnergyScanResultC0abcD10PrimaryPhyV"
+- "7Android0A28BluetoothLowEnergyScanResultC0abcD12SecondaryPhyV"
+- "7Android0A28BluetoothLowEnergyScanResultC0abcD10DataStatusV"
+provides-member:
+- ["7AndroidAAO9BluetoothO2LEO", ""]
+- ["7Android0A28BluetoothLowEnergyScanResultC", ""]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV", ""]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV7FieldIDV", ""]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV", ""]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10PrimaryPhyV", ""]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD12SecondaryPhyV", ""]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10DataStatusV", ""]
+- ["7AndroidAAO9BluetoothO2LEO", "ScanResult"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "DataStatus"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "PrimaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "SecondaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "DATA_COMPLETE"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "DATA_TRUNCATED"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "PERIODIC_INTERVAL_NOT_PRESENT"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "PHY_UNUSED"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "SID_NOT_PRESENT"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "TX_POWER_NOT_PRESENT"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getAdvertisingSid"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getDataStatus"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getDevice"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getPeriodicAdvertisingInterval"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getPrimaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getSecondaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getRssi"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getTimestampNanos"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getTxPower"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getConnectable"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getLegacy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getScanRecord"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "JNICache"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "AndroidBluetoothLowEnergyPrimaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "AndroidBluetoothLowEnergySecondaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "AndroidBluetoothLowEnergyDataStatus"]
+depends-top-level:
+- !private "!="
+- "Android"
+- "AndroidBluetoothLowEnergyScanResult"
+- "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "FloatLiteralType"
+- "Int"
+- "Int64"
+- !private "IntegerLiteralType"
+- !private "JNI"
+- !private "JNIField"
+- !private "JNIMethod"
+- !private "JNI_FALSE"
+- "JavaObject"
+- "RawRepresentable"
+- "StaticString"
+- "StringLiteralType"
+- !private "UnicodeScalarType"
+- "java_swift"
+- !private "jboolean"
+- "jclass"
+- "jfieldID"
+- "jmethodID"
+- "jobject"
+- !private "jvalue"
+depends-member:
+- ["7AndroidAAO", "Bluetooth"]
+- ["7Android0A15BluetoothDeviceC", "PHY_LE_1M"]
+- ["7Android0A15BluetoothDeviceC", "PHY_LE_2M"]
+- ["7Android0A15BluetoothDeviceC", "PHY_LE_CODED"]
+- !private ["7Android0A15BluetoothDeviceC", "init"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10DataStatusV", "Android"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10DataStatusV", "Int"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10DataStatusV", "RawValue"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10DataStatusV", "_Default_RawValue"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10DataStatusV", "dataComplete"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10DataStatusV", "dataTruncated"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10DataStatusV", "deinit"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10DataStatusV", "init"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10DataStatusV", "rawValue"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10PrimaryPhyV", "Android"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10PrimaryPhyV", "Int"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10PrimaryPhyV", "RawValue"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10PrimaryPhyV", "_Default_RawValue"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10PrimaryPhyV", "deinit"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10PrimaryPhyV", "init"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10PrimaryPhyV", "phyLe1m"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10PrimaryPhyV", "phyLeCoded"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD10PrimaryPhyV", "rawValue"]
+- !private ["7Android0A28BluetoothLowEnergyScanRecordC", "init"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "Android"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "AndroidBluetoothLowEnergyDataStatus"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "AndroidBluetoothLowEnergyPrimaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "AndroidBluetoothLowEnergySecondaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "Bool"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "DATA_COMPLETE"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "DATA_TRUNCATED"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "DataStatus"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "Int"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "Int64"]
+- !private ["7Android0A28BluetoothLowEnergyScanResultC", "JNI"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "JNICache"]
+- !private ["7Android0A28BluetoothLowEnergyScanResultC", "JNIField"]
+- !private ["7Android0A28BluetoothLowEnergyScanResultC", "JNIMethod"]
+- !private ["7Android0A28BluetoothLowEnergyScanResultC", "JNI_FALSE"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "PERIODIC_INTERVAL_NOT_PRESENT"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "PHY_UNUSED"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "PrimaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "RawRepresentable"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "SID_NOT_PRESENT"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "SecondaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "StaticString"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "TX_POWER_NOT_PRESENT"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "advertisingSid"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "deinit"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "device"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getAdvertisingSid"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getConnectable"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getDataStatus"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getDevice"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getLegacy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getPeriodicAdvertisingInterval"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getPrimaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getRssi"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getScanRecord"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getSecondaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getTimestampNanos"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "getTxPower"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "init"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "isConnectable"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "isLegacy"]
+- !private ["7Android0A28BluetoothLowEnergyScanResultC", "javaObject"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "java_swift"]
+- !private ["7Android0A28BluetoothLowEnergyScanResultC", "jboolean"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "jclass"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "jfieldID"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "jmethodID"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "jobject"]
+- !private ["7Android0A28BluetoothLowEnergyScanResultC", "jvalue"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "periodicAdvertisingInterval"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "primaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "rssi"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "scanRecord"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "secondaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "timestampNanos"]
+- ["7Android0A28BluetoothLowEnergyScanResultC", "txPower"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD12SecondaryPhyV", "Android"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD12SecondaryPhyV", "Int"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD12SecondaryPhyV", "RawValue"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD12SecondaryPhyV", "_Default_RawValue"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD12SecondaryPhyV", "deinit"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD12SecondaryPhyV", "init"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD12SecondaryPhyV", "phyLe1m"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD12SecondaryPhyV", "phyLe2m"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD12SecondaryPhyV", "phyLeCoded"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD12SecondaryPhyV", "phyUnused"]
+- ["7Android0A28BluetoothLowEnergyScanResultC0abcD12SecondaryPhyV", "rawValue"]
+- !private ["Sa", "init"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s13BinaryIntegerP", "init"]
+- ["7AndroidAAO9BluetoothO", "Device"]
+- ["7AndroidAAO9BluetoothO", "LE"]
+- !private ["s7CVarArgP", "init"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- ["s9DecodableP", "init"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "rawValue"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV7FieldIDV", "DATA_COMPLETE"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV7FieldIDV", "DATA_TRUNCATED"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV7FieldIDV", "PERIODIC_INTERVAL_NOT_PRESENT"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV7FieldIDV", "PHY_UNUSED"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV7FieldIDV", "SID_NOT_PRESENT"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV7FieldIDV", "TX_POWER_NOT_PRESENT"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV7FieldIDV", "init"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV7FieldIDV", "jfieldID"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "rawValue"]
+- !private ["Si", "init"]
+- !private ["s5Int64V", "init"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV", "Android"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV", "FieldID"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV", "MethodID"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV", "className"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV", "classSignature"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV", "init"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV", "jclass"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV", "jfieldID"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV", "jmethodID"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV", "jniClass"]
+- ["3JNI12JNIClassNameV", "rawValue"]
+- !private ["10java_swift7JNICoreC", "DeleteLocalRef"]
+- !private ["10java_swift8JNIFieldC", "GetStaticIntField"]
+- !private ["10java_swift9JNIMethodC", "CallBooleanMethod"]
+- !private ["10java_swift9JNIMethodC", "CallIntMethod"]
+- !private ["10java_swift9JNIMethodC", "CallLongMethod"]
+- !private ["10java_swift9JNIMethodC", "CallObjectMethod"]
+- !private ["10java_swift9JNIMethodC", "CallVoidMethod"]
+- ["10java_swift9JNIObjectC", "Android"]
+- ["10java_swift9JNIObjectC", "AndroidBluetoothLowEnergyDataStatus"]
+- ["10java_swift9JNIObjectC", "AndroidBluetoothLowEnergyPrimaryPhy"]
+- ["10java_swift9JNIObjectC", "AndroidBluetoothLowEnergySecondaryPhy"]
+- ["10java_swift9JNIObjectC", "Bool"]
+- ["10java_swift9JNIObjectC", "DATA_COMPLETE"]
+- ["10java_swift9JNIObjectC", "DATA_TRUNCATED"]
+- ["10java_swift9JNIObjectC", "DataStatus"]
+- ["10java_swift9JNIObjectC", "Int"]
+- ["10java_swift9JNIObjectC", "Int64"]
+- !private ["10java_swift9JNIObjectC", "JNI"]
+- !private ["10java_swift9JNIObjectC", "JNICache"]
+- !private ["10java_swift9JNIObjectC", "JNIField"]
+- !private ["10java_swift9JNIObjectC", "JNIMethod"]
+- !private ["10java_swift9JNIObjectC", "JNI_FALSE"]
+- ["10java_swift9JNIObjectC", "PERIODIC_INTERVAL_NOT_PRESENT"]
+- ["10java_swift9JNIObjectC", "PHY_LE_1M"]
+- ["10java_swift9JNIObjectC", "PHY_LE_2M"]
+- ["10java_swift9JNIObjectC", "PHY_LE_CODED"]
+- ["10java_swift9JNIObjectC", "PHY_UNUSED"]
+- ["10java_swift9JNIObjectC", "PrimaryPhy"]
+- ["10java_swift9JNIObjectC", "RawRepresentable"]
+- ["10java_swift9JNIObjectC", "SID_NOT_PRESENT"]
+- ["10java_swift9JNIObjectC", "SecondaryPhy"]
+- ["10java_swift9JNIObjectC", "StaticString"]
+- ["10java_swift9JNIObjectC", "TX_POWER_NOT_PRESENT"]
+- ["10java_swift9JNIObjectC", "advertisingSid"]
+- ["10java_swift9JNIObjectC", "device"]
+- ["10java_swift9JNIObjectC", "getAdvertisingSid"]
+- ["10java_swift9JNIObjectC", "getConnectable"]
+- ["10java_swift9JNIObjectC", "getDataStatus"]
+- ["10java_swift9JNIObjectC", "getDevice"]
+- ["10java_swift9JNIObjectC", "getLegacy"]
+- ["10java_swift9JNIObjectC", "getPeriodicAdvertisingInterval"]
+- ["10java_swift9JNIObjectC", "getPrimaryPhy"]
+- ["10java_swift9JNIObjectC", "getRssi"]
+- ["10java_swift9JNIObjectC", "getScanRecord"]
+- ["10java_swift9JNIObjectC", "getSecondaryPhy"]
+- ["10java_swift9JNIObjectC", "getTimestampNanos"]
+- ["10java_swift9JNIObjectC", "getTxPower"]
+- ["10java_swift9JNIObjectC", "init"]
+- ["10java_swift9JNIObjectC", "isConnectable"]
+- ["10java_swift9JNIObjectC", "isLegacy"]
+- !private ["10java_swift9JNIObjectC", "javaObject"]
+- ["10java_swift9JNIObjectC", "java_swift"]
+- !private ["10java_swift9JNIObjectC", "jboolean"]
+- ["10java_swift9JNIObjectC", "jclass"]
+- ["10java_swift9JNIObjectC", "jfieldID"]
+- ["10java_swift9JNIObjectC", "jmethodID"]
+- ["10java_swift9JNIObjectC", "jobject"]
+- !private ["10java_swift9JNIObjectC", "jvalue"]
+- ["10java_swift9JNIObjectC", "periodicAdvertisingInterval"]
+- ["10java_swift9JNIObjectC", "primaryPhy"]
+- ["10java_swift9JNIObjectC", "rssi"]
+- ["10java_swift9JNIObjectC", "scanRecord"]
+- ["10java_swift9JNIObjectC", "secondaryPhy"]
+- ["10java_swift9JNIObjectC", "timestampNanos"]
+- ["10java_swift9JNIObjectC", "txPower"]
+- !private ["10java_swift9JNIObjectC", "withJavaObject"]
+- ["10java_swift13JNIObjectInitP", "Android"]
+- ["10java_swift13JNIObjectInitP", "DATA_COMPLETE"]
+- ["10java_swift13JNIObjectInitP", "DATA_TRUNCATED"]
+- ["10java_swift13JNIObjectInitP", "DataStatus"]
+- !private ["10java_swift13JNIObjectInitP", "Int"]
+- !private ["10java_swift13JNIObjectInitP", "Int64"]
+- !private ["10java_swift13JNIObjectInitP", "JNI"]
+- !private ["10java_swift13JNIObjectInitP", "JNICache"]
+- !private ["10java_swift13JNIObjectInitP", "JNIField"]
+- !private ["10java_swift13JNIObjectInitP", "JNIMethod"]
+- !private ["10java_swift13JNIObjectInitP", "JNI_FALSE"]
+- ["10java_swift13JNIObjectInitP", "PHY_LE_1M"]
+- ["10java_swift13JNIObjectInitP", "PHY_LE_2M"]
+- ["10java_swift13JNIObjectInitP", "PHY_LE_CODED"]
+- ["10java_swift13JNIObjectInitP", "PHY_UNUSED"]
+- ["10java_swift13JNIObjectInitP", "PrimaryPhy"]
+- ["10java_swift13JNIObjectInitP", "SecondaryPhy"]
+- ["10java_swift13JNIObjectInitP", ""]
+- !private ["10java_swift13JNIObjectInitP", "getAdvertisingSid"]
+- !private ["10java_swift13JNIObjectInitP", "getConnectable"]
+- !private ["10java_swift13JNIObjectInitP", "getDevice"]
+- !private ["10java_swift13JNIObjectInitP", "getLegacy"]
+- !private ["10java_swift13JNIObjectInitP", "getPeriodicAdvertisingInterval"]
+- !private ["10java_swift13JNIObjectInitP", "getPrimaryPhy"]
+- !private ["10java_swift13JNIObjectInitP", "getRssi"]
+- !private ["10java_swift13JNIObjectInitP", "getScanRecord"]
+- !private ["10java_swift13JNIObjectInitP", "getSecondaryPhy"]
+- !private ["10java_swift13JNIObjectInitP", "getTimestampNanos"]
+- !private ["10java_swift13JNIObjectInitP", "getTxPower"]
+- ["10java_swift13JNIObjectInitP", "init"]
+- !private ["10java_swift13JNIObjectInitP", "javaObject"]
+- !private ["10java_swift13JNIObjectInitP", "jboolean"]
+- !private ["10java_swift13JNIObjectInitP", "jobject"]
+- !private ["10java_swift13JNIObjectInitP", "jvalue"]
+- !private ["10java_swift13JNIObjectInitP", "withJavaObject"]
+- ["10java_swift17JNIObjectProtocolP", "Android"]
+- ["10java_swift17JNIObjectProtocolP", "DATA_COMPLETE"]
+- ["10java_swift17JNIObjectProtocolP", "DATA_TRUNCATED"]
+- ["10java_swift17JNIObjectProtocolP", "DataStatus"]
+- !private ["10java_swift17JNIObjectProtocolP", "Int"]
+- !private ["10java_swift17JNIObjectProtocolP", "Int64"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNICache"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIField"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIMethod"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI_FALSE"]
+- ["10java_swift17JNIObjectProtocolP", "PHY_LE_1M"]
+- ["10java_swift17JNIObjectProtocolP", "PHY_LE_2M"]
+- ["10java_swift17JNIObjectProtocolP", "PHY_LE_CODED"]
+- ["10java_swift17JNIObjectProtocolP", "PHY_UNUSED"]
+- ["10java_swift17JNIObjectProtocolP", "PrimaryPhy"]
+- ["10java_swift17JNIObjectProtocolP", "SecondaryPhy"]
+- ["10java_swift17JNIObjectProtocolP", ""]
+- !private ["10java_swift17JNIObjectProtocolP", "getAdvertisingSid"]
+- !private ["10java_swift17JNIObjectProtocolP", "getConnectable"]
+- !private ["10java_swift17JNIObjectProtocolP", "getDevice"]
+- !private ["10java_swift17JNIObjectProtocolP", "getLegacy"]
+- !private ["10java_swift17JNIObjectProtocolP", "getPeriodicAdvertisingInterval"]
+- !private ["10java_swift17JNIObjectProtocolP", "getPrimaryPhy"]
+- !private ["10java_swift17JNIObjectProtocolP", "getRssi"]
+- !private ["10java_swift17JNIObjectProtocolP", "getScanRecord"]
+- !private ["10java_swift17JNIObjectProtocolP", "getSecondaryPhy"]
+- !private ["10java_swift17JNIObjectProtocolP", "getTimestampNanos"]
+- !private ["10java_swift17JNIObjectProtocolP", "getTxPower"]
+- ["10java_swift17JNIObjectProtocolP", "init"]
+- !private ["10java_swift17JNIObjectProtocolP", "javaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jboolean"]
+- !private ["10java_swift17JNIObjectProtocolP", "jobject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jvalue"]
+- !private ["10java_swift17JNIObjectProtocolP", "withJavaObject"]
+- ["10java_swift10JavaObjectC", "Android"]
+- ["10java_swift10JavaObjectC", "AndroidBluetoothLowEnergyDataStatus"]
+- ["10java_swift10JavaObjectC", "AndroidBluetoothLowEnergyPrimaryPhy"]
+- ["10java_swift10JavaObjectC", "AndroidBluetoothLowEnergySecondaryPhy"]
+- ["10java_swift10JavaObjectC", "Bool"]
+- ["10java_swift10JavaObjectC", "DATA_COMPLETE"]
+- ["10java_swift10JavaObjectC", "DATA_TRUNCATED"]
+- ["10java_swift10JavaObjectC", "DataStatus"]
+- ["10java_swift10JavaObjectC", "Int"]
+- ["10java_swift10JavaObjectC", "Int64"]
+- !private ["10java_swift10JavaObjectC", "JNI"]
+- !private ["10java_swift10JavaObjectC", "JNICache"]
+- !private ["10java_swift10JavaObjectC", "JNIField"]
+- !private ["10java_swift10JavaObjectC", "JNIMethod"]
+- !private ["10java_swift10JavaObjectC", "JNI_FALSE"]
+- ["10java_swift10JavaObjectC", "PERIODIC_INTERVAL_NOT_PRESENT"]
+- ["10java_swift10JavaObjectC", "PHY_LE_1M"]
+- ["10java_swift10JavaObjectC", "PHY_LE_2M"]
+- ["10java_swift10JavaObjectC", "PHY_LE_CODED"]
+- ["10java_swift10JavaObjectC", "PHY_UNUSED"]
+- ["10java_swift10JavaObjectC", "PrimaryPhy"]
+- ["10java_swift10JavaObjectC", "RawRepresentable"]
+- ["10java_swift10JavaObjectC", "SID_NOT_PRESENT"]
+- ["10java_swift10JavaObjectC", "SecondaryPhy"]
+- ["10java_swift10JavaObjectC", "StaticString"]
+- ["10java_swift10JavaObjectC", "TX_POWER_NOT_PRESENT"]
+- ["10java_swift10JavaObjectC", ""]
+- ["10java_swift10JavaObjectC", "advertisingSid"]
+- ["10java_swift10JavaObjectC", "device"]
+- ["10java_swift10JavaObjectC", "getAdvertisingSid"]
+- ["10java_swift10JavaObjectC", "getConnectable"]
+- ["10java_swift10JavaObjectC", "getDataStatus"]
+- ["10java_swift10JavaObjectC", "getDevice"]
+- ["10java_swift10JavaObjectC", "getLegacy"]
+- ["10java_swift10JavaObjectC", "getPeriodicAdvertisingInterval"]
+- ["10java_swift10JavaObjectC", "getPrimaryPhy"]
+- ["10java_swift10JavaObjectC", "getRssi"]
+- ["10java_swift10JavaObjectC", "getScanRecord"]
+- ["10java_swift10JavaObjectC", "getSecondaryPhy"]
+- ["10java_swift10JavaObjectC", "getTimestampNanos"]
+- ["10java_swift10JavaObjectC", "getTxPower"]
+- ["10java_swift10JavaObjectC", "init"]
+- ["10java_swift10JavaObjectC", "isConnectable"]
+- ["10java_swift10JavaObjectC", "isLegacy"]
+- !private ["10java_swift10JavaObjectC", "javaObject"]
+- ["10java_swift10JavaObjectC", "java_swift"]
+- !private ["10java_swift10JavaObjectC", "jboolean"]
+- ["10java_swift10JavaObjectC", "jclass"]
+- ["10java_swift10JavaObjectC", "jfieldID"]
+- ["10java_swift10JavaObjectC", "jmethodID"]
+- ["10java_swift10JavaObjectC", "jobject"]
+- !private ["10java_swift10JavaObjectC", "jvalue"]
+- ["10java_swift10JavaObjectC", "periodicAdvertisingInterval"]
+- ["10java_swift10JavaObjectC", "primaryPhy"]
+- ["10java_swift10JavaObjectC", "rssi"]
+- ["10java_swift10JavaObjectC", "scanRecord"]
+- ["10java_swift10JavaObjectC", "secondaryPhy"]
+- ["10java_swift10JavaObjectC", "timestampNanos"]
+- ["10java_swift10JavaObjectC", "txPower"]
+- !private ["10java_swift10JavaObjectC", "withJavaObject"]
+- ["7Android11JavaPackageP", "Bluetooth"]
+- ["7Android11JavaPackageP", "Device"]
+- ["7Android11JavaPackageP", "LE"]
+- ["7Android11JavaPackageP", "ScanRecord"]
+- ["7Android11JavaPackageP", "ScanResult"]
+- ["7Android11JavaPackageP", "className"]
+- ["7AndroidAAO9BluetoothO2LEO", "AndroidBluetoothLowEnergyScanResult"]
+- ["7AndroidAAO9BluetoothO2LEO", "ScanRecord"]
+- ["7AndroidAAO9BluetoothO2LEO", "ScanResult"]
+- ["7AndroidAAO9BluetoothO2LEO", "className"]
+- ["7AndroidAAO9BluetoothO2LEO", "deinit"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV", "getAdvertisingSid"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV", "getDataStatus"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV", "getDevice"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV", "getPeriodicAdvertisingInterval"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV", "getPrimaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV", "getRssi"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV", "getScanRecord"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV", "getSecondaryPhy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV", "getTimestampNanos"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV", "getTxPower"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV", "init"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV", "isConnectable"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV", "isLegacy"]
+- ["7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV", "jmethodID"]
+- ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s7NumericP", "init"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["s16RawRepresentableP", "Android"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s8SequenceP", "init"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s5UInt8V", "init"]
+- !private ["s15UnsignedIntegerP", "init"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- ["10Foundation13_CFBridgeableP", "init"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation13_NSBridgeableP", "init"]
+- ["10Foundation17_ObjectBridgeableP", "init"]
+- ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["s14_StringElementP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["SC6jvalueV", "init"]
+depends-nominal:
+- "7AndroidAAO"
+- "7Android0A15BluetoothDeviceC"
+- "7Android0A28BluetoothLowEnergyScanResultC0abcD10DataStatusV"
+- "7Android0A28BluetoothLowEnergyScanResultC0abcD10PrimaryPhyV"
+- !private "7Android0A28BluetoothLowEnergyScanRecordC"
+- "7Android0A28BluetoothLowEnergyScanResultC"
+- "7Android0A28BluetoothLowEnergyScanResultC0abcD12SecondaryPhyV"
+- !private "Sa"
+- "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- "7AndroidAAO9BluetoothO"
+- !private "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "7Android0A28BluetoothLowEnergyScanResultC8JNICacheV7FieldIDV"
+- !private "s17FixedWidthIntegerP"
+- "s8HashableP"
+- !private "Si"
+- !private "s5Int64V"
+- "7Android0A28BluetoothLowEnergyScanResultC8JNICacheV"
+- "3JNI12JNIClassNameV"
+- !private "10java_swift7JNICoreC"
+- !private "10java_swift8JNIFieldC"
+- !private "10java_swift9JNIMethodC"
+- "10java_swift9JNIObjectC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- "10java_swift10JavaObjectC"
+- "7Android11JavaPackageP"
+- "7AndroidAAO9BluetoothO2LEO"
+- "s25LosslessStringConvertibleP"
+- "7Android0A28BluetoothLowEnergyScanResultC8JNICacheV8MethodIDV"
+- "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "s5UInt8V"
+- !private "s15UnsignedIntegerP"
+- !private "s14_ArrayProtocolP"
+- !private "s18_BitwiseOperationsP"
+- "10Foundation13_CFBridgeableP"
+- !private "s15_CVarArgAlignedP"
+- !private "s24_DestructorSafeContainerP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation13_NSBridgeableP"
+- "10Foundation17_ObjectBridgeableP"
+- "10Foundation21_ObjectTypeBridgeableP"
+- !private "s14_StringElementP"
+- "s16_SwiftStringViewP"
+- !private "SC6jvalueV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/JNI.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Bluetooth.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_util.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "11eea912637e8ef0761ffe5c1eb6e298"

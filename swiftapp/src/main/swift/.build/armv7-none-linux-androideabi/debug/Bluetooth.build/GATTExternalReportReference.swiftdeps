@@ -1,0 +1,82 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GATTExternalReportReference"
+provides-nominal:
+- "9Bluetooth27GATTExternalReportReferenceV"
+provides-member:
+- ["9Bluetooth27GATTExternalReportReferenceV", ""]
+depends-top-level:
+- !private "Array"
+- "AssignmentPrecedence"
+- "BluetoothUUID"
+- "Data"
+- "GATT"
+- "GATTDescriptor"
+- "GATTExternalReportReference"
+depends-member:
+- !private ["9Bluetooth22ATTAttributePermissionO", "deinit"]
+- !private ["9Bluetooth22ATTAttributePermissionO", "read"]
+- !private ["9Bluetooth13BitMaskOptionP", "read"]
+- !private ["9Bluetooth16BitMaskOptionSetV", "deinit"]
+- !private ["9Bluetooth0A4UUIDO", "data"]
+- !private ["9Bluetooth0A4UUIDO", "deinit"]
+- ["9Bluetooth0A4UUIDO", "externalReportReference"]
+- !private ["9Bluetooth0A4UUIDO", "init"]
+- !private ["9Bluetooth8ByteSwapP", "data"]
+- ["9Bluetooth8ByteSwapP", "externalReportReference"]
+- !private ["9Bluetooth8ByteSwapP", "init"]
+- !private ["s23CustomStringConvertibleP", "data"]
+- ["s23CustomStringConvertibleP", "externalReportReference"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "read"]
+- !private ["9Bluetooth4GATTO10DescriptorV", "init"]
+- !private ["s9EquatableP", "data"]
+- ["s9EquatableP", "externalReportReference"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "read"]
+- ["9Bluetooth4GATTO", "Descriptor"]
+- !private ["9Bluetooth14GATTDescriptorP", "BluetoothUUID"]
+- !private ["9Bluetooth14GATTDescriptorP", "GATT"]
+- ["9Bluetooth14GATTDescriptorP", ""]
+- ["9Bluetooth14GATTDescriptorP", "data"]
+- ["9Bluetooth14GATTDescriptorP", "init"]
+- ["9Bluetooth14GATTDescriptorP", "uuid"]
+- ["9Bluetooth27GATTExternalReportReferenceV", "BluetoothUUID"]
+- ["9Bluetooth27GATTExternalReportReferenceV", "Data"]
+- ["9Bluetooth27GATTExternalReportReferenceV", "GATT"]
+- ["9Bluetooth27GATTExternalReportReferenceV", "data"]
+- ["9Bluetooth27GATTExternalReportReferenceV", "deinit"]
+- ["9Bluetooth27GATTExternalReportReferenceV", "descriptor"]
+- ["9Bluetooth27GATTExternalReportReferenceV", "init"]
+- ["9Bluetooth27GATTExternalReportReferenceV", "uuid"]
+- !private ["s8HashableP", "data"]
+- ["s8HashableP", "externalReportReference"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "read"]
+- !private ["s16RawRepresentableP", "data"]
+- ["s16RawRepresentableP", "externalReportReference"]
+- !private ["s16RawRepresentableP", "init"]
+- !private ["s16RawRepresentableP", "read"]
+depends-nominal:
+- !private "9Bluetooth22ATTAttributePermissionO"
+- !private "9Bluetooth13BitMaskOptionP"
+- !private "9Bluetooth16BitMaskOptionSetV"
+- "9Bluetooth0A4UUIDO"
+- "9Bluetooth8ByteSwapP"
+- "s23CustomStringConvertibleP"
+- !private "9Bluetooth4GATTO10DescriptorV"
+- "s9EquatableP"
+- "9Bluetooth4GATTO"
+- "9Bluetooth14GATTDescriptorP"
+- "9Bluetooth27GATTExternalReportReferenceV"
+- "s8HashableP"
+- "s16RawRepresentableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "14cd8caecc12d1a791b781508aabf868"

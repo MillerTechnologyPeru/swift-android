@@ -1,0 +1,75 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AndroidBluetoothGattServerCallback"
+provides-nominal:
+- "7Android0A27BluetoothGattServerCallbackP"
+provides-member:
+- ["7AndroidAAO9BluetoothO", ""]
+- ["7Android0A27BluetoothGattServerCallbackP", ""]
+- ["7AndroidAAO9BluetoothO", "GattServerCallback"]
+depends-top-level:
+- "Android"
+- "AndroidBluetoothGattServerCallback"
+- "Bool"
+- "Int"
+- "Int8"
+- "JavaProtocol"
+depends-member:
+- ["7AndroidAAO", "Bluetooth"]
+- ["7Android0A27BluetoothGattServerCallbackP", "Android"]
+- ["7Android0A27BluetoothGattServerCallbackP", "Bool"]
+- ["7Android0A27BluetoothGattServerCallbackP", "Int"]
+- ["7Android0A27BluetoothGattServerCallbackP", "Int8"]
+- ["7Android0A27BluetoothGattServerCallbackP", "onCharacteristicReadRequest"]
+- ["7Android0A27BluetoothGattServerCallbackP", "onCharacteristicWriteRequest"]
+- ["7Android0A27BluetoothGattServerCallbackP", "onConnectionStateChange"]
+- ["7Android0A27BluetoothGattServerCallbackP", "onDescriptorReadRequest"]
+- ["7Android0A27BluetoothGattServerCallbackP", "onDescriptorWriteRequest"]
+- ["7Android0A27BluetoothGattServerCallbackP", "onExecuteWrite"]
+- ["7Android0A27BluetoothGattServerCallbackP", "onMtuChanged"]
+- ["7Android0A27BluetoothGattServerCallbackP", "onNotificationSent"]
+- ["7Android0A27BluetoothGattServerCallbackP", "onPhyRead"]
+- ["7Android0A27BluetoothGattServerCallbackP", "onPhyUpdate"]
+- ["7Android0A27BluetoothGattServerCallbackP", "onServiceAdded"]
+- ["7AndroidAAO9BluetoothO", "AndroidBluetoothGattServerCallback"]
+- ["7AndroidAAO9BluetoothO", "Device"]
+- ["7AndroidAAO9BluetoothO", "GattCharacteristic"]
+- ["7AndroidAAO9BluetoothO", "GattDescriptor"]
+- ["7AndroidAAO9BluetoothO", "GattServerCallback"]
+- ["7AndroidAAO9BluetoothO", "GattService"]
+- ["10java_swift17JNIObjectProtocolP", "Android"]
+- ["10java_swift17JNIObjectProtocolP", "Bool"]
+- ["10java_swift17JNIObjectProtocolP", "Int"]
+- ["10java_swift17JNIObjectProtocolP", "Int8"]
+- ["7Android11JavaPackageP", "Bluetooth"]
+- ["7Android11JavaPackageP", "Device"]
+- ["7Android11JavaPackageP", "GattCharacteristic"]
+- ["7Android11JavaPackageP", "GattDescriptor"]
+- ["7Android11JavaPackageP", "GattService"]
+- ["10java_swift12JavaProtocolP", "Android"]
+- ["10java_swift12JavaProtocolP", "Bool"]
+- ["10java_swift12JavaProtocolP", "Int"]
+- ["10java_swift12JavaProtocolP", "Int8"]
+- ["10java_swift12JavaProtocolP", ""]
+depends-nominal:
+- "7AndroidAAO"
+- "7Android0A27BluetoothGattServerCallbackP"
+- "7AndroidAAO9BluetoothO"
+- "10java_swift17JNIObjectProtocolP"
+- "7Android11JavaPackageP"
+- "10java_swift12JavaProtocolP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/JNI.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Bluetooth.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_util.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "de4e2cd66ad4841e47d77e61b88a7546"

@@ -1,0 +1,369 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AndroidBluetoothSocket"
+provides-nominal:
+- "7Android0A15BluetoothSocketC"
+- "7Android0A15BluetoothSocketC8JNICacheV"
+- "7Android0A15BluetoothSocketC8JNICacheV7FieldIDV"
+- "7Android0A15BluetoothSocketC8JNICacheV8MethodIDV"
+provides-member:
+- ["7AndroidAAO9BluetoothO", ""]
+- ["7Android0A15BluetoothSocketC", ""]
+- ["7Android0A15BluetoothSocketC8JNICacheV", ""]
+- ["7Android0A15BluetoothSocketC8JNICacheV7FieldIDV", ""]
+- ["7Android0A15BluetoothSocketC8JNICacheV8MethodIDV", ""]
+- ["7AndroidAAO9BluetoothO", "Socket"]
+- ["7Android0A15BluetoothSocketC", "TYPE_L2CAP"]
+- ["7Android0A15BluetoothSocketC", "TYPE_RFCOMM"]
+- ["7Android0A15BluetoothSocketC", "TYPE_SCO"]
+- ["7Android0A15BluetoothSocketC", "close"]
+- ["7Android0A15BluetoothSocketC", "connect"]
+- ["7Android0A15BluetoothSocketC", "getConnectionType"]
+- ["7Android0A15BluetoothSocketC", "getInputStream"]
+- ["7Android0A15BluetoothSocketC", "getMaxReceivePacketSize"]
+- ["7Android0A15BluetoothSocketC", "getMaxTransmitPacketSize"]
+- ["7Android0A15BluetoothSocketC", "getOutputStream"]
+- ["7Android0A15BluetoothSocketC", "getRemoteDevice"]
+- ["7Android0A15BluetoothSocketC", "isConnected"]
+- ["7Android0A15BluetoothSocketC", "JNICache"]
+depends-top-level:
+- !private "!="
+- "Android"
+- "AndroidBluetoothSocket"
+- "Array"
+- !private "AssignmentPrecedence"
+- "Bool"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- !private "JNI"
+- !private "JNIField"
+- !private "JNIMethod"
+- !private "JNI_FALSE"
+- "JavaObject"
+- "StaticString"
+- "StringLiteralType"
+- !private "UnicodeScalarType"
+- "java_swift"
+- !private "jboolean"
+- "jclass"
+- "jfieldID"
+- "jmethodID"
+- "jobject"
+- !private "jvalue"
+depends-member:
+- ["7AndroidAAO", "Bluetooth"]
+- !private ["7Android0A15BluetoothDeviceC", "init"]
+- ["7Android0A15BluetoothSocketC", "Android"]
+- ["7Android0A15BluetoothSocketC", "Bool"]
+- ["7Android0A15BluetoothSocketC", "Int"]
+- !private ["7Android0A15BluetoothSocketC", "JNI"]
+- ["7Android0A15BluetoothSocketC", "JNICache"]
+- !private ["7Android0A15BluetoothSocketC", "JNIField"]
+- !private ["7Android0A15BluetoothSocketC", "JNIMethod"]
+- !private ["7Android0A15BluetoothSocketC", "JNI_FALSE"]
+- ["7Android0A15BluetoothSocketC", "JavaObject"]
+- ["7Android0A15BluetoothSocketC", "StaticString"]
+- ["7Android0A15BluetoothSocketC", "TYPE_L2CAP"]
+- ["7Android0A15BluetoothSocketC", "TYPE_RFCOMM"]
+- ["7Android0A15BluetoothSocketC", "TYPE_SCO"]
+- ["7Android0A15BluetoothSocketC", "close"]
+- ["7Android0A15BluetoothSocketC", "connect"]
+- ["7Android0A15BluetoothSocketC", "deinit"]
+- ["7Android0A15BluetoothSocketC", "getConnectionType"]
+- ["7Android0A15BluetoothSocketC", "getInputStream"]
+- ["7Android0A15BluetoothSocketC", "getMaxReceivePacketSize"]
+- ["7Android0A15BluetoothSocketC", "getMaxTransmitPacketSize"]
+- ["7Android0A15BluetoothSocketC", "getOutputStream"]
+- ["7Android0A15BluetoothSocketC", "getRemoteDevice"]
+- ["7Android0A15BluetoothSocketC", "init"]
+- ["7Android0A15BluetoothSocketC", "isConnected"]
+- !private ["7Android0A15BluetoothSocketC", "javaObject"]
+- ["7Android0A15BluetoothSocketC", "java_swift"]
+- !private ["7Android0A15BluetoothSocketC", "jboolean"]
+- ["7Android0A15BluetoothSocketC", "jclass"]
+- ["7Android0A15BluetoothSocketC", "jfieldID"]
+- ["7Android0A15BluetoothSocketC", "jmethodID"]
+- ["7Android0A15BluetoothSocketC", "jobject"]
+- !private ["7Android0A15BluetoothSocketC", "jvalue"]
+- !private ["Sa", "init"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s13BinaryIntegerP", "init"]
+- ["7AndroidAAO9BluetoothO", "AndroidBluetoothSocket"]
+- ["7AndroidAAO9BluetoothO", "Device"]
+- ["7AndroidAAO9BluetoothO", "Socket"]
+- ["7AndroidAAO9BluetoothO", "className"]
+- ["7AndroidAAO9BluetoothO", "deinit"]
+- !private ["s7CVarArgP", "init"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- ["s9DecodableP", "init"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "rawValue"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["7Android0A15BluetoothSocketC8JNICacheV7FieldIDV", "TYPE_L2CAP"]
+- ["7Android0A15BluetoothSocketC8JNICacheV7FieldIDV", "TYPE_RFCOMM"]
+- ["7Android0A15BluetoothSocketC8JNICacheV7FieldIDV", "TYPE_SCO"]
+- ["7Android0A15BluetoothSocketC8JNICacheV7FieldIDV", "init"]
+- ["7Android0A15BluetoothSocketC8JNICacheV7FieldIDV", "jfieldID"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "rawValue"]
+- !private ["Si", "init"]
+- ["7Android0A15BluetoothSocketC8JNICacheV", "Android"]
+- ["7Android0A15BluetoothSocketC8JNICacheV", "FieldID"]
+- ["7Android0A15BluetoothSocketC8JNICacheV", "MethodID"]
+- ["7Android0A15BluetoothSocketC8JNICacheV", "className"]
+- ["7Android0A15BluetoothSocketC8JNICacheV", "classSignature"]
+- ["7Android0A15BluetoothSocketC8JNICacheV", "init"]
+- ["7Android0A15BluetoothSocketC8JNICacheV", "jclass"]
+- ["7Android0A15BluetoothSocketC8JNICacheV", "jfieldID"]
+- ["7Android0A15BluetoothSocketC8JNICacheV", "jmethodID"]
+- ["7Android0A15BluetoothSocketC8JNICacheV", "jniClass"]
+- ["3JNI12JNIClassNameV", "rawValue"]
+- !private ["10java_swift7JNICoreC", "DeleteLocalRef"]
+- !private ["10java_swift8JNIFieldC", "GetStaticIntField"]
+- !private ["10java_swift9JNIMethodC", "CallBooleanMethod"]
+- !private ["10java_swift9JNIMethodC", "CallIntMethod"]
+- !private ["10java_swift9JNIMethodC", "CallObjectMethod"]
+- !private ["10java_swift9JNIMethodC", "CallVoidMethod"]
+- ["10java_swift9JNIObjectC", "Android"]
+- ["10java_swift9JNIObjectC", "Bool"]
+- ["10java_swift9JNIObjectC", "Int"]
+- !private ["10java_swift9JNIObjectC", "JNI"]
+- !private ["10java_swift9JNIObjectC", "JNICache"]
+- !private ["10java_swift9JNIObjectC", "JNIField"]
+- !private ["10java_swift9JNIObjectC", "JNIMethod"]
+- !private ["10java_swift9JNIObjectC", "JNI_FALSE"]
+- ["10java_swift9JNIObjectC", "JavaObject"]
+- ["10java_swift9JNIObjectC", "StaticString"]
+- ["10java_swift9JNIObjectC", "TYPE_L2CAP"]
+- ["10java_swift9JNIObjectC", "TYPE_RFCOMM"]
+- ["10java_swift9JNIObjectC", "TYPE_SCO"]
+- ["10java_swift9JNIObjectC", "close"]
+- ["10java_swift9JNIObjectC", "connect"]
+- ["10java_swift9JNIObjectC", "getConnectionType"]
+- ["10java_swift9JNIObjectC", "getInputStream"]
+- ["10java_swift9JNIObjectC", "getMaxReceivePacketSize"]
+- ["10java_swift9JNIObjectC", "getMaxTransmitPacketSize"]
+- ["10java_swift9JNIObjectC", "getOutputStream"]
+- ["10java_swift9JNIObjectC", "getRemoteDevice"]
+- ["10java_swift9JNIObjectC", "init"]
+- ["10java_swift9JNIObjectC", "isConnected"]
+- !private ["10java_swift9JNIObjectC", "javaObject"]
+- ["10java_swift9JNIObjectC", "java_swift"]
+- !private ["10java_swift9JNIObjectC", "jboolean"]
+- ["10java_swift9JNIObjectC", "jclass"]
+- ["10java_swift9JNIObjectC", "jfieldID"]
+- ["10java_swift9JNIObjectC", "jmethodID"]
+- ["10java_swift9JNIObjectC", "jobject"]
+- !private ["10java_swift9JNIObjectC", "jvalue"]
+- !private ["10java_swift9JNIObjectC", "withJavaObject"]
+- ["10java_swift13JNIObjectInitP", "Android"]
+- !private ["10java_swift13JNIObjectInitP", "Int"]
+- !private ["10java_swift13JNIObjectInitP", "JNI"]
+- !private ["10java_swift13JNIObjectInitP", "JNICache"]
+- !private ["10java_swift13JNIObjectInitP", "JNIField"]
+- !private ["10java_swift13JNIObjectInitP", "JNIMethod"]
+- !private ["10java_swift13JNIObjectInitP", "JNI_FALSE"]
+- !private ["10java_swift13JNIObjectInitP", "JavaObject"]
+- ["10java_swift13JNIObjectInitP", ""]
+- ["10java_swift13JNIObjectInitP", "init"]
+- !private ["10java_swift13JNIObjectInitP", "javaObject"]
+- !private ["10java_swift13JNIObjectInitP", "jboolean"]
+- !private ["10java_swift13JNIObjectInitP", "jobject"]
+- !private ["10java_swift13JNIObjectInitP", "jvalue"]
+- !private ["10java_swift13JNIObjectInitP", "withJavaObject"]
+- ["10java_swift17JNIObjectProtocolP", "Android"]
+- !private ["10java_swift17JNIObjectProtocolP", "Int"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNICache"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIField"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIMethod"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI_FALSE"]
+- !private ["10java_swift17JNIObjectProtocolP", "JavaObject"]
+- ["10java_swift17JNIObjectProtocolP", ""]
+- ["10java_swift17JNIObjectProtocolP", "init"]
+- !private ["10java_swift17JNIObjectProtocolP", "javaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jboolean"]
+- !private ["10java_swift17JNIObjectProtocolP", "jobject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jvalue"]
+- !private ["10java_swift17JNIObjectProtocolP", "withJavaObject"]
+- ["10java_swift10JavaObjectC", "Android"]
+- ["10java_swift10JavaObjectC", "Bool"]
+- ["10java_swift10JavaObjectC", "Int"]
+- !private ["10java_swift10JavaObjectC", "JNI"]
+- !private ["10java_swift10JavaObjectC", "JNICache"]
+- !private ["10java_swift10JavaObjectC", "JNIField"]
+- !private ["10java_swift10JavaObjectC", "JNIMethod"]
+- !private ["10java_swift10JavaObjectC", "JNI_FALSE"]
+- ["10java_swift10JavaObjectC", "JavaObject"]
+- ["10java_swift10JavaObjectC", "StaticString"]
+- ["10java_swift10JavaObjectC", "TYPE_L2CAP"]
+- ["10java_swift10JavaObjectC", "TYPE_RFCOMM"]
+- ["10java_swift10JavaObjectC", "TYPE_SCO"]
+- ["10java_swift10JavaObjectC", ""]
+- ["10java_swift10JavaObjectC", "close"]
+- ["10java_swift10JavaObjectC", "connect"]
+- ["10java_swift10JavaObjectC", "getConnectionType"]
+- ["10java_swift10JavaObjectC", "getInputStream"]
+- ["10java_swift10JavaObjectC", "getMaxReceivePacketSize"]
+- ["10java_swift10JavaObjectC", "getMaxTransmitPacketSize"]
+- ["10java_swift10JavaObjectC", "getOutputStream"]
+- ["10java_swift10JavaObjectC", "getRemoteDevice"]
+- ["10java_swift10JavaObjectC", "init"]
+- ["10java_swift10JavaObjectC", "isConnected"]
+- !private ["10java_swift10JavaObjectC", "javaObject"]
+- ["10java_swift10JavaObjectC", "java_swift"]
+- !private ["10java_swift10JavaObjectC", "jboolean"]
+- ["10java_swift10JavaObjectC", "jclass"]
+- ["10java_swift10JavaObjectC", "jfieldID"]
+- ["10java_swift10JavaObjectC", "jmethodID"]
+- ["10java_swift10JavaObjectC", "jobject"]
+- !private ["10java_swift10JavaObjectC", "jvalue"]
+- !private ["10java_swift10JavaObjectC", "withJavaObject"]
+- ["7Android11JavaPackageP", "Bluetooth"]
+- ["7Android11JavaPackageP", "Device"]
+- ["7Android11JavaPackageP", "className"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["7Android0A15BluetoothSocketC8JNICacheV8MethodIDV", "close"]
+- ["7Android0A15BluetoothSocketC8JNICacheV8MethodIDV", "connect"]
+- ["7Android0A15BluetoothSocketC8JNICacheV8MethodIDV", "getConnectionType"]
+- ["7Android0A15BluetoothSocketC8JNICacheV8MethodIDV", "getInputStream"]
+- ["7Android0A15BluetoothSocketC8JNICacheV8MethodIDV", "getMaxReceivePacketSize"]
+- ["7Android0A15BluetoothSocketC8JNICacheV8MethodIDV", "getMaxTransmitPacketSize"]
+- ["7Android0A15BluetoothSocketC8JNICacheV8MethodIDV", "getOutputStream"]
+- ["7Android0A15BluetoothSocketC8JNICacheV8MethodIDV", "getRemoteDevice"]
+- ["7Android0A15BluetoothSocketC8JNICacheV8MethodIDV", "init"]
+- ["7Android0A15BluetoothSocketC8JNICacheV8MethodIDV", "isConnected"]
+- ["7Android0A15BluetoothSocketC8JNICacheV8MethodIDV", "jmethodID"]
+- ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s7NumericP", "init"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s8SequenceP", "init"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s5UInt8V", "init"]
+- !private ["s15UnsignedIntegerP", "init"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- ["10Foundation13_CFBridgeableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation13_NSBridgeableP", "init"]
+- ["10Foundation17_ObjectBridgeableP", "init"]
+- ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["s14_StringElementP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["SC6jvalueV", "init"]
+depends-nominal:
+- "7AndroidAAO"
+- !private "7Android0A15BluetoothDeviceC"
+- "7Android0A15BluetoothSocketC"
+- !private "Sa"
+- "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- "7AndroidAAO9BluetoothO"
+- !private "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "7Android0A15BluetoothSocketC8JNICacheV7FieldIDV"
+- !private "s17FixedWidthIntegerP"
+- "s8HashableP"
+- !private "Si"
+- "7Android0A15BluetoothSocketC8JNICacheV"
+- "3JNI12JNIClassNameV"
+- !private "10java_swift7JNICoreC"
+- !private "10java_swift8JNIFieldC"
+- !private "10java_swift9JNIMethodC"
+- "10java_swift9JNIObjectC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- "10java_swift10JavaObjectC"
+- "7Android11JavaPackageP"
+- "s25LosslessStringConvertibleP"
+- "7Android0A15BluetoothSocketC8JNICacheV8MethodIDV"
+- "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "s5UInt8V"
+- !private "s15UnsignedIntegerP"
+- !private "s14_ArrayProtocolP"
+- !private "s18_BitwiseOperationsP"
+- "10Foundation13_CFBridgeableP"
+- !private "s24_DestructorSafeContainerP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation13_NSBridgeableP"
+- "10Foundation17_ObjectBridgeableP"
+- "10Foundation21_ObjectTypeBridgeableP"
+- !private "s14_StringElementP"
+- "s16_SwiftStringViewP"
+- !private "SC6jvalueV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/JNI.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Bluetooth.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_util.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "5ccc1b0a66a4f16110bd7098c92bee0c"

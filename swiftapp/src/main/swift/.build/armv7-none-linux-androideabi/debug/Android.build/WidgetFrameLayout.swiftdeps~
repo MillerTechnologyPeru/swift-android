@@ -1,0 +1,276 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AndroidWidgetFrameLayout"
+provides-nominal:
+- "7Android0A17WidgetFrameLayoutC"
+- "7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV"
+- "7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV8MethodIDV"
+provides-member:
+- ["7AndroidAAO6WidgetO", ""]
+- ["7Android0A17WidgetFrameLayoutC", ""]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV", ""]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV8MethodIDV", ""]
+- ["7AndroidAAO6WidgetO", "FrameLayout"]
+- ["7Android0A17WidgetFrameLayoutC", "FragmentLayoutJNICache"]
+depends-top-level:
+- "Android"
+- "AndroidWidgetFrameLayout"
+- "Array"
+- "AssignmentPrecedence"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
+- !private "JNI"
+- !private "JNIMethod"
+- !private "JNIType"
+- "StringLiteralType"
+- "jclass"
+- "jmethodID"
+- !private "jobject"
+- !private "jvalue"
+depends-member:
+- ["7AndroidAAO", "Content"]
+- ["7AndroidAAO", "View"]
+- ["7AndroidAAO", "Widget"]
+- !private ["7Android0A7ContextC", "deinit"]
+- ["7Android0A4ViewC", "Android"]
+- !private ["7Android0A4ViewC", "FragmentLayoutJNICache"]
+- !private ["7Android0A4ViewC", "JNI"]
+- !private ["7Android0A4ViewC", "JNIMethod"]
+- !private ["7Android0A4ViewC", "JNIType"]
+- ["7Android0A4ViewC", "init"]
+- ["7Android0A4ViewC", "jclass"]
+- ["7Android0A4ViewC", "jmethodID"]
+- !private ["7Android0A4ViewC", "jobject"]
+- !private ["7Android0A4ViewC", "jvalue"]
+- ["7Android0A9ViewGroupC", "Android"]
+- !private ["7Android0A9ViewGroupC", "FragmentLayoutJNICache"]
+- !private ["7Android0A9ViewGroupC", "JNI"]
+- !private ["7Android0A9ViewGroupC", "JNIMethod"]
+- !private ["7Android0A9ViewGroupC", "JNIType"]
+- ["7Android0A9ViewGroupC", ""]
+- ["7Android0A9ViewGroupC", "init"]
+- ["7Android0A9ViewGroupC", "jclass"]
+- ["7Android0A9ViewGroupC", "jmethodID"]
+- !private ["7Android0A9ViewGroupC", "jobject"]
+- !private ["7Android0A9ViewGroupC", "jvalue"]
+- ["7Android0A17WidgetFrameLayoutC", "Android"]
+- ["7Android0A17WidgetFrameLayoutC", "FragmentLayoutJNICache"]
+- !private ["7Android0A17WidgetFrameLayoutC", "JNI"]
+- !private ["7Android0A17WidgetFrameLayoutC", "JNIMethod"]
+- !private ["7Android0A17WidgetFrameLayoutC", "JNIType"]
+- ["7Android0A17WidgetFrameLayoutC", "deinit"]
+- ["7Android0A17WidgetFrameLayoutC", "init"]
+- ["7Android0A17WidgetFrameLayoutC", "jclass"]
+- ["7Android0A17WidgetFrameLayoutC", "jmethodID"]
+- !private ["7Android0A17WidgetFrameLayoutC", "jobject"]
+- !private ["7Android0A17WidgetFrameLayoutC", "jvalue"]
+- !private ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- ["s10ComparableP", "init"]
+- ["7AndroidAAO7ContentO", "Context"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV", "Android"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV", "MethodID"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV", "className"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV", "classSignature"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV", "init"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV", "jclass"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV", "jmethodID"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV", "jniClass"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "rawValue"]
+- ["3JNI12JNIClassNameV", "rawValue"]
+- !private ["10java_swift7JNICoreC", "DeleteLocalRef"]
+- !private ["10java_swift9JNIMethodC", "NewObject"]
+- ["10java_swift9JNIObjectC", "Android"]
+- !private ["10java_swift9JNIObjectC", "FragmentLayoutJNICache"]
+- !private ["10java_swift9JNIObjectC", "JNI"]
+- !private ["10java_swift9JNIObjectC", "JNIMethod"]
+- !private ["10java_swift9JNIObjectC", "JNIType"]
+- ["10java_swift9JNIObjectC", "init"]
+- ["10java_swift9JNIObjectC", "jclass"]
+- ["10java_swift9JNIObjectC", "jmethodID"]
+- !private ["10java_swift9JNIObjectC", "jobject"]
+- !private ["10java_swift9JNIObjectC", "jvalue"]
+- ["10java_swift13JNIObjectInitP", "Android"]
+- !private ["10java_swift13JNIObjectInitP", "FragmentLayoutJNICache"]
+- !private ["10java_swift13JNIObjectInitP", "JNI"]
+- !private ["10java_swift13JNIObjectInitP", "JNIMethod"]
+- !private ["10java_swift13JNIObjectInitP", "JNIType"]
+- ["10java_swift13JNIObjectInitP", ""]
+- ["10java_swift13JNIObjectInitP", "init"]
+- !private ["10java_swift13JNIObjectInitP", "jobject"]
+- !private ["10java_swift13JNIObjectInitP", "jvalue"]
+- ["10java_swift17JNIObjectProtocolP", "Android"]
+- !private ["10java_swift17JNIObjectProtocolP", "FragmentLayoutJNICache"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIMethod"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIType"]
+- ["10java_swift17JNIObjectProtocolP", ""]
+- ["10java_swift17JNIObjectProtocolP", "init"]
+- !private ["10java_swift17JNIObjectProtocolP", "jobject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jvalue"]
+- !private ["10java_swift7JNITypeC", "toJava"]
+- ["10java_swift10JavaObjectC", "Android"]
+- !private ["10java_swift10JavaObjectC", "FragmentLayoutJNICache"]
+- !private ["10java_swift10JavaObjectC", "JNI"]
+- !private ["10java_swift10JavaObjectC", "JNIMethod"]
+- !private ["10java_swift10JavaObjectC", "JNIType"]
+- ["10java_swift10JavaObjectC", "init"]
+- ["10java_swift10JavaObjectC", "jclass"]
+- ["10java_swift10JavaObjectC", "jmethodID"]
+- !private ["10java_swift10JavaObjectC", "jobject"]
+- !private ["10java_swift10JavaObjectC", "jvalue"]
+- ["7Android11JavaPackageP", "Content"]
+- ["7Android11JavaPackageP", "Context"]
+- ["7Android11JavaPackageP", "Widget"]
+- ["7Android11JavaPackageP", "className"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV8MethodIDV", "generateLayoutParams"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV8MethodIDV", "getAccessibilityClassName"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV8MethodIDV", "getConsiderGoneChildrenWhenMeasuring"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV8MethodIDV", "getMeasureAllChildren"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV8MethodIDV", "init"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV8MethodIDV", "init_method_1"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV8MethodIDV", "jmethodID"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV8MethodIDV", "setForegroundGravity"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV8MethodIDV", "setMeasureAllChildren"]
+- ["7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV8MethodIDV", "shouldDelayChildPressedState"]
+- ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s12StaticStringV", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["7AndroidAAO4ViewO", "ViewGroup"]
+- ["7AndroidAAO6WidgetO", "AndroidWidgetFrameLayout"]
+- ["7AndroidAAO6WidgetO", "FrameLayout"]
+- ["7AndroidAAO6WidgetO", "className"]
+- ["7AndroidAAO6WidgetO", "deinit"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "subscript"]
+- ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["SC6jvalueV", "init"]
+depends-nominal:
+- "7AndroidAAO"
+- !private "7Android0A7ContextC"
+- "7Android0A4ViewC"
+- "7Android0A9ViewGroupC"
+- "7Android0A17WidgetFrameLayoutC"
+- !private "Sa"
+- "s23BidirectionalCollectionP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "7AndroidAAO7ContentO"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV"
+- "s8HashableP"
+- "3JNI12JNIClassNameV"
+- !private "10java_swift7JNICoreC"
+- !private "10java_swift9JNIMethodC"
+- "10java_swift9JNIObjectC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- !private "10java_swift7JNITypeC"
+- "10java_swift10JavaObjectC"
+- "7Android11JavaPackageP"
+- "s25LosslessStringConvertibleP"
+- "7Android0A17WidgetFrameLayoutC08FragmentD8JNICacheV8MethodIDV"
+- "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- "s8SequenceP"
+- !private "s12StaticStringV"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "7AndroidAAO4ViewO"
+- "7AndroidAAO6WidgetO"
+- !private "s14_ArrayProtocolP"
+- "10Foundation13_CFBridgeableP"
+- !private "s24_DestructorSafeContainerP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation13_NSBridgeableP"
+- "10Foundation17_ObjectBridgeableP"
+- "10Foundation21_ObjectTypeBridgeableP"
+- "s16_SwiftStringViewP"
+- !private "SC6jvalueV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/JNI.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Bluetooth.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_util.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "1bddb913a803d52552737cca7ed82a3e"

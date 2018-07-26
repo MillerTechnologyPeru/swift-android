@@ -1,0 +1,329 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "NewViewGroup"
+provides-nominal:
+- "14swiftapptarget12NewViewGroupC"
+provides-member:
+- ["14swiftapptarget12NewViewGroupC", ""]
+depends-top-level:
+- !private "+"
+- !private "+="
+- !private "-"
+- !private "..."
+- !private "/"
+- !private "<"
+- !private "<<"
+- !private "=="
+- !private ">"
+- !private ">="
+- "Android"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- !private "NSLog"
+- "NewViewGroup"
+- !private "StringLiteralType"
+- "jobject"
+- !private "max"
+depends-member:
+- ["7AndroidAAO", "Content"]
+- ["7AndroidAAO", "View"]
+- ["7Android0A4ViewC", "Android"]
+- ["7Android0A4ViewC", "Bool"]
+- ["7Android0A4ViewC", "Int"]
+- !private ["7Android0A4ViewC", "NSLog"]
+- ["7Android0A4ViewC", "addView"]
+- !private ["7Android0A4ViewC", "bindNewObject"]
+- !private ["7Android0A4ViewC", "combineMeasuredStates"]
+- !private ["7Android0A4ViewC", "getChildAt"]
+- !private ["7Android0A4ViewC", "getChildCount"]
+- !private ["7Android0A4ViewC", "getMeasuredHeight"]
+- !private ["7Android0A4ViewC", "getMeasuredState"]
+- !private ["7Android0A4ViewC", "getMeasuredWidth"]
+- !private ["7Android0A4ViewC", "getPaddingEnd"]
+- !private ["7Android0A4ViewC", "getPaddingLeft"]
+- !private ["7Android0A4ViewC", "getPaddingRight"]
+- !private ["7Android0A4ViewC", "getPaddingTop"]
+- !private ["7Android0A4ViewC", "getVisibility"]
+- ["7Android0A4ViewC", "init"]
+- !private ["7Android0A4ViewC", "javaObject"]
+- ["7Android0A4ViewC", "jobject"]
+- !private ["7Android0A4ViewC", "layout"]
+- !private ["7Android0A4ViewC", "max"]
+- !private ["7Android0A4ViewC", "measure"]
+- !private ["7Android0A4ViewC", "measureChild"]
+- ["7Android0A4ViewC", "onLayout"]
+- ["7Android0A4ViewC", "onMeasure"]
+- !private ["7Android0A4ViewC", "resolveSizeAndState"]
+- !private ["7Android0A4ViewC", "setMeasuredDimension"]
+- ["7Android0A9ViewGroupC", "Android"]
+- ["7Android0A9ViewGroupC", "Bool"]
+- ["7Android0A9ViewGroupC", "Int"]
+- !private ["7Android0A9ViewGroupC", "NSLog"]
+- ["7Android0A9ViewGroupC", ""]
+- ["7Android0A9ViewGroupC", "addView"]
+- !private ["7Android0A9ViewGroupC", "bindNewObject"]
+- !private ["7Android0A9ViewGroupC", "combineMeasuredStates"]
+- !private ["7Android0A9ViewGroupC", "getChildAt"]
+- !private ["7Android0A9ViewGroupC", "getChildCount"]
+- !private ["7Android0A9ViewGroupC", "getMeasuredHeight"]
+- !private ["7Android0A9ViewGroupC", "getMeasuredWidth"]
+- !private ["7Android0A9ViewGroupC", "getPaddingEnd"]
+- !private ["7Android0A9ViewGroupC", "getPaddingLeft"]
+- !private ["7Android0A9ViewGroupC", "getPaddingRight"]
+- !private ["7Android0A9ViewGroupC", "getPaddingTop"]
+- ["7Android0A9ViewGroupC", "init"]
+- !private ["7Android0A9ViewGroupC", "javaObject"]
+- ["7Android0A9ViewGroupC", "jobject"]
+- !private ["7Android0A9ViewGroupC", "max"]
+- !private ["7Android0A9ViewGroupC", "measureChild"]
+- ["7Android0A9ViewGroupC", "onLayout"]
+- ["7Android0A9ViewGroupC", "onMeasure"]
+- !private ["7Android0A9ViewGroupC", "resolveSizeAndState"]
+- !private ["7Android0A9ViewGroupC", "setMeasuredDimension"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- ["7AndroidAAO7ContentO", "Context"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "init"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "init"]
+- ["10java_swift9JNIObjectC", "Android"]
+- ["10java_swift9JNIObjectC", "Bool"]
+- ["10java_swift9JNIObjectC", "Int"]
+- !private ["10java_swift9JNIObjectC", "NSLog"]
+- ["10java_swift9JNIObjectC", "addView"]
+- !private ["10java_swift9JNIObjectC", "bindNewObject"]
+- !private ["10java_swift9JNIObjectC", "combineMeasuredStates"]
+- !private ["10java_swift9JNIObjectC", "getChildAt"]
+- !private ["10java_swift9JNIObjectC", "getChildCount"]
+- !private ["10java_swift9JNIObjectC", "getMeasuredHeight"]
+- !private ["10java_swift9JNIObjectC", "getMeasuredState"]
+- !private ["10java_swift9JNIObjectC", "getMeasuredWidth"]
+- !private ["10java_swift9JNIObjectC", "getPaddingEnd"]
+- !private ["10java_swift9JNIObjectC", "getPaddingLeft"]
+- !private ["10java_swift9JNIObjectC", "getPaddingRight"]
+- !private ["10java_swift9JNIObjectC", "getPaddingTop"]
+- !private ["10java_swift9JNIObjectC", "getVisibility"]
+- ["10java_swift9JNIObjectC", "init"]
+- !private ["10java_swift9JNIObjectC", "javaObject"]
+- ["10java_swift9JNIObjectC", "jobject"]
+- !private ["10java_swift9JNIObjectC", "layout"]
+- !private ["10java_swift9JNIObjectC", "max"]
+- !private ["10java_swift9JNIObjectC", "measure"]
+- !private ["10java_swift9JNIObjectC", "measureChild"]
+- ["10java_swift9JNIObjectC", "onLayout"]
+- ["10java_swift9JNIObjectC", "onMeasure"]
+- !private ["10java_swift9JNIObjectC", "resolveSizeAndState"]
+- !private ["10java_swift9JNIObjectC", "setMeasuredDimension"]
+- !private ["10java_swift13JNIObjectInitP", "NSLog"]
+- ["10java_swift13JNIObjectInitP", ""]
+- !private ["10java_swift13JNIObjectInitP", "addView"]
+- !private ["10java_swift13JNIObjectInitP", "bindNewObject"]
+- !private ["10java_swift13JNIObjectInitP", "combineMeasuredStates"]
+- !private ["10java_swift13JNIObjectInitP", "getChildAt"]
+- !private ["10java_swift13JNIObjectInitP", "getChildCount"]
+- !private ["10java_swift13JNIObjectInitP", "getMeasuredHeight"]
+- !private ["10java_swift13JNIObjectInitP", "getMeasuredState"]
+- !private ["10java_swift13JNIObjectInitP", "getMeasuredWidth"]
+- !private ["10java_swift13JNIObjectInitP", "getPaddingEnd"]
+- !private ["10java_swift13JNIObjectInitP", "getPaddingLeft"]
+- !private ["10java_swift13JNIObjectInitP", "getPaddingRight"]
+- !private ["10java_swift13JNIObjectInitP", "getPaddingTop"]
+- !private ["10java_swift13JNIObjectInitP", "getVisibility"]
+- !private ["10java_swift13JNIObjectInitP", "init"]
+- !private ["10java_swift13JNIObjectInitP", "javaObject"]
+- !private ["10java_swift13JNIObjectInitP", "layout"]
+- !private ["10java_swift13JNIObjectInitP", "max"]
+- !private ["10java_swift13JNIObjectInitP", "measure"]
+- !private ["10java_swift13JNIObjectInitP", "measureChild"]
+- !private ["10java_swift13JNIObjectInitP", "resolveSizeAndState"]
+- !private ["10java_swift13JNIObjectInitP", "setMeasuredDimension"]
+- !private ["10java_swift17JNIObjectProtocolP", "NSLog"]
+- ["10java_swift17JNIObjectProtocolP", ""]
+- !private ["10java_swift17JNIObjectProtocolP", "addView"]
+- !private ["10java_swift17JNIObjectProtocolP", "bindNewObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "combineMeasuredStates"]
+- !private ["10java_swift17JNIObjectProtocolP", "getChildAt"]
+- !private ["10java_swift17JNIObjectProtocolP", "getChildCount"]
+- !private ["10java_swift17JNIObjectProtocolP", "getMeasuredHeight"]
+- !private ["10java_swift17JNIObjectProtocolP", "getMeasuredState"]
+- !private ["10java_swift17JNIObjectProtocolP", "getMeasuredWidth"]
+- !private ["10java_swift17JNIObjectProtocolP", "getPaddingEnd"]
+- !private ["10java_swift17JNIObjectProtocolP", "getPaddingLeft"]
+- !private ["10java_swift17JNIObjectProtocolP", "getPaddingRight"]
+- !private ["10java_swift17JNIObjectProtocolP", "getPaddingTop"]
+- !private ["10java_swift17JNIObjectProtocolP", "getVisibility"]
+- !private ["10java_swift17JNIObjectProtocolP", "init"]
+- !private ["10java_swift17JNIObjectProtocolP", "javaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "layout"]
+- !private ["10java_swift17JNIObjectProtocolP", "max"]
+- !private ["10java_swift17JNIObjectProtocolP", "measure"]
+- !private ["10java_swift17JNIObjectProtocolP", "measureChild"]
+- !private ["10java_swift17JNIObjectProtocolP", "resolveSizeAndState"]
+- !private ["10java_swift17JNIObjectProtocolP", "setMeasuredDimension"]
+- ["10java_swift10JavaObjectC", "Android"]
+- ["10java_swift10JavaObjectC", "Bool"]
+- ["10java_swift10JavaObjectC", "Int"]
+- !private ["10java_swift10JavaObjectC", "NSLog"]
+- ["10java_swift10JavaObjectC", "addView"]
+- !private ["10java_swift10JavaObjectC", "bindNewObject"]
+- !private ["10java_swift10JavaObjectC", "combineMeasuredStates"]
+- !private ["10java_swift10JavaObjectC", "getChildAt"]
+- !private ["10java_swift10JavaObjectC", "getChildCount"]
+- !private ["10java_swift10JavaObjectC", "getMeasuredHeight"]
+- !private ["10java_swift10JavaObjectC", "getMeasuredState"]
+- !private ["10java_swift10JavaObjectC", "getMeasuredWidth"]
+- !private ["10java_swift10JavaObjectC", "getPaddingEnd"]
+- !private ["10java_swift10JavaObjectC", "getPaddingLeft"]
+- !private ["10java_swift10JavaObjectC", "getPaddingRight"]
+- !private ["10java_swift10JavaObjectC", "getPaddingTop"]
+- !private ["10java_swift10JavaObjectC", "getVisibility"]
+- ["10java_swift10JavaObjectC", "init"]
+- !private ["10java_swift10JavaObjectC", "javaObject"]
+- ["10java_swift10JavaObjectC", "jobject"]
+- !private ["10java_swift10JavaObjectC", "layout"]
+- !private ["10java_swift10JavaObjectC", "max"]
+- !private ["10java_swift10JavaObjectC", "measure"]
+- !private ["10java_swift10JavaObjectC", "measureChild"]
+- ["10java_swift10JavaObjectC", "onLayout"]
+- ["10java_swift10JavaObjectC", "onMeasure"]
+- !private ["10java_swift10JavaObjectC", "resolveSizeAndState"]
+- !private ["10java_swift10JavaObjectC", "setMeasuredDimension"]
+- ["7Android11JavaPackageP", "Content"]
+- ["7Android11JavaPackageP", "Context"]
+- ["7Android11JavaPackageP", "View"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- ["14swiftapptarget12NewViewGroupC", "Android"]
+- ["14swiftapptarget12NewViewGroupC", "Bool"]
+- ["14swiftapptarget12NewViewGroupC", "Int"]
+- !private ["14swiftapptarget12NewViewGroupC", "NSLog"]
+- ["14swiftapptarget12NewViewGroupC", "addView"]
+- !private ["14swiftapptarget12NewViewGroupC", "bindNewObject"]
+- !private ["14swiftapptarget12NewViewGroupC", "combineMeasuredStates"]
+- ["14swiftapptarget12NewViewGroupC", "deinit"]
+- !private ["14swiftapptarget12NewViewGroupC", "getChildAt"]
+- !private ["14swiftapptarget12NewViewGroupC", "getChildCount"]
+- !private ["14swiftapptarget12NewViewGroupC", "getMeasuredHeight"]
+- !private ["14swiftapptarget12NewViewGroupC", "getMeasuredWidth"]
+- !private ["14swiftapptarget12NewViewGroupC", "getPaddingEnd"]
+- !private ["14swiftapptarget12NewViewGroupC", "getPaddingLeft"]
+- !private ["14swiftapptarget12NewViewGroupC", "getPaddingRight"]
+- !private ["14swiftapptarget12NewViewGroupC", "getPaddingTop"]
+- ["14swiftapptarget12NewViewGroupC", "init"]
+- !private ["14swiftapptarget12NewViewGroupC", "javaObject"]
+- ["14swiftapptarget12NewViewGroupC", "jobject"]
+- !private ["14swiftapptarget12NewViewGroupC", "max"]
+- !private ["14swiftapptarget12NewViewGroupC", "measureChild"]
+- ["14swiftapptarget12NewViewGroupC", "onLayout"]
+- ["14swiftapptarget12NewViewGroupC", "onMeasure"]
+- !private ["14swiftapptarget12NewViewGroupC", "resolveSizeAndState"]
+- !private ["14swiftapptarget12NewViewGroupC", "setMeasuredDimension"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- ["7AndroidAAO4ViewO", "View"]
+- ["7AndroidAAO4ViewO", "ViewGroup"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "7AndroidAAO"
+- "7Android0A4ViewC"
+- "7Android0A9ViewGroupC"
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "7AndroidAAO7ContentO"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s8HashableP"
+- "10java_swift9JNIObjectC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- "10java_swift10JavaObjectC"
+- "7Android11JavaPackageP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "14swiftapptarget12NewViewGroupC"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "7AndroidAAO4ViewO"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/JNI.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Android.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Bluetooth.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_util.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "59b6926a0ef1f5f9a2955e68fe65713a"

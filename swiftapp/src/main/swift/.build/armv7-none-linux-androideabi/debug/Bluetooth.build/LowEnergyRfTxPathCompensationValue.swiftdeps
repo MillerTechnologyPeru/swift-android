@@ -1,0 +1,197 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "LowEnergyRfTxPathCompensationValue"
+- "=="
+- "<"
+provides-nominal:
+- "9Bluetooth34LowEnergyRfTxPathCompensationValueV"
+provides-member:
+- ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", ""]
+depends-top-level:
+- !private "..."
+- "<"
+- "<="
+- "=="
+- ">"
+- ">="
+- "AssignmentPrecedence"
+- "Bool"
+- "Comparable"
+- "Equatable"
+- "FloatLiteralType"
+- "Hashable"
+- "Int"
+- "Int16"
+- "IntegerLiteralType"
+- "LowEnergyRfTxPathCompensationValue"
+- "RawRepresentable"
+- !private "StringLiteralType"
+- !private "assert"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "contains"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s11ClosedRangeV", "contains"]
+- !private ["s10CollectionP", "contains"]
+- !private ["s10ComparableP", "Int"]
+- ["s10ComparableP", "LowEnergyRfTxPathCompensationValue"]
+- ["s10ComparableP", "RawValue"]
+- ["s10ComparableP", ""]
+- ["s10ComparableP", "_Default_RawValue"]
+- !private ["s10ComparableP", "assert"]
+- ["s10ComparableP", "hashValue"]
+- ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "max"]
+- !private ["s10ComparableP", "min"]
+- ["s10ComparableP", "rawValue"]
+- !private ["s20CountableClosedRangeV", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "contains"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "Int"]
+- ["s9EquatableP", "LowEnergyRfTxPathCompensationValue"]
+- ["s9EquatableP", "RawValue"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "assert"]
+- !private ["s9EquatableP", "contains"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "max"]
+- !private ["s9EquatableP", "min"]
+- ["s9EquatableP", "rawValue"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["s8HashableP", "Int"]
+- ["s8HashableP", "LowEnergyRfTxPathCompensationValue"]
+- ["s8HashableP", "RawValue"]
+- ["s8HashableP", ""]
+- ["s8HashableP", "_Default_RawValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "assert"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "max"]
+- !private ["s8HashableP", "min"]
+- ["s8HashableP", "rawValue"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", "<"]
+- ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", "=="]
+- ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", "Bool"]
+- ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", "Int"]
+- ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", "Int16"]
+- ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", "LowEnergyRfTxPathCompensationValue"]
+- ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", "RawValue"]
+- ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", "_Default_RawValue"]
+- !private ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", "assert"]
+- ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", "deinit"]
+- ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", "hashValue"]
+- ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", "init"]
+- ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", "max"]
+- ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", "min"]
+- ["9Bluetooth34LowEnergyRfTxPathCompensationValueV", "rawValue"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s7NumericP", "init"]
+- !private ["s22RandomAccessCollectionP", "contains"]
+- !private ["s15RangeExpressionP", "contains"]
+- !private ["s16RawRepresentableP", "Int"]
+- ["s16RawRepresentableP", "LowEnergyRfTxPathCompensationValue"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- !private ["s16RawRepresentableP", "assert"]
+- ["s16RawRepresentableP", "hashValue"]
+- ["s16RawRepresentableP", "init"]
+- !private ["s16RawRepresentableP", "max"]
+- !private ["s16RawRepresentableP", "min"]
+- ["s16RawRepresentableP", "rawValue"]
+- !private ["s8SequenceP", "contains"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "s11ClosedRangeV"
+- !private "s10CollectionP"
+- "s10ComparableP"
+- !private "s20CountableClosedRangeV"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "s8HashableP"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- "9Bluetooth34LowEnergyRfTxPathCompensationValueV"
+- !private "s10MirrorPathP"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- !private "s15RangeExpressionP"
+- "s16RawRepresentableP"
+- !private "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- !private "s18_BitwiseOperationsP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "14eb1c3ec14f28130cb14f2e0bca5a26"

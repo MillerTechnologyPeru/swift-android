@@ -1,0 +1,511 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AbstractSet"
+provides-nominal:
+- "9java_util11AbstractSetC"
+provides-member:
+- ["9java_util11AbstractSetC", ""]
+depends-top-level:
+- !private "!="
+- "AbstractCollection"
+- "AbstractSet"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- !private "JNI"
+- !private "JNIMethod"
+- !private "JNIType"
+- !private "JNI_FALSE"
+- "StaticString"
+- "StringLiteralType"
+- "UnavailableProtocol"
+- "java_swift"
+- !private "jboolean"
+- "jclass"
+- "jmethodID"
+- !private "jobject"
+- !private "jvalue"
+depends-member:
+- !private ["9java_util18AbstractCollectionC", "AbstractSet"]
+- ["9java_util18AbstractCollectionC", "AbstractSetJNIClass"]
+- ["9java_util18AbstractCollectionC", "Bool"]
+- ["9java_util18AbstractCollectionC", "Int"]
+- !private ["9java_util18AbstractCollectionC", "JNI"]
+- !private ["9java_util18AbstractCollectionC", "JNIMethod"]
+- !private ["9java_util18AbstractCollectionC", "JNIType"]
+- !private ["9java_util18AbstractCollectionC", "JNI_FALSE"]
+- ["9java_util18AbstractCollectionC", "StaticString"]
+- ["9java_util18AbstractCollectionC", "UnavailableProtocol"]
+- ["9java_util18AbstractCollectionC", ""]
+- ["9java_util18AbstractCollectionC", "add"]
+- ["9java_util18AbstractCollectionC", "addAll"]
+- ["9java_util18AbstractCollectionC", "clear"]
+- ["9java_util18AbstractCollectionC", "contains"]
+- ["9java_util18AbstractCollectionC", "containsAll"]
+- ["9java_util18AbstractCollectionC", "equals"]
+- ["9java_util18AbstractCollectionC", "equals_MethodID_2"]
+- ["9java_util18AbstractCollectionC", "hashCode"]
+- ["9java_util18AbstractCollectionC", "init"]
+- ["9java_util18AbstractCollectionC", "isEmpty"]
+- !private ["9java_util18AbstractCollectionC", "javaObject"]
+- ["9java_util18AbstractCollectionC", "java_swift"]
+- !private ["9java_util18AbstractCollectionC", "jboolean"]
+- ["9java_util18AbstractCollectionC", "jclass"]
+- ["9java_util18AbstractCollectionC", "jmethodID"]
+- !private ["9java_util18AbstractCollectionC", "jobject"]
+- !private ["9java_util18AbstractCollectionC", "jvalue"]
+- ["9java_util18AbstractCollectionC", "new_MethodID_1"]
+- ["9java_util18AbstractCollectionC", "remove"]
+- ["9java_util18AbstractCollectionC", "removeAll"]
+- ["9java_util18AbstractCollectionC", "retainAll"]
+- ["9java_util18AbstractCollectionC", "size"]
+- ["9java_util18AbstractCollectionC", "toArray"]
+- !private ["9java_util11AbstractSetC", "AbstractSet"]
+- !private ["9java_util11AbstractSetC", "AbstractSetJNIClass"]
+- ["9java_util11AbstractSetC", "Bool"]
+- ["9java_util11AbstractSetC", "Int"]
+- !private ["9java_util11AbstractSetC", "JNI"]
+- !private ["9java_util11AbstractSetC", "JNIMethod"]
+- !private ["9java_util11AbstractSetC", "JNIType"]
+- !private ["9java_util11AbstractSetC", "JNI_FALSE"]
+- ["9java_util11AbstractSetC", "StaticString"]
+- ["9java_util11AbstractSetC", "UnavailableProtocol"]
+- ["9java_util11AbstractSetC", "add"]
+- ["9java_util11AbstractSetC", "addAll"]
+- ["9java_util11AbstractSetC", "clear"]
+- ["9java_util11AbstractSetC", "contains"]
+- ["9java_util11AbstractSetC", "containsAll"]
+- ["9java_util11AbstractSetC", "deinit"]
+- ["9java_util11AbstractSetC", "equals"]
+- !private ["9java_util11AbstractSetC", "equals_MethodID_2"]
+- ["9java_util11AbstractSetC", "hashCode"]
+- ["9java_util11AbstractSetC", "init"]
+- ["9java_util11AbstractSetC", "isEmpty"]
+- !private ["9java_util11AbstractSetC", "javaObject"]
+- ["9java_util11AbstractSetC", "java_swift"]
+- !private ["9java_util11AbstractSetC", "jboolean"]
+- ["9java_util11AbstractSetC", "jclass"]
+- ["9java_util11AbstractSetC", "jmethodID"]
+- !private ["9java_util11AbstractSetC", "jobject"]
+- !private ["9java_util11AbstractSetC", "jvalue"]
+- !private ["9java_util11AbstractSetC", "new_MethodID_1"]
+- ["9java_util11AbstractSetC", "remove"]
+- ["9java_util11AbstractSetC", "removeAll"]
+- ["9java_util11AbstractSetC", "retainAll"]
+- ["9java_util11AbstractSetC", "size"]
+- ["9java_util11AbstractSetC", "toArray"]
+- !private ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["s7CVarArgP", "init"]
+- !private ["9java_util10CollectionP", "AbstractSet"]
+- !private ["9java_util10CollectionP", "AbstractSetJNIClass"]
+- !private ["9java_util10CollectionP", "JNI"]
+- !private ["9java_util10CollectionP", "JNIMethod"]
+- !private ["9java_util10CollectionP", "JNIType"]
+- !private ["9java_util10CollectionP", "JNI_FALSE"]
+- ["9java_util10CollectionP", ""]
+- ["9java_util10CollectionP", "add"]
+- ["9java_util10CollectionP", "addAll"]
+- ["9java_util10CollectionP", "clear"]
+- ["9java_util10CollectionP", "contains"]
+- ["9java_util10CollectionP", "containsAll"]
+- ["9java_util10CollectionP", "equals"]
+- !private ["9java_util10CollectionP", "equals_MethodID_2"]
+- ["9java_util10CollectionP", "hashCode"]
+- !private ["9java_util10CollectionP", "init"]
+- ["9java_util10CollectionP", "isEmpty"]
+- !private ["9java_util10CollectionP", "javaObject"]
+- !private ["9java_util10CollectionP", "jboolean"]
+- !private ["9java_util10CollectionP", "jobject"]
+- !private ["9java_util10CollectionP", "jvalue"]
+- !private ["9java_util10CollectionP", "new_MethodID_1"]
+- ["9java_util10CollectionP", "remove"]
+- ["9java_util10CollectionP", "removeAll"]
+- ["9java_util10CollectionP", "retainAll"]
+- ["9java_util10CollectionP", "size"]
+- ["9java_util10CollectionP", "toArray"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["s8HashableP", "init"]
+- !private ["9java_lang8IterableP", "AbstractSet"]
+- !private ["9java_lang8IterableP", "AbstractSetJNIClass"]
+- !private ["9java_lang8IterableP", "JNI"]
+- !private ["9java_lang8IterableP", "JNIMethod"]
+- !private ["9java_lang8IterableP", "JNIType"]
+- !private ["9java_lang8IterableP", "JNI_FALSE"]
+- ["9java_lang8IterableP", ""]
+- ["9java_lang8IterableP", "add"]
+- ["9java_lang8IterableP", "addAll"]
+- ["9java_lang8IterableP", "clear"]
+- ["9java_lang8IterableP", "contains"]
+- ["9java_lang8IterableP", "containsAll"]
+- ["9java_lang8IterableP", "equals"]
+- !private ["9java_lang8IterableP", "equals_MethodID_2"]
+- ["9java_lang8IterableP", "hashCode"]
+- !private ["9java_lang8IterableP", "init"]
+- ["9java_lang8IterableP", "isEmpty"]
+- !private ["9java_lang8IterableP", "javaObject"]
+- !private ["9java_lang8IterableP", "jboolean"]
+- !private ["9java_lang8IterableP", "jobject"]
+- !private ["9java_lang8IterableP", "jvalue"]
+- !private ["9java_lang8IterableP", "new_MethodID_1"]
+- ["9java_lang8IterableP", "remove"]
+- ["9java_lang8IterableP", "removeAll"]
+- ["9java_lang8IterableP", "retainAll"]
+- ["9java_lang8IterableP", "size"]
+- ["9java_lang8IterableP", "toArray"]
+- !private ["10java_swift7JNICoreC", "DeleteLocalRef"]
+- !private ["10java_swift9JNIMethodC", "CallBooleanMethod"]
+- !private ["10java_swift9JNIMethodC", "NewObject"]
+- !private ["10java_swift9JNIObjectC", "AbstractSet"]
+- ["10java_swift9JNIObjectC", "AbstractSetJNIClass"]
+- ["10java_swift9JNIObjectC", "Bool"]
+- ["10java_swift9JNIObjectC", "Int"]
+- !private ["10java_swift9JNIObjectC", "JNI"]
+- !private ["10java_swift9JNIObjectC", "JNIMethod"]
+- !private ["10java_swift9JNIObjectC", "JNIType"]
+- !private ["10java_swift9JNIObjectC", "JNI_FALSE"]
+- ["10java_swift9JNIObjectC", "StaticString"]
+- ["10java_swift9JNIObjectC", "UnavailableProtocol"]
+- ["10java_swift9JNIObjectC", "add"]
+- ["10java_swift9JNIObjectC", "addAll"]
+- ["10java_swift9JNIObjectC", "clear"]
+- ["10java_swift9JNIObjectC", "contains"]
+- ["10java_swift9JNIObjectC", "containsAll"]
+- ["10java_swift9JNIObjectC", "equals"]
+- ["10java_swift9JNIObjectC", "equals_MethodID_2"]
+- ["10java_swift9JNIObjectC", "hashCode"]
+- ["10java_swift9JNIObjectC", "init"]
+- ["10java_swift9JNIObjectC", "isEmpty"]
+- !private ["10java_swift9JNIObjectC", "javaObject"]
+- ["10java_swift9JNIObjectC", "java_swift"]
+- !private ["10java_swift9JNIObjectC", "jboolean"]
+- ["10java_swift9JNIObjectC", "jclass"]
+- ["10java_swift9JNIObjectC", "jmethodID"]
+- !private ["10java_swift9JNIObjectC", "jobject"]
+- !private ["10java_swift9JNIObjectC", "jvalue"]
+- ["10java_swift9JNIObjectC", "new_MethodID_1"]
+- ["10java_swift9JNIObjectC", "remove"]
+- ["10java_swift9JNIObjectC", "removeAll"]
+- ["10java_swift9JNIObjectC", "retainAll"]
+- ["10java_swift9JNIObjectC", "size"]
+- ["10java_swift9JNIObjectC", "toArray"]
+- !private ["10java_swift9JNIObjectC", "withJavaObject"]
+- !private ["10java_swift13JNIObjectInitP", "AbstractSet"]
+- !private ["10java_swift13JNIObjectInitP", "AbstractSetJNIClass"]
+- !private ["10java_swift13JNIObjectInitP", "JNI"]
+- !private ["10java_swift13JNIObjectInitP", "JNIMethod"]
+- !private ["10java_swift13JNIObjectInitP", "JNIType"]
+- !private ["10java_swift13JNIObjectInitP", "JNI_FALSE"]
+- ["10java_swift13JNIObjectInitP", ""]
+- ["10java_swift13JNIObjectInitP", "add"]
+- ["10java_swift13JNIObjectInitP", "addAll"]
+- ["10java_swift13JNIObjectInitP", "clear"]
+- ["10java_swift13JNIObjectInitP", "contains"]
+- ["10java_swift13JNIObjectInitP", "containsAll"]
+- ["10java_swift13JNIObjectInitP", "equals"]
+- !private ["10java_swift13JNIObjectInitP", "equals_MethodID_2"]
+- ["10java_swift13JNIObjectInitP", "hashCode"]
+- !private ["10java_swift13JNIObjectInitP", "init"]
+- ["10java_swift13JNIObjectInitP", "isEmpty"]
+- !private ["10java_swift13JNIObjectInitP", "javaObject"]
+- !private ["10java_swift13JNIObjectInitP", "jboolean"]
+- !private ["10java_swift13JNIObjectInitP", "jobject"]
+- !private ["10java_swift13JNIObjectInitP", "jvalue"]
+- !private ["10java_swift13JNIObjectInitP", "new_MethodID_1"]
+- ["10java_swift13JNIObjectInitP", "remove"]
+- ["10java_swift13JNIObjectInitP", "removeAll"]
+- ["10java_swift13JNIObjectInitP", "retainAll"]
+- ["10java_swift13JNIObjectInitP", "size"]
+- ["10java_swift13JNIObjectInitP", "toArray"]
+- !private ["10java_swift13JNIObjectInitP", "withJavaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "AbstractSet"]
+- !private ["10java_swift17JNIObjectProtocolP", "AbstractSetJNIClass"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIMethod"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIType"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI_FALSE"]
+- ["10java_swift17JNIObjectProtocolP", ""]
+- ["10java_swift17JNIObjectProtocolP", "add"]
+- ["10java_swift17JNIObjectProtocolP", "addAll"]
+- ["10java_swift17JNIObjectProtocolP", "clear"]
+- ["10java_swift17JNIObjectProtocolP", "contains"]
+- ["10java_swift17JNIObjectProtocolP", "containsAll"]
+- ["10java_swift17JNIObjectProtocolP", "equals"]
+- !private ["10java_swift17JNIObjectProtocolP", "equals_MethodID_2"]
+- ["10java_swift17JNIObjectProtocolP", "hashCode"]
+- !private ["10java_swift17JNIObjectProtocolP", "init"]
+- ["10java_swift17JNIObjectProtocolP", "isEmpty"]
+- !private ["10java_swift17JNIObjectProtocolP", "javaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jboolean"]
+- !private ["10java_swift17JNIObjectProtocolP", "jobject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jvalue"]
+- !private ["10java_swift17JNIObjectProtocolP", "new_MethodID_1"]
+- ["10java_swift17JNIObjectProtocolP", "remove"]
+- ["10java_swift17JNIObjectProtocolP", "removeAll"]
+- ["10java_swift17JNIObjectProtocolP", "retainAll"]
+- ["10java_swift17JNIObjectProtocolP", "size"]
+- ["10java_swift17JNIObjectProtocolP", "toArray"]
+- !private ["10java_swift17JNIObjectProtocolP", "withJavaObject"]
+- !private ["10java_swift7JNITypeC", "toJava"]
+- !private ["10java_swift10JavaObjectC", "AbstractSet"]
+- ["10java_swift10JavaObjectC", "AbstractSetJNIClass"]
+- ["10java_swift10JavaObjectC", "Bool"]
+- ["10java_swift10JavaObjectC", "Int"]
+- !private ["10java_swift10JavaObjectC", "JNI"]
+- !private ["10java_swift10JavaObjectC", "JNIMethod"]
+- !private ["10java_swift10JavaObjectC", "JNIType"]
+- !private ["10java_swift10JavaObjectC", "JNI_FALSE"]
+- ["10java_swift10JavaObjectC", "StaticString"]
+- ["10java_swift10JavaObjectC", "UnavailableProtocol"]
+- ["10java_swift10JavaObjectC", "add"]
+- ["10java_swift10JavaObjectC", "addAll"]
+- ["10java_swift10JavaObjectC", "clear"]
+- ["10java_swift10JavaObjectC", "contains"]
+- ["10java_swift10JavaObjectC", "containsAll"]
+- ["10java_swift10JavaObjectC", "equals"]
+- ["10java_swift10JavaObjectC", "equals_MethodID_2"]
+- ["10java_swift10JavaObjectC", "hashCode"]
+- ["10java_swift10JavaObjectC", "init"]
+- ["10java_swift10JavaObjectC", "isEmpty"]
+- !private ["10java_swift10JavaObjectC", "javaObject"]
+- ["10java_swift10JavaObjectC", "java_swift"]
+- !private ["10java_swift10JavaObjectC", "jboolean"]
+- ["10java_swift10JavaObjectC", "jclass"]
+- ["10java_swift10JavaObjectC", "jmethodID"]
+- !private ["10java_swift10JavaObjectC", "jobject"]
+- !private ["10java_swift10JavaObjectC", "jvalue"]
+- ["10java_swift10JavaObjectC", "new_MethodID_1"]
+- ["10java_swift10JavaObjectC", "remove"]
+- ["10java_swift10JavaObjectC", "removeAll"]
+- ["10java_swift10JavaObjectC", "retainAll"]
+- ["10java_swift10JavaObjectC", "size"]
+- ["10java_swift10JavaObjectC", "toArray"]
+- !private ["10java_swift10JavaObjectC", "withJavaObject"]
+- !private ["10java_swift12JavaProtocolP", "AbstractSet"]
+- !private ["10java_swift12JavaProtocolP", "AbstractSetJNIClass"]
+- !private ["10java_swift12JavaProtocolP", "JNI"]
+- !private ["10java_swift12JavaProtocolP", "JNIMethod"]
+- !private ["10java_swift12JavaProtocolP", "JNIType"]
+- !private ["10java_swift12JavaProtocolP", "JNI_FALSE"]
+- ["10java_swift12JavaProtocolP", ""]
+- ["10java_swift12JavaProtocolP", "add"]
+- ["10java_swift12JavaProtocolP", "addAll"]
+- ["10java_swift12JavaProtocolP", "clear"]
+- ["10java_swift12JavaProtocolP", "contains"]
+- ["10java_swift12JavaProtocolP", "containsAll"]
+- ["10java_swift12JavaProtocolP", "equals"]
+- !private ["10java_swift12JavaProtocolP", "equals_MethodID_2"]
+- ["10java_swift12JavaProtocolP", "hashCode"]
+- !private ["10java_swift12JavaProtocolP", "init"]
+- ["10java_swift12JavaProtocolP", "isEmpty"]
+- !private ["10java_swift12JavaProtocolP", "javaObject"]
+- !private ["10java_swift12JavaProtocolP", "jboolean"]
+- !private ["10java_swift12JavaProtocolP", "jobject"]
+- !private ["10java_swift12JavaProtocolP", "jvalue"]
+- !private ["10java_swift12JavaProtocolP", "new_MethodID_1"]
+- ["10java_swift12JavaProtocolP", "remove"]
+- ["10java_swift12JavaProtocolP", "removeAll"]
+- ["10java_swift12JavaProtocolP", "retainAll"]
+- ["10java_swift12JavaProtocolP", "size"]
+- ["10java_swift12JavaProtocolP", "toArray"]
+- !private ["10java_swift7JavaSetP", "AbstractSet"]
+- !private ["10java_swift7JavaSetP", "AbstractSetJNIClass"]
+- !private ["10java_swift7JavaSetP", "JNI"]
+- !private ["10java_swift7JavaSetP", "JNIMethod"]
+- !private ["10java_swift7JavaSetP", "JNIType"]
+- !private ["10java_swift7JavaSetP", "JNI_FALSE"]
+- ["10java_swift7JavaSetP", ""]
+- ["10java_swift7JavaSetP", "add"]
+- ["10java_swift7JavaSetP", "addAll"]
+- ["10java_swift7JavaSetP", "clear"]
+- ["10java_swift7JavaSetP", "contains"]
+- ["10java_swift7JavaSetP", "containsAll"]
+- ["10java_swift7JavaSetP", "equals"]
+- !private ["10java_swift7JavaSetP", "equals_MethodID_2"]
+- ["10java_swift7JavaSetP", "hashCode"]
+- !private ["10java_swift7JavaSetP", "init"]
+- ["10java_swift7JavaSetP", "isEmpty"]
+- !private ["10java_swift7JavaSetP", "javaObject"]
+- !private ["10java_swift7JavaSetP", "jboolean"]
+- !private ["10java_swift7JavaSetP", "jobject"]
+- !private ["10java_swift7JavaSetP", "jvalue"]
+- !private ["10java_swift7JavaSetP", "new_MethodID_1"]
+- ["10java_swift7JavaSetP", "remove"]
+- ["10java_swift7JavaSetP", "removeAll"]
+- ["10java_swift7JavaSetP", "retainAll"]
+- ["10java_swift7JavaSetP", "size"]
+- ["10java_swift7JavaSetP", "toArray"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["s7NumericP", "init"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s5UInt8V", "init"]
+- !private ["10java_swift19UnavailableProtocolP", "AbstractSet"]
+- !private ["10java_swift19UnavailableProtocolP", "AbstractSetJNIClass"]
+- !private ["10java_swift19UnavailableProtocolP", "JNI"]
+- !private ["10java_swift19UnavailableProtocolP", "JNIMethod"]
+- !private ["10java_swift19UnavailableProtocolP", "JNIType"]
+- !private ["10java_swift19UnavailableProtocolP", "JNI_FALSE"]
+- ["10java_swift19UnavailableProtocolP", ""]
+- ["10java_swift19UnavailableProtocolP", "add"]
+- ["10java_swift19UnavailableProtocolP", "addAll"]
+- ["10java_swift19UnavailableProtocolP", "clear"]
+- ["10java_swift19UnavailableProtocolP", "contains"]
+- ["10java_swift19UnavailableProtocolP", "containsAll"]
+- ["10java_swift19UnavailableProtocolP", "equals"]
+- !private ["10java_swift19UnavailableProtocolP", "equals_MethodID_2"]
+- ["10java_swift19UnavailableProtocolP", "hashCode"]
+- !private ["10java_swift19UnavailableProtocolP", "init"]
+- ["10java_swift19UnavailableProtocolP", "isEmpty"]
+- !private ["10java_swift19UnavailableProtocolP", "javaObject"]
+- !private ["10java_swift19UnavailableProtocolP", "jboolean"]
+- !private ["10java_swift19UnavailableProtocolP", "jobject"]
+- !private ["10java_swift19UnavailableProtocolP", "jvalue"]
+- !private ["10java_swift19UnavailableProtocolP", "new_MethodID_1"]
+- ["10java_swift19UnavailableProtocolP", "remove"]
+- ["10java_swift19UnavailableProtocolP", "removeAll"]
+- ["10java_swift19UnavailableProtocolP", "retainAll"]
+- ["10java_swift19UnavailableProtocolP", "size"]
+- ["10java_swift19UnavailableProtocolP", "toArray"]
+- !private ["s15UnsignedIntegerP", "init"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "subscript"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+- !private ["s14_StringElementP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["SC6jvalueV", "init"]
+depends-nominal:
+- "9java_util18AbstractCollectionC"
+- "9java_util11AbstractSetC"
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "s7CVarArgP"
+- "9java_util10CollectionP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- !private "s8HashableP"
+- "9java_lang8IterableP"
+- !private "10java_swift7JNICoreC"
+- !private "10java_swift9JNIMethodC"
+- "10java_swift9JNIObjectC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- !private "10java_swift7JNITypeC"
+- "10java_swift10JavaObjectC"
+- "10java_swift12JavaProtocolP"
+- "10java_swift7JavaSetP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s5UInt8V"
+- "10java_swift19UnavailableProtocolP"
+- !private "s15UnsignedIntegerP"
+- !private "s14_ArrayProtocolP"
+- !private "s18_BitwiseOperationsP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+- !private "s14_StringElementP"
+- !private "s16_SwiftStringViewP"
+- !private "SC6jvalueV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "01686222d149d191f2691924e390f4ee"

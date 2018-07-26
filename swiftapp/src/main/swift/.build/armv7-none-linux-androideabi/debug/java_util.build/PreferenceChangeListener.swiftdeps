@@ -1,0 +1,464 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PreferenceChangeListener"
+- "PreferenceChangeListenerForward"
+- "PreferenceChangeListenerBase"
+provides-nominal:
+- "9java_util24PreferenceChangeListenerP"
+- "9java_util31PreferenceChangeListenerForwardC"
+- "9java_util28PreferenceChangeListenerBaseC"
+provides-member:
+- ["9java_util24PreferenceChangeListenerP", ""]
+- ["9java_util31PreferenceChangeListenerForwardC", ""]
+- ["9java_util28PreferenceChangeListenerBaseC", ""]
+- ["9java_util24PreferenceChangeListenerP", "localJavaObject"]
+depends-top-level:
+- "!="
+- "AssignmentPrecedence"
+- "EventListener"
+- "EventListenerForward"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "JNI"
+- "JNIEnv"
+- "JNILocalProxy"
+- !private "JNIMethod"
+- "JNINativeMethod"
+- "JNIReleasableProxy__finalize_thunk"
+- !private "JNIType"
+- "JNI_OK"
+- "PreferenceChangeEvent"
+- "PreferenceChangeListener"
+- "PreferenceChangeListenerBase"
+- "PreferenceChangeListenerForward"
+- !private "PreferenceChangeListenerLocal_"
+- "PreferenceChangeListener_preferenceChange_0"
+- "PreferenceChangeListener_preferenceChange_0_type"
+- "String"
+- "StringLiteralType"
+- "TernaryPrecedence"
+- "UnsafeMutablePointer"
+- "UnsafeMutableRawPointer"
+- "jclass"
+- "jint"
+- "jlong"
+- "jmethodID"
+- "jobject"
+- !private "jvalue"
+- "strdup"
+- "unsafeBitCast"
+depends-member:
+- ["Sa", "append"]
+- ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- ["Sa", "withUnsafeBufferPointer"]
+- ["s23BidirectionalCollectionP", "append"]
+- ["s23BidirectionalCollectionP", "baseAddress"]
+- ["s23BidirectionalCollectionP", "count"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- ["s23BidirectionalCollectionP", "withUnsafeBufferPointer"]
+- ["s13BinaryIntegerP", "init"]
+- ["Sb", "_getBuiltinLogicValue"]
+- ["s7CVarArgP", "_getBuiltinLogicValue"]
+- ["s7CVarArgP", "init"]
+- ["s10CollectionP", "append"]
+- ["s10CollectionP", "baseAddress"]
+- ["s10CollectionP", "count"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- ["s10CollectionP", "withUnsafeBufferPointer"]
+- ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "append"]
+- ["s28CustomDebugStringConvertibleP", "baseAddress"]
+- ["s28CustomDebugStringConvertibleP", "count"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- ["s28CustomDebugStringConvertibleP", "withUnsafeBufferPointer"]
+- ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- ["s17CustomReflectableP", "append"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- ["s17CustomReflectableP", "withUnsafeBufferPointer"]
+- ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s23CustomStringConvertibleP", "append"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- ["s23CustomStringConvertibleP", "withUnsafeBufferPointer"]
+- ["s9DecodableP", "_getBuiltinLogicValue"]
+- ["s9DecodableP", "append"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- ["s9DecodableP", "withUnsafeBufferPointer"]
+- ["s9EncodableP", "_getBuiltinLogicValue"]
+- ["s9EncodableP", "append"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- ["s9EncodableP", "withUnsafeBufferPointer"]
+- ["s9EquatableP", "_getBuiltinLogicValue"]
+- ["s9EquatableP", "append"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "subscript"]
+- ["s9EquatableP", "withUnsafeBufferPointer"]
+- !private ["9java_util13EventListenerP", "JNIMethod"]
+- !private ["9java_util13EventListenerP", "JNIType"]
+- ["9java_util13EventListenerP", "PreferenceChangeEvent"]
+- !private ["9java_util13EventListenerP", "PreferenceChangeListenerForward"]
+- !private ["9java_util13EventListenerP", "PreferenceChangeListenerLocal_"]
+- ["9java_util13EventListenerP", "UnsafeMutablePointer"]
+- ["9java_util13EventListenerP", ""]
+- !private ["9java_util13EventListenerP", "init"]
+- !private ["9java_util13EventListenerP", "javaObject"]
+- ["9java_util13EventListenerP", "jobject"]
+- !private ["9java_util13EventListenerP", "jvalue"]
+- ["9java_util13EventListenerP", "localJavaObject"]
+- ["9java_util13EventListenerP", "preferenceChange"]
+- !private ["9java_util13EventListenerP", "preferenceChange_MethodID_2"]
+- !private ["9java_util20EventListenerForwardC", "JNIMethod"]
+- !private ["9java_util20EventListenerForwardC", "JNIType"]
+- ["9java_util20EventListenerForwardC", "PreferenceChangeEvent"]
+- !private ["9java_util20EventListenerForwardC", "PreferenceChangeListenerForward"]
+- ["9java_util20EventListenerForwardC", "PreferenceChangeListenerJNIClass"]
+- ["9java_util20EventListenerForwardC", ""]
+- ["9java_util20EventListenerForwardC", "init"]
+- !private ["9java_util20EventListenerForwardC", "javaObject"]
+- ["9java_util20EventListenerForwardC", "jclass"]
+- ["9java_util20EventListenerForwardC", "jmethodID"]
+- !private ["9java_util20EventListenerForwardC", "jobject"]
+- !private ["9java_util20EventListenerForwardC", "jvalue"]
+- ["9java_util20EventListenerForwardC", "preferenceChange"]
+- ["9java_util20EventListenerForwardC", "preferenceChange_MethodID_2"]
+- !private ["9java_util11EventObjectC", "init"]
+- ["s25ExpressibleByArrayLiteralP", "append"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- ["s25ExpressibleByArrayLiteralP", "withUnsafeBufferPointer"]
+- ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s17FixedWidthIntegerP", "init"]
+- ["s8HashableP", "_getBuiltinLogicValue"]
+- ["s8HashableP", "init"]
+- ["Si", "init"]
+- !private ["10java_swift7JNICoreC", "DeleteLocalRef"]
+- ["10java_swift7JNICoreC", "FindClass"]
+- ["10java_swift7JNICoreC", "api"]
+- ["10java_swift7JNICoreC", "env"]
+- ["10java_swift7JNICoreC", "report"]
+- ["10java_swift13JNILocalProxyC", "JNI"]
+- ["10java_swift13JNILocalProxyC", "JNINativeMethod"]
+- ["10java_swift13JNILocalProxyC", "JNIReleasableProxy__finalize_thunk"]
+- ["10java_swift13JNILocalProxyC", "JNI_OK"]
+- ["10java_swift13JNILocalProxyC", "PreferenceChangeListener_preferenceChange_0"]
+- ["10java_swift13JNILocalProxyC", "PreferenceChangeListener_preferenceChange_0_type"]
+- ["10java_swift13JNILocalProxyC", "String"]
+- ["10java_swift13JNILocalProxyC", "UnsafeMutableRawPointer"]
+- !private ["10java_swift13JNILocalProxyC", ""]
+- ["10java_swift13JNILocalProxyC", "_proxyClass"]
+- ["10java_swift13JNILocalProxyC", "init"]
+- ["10java_swift13JNILocalProxyC", "jclass"]
+- ["10java_swift13JNILocalProxyC", "jint"]
+- !private ["10java_swift13JNILocalProxyC", "localJavaObject"]
+- ["10java_swift13JNILocalProxyC", "proxyClass"]
+- ["10java_swift13JNILocalProxyC", "proxyClassName"]
+- ["10java_swift13JNILocalProxyC", "strdup"]
+- !private ["10java_swift13JNILocalProxyC", "swiftObject"]
+- ["10java_swift13JNILocalProxyC", "unsafeBitCast"]
+- !private ["10java_swift9JNIMethodC", "CallVoidMethod"]
+- ["SC19JNINativeInterface_V", "NewGlobalRef"]
+- ["SC19JNINativeInterface_V", "RegisterNatives"]
+- ["SC15JNINativeMethodV", "init"]
+- !private ["10java_swift9JNIObjectC", "JNIMethod"]
+- !private ["10java_swift9JNIObjectC", "JNIType"]
+- ["10java_swift9JNIObjectC", "PreferenceChangeEvent"]
+- !private ["10java_swift9JNIObjectC", "PreferenceChangeListenerForward"]
+- ["10java_swift9JNIObjectC", "PreferenceChangeListenerJNIClass"]
+- ["10java_swift9JNIObjectC", "init"]
+- !private ["10java_swift9JNIObjectC", "javaObject"]
+- ["10java_swift9JNIObjectC", "jclass"]
+- ["10java_swift9JNIObjectC", "jmethodID"]
+- !private ["10java_swift9JNIObjectC", "jobject"]
+- !private ["10java_swift9JNIObjectC", "jvalue"]
+- ["10java_swift9JNIObjectC", "preferenceChange"]
+- ["10java_swift9JNIObjectC", "preferenceChange_MethodID_2"]
+- !private ["10java_swift16JNIObjectForwardC", "JNIMethod"]
+- !private ["10java_swift16JNIObjectForwardC", "JNIType"]
+- ["10java_swift16JNIObjectForwardC", "PreferenceChangeEvent"]
+- !private ["10java_swift16JNIObjectForwardC", "PreferenceChangeListenerForward"]
+- ["10java_swift16JNIObjectForwardC", "PreferenceChangeListenerJNIClass"]
+- ["10java_swift16JNIObjectForwardC", "init"]
+- !private ["10java_swift16JNIObjectForwardC", "javaObject"]
+- ["10java_swift16JNIObjectForwardC", "jclass"]
+- ["10java_swift16JNIObjectForwardC", "jmethodID"]
+- !private ["10java_swift16JNIObjectForwardC", "jobject"]
+- !private ["10java_swift16JNIObjectForwardC", "jvalue"]
+- ["10java_swift16JNIObjectForwardC", "preferenceChange"]
+- ["10java_swift16JNIObjectForwardC", "preferenceChange_MethodID_2"]
+- !private ["10java_swift13JNIObjectInitP", "JNIMethod"]
+- !private ["10java_swift13JNIObjectInitP", "JNIType"]
+- !private ["10java_swift13JNIObjectInitP", "PreferenceChangeListenerForward"]
+- ["10java_swift13JNIObjectInitP", ""]
+- ["10java_swift13JNIObjectInitP", "init"]
+- !private ["10java_swift13JNIObjectInitP", "javaObject"]
+- !private ["10java_swift13JNIObjectInitP", "jobject"]
+- !private ["10java_swift13JNIObjectInitP", "jvalue"]
+- ["10java_swift13JNIObjectInitP", "preferenceChange"]
+- !private ["10java_swift13JNIObjectInitP", "preferenceChange_MethodID_2"]
+- ["10java_swift17JNIObjectProtocolP", "JNI"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIMethod"]
+- ["10java_swift17JNIObjectProtocolP", "JNINativeMethod"]
+- ["10java_swift17JNIObjectProtocolP", "JNIReleasableProxy__finalize_thunk"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIType"]
+- ["10java_swift17JNIObjectProtocolP", "JNI_OK"]
+- ["10java_swift17JNIObjectProtocolP", "PreferenceChangeEvent"]
+- !private ["10java_swift17JNIObjectProtocolP", "PreferenceChangeListenerForward"]
+- !private ["10java_swift17JNIObjectProtocolP", "PreferenceChangeListenerLocal_"]
+- ["10java_swift17JNIObjectProtocolP", "PreferenceChangeListener_preferenceChange_0"]
+- ["10java_swift17JNIObjectProtocolP", "UnsafeMutablePointer"]
+- ["10java_swift17JNIObjectProtocolP", "UnsafeMutableRawPointer"]
+- ["10java_swift17JNIObjectProtocolP", ""]
+- !private ["10java_swift17JNIObjectProtocolP", "_proxyClass"]
+- ["10java_swift17JNIObjectProtocolP", "init"]
+- !private ["10java_swift17JNIObjectProtocolP", "javaObject"]
+- ["10java_swift17JNIObjectProtocolP", "jint"]
+- ["10java_swift17JNIObjectProtocolP", "jobject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jvalue"]
+- ["10java_swift17JNIObjectProtocolP", "localJavaObject"]
+- ["10java_swift17JNIObjectProtocolP", "preferenceChange"]
+- !private ["10java_swift17JNIObjectProtocolP", "preferenceChange_MethodID_2"]
+- ["10java_swift17JNIObjectProtocolP", "proxyClassName"]
+- ["10java_swift17JNIObjectProtocolP", "strdup"]
+- !private ["10java_swift17JNIObjectProtocolP", "swiftObject"]
+- ["10java_swift17JNIObjectProtocolP", "unsafeBitCast"]
+- ["10java_swift18JNIReleasableProxyC", "JNI"]
+- ["10java_swift18JNIReleasableProxyC", "JNINativeMethod"]
+- ["10java_swift18JNIReleasableProxyC", "JNIReleasableProxy__finalize_thunk"]
+- ["10java_swift18JNIReleasableProxyC", "JNI_OK"]
+- ["10java_swift18JNIReleasableProxyC", "PreferenceChangeListener_preferenceChange_0"]
+- ["10java_swift18JNIReleasableProxyC", "PreferenceChangeListener_preferenceChange_0_type"]
+- ["10java_swift18JNIReleasableProxyC", "String"]
+- ["10java_swift18JNIReleasableProxyC", "UnsafeMutableRawPointer"]
+- ["10java_swift18JNIReleasableProxyC", "_proxyClass"]
+- ["10java_swift18JNIReleasableProxyC", "jclass"]
+- ["10java_swift18JNIReleasableProxyC", "jint"]
+- !private ["10java_swift18JNIReleasableProxyC", "localJavaObject"]
+- ["10java_swift18JNIReleasableProxyC", "proxyClass"]
+- ["10java_swift18JNIReleasableProxyC", "proxyClassName"]
+- ["10java_swift18JNIReleasableProxyC", "strdup"]
+- !private ["10java_swift18JNIReleasableProxyC", "swiftObject"]
+- ["10java_swift18JNIReleasableProxyC", "unsafeBitCast"]
+- !private ["10java_swift7JNITypeC", "toJava"]
+- !private ["10java_swift10JavaObjectC", "init"]
+- !private ["10java_swift12JavaProtocolP", "JNIMethod"]
+- !private ["10java_swift12JavaProtocolP", "JNIType"]
+- ["10java_swift12JavaProtocolP", "PreferenceChangeEvent"]
+- !private ["10java_swift12JavaProtocolP", "PreferenceChangeListenerForward"]
+- !private ["10java_swift12JavaProtocolP", "PreferenceChangeListenerLocal_"]
+- ["10java_swift12JavaProtocolP", "UnsafeMutablePointer"]
+- ["10java_swift12JavaProtocolP", ""]
+- !private ["10java_swift12JavaProtocolP", "init"]
+- !private ["10java_swift12JavaProtocolP", "javaObject"]
+- ["10java_swift12JavaProtocolP", "jobject"]
+- !private ["10java_swift12JavaProtocolP", "jvalue"]
+- ["10java_swift12JavaProtocolP", "localJavaObject"]
+- ["10java_swift12JavaProtocolP", "preferenceChange"]
+- !private ["10java_swift12JavaProtocolP", "preferenceChange_MethodID_2"]
+- ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["s17MutableCollectionP", "append"]
+- ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- ["s17MutableCollectionP", "withUnsafeBufferPointer"]
+- ["s7NumericP", "init"]
+- !private ["9java_util21PreferenceChangeEventC", "deinit"]
+- !private ["9java_util21PreferenceChangeEventC", "init"]
+- !private ["9java_util24PreferenceChangeListenerP", "JNIMethod"]
+- !private ["9java_util24PreferenceChangeListenerP", "JNIType"]
+- ["9java_util24PreferenceChangeListenerP", "PreferenceChangeEvent"]
+- !private ["9java_util24PreferenceChangeListenerP", "PreferenceChangeListenerForward"]
+- !private ["9java_util24PreferenceChangeListenerP", "PreferenceChangeListenerLocal_"]
+- ["9java_util24PreferenceChangeListenerP", "UnsafeMutablePointer"]
+- ["9java_util24PreferenceChangeListenerP", ""]
+- !private ["9java_util24PreferenceChangeListenerP", "javaObject"]
+- ["9java_util24PreferenceChangeListenerP", "jobject"]
+- !private ["9java_util24PreferenceChangeListenerP", "jvalue"]
+- ["9java_util24PreferenceChangeListenerP", "localJavaObject"]
+- ["9java_util24PreferenceChangeListenerP", "preferenceChange"]
+- !private ["9java_util24PreferenceChangeListenerP", "preferenceChange_MethodID_2"]
+- ["9java_util28PreferenceChangeListenerBaseC", "PreferenceChangeEvent"]
+- ["9java_util28PreferenceChangeListenerBaseC", "deinit"]
+- ["9java_util28PreferenceChangeListenerBaseC", "init"]
+- ["9java_util28PreferenceChangeListenerBaseC", "localJavaObject"]
+- ["9java_util28PreferenceChangeListenerBaseC", "preferenceChange"]
+- !private ["9java_util31PreferenceChangeListenerForwardC", "JNIMethod"]
+- !private ["9java_util31PreferenceChangeListenerForwardC", "JNIType"]
+- ["9java_util31PreferenceChangeListenerForwardC", "PreferenceChangeEvent"]
+- !private ["9java_util31PreferenceChangeListenerForwardC", "PreferenceChangeListenerForward"]
+- !private ["9java_util31PreferenceChangeListenerForwardC", "PreferenceChangeListenerJNIClass"]
+- ["9java_util31PreferenceChangeListenerForwardC", "deinit"]
+- ["9java_util31PreferenceChangeListenerForwardC", "init"]
+- !private ["9java_util31PreferenceChangeListenerForwardC", "javaObject"]
+- ["9java_util31PreferenceChangeListenerForwardC", "jclass"]
+- ["9java_util31PreferenceChangeListenerForwardC", "jmethodID"]
+- !private ["9java_util31PreferenceChangeListenerForwardC", "jobject"]
+- !private ["9java_util31PreferenceChangeListenerForwardC", "jvalue"]
+- ["9java_util31PreferenceChangeListenerForwardC", "preferenceChange"]
+- !private ["9java_util31PreferenceChangeListenerForwardC", "preferenceChange_MethodID_2"]
+- ["s22RandomAccessCollectionP", "append"]
+- ["s22RandomAccessCollectionP", "baseAddress"]
+- ["s22RandomAccessCollectionP", "count"]
+- ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- ["s22RandomAccessCollectionP", "withUnsafeBufferPointer"]
+- ["s26RangeReplaceableCollectionP", "append"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- ["s26RangeReplaceableCollectionP", "withUnsafeBufferPointer"]
+- ["s8SequenceP", "append"]
+- ["s8SequenceP", "baseAddress"]
+- ["s8SequenceP", "count"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- ["s8SequenceP", "withUnsafeBufferPointer"]
+- ["s13SignedIntegerP", "init"]
+- ["s13SignedNumericP", "init"]
+- ["s12StaticStringV", "init"]
+- ["s10StrideableP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["10java_swift19UnavailableProtocolP", "init"]
+- ["SR", "baseAddress"]
+- ["SR", "count"]
+- ["s14_ArrayProtocolP", "append"]
+- ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- ["s14_ArrayProtocolP", "withUnsafeBufferPointer"]
+- ["s18_BitwiseOperationsP", "init"]
+- ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- ["10Foundation13_CFBridgeableP", "append"]
+- ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- ["10Foundation13_CFBridgeableP", "withUnsafeBufferPointer"]
+- ["s24_DestructorSafeContainerP", "append"]
+- ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- ["s24_DestructorSafeContainerP", "withUnsafeBufferPointer"]
+- ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation13_NSBridgeableP", "append"]
+- ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- ["10Foundation13_NSBridgeableP", "withUnsafeBufferPointer"]
+- ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- ["10Foundation17_ObjectBridgeableP", "append"]
+- ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "subscript"]
+- ["10Foundation17_ObjectBridgeableP", "withUnsafeBufferPointer"]
+- ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- ["10Foundation21_ObjectTypeBridgeableP", "append"]
+- ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+- ["10Foundation21_ObjectTypeBridgeableP", "withUnsafeBufferPointer"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["SC6jvalueV", "init"]
+depends-nominal:
+- "Sa"
+- "s23BidirectionalCollectionP"
+- "s13BinaryIntegerP"
+- "Sb"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- "9java_util13EventListenerP"
+- "9java_util20EventListenerForwardC"
+- !private "9java_util11EventObjectC"
+- "s25ExpressibleByArrayLiteralP"
+- "s27ExpressibleByBooleanLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "s17FixedWidthIntegerP"
+- "s8HashableP"
+- "Si"
+- "10java_swift7JNICoreC"
+- "10java_swift13JNILocalProxyC"
+- !private "10java_swift9JNIMethodC"
+- "SC19JNINativeInterface_V"
+- "SC15JNINativeMethodV"
+- "10java_swift9JNIObjectC"
+- "10java_swift16JNIObjectForwardC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- "10java_swift18JNIReleasableProxyC"
+- !private "10java_swift7JNITypeC"
+- !private "10java_swift10JavaObjectC"
+- "10java_swift12JavaProtocolP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "s17MutableCollectionP"
+- "s7NumericP"
+- !private "9java_util21PreferenceChangeEventC"
+- "9java_util24PreferenceChangeListenerP"
+- "9java_util28PreferenceChangeListenerBaseC"
+- "9java_util31PreferenceChangeListenerForwardC"
+- "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s8SequenceP"
+- "s13SignedIntegerP"
+- "s13SignedNumericP"
+- "s12StaticStringV"
+- "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "10java_swift19UnavailableProtocolP"
+- "SR"
+- "s14_ArrayProtocolP"
+- "s18_BitwiseOperationsP"
+- "10Foundation13_CFBridgeableP"
+- "s24_DestructorSafeContainerP"
+- "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation13_NSBridgeableP"
+- "10Foundation17_ObjectBridgeableP"
+- "10Foundation21_ObjectTypeBridgeableP"
+- "s16_SwiftStringViewP"
+- !private "SC6jvalueV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "d2499c9c7c4a95cf7a0eb9d4f2333e83"

@@ -1,0 +1,134 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HCILETransmitterTest"
+provides-nominal:
+- "9Bluetooth20HCILETransmitterTestV"
+provides-member:
+- ["9Bluetooth0A23HostControllerInterfaceP", ""]
+- ["9Bluetooth20HCILETransmitterTestV", ""]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergyTransmitterTest"]
+depends-top-level:
+- !private "Array"
+- "AssignmentPrecedence"
+- "BluetoothHostControllerInterface"
+- "Data"
+- "HCICommandParameter"
+- "HCICommandTimeout"
+- "HCILETransmitterTest"
+- "HCILowEnergyCommand"
+- "LowEnergyPacketPayload"
+- "LowEnergyTxChannel"
+- "UInt8"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "HCICommandTimeout"]
+- !private ["9Bluetooth0A23HostControllerInterfaceP", "HCILETransmitterTest"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "LowEnergyPacketPayload"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "LowEnergyTxChannel"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "UInt8"]
+- !private ["9Bluetooth0A23HostControllerInterfaceP", "deviceRequest"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergyTransmitterTest"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "rawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "transmitterTest"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "default"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "rawValue"]
+- ["s9EquatableP", "transmitterTest"]
+- !private ["s27ExpressibleByIntegerLiteralP", "default"]
+- ["9Bluetooth10HCICommandP", "transmitterTest"]
+- !private ["9Bluetooth19HCICommandParameterP", "Data"]
+- ["9Bluetooth19HCICommandParameterP", "HCICommandType"]
+- ["9Bluetooth19HCICommandParameterP", "HCILowEnergyCommand"]
+- ["9Bluetooth19HCICommandParameterP", ""]
+- ["9Bluetooth19HCICommandParameterP", "_Default_HCICommandType"]
+- ["9Bluetooth19HCICommandParameterP", "command"]
+- ["9Bluetooth19HCICommandParameterP", "data"]
+- !private ["9Bluetooth19HCICommandParameterP", "init"]
+- !private ["9Bluetooth19HCICommandParameterP", "lengthOfTestData"]
+- !private ["9Bluetooth19HCICommandParameterP", "packetPayload"]
+- !private ["9Bluetooth19HCICommandParameterP", "txChannel"]
+- !private ["9Bluetooth17HCICommandTimeoutV", "default"]
+- ["9Bluetooth20HCILETransmitterTestV", "Data"]
+- ["9Bluetooth20HCILETransmitterTestV", "HCICommandType"]
+- ["9Bluetooth20HCILETransmitterTestV", "HCILowEnergyCommand"]
+- ["9Bluetooth20HCILETransmitterTestV", "LowEnergyPacketPayload"]
+- ["9Bluetooth20HCILETransmitterTestV", "LowEnergyTxChannel"]
+- ["9Bluetooth20HCILETransmitterTestV", "UInt8"]
+- ["9Bluetooth20HCILETransmitterTestV", "_Default_HCICommandType"]
+- ["9Bluetooth20HCILETransmitterTestV", "command"]
+- ["9Bluetooth20HCILETransmitterTestV", "data"]
+- ["9Bluetooth20HCILETransmitterTestV", "deinit"]
+- ["9Bluetooth20HCILETransmitterTestV", "init"]
+- ["9Bluetooth20HCILETransmitterTestV", "lengthOfTestData"]
+- ["9Bluetooth20HCILETransmitterTestV", "packetPayload"]
+- ["9Bluetooth20HCILETransmitterTestV", "txChannel"]
+- ["9Bluetooth19HCILowEnergyCommandO", "deinit"]
+- ["9Bluetooth19HCILowEnergyCommandO", "transmitterTest"]
+- !private ["s8HashableP", "default"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "rawValue"]
+- ["s8HashableP", "transmitterTest"]
+- !private ["9Bluetooth22LowEnergyPacketPayloadO", "deinit"]
+- !private ["9Bluetooth22LowEnergyPacketPayloadO", "rawValue"]
+- !private ["9Bluetooth18LowEnergyTxChannelV", "deinit"]
+- !private ["9Bluetooth18LowEnergyTxChannelV", "rawValue"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "default"]
+- !private ["s16RawRepresentableP", "rawValue"]
+- ["s16RawRepresentableP", "transmitterTest"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- "9Bluetooth0A23HostControllerInterfaceP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "9Bluetooth10HCICommandP"
+- "9Bluetooth19HCICommandParameterP"
+- !private "9Bluetooth17HCICommandTimeoutV"
+- "9Bluetooth20HCILETransmitterTestV"
+- "9Bluetooth19HCILowEnergyCommandO"
+- "s8HashableP"
+- !private "9Bluetooth22LowEnergyPacketPayloadO"
+- !private "9Bluetooth18LowEnergyTxChannelV"
+- !private "s17MutableCollectionP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "3491572869d4fc8be66c8f6f17248645"

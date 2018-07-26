@@ -1,0 +1,131 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GATTDescriptor"
+provides-nominal:
+- "9Bluetooth4GATTO24CharacteristicDescriptorO"
+- "9Bluetooth4GATTO24CharacteristicDescriptorO4UUIDO"
+- "9Bluetooth14GATTDescriptorP"
+provides-member:
+- ["9Bluetooth4GATTO", ""]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", ""]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO4UUIDO", ""]
+- ["9Bluetooth14GATTDescriptorP", ""]
+- ["9Bluetooth4GATTO", "CharacteristicDescriptor"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "ClientConfiguration"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "ExtendedProperties"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "ServerConfiguration"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "AggegateFormat"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "Format"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "UserDescription"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "ReportReference"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "TimeTriggerSetting"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "ExternalReportReference"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "NumberOfDigitals"]
+depends-top-level:
+- "BluetoothUUID"
+- "Data"
+- "GATT"
+- "GATTAggregateFormatDescriptor"
+- "GATTCharacteristicExtendedProperties"
+- "GATTClientCharacteristicConfiguration"
+- "GATTDescriptor"
+- "GATTExternalReportReference"
+- "GATTFormatDescriptor"
+- "GATTNumberOfDigitals"
+- "GATTReportReference"
+- "GATTServerCharacteristicConfiguration"
+- "GATTTimeTriggerSetting"
+- "GATTUserDescription"
+depends-member:
+- !private ["9Bluetooth0A4UUIDO", "characteristicAggregateFormat"]
+- !private ["9Bluetooth0A4UUIDO", "characteristicExtendedProperties"]
+- !private ["9Bluetooth0A4UUIDO", "characteristicFormat"]
+- !private ["9Bluetooth0A4UUIDO", "characteristicUserDescription"]
+- !private ["9Bluetooth0A4UUIDO", "clientCharacteristicConfiguration"]
+- !private ["9Bluetooth0A4UUIDO", "serverCharacteristicConfiguration"]
+- !private ["9Bluetooth8ByteSwapP", "characteristicAggregateFormat"]
+- !private ["9Bluetooth8ByteSwapP", "characteristicExtendedProperties"]
+- !private ["9Bluetooth8ByteSwapP", "characteristicFormat"]
+- !private ["9Bluetooth8ByteSwapP", "characteristicUserDescription"]
+- !private ["9Bluetooth8ByteSwapP", "clientCharacteristicConfiguration"]
+- !private ["9Bluetooth8ByteSwapP", "serverCharacteristicConfiguration"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "AggegateFormat"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "BluetoothUUID"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "ClientConfiguration"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "ExtendedProperties"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "ExternalReportReference"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "Format"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "GATTAggregateFormatDescriptor"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "GATTCharacteristicExtendedProperties"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "GATTClientCharacteristicConfiguration"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "GATTExternalReportReference"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "GATTFormatDescriptor"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "GATTNumberOfDigitals"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "GATTReportReference"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "GATTServerCharacteristicConfiguration"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "GATTTimeTriggerSetting"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "GATTUserDescription"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "NumberOfDigitals"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "ReportReference"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "ServerConfiguration"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "TimeTriggerSetting"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "UUID"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO", "UserDescription"]
+- !private ["s23CustomStringConvertibleP", "characteristicAggregateFormat"]
+- !private ["s23CustomStringConvertibleP", "characteristicExtendedProperties"]
+- !private ["s23CustomStringConvertibleP", "characteristicFormat"]
+- !private ["s23CustomStringConvertibleP", "characteristicUserDescription"]
+- !private ["s23CustomStringConvertibleP", "clientCharacteristicConfiguration"]
+- !private ["s23CustomStringConvertibleP", "serverCharacteristicConfiguration"]
+- !private ["s9EquatableP", "characteristicAggregateFormat"]
+- !private ["s9EquatableP", "characteristicExtendedProperties"]
+- !private ["s9EquatableP", "characteristicFormat"]
+- !private ["s9EquatableP", "characteristicUserDescription"]
+- !private ["s9EquatableP", "clientCharacteristicConfiguration"]
+- !private ["s9EquatableP", "serverCharacteristicConfiguration"]
+- ["9Bluetooth4GATTO", "BluetoothUUID"]
+- ["9Bluetooth4GATTO", "CharacteristicDescriptor"]
+- ["9Bluetooth14GATTDescriptorP", "BluetoothUUID"]
+- ["9Bluetooth14GATTDescriptorP", "Data"]
+- ["9Bluetooth14GATTDescriptorP", "data"]
+- ["9Bluetooth14GATTDescriptorP", "init"]
+- ["9Bluetooth14GATTDescriptorP", "uuid"]
+- !private ["s8HashableP", "characteristicAggregateFormat"]
+- !private ["s8HashableP", "characteristicExtendedProperties"]
+- !private ["s8HashableP", "characteristicFormat"]
+- !private ["s8HashableP", "characteristicUserDescription"]
+- !private ["s8HashableP", "clientCharacteristicConfiguration"]
+- !private ["s8HashableP", "serverCharacteristicConfiguration"]
+- !private ["s16RawRepresentableP", "characteristicAggregateFormat"]
+- !private ["s16RawRepresentableP", "characteristicExtendedProperties"]
+- !private ["s16RawRepresentableP", "characteristicFormat"]
+- !private ["s16RawRepresentableP", "characteristicUserDescription"]
+- !private ["s16RawRepresentableP", "clientCharacteristicConfiguration"]
+- !private ["s16RawRepresentableP", "serverCharacteristicConfiguration"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO4UUIDO", "BluetoothUUID"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO4UUIDO", "aggregateFormat"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO4UUIDO", "clientConfiguration"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO4UUIDO", "extendedProperties"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO4UUIDO", "format"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO4UUIDO", "serverConfiguration"]
+- ["9Bluetooth4GATTO24CharacteristicDescriptorO4UUIDO", "userDescription"]
+depends-nominal:
+- !private "9Bluetooth0A4UUIDO"
+- !private "9Bluetooth8ByteSwapP"
+- "9Bluetooth4GATTO24CharacteristicDescriptorO"
+- !private "s23CustomStringConvertibleP"
+- !private "s9EquatableP"
+- "9Bluetooth4GATTO"
+- "9Bluetooth14GATTDescriptorP"
+- !private "s8HashableP"
+- !private "s16RawRepresentableP"
+- "9Bluetooth4GATTO24CharacteristicDescriptorO4UUIDO"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "8dec575ff23371c4d22ded21fc779801"

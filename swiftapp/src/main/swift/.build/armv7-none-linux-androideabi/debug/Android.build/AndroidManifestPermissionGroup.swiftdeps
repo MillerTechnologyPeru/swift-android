@@ -1,0 +1,270 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AndroidManifestPermissionGroup"
+provides-nominal:
+- "7Android0A23ManifestPermissionGroupV"
+provides-member:
+- ["7AndroidAAO", ""]
+- ["7Android0A23ManifestPermissionGroupV", ""]
+- ["7AndroidAAO", "ManifestPermissionGroup"]
+depends-top-level:
+- "Android"
+- "AndroidManifestPermissionGroup"
+- "AndroidManifestPermissionGroupConstants"
+- "AssignmentPrecedence"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- !private "JNI"
+- !private "JNIField"
+- !private "JNIMethod"
+- "JavaObject"
+- "StaticString"
+- "String"
+- "StringLiteralType"
+- "java_swift"
+- "jclass"
+- "jfieldID"
+- "jmethodID"
+- "jobject"
+- !private "jvalue"
+depends-member:
+- ["7AndroidAAO", "AndroidManifestPermissionGroup"]
+- ["7AndroidAAO", "ManifestPermissionGroup"]
+- ["7Android0A23ManifestPermissionGroupV", "Android"]
+- ["7Android0A23ManifestPermissionGroupV", "AndroidManifestPermissionGroupConstants"]
+- ["7Android0A23ManifestPermissionGroupV", "String"]
+- ["7Android0A23ManifestPermissionGroupV", "calendar"]
+- ["7Android0A23ManifestPermissionGroupV", "callLog"]
+- ["7Android0A23ManifestPermissionGroupV", "camera"]
+- ["7Android0A23ManifestPermissionGroupV", "contacts"]
+- ["7Android0A23ManifestPermissionGroupV", "init"]
+- ["7Android0A23ManifestPermissionGroupV", "location"]
+- ["7Android0A23ManifestPermissionGroupV", "microphone"]
+- ["7Android0A23ManifestPermissionGroupV", "phone"]
+- ["7Android0A23ManifestPermissionGroupV", "rawValue"]
+- ["7Android0A23ManifestPermissionGroupV", "sensors"]
+- ["7Android0A23ManifestPermissionGroupV", "sms"]
+- ["7Android0A23ManifestPermissionGroupV", "storage"]
+- !private ["Sa", "init"]
+- ["s23BidirectionalCollectionP", "init"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s9DecodableP", "init"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV7FieldIDV", "CALENDAR"]
+- ["7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV7FieldIDV", "CALL_LOG"]
+- ["7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV7FieldIDV", "CAMERA"]
+- ["7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV7FieldIDV", "CONTACTS"]
+- ["7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV7FieldIDV", "LOCATION"]
+- ["7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV7FieldIDV", "MICROPHONE"]
+- ["7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV7FieldIDV", "PHONE"]
+- ["7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV7FieldIDV", "SENSORS"]
+- ["7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV7FieldIDV", "SMS"]
+- ["7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV7FieldIDV", "STORAGE"]
+- ["7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV7FieldIDV", "init"]
+- ["7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV7FieldIDV", "jfieldID"]
+- ["s8HashableP", "init"]
+- !private ["10java_swift7JNICoreC", "DeleteLocalRef"]
+- !private ["10java_swift8JNIFieldC", "GetStaticObjectField"]
+- !private ["10java_swift9JNIMethodC", "NewObject"]
+- ["10java_swift9JNIObjectC", "CALENDAR"]
+- ["10java_swift9JNIObjectC", "CALL_LOG"]
+- ["10java_swift9JNIObjectC", "CAMERA"]
+- ["10java_swift9JNIObjectC", "CONTACTS"]
+- ["10java_swift9JNIObjectC", "Int"]
+- !private ["10java_swift9JNIObjectC", "JNI"]
+- !private ["10java_swift9JNIObjectC", "JNICache"]
+- !private ["10java_swift9JNIObjectC", "JNIField"]
+- !private ["10java_swift9JNIObjectC", "JNIMethod"]
+- ["10java_swift9JNIObjectC", "LOCATION"]
+- ["10java_swift9JNIObjectC", "MICROPHONE"]
+- ["10java_swift9JNIObjectC", "PHONE"]
+- ["10java_swift9JNIObjectC", "SENSORS"]
+- ["10java_swift9JNIObjectC", "SMS"]
+- ["10java_swift9JNIObjectC", "STORAGE"]
+- ["10java_swift9JNIObjectC", "StaticString"]
+- ["10java_swift9JNIObjectC", "String"]
+- ["10java_swift9JNIObjectC", "init"]
+- !private ["10java_swift9JNIObjectC", "javaObject"]
+- ["10java_swift9JNIObjectC", "java_swift"]
+- ["10java_swift9JNIObjectC", "jclass"]
+- ["10java_swift9JNIObjectC", "jfieldID"]
+- ["10java_swift9JNIObjectC", "jmethodID"]
+- ["10java_swift9JNIObjectC", "jobject"]
+- !private ["10java_swift9JNIObjectC", "jvalue"]
+- !private ["10java_swift9JNIObjectC", "withJavaObject"]
+- ["10java_swift13JNIObjectInitP", "CALENDAR"]
+- ["10java_swift13JNIObjectInitP", "CALL_LOG"]
+- ["10java_swift13JNIObjectInitP", "CAMERA"]
+- ["10java_swift13JNIObjectInitP", "CONTACTS"]
+- !private ["10java_swift13JNIObjectInitP", "JNI"]
+- !private ["10java_swift13JNIObjectInitP", "JNICache"]
+- !private ["10java_swift13JNIObjectInitP", "JNIField"]
+- !private ["10java_swift13JNIObjectInitP", "JNIMethod"]
+- ["10java_swift13JNIObjectInitP", "LOCATION"]
+- ["10java_swift13JNIObjectInitP", "MICROPHONE"]
+- ["10java_swift13JNIObjectInitP", "PHONE"]
+- ["10java_swift13JNIObjectInitP", "SENSORS"]
+- ["10java_swift13JNIObjectInitP", "SMS"]
+- ["10java_swift13JNIObjectInitP", "STORAGE"]
+- !private ["10java_swift13JNIObjectInitP", "String"]
+- !private ["10java_swift13JNIObjectInitP", ""]
+- ["10java_swift13JNIObjectInitP", "init"]
+- !private ["10java_swift13JNIObjectInitP", "javaObject"]
+- !private ["10java_swift13JNIObjectInitP", "jobject"]
+- !private ["10java_swift13JNIObjectInitP", "jvalue"]
+- !private ["10java_swift13JNIObjectInitP", "withJavaObject"]
+- ["10java_swift17JNIObjectProtocolP", "CALENDAR"]
+- ["10java_swift17JNIObjectProtocolP", "CALL_LOG"]
+- ["10java_swift17JNIObjectProtocolP", "CAMERA"]
+- ["10java_swift17JNIObjectProtocolP", "CONTACTS"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNICache"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIField"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIMethod"]
+- ["10java_swift17JNIObjectProtocolP", "LOCATION"]
+- ["10java_swift17JNIObjectProtocolP", "MICROPHONE"]
+- ["10java_swift17JNIObjectProtocolP", "PHONE"]
+- ["10java_swift17JNIObjectProtocolP", "SENSORS"]
+- ["10java_swift17JNIObjectProtocolP", "SMS"]
+- ["10java_swift17JNIObjectProtocolP", "STORAGE"]
+- !private ["10java_swift17JNIObjectProtocolP", "String"]
+- !private ["10java_swift17JNIObjectProtocolP", ""]
+- ["10java_swift17JNIObjectProtocolP", "init"]
+- !private ["10java_swift17JNIObjectProtocolP", "javaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jobject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jvalue"]
+- !private ["10java_swift17JNIObjectProtocolP", "withJavaObject"]
+- ["10java_swift10JavaObjectC", "CALENDAR"]
+- ["10java_swift10JavaObjectC", "CALL_LOG"]
+- ["10java_swift10JavaObjectC", "CAMERA"]
+- ["10java_swift10JavaObjectC", "CONTACTS"]
+- ["10java_swift10JavaObjectC", "Int"]
+- !private ["10java_swift10JavaObjectC", "JNI"]
+- !private ["10java_swift10JavaObjectC", "JNICache"]
+- !private ["10java_swift10JavaObjectC", "JNIField"]
+- !private ["10java_swift10JavaObjectC", "JNIMethod"]
+- ["10java_swift10JavaObjectC", "LOCATION"]
+- ["10java_swift10JavaObjectC", "MICROPHONE"]
+- ["10java_swift10JavaObjectC", "PHONE"]
+- ["10java_swift10JavaObjectC", "SENSORS"]
+- ["10java_swift10JavaObjectC", "SMS"]
+- ["10java_swift10JavaObjectC", "STORAGE"]
+- ["10java_swift10JavaObjectC", "StaticString"]
+- ["10java_swift10JavaObjectC", "String"]
+- !private ["10java_swift10JavaObjectC", ""]
+- ["10java_swift10JavaObjectC", "init"]
+- !private ["10java_swift10JavaObjectC", "javaObject"]
+- ["10java_swift10JavaObjectC", "java_swift"]
+- ["10java_swift10JavaObjectC", "jclass"]
+- ["10java_swift10JavaObjectC", "jfieldID"]
+- ["10java_swift10JavaObjectC", "jmethodID"]
+- ["10java_swift10JavaObjectC", "jobject"]
+- !private ["10java_swift10JavaObjectC", "jvalue"]
+- !private ["10java_swift10JavaObjectC", "withJavaObject"]
+- ["7Android11JavaPackageP", "ManifestPermissionGroup"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV8MethodIDV", "init"]
+- ["7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV8MethodIDV", "init_method1"]
+- ["7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV8MethodIDV", "jmethodID"]
+- ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["s8SequenceP", "init"]
+- !private ["s12StaticStringV", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "init"]
+- ["10Foundation13_CFBridgeableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation13_NSBridgeableP", "init"]
+- ["10Foundation17_ObjectBridgeableP", "init"]
+- ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["SC6jvalueV", "init"]
+depends-nominal:
+- "7AndroidAAO"
+- "7Android0A23ManifestPermissionGroupV"
+- !private "Sa"
+- "s23BidirectionalCollectionP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV7FieldIDV"
+- "s8HashableP"
+- !private "10java_swift7JNICoreC"
+- !private "10java_swift8JNIFieldC"
+- !private "10java_swift9JNIMethodC"
+- "10java_swift9JNIObjectC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- "10java_swift10JavaObjectC"
+- "7Android11JavaPackageP"
+- "s25LosslessStringConvertibleP"
+- "7Android0A32ManifestPermissionGroupConstants33_6A17B61C6E654636FC4C79AAA234ADEELLC8JNICacheV8MethodIDV"
+- "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s8SequenceP"
+- !private "s12StaticStringV"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "s14_ArrayProtocolP"
+- "10Foundation13_CFBridgeableP"
+- !private "s24_DestructorSafeContainerP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation13_NSBridgeableP"
+- "10Foundation17_ObjectBridgeableP"
+- "10Foundation21_ObjectTypeBridgeableP"
+- "s16_SwiftStringViewP"
+- !private "SC6jvalueV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/JNI.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Bluetooth.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_util.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "e9374a2eca5db54f55cdd5a0ead4f114"

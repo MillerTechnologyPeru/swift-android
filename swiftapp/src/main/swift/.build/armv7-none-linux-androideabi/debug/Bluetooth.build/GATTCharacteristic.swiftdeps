@@ -1,0 +1,371 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GATTCharacteristic"
+- "GATTBeatsPerMinute"
+- "GATTBatteryPercentage"
+- "GATTE2ecrc"
+- "GATTKilogramCalorie"
+- "=="
+- "=="
+- "=="
+- "=="
+- "=="
+provides-nominal:
+- "9Bluetooth18GATTCharacteristicP"
+- "9Bluetooth18GATTBeatsPerMinuteO"
+- "9Bluetooth18GATTBeatsPerMinuteO4ByteV"
+- "9Bluetooth21GATTBatteryPercentageV"
+- "9Bluetooth10GATTE2ecrcV"
+- "9Bluetooth19GATTKilogramCalorieO"
+- "9Bluetooth19GATTKilogramCalorieO4ByteV"
+- "9Bluetooth19GATTKilogramCalorieO6Bits16V"
+provides-member:
+- ["9Bluetooth18GATTCharacteristicP", ""]
+- ["9Bluetooth18GATTBeatsPerMinuteO", ""]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", ""]
+- ["9Bluetooth21GATTBatteryPercentageV", ""]
+- ["9Bluetooth10GATTE2ecrcV", ""]
+- ["9Bluetooth19GATTKilogramCalorieO", ""]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", ""]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", ""]
+depends-top-level:
+- !private "<="
+- "=="
+- !private ">="
+- "AssignmentPrecedence"
+- "BluetoothUUID"
+- "BluetoothUnit"
+- "Bool"
+- "CustomStringConvertible"
+- "Data"
+- "Equatable"
+- "ExpressibleByIntegerLiteral"
+- "FloatLiteralType"
+- "GATTBatteryPercentage"
+- "GATTBeatsPerMinute"
+- "GATTCharacteristic"
+- "GATTE2ecrc"
+- "GATTKilogramCalorie"
+- "IntegerLiteralType"
+- "MemoryLayout"
+- "RawRepresentable"
+- "String"
+- !private "StringLiteralType"
+- "UInt16"
+- "UInt8"
+- !private "UnicodeScalarType"
+- "UnitIdentifier"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s13BinaryIntegerP", "description"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "=="]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "Bool"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "GATTKilogramCalorie"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "IntegerLiteralType"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "MemoryLayout"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "RawValue"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "String"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "UInt16"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "UnitIdentifier"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "_Default_IntegerLiteralType"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "_Default_RawValue"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "deinit"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "description"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "init"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "length"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "rawValue"]
+- ["9Bluetooth19GATTKilogramCalorieO6Bits16V", "unitType"]
+- ["9Bluetooth0A4UnitP", "GATTBatteryPercentage"]
+- ["9Bluetooth0A4UnitP", "IntegerLiteralType"]
+- ["9Bluetooth0A4UnitP", "MemoryLayout"]
+- ["9Bluetooth0A4UnitP", "RawValue"]
+- ["9Bluetooth0A4UnitP", ""]
+- ["9Bluetooth0A4UnitP", "_Default_IntegerLiteralType"]
+- ["9Bluetooth0A4UnitP", "_Default_RawValue"]
+- ["9Bluetooth0A4UnitP", "description"]
+- ["9Bluetooth0A4UnitP", "init"]
+- !private ["9Bluetooth0A4UnitP", "max"]
+- !private ["9Bluetooth0A4UnitP", "min"]
+- ["9Bluetooth0A4UnitP", "rawValue"]
+- ["9Bluetooth0A4UnitP", "unitType"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "=="]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "Bool"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "GATTBeatsPerMinute"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "IntegerLiteralType"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "MemoryLayout"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "RawValue"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "String"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "UInt8"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "UnitIdentifier"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "_Default_IntegerLiteralType"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "_Default_RawValue"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "deinit"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "description"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "init"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "length"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "rawValue"]
+- ["9Bluetooth18GATTBeatsPerMinuteO4ByteV", "unitType"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "=="]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "Bool"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "GATTKilogramCalorie"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "IntegerLiteralType"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "MemoryLayout"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "RawValue"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "String"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "UInt8"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "UnitIdentifier"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "_Default_IntegerLiteralType"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "_Default_RawValue"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "deinit"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "description"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "init"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "length"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "rawValue"]
+- ["9Bluetooth19GATTKilogramCalorieO4ByteV", "unitType"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "description"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "description"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "description"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "description"]
+- !private ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "GATTBatteryPercentage"]
+- ["s23CustomStringConvertibleP", "IntegerLiteralType"]
+- ["s23CustomStringConvertibleP", "MemoryLayout"]
+- ["s23CustomStringConvertibleP", "RawValue"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "_Default_IntegerLiteralType"]
+- ["s23CustomStringConvertibleP", "_Default_RawValue"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "beatsPerMinute"]
+- ["s23CustomStringConvertibleP", "description"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "kilogramCalorie"]
+- !private ["s23CustomStringConvertibleP", "max"]
+- !private ["s23CustomStringConvertibleP", "min"]
+- !private ["s23CustomStringConvertibleP", "percentage"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- ["s23CustomStringConvertibleP", "unitType"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "description"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "description"]
+- !private ["s9EncodableP", "init"]
+- ["s9EquatableP", "GATTBatteryPercentage"]
+- ["s9EquatableP", "IntegerLiteralType"]
+- ["s9EquatableP", "MemoryLayout"]
+- ["s9EquatableP", "RawValue"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_IntegerLiteralType"]
+- ["s9EquatableP", "_Default_RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "beatsPerMinute"]
+- ["s9EquatableP", "description"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "kilogramCalorie"]
+- !private ["s9EquatableP", "max"]
+- !private ["s9EquatableP", "min"]
+- !private ["s9EquatableP", "percentage"]
+- ["s9EquatableP", "rawValue"]
+- ["s9EquatableP", "unitType"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
+- ["s27ExpressibleByIntegerLiteralP", "MemoryLayout"]
+- ["s27ExpressibleByIntegerLiteralP", "RawValue"]
+- ["s27ExpressibleByIntegerLiteralP", ""]
+- ["s27ExpressibleByIntegerLiteralP", "_Default_IntegerLiteralType"]
+- ["s27ExpressibleByIntegerLiteralP", "_Default_RawValue"]
+- !private ["s27ExpressibleByIntegerLiteralP", "beatsPerMinute"]
+- ["s27ExpressibleByIntegerLiteralP", "description"]
+- ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "kilogramCalorie"]
+- !private ["s27ExpressibleByIntegerLiteralP", "percentage"]
+- ["s27ExpressibleByIntegerLiteralP", "rawValue"]
+- ["s27ExpressibleByIntegerLiteralP", "unitType"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "description"]
+- ["9Bluetooth21GATTBatteryPercentageV", "=="]
+- ["9Bluetooth21GATTBatteryPercentageV", "Bool"]
+- ["9Bluetooth21GATTBatteryPercentageV", "GATTBatteryPercentage"]
+- ["9Bluetooth21GATTBatteryPercentageV", "MemoryLayout"]
+- ["9Bluetooth21GATTBatteryPercentageV", "RawValue"]
+- ["9Bluetooth21GATTBatteryPercentageV", "String"]
+- ["9Bluetooth21GATTBatteryPercentageV", "UInt8"]
+- ["9Bluetooth21GATTBatteryPercentageV", "UnitIdentifier"]
+- ["9Bluetooth21GATTBatteryPercentageV", "_Default_RawValue"]
+- ["9Bluetooth21GATTBatteryPercentageV", "deinit"]
+- ["9Bluetooth21GATTBatteryPercentageV", "description"]
+- ["9Bluetooth21GATTBatteryPercentageV", "init"]
+- ["9Bluetooth21GATTBatteryPercentageV", "length"]
+- ["9Bluetooth21GATTBatteryPercentageV", "max"]
+- ["9Bluetooth21GATTBatteryPercentageV", "min"]
+- ["9Bluetooth21GATTBatteryPercentageV", "rawValue"]
+- ["9Bluetooth21GATTBatteryPercentageV", "unitType"]
+- ["9Bluetooth18GATTBeatsPerMinuteO", "BluetoothUnit"]
+- ["9Bluetooth18GATTBeatsPerMinuteO", "Byte"]
+- ["9Bluetooth18GATTBeatsPerMinuteO", "MemoryLayout"]
+- ["9Bluetooth18GATTBeatsPerMinuteO", "UInt8"]
+- ["9Bluetooth18GATTBeatsPerMinuteO", "UnitIdentifier"]
+- ["9Bluetooth18GATTCharacteristicP", "BluetoothUUID"]
+- ["9Bluetooth18GATTCharacteristicP", "Data"]
+- ["9Bluetooth18GATTCharacteristicP", "data"]
+- ["9Bluetooth18GATTCharacteristicP", "init"]
+- ["9Bluetooth18GATTCharacteristicP", "uuid"]
+- ["9Bluetooth10GATTE2ecrcV", "=="]
+- ["9Bluetooth10GATTE2ecrcV", "Bool"]
+- ["9Bluetooth10GATTE2ecrcV", "GATTE2ecrc"]
+- ["9Bluetooth10GATTE2ecrcV", "IntegerLiteralType"]
+- ["9Bluetooth10GATTE2ecrcV", "MemoryLayout"]
+- ["9Bluetooth10GATTE2ecrcV", "RawValue"]
+- ["9Bluetooth10GATTE2ecrcV", "String"]
+- ["9Bluetooth10GATTE2ecrcV", "UInt16"]
+- ["9Bluetooth10GATTE2ecrcV", "_Default_IntegerLiteralType"]
+- ["9Bluetooth10GATTE2ecrcV", "_Default_RawValue"]
+- ["9Bluetooth10GATTE2ecrcV", "deinit"]
+- ["9Bluetooth10GATTE2ecrcV", "description"]
+- ["9Bluetooth10GATTE2ecrcV", "init"]
+- ["9Bluetooth10GATTE2ecrcV", "length"]
+- ["9Bluetooth10GATTE2ecrcV", "rawValue"]
+- ["9Bluetooth19GATTKilogramCalorieO", "Bits16"]
+- ["9Bluetooth19GATTKilogramCalorieO", "BluetoothUnit"]
+- ["9Bluetooth19GATTKilogramCalorieO", "Byte"]
+- ["9Bluetooth19GATTKilogramCalorieO", "MemoryLayout"]
+- ["9Bluetooth19GATTKilogramCalorieO", "UInt16"]
+- ["9Bluetooth19GATTKilogramCalorieO", "UInt8"]
+- ["9Bluetooth19GATTKilogramCalorieO", "UnitIdentifier"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "beatsPerMinute"]
+- !private ["s8HashableP", "description"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "kilogramCalorie"]
+- !private ["s8HashableP", "percentage"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "description"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- ["s12MemoryLayoutO", "size"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s7NumericP", "description"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- ["s16RawRepresentableP", "GATTBatteryPercentage"]
+- ["s16RawRepresentableP", "IntegerLiteralType"]
+- ["s16RawRepresentableP", "MemoryLayout"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_IntegerLiteralType"]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- !private ["s16RawRepresentableP", "beatsPerMinute"]
+- ["s16RawRepresentableP", "description"]
+- ["s16RawRepresentableP", "init"]
+- !private ["s16RawRepresentableP", "kilogramCalorie"]
+- !private ["s16RawRepresentableP", "max"]
+- !private ["s16RawRepresentableP", "min"]
+- !private ["s16RawRepresentableP", "percentage"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s16RawRepresentableP", "unitType"]
+- !private ["s8SequenceP", "init"]
+- !private ["s10StrideableP", "description"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s5UInt8V", "description"]
+- !private ["9Bluetooth14UnitIdentifierV", "beatsPerMinute"]
+- !private ["9Bluetooth14UnitIdentifierV", "kilogramCalorie"]
+- !private ["9Bluetooth14UnitIdentifierV", "percentage"]
+- !private ["s15UnsignedIntegerP", "description"]
+- !private ["s18_BitwiseOperationsP", "description"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "description"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "description"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "description"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["s14_StringElementP", "description"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- "9Bluetooth19GATTKilogramCalorieO6Bits16V"
+- "9Bluetooth0A4UnitP"
+- !private "Sb"
+- "9Bluetooth18GATTBeatsPerMinuteO4ByteV"
+- "9Bluetooth19GATTKilogramCalorieO4ByteV"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "9Bluetooth21GATTBatteryPercentageV"
+- "9Bluetooth18GATTBeatsPerMinuteO"
+- "9Bluetooth18GATTCharacteristicP"
+- "9Bluetooth10GATTE2ecrcV"
+- "9Bluetooth19GATTKilogramCalorieO"
+- !private "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- "s12MemoryLayoutO"
+- !private "s10MirrorPathP"
+- !private "s7NumericP"
+- !private "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "s8SequenceP"
+- !private "s10StrideableP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s5UInt8V"
+- !private "9Bluetooth14UnitIdentifierV"
+- !private "s15UnsignedIntegerP"
+- !private "s18_BitwiseOperationsP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+- !private "s14_StringElementP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "6c1dea67ae88816aa6a80ca842460a82"

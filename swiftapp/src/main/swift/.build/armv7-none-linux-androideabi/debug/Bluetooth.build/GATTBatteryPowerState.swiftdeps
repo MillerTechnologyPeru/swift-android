@@ -1,0 +1,325 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GATTBatteryPowerState"
+- "=="
+provides-nominal:
+- "9Bluetooth21GATTBatteryPowerStateV"
+- "9Bluetooth21GATTBatteryPowerStateV014BatteryPresentD0O"
+- "9Bluetooth21GATTBatteryPowerStateV016BatteryDischargeD0O"
+- "9Bluetooth21GATTBatteryPowerStateV013BatteryChargeD0O"
+- "9Bluetooth21GATTBatteryPowerStateV012BatteryLevelD0O"
+provides-member:
+- ["9Bluetooth21GATTBatteryPowerStateV", ""]
+- ["9Bluetooth21GATTBatteryPowerStateV014BatteryPresentD0O", ""]
+- ["9Bluetooth21GATTBatteryPowerStateV016BatteryDischargeD0O", ""]
+- ["9Bluetooth21GATTBatteryPowerStateV013BatteryChargeD0O", ""]
+- ["9Bluetooth21GATTBatteryPowerStateV012BatteryLevelD0O", ""]
+- ["9Bluetooth21GATTBatteryPowerStateV", "BatteryPresentState"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "BatteryDischargeState"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "BatteryChargeState"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "BatteryLevelState"]
+depends-top-level:
+- !private "&&"
+- "=="
+- !private "Array"
+- "AssignmentPrecedence"
+- "BluetoothUUID"
+- "Bool"
+- "Data"
+- "Equatable"
+- "FloatLiteralType"
+- "GATTBatteryPowerState"
+- "GATTCharacteristic"
+- "IntegerLiteralType"
+- "MemoryLayout"
+- "UInt8"
+- !private "~="
+depends-member:
+- ["9Bluetooth21GATTBatteryPowerStateV013BatteryChargeD0O", "BatteryChargeState"]
+- ["9Bluetooth21GATTBatteryPowerStateV013BatteryChargeD0O", "RawValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV013BatteryChargeD0O", "_Default_RawValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV013BatteryChargeD0O", "charging"]
+- ["9Bluetooth21GATTBatteryPowerStateV013BatteryChargeD0O", "deinit"]
+- ["9Bluetooth21GATTBatteryPowerStateV013BatteryChargeD0O", "hashValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV013BatteryChargeD0O", "init"]
+- ["9Bluetooth21GATTBatteryPowerStateV013BatteryChargeD0O", "notChargeable"]
+- ["9Bluetooth21GATTBatteryPowerStateV013BatteryChargeD0O", "notCharging"]
+- ["9Bluetooth21GATTBatteryPowerStateV013BatteryChargeD0O", "notSupported"]
+- ["9Bluetooth21GATTBatteryPowerStateV013BatteryChargeD0O", "rawValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV013BatteryChargeD0O", "unknown"]
+- ["9Bluetooth21GATTBatteryPowerStateV016BatteryDischargeD0O", "RawValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV016BatteryDischargeD0O", "_Default_RawValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV016BatteryDischargeD0O", "deinit"]
+- ["9Bluetooth21GATTBatteryPowerStateV016BatteryDischargeD0O", "discharging"]
+- ["9Bluetooth21GATTBatteryPowerStateV016BatteryDischargeD0O", "hashValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV016BatteryDischargeD0O", "init"]
+- ["9Bluetooth21GATTBatteryPowerStateV016BatteryDischargeD0O", "notDischarging"]
+- ["9Bluetooth21GATTBatteryPowerStateV016BatteryDischargeD0O", "notSupported"]
+- ["9Bluetooth21GATTBatteryPowerStateV016BatteryDischargeD0O", "rawValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV016BatteryDischargeD0O", "unknown"]
+- ["9Bluetooth21GATTBatteryPowerStateV012BatteryLevelD0O", "RawValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV012BatteryLevelD0O", "_Default_RawValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV012BatteryLevelD0O", "criticallyLow"]
+- ["9Bluetooth21GATTBatteryPowerStateV012BatteryLevelD0O", "deinit"]
+- ["9Bluetooth21GATTBatteryPowerStateV012BatteryLevelD0O", "good"]
+- ["9Bluetooth21GATTBatteryPowerStateV012BatteryLevelD0O", "hashValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV012BatteryLevelD0O", "init"]
+- ["9Bluetooth21GATTBatteryPowerStateV012BatteryLevelD0O", "notSupported"]
+- ["9Bluetooth21GATTBatteryPowerStateV012BatteryLevelD0O", "rawValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV012BatteryLevelD0O", "unknown"]
+- ["9Bluetooth21GATTBatteryPowerStateV014BatteryPresentD0O", "RawValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV014BatteryPresentD0O", "_Default_RawValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV014BatteryPresentD0O", "deinit"]
+- ["9Bluetooth21GATTBatteryPowerStateV014BatteryPresentD0O", "hashValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV014BatteryPresentD0O", "init"]
+- ["9Bluetooth21GATTBatteryPowerStateV014BatteryPresentD0O", "notPresent"]
+- ["9Bluetooth21GATTBatteryPowerStateV014BatteryPresentD0O", "notSupported"]
+- ["9Bluetooth21GATTBatteryPowerStateV014BatteryPresentD0O", "present"]
+- ["9Bluetooth21GATTBatteryPowerStateV014BatteryPresentD0O", "rawValue"]
+- ["9Bluetooth21GATTBatteryPowerStateV014BatteryPresentD0O", "unknown"]
+- !private ["s23BidirectionalCollectionP", "bit2"]
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s13BinaryIntegerP", "bit2"]
+- !private ["9Bluetooth0A4UUIDO", "batteryPowerState"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["9Bluetooth8ByteSwapP", "batteryPowerState"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "bit2"]
+- !private ["s10CollectionP", "bit2"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "bit2"]
+- !private ["s28CustomDebugStringConvertibleP", "bit2"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "bit2"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "bit2"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "batteryPowerState"]
+- !private ["s23CustomStringConvertibleP", "bit2"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["10Foundation4DataV", "bit2"]
+- !private ["10Foundation4DataV", "count"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["10Foundation4DataV", "subscript"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "bit2"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "bit2"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "BatteryChargeState"]
+- !private ["s9EquatableP", "BatteryDischargeState"]
+- !private ["s9EquatableP", "BatteryLevelState"]
+- !private ["s9EquatableP", "BatteryPresentState"]
+- !private ["s9EquatableP", "Data"]
+- ["s9EquatableP", "MemoryLayout"]
+- ["s9EquatableP", "RawValue"]
+- !private ["s9EquatableP", "UInt8"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "batteryPowerState"]
+- !private ["s9EquatableP", "bit2"]
+- !private ["s9EquatableP", "chargeState"]
+- !private ["s9EquatableP", "count"]
+- ["s9EquatableP", "data"]
+- !private ["s9EquatableP", "dischargeState"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "length"]
+- !private ["s9EquatableP", "levelState"]
+- !private ["s9EquatableP", "notChargeable"]
+- !private ["s9EquatableP", "presentState"]
+- ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "unknown"]
+- ["s9EquatableP", "uuid"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s27ExpressibleByIntegerLiteralP", "bit2"]
+- !private ["s17FixedWidthIntegerP", "bit2"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "=="]
+- ["9Bluetooth21GATTBatteryPowerStateV", "BatteryChargeState"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "BatteryDischargeState"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "BatteryLevelState"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "BatteryPresentState"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "BluetoothUUID"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "Bool"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "Data"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "GATTBatteryPowerState"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "MemoryLayout"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "UInt8"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "chargeState"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "data"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "deinit"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "dischargeState"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "init"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "length"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "levelState"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "presentState"]
+- ["9Bluetooth21GATTBatteryPowerStateV", "uuid"]
+- !private ["9Bluetooth18GATTCharacteristicP", "BatteryChargeState"]
+- !private ["9Bluetooth18GATTCharacteristicP", "BatteryDischargeState"]
+- !private ["9Bluetooth18GATTCharacteristicP", "BatteryLevelState"]
+- !private ["9Bluetooth18GATTCharacteristicP", "BatteryPresentState"]
+- !private ["9Bluetooth18GATTCharacteristicP", "Data"]
+- ["9Bluetooth18GATTCharacteristicP", "MemoryLayout"]
+- !private ["9Bluetooth18GATTCharacteristicP", "UInt8"]
+- ["9Bluetooth18GATTCharacteristicP", ""]
+- !private ["9Bluetooth18GATTCharacteristicP", "chargeState"]
+- ["9Bluetooth18GATTCharacteristicP", "data"]
+- !private ["9Bluetooth18GATTCharacteristicP", "dischargeState"]
+- ["9Bluetooth18GATTCharacteristicP", "init"]
+- !private ["9Bluetooth18GATTCharacteristicP", "length"]
+- !private ["9Bluetooth18GATTCharacteristicP", "levelState"]
+- !private ["9Bluetooth18GATTCharacteristicP", "presentState"]
+- ["9Bluetooth18GATTCharacteristicP", "uuid"]
+- ["s8HashableP", "RawValue"]
+- ["s8HashableP", ""]
+- ["s8HashableP", "_Default_RawValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "batteryPowerState"]
+- !private ["s8HashableP", "bit2"]
+- !private ["s8HashableP", "count"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "notChargeable"]
+- ["s8HashableP", "rawValue"]
+- !private ["s8HashableP", "subscript"]
+- !private ["s8HashableP", "unknown"]
+- !private ["s22LazyCollectionProtocolP", "bit2"]
+- !private ["s20LazySequenceProtocolP", "bit2"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "bit2"]
+- ["s12MemoryLayoutO", "size"]
+- !private ["s17MutableCollectionP", "bit2"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["s7NumericP", "bit2"]
+- !private ["s22RandomAccessCollectionP", "bit2"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "bit2"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- !private ["s16RawRepresentableP", "batteryPowerState"]
+- ["s16RawRepresentableP", "hashValue"]
+- ["s16RawRepresentableP", "init"]
+- !private ["s16RawRepresentableP", "notChargeable"]
+- ["s16RawRepresentableP", "rawValue"]
+- !private ["s16RawRepresentableP", "unknown"]
+- !private ["10Foundation20ReferenceConvertibleP", "bit2"]
+- !private ["10Foundation20ReferenceConvertibleP", "count"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "subscript"]
+- !private ["s8SequenceP", "bit2"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s5SliceV", "bit2"]
+- !private ["s10StrideableP", "bit2"]
+- !private ["s5UInt8V", "bit2"]
+- !private ["s15UnsignedIntegerP", "bit2"]
+- !private ["s18_BitwiseOperationsP", "bit2"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "bit2"]
+- !private ["10Foundation13_CFBridgeableP", "count"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "bit2"]
+- !private ["10Foundation13_NSBridgeableP", "bit2"]
+- !private ["10Foundation13_NSBridgeableP", "count"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "bit2"]
+- !private ["10Foundation17_ObjectBridgeableP", "count"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "subscript"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "bit2"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "count"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+- !private ["s14_StringElementP", "bit2"]
+depends-nominal:
+- "9Bluetooth21GATTBatteryPowerStateV013BatteryChargeD0O"
+- "9Bluetooth21GATTBatteryPowerStateV016BatteryDischargeD0O"
+- "9Bluetooth21GATTBatteryPowerStateV012BatteryLevelD0O"
+- "9Bluetooth21GATTBatteryPowerStateV014BatteryPresentD0O"
+- !private "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "9Bluetooth0A4UUIDO"
+- !private "Sb"
+- !private "9Bluetooth8ByteSwapP"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "9Bluetooth21GATTBatteryPowerStateV"
+- "9Bluetooth18GATTCharacteristicP"
+- "s8HashableP"
+- !private "s22LazyCollectionProtocolP"
+- !private "s20LazySequenceProtocolP"
+- !private "s25LosslessStringConvertibleP"
+- "s12MemoryLayoutO"
+- !private "s17MutableCollectionP"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- !private "s5SliceV"
+- !private "s10StrideableP"
+- !private "s5UInt8V"
+- !private "s15UnsignedIntegerP"
+- !private "s18_BitwiseOperationsP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+- !private "s14_StringElementP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "4e6fc317621fd7cf18bce5b93dbeb3ea"

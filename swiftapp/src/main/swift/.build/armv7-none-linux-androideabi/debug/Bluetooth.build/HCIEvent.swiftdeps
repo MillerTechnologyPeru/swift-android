@@ -1,0 +1,66 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HCIEvent"
+- "HCIEventParameter"
+provides-nominal:
+- "9Bluetooth8HCIEventP"
+- "9Bluetooth17HCIEventParameterP"
+provides-member:
+- ["9Bluetooth8HCIEventP", ""]
+- ["9Bluetooth17HCIEventParameterP", ""]
+- ["9Bluetooth8HCIEventP", "description"]
+depends-top-level:
+- "CustomStringConvertible"
+- "Data"
+- "HCIEvent"
+- "HCIEventParameter"
+- "Hashable"
+- "Int"
+- "RawRepresentable"
+- "String"
+- "UInt8"
+depends-member:
+- ["s23CustomStringConvertibleP", "String"]
+- ["s23CustomStringConvertibleP", "UInt8"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "name"]
+- ["s9EquatableP", "String"]
+- ["s9EquatableP", "UInt8"]
+- !private ["s9EquatableP", "name"]
+- ["9Bluetooth8HCIEventP", "String"]
+- ["9Bluetooth8HCIEventP", "UInt8"]
+- ["9Bluetooth8HCIEventP", "description"]
+- ["9Bluetooth8HCIEventP", "init"]
+- ["9Bluetooth8HCIEventP", "name"]
+- ["9Bluetooth8HCIEventP", "rawValue"]
+- ["9Bluetooth17HCIEventParameterP", "Data"]
+- ["9Bluetooth17HCIEventParameterP", "HCIEvent"]
+- ["9Bluetooth17HCIEventParameterP", "HCIEventType"]
+- ["9Bluetooth17HCIEventParameterP", "Int"]
+- ["9Bluetooth17HCIEventParameterP", "event"]
+- ["9Bluetooth17HCIEventParameterP", "init"]
+- ["9Bluetooth17HCIEventParameterP", "length"]
+- ["s8HashableP", "String"]
+- ["s8HashableP", "UInt8"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "name"]
+- ["s16RawRepresentableP", "String"]
+- ["s16RawRepresentableP", "UInt8"]
+- ["s16RawRepresentableP", ""]
+- !private ["s16RawRepresentableP", "name"]
+depends-nominal:
+- "s23CustomStringConvertibleP"
+- "s9EquatableP"
+- "9Bluetooth8HCIEventP"
+- "9Bluetooth17HCIEventParameterP"
+- "s8HashableP"
+- "s16RawRepresentableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "166ef09ccf19b2cd5005746b126ecf45"

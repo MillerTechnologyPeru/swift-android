@@ -1,0 +1,380 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AndroidGraphicsColor"
+provides-nominal:
+- "7Android0A13GraphicsColorC"
+- "7Android0A13GraphicsColorC8JNICacheV"
+- "7Android0A13GraphicsColorC8JNICacheV7FieldIDV"
+- "7Android0A13GraphicsColorC8JNICacheV8MethodIDV"
+provides-member:
+- ["7AndroidAAO8GraphicsO", ""]
+- ["7Android0A13GraphicsColorC", ""]
+- ["7Android0A13GraphicsColorC8JNICacheV", ""]
+- ["7Android0A13GraphicsColorC8JNICacheV7FieldIDV", ""]
+- ["7Android0A13GraphicsColorC8JNICacheV8MethodIDV", ""]
+- ["7AndroidAAO8GraphicsO", "Color"]
+- ["7Android0A13GraphicsColorC", "BLACK"]
+- ["7Android0A13GraphicsColorC", "DKGRAY"]
+- ["7Android0A13GraphicsColorC", "GRAY"]
+- ["7Android0A13GraphicsColorC", "LTGRAY"]
+- ["7Android0A13GraphicsColorC", "WHITE"]
+- ["7Android0A13GraphicsColorC", "RED"]
+- ["7Android0A13GraphicsColorC", "GREEN"]
+- ["7Android0A13GraphicsColorC", "BLUE"]
+- ["7Android0A13GraphicsColorC", "YELLOW"]
+- ["7Android0A13GraphicsColorC", "CYAN"]
+- ["7Android0A13GraphicsColorC", "MAGENTA"]
+- ["7Android0A13GraphicsColorC", "TRANSPARENT"]
+- ["7Android0A13GraphicsColorC", "valueOf"]
+- ["7Android0A13GraphicsColorC", "argb"]
+- ["7Android0A13GraphicsColorC", "JNICache"]
+depends-top-level:
+- !private "*"
+- "Android"
+- "AndroidGraphicsColor"
+- "Array"
+- "AssignmentPrecedence"
+- "Float"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- !private "JNI"
+- !private "JNIField"
+- !private "JNIMethod"
+- "JavaObject"
+- "StaticString"
+- "StringLiteralType"
+- !private "UnicodeScalarType"
+- "java_swift"
+- "jclass"
+- "jfieldID"
+- !private "jint"
+- "jmethodID"
+- "jobject"
+- !private "jvalue"
+depends-member:
+- ["7AndroidAAO", "Graphics"]
+- ["7Android0A13GraphicsColorC", "Android"]
+- ["7Android0A13GraphicsColorC", "BLACK"]
+- ["7Android0A13GraphicsColorC", "BLUE"]
+- ["7Android0A13GraphicsColorC", "CYAN"]
+- ["7Android0A13GraphicsColorC", "DKGRAY"]
+- ["7Android0A13GraphicsColorC", "Float"]
+- ["7Android0A13GraphicsColorC", "GRAY"]
+- ["7Android0A13GraphicsColorC", "GREEN"]
+- ["7Android0A13GraphicsColorC", "Int"]
+- !private ["7Android0A13GraphicsColorC", "JNI"]
+- ["7Android0A13GraphicsColorC", "JNICache"]
+- !private ["7Android0A13GraphicsColorC", "JNIField"]
+- !private ["7Android0A13GraphicsColorC", "JNIMethod"]
+- ["7Android0A13GraphicsColorC", "LTGRAY"]
+- ["7Android0A13GraphicsColorC", "MAGENTA"]
+- ["7Android0A13GraphicsColorC", "RED"]
+- ["7Android0A13GraphicsColorC", "StaticString"]
+- ["7Android0A13GraphicsColorC", "TRANSPARENT"]
+- ["7Android0A13GraphicsColorC", "WHITE"]
+- ["7Android0A13GraphicsColorC", "YELLOW"]
+- ["7Android0A13GraphicsColorC", "argb"]
+- ["7Android0A13GraphicsColorC", "deinit"]
+- ["7Android0A13GraphicsColorC", "init"]
+- !private ["7Android0A13GraphicsColorC", "javaObject"]
+- ["7Android0A13GraphicsColorC", "java_swift"]
+- ["7Android0A13GraphicsColorC", "jclass"]
+- ["7Android0A13GraphicsColorC", "jfieldID"]
+- !private ["7Android0A13GraphicsColorC", "jint"]
+- ["7Android0A13GraphicsColorC", "jmethodID"]
+- ["7Android0A13GraphicsColorC", "jobject"]
+- !private ["7Android0A13GraphicsColorC", "jvalue"]
+- ["7Android0A13GraphicsColorC", "valueOf"]
+- !private ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["s7CVarArgP", "init"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["7Android0A13GraphicsColorC8JNICacheV7FieldIDV", "BLACK"]
+- ["7Android0A13GraphicsColorC8JNICacheV7FieldIDV", "BLUE"]
+- ["7Android0A13GraphicsColorC8JNICacheV7FieldIDV", "CYAN"]
+- ["7Android0A13GraphicsColorC8JNICacheV7FieldIDV", "DKGRAY"]
+- ["7Android0A13GraphicsColorC8JNICacheV7FieldIDV", "GRAY"]
+- ["7Android0A13GraphicsColorC8JNICacheV7FieldIDV", "GREEN"]
+- ["7Android0A13GraphicsColorC8JNICacheV7FieldIDV", "LTGRAY"]
+- ["7Android0A13GraphicsColorC8JNICacheV7FieldIDV", "MAGENTA"]
+- ["7Android0A13GraphicsColorC8JNICacheV7FieldIDV", "RED"]
+- ["7Android0A13GraphicsColorC8JNICacheV7FieldIDV", "TRANSPARENT"]
+- ["7Android0A13GraphicsColorC8JNICacheV7FieldIDV", "WHITE"]
+- ["7Android0A13GraphicsColorC8JNICacheV7FieldIDV", "YELLOW"]
+- ["7Android0A13GraphicsColorC8JNICacheV7FieldIDV", "init"]
+- ["7Android0A13GraphicsColorC8JNICacheV7FieldIDV", "jfieldID"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- ["7AndroidAAO8GraphicsO", "AndroidGraphicsColor"]
+- ["7AndroidAAO8GraphicsO", "Color"]
+- ["7AndroidAAO8GraphicsO", "className"]
+- ["7AndroidAAO8GraphicsO", "deinit"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "rawValue"]
+- !private ["Si", "init"]
+- ["7Android0A13GraphicsColorC8JNICacheV", "Android"]
+- ["7Android0A13GraphicsColorC8JNICacheV", "FieldID"]
+- ["7Android0A13GraphicsColorC8JNICacheV", "MethodID"]
+- ["7Android0A13GraphicsColorC8JNICacheV", "className"]
+- ["7Android0A13GraphicsColorC8JNICacheV", "classSignature"]
+- ["7Android0A13GraphicsColorC8JNICacheV", "init"]
+- ["7Android0A13GraphicsColorC8JNICacheV", "jclass"]
+- ["7Android0A13GraphicsColorC8JNICacheV", "jfieldID"]
+- ["7Android0A13GraphicsColorC8JNICacheV", "jmethodID"]
+- ["7Android0A13GraphicsColorC8JNICacheV", "jniClass"]
+- ["3JNI12JNIClassNameV", "rawValue"]
+- !private ["10java_swift7JNICoreC", "DeleteLocalRef"]
+- !private ["10java_swift8JNIFieldC", "GetStaticIntField"]
+- !private ["10java_swift9JNIMethodC", "CallStaticIntMethod"]
+- !private ["10java_swift9JNIMethodC", "CallStaticObjectMethod"]
+- !private ["10java_swift9JNIMethodC", "NewObject"]
+- ["10java_swift9JNIObjectC", "Android"]
+- ["10java_swift9JNIObjectC", "BLACK"]
+- ["10java_swift9JNIObjectC", "BLUE"]
+- ["10java_swift9JNIObjectC", "CYAN"]
+- ["10java_swift9JNIObjectC", "DKGRAY"]
+- ["10java_swift9JNIObjectC", "Float"]
+- ["10java_swift9JNIObjectC", "GRAY"]
+- ["10java_swift9JNIObjectC", "GREEN"]
+- ["10java_swift9JNIObjectC", "Int"]
+- !private ["10java_swift9JNIObjectC", "JNI"]
+- !private ["10java_swift9JNIObjectC", "JNICache"]
+- !private ["10java_swift9JNIObjectC", "JNIField"]
+- !private ["10java_swift9JNIObjectC", "JNIMethod"]
+- ["10java_swift9JNIObjectC", "LTGRAY"]
+- ["10java_swift9JNIObjectC", "MAGENTA"]
+- ["10java_swift9JNIObjectC", "RED"]
+- ["10java_swift9JNIObjectC", "StaticString"]
+- ["10java_swift9JNIObjectC", "TRANSPARENT"]
+- ["10java_swift9JNIObjectC", "WHITE"]
+- ["10java_swift9JNIObjectC", "YELLOW"]
+- ["10java_swift9JNIObjectC", "argb"]
+- ["10java_swift9JNIObjectC", "init"]
+- !private ["10java_swift9JNIObjectC", "javaObject"]
+- ["10java_swift9JNIObjectC", "java_swift"]
+- ["10java_swift9JNIObjectC", "jclass"]
+- ["10java_swift9JNIObjectC", "jfieldID"]
+- !private ["10java_swift9JNIObjectC", "jint"]
+- ["10java_swift9JNIObjectC", "jmethodID"]
+- ["10java_swift9JNIObjectC", "jobject"]
+- !private ["10java_swift9JNIObjectC", "jvalue"]
+- ["10java_swift9JNIObjectC", "valueOf"]
+- !private ["10java_swift9JNIObjectC", "withJavaObject"]
+- ["10java_swift13JNIObjectInitP", "Android"]
+- !private ["10java_swift13JNIObjectInitP", "Int"]
+- !private ["10java_swift13JNIObjectInitP", "JNI"]
+- !private ["10java_swift13JNIObjectInitP", "JNICache"]
+- !private ["10java_swift13JNIObjectInitP", "JNIField"]
+- !private ["10java_swift13JNIObjectInitP", "JNIMethod"]
+- ["10java_swift13JNIObjectInitP", ""]
+- ["10java_swift13JNIObjectInitP", "init"]
+- !private ["10java_swift13JNIObjectInitP", "javaObject"]
+- !private ["10java_swift13JNIObjectInitP", "jint"]
+- !private ["10java_swift13JNIObjectInitP", "jobject"]
+- !private ["10java_swift13JNIObjectInitP", "jvalue"]
+- !private ["10java_swift13JNIObjectInitP", "withJavaObject"]
+- ["10java_swift17JNIObjectProtocolP", "Android"]
+- !private ["10java_swift17JNIObjectProtocolP", "Int"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNICache"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIField"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIMethod"]
+- ["10java_swift17JNIObjectProtocolP", ""]
+- ["10java_swift17JNIObjectProtocolP", "init"]
+- !private ["10java_swift17JNIObjectProtocolP", "javaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jint"]
+- !private ["10java_swift17JNIObjectProtocolP", "jobject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jvalue"]
+- !private ["10java_swift17JNIObjectProtocolP", "withJavaObject"]
+- ["10java_swift10JavaObjectC", "Android"]
+- ["10java_swift10JavaObjectC", "BLACK"]
+- ["10java_swift10JavaObjectC", "BLUE"]
+- ["10java_swift10JavaObjectC", "CYAN"]
+- ["10java_swift10JavaObjectC", "DKGRAY"]
+- ["10java_swift10JavaObjectC", "Float"]
+- ["10java_swift10JavaObjectC", "GRAY"]
+- ["10java_swift10JavaObjectC", "GREEN"]
+- ["10java_swift10JavaObjectC", "Int"]
+- !private ["10java_swift10JavaObjectC", "JNI"]
+- !private ["10java_swift10JavaObjectC", "JNICache"]
+- !private ["10java_swift10JavaObjectC", "JNIField"]
+- !private ["10java_swift10JavaObjectC", "JNIMethod"]
+- ["10java_swift10JavaObjectC", "LTGRAY"]
+- ["10java_swift10JavaObjectC", "MAGENTA"]
+- ["10java_swift10JavaObjectC", "RED"]
+- ["10java_swift10JavaObjectC", "StaticString"]
+- ["10java_swift10JavaObjectC", "TRANSPARENT"]
+- ["10java_swift10JavaObjectC", "WHITE"]
+- ["10java_swift10JavaObjectC", "YELLOW"]
+- ["10java_swift10JavaObjectC", ""]
+- ["10java_swift10JavaObjectC", "argb"]
+- ["10java_swift10JavaObjectC", "init"]
+- !private ["10java_swift10JavaObjectC", "javaObject"]
+- ["10java_swift10JavaObjectC", "java_swift"]
+- ["10java_swift10JavaObjectC", "jclass"]
+- ["10java_swift10JavaObjectC", "jfieldID"]
+- !private ["10java_swift10JavaObjectC", "jint"]
+- ["10java_swift10JavaObjectC", "jmethodID"]
+- ["10java_swift10JavaObjectC", "jobject"]
+- !private ["10java_swift10JavaObjectC", "jvalue"]
+- ["10java_swift10JavaObjectC", "valueOf"]
+- !private ["10java_swift10JavaObjectC", "withJavaObject"]
+- ["7Android11JavaPackageP", "Color"]
+- ["7Android11JavaPackageP", "Graphics"]
+- ["7Android11JavaPackageP", "className"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["7Android0A13GraphicsColorC8JNICacheV8MethodIDV", "argb1"]
+- ["7Android0A13GraphicsColorC8JNICacheV8MethodIDV", "argb2"]
+- ["7Android0A13GraphicsColorC8JNICacheV8MethodIDV", "init"]
+- ["7Android0A13GraphicsColorC8JNICacheV8MethodIDV", "jmethodID"]
+- ["7Android0A13GraphicsColorC8JNICacheV8MethodIDV", "newMethod"]
+- ["7Android0A13GraphicsColorC8JNICacheV8MethodIDV", "valueOf"]
+- ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["s7NumericP", "init"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "subscript"]
+- ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["SC6jvalueV", "init"]
+depends-nominal:
+- "7AndroidAAO"
+- "7Android0A13GraphicsColorC"
+- !private "Sa"
+- "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "7Android0A13GraphicsColorC8JNICacheV7FieldIDV"
+- !private "s17FixedWidthIntegerP"
+- "7AndroidAAO8GraphicsO"
+- "s8HashableP"
+- !private "Si"
+- "7Android0A13GraphicsColorC8JNICacheV"
+- "3JNI12JNIClassNameV"
+- !private "10java_swift7JNICoreC"
+- !private "10java_swift8JNIFieldC"
+- !private "10java_swift9JNIMethodC"
+- "10java_swift9JNIObjectC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- "10java_swift10JavaObjectC"
+- "7Android11JavaPackageP"
+- "s25LosslessStringConvertibleP"
+- "7Android0A13GraphicsColorC8JNICacheV8MethodIDV"
+- "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "s14_ArrayProtocolP"
+- !private "s18_BitwiseOperationsP"
+- "10Foundation13_CFBridgeableP"
+- !private "s24_DestructorSafeContainerP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation13_NSBridgeableP"
+- "10Foundation17_ObjectBridgeableP"
+- "10Foundation21_ObjectTypeBridgeableP"
+- "s16_SwiftStringViewP"
+- !private "SC6jvalueV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/JNI.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Bluetooth.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_util.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "4365343b039c728539d4847a2afa67e5"

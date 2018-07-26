@@ -1,0 +1,478 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AndroidBluetoothGattDescriptor"
+provides-nominal:
+- "7Android0A23BluetoothGattDescriptorC"
+- "7Android0A23BluetoothGattDescriptorC0aB10PermissionV"
+- "7Android0A23BluetoothGattDescriptorC8JNICacheV"
+- "7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV"
+- "7Android0A23BluetoothGattDescriptorC8JNICacheV8MethodIDV"
+provides-member:
+- ["7AndroidAAO9BluetoothO", ""]
+- ["7Android0A23BluetoothGattDescriptorC", ""]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", ""]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV", ""]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV", ""]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV8MethodIDV", ""]
+- ["7AndroidAAO9BluetoothO", "GattDescriptor"]
+- ["7Android0A23BluetoothGattDescriptorC", "Permission"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_READ"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_READ_ENCRYPTED"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_READ_ENCRYPTED_MITM"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_WRITE"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_WRITE_ENCRYPTED"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_WRITE_ENCRYPTED_MITM"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_WRITE_SIGNED"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_WRITE_SIGNED_MITM"]
+- ["7Android0A23BluetoothGattDescriptorC", "DISABLE_NOTIFICATION_VALUE"]
+- ["7Android0A23BluetoothGattDescriptorC", "ENABLE_INDICATION_VALUE"]
+- ["7Android0A23BluetoothGattDescriptorC", "ENABLE_NOTIFICATION_VALUE"]
+- ["7Android0A23BluetoothGattDescriptorC", "getCharacteristic"]
+- ["7Android0A23BluetoothGattDescriptorC", "getPermissions"]
+- ["7Android0A23BluetoothGattDescriptorC", "getUuid"]
+- ["7Android0A23BluetoothGattDescriptorC", "getValue"]
+- ["7Android0A23BluetoothGattDescriptorC", "setValue"]
+- ["7Android0A23BluetoothGattDescriptorC", "AndroidBluetoothPermission"]
+- ["7Android0A23BluetoothGattDescriptorC", "JNICache"]
+depends-top-level:
+- !private "!="
+- "Android"
+- "AndroidBluetoothGattDescriptor"
+- "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "FloatLiteralType"
+- "Int"
+- "Int8"
+- !private "IntegerLiteralType"
+- !private "JNI"
+- !private "JNIField"
+- !private "JNIMethod"
+- !private "JNIType"
+- !private "JNI_FALSE"
+- "JavaObject"
+- "RawRepresentable"
+- "StaticString"
+- "StringLiteralType"
+- !private "UnicodeScalarType"
+- "java_swift"
+- "java_util"
+- !private "jboolean"
+- "jclass"
+- "jfieldID"
+- !private "jint"
+- "jmethodID"
+- "jobject"
+- !private "jvalue"
+depends-member:
+- ["7AndroidAAO", "Bluetooth"]
+- !private ["7Android0A27BluetoothGattCharacteristicC", "init"]
+- ["7Android0A23BluetoothGattDescriptorC", "Android"]
+- ["7Android0A23BluetoothGattDescriptorC", "AndroidBluetoothGattDescriptor"]
+- ["7Android0A23BluetoothGattDescriptorC", "AndroidBluetoothPermission"]
+- ["7Android0A23BluetoothGattDescriptorC", "Bool"]
+- ["7Android0A23BluetoothGattDescriptorC", "DISABLE_NOTIFICATION_VALUE"]
+- ["7Android0A23BluetoothGattDescriptorC", "ENABLE_INDICATION_VALUE"]
+- ["7Android0A23BluetoothGattDescriptorC", "ENABLE_NOTIFICATION_VALUE"]
+- ["7Android0A23BluetoothGattDescriptorC", "Int"]
+- ["7Android0A23BluetoothGattDescriptorC", "Int8"]
+- !private ["7Android0A23BluetoothGattDescriptorC", "JNI"]
+- ["7Android0A23BluetoothGattDescriptorC", "JNICache"]
+- !private ["7Android0A23BluetoothGattDescriptorC", "JNIField"]
+- !private ["7Android0A23BluetoothGattDescriptorC", "JNIMethod"]
+- !private ["7Android0A23BluetoothGattDescriptorC", "JNIType"]
+- !private ["7Android0A23BluetoothGattDescriptorC", "JNI_FALSE"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_READ"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_READ_ENCRYPTED"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_READ_ENCRYPTED_MITM"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_WRITE"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_WRITE_ENCRYPTED"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_WRITE_ENCRYPTED_MITM"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_WRITE_SIGNED"]
+- ["7Android0A23BluetoothGattDescriptorC", "PERMISSION_WRITE_SIGNED_MITM"]
+- ["7Android0A23BluetoothGattDescriptorC", "Permission"]
+- ["7Android0A23BluetoothGattDescriptorC", "RawRepresentable"]
+- ["7Android0A23BluetoothGattDescriptorC", "StaticString"]
+- ["7Android0A23BluetoothGattDescriptorC", "deinit"]
+- ["7Android0A23BluetoothGattDescriptorC", "getCharacteristic"]
+- ["7Android0A23BluetoothGattDescriptorC", "getPermissions"]
+- ["7Android0A23BluetoothGattDescriptorC", "getUuid"]
+- ["7Android0A23BluetoothGattDescriptorC", "getValue"]
+- ["7Android0A23BluetoothGattDescriptorC", "init"]
+- !private ["7Android0A23BluetoothGattDescriptorC", "javaObject"]
+- ["7Android0A23BluetoothGattDescriptorC", "java_swift"]
+- ["7Android0A23BluetoothGattDescriptorC", "java_util"]
+- !private ["7Android0A23BluetoothGattDescriptorC", "jboolean"]
+- ["7Android0A23BluetoothGattDescriptorC", "jclass"]
+- ["7Android0A23BluetoothGattDescriptorC", "jfieldID"]
+- !private ["7Android0A23BluetoothGattDescriptorC", "jint"]
+- ["7Android0A23BluetoothGattDescriptorC", "jmethodID"]
+- ["7Android0A23BluetoothGattDescriptorC", "jobject"]
+- !private ["7Android0A23BluetoothGattDescriptorC", "jvalue"]
+- ["7Android0A23BluetoothGattDescriptorC", "setValue"]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", "AndroidBluetoothGattDescriptor"]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", "Int"]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", "RawValue"]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", "_Default_RawValue"]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", "deinit"]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", "init"]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", "rawValue"]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", "read"]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", "readEncrypted"]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", "readEncryptedMITM"]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", "write"]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", "writeEncrypted"]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", "writeEncryptedMITM"]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", "writeSigned"]
+- ["7Android0A23BluetoothGattDescriptorC0aB10PermissionV", "writeSignedMITM"]
+- !private ["Sa", "init"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s13BinaryIntegerP", "init"]
+- ["7AndroidAAO9BluetoothO", "AndroidBluetoothGattDescriptor"]
+- ["7AndroidAAO9BluetoothO", "GattCharacteristic"]
+- ["7AndroidAAO9BluetoothO", "GattDescriptor"]
+- ["7AndroidAAO9BluetoothO", "className"]
+- ["7AndroidAAO9BluetoothO", "deinit"]
+- !private ["s7CVarArgP", "init"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- ["s9DecodableP", "init"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "rawValue"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV", "DISABLE_NOTIFICATION_VALUE"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV", "ENABLE_INDICATION_VALUE"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV", "ENABLE_NOTIFICATION_VALUE"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV", "PERMISSION_READ"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV", "PERMISSION_READ_ENCRYPTED"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV", "PERMISSION_READ_ENCRYPTED_MITM"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV", "PERMISSION_WRITE"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV", "PERMISSION_WRITE_ENCRYPTED"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV", "PERMISSION_WRITE_ENCRYPTED_MITM"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV", "PERMISSION_WRITE_SIGNED"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV", "PERMISSION_WRITE_SIGNED_MITM"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV", "init"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV", "jfieldID"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "rawValue"]
+- !private ["Si", "init"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV", "Android"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV", "FieldID"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV", "MethodID"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV", "className"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV", "classSignature"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV", "init"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV", "jclass"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV", "jfieldID"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV", "jmethodID"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV", "jniClass"]
+- ["3JNI12JNIClassNameV", "rawValue"]
+- !private ["10java_swift7JNICoreC", "DeleteLocalRef"]
+- !private ["10java_swift8JNIFieldC", "GetStaticIntField"]
+- !private ["10java_swift9JNIMethodC", "CallBooleanMethod"]
+- !private ["10java_swift9JNIMethodC", "CallIntMethod"]
+- !private ["10java_swift9JNIMethodC", "CallObjectMethod"]
+- !private ["10java_swift9JNIMethodC", "NewObject"]
+- ["10java_swift9JNIObjectC", "Android"]
+- ["10java_swift9JNIObjectC", "AndroidBluetoothGattDescriptor"]
+- ["10java_swift9JNIObjectC", "AndroidBluetoothPermission"]
+- ["10java_swift9JNIObjectC", "Bool"]
+- ["10java_swift9JNIObjectC", "DISABLE_NOTIFICATION_VALUE"]
+- ["10java_swift9JNIObjectC", "ENABLE_INDICATION_VALUE"]
+- ["10java_swift9JNIObjectC", "ENABLE_NOTIFICATION_VALUE"]
+- ["10java_swift9JNIObjectC", "Int"]
+- ["10java_swift9JNIObjectC", "Int8"]
+- !private ["10java_swift9JNIObjectC", "JNI"]
+- !private ["10java_swift9JNIObjectC", "JNICache"]
+- !private ["10java_swift9JNIObjectC", "JNIField"]
+- !private ["10java_swift9JNIObjectC", "JNIMethod"]
+- !private ["10java_swift9JNIObjectC", "JNIType"]
+- !private ["10java_swift9JNIObjectC", "JNI_FALSE"]
+- ["10java_swift9JNIObjectC", "PERMISSION_READ"]
+- ["10java_swift9JNIObjectC", "PERMISSION_READ_ENCRYPTED"]
+- ["10java_swift9JNIObjectC", "PERMISSION_READ_ENCRYPTED_MITM"]
+- ["10java_swift9JNIObjectC", "PERMISSION_WRITE"]
+- ["10java_swift9JNIObjectC", "PERMISSION_WRITE_ENCRYPTED"]
+- ["10java_swift9JNIObjectC", "PERMISSION_WRITE_ENCRYPTED_MITM"]
+- ["10java_swift9JNIObjectC", "PERMISSION_WRITE_SIGNED"]
+- ["10java_swift9JNIObjectC", "PERMISSION_WRITE_SIGNED_MITM"]
+- ["10java_swift9JNIObjectC", "Permission"]
+- ["10java_swift9JNIObjectC", "RawRepresentable"]
+- ["10java_swift9JNIObjectC", "StaticString"]
+- ["10java_swift9JNIObjectC", "getCharacteristic"]
+- ["10java_swift9JNIObjectC", "getPermissions"]
+- ["10java_swift9JNIObjectC", "getUuid"]
+- ["10java_swift9JNIObjectC", "getValue"]
+- ["10java_swift9JNIObjectC", "init"]
+- !private ["10java_swift9JNIObjectC", "javaObject"]
+- ["10java_swift9JNIObjectC", "java_swift"]
+- ["10java_swift9JNIObjectC", "java_util"]
+- !private ["10java_swift9JNIObjectC", "jboolean"]
+- ["10java_swift9JNIObjectC", "jclass"]
+- ["10java_swift9JNIObjectC", "jfieldID"]
+- !private ["10java_swift9JNIObjectC", "jint"]
+- ["10java_swift9JNIObjectC", "jmethodID"]
+- ["10java_swift9JNIObjectC", "jobject"]
+- !private ["10java_swift9JNIObjectC", "jvalue"]
+- ["10java_swift9JNIObjectC", "setValue"]
+- !private ["10java_swift9JNIObjectC", "withJavaObject"]
+- ["10java_swift13JNIObjectInitP", "Android"]
+- ["10java_swift13JNIObjectInitP", "AndroidBluetoothGattDescriptor"]
+- !private ["10java_swift13JNIObjectInitP", "Int"]
+- !private ["10java_swift13JNIObjectInitP", "Int8"]
+- !private ["10java_swift13JNIObjectInitP", "JNI"]
+- !private ["10java_swift13JNIObjectInitP", "JNICache"]
+- !private ["10java_swift13JNIObjectInitP", "JNIField"]
+- !private ["10java_swift13JNIObjectInitP", "JNIMethod"]
+- !private ["10java_swift13JNIObjectInitP", "JNIType"]
+- !private ["10java_swift13JNIObjectInitP", "JNI_FALSE"]
+- ["10java_swift13JNIObjectInitP", "PERMISSION_READ"]
+- ["10java_swift13JNIObjectInitP", "PERMISSION_READ_ENCRYPTED"]
+- ["10java_swift13JNIObjectInitP", "PERMISSION_READ_ENCRYPTED_MITM"]
+- ["10java_swift13JNIObjectInitP", "PERMISSION_WRITE"]
+- ["10java_swift13JNIObjectInitP", "PERMISSION_WRITE_ENCRYPTED"]
+- ["10java_swift13JNIObjectInitP", "PERMISSION_WRITE_ENCRYPTED_MITM"]
+- ["10java_swift13JNIObjectInitP", "PERMISSION_WRITE_SIGNED"]
+- ["10java_swift13JNIObjectInitP", "PERMISSION_WRITE_SIGNED_MITM"]
+- ["10java_swift13JNIObjectInitP", "Permission"]
+- ["10java_swift13JNIObjectInitP", ""]
+- ["10java_swift13JNIObjectInitP", "init"]
+- !private ["10java_swift13JNIObjectInitP", "javaObject"]
+- !private ["10java_swift13JNIObjectInitP", "java_util"]
+- !private ["10java_swift13JNIObjectInitP", "jboolean"]
+- !private ["10java_swift13JNIObjectInitP", "jint"]
+- !private ["10java_swift13JNIObjectInitP", "jobject"]
+- !private ["10java_swift13JNIObjectInitP", "jvalue"]
+- !private ["10java_swift13JNIObjectInitP", "withJavaObject"]
+- ["10java_swift17JNIObjectProtocolP", "Android"]
+- ["10java_swift17JNIObjectProtocolP", "AndroidBluetoothGattDescriptor"]
+- !private ["10java_swift17JNIObjectProtocolP", "Int"]
+- !private ["10java_swift17JNIObjectProtocolP", "Int8"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNICache"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIField"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIMethod"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIType"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNI_FALSE"]
+- ["10java_swift17JNIObjectProtocolP", "PERMISSION_READ"]
+- ["10java_swift17JNIObjectProtocolP", "PERMISSION_READ_ENCRYPTED"]
+- ["10java_swift17JNIObjectProtocolP", "PERMISSION_READ_ENCRYPTED_MITM"]
+- ["10java_swift17JNIObjectProtocolP", "PERMISSION_WRITE"]
+- ["10java_swift17JNIObjectProtocolP", "PERMISSION_WRITE_ENCRYPTED"]
+- ["10java_swift17JNIObjectProtocolP", "PERMISSION_WRITE_ENCRYPTED_MITM"]
+- ["10java_swift17JNIObjectProtocolP", "PERMISSION_WRITE_SIGNED"]
+- ["10java_swift17JNIObjectProtocolP", "PERMISSION_WRITE_SIGNED_MITM"]
+- ["10java_swift17JNIObjectProtocolP", "Permission"]
+- ["10java_swift17JNIObjectProtocolP", ""]
+- ["10java_swift17JNIObjectProtocolP", "init"]
+- !private ["10java_swift17JNIObjectProtocolP", "javaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "java_util"]
+- !private ["10java_swift17JNIObjectProtocolP", "jboolean"]
+- !private ["10java_swift17JNIObjectProtocolP", "jint"]
+- !private ["10java_swift17JNIObjectProtocolP", "jobject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jvalue"]
+- !private ["10java_swift17JNIObjectProtocolP", "withJavaObject"]
+- !private ["10java_swift7JNITypeC", "toJava"]
+- !private ["10java_swift7JNITypeC", "toSwift"]
+- !private ["9java_lang14JavaComparableP", "init"]
+- ["10java_swift10JavaObjectC", "Android"]
+- ["10java_swift10JavaObjectC", "AndroidBluetoothGattDescriptor"]
+- ["10java_swift10JavaObjectC", "AndroidBluetoothPermission"]
+- ["10java_swift10JavaObjectC", "Bool"]
+- ["10java_swift10JavaObjectC", "DISABLE_NOTIFICATION_VALUE"]
+- ["10java_swift10JavaObjectC", "ENABLE_INDICATION_VALUE"]
+- ["10java_swift10JavaObjectC", "ENABLE_NOTIFICATION_VALUE"]
+- ["10java_swift10JavaObjectC", "Int"]
+- ["10java_swift10JavaObjectC", "Int8"]
+- !private ["10java_swift10JavaObjectC", "JNI"]
+- !private ["10java_swift10JavaObjectC", "JNICache"]
+- !private ["10java_swift10JavaObjectC", "JNIField"]
+- !private ["10java_swift10JavaObjectC", "JNIMethod"]
+- !private ["10java_swift10JavaObjectC", "JNIType"]
+- !private ["10java_swift10JavaObjectC", "JNI_FALSE"]
+- ["10java_swift10JavaObjectC", "PERMISSION_READ"]
+- ["10java_swift10JavaObjectC", "PERMISSION_READ_ENCRYPTED"]
+- ["10java_swift10JavaObjectC", "PERMISSION_READ_ENCRYPTED_MITM"]
+- ["10java_swift10JavaObjectC", "PERMISSION_WRITE"]
+- ["10java_swift10JavaObjectC", "PERMISSION_WRITE_ENCRYPTED"]
+- ["10java_swift10JavaObjectC", "PERMISSION_WRITE_ENCRYPTED_MITM"]
+- ["10java_swift10JavaObjectC", "PERMISSION_WRITE_SIGNED"]
+- ["10java_swift10JavaObjectC", "PERMISSION_WRITE_SIGNED_MITM"]
+- ["10java_swift10JavaObjectC", "Permission"]
+- ["10java_swift10JavaObjectC", "RawRepresentable"]
+- ["10java_swift10JavaObjectC", "StaticString"]
+- ["10java_swift10JavaObjectC", ""]
+- ["10java_swift10JavaObjectC", "getCharacteristic"]
+- ["10java_swift10JavaObjectC", "getPermissions"]
+- ["10java_swift10JavaObjectC", "getUuid"]
+- ["10java_swift10JavaObjectC", "getValue"]
+- ["10java_swift10JavaObjectC", "init"]
+- !private ["10java_swift10JavaObjectC", "javaObject"]
+- ["10java_swift10JavaObjectC", "java_swift"]
+- ["10java_swift10JavaObjectC", "java_util"]
+- !private ["10java_swift10JavaObjectC", "jboolean"]
+- ["10java_swift10JavaObjectC", "jclass"]
+- ["10java_swift10JavaObjectC", "jfieldID"]
+- !private ["10java_swift10JavaObjectC", "jint"]
+- ["10java_swift10JavaObjectC", "jmethodID"]
+- ["10java_swift10JavaObjectC", "jobject"]
+- !private ["10java_swift10JavaObjectC", "jvalue"]
+- ["10java_swift10JavaObjectC", "setValue"]
+- !private ["10java_swift10JavaObjectC", "withJavaObject"]
+- ["7Android11JavaPackageP", "Bluetooth"]
+- ["7Android11JavaPackageP", "GattCharacteristic"]
+- ["7Android11JavaPackageP", "className"]
+- !private ["10java_swift12JavaProtocolP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV8MethodIDV", "getCharacteristic"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV8MethodIDV", "getPermissions"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV8MethodIDV", "getUuid"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV8MethodIDV", "getValue"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV8MethodIDV", "init"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV8MethodIDV", "init_method"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV8MethodIDV", "jmethodID"]
+- ["7Android0A23BluetoothGattDescriptorC8JNICacheV8MethodIDV", "setValue"]
+- ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s7NumericP", "init"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["s16RawRepresentableP", "AndroidBluetoothGattDescriptor"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s8SequenceP", "init"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s5UInt8V", "init"]
+- !private ["9java_util4UUIDC", "init"]
+- !private ["10java_swift19UnavailableProtocolP", "init"]
+- !private ["s15UnsignedIntegerP", "init"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- ["10Foundation13_CFBridgeableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation13_NSBridgeableP", "init"]
+- ["10Foundation17_ObjectBridgeableP", "init"]
+- ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["s14_StringElementP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["SC6jvalueV", "init"]
+depends-nominal:
+- "7AndroidAAO"
+- !private "7Android0A27BluetoothGattCharacteristicC"
+- "7Android0A23BluetoothGattDescriptorC"
+- "7Android0A23BluetoothGattDescriptorC0aB10PermissionV"
+- !private "Sa"
+- "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- "7AndroidAAO9BluetoothO"
+- !private "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "7Android0A23BluetoothGattDescriptorC8JNICacheV7FieldIDV"
+- !private "s17FixedWidthIntegerP"
+- "s8HashableP"
+- !private "Si"
+- "7Android0A23BluetoothGattDescriptorC8JNICacheV"
+- "3JNI12JNIClassNameV"
+- !private "10java_swift7JNICoreC"
+- !private "10java_swift8JNIFieldC"
+- !private "10java_swift9JNIMethodC"
+- "10java_swift9JNIObjectC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- !private "10java_swift7JNITypeC"
+- !private "9java_lang14JavaComparableP"
+- "10java_swift10JavaObjectC"
+- "7Android11JavaPackageP"
+- !private "10java_swift12JavaProtocolP"
+- "s25LosslessStringConvertibleP"
+- "7Android0A23BluetoothGattDescriptorC8JNICacheV8MethodIDV"
+- "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "s5UInt8V"
+- !private "9java_util4UUIDC"
+- !private "10java_swift19UnavailableProtocolP"
+- !private "s15UnsignedIntegerP"
+- !private "s14_ArrayProtocolP"
+- !private "s18_BitwiseOperationsP"
+- "10Foundation13_CFBridgeableP"
+- !private "s24_DestructorSafeContainerP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation13_NSBridgeableP"
+- "10Foundation17_ObjectBridgeableP"
+- "10Foundation21_ObjectTypeBridgeableP"
+- !private "s14_StringElementP"
+- "s16_SwiftStringViewP"
+- !private "SC6jvalueV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/JNI.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Bluetooth.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_util.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "3e96929e385b2964cd0c50f0797f3f6e"

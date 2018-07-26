@@ -1,0 +1,200 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HCILESetPrivacyMode"
+provides-nominal:
+- "9Bluetooth19HCILESetPrivacyModeV"
+- "9Bluetooth19HCILESetPrivacyModeV0cD0O"
+provides-member:
+- ["9Bluetooth0A23HostControllerInterfaceP", ""]
+- ["9Bluetooth19HCILESetPrivacyModeV", ""]
+- ["9Bluetooth19HCILESetPrivacyModeV0cD0O", ""]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergySetPrivacyMode"]
+depends-top-level:
+- "=="
+- "Address"
+- !private "Array"
+- "AssignmentPrecedence"
+- "BluetoothHostControllerInterface"
+- "Data"
+- "FloatLiteralType"
+- "HCICommandParameter"
+- "HCICommandTimeout"
+- "HCILESetPrivacyMode"
+- "HCILowEnergyCommand"
+- "IntegerLiteralType"
+- "LowEnergyPeerIdentifyAddressType"
+- "UInt8"
+- !private "~="
+depends-member:
+- !private ["9Bluetooth7AddressV", "bytes"]
+- !private ["9Bluetooth7AddressV", "deinit"]
+- !private ["9Bluetooth7AddressV", "littleEndian"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "Address"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "HCICommandTimeout"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "HCILESetPrivacyMode"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "LowEnergyPeerIdentifyAddressType"]
+- !private ["9Bluetooth0A23HostControllerInterfaceP", "deviceRequest"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergySetPrivacyMode"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["9Bluetooth8ByteSwapP", "bytes"]
+- !private ["9Bluetooth8ByteSwapP", "littleEndian"]
+- !private ["9Bluetooth9ByteValueP", "bytes"]
+- !private ["9Bluetooth9ByteValueP", "littleEndian"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s10CollectionP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "bytes"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "littleEndian"]
+- ["s23CustomStringConvertibleP", "setPrivacyMode"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "init"]
+- ["s9EquatableP", "RawValue"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_Default_RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "bytes"]
+- !private ["s9EquatableP", "default"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "littleEndian"]
+- !private ["s9EquatableP", "networkPrivacy"]
+- ["s9EquatableP", "rawValue"]
+- ["s9EquatableP", "setPrivacyMode"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s27ExpressibleByIntegerLiteralP", "default"]
+- ["9Bluetooth10HCICommandP", "setPrivacyMode"]
+- !private ["9Bluetooth19HCICommandParameterP", "Data"]
+- ["9Bluetooth19HCICommandParameterP", "HCICommandType"]
+- ["9Bluetooth19HCICommandParameterP", "HCILowEnergyCommand"]
+- ["9Bluetooth19HCICommandParameterP", "PrivacyMode"]
+- ["9Bluetooth19HCICommandParameterP", ""]
+- ["9Bluetooth19HCICommandParameterP", "_Default_HCICommandType"]
+- ["9Bluetooth19HCICommandParameterP", "command"]
+- ["9Bluetooth19HCICommandParameterP", "data"]
+- !private ["9Bluetooth19HCICommandParameterP", "init"]
+- !private ["9Bluetooth19HCICommandParameterP", "peerIdentityAddress"]
+- !private ["9Bluetooth19HCICommandParameterP", "peerIdentityAddressType"]
+- !private ["9Bluetooth19HCICommandParameterP", "privacyMode"]
+- !private ["9Bluetooth17HCICommandTimeoutV", "default"]
+- ["9Bluetooth19HCILESetPrivacyModeV", "Address"]
+- ["9Bluetooth19HCILESetPrivacyModeV", "Data"]
+- ["9Bluetooth19HCILESetPrivacyModeV", "HCICommandType"]
+- ["9Bluetooth19HCILESetPrivacyModeV", "HCILowEnergyCommand"]
+- ["9Bluetooth19HCILESetPrivacyModeV", "LowEnergyPeerIdentifyAddressType"]
+- ["9Bluetooth19HCILESetPrivacyModeV", "PrivacyMode"]
+- ["9Bluetooth19HCILESetPrivacyModeV", "UInt8"]
+- ["9Bluetooth19HCILESetPrivacyModeV", "_Default_HCICommandType"]
+- ["9Bluetooth19HCILESetPrivacyModeV", "command"]
+- ["9Bluetooth19HCILESetPrivacyModeV", "data"]
+- ["9Bluetooth19HCILESetPrivacyModeV", "deinit"]
+- ["9Bluetooth19HCILESetPrivacyModeV", "init"]
+- ["9Bluetooth19HCILESetPrivacyModeV", "peerIdentityAddress"]
+- ["9Bluetooth19HCILESetPrivacyModeV", "peerIdentityAddressType"]
+- ["9Bluetooth19HCILESetPrivacyModeV", "privacyMode"]
+- ["9Bluetooth19HCILowEnergyCommandO", "deinit"]
+- ["9Bluetooth19HCILowEnergyCommandO", "setPrivacyMode"]
+- ["s8HashableP", "RawValue"]
+- ["s8HashableP", ""]
+- ["s8HashableP", "_Default_RawValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "bytes"]
+- !private ["s8HashableP", "default"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "littleEndian"]
+- !private ["s8HashableP", "networkPrivacy"]
+- ["s8HashableP", "rawValue"]
+- ["s8HashableP", "setPrivacyMode"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["9Bluetooth32LowEnergyPeerIdentifyAddressTypeO", "deinit"]
+- !private ["9Bluetooth32LowEnergyPeerIdentifyAddressTypeO", "rawValue"]
+- !private ["s17MutableCollectionP", "init"]
+- ["9Bluetooth19HCILESetPrivacyModeV0cD0O", "RawValue"]
+- ["9Bluetooth19HCILESetPrivacyModeV0cD0O", "_Default_RawValue"]
+- ["9Bluetooth19HCILESetPrivacyModeV0cD0O", "deinit"]
+- ["9Bluetooth19HCILESetPrivacyModeV0cD0O", "devicePrivacy"]
+- ["9Bluetooth19HCILESetPrivacyModeV0cD0O", "hashValue"]
+- ["9Bluetooth19HCILESetPrivacyModeV0cD0O", "init"]
+- ["9Bluetooth19HCILESetPrivacyModeV0cD0O", "networkPrivacy"]
+- ["9Bluetooth19HCILESetPrivacyModeV0cD0O", "rawValue"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- !private ["s16RawRepresentableP", "bytes"]
+- !private ["s16RawRepresentableP", "default"]
+- ["s16RawRepresentableP", "hashValue"]
+- ["s16RawRepresentableP", "init"]
+- !private ["s16RawRepresentableP", "littleEndian"]
+- !private ["s16RawRepresentableP", "networkPrivacy"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s16RawRepresentableP", "setPrivacyMode"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "init"]
+depends-nominal:
+- !private "9Bluetooth7AddressV"
+- !private "s23BidirectionalCollectionP"
+- "9Bluetooth0A23HostControllerInterfaceP"
+- !private "Sb"
+- !private "9Bluetooth8ByteSwapP"
+- !private "9Bluetooth9ByteValueP"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "9Bluetooth10HCICommandP"
+- "9Bluetooth19HCICommandParameterP"
+- !private "9Bluetooth17HCICommandTimeoutV"
+- "9Bluetooth19HCILESetPrivacyModeV"
+- "9Bluetooth19HCILowEnergyCommandO"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "9Bluetooth32LowEnergyPeerIdentifyAddressTypeO"
+- !private "s17MutableCollectionP"
+- "9Bluetooth19HCILESetPrivacyModeV0cD0O"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "10Foundation17_ObjectBridgeableP"
+- !private "10Foundation21_ObjectTypeBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "eedca30954e2d3c3a0f6c391280be9e0"

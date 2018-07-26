@@ -1,0 +1,205 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AndroidBluetoothClassDeviceMajor"
+provides-nominal:
+- "7Android0A25BluetoothClassDeviceMajorV"
+provides-member:
+- ["7Android0A20BluetoothClassDeviceV", ""]
+- ["7Android0A25BluetoothClassDeviceMajorV", ""]
+- ["7Android0A20BluetoothClassDeviceV", "Major"]
+depends-top-level:
+- "Android"
+- "AndroidBluetoothClassDevice"
+- "AndroidBluetoothClassDeviceMajor"
+- "AndroidBluetoothClassDeviceMajorConstants"
+- "Array"
+- "AssignmentPrecedence"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- !private "JNIField"
+- "RawRepresentable"
+- "StringLiteralType"
+- !private "UnicodeScalarType"
+- "jclass"
+- "jfieldID"
+depends-member:
+- ["7AndroidAAO", "Bluetooth"]
+- ["7Android0A14BluetoothClassC", "Device"]
+- ["7Android0A20BluetoothClassDeviceV", "AndroidBluetoothClassDeviceMajor"]
+- ["7Android0A20BluetoothClassDeviceV", "Major"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "Android"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "AndroidBluetoothClassDeviceMajorConstants"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "Int"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "RawValue"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "_Default_RawValue"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "audioVideo"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "computer"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "deinit"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "health"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "imaging"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "init"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "misc"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "networking"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "peripheral"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "phone"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "rawValue"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "toy"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "uncategorized"]
+- ["7Android0A25BluetoothClassDeviceMajorV", "wearable"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s13BinaryIntegerP", "init"]
+- ["7AndroidAAO9BluetoothO", "Class"]
+- ["7AndroidAAO9BluetoothO", "className"]
+- ["7AndroidAAO9BluetoothO", "deinit"]
+- !private ["s7CVarArgP", "init"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- ["s9DecodableP", "init"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "rawValue"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["7Android0A34BluetoothClassDeviceMajorConstants33_9C6B7EE9ED3840996CDB48D9CF043E83LLC8JNICacheV7FieldIDV", "AUDIO_VIDEO"]
+- ["7Android0A34BluetoothClassDeviceMajorConstants33_9C6B7EE9ED3840996CDB48D9CF043E83LLC8JNICacheV7FieldIDV", "COMPUTER"]
+- ["7Android0A34BluetoothClassDeviceMajorConstants33_9C6B7EE9ED3840996CDB48D9CF043E83LLC8JNICacheV7FieldIDV", "HEALTH"]
+- ["7Android0A34BluetoothClassDeviceMajorConstants33_9C6B7EE9ED3840996CDB48D9CF043E83LLC8JNICacheV7FieldIDV", "IMAGING"]
+- ["7Android0A34BluetoothClassDeviceMajorConstants33_9C6B7EE9ED3840996CDB48D9CF043E83LLC8JNICacheV7FieldIDV", "MISC"]
+- ["7Android0A34BluetoothClassDeviceMajorConstants33_9C6B7EE9ED3840996CDB48D9CF043E83LLC8JNICacheV7FieldIDV", "NETWORKING"]
+- ["7Android0A34BluetoothClassDeviceMajorConstants33_9C6B7EE9ED3840996CDB48D9CF043E83LLC8JNICacheV7FieldIDV", "PERIPHERAL"]
+- ["7Android0A34BluetoothClassDeviceMajorConstants33_9C6B7EE9ED3840996CDB48D9CF043E83LLC8JNICacheV7FieldIDV", "PHONE"]
+- ["7Android0A34BluetoothClassDeviceMajorConstants33_9C6B7EE9ED3840996CDB48D9CF043E83LLC8JNICacheV7FieldIDV", "TOY"]
+- ["7Android0A34BluetoothClassDeviceMajorConstants33_9C6B7EE9ED3840996CDB48D9CF043E83LLC8JNICacheV7FieldIDV", "UNCATEGORIZED"]
+- ["7Android0A34BluetoothClassDeviceMajorConstants33_9C6B7EE9ED3840996CDB48D9CF043E83LLC8JNICacheV7FieldIDV", "WEARABLE"]
+- ["7Android0A34BluetoothClassDeviceMajorConstants33_9C6B7EE9ED3840996CDB48D9CF043E83LLC8JNICacheV7FieldIDV", "init"]
+- ["7Android0A34BluetoothClassDeviceMajorConstants33_9C6B7EE9ED3840996CDB48D9CF043E83LLC8JNICacheV7FieldIDV", "jfieldID"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "rawValue"]
+- !private ["Si", "init"]
+- ["3JNI12JNIClassNameV", "rawValue"]
+- !private ["10java_swift8JNIFieldC", "GetStaticIntField"]
+- ["10java_swift9JNIObjectC", "Device"]
+- ["10java_swift13JNIObjectInitP", "Device"]
+- ["10java_swift13JNIObjectInitP", "init"]
+- ["10java_swift17JNIObjectProtocolP", "Device"]
+- ["10java_swift17JNIObjectProtocolP", "init"]
+- ["10java_swift10JavaObjectC", "Device"]
+- ["7Android11JavaPackageP", "Bluetooth"]
+- ["7Android11JavaPackageP", "Class"]
+- ["7Android11JavaPackageP", "className"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["s7NumericP", "init"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["s16RawRepresentableP", "Android"]
+- ["s16RawRepresentableP", "AndroidBluetoothClassDeviceMajorConstants"]
+- ["s16RawRepresentableP", "Major"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", ""]
+- ["s16RawRepresentableP", "_Default_RawValue"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s8SequenceP", "init"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- ["10Foundation13_CFBridgeableP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation13_NSBridgeableP", "init"]
+- ["10Foundation17_ObjectBridgeableP", "init"]
+- ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "7AndroidAAO"
+- "7Android0A14BluetoothClassC"
+- "7Android0A20BluetoothClassDeviceV"
+- "7Android0A25BluetoothClassDeviceMajorV"
+- "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- "7AndroidAAO9BluetoothO"
+- !private "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "7Android0A34BluetoothClassDeviceMajorConstants33_9C6B7EE9ED3840996CDB48D9CF043E83LLC8JNICacheV7FieldIDV"
+- !private "s17FixedWidthIntegerP"
+- "s8HashableP"
+- !private "Si"
+- "3JNI12JNIClassNameV"
+- !private "10java_swift8JNIFieldC"
+- "10java_swift9JNIObjectC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- "10java_swift10JavaObjectC"
+- "7Android11JavaPackageP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- !private "s7NumericP"
+- "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "s18_BitwiseOperationsP"
+- "10Foundation13_CFBridgeableP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation13_NSBridgeableP"
+- "10Foundation17_ObjectBridgeableP"
+- "10Foundation21_ObjectTypeBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/JNI.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_lang.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/Bluetooth.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_util.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "b4a66d1df48a6fd8968bfec865eda8ae"

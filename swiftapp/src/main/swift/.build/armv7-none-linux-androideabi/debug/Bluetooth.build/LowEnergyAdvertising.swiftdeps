@@ -1,0 +1,63 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["9Bluetooth0A23HostControllerInterfaceP", ""]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergyClearAdvertisingSets"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergyPeriodicAdvertisingCreateSyncCancel"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergyClearPeriodicAdvertiserList"]
+depends-top-level:
+- "BluetoothHostControllerInterface"
+- "HCICommandTimeout"
+- !private "HCILowEnergyCommand"
+depends-member:
+- ["9Bluetooth0A23HostControllerInterfaceP", "HCICommandTimeout"]
+- !private ["9Bluetooth0A23HostControllerInterfaceP", "HCILowEnergyCommand"]
+- !private ["9Bluetooth0A23HostControllerInterfaceP", "deviceRequest"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergyClearAdvertisingSets"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergyClearPeriodicAdvertiserList"]
+- ["9Bluetooth0A23HostControllerInterfaceP", "lowEnergyPeriodicAdvertisingCreateSyncCancel"]
+- !private ["s23CustomStringConvertibleP", "clearAdvertisingSets"]
+- !private ["s23CustomStringConvertibleP", "clearPeriodicAdvertiserList"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "periodicAdvertisingCreateSyncCancel"]
+- !private ["s9EquatableP", "clearAdvertisingSets"]
+- !private ["s9EquatableP", "clearPeriodicAdvertiserList"]
+- !private ["s9EquatableP", "default"]
+- !private ["s9EquatableP", "periodicAdvertisingCreateSyncCancel"]
+- !private ["s27ExpressibleByIntegerLiteralP", "default"]
+- !private ["9Bluetooth10HCICommandP", "clearAdvertisingSets"]
+- !private ["9Bluetooth10HCICommandP", "clearPeriodicAdvertiserList"]
+- !private ["9Bluetooth10HCICommandP", "periodicAdvertisingCreateSyncCancel"]
+- !private ["9Bluetooth17HCICommandTimeoutV", "default"]
+- !private ["9Bluetooth19HCILowEnergyCommandO", "clearAdvertisingSets"]
+- !private ["9Bluetooth19HCILowEnergyCommandO", "clearPeriodicAdvertiserList"]
+- !private ["9Bluetooth19HCILowEnergyCommandO", "deinit"]
+- !private ["9Bluetooth19HCILowEnergyCommandO", "periodicAdvertisingCreateSyncCancel"]
+- !private ["s8HashableP", "clearAdvertisingSets"]
+- !private ["s8HashableP", "clearPeriodicAdvertiserList"]
+- !private ["s8HashableP", "default"]
+- !private ["s8HashableP", "periodicAdvertisingCreateSyncCancel"]
+- !private ["s16RawRepresentableP", "clearAdvertisingSets"]
+- !private ["s16RawRepresentableP", "clearPeriodicAdvertiserList"]
+- !private ["s16RawRepresentableP", "default"]
+- !private ["s16RawRepresentableP", "periodicAdvertisingCreateSyncCancel"]
+depends-nominal:
+- "9Bluetooth0A23HostControllerInterfaceP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9EquatableP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "9Bluetooth10HCICommandP"
+- !private "9Bluetooth17HCICommandTimeoutV"
+- !private "9Bluetooth19HCILowEnergyCommandO"
+- !private "s8HashableP"
+- !private "s16RawRepresentableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+interface-hash: "c1e591e8820a7153d92ebd1ee35761ec"

@@ -1,0 +1,488 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "InvocationHandler"
+- "InvocationHandlerForward"
+- "InvocationHandlerBase"
+provides-nominal:
+- "9java_lang17InvocationHandlerP"
+- "9java_lang24InvocationHandlerForwardC"
+- "9java_lang21InvocationHandlerBaseC"
+provides-member:
+- ["9java_lang17InvocationHandlerP", ""]
+- ["9java_lang24InvocationHandlerForwardC", ""]
+- ["9java_lang21InvocationHandlerBaseC", ""]
+- ["9java_lang17InvocationHandlerP", "localJavaObject"]
+depends-top-level:
+- "!="
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- !private "Exception"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "InvocationHandler"
+- "InvocationHandlerBase"
+- "InvocationHandlerForward"
+- !private "InvocationHandlerLocal_"
+- "InvocationHandler_invoke_0"
+- "InvocationHandler_invoke_0_type"
+- "JNI"
+- "JNIEnv"
+- "JNILocalProxy"
+- !private "JNIMethod"
+- "JNINativeMethod"
+- "JNIObjectForward"
+- "JNIReleasableProxy__finalize_thunk"
+- !private "JNIType"
+- "JNI_OK"
+- "JavaObject"
+- "JavaProtocol"
+- "Method"
+- "String"
+- "StringLiteralType"
+- "TernaryPrecedence"
+- !private "Throwable"
+- "UnsafeMutablePointer"
+- "UnsafeMutableRawPointer"
+- "java_swift"
+- "jclass"
+- "jint"
+- "jlong"
+- "jmethodID"
+- "jobject"
+- !private "jvalue"
+- "strdup"
+- "unsafeBitCast"
+depends-member:
+- !private ["9java_lang16AccessibleObjectC", "init"]
+- !private ["9java_lang16AnnotatedElementP", "init"]
+- ["Sa", "append"]
+- ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- ["Sa", "withUnsafeBufferPointer"]
+- ["s23BidirectionalCollectionP", "append"]
+- ["s23BidirectionalCollectionP", "baseAddress"]
+- ["s23BidirectionalCollectionP", "count"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- ["s23BidirectionalCollectionP", "withUnsafeBufferPointer"]
+- ["s13BinaryIntegerP", "init"]
+- ["Sb", "_getBuiltinLogicValue"]
+- ["s7CVarArgP", "_getBuiltinLogicValue"]
+- ["s7CVarArgP", "init"]
+- ["s10CollectionP", "append"]
+- ["s10CollectionP", "baseAddress"]
+- ["s10CollectionP", "count"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- ["s10CollectionP", "withUnsafeBufferPointer"]
+- ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "append"]
+- ["s28CustomDebugStringConvertibleP", "baseAddress"]
+- ["s28CustomDebugStringConvertibleP", "count"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- ["s28CustomDebugStringConvertibleP", "withUnsafeBufferPointer"]
+- ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- ["s17CustomReflectableP", "append"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- ["s17CustomReflectableP", "withUnsafeBufferPointer"]
+- ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s23CustomStringConvertibleP", "append"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- ["s23CustomStringConvertibleP", "withUnsafeBufferPointer"]
+- ["s9DecodableP", "_getBuiltinLogicValue"]
+- ["s9DecodableP", "append"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- ["s9DecodableP", "withUnsafeBufferPointer"]
+- ["s9EncodableP", "_getBuiltinLogicValue"]
+- ["s9EncodableP", "append"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- ["s9EncodableP", "withUnsafeBufferPointer"]
+- ["s9EquatableP", "_getBuiltinLogicValue"]
+- ["s9EquatableP", "append"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "subscript"]
+- ["s9EquatableP", "withUnsafeBufferPointer"]
+- !private ["s5ErrorP", "init"]
+- !private ["s5ErrorP", "withJavaObject"]
+- !private ["10java_swift9ExceptionC", "init"]
+- !private ["10java_swift9ExceptionC", "withJavaObject"]
+- !private ["9java_lang10ExecutableC", "init"]
+- ["s25ExpressibleByArrayLiteralP", "append"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- ["s25ExpressibleByArrayLiteralP", "withUnsafeBufferPointer"]
+- ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s17FixedWidthIntegerP", "init"]
+- !private ["9java_lang18GenericDeclarationP", "init"]
+- ["s8HashableP", "_getBuiltinLogicValue"]
+- ["s8HashableP", "init"]
+- ["Si", "init"]
+- !private ["9java_lang17InvocationHandlerP", "InvocationHandlerForward"]
+- !private ["9java_lang17InvocationHandlerP", "InvocationHandlerLocal_"]
+- !private ["9java_lang17InvocationHandlerP", "JNI"]
+- !private ["9java_lang17InvocationHandlerP", "JNIMethod"]
+- !private ["9java_lang17InvocationHandlerP", "JNIType"]
+- ["9java_lang17InvocationHandlerP", "JavaObject"]
+- ["9java_lang17InvocationHandlerP", "Method"]
+- ["9java_lang17InvocationHandlerP", "UnsafeMutablePointer"]
+- ["9java_lang17InvocationHandlerP", ""]
+- ["9java_lang17InvocationHandlerP", "invoke"]
+- !private ["9java_lang17InvocationHandlerP", "invoke_MethodID_2"]
+- !private ["9java_lang17InvocationHandlerP", "javaObject"]
+- ["9java_lang17InvocationHandlerP", "java_swift"]
+- ["9java_lang17InvocationHandlerP", "jobject"]
+- !private ["9java_lang17InvocationHandlerP", "jvalue"]
+- ["9java_lang17InvocationHandlerP", "localJavaObject"]
+- ["9java_lang21InvocationHandlerBaseC", "JavaObject"]
+- ["9java_lang21InvocationHandlerBaseC", "Method"]
+- ["9java_lang21InvocationHandlerBaseC", "deinit"]
+- ["9java_lang21InvocationHandlerBaseC", "init"]
+- ["9java_lang21InvocationHandlerBaseC", "invoke"]
+- ["9java_lang21InvocationHandlerBaseC", "java_swift"]
+- ["9java_lang21InvocationHandlerBaseC", "localJavaObject"]
+- !private ["9java_lang24InvocationHandlerForwardC", "InvocationHandlerForward"]
+- !private ["9java_lang24InvocationHandlerForwardC", "InvocationHandlerJNIClass"]
+- !private ["9java_lang24InvocationHandlerForwardC", "JNI"]
+- !private ["9java_lang24InvocationHandlerForwardC", "JNIMethod"]
+- !private ["9java_lang24InvocationHandlerForwardC", "JNIType"]
+- ["9java_lang24InvocationHandlerForwardC", "JavaObject"]
+- ["9java_lang24InvocationHandlerForwardC", "Method"]
+- ["9java_lang24InvocationHandlerForwardC", "deinit"]
+- ["9java_lang24InvocationHandlerForwardC", "init"]
+- ["9java_lang24InvocationHandlerForwardC", "invoke"]
+- !private ["9java_lang24InvocationHandlerForwardC", "invoke_MethodID_2"]
+- !private ["9java_lang24InvocationHandlerForwardC", "javaObject"]
+- ["9java_lang24InvocationHandlerForwardC", "java_swift"]
+- ["9java_lang24InvocationHandlerForwardC", "jclass"]
+- ["9java_lang24InvocationHandlerForwardC", "jmethodID"]
+- !private ["9java_lang24InvocationHandlerForwardC", "jobject"]
+- !private ["9java_lang24InvocationHandlerForwardC", "jvalue"]
+- !private ["10java_swift7JNICoreC", "DeleteLocalRef"]
+- !private ["10java_swift7JNICoreC", "ExceptionCheck"]
+- ["10java_swift7JNICoreC", "FindClass"]
+- ["10java_swift7JNICoreC", "api"]
+- !private ["10java_swift7JNICoreC", "check"]
+- ["10java_swift7JNICoreC", "env"]
+- ["10java_swift7JNICoreC", "report"]
+- ["10java_swift13JNILocalProxyC", "InvocationHandler_invoke_0"]
+- ["10java_swift13JNILocalProxyC", "InvocationHandler_invoke_0_type"]
+- ["10java_swift13JNILocalProxyC", "JNI"]
+- ["10java_swift13JNILocalProxyC", "JNINativeMethod"]
+- ["10java_swift13JNILocalProxyC", "JNIReleasableProxy__finalize_thunk"]
+- ["10java_swift13JNILocalProxyC", "JNI_OK"]
+- ["10java_swift13JNILocalProxyC", "String"]
+- ["10java_swift13JNILocalProxyC", "UnsafeMutableRawPointer"]
+- !private ["10java_swift13JNILocalProxyC", ""]
+- ["10java_swift13JNILocalProxyC", "_proxyClass"]
+- ["10java_swift13JNILocalProxyC", "init"]
+- ["10java_swift13JNILocalProxyC", "jclass"]
+- ["10java_swift13JNILocalProxyC", "jint"]
+- !private ["10java_swift13JNILocalProxyC", "localJavaObject"]
+- ["10java_swift13JNILocalProxyC", "proxyClass"]
+- ["10java_swift13JNILocalProxyC", "proxyClassName"]
+- ["10java_swift13JNILocalProxyC", "strdup"]
+- !private ["10java_swift13JNILocalProxyC", "swiftObject"]
+- ["10java_swift13JNILocalProxyC", "unsafeBitCast"]
+- !private ["10java_swift9JNIMethodC", "CallObjectMethod"]
+- ["SC19JNINativeInterface_V", "NewGlobalRef"]
+- ["SC19JNINativeInterface_V", "RegisterNatives"]
+- !private ["SC19JNINativeInterface_V", "Throw"]
+- ["SC15JNINativeMethodV", "init"]
+- !private ["10java_swift9JNIObjectC", "InvocationHandlerForward"]
+- ["10java_swift9JNIObjectC", "InvocationHandlerJNIClass"]
+- !private ["10java_swift9JNIObjectC", "JNI"]
+- !private ["10java_swift9JNIObjectC", "JNIMethod"]
+- !private ["10java_swift9JNIObjectC", "JNIType"]
+- ["10java_swift9JNIObjectC", "JavaObject"]
+- ["10java_swift9JNIObjectC", "Method"]
+- ["10java_swift9JNIObjectC", "init"]
+- ["10java_swift9JNIObjectC", "invoke"]
+- ["10java_swift9JNIObjectC", "invoke_MethodID_2"]
+- !private ["10java_swift9JNIObjectC", "javaObject"]
+- ["10java_swift9JNIObjectC", "java_swift"]
+- ["10java_swift9JNIObjectC", "jclass"]
+- ["10java_swift9JNIObjectC", "jmethodID"]
+- !private ["10java_swift9JNIObjectC", "jobject"]
+- !private ["10java_swift9JNIObjectC", "jvalue"]
+- !private ["10java_swift9JNIObjectC", "withJavaObject"]
+- !private ["10java_swift16JNIObjectForwardC", "InvocationHandlerForward"]
+- ["10java_swift16JNIObjectForwardC", "InvocationHandlerJNIClass"]
+- !private ["10java_swift16JNIObjectForwardC", "JNI"]
+- !private ["10java_swift16JNIObjectForwardC", "JNIMethod"]
+- !private ["10java_swift16JNIObjectForwardC", "JNIType"]
+- ["10java_swift16JNIObjectForwardC", "JavaObject"]
+- ["10java_swift16JNIObjectForwardC", "Method"]
+- ["10java_swift16JNIObjectForwardC", ""]
+- ["10java_swift16JNIObjectForwardC", "init"]
+- ["10java_swift16JNIObjectForwardC", "invoke"]
+- ["10java_swift16JNIObjectForwardC", "invoke_MethodID_2"]
+- !private ["10java_swift16JNIObjectForwardC", "javaObject"]
+- ["10java_swift16JNIObjectForwardC", "java_swift"]
+- ["10java_swift16JNIObjectForwardC", "jclass"]
+- ["10java_swift16JNIObjectForwardC", "jmethodID"]
+- !private ["10java_swift16JNIObjectForwardC", "jobject"]
+- !private ["10java_swift16JNIObjectForwardC", "jvalue"]
+- !private ["10java_swift13JNIObjectInitP", "InvocationHandlerForward"]
+- !private ["10java_swift13JNIObjectInitP", "JNI"]
+- !private ["10java_swift13JNIObjectInitP", "JNIMethod"]
+- !private ["10java_swift13JNIObjectInitP", "JNIType"]
+- ["10java_swift13JNIObjectInitP", ""]
+- ["10java_swift13JNIObjectInitP", "init"]
+- ["10java_swift13JNIObjectInitP", "invoke"]
+- !private ["10java_swift13JNIObjectInitP", "invoke_MethodID_2"]
+- !private ["10java_swift13JNIObjectInitP", "javaObject"]
+- !private ["10java_swift13JNIObjectInitP", "java_swift"]
+- !private ["10java_swift13JNIObjectInitP", "jobject"]
+- !private ["10java_swift13JNIObjectInitP", "jvalue"]
+- !private ["10java_swift13JNIObjectInitP", "withJavaObject"]
+- !private ["10java_swift17JNIObjectProtocolP", "InvocationHandlerForward"]
+- !private ["10java_swift17JNIObjectProtocolP", "InvocationHandlerLocal_"]
+- ["10java_swift17JNIObjectProtocolP", "InvocationHandler_invoke_0"]
+- ["10java_swift17JNIObjectProtocolP", "JNI"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIMethod"]
+- ["10java_swift17JNIObjectProtocolP", "JNINativeMethod"]
+- ["10java_swift17JNIObjectProtocolP", "JNIReleasableProxy__finalize_thunk"]
+- !private ["10java_swift17JNIObjectProtocolP", "JNIType"]
+- ["10java_swift17JNIObjectProtocolP", "JNI_OK"]
+- ["10java_swift17JNIObjectProtocolP", "JavaObject"]
+- ["10java_swift17JNIObjectProtocolP", "Method"]
+- ["10java_swift17JNIObjectProtocolP", "UnsafeMutablePointer"]
+- ["10java_swift17JNIObjectProtocolP", "UnsafeMutableRawPointer"]
+- ["10java_swift17JNIObjectProtocolP", ""]
+- !private ["10java_swift17JNIObjectProtocolP", "_proxyClass"]
+- ["10java_swift17JNIObjectProtocolP", "init"]
+- ["10java_swift17JNIObjectProtocolP", "invoke"]
+- !private ["10java_swift17JNIObjectProtocolP", "invoke_MethodID_2"]
+- !private ["10java_swift17JNIObjectProtocolP", "javaObject"]
+- ["10java_swift17JNIObjectProtocolP", "java_swift"]
+- ["10java_swift17JNIObjectProtocolP", "jint"]
+- ["10java_swift17JNIObjectProtocolP", "jobject"]
+- !private ["10java_swift17JNIObjectProtocolP", "jvalue"]
+- ["10java_swift17JNIObjectProtocolP", "localJavaObject"]
+- ["10java_swift17JNIObjectProtocolP", "proxyClassName"]
+- ["10java_swift17JNIObjectProtocolP", "strdup"]
+- !private ["10java_swift17JNIObjectProtocolP", "swiftObject"]
+- ["10java_swift17JNIObjectProtocolP", "unsafeBitCast"]
+- !private ["10java_swift17JNIObjectProtocolP", "withJavaObject"]
+- ["10java_swift18JNIReleasableProxyC", "InvocationHandler_invoke_0"]
+- ["10java_swift18JNIReleasableProxyC", "InvocationHandler_invoke_0_type"]
+- ["10java_swift18JNIReleasableProxyC", "JNI"]
+- ["10java_swift18JNIReleasableProxyC", "JNINativeMethod"]
+- ["10java_swift18JNIReleasableProxyC", "JNIReleasableProxy__finalize_thunk"]
+- ["10java_swift18JNIReleasableProxyC", "JNI_OK"]
+- ["10java_swift18JNIReleasableProxyC", "String"]
+- ["10java_swift18JNIReleasableProxyC", "UnsafeMutableRawPointer"]
+- ["10java_swift18JNIReleasableProxyC", "_proxyClass"]
+- ["10java_swift18JNIReleasableProxyC", "jclass"]
+- ["10java_swift18JNIReleasableProxyC", "jint"]
+- !private ["10java_swift18JNIReleasableProxyC", "localJavaObject"]
+- ["10java_swift18JNIReleasableProxyC", "proxyClass"]
+- ["10java_swift18JNIReleasableProxyC", "proxyClassName"]
+- ["10java_swift18JNIReleasableProxyC", "strdup"]
+- !private ["10java_swift18JNIReleasableProxyC", "swiftObject"]
+- ["10java_swift18JNIReleasableProxyC", "unsafeBitCast"]
+- !private ["10java_swift7JNITypeC", "toJava"]
+- !private ["10java_swift7JNITypeC", "toSwift"]
+- !private ["10java_swift10JavaObjectC", "init"]
+- !private ["10java_swift10JavaObjectC", "withJavaObject"]
+- !private ["10java_swift12JavaProtocolP", "InvocationHandlerForward"]
+- !private ["10java_swift12JavaProtocolP", "InvocationHandlerLocal_"]
+- !private ["10java_swift12JavaProtocolP", "JNI"]
+- !private ["10java_swift12JavaProtocolP", "JNIMethod"]
+- !private ["10java_swift12JavaProtocolP", "JNIType"]
+- ["10java_swift12JavaProtocolP", "JavaObject"]
+- ["10java_swift12JavaProtocolP", "Method"]
+- ["10java_swift12JavaProtocolP", "UnsafeMutablePointer"]
+- ["10java_swift12JavaProtocolP", ""]
+- !private ["10java_swift12JavaProtocolP", "init"]
+- ["10java_swift12JavaProtocolP", "invoke"]
+- !private ["10java_swift12JavaProtocolP", "invoke_MethodID_2"]
+- !private ["10java_swift12JavaProtocolP", "javaObject"]
+- ["10java_swift12JavaProtocolP", "java_swift"]
+- ["10java_swift12JavaProtocolP", "jobject"]
+- !private ["10java_swift12JavaProtocolP", "jvalue"]
+- ["10java_swift12JavaProtocolP", "localJavaObject"]
+- !private ["10java_swift12JavaProtocolP", "withJavaObject"]
+- ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- !private ["9java_lang6MemberP", "init"]
+- !private ["9java_lang6MethodC", "deinit"]
+- !private ["9java_lang6MethodC", "init"]
+- ["s10MirrorPathP", "init"]
+- ["s17MutableCollectionP", "append"]
+- ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- ["s17MutableCollectionP", "withUnsafeBufferPointer"]
+- ["s7NumericP", "init"]
+- ["s22RandomAccessCollectionP", "append"]
+- ["s22RandomAccessCollectionP", "baseAddress"]
+- ["s22RandomAccessCollectionP", "count"]
+- ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- ["s22RandomAccessCollectionP", "withUnsafeBufferPointer"]
+- ["s26RangeReplaceableCollectionP", "append"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- ["s26RangeReplaceableCollectionP", "withUnsafeBufferPointer"]
+- ["s8SequenceP", "append"]
+- ["s8SequenceP", "baseAddress"]
+- ["s8SequenceP", "count"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- ["s8SequenceP", "withUnsafeBufferPointer"]
+- ["s13SignedIntegerP", "init"]
+- ["s13SignedNumericP", "init"]
+- ["s12StaticStringV", "init"]
+- ["s10StrideableP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["10java_swift9ThrowableC", "init"]
+- !private ["10java_swift9ThrowableC", "withJavaObject"]
+- !private ["10java_swift19UnavailableProtocolP", "init"]
+- !private ["10java_swift19UnavailableProtocolP", "withJavaObject"]
+- ["SR", "baseAddress"]
+- ["SR", "count"]
+- ["s14_ArrayProtocolP", "append"]
+- ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- ["s14_ArrayProtocolP", "withUnsafeBufferPointer"]
+- ["s18_BitwiseOperationsP", "init"]
+- ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- ["10Foundation13_CFBridgeableP", "append"]
+- ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- ["10Foundation13_CFBridgeableP", "withUnsafeBufferPointer"]
+- ["s24_DestructorSafeContainerP", "append"]
+- ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- ["s24_DestructorSafeContainerP", "withUnsafeBufferPointer"]
+- ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation13_NSBridgeableP", "append"]
+- ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- ["10Foundation13_NSBridgeableP", "withUnsafeBufferPointer"]
+- ["10Foundation17_ObjectBridgeableP", "_getBuiltinLogicValue"]
+- ["10Foundation17_ObjectBridgeableP", "append"]
+- ["10Foundation17_ObjectBridgeableP", "init"]
+- !private ["10Foundation17_ObjectBridgeableP", "subscript"]
+- ["10Foundation17_ObjectBridgeableP", "withUnsafeBufferPointer"]
+- ["10Foundation21_ObjectTypeBridgeableP", "_getBuiltinLogicValue"]
+- ["10Foundation21_ObjectTypeBridgeableP", "append"]
+- ["10Foundation21_ObjectTypeBridgeableP", "init"]
+- !private ["10Foundation21_ObjectTypeBridgeableP", "subscript"]
+- ["10Foundation21_ObjectTypeBridgeableP", "withUnsafeBufferPointer"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["SC6jvalueV", "init"]
+- !private ["SC6jvalueV", "l"]
+depends-nominal:
+- !private "9java_lang16AccessibleObjectC"
+- !private "9java_lang16AnnotatedElementP"
+- "Sa"
+- "s23BidirectionalCollectionP"
+- "s13BinaryIntegerP"
+- "Sb"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s5ErrorP"
+- !private "10java_swift9ExceptionC"
+- !private "9java_lang10ExecutableC"
+- "s25ExpressibleByArrayLiteralP"
+- "s27ExpressibleByBooleanLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "s17FixedWidthIntegerP"
+- !private "9java_lang18GenericDeclarationP"
+- "s8HashableP"
+- "Si"
+- "9java_lang17InvocationHandlerP"
+- "9java_lang21InvocationHandlerBaseC"
+- "9java_lang24InvocationHandlerForwardC"
+- "10java_swift7JNICoreC"
+- "10java_swift13JNILocalProxyC"
+- !private "10java_swift9JNIMethodC"
+- "SC19JNINativeInterface_V"
+- "SC15JNINativeMethodV"
+- "10java_swift9JNIObjectC"
+- "10java_swift16JNIObjectForwardC"
+- "10java_swift13JNIObjectInitP"
+- "10java_swift17JNIObjectProtocolP"
+- "10java_swift18JNIReleasableProxyC"
+- !private "10java_swift7JNITypeC"
+- !private "10java_swift10JavaObjectC"
+- "10java_swift12JavaProtocolP"
+- "s25LosslessStringConvertibleP"
+- !private "9java_lang6MemberP"
+- !private "9java_lang6MethodC"
+- "s10MirrorPathP"
+- "s17MutableCollectionP"
+- "s7NumericP"
+- "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s8SequenceP"
+- "s13SignedIntegerP"
+- "s13SignedNumericP"
+- "s12StaticStringV"
+- "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "10java_swift9ThrowableC"
+- !private "10java_swift19UnavailableProtocolP"
+- "SR"
+- "s14_ArrayProtocolP"
+- "s18_BitwiseOperationsP"
+- "10Foundation13_CFBridgeableP"
+- "s24_DestructorSafeContainerP"
+- "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation13_NSBridgeableP"
+- "10Foundation17_ObjectBridgeableP"
+- "10Foundation21_ObjectTypeBridgeableP"
+- "s16_SwiftStringViewP"
+- !private "SC6jvalueV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Glibc.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Dispatch.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Foundation.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/Swift.swiftmodule"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/armv7-none-linux-androideabi/debug/java_swift.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
+- "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
+interface-hash: "3f1b18903bd961acb588d0494321030f"
