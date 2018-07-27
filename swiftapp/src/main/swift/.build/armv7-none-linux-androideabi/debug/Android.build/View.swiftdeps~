@@ -525,6 +525,7 @@ depends-top-level:
 - !private "JNI_FALSE"
 - !private "JNI_TRUE"
 - "JavaObject"
+- !private "NSLog"
 - "StaticString"
 - "String"
 - "StringLiteralType"
@@ -633,6 +634,7 @@ depends-member:
 - ["7Android0A4ViewC", "MEASURED_STATE_TOO_SMALL"]
 - ["7Android0A4ViewC", "NOT_FOCUSABLE"]
 - ["7Android0A4ViewC", "NO_ID"]
+- !private ["7Android0A4ViewC", "NSLog"]
 - ["7Android0A4ViewC", "OVER_SCROLL_ALWAYS"]
 - ["7Android0A4ViewC", "OVER_SCROLL_IF_CONTENT_SCROLLS"]
 - ["7Android0A4ViewC", "OVER_SCROLL_NEVER"]
@@ -1364,6 +1366,7 @@ depends-member:
 - ["10java_swift9JNIObjectC", "MEASURED_STATE_TOO_SMALL"]
 - ["10java_swift9JNIObjectC", "NOT_FOCUSABLE"]
 - ["10java_swift9JNIObjectC", "NO_ID"]
+- !private ["10java_swift9JNIObjectC", "NSLog"]
 - ["10java_swift9JNIObjectC", "OVER_SCROLL_ALWAYS"]
 - ["10java_swift9JNIObjectC", "OVER_SCROLL_IF_CONTENT_SCROLLS"]
 - ["10java_swift9JNIObjectC", "OVER_SCROLL_NEVER"]
@@ -1826,6 +1829,7 @@ depends-member:
 - !private ["10java_swift13JNIObjectInitP", "JavaObject"]
 - ["10java_swift13JNIObjectInitP", "LayoutParams"]
 - ["10java_swift13JNIObjectInitP", "MEASURED_HEIGHT_STATE_SHIFT"]
+- !private ["10java_swift13JNIObjectInitP", "NSLog"]
 - !private ["10java_swift13JNIObjectInitP", "String"]
 - ["10java_swift13JNIObjectInitP", ""]
 - !private ["10java_swift13JNIObjectInitP", "findViewById"]
@@ -1860,6 +1864,7 @@ depends-member:
 - !private ["10java_swift17JNIObjectProtocolP", "JavaObject"]
 - ["10java_swift17JNIObjectProtocolP", "LayoutParams"]
 - ["10java_swift17JNIObjectProtocolP", "MEASURED_HEIGHT_STATE_SHIFT"]
+- !private ["10java_swift17JNIObjectProtocolP", "NSLog"]
 - !private ["10java_swift17JNIObjectProtocolP", "String"]
 - ["10java_swift17JNIObjectProtocolP", ""]
 - !private ["10java_swift17JNIObjectProtocolP", "findViewById"]
@@ -1963,6 +1968,7 @@ depends-member:
 - ["10java_swift10JavaObjectC", "MEASURED_STATE_TOO_SMALL"]
 - ["10java_swift10JavaObjectC", "NOT_FOCUSABLE"]
 - ["10java_swift10JavaObjectC", "NO_ID"]
+- !private ["10java_swift10JavaObjectC", "NSLog"]
 - ["10java_swift10JavaObjectC", "OVER_SCROLL_ALWAYS"]
 - ["10java_swift10JavaObjectC", "OVER_SCROLL_IF_CONTENT_SCROLLS"]
 - ["10java_swift10JavaObjectC", "OVER_SCROLL_NEVER"]

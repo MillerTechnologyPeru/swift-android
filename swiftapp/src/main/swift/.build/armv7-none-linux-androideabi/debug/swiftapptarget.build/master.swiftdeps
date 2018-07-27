@@ -1,11 +1,11 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
 options: "87cf56c509a2a83855a4f1aeac74b286"
-build_time: [1532639309, 846014000]
+build_time: [1532705628, 331333000]
 inputs:
-  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/MainActivity.swift": [1532550741, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/MainActivity.swift": [1532705540, 0]
   "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/MainActivityBindings.swift": [1531945888, 0]
   "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/MainActivityBindings_Listener.swift": [1531945888, 0]
   "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/MainActivityBindings_Responder.swift": [1531945888, 0]
   "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/NewView.swift": [1532448328, 0]
-  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/NewViewGroup.swift": [1532638990, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/NewViewGroup.swift": [1532700886, 0]
   "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/Sources/SwiftApplication.swift": [1532021029, 0]

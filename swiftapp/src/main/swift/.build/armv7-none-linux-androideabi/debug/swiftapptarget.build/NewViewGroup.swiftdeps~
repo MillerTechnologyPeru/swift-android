@@ -28,14 +28,12 @@ depends-top-level:
 - "jobject"
 - !private "max"
 depends-member:
-- ["7AndroidAAO", "Content"]
 - ["7AndroidAAO", "View"]
 - ["7Android0A4ViewC", "Android"]
 - ["7Android0A4ViewC", "Bool"]
 - ["7Android0A4ViewC", "Int"]
 - !private ["7Android0A4ViewC", "NSLog"]
 - ["7Android0A4ViewC", "addView"]
-- !private ["7Android0A4ViewC", "bindNewObject"]
 - !private ["7Android0A4ViewC", "combineMeasuredStates"]
 - !private ["7Android0A4ViewC", "getChildAt"]
 - !private ["7Android0A4ViewC", "getChildCount"]
@@ -48,7 +46,6 @@ depends-member:
 - !private ["7Android0A4ViewC", "getPaddingTop"]
 - !private ["7Android0A4ViewC", "getVisibility"]
 - ["7Android0A4ViewC", "init"]
-- !private ["7Android0A4ViewC", "javaObject"]
 - ["7Android0A4ViewC", "jobject"]
 - !private ["7Android0A4ViewC", "layout"]
 - !private ["7Android0A4ViewC", "max"]
@@ -64,7 +61,6 @@ depends-member:
 - !private ["7Android0A9ViewGroupC", "NSLog"]
 - ["7Android0A9ViewGroupC", ""]
 - ["7Android0A9ViewGroupC", "addView"]
-- !private ["7Android0A9ViewGroupC", "bindNewObject"]
 - !private ["7Android0A9ViewGroupC", "combineMeasuredStates"]
 - !private ["7Android0A9ViewGroupC", "getChildAt"]
 - !private ["7Android0A9ViewGroupC", "getChildCount"]
@@ -75,7 +71,6 @@ depends-member:
 - !private ["7Android0A9ViewGroupC", "getPaddingRight"]
 - !private ["7Android0A9ViewGroupC", "getPaddingTop"]
 - ["7Android0A9ViewGroupC", "init"]
-- !private ["7Android0A9ViewGroupC", "javaObject"]
 - ["7Android0A9ViewGroupC", "jobject"]
 - !private ["7Android0A9ViewGroupC", "max"]
 - !private ["7Android0A9ViewGroupC", "measureChild"]
@@ -88,7 +83,6 @@ depends-member:
 - !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s10CollectionP", "init"]
 - !private ["s10ComparableP", "init"]
-- ["7AndroidAAO7ContentO", "Context"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
@@ -113,7 +107,6 @@ depends-member:
 - ["10java_swift9JNIObjectC", "Int"]
 - !private ["10java_swift9JNIObjectC", "NSLog"]
 - ["10java_swift9JNIObjectC", "addView"]
-- !private ["10java_swift9JNIObjectC", "bindNewObject"]
 - !private ["10java_swift9JNIObjectC", "combineMeasuredStates"]
 - !private ["10java_swift9JNIObjectC", "getChildAt"]
 - !private ["10java_swift9JNIObjectC", "getChildCount"]
@@ -126,7 +119,6 @@ depends-member:
 - !private ["10java_swift9JNIObjectC", "getPaddingTop"]
 - !private ["10java_swift9JNIObjectC", "getVisibility"]
 - ["10java_swift9JNIObjectC", "init"]
-- !private ["10java_swift9JNIObjectC", "javaObject"]
 - ["10java_swift9JNIObjectC", "jobject"]
 - !private ["10java_swift9JNIObjectC", "layout"]
 - !private ["10java_swift9JNIObjectC", "max"]
@@ -139,7 +131,6 @@ depends-member:
 - !private ["10java_swift13JNIObjectInitP", "NSLog"]
 - ["10java_swift13JNIObjectInitP", ""]
 - !private ["10java_swift13JNIObjectInitP", "addView"]
-- !private ["10java_swift13JNIObjectInitP", "bindNewObject"]
 - !private ["10java_swift13JNIObjectInitP", "combineMeasuredStates"]
 - !private ["10java_swift13JNIObjectInitP", "getChildAt"]
 - !private ["10java_swift13JNIObjectInitP", "getChildCount"]
@@ -152,7 +143,6 @@ depends-member:
 - !private ["10java_swift13JNIObjectInitP", "getPaddingTop"]
 - !private ["10java_swift13JNIObjectInitP", "getVisibility"]
 - !private ["10java_swift13JNIObjectInitP", "init"]
-- !private ["10java_swift13JNIObjectInitP", "javaObject"]
 - !private ["10java_swift13JNIObjectInitP", "layout"]
 - !private ["10java_swift13JNIObjectInitP", "max"]
 - !private ["10java_swift13JNIObjectInitP", "measure"]
@@ -162,7 +152,6 @@ depends-member:
 - !private ["10java_swift17JNIObjectProtocolP", "NSLog"]
 - ["10java_swift17JNIObjectProtocolP", ""]
 - !private ["10java_swift17JNIObjectProtocolP", "addView"]
-- !private ["10java_swift17JNIObjectProtocolP", "bindNewObject"]
 - !private ["10java_swift17JNIObjectProtocolP", "combineMeasuredStates"]
 - !private ["10java_swift17JNIObjectProtocolP", "getChildAt"]
 - !private ["10java_swift17JNIObjectProtocolP", "getChildCount"]
@@ -175,7 +164,6 @@ depends-member:
 - !private ["10java_swift17JNIObjectProtocolP", "getPaddingTop"]
 - !private ["10java_swift17JNIObjectProtocolP", "getVisibility"]
 - !private ["10java_swift17JNIObjectProtocolP", "init"]
-- !private ["10java_swift17JNIObjectProtocolP", "javaObject"]
 - !private ["10java_swift17JNIObjectProtocolP", "layout"]
 - !private ["10java_swift17JNIObjectProtocolP", "max"]
 - !private ["10java_swift17JNIObjectProtocolP", "measure"]
@@ -187,7 +175,6 @@ depends-member:
 - ["10java_swift10JavaObjectC", "Int"]
 - !private ["10java_swift10JavaObjectC", "NSLog"]
 - ["10java_swift10JavaObjectC", "addView"]
-- !private ["10java_swift10JavaObjectC", "bindNewObject"]
 - !private ["10java_swift10JavaObjectC", "combineMeasuredStates"]
 - !private ["10java_swift10JavaObjectC", "getChildAt"]
 - !private ["10java_swift10JavaObjectC", "getChildCount"]
@@ -200,7 +187,6 @@ depends-member:
 - !private ["10java_swift10JavaObjectC", "getPaddingTop"]
 - !private ["10java_swift10JavaObjectC", "getVisibility"]
 - ["10java_swift10JavaObjectC", "init"]
-- !private ["10java_swift10JavaObjectC", "javaObject"]
 - ["10java_swift10JavaObjectC", "jobject"]
 - !private ["10java_swift10JavaObjectC", "layout"]
 - !private ["10java_swift10JavaObjectC", "max"]
@@ -210,8 +196,6 @@ depends-member:
 - ["10java_swift10JavaObjectC", "onMeasure"]
 - !private ["10java_swift10JavaObjectC", "resolveSizeAndState"]
 - !private ["10java_swift10JavaObjectC", "setMeasuredDimension"]
-- ["7Android11JavaPackageP", "Content"]
-- ["7Android11JavaPackageP", "Context"]
 - ["7Android11JavaPackageP", "View"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
@@ -221,7 +205,6 @@ depends-member:
 - ["14swiftapptarget12NewViewGroupC", "Int"]
 - !private ["14swiftapptarget12NewViewGroupC", "NSLog"]
 - ["14swiftapptarget12NewViewGroupC", "addView"]
-- !private ["14swiftapptarget12NewViewGroupC", "bindNewObject"]
 - !private ["14swiftapptarget12NewViewGroupC", "combineMeasuredStates"]
 - ["14swiftapptarget12NewViewGroupC", "deinit"]
 - !private ["14swiftapptarget12NewViewGroupC", "getChildAt"]
@@ -233,7 +216,6 @@ depends-member:
 - !private ["14swiftapptarget12NewViewGroupC", "getPaddingRight"]
 - !private ["14swiftapptarget12NewViewGroupC", "getPaddingTop"]
 - ["14swiftapptarget12NewViewGroupC", "init"]
-- !private ["14swiftapptarget12NewViewGroupC", "javaObject"]
 - ["14swiftapptarget12NewViewGroupC", "jobject"]
 - !private ["14swiftapptarget12NewViewGroupC", "max"]
 - !private ["14swiftapptarget12NewViewGroupC", "measureChild"]
@@ -272,7 +254,6 @@ depends-nominal:
 - !private "s7CVarArgP"
 - !private "s10CollectionP"
 - !private "s10ComparableP"
-- "7AndroidAAO7ContentO"
 - !private "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
@@ -326,4 +307,4 @@ depends-external:
 - "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
 - "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
 - "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
-interface-hash: "59b6926a0ef1f5f9a2955e68fe65713a"
+interface-hash: "1c6e413eb1abbff536e6bb6747319ded"

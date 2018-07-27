@@ -304,6 +304,7 @@ depends-member:
 - !private ["14swiftapptarget7NewViewC", "init"]
 - !private ["14swiftapptarget7NewViewC", "layoutParams"]
 - !private ["14swiftapptarget7NewViewC", "setClickable"]
+- !private ["14swiftapptarget12NewViewGroupC", "addView"]
 - !private ["14swiftapptarget12NewViewGroupC", "init"]
 - ["7AndroidAAO2OSO", "Bundle"]
 - !private ["s26RangeReplaceableCollectionP", "init"]

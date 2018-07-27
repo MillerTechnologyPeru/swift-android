@@ -1,4 +1,4 @@
-11b15779fb1b1474ed2a0bc447453d319d1e5959	not-for-merge	branch 'feature/change-hciinquiry' of https://github.com/PureSwift/Bluetooth
+3d58c92cf59e78b1f77c825d32304bd90b80feaa	not-for-merge	branch 'feature/change-hciinquiry' of https://github.com/PureSwift/Bluetooth
 0663f7a75e21e945e8eea72a9b1d12769615a942	not-for-merge	branch 'feature/characteristics/add-service-changed-characteristic' of https://github.com/PureSwift/Bluetooth
 6d02f32ba3949caa3aa843dedf1752bd6c785fe2	not-for-merge	branch 'gh-pages' of https://github.com/PureSwift/Bluetooth
 2459f22574c8a409f020c6da0a5756deafdce5a6	not-for-merge	branch 'master' of https://github.com/PureSwift/Bluetooth
@@ -71,8 +71,8 @@ f42b1cdd94625d1f7950415537c2377116be59ba	not-for-merge	'refs/pull/94/head' of ht
 ae4d27c323b6370d61bf1d1658772085749110b7	not-for-merge	'refs/pull/95/head' of https://github.com/PureSwift/Bluetooth
 a42b8fd0fa824ede6153db2d46df91cb2a5b5864	not-for-merge	'refs/pull/96/head' of https://github.com/PureSwift/Bluetooth
 38eefc0b921c8f9b30e1e636e0d9accd6fc76907	not-for-merge	'refs/pull/97/head' of https://github.com/PureSwift/Bluetooth
-11b15779fb1b1474ed2a0bc447453d319d1e5959	not-for-merge	'refs/pull/99/head' of https://github.com/PureSwift/Bluetooth
-fd52eb8b222af098b457bb6fb99a58a53384638f	not-for-merge	'refs/pull/99/merge' of https://github.com/PureSwift/Bluetooth
+3d58c92cf59e78b1f77c825d32304bd90b80feaa	not-for-merge	'refs/pull/99/head' of https://github.com/PureSwift/Bluetooth
+8f8156f5c21e21df3bbd0aba937cf4b7f07e2204	not-for-merge	'refs/pull/99/merge' of https://github.com/PureSwift/Bluetooth
 23c9bc540cad1f336330d44f962ad552b7e67aa4	not-for-merge	tag '1.0.0' of https://github.com/PureSwift/Bluetooth
 dc2e7a3d8f169407e0dda23d7c06df994fa8bb45	not-for-merge	tag '1.0.1' of https://github.com/PureSwift/Bluetooth
 56ca2b3c14cf9aaa75faebaa5126a7e338828136	not-for-merge	tag '1.0.2' of https://github.com/PureSwift/Bluetooth

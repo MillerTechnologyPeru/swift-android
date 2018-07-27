@@ -22,7 +22,7 @@ open class NewViewGroup: Android.View.ViewGroup {
         self.init(javaObject: nil)
         var isNil: Bool = self.javaObject == nil
         NSLog("NVG: Nil test: \(isNil)")
-        bindNewObject()
+        bindNewObject(context)
         isNil = self.javaObject == nil
         NSLog("NVG: Nil test: \(isNil)")
     }

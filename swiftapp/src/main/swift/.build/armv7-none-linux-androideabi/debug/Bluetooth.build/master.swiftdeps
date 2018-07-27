@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
 options: "cd26d2ccb4eb62cc389e459adb47abc9"
-build_time: [1532531371, 70401000]
+build_time: [1532698843, 674846000]
 inputs:
   "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Bluetooth.git--1679829496101537995/Sources/ATT.swift": [1532527762, 0]
   "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/Bluetooth.git--1679829496101537995/Sources/ATTConnection.swift": [1532527762, 0]

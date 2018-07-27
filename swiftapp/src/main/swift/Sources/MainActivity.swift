@@ -57,19 +57,17 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         let viewResource = self.getIdentifier(name: "activity_main", type: "layout")
         let mainView = Android.View.LayoutInflater.from(context: UIApplication.context!).inflate(resource:
             Android.R.Layout(rawValue: viewResource), root: rootView, attachToRoot: false)
-        
         let tvId = self.getIdentifier(name: "textview1", type: "id")
-        
         guard let textviewObject = mainView.findViewById(tvId)
             else { fatalError("No view for \(tvId)") }
-        
         let textview: Android.Widget.TextView? = Android.Widget.TextView(casting: textviewObject)
-        
         textview!.text = "Swift App testing"
         textview!.setBackgroundColor(color: 50)
         // Width and height must be "match parent in order to use gravity
         textview!.setGravity(80)
         NSLog("Text: \(textview!.text)")
+        
+        
         
         // Views to add to NewViewGroup
         let addedView1 = Android.View.View.init(context: UIApplication.context!)
@@ -90,13 +88,13 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         
         // NewViewGroup
         let newViewGroup: NewViewGroup = NewViewGroup(context: UIApplication.context!)
-        /*
+        
         newViewGroup.addView(addedView1)
         newViewGroup.addView(addedView2)
         newViewGroup.addView(addedView3)
         newViewGroup.addView(addedView4)
         newViewGroup.addView(addedView5)
-        */
+        
         NSLog("Adding views...")
         rootView.addView(myView)
         rootView.addView(view1)

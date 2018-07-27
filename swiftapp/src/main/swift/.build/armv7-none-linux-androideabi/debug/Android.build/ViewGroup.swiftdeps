@@ -110,6 +110,7 @@ depends-top-level:
 - !private "NSLog"
 - "StaticString"
 - "StringLiteralType"
+- "SwiftSupport"
 - "TernaryPrecedence"
 - "java_swift"
 - !private "jboolean"
@@ -136,6 +137,7 @@ depends-member:
 - ["7Android0A4ViewC", "LayoutParams"]
 - !private ["7Android0A4ViewC", "NSLog"]
 - ["7Android0A4ViewC", "StaticString"]
+- ["7Android0A4ViewC", "SwiftSupport"]
 - !private ["7Android0A4ViewC", "ViewGroupJNICache"]
 - ["7Android0A4ViewC", ""]
 - ["7Android0A4ViewC", "addStatesFromChildren"]
@@ -147,7 +149,6 @@ depends-member:
 - ["7Android0A4ViewC", "clearChildFocus"]
 - ["7Android0A4ViewC", "clearDisappearingChildren"]
 - ["7Android0A4ViewC", "clearFocus"]
-- !private ["7Android0A4ViewC", "context"]
 - !private ["7Android0A4ViewC", "deinit"]
 - ["7Android0A4ViewC", "dispatchCapturedPointerEvent"]
 - ["7Android0A4ViewC", "dispatchDisplayHint"]
@@ -262,6 +263,7 @@ depends-member:
 - ["7Android0A9ViewGroupC", "LayoutParams"]
 - !private ["7Android0A9ViewGroupC", "NSLog"]
 - ["7Android0A9ViewGroupC", "StaticString"]
+- ["7Android0A9ViewGroupC", "SwiftSupport"]
 - ["7Android0A9ViewGroupC", "ViewGroupJNICache"]
 - ["7Android0A9ViewGroupC", "addStatesFromChildren"]
 - ["7Android0A9ViewGroupC", "addView"]
@@ -272,7 +274,6 @@ depends-member:
 - ["7Android0A9ViewGroupC", "clearChildFocus"]
 - ["7Android0A9ViewGroupC", "clearDisappearingChildren"]
 - ["7Android0A9ViewGroupC", "clearFocus"]
-- !private ["7Android0A9ViewGroupC", "context"]
 - ["7Android0A9ViewGroupC", "deinit"]
 - ["7Android0A9ViewGroupC", "dispatchCapturedPointerEvent"]
 - ["7Android0A9ViewGroupC", "dispatchDisplayHint"]
@@ -444,6 +445,7 @@ depends-member:
 - ["10java_swift9JNIObjectC", "LayoutParams"]
 - !private ["10java_swift9JNIObjectC", "NSLog"]
 - ["10java_swift9JNIObjectC", "StaticString"]
+- ["10java_swift9JNIObjectC", "SwiftSupport"]
 - !private ["10java_swift9JNIObjectC", "ViewGroupJNICache"]
 - ["10java_swift9JNIObjectC", "addStatesFromChildren"]
 - ["10java_swift9JNIObjectC", "addView"]
@@ -454,7 +456,6 @@ depends-member:
 - ["10java_swift9JNIObjectC", "clearChildFocus"]
 - ["10java_swift9JNIObjectC", "clearDisappearingChildren"]
 - ["10java_swift9JNIObjectC", "clearFocus"]
-- !private ["10java_swift9JNIObjectC", "context"]
 - ["10java_swift9JNIObjectC", "dispatchCapturedPointerEvent"]
 - ["10java_swift9JNIObjectC", "dispatchDisplayHint"]
 - ["10java_swift9JNIObjectC", "dispatchDrawableHotspotChanged"]
@@ -556,7 +557,7 @@ depends-member:
 - ["10java_swift9JNIObjectC", "startLayoutAnimation"]
 - ["10java_swift9JNIObjectC", "startViewTransition"]
 - !private ["10java_swift9JNIObjectC", "withJavaObject"]
-- ["10java_swift13JNIObjectInitP", "Android"]
+- !private ["10java_swift13JNIObjectInitP", "Android"]
 - !private ["10java_swift13JNIObjectInitP", "Int"]
 - !private ["10java_swift13JNIObjectInitP", "JNI"]
 - !private ["10java_swift13JNIObjectInitP", "JNIMethod"]
@@ -565,10 +566,10 @@ depends-member:
 - !private ["10java_swift13JNIObjectInitP", "JNI_TRUE"]
 - ["10java_swift13JNIObjectInitP", "LayoutParams"]
 - !private ["10java_swift13JNIObjectInitP", "NSLog"]
+- ["10java_swift13JNIObjectInitP", "SwiftSupport"]
 - !private ["10java_swift13JNIObjectInitP", "ViewGroupJNICache"]
 - ["10java_swift13JNIObjectInitP", ""]
 - !private ["10java_swift13JNIObjectInitP", "bindNewObject"]
-- !private ["10java_swift13JNIObjectInitP", "context"]
 - ["10java_swift13JNIObjectInitP", "init"]
 - !private ["10java_swift13JNIObjectInitP", "javaObject"]
 - !private ["10java_swift13JNIObjectInitP", "jboolean"]
@@ -577,7 +578,7 @@ depends-member:
 - !private ["10java_swift13JNIObjectInitP", "jobject"]
 - !private ["10java_swift13JNIObjectInitP", "jvalue"]
 - !private ["10java_swift13JNIObjectInitP", "withJavaObject"]
-- ["10java_swift17JNIObjectProtocolP", "Android"]
+- !private ["10java_swift17JNIObjectProtocolP", "Android"]
 - !private ["10java_swift17JNIObjectProtocolP", "Int"]
 - !private ["10java_swift17JNIObjectProtocolP", "JNI"]
 - !private ["10java_swift17JNIObjectProtocolP", "JNIMethod"]
@@ -586,10 +587,10 @@ depends-member:
 - !private ["10java_swift17JNIObjectProtocolP", "JNI_TRUE"]
 - ["10java_swift17JNIObjectProtocolP", "LayoutParams"]
 - !private ["10java_swift17JNIObjectProtocolP", "NSLog"]
+- ["10java_swift17JNIObjectProtocolP", "SwiftSupport"]
 - !private ["10java_swift17JNIObjectProtocolP", "ViewGroupJNICache"]
 - ["10java_swift17JNIObjectProtocolP", ""]
 - !private ["10java_swift17JNIObjectProtocolP", "bindNewObject"]
-- !private ["10java_swift17JNIObjectProtocolP", "context"]
 - ["10java_swift17JNIObjectProtocolP", "init"]
 - !private ["10java_swift17JNIObjectProtocolP", "javaObject"]
 - !private ["10java_swift17JNIObjectProtocolP", "jboolean"]
@@ -612,6 +613,7 @@ depends-member:
 - ["10java_swift10JavaObjectC", "LayoutParams"]
 - !private ["10java_swift10JavaObjectC", "NSLog"]
 - ["10java_swift10JavaObjectC", "StaticString"]
+- ["10java_swift10JavaObjectC", "SwiftSupport"]
 - !private ["10java_swift10JavaObjectC", "ViewGroupJNICache"]
 - ["10java_swift10JavaObjectC", "addStatesFromChildren"]
 - ["10java_swift10JavaObjectC", "addView"]
@@ -622,7 +624,6 @@ depends-member:
 - ["10java_swift10JavaObjectC", "clearChildFocus"]
 - ["10java_swift10JavaObjectC", "clearDisappearingChildren"]
 - ["10java_swift10JavaObjectC", "clearFocus"]
-- !private ["10java_swift10JavaObjectC", "context"]
 - ["10java_swift10JavaObjectC", "dispatchCapturedPointerEvent"]
 - ["10java_swift10JavaObjectC", "dispatchDisplayHint"]
 - ["10java_swift10JavaObjectC", "dispatchDrawableHotspotChanged"]
@@ -854,17 +855,18 @@ depends-member:
 - !private ["s10StrideableP", "init"]
 - ["SS", "init"]
 - ["s14StringProtocolP", "init"]
+- ["7Android12SwiftSupportO", "View"]
 - ["s16TextOutputStreamP", "init"]
 - ["s20TextOutputStreamableP", "init"]
 - !private ["s5UInt8V", "init"]
 - !private ["s15UnsignedIntegerP", "init"]
+- ["7Android12SwiftSupportO4ViewO", "className"]
+- ["7Android12SwiftSupportO4ViewO", "deinit"]
 - ["7AndroidAAO4ViewO", "AndroidViewGroup"]
 - ["7AndroidAAO4ViewO", "View"]
 - ["7AndroidAAO4ViewO", "ViewGroup"]
-- ["7AndroidAAO4ViewO", "className"]
-- ["7AndroidAAO4ViewO", "deinit"]
-- ["7Android0A9ViewGroupC0bC8JNICacheV", "Android"]
 - ["7Android0A9ViewGroupC0bC8JNICacheV", "MethodID"]
+- ["7Android0A9ViewGroupC0bC8JNICacheV", "SwiftSupport"]
 - ["7Android0A9ViewGroupC0bC8JNICacheV", "className"]
 - ["7Android0A9ViewGroupC0bC8JNICacheV", "classSignature"]
 - ["7Android0A9ViewGroupC0bC8JNICacheV", "init"]
@@ -958,10 +960,12 @@ depends-nominal:
 - !private "s10StrideableP"
 - "SS"
 - "s14StringProtocolP"
+- "7Android12SwiftSupportO"
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
 - !private "s5UInt8V"
 - !private "s15UnsignedIntegerP"
+- "7Android12SwiftSupportO4ViewO"
 - "7AndroidAAO4ViewO"
 - "7Android0A9ViewGroupC0bC8JNICacheV"
 - !private "s14_ArrayProtocolP"
@@ -998,4 +1002,4 @@ depends-external:
 - "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/SwiftOnoneSupport.swiftmodule"
 - "/Users/killian.greene/SoA/swift-install/usr/lib/swift/android/armv7/glibc.modulemap"
 - "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/CJavaVM.git--1521134582023321205/module.modulemap"
-interface-hash: "28ad796e6d5d1c382908436da9f012fa"
+interface-hash: "f5818d06fcc8f7e3754500f7c31af367"

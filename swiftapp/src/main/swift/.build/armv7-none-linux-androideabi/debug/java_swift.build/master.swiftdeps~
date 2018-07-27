@@ -1,0 +1,20 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "7faa91413c22237c16b65e54617464b2"
+build_time: [1532531371, 70223000]
+inputs:
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/Exception.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/HashMap.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/JNICore.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/JNIField.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/JNIMethod.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/JNIObject.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/JNIProxy.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/JNIType.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/JavaClass.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/JavaEnum.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/JavaMap.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/JavaObject.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/JavaSet.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/JavaThread.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/Runnable.swift": [1532527763, 0]
+  "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_swift.git-9082904271628832338/Sources/Throwable.swift": [1532527763, 0]

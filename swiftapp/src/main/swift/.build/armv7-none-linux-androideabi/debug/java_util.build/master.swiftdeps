@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
 options: "a646f0cf6dc730b4c2d958ed455e8ffc"
-build_time: [1532531400, 764056000]
+build_time: [1532698845, 271995000]
 inputs:
   "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_util.git--6776651096668991710/Sources/AbstractCollection.swift": [1532527763, 0]
   "/Users/killian.greene/SoA/ProjectLocal/Testing/swift-android/swiftapp/src/main/swift/.build/checkouts/java_util.git--6776651096668991710/Sources/AbstractExecutorService.swift": [1532527763, 0]
