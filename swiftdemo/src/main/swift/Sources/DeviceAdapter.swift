@@ -61,10 +61,6 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
         
         let itemView = Android.View.LayoutInflater.from(context: parent.context!).inflate(resource: Android.R.Layout(rawValue: itemViewResource!), root: parent, attachToRoot: false)
         
-        let onclick = OnClickItemListener()
-        
-        itemView.setOnClickListener(l: onclick)
-        
         return DeviceViewHolder(itemView: itemView, mainActivity: mainActivity!)
     }
     
@@ -118,6 +114,10 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
             self.tvName = Android.Widget.TextView(casting: tvNameObject)
             self.tvAddress = Android.Widget.TextView(casting: tvAddressObject)
             self.tvRssi = Android.Widget.TextView(casting: tvRssiObject)
+            
+            let onclick = OnClickItemListener()
+            
+            itemView.setOnClickListener(l: onclick)
         }
         
         required init(javaObject: jobject?) {

@@ -3,8 +3,8 @@ package org.pureswift.swiftandroidsupport.app
 import android.content.*
 import android.content.res.Resources
 import android.os.Bundle
+import android.support.v4.app.FragmentManager
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 
@@ -120,6 +120,10 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
 
     override fun getResources(): Resources {
         return super.getResources()
+    }
+
+    override fun getSupportFragmentManager(): FragmentManager {
+        return super.getSupportFragmentManager()
     }
 
     private external fun bind(): Long
