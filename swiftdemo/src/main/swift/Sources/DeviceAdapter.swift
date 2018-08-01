@@ -59,7 +59,11 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
         
         let itemViewResource = mainActivity?.getIdentifier(name: "activity_devices_item", type: "layout")
         
-        let itemView = Android.View.LayoutInflater.from(context: parent.context).inflate(resource: Android.R.Layout(rawValue: itemViewResource!), root: parent, attachToRoot: false)
+        let itemView = Android.View.LayoutInflater.from(context: parent.context!).inflate(resource: Android.R.Layout(rawValue: itemViewResource!), root: parent, attachToRoot: false)
+        
+        let onclick = OnClickItemListener()
+        
+        itemView.setOnClickListener(l: onclick)
         
         return DeviceViewHolder(itemView: itemView, mainActivity: mainActivity!)
     }
@@ -76,6 +80,13 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
         let deviceModelItem = devices[position]
         
         deviceViewHolder.bind(deviceModel: deviceModelItem)
+    }
+    
+    class OnClickItemListener: Android.View.View.OnClickListener {
+        
+        override func onClick() {
+            NSLog("\(type(of: self)) \(#function) HELLO!!")
+        }
     }
     
     class DeviceViewHolder: Android.Widget.RecyclerView.ViewHolder {

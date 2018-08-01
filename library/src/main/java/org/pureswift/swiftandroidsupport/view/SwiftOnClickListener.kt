@@ -2,7 +2,7 @@ package org.pureswift.swiftandroidsupport.view
 
 import android.view.View
 
-class SwiftOnClickListener(private val __swiftObject: Long): View.OnClickListener {
+open class SwiftOnClickListener(private val __swiftObject: Long): View.OnClickListener {
 
     override fun onClick(v: View?) {
         __onclick(__swiftObject)

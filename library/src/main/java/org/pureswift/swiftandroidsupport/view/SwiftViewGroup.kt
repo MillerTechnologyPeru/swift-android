@@ -16,8 +16,6 @@ import java.util.ArrayList
 
 class SwiftViewGroup(context: Context): android.view.ViewGroup(context) {
 
-
-
     override fun addChildrenForAccessibility(outChildren: ArrayList<View>?) {
         super.addChildrenForAccessibility(outChildren)
     }
