@@ -1,11 +1,13 @@
 package org.pureswift.swiftandroidsupport.app
 
 import android.app.Dialog
+import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.support.v4.app.DialogFragment
 import android.support.v4.app.FragmentManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,7 +24,10 @@ class SwiftFullScreenDialogFragment: DialogFragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return onCreateViewNative(__swiftObject, inflater, container, savedInstanceState)
+        Log.v("dialog", "onCreateView 1")
+        val view =  onCreateViewNative(__swiftObject, inflater, container, savedInstanceState)
+        Log.v("dialog", "onCreateView 2")
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -82,6 +87,10 @@ class SwiftFullScreenDialogFragment: DialogFragment() {
 
     override fun show(manager: FragmentManager?, tag: String?) {
         super.show(manager, tag)
+    }
+
+    override fun getContext(): Context? {
+        return super.getContext()
     }
 
     private external fun onCreateNative(__swiftObject: Long, savedInstanceState: Bundle?)

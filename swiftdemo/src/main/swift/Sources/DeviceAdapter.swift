@@ -80,8 +80,26 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
     
     class OnClickItemListener: Android.View.View.OnClickListener {
         
+        private var mainActivity: MainActivity?
+        
+        convenience init(mainActivity: MainActivity) {
+            
+            self.init(javaObject: nil)
+            
+            bindNewJavaObject()
+            
+            self.mainActivity = mainActivity
+        }
+        
+        required init(javaObject: jobject?) {
+            super.init(javaObject: javaObject)
+        }
+        
         override func onClick() {
             NSLog("\(type(of: self)) \(#function) HELLO!!")
+            
+            let deviceDetailDialogFragment = DeviceDetailDialogFragment()
+            deviceDetailDialogFragment.show(manager: (mainActivity?.supportFragmentManager)!, tag: "")
         }
     }
     
@@ -115,7 +133,7 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
             self.tvAddress = Android.Widget.TextView(casting: tvAddressObject)
             self.tvRssi = Android.Widget.TextView(casting: tvRssiObject)
             
-            let onclick = OnClickItemListener()
+            let onclick = OnClickItemListener(mainActivity: mainActivity)
             
             itemView.setOnClickListener(l: onclick)
         }
