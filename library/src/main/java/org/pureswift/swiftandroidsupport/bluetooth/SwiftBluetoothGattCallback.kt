@@ -4,13 +4,13 @@ import android.bluetooth.BluetoothGatt
 import android.bluetooth.BluetoothGattCallback
 import android.bluetooth.BluetoothGattCharacteristic
 import android.bluetooth.BluetoothGattDescriptor
+import android.util.Log
 
 @SuppressWarnings("JniMissingFunction")
 class SwiftBluetoothGattCallback(private val __swiftObject: Long): BluetoothGattCallback() {
 
     override fun onCharacteristicChanged(gatt: BluetoothGatt?, characteristic: BluetoothGattCharacteristic?) {
         super.onCharacteristicChanged(gatt, characteristic)
-
         __onCharacteristicChanged(__swiftObject, gatt, characteristic)
     }
 
@@ -28,7 +28,7 @@ class SwiftBluetoothGattCallback(private val __swiftObject: Long): BluetoothGatt
 
     override fun onConnectionStateChange(gatt: BluetoothGatt?, status: Int, newState: Int) {
         super.onConnectionStateChange(gatt, status, newState)
-
+        Log.v("gatt", "onConnectionStateChange")
         __onConnectionStateChange(__swiftObject, gatt, status, newState)
     }
 
@@ -76,7 +76,7 @@ class SwiftBluetoothGattCallback(private val __swiftObject: Long): BluetoothGatt
 
     override fun onServicesDiscovered(gatt: BluetoothGatt?, status: Int) {
         super.onServicesDiscovered(gatt, status)
-
+        Log.v("gatt", "onServicesDiscovered")
         __onServicesDiscovered(__swiftObject, gatt, status)
     }
 

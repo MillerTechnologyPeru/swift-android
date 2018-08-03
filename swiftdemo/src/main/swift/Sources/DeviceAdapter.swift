@@ -98,6 +98,7 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
         override func onClick() {
             NSLog("\(type(of: self)) \(#function) HELLO!!")
             
+            //mainActivity?.androidCentral.connect(to: <#T##AndroidPeripheral#>, timeout: <#T##TimeInterval#>)
             let deviceDetailDialogFragment = DeviceDetailDialogFragment()
             deviceDetailDialogFragment.show(manager: (mainActivity?.supportFragmentManager)!, tag: "")
         }

@@ -10,6 +10,7 @@ import java_swift
 import java_lang
 import java_util
 import Android
+import Bluetooth
 
 /// Needs to be implemented by app.
 @_silgen_name("SwiftAndroidMainActivity")
@@ -138,26 +139,39 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     
     public func startScanning(){
         
-        NSLog("\(type(of: self)) \(#function)")
         
         //bluetoothAdapter?.lowEnergyScanner?.startScan(callback: scanCallback!)
-
-        do {
-            let androidCentral = AndroidCentral()
-            
-            try androidCentral.scan(filterDuplicates: false, shouldContinueScanning: { true }, foundDevice: {
-                (scanData) in
+        
+        
+        NSLog("\(type(of: self)) \(#function)scanData.peripheral")
+        
+        DispatchQueue.global(qos: .background).async {
+        
+            do {
+                let androidCentral = AndroidCentral()
                 
-                NSLog("\(scanData.peripheral.identifier.rawValue) - \(scanData.rssi)")
-                
-                let deviceModel = DeviceModel(device: scanData.peripheral.device, rssi: Int(scanData.rssi))
-                
-                self.deviceAdapter?.addDevice(newDevice: deviceModel)
-            })
-        } catch {
-            NSLog("\(type(of: self)) \(#function) Error")
-            assertionFailure("Scanning error ")
-            return
+                try androidCentral.scan(filterDuplicates: false, shouldContinueScanning: { true }, foundDevice: {
+                    (scanData) in
+                    
+                    NSLog("\(scanData.peripheral.identifier.rawValue) - \(scanData.rssi)")
+                    
+                    let deviceModel = DeviceModel(device: scanData.peripheral.device, rssi: Int(scanData.rssi))
+                    
+                    self.deviceAdapter?.addDevice(newDevice: deviceModel)
+                    
+                    try? androidCentral.connect(to: scanData.peripheral, timeout: 3000)
+                    
+                    let uuid = [BluetoothUUID]()
+                    
+                    try androidCentral.discoverServices(uuid, for: scanData.peripheral, timeout: 3000)
+                    
+                    //androidCentral.disconnect(peripheral: scanData.peripheral)
+                })
+            } catch {
+                NSLog("\(type(of: self)) \(#function) Scanning error")
+                assertionFailure("Scanning error ")
+                return
+            }
         }
     }
     

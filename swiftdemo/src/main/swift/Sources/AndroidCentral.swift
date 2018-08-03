@@ -51,16 +51,19 @@ class AndroidCentral: CentralProtocol {
 
         bluetoothAdapter?.lowEnergyScanner?.startScan(callback: scanCallback)
         
+        while shouldContinueScanning(){
+            sleep(1)
+        }
         // sleep until scan finishes
-        DispatchQueue.global(qos: .background).async {
-            usleep(useconds_t(10*1000000))
+        //DispatchQueue.global(qos: .background).async {
+            //usleep(useconds_t(30*1000000))
             
             NSLog("Stopping the scanning")
             self.bluetoothAdapter?.lowEnergyScanner?.stopScan(callback: scanCallback)
             /*DispatchQueue.main.async {
                 
             }*/
-        }
+        //}
     }
     
     func connect(to peripheral: AndroidPeripheral, timeout: TimeInterval) throws {
@@ -74,6 +77,8 @@ class AndroidCentral: CentralProtocol {
         
         peripheral.gatt = peripheral.device.connectGatt(context: SwiftDemoApplication.context!, autoConnect: false, callback: gattCallback!)
         
+        NSLog("Connected = device address = \(peripheral.gatt?.getDevice().address)")
+        NSLog("Connected = device name = \(peripheral.gatt?.getDevice().getName())")
     }
     
     func disconnect(peripheral: AndroidPeripheral) {
@@ -90,7 +95,16 @@ class AndroidCentral: CentralProtocol {
     func discoverServices(_ services: [BluetoothUUID], for peripheral: AndroidPeripheral, timeout: TimeInterval) throws -> [Service<AndroidPeripheral>] {
         NSLog("\(type(of: self)) \(#function)")
         
-        fatalError("not implemented")
+        let result = peripheral.gatt?.discoverServices()
+        
+        if(result!){
+            usleep(useconds_t(0.3*1000000))
+            
+        }
+        
+        let services = [Service<AndroidPeripheral>]()
+        
+        return services
     }
     
     func discoverCharacteristics(_ characteristics: [BluetoothUUID], for service: Service<AndroidPeripheral>, timeout: TimeInterval) throws -> [Characteristic<AndroidPeripheral>] {
@@ -212,10 +226,12 @@ class AndroidCentral: CentralProtocol {
             }
             
             peripheral?.gatt = gatt
-            /*
+            
              gatt.getServices()?.withJavaObject{
-             self.responder.showServices(services: JavaObject(javaObject: $0))
-             }*/
+                
+                let service = Android.Bluetooth.GattService.init(javaObject: $0)
+                NSLog("Service \(service.getUuid().toString())")
+             }
             
             NSLog("Size: \(String(describing: gatt.getServices()?.size()))")
         }
