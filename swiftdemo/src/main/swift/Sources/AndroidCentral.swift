@@ -72,10 +72,12 @@ public final class AndroidCentral: CentralProtocol {
         
         self.log?("Scanning...")
         
-        let scanCallback = ScanCallback(filterDuplicates, foundDevice)
+        let scanCallback = ScanCallback()
+        scanCallback.central = self
         
-        hostController.lowEnergyScanner?.startScan(callback: scanCallback)
+        scanner.startScan(callback: scanCallback)
         
+        // wait until finish scanning
         while shouldContinueScanning() { sleep(1) }
         
         scanner.stopScan(callback: scanCallback)
@@ -99,7 +101,7 @@ public final class AndroidCentral: CentralProtocol {
             guard let cache = self.internalState.cache[peripheral]
                 else { throw CentralError.unknownPeripheral }
             
-            let _ = cache.device.connectGatt(context: self.context, autoConnect: false, callback: cache.gattCallback)
+            cache.gatt = cache.device.connectGatt(context: self.context, autoConnect: false, callback: cache.gattCallback)
         }
         
         // throw async error
@@ -111,7 +113,7 @@ public final class AndroidCentral: CentralProtocol {
             accessQueue.sync { [unowned self] in
                 
                 // Close, disconnect or cancel connection
-                self.internalState.cache[peripheral]?.gatt.disconnect()
+                self.internalState.cache[peripheral]?.gatt?.disconnect()
             }
             
             throw CentralError.timeout
@@ -122,18 +124,24 @@ public final class AndroidCentral: CentralProtocol {
     }
     
     public func disconnect(peripheral: Peripheral) {
+        
         NSLog("\(type(of: self)) \(#function)")
         
         accessQueue.sync { [unowned self] in
-            self.internalState.cache[peripheral]?.gatt.disconnect()
+            self.internalState.cache[peripheral]?.gatt?.disconnect()
+            self.internalState.cache[peripheral]?.gatt = nil
         }
     }
     
     public func disconnectAll() {
+        
         NSLog("\(type(of: self)) \(#function)")
         
         accessQueue.sync { [unowned self] in
-            self.internalState.cache.values.forEach { $0.gatt.disconnect() }
+            self.internalState.cache.values.forEach {
+                $0.gatt?.disconnect()
+                $0.gatt = nil
+            }
         }
     }
     
@@ -156,7 +164,10 @@ public final class AndroidCentral: CentralProtocol {
             guard let cache = self.internalState.cache[peripheral]
                 else { throw CentralError.unknownPeripheral }
             
-            guard cache.gatt.discoverServices()
+            guard let gatt = cache.gatt
+                else { throw CentralError.disconnected }
+            
+            guard gatt.discoverServices()
                 else { throw AndroidCentralError.binderFailure }
         }
         
@@ -201,24 +212,16 @@ public final class AndroidCentral: CentralProtocol {
     
     private class ScanCallback: Android.Bluetooth.LE.ScanCallback {
         
-        private weak var central: AndroidCentral?
-        
-        private var filterDuplicates: Bool = true
-        private var foundDevice: ((ScanData<Peripheral, AdvertisementData>) -> ())?
+        weak var central: AndroidCentral?
         
         public required init(javaObject: jobject?) {
             super.init(javaObject: javaObject)
         }
         
-        convenience init(_ filterDuplicates: Bool,
-                         _ foundDevice: @escaping (ScanData<Peripheral, AdvertisementData>) -> ()) {
+        convenience init() {
             
             self.init(javaObject: nil)
             bindNewJavaObject()
-            
-            NSLog("\(type(of: self)) \(#function)")
-            self.filterDuplicates = filterDuplicates
-            self.foundDevice = foundDevice
         }
         
         public override func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType,
@@ -230,11 +233,20 @@ public final class AndroidCentral: CentralProtocol {
             
             let advertisement = AdvertisementData(data: Data(result.scanRecord.bytes))
             
-            let scandata = ScanData(peripheral: peripheral,
+            let scanData = ScanData(peripheral: peripheral,
                                     rssi: Double(result.rssi),
                                     advertisementData: advertisement)
             
-            foundDevice?(scandata)
+            central?.accessQueue.async { [weak self] in
+                
+                guard let central = self?.central
+                    else { return }
+                
+                central.internalState.scan.foundDevice?(scanData)
+                
+                central.internalState.cache[peripheral] = Cache(device: result.device,
+                                                                central: central)
+            }
         }
         
         public override func onBatchScanResults(results: [Android.Bluetooth.LE.ScanResult]) {
@@ -249,26 +261,46 @@ public final class AndroidCentral: CentralProtocol {
     }
     
     public class GattCallback: Android.Bluetooth.GattCallback {
-
-        private var peripheral: AndroidPeripheral?
         
-        convenience init(peripheral: AndroidPeripheral) {
+        private weak var central: AndroidCentral?
+        
+        convenience init(central: AndroidCentral) {
             self.init(javaObject: nil)
             bindNewJavaObject()
             
-            self.peripheral = peripheral
+            self.central = central
         }
         
         public required init(javaObject: jobject?) {
             super.init(javaObject: javaObject)
         }
         
-        public func onConnectionStateChange(gatt: Android.Bluetooth.Gatt, status: AndroidBluetoothGatt.Status, newState: AndroidBluetoothDevice.State) {
+        public func onConnectionStateChange(gatt: Android.Bluetooth.Gatt,
+                                            status: AndroidBluetoothGatt.Status,
+                                            newState: AndroidBluetoothDevice.State) {
+            
             NSLog("\(type(of: self)): \(#function)")
             
             NSLog("Status: \(status) - newState = \(newState)")
             
-            if(status.rawValue != AndroidBluetoothGatt.Status.success.rawValue){
+            central?.accessQueue.async { [weak self] in
+                
+                guard let central = self?.central
+                    else { return }
+                                
+                switch status {
+                    
+                case .success:
+                    
+                    central.internalState.connect.semaphore?.stopWaiting()
+                    
+                default:
+                    
+                    central.internalState.connect.semaphore?.stopWaiting(status) // throw `status` error
+                }
+            }
+            
+            if(status.rawValue != AndroidBluetoothGatt.Status.success){
                 peripheral?.gatt = nil
                 return
             }
@@ -423,11 +455,19 @@ internal extension AndroidCentral {
 
 internal extension AndroidCentral {
     
-    struct Cache {
+    final class Cache {
         
         let device: Android.Bluetooth.Device
-        let gatt: Android.Bluetooth.Gatt
-        let gattCallback: Android.Bluetooth.GattCallback
+        
+        fileprivate init(device: Android.Bluetooth.Device, central: AndroidCentral) {
+            
+            self.device = device
+            self.gattCallback = GattCallback(central: central)
+        }
+        
+        var gattCallback = GattCallback()
+        
+        var gatt: Android.Bluetooth.Gatt?
     }
 }
 

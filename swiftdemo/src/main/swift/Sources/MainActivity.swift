@@ -35,7 +35,10 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     
     public var deviceAdapter: DeviceAdapter?
     
-    internal lazy var central = AndroidCentral()
+    internal lazy var central = AndroidCentral(hostController: Android.Bluetooth.Adapter.default!,
+                                               context: SwiftDemoApplication.context!)
+    
+    internal lazy var scanQueue: DispatchQueue = DispatchQueue(label: "Scan Queue")
     
     override func onCreate(savedInstanceState: Android.OS.Bundle?) {
         
@@ -144,7 +147,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         
         NSLog("\(type(of: self)) \(#function)scanData.peripheral")
         
-        DispatchQueue.global(qos: .background).async { [weak self] in
+        scanQueue.async { [weak self] in
             
             guard let central = self?.central else { return }
         
@@ -157,13 +160,21 @@ final class MainActivity: SwiftSupportAppCompatActivity {
                 
                 for scanPeripheral in scanData {
                     
-                    let deviceModel = DeviceModel(device: scanPeripheral.peripheral.device, rssi: Int(scanPeripheral.rssi))
+                    ///let deviceModel = DeviceModel(device: scanPeripheral.peripheral, rssi: Int(scanPeripheral.rssi))
                     
-                    self?.deviceAdapter?.addDevice(newDevice: deviceModel)
+                    //self?.deviceAdapter?.addDevice(newDevice: deviceModel)
                     
                     try central.connect(to: scanPeripheral.peripheral)
                     
-                    try central.discoverServices(for: scanPeripheral.peripheral)
+                    let services = try central.discoverServices(for: scanPeripheral.peripheral)
+                    
+                    print("Found \(services.count) services")
+                    services.forEach { print($0) }
+                    
+                    for service in services {
+                        
+                        
+                    }
                     
                     central.disconnect(peripheral: scanPeripheral.peripheral)
                 }
