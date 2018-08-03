@@ -287,35 +287,35 @@ public final class AndroidCentral: CentralProtocol {
                 
                 guard let central = self?.central
                     else { return }
-                                
-                switch status {
+                
+                switch (status, newState) {
                     
-                case .success:
+                case (.success, .connected):
                     
-                    central.internalState.connect.semaphore?.stopWaiting()
+                    NSLog("GATT Connected")
+                    
+                    // if we are expecting a new connection
+                    if central.internalState.connect.semaphore != nil {
+                        
+                        central.internalState.connect.semaphore?.stopWaiting()
+                        central.internalState.connect.semaphore = nil
+                    }
+                    
+                case (.success, .disconnected):
+                    
+                    NSLog("GATT Disconnected")
+                    
+                    break // nothing for now
                     
                 default:
                     
                     central.internalState.connect.semaphore?.stopWaiting(status) // throw `status` error
                 }
             }
-            
-            if(status.rawValue != AndroidBluetoothGatt.Status.success){
-                peripheral?.gatt = nil
-                return
-            }
-            
-            if(newState.rawValue == AndroidBluetoothDevice.State.connected.rawValue){
-                
-                peripheral?.gatt = gatt
-                NSLog("GATT Connected")
-            } else if(newState.rawValue == AndroidBluetoothDevice.State.disconnected.rawValue){
-                peripheral?.gatt = nil
-                NSLog("GATT Disconnected")
-            }
         }
         
         public func onServicesDiscovered(gatt: Android.Bluetooth.Gatt, status: AndroidBluetoothGatt.Status) {
+            
             NSLog("\(type(of: self)): \(#function)")
             
             NSLog("Status: \(status)")
@@ -326,7 +326,7 @@ public final class AndroidCentral: CentralProtocol {
                 return
             }
             
-            peripheral?.gatt = gatt
+            //peripheral?.gatt = gatt
             
              gatt.getServices()?.withJavaObject{
                 
@@ -353,11 +353,13 @@ public final class AndroidCentral: CentralProtocol {
         }
         
         public func onDescriptorRead(gatt: Android.Bluetooth.Gatt, descriptor: Android.Bluetooth.GattDescriptor, status: AndroidBluetoothGatt.Status) {
+            
             NSLog("\(type(of: self)): \(#function)")
             
         }
         
         public func onDescriptorWrite(gatt: Android.Bluetooth.Gatt, descriptor: Android.Bluetooth.GattDescriptor, status: AndroidBluetoothGatt.Status) {
+            
             NSLog("\(type(of: self)): \(#function)")
             
         }
