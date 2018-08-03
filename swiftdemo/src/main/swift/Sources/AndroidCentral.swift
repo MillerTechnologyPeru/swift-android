@@ -19,7 +19,7 @@ public enum AndroidCentralError: Error {
     /// Bluetooth is disabled.
     case bluetoothDisabled
     
-    /// Binder IPC failer
+    /// Binder IPC failure.
     case binderFailure
     
     /// Unexpected null value.
@@ -314,27 +314,36 @@ public final class AndroidCentral: CentralProtocol {
             }
         }
         
-        public func onServicesDiscovered(gatt: Android.Bluetooth.Gatt, status: AndroidBluetoothGatt.Status) {
+        public func onServicesDiscovered(gatt: Android.Bluetooth.Gatt,
+                                         status: AndroidBluetoothGatt.Status) {
+            
+            let peripheral = Peripheral(identifier: gatt.getDevice().address)
             
             NSLog("\(type(of: self)): \(#function)")
             
-            NSLog("Status: \(status)")
+            NSLog("\(peripheral) Status: \(status)")
             
-            if(status.rawValue != AndroidBluetoothGatt.Status.success.rawValue){
-                //Show error message on Android
-                NSLog("Error: \(status)")
-                return
-            }
-            
-            //peripheral?.gatt = gatt
-            
-             gatt.getServices()?.withJavaObject{
+            central?.accessQueue.async { [weak self] in
                 
-                let service = Android.Bluetooth.GattService.init(javaObject: $0)
-                NSLog("Service \(service.getUuid().toString())")
-             }
-            
-            NSLog("Size: \(String(describing: gatt.getServices()?.size()))")
+                guard let central = self?.central
+                    else { return }
+                
+                guard status == .success
+                    else { central.internalState.discoverServices.semaphore?.stopWaiting(status); return }
+                
+                let services: [Android.Bluetooth.GattService] = gatt.getServices()?.withJavaObject {
+                    
+                    let service = Android.Bluetooth.GattService(javaObject: $0)
+                    NSLog("Service \(service.getUuid().toString())")
+                    
+                    // FIXME: Iterate Java List
+                    return [service]
+                } ?? []
+                
+                NSLog("Size: \(String(describing: gatt.getServices()?.size()))")
+                
+                central.internalState.cache[peripheral]?.update(services)
+            }
         }
         
         public func onCharacteristicChanged(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic) {
@@ -470,6 +479,21 @@ internal extension AndroidCentral {
         var gattCallback = GattCallback()
         
         var gatt: Android.Bluetooth.Gatt?
+        
+        var services = Services()
+        
+        struct Services {
+            
+            fileprivate(set) var values: [UInt: Android.Bluetooth.GattService] = [:]
+        }
+        
+        fileprivate func update(_ newValues: [Android.Bluetooth.GattService]) {
+            
+            newValues.forEach {
+                let identifier = UInt(bitPattern: $0.getInstanceId())
+                services.values[identifier] = $0
+            }
+        }
     }
 }
 
