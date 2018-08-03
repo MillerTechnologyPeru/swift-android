@@ -14,117 +14,185 @@ import Bluetooth
 import Android
 import java_swift
 
-enum AndroidCentralError: Error {
-    case BluetoothDisabled
-    case ScanningError
+public enum AndroidCentralError: Error {
+    
+    /// Bluetooth is disabled.
+    case bluetoothDisabled
+    
+    /// Binder IPC failer
+    case binderFailure
+    
+    /// Unexpected null value.
+    case nullValue(AnyKeyPath)
 }
 
-class AndroidCentral: CentralProtocol {
-
-    init() {
-        NSLog("\(type(of: self)) \(#function)")
+public final class AndroidCentral: CentralProtocol {
+    
+    // MARK: - Properties
+    
+    public var log: ((String) -> ())?
+    
+    public let hostController: Android.Bluetooth.Adapter
+    
+    public let context: Android.Content.Context
+    
+    internal private(set) var internalState = InternalState()
+    
+    internal lazy var accessQueue: DispatchQueue = DispatchQueue(label: "\(type(of: self)) Access Queue", attributes: [])
+    
+    // MARK: - Intialization
+    
+    deinit {
+        
+        
     }
     
-    var log: ((String) -> ())?
-    
-    //I created my own peripheral because I got `Type alias 'Peripheral' references itself`
-    typealias Peripheral = AndroidPeripheral
-    
-    typealias Advertisement = AndroidAdvertisementData
-    
-    private let bluetoothAdapter = Android.Bluetooth.Adapter.default
-    
-    private var gattCallback: Android.Bluetooth.GattCallback?
-    
-    func scan(filterDuplicates: Bool, shouldContinueScanning: () -> (Bool), foundDevice: @escaping (ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ()) throws {
+    public init(hostController: Android.Bluetooth.Adapter,
+                context: Android.Content.Context) {
         
         NSLog("\(type(of: self)) \(#function)")
         
-        guard bluetoothAdapter!.isEnabled()
-            else { throw AndroidCentralError.BluetoothDisabled }
-
+        self.hostController = hostController
+        self.context = context
+    }
+    
+    // MARK: - Methods
+    
+    public func scan(filterDuplicates: Bool = true,
+              shouldContinueScanning: () -> (Bool),
+              foundDevice: @escaping (ScanData<Peripheral, AdvertisementData>) -> ()) throws {
+        
+        NSLog("\(type(of: self)) \(#function)")
+        
+        guard hostController.isEnabled()
+            else { throw AndroidCentralError.bluetoothDisabled }
+        
+        guard let scanner = hostController.lowEnergyScanner
+            else { throw AndroidCentralError.nullValue(\Android.Bluetooth.Adapter.lowEnergyScanner) }
+        
         self.log?("Scanning...")
         
-        //let filters = [Android.Bluetooth.LE.ScanSettings]()
-        
         let scanCallback = ScanCallback(filterDuplicates, foundDevice)
-
-        bluetoothAdapter?.lowEnergyScanner?.startScan(callback: scanCallback)
         
-        while shouldContinueScanning(){
-            sleep(1)
-        }
-        // sleep until scan finishes
-        //DispatchQueue.global(qos: .background).async {
-            //usleep(useconds_t(30*1000000))
+        hostController.lowEnergyScanner?.startScan(callback: scanCallback)
+        
+        while shouldContinueScanning() { sleep(1) }
+        
+        scanner.stopScan(callback: scanCallback)
+    }
+    
+    public func connect(to peripheral: Peripheral, timeout: TimeInterval = .gattDefaultTimeout) throws {
+        
+        NSLog("\(type(of: self)) \(#function)")
+        
+        guard hostController.isEnabled()
+            else { throw AndroidCentralError.bluetoothDisabled }
+        
+        // store semaphore
+        let semaphore = Semaphore(timeout: timeout)
+        accessQueue.sync { [unowned self] in self.internalState.connect.semaphore = semaphore }
+        defer { accessQueue.sync { [unowned self] in self.internalState.connect.semaphore = nil } }
+        
+        // attempt to connect (does not timeout)
+        try accessQueue.sync { [unowned self] in
             
-            NSLog("Stopping the scanning")
-            self.bluetoothAdapter?.lowEnergyScanner?.stopScan(callback: scanCallback)
-            /*DispatchQueue.main.async {
+            guard let cache = self.internalState.cache[peripheral]
+                else { throw CentralError.unknownPeripheral }
+            
+            let _ = cache.device.connectGatt(context: self.context, autoConnect: false, callback: cache.gattCallback)
+        }
+        
+        // throw async error
+        do { try semaphore.wait() }
+            
+        catch CentralError.timeout {
+            
+            // cancel connection if we timeout
+            accessQueue.sync { [unowned self] in
                 
-            }*/
-        //}
-    }
-    
-    func connect(to peripheral: AndroidPeripheral, timeout: TimeInterval) throws {
-        
-        NSLog("\(type(of: self)) \(#function)")
-        
-        guard bluetoothAdapter!.isEnabled()
-            else { throw AndroidCentralError.BluetoothDisabled }
-        
-        gattCallback = GattCallback(peripheral: peripheral)
-        
-        peripheral.gatt = peripheral.device.connectGatt(context: SwiftDemoApplication.context!, autoConnect: false, callback: gattCallback!)
-        
-        NSLog("Connected = device address = \(peripheral.gatt?.getDevice().address)")
-        NSLog("Connected = device name = \(peripheral.gatt?.getDevice().getName())")
-    }
-    
-    func disconnect(peripheral: AndroidPeripheral) {
-        NSLog("\(type(of: self)) \(#function)")
-        
-        peripheral.gatt?.disconnect()
-    }
-    
-    func disconnectAll() {
-        NSLog("\(type(of: self)) \(#function)")
-        
-    }
-    
-    func discoverServices(_ services: [BluetoothUUID], for peripheral: AndroidPeripheral, timeout: TimeInterval) throws -> [Service<AndroidPeripheral>] {
-        NSLog("\(type(of: self)) \(#function)")
-        
-        let result = peripheral.gatt?.discoverServices()
-        
-        if(result!){
-            usleep(useconds_t(0.3*1000000))
+                // Close, disconnect or cancel connection
+                self.internalState.cache[peripheral]?.gatt.disconnect()
+            }
             
+            throw CentralError.timeout
         }
         
-        let services = [Service<AndroidPeripheral>]()
-        
-        return services
+        //NSLog("Connected = device address = \(cache.gatt.getDevice().address)")
+        //NSLog("Connected = device name = \(cache.gatt.getDevice().getName())")
     }
     
-    func discoverCharacteristics(_ characteristics: [BluetoothUUID], for service: Service<AndroidPeripheral>, timeout: TimeInterval) throws -> [Characteristic<AndroidPeripheral>] {
+    public func disconnect(peripheral: Peripheral) {
+        NSLog("\(type(of: self)) \(#function)")
+        
+        accessQueue.sync { [unowned self] in
+            self.internalState.cache[peripheral]?.gatt.disconnect()
+        }
+    }
+    
+    public func disconnectAll() {
+        NSLog("\(type(of: self)) \(#function)")
+        
+        accessQueue.sync { [unowned self] in
+            self.internalState.cache.values.forEach { $0.gatt.disconnect() }
+        }
+    }
+    
+    public func discoverServices(_ services: [BluetoothUUID] = [],
+                                 for peripheral: Peripheral,
+                                 timeout: TimeInterval = .gattDefaultTimeout) throws -> [Service<Peripheral>] {
+        
+        NSLog("\(type(of: self)) \(#function)")
+        
+        guard hostController.isEnabled()
+            else { throw AndroidCentralError.bluetoothDisabled }
+        
+        // store semaphore
+        let semaphore = Semaphore(timeout: timeout)
+        accessQueue.sync { [unowned self] in self.internalState.connect.semaphore = semaphore }
+        defer { accessQueue.sync { [unowned self] in self.internalState.connect.semaphore = nil } }
+        
+        try accessQueue.sync { [unowned self] in
+            
+            guard let cache = self.internalState.cache[peripheral]
+                else { throw CentralError.unknownPeripheral }
+            
+            guard cache.gatt.discoverServices()
+                else { throw AndroidCentralError.binderFailure }
+        }
+        
+        // throw async error
+        do { try semaphore.wait() }
+        
+        // get values from internal state
+        return try accessQueue.sync { [unowned self] in
+            
+            guard let cache = self.internalState.cache[peripheral]
+                else { throw CentralError.unknownPeripheral }
+            
+            return [Service<Peripheral>]() // FIXME: Get values from callback
+        }
+    }
+    
+    public func discoverCharacteristics(_ characteristics: [BluetoothUUID] = [],
+                                        for service: Service<Peripheral>,
+                                        timeout: TimeInterval = .gattDefaultTimeout) throws -> [Characteristic<Peripheral>] {
         NSLog("\(type(of: self)) \(#function)")
         
         fatalError("not implemented")
     }
     
-    func readValue(for characteristic: Characteristic<AndroidPeripheral>, timeout: TimeInterval) throws -> Data {
+    public func readValue(for characteristic: Characteristic<Peripheral>, timeout: TimeInterval) throws -> Data {
         NSLog("\(type(of: self)) \(#function)")
         
         fatalError("not implemented")
     }
     
-    func writeValue(_ data: Data, for characteristic: Characteristic<AndroidPeripheral>, withResponse: Bool, timeout: TimeInterval) throws {
+    public func writeValue(_ data: Data, for characteristic: Characteristic<Peripheral>, withResponse: Bool, timeout: TimeInterval) throws {
         NSLog("\(type(of: self)) \(#function)")
         
     }
     
-    func notify(_ notification: ((Data) -> ())?, for characteristic: Characteristic<AndroidPeripheral>, timeout: TimeInterval) throws {
+    public func notify(_ notification: ((Data) -> ())?, for characteristic: Characteristic<Peripheral>, timeout: TimeInterval) throws {
         NSLog("\(type(of: self)) \(#function)")
         
     }
@@ -133,15 +201,18 @@ class AndroidCentral: CentralProtocol {
     
     private class ScanCallback: Android.Bluetooth.LE.ScanCallback {
         
-        private var filterDuplicates: Bool?
-        private var foundDevice: ((ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ())?
+        private weak var central: AndroidCentral?
+        
+        private var filterDuplicates: Bool = true
+        private var foundDevice: ((ScanData<Peripheral, AdvertisementData>) -> ())?
         
         public required init(javaObject: jobject?) {
             super.init(javaObject: javaObject)
         }
         
-        convenience init(_ filterDuplicates: Bool, _ foundDevice: @escaping (ScanData<AndroidPeripheral, AndroidAdvertisementData>) -> ()) {
-
+        convenience init(_ filterDuplicates: Bool,
+                         _ foundDevice: @escaping (ScanData<Peripheral, AdvertisementData>) -> ()) {
+            
             self.init(javaObject: nil)
             bindNewJavaObject()
             
@@ -150,22 +221,20 @@ class AndroidCentral: CentralProtocol {
             self.foundDevice = foundDevice
         }
         
-        public override func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType, result: Android.Bluetooth.LE.ScanResult) {
+        public override func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType,
+                                          result: Android.Bluetooth.LE.ScanResult) {
+            
             NSLog("\(type(of: self)) \(#function)")
             
-            if(filterDuplicates!){
-                
-                
-            }else{
-                
-                let peripheral = AndroidPeripheral(identifier: result.device.address, device: result.device)
-                
-                let advertisement = AndroidAdvertisementData.init(localName: result.device.getName(), manufacturerData: nil, isConnectable: true)
-                
-                let scandata = ScanData<AndroidPeripheral, AndroidAdvertisementData>(peripheral: peripheral, rssi: Double(result.rssi), advertisementData: advertisement);
-                
-                foundDevice!(scandata)
-            }
+            let peripheral = Peripheral(identifier: result.device.address)
+            
+            let advertisement = AdvertisementData(data: Data(result.scanRecord.bytes))
+            
+            let scandata = ScanData(peripheral: peripheral,
+                                    rssi: Double(result.rssi),
+                                    advertisementData: advertisement)
+            
+            foundDevice?(scandata)
         }
         
         public override func onBatchScanResults(results: [Android.Bluetooth.LE.ScanResult]) {
@@ -287,6 +356,119 @@ class AndroidCentral: CentralProtocol {
         }
     }
     
+}
+
+// MARK: - Supporting Types
+
+internal extension AndroidCentral {
+    
+    struct InternalState {
+        
+        fileprivate init() { }
+        
+        var cache = [Peripheral: Cache]()
+        
+        var scan = Scan()
+        
+        struct Scan {
+            
+            //var peripherals = [Peripheral: (peripheral: CBPeripheral, scanResult: ScanData<Peripheral, AdvertisementData>)]()
+            
+            var foundDevice: ((ScanData<Peripheral, Advertisement>) -> ())?
+        }
+        
+        var connect = Connect()
+        
+        struct Connect {
+            
+            var semaphore: Semaphore?
+        }
+        
+        var discoverServices = DiscoverServices()
+        
+        struct DiscoverServices {
+            
+            var semaphore: Semaphore?
+        }
+        
+        var discoverCharacteristics = DiscoverCharacteristics()
+        
+        struct DiscoverCharacteristics {
+            
+            var semaphore: Semaphore?
+        }
+        
+        var readCharacteristic = ReadCharacteristic()
+        
+        struct ReadCharacteristic {
+            
+            var semaphore: Semaphore?
+        }
+        
+        var writeCharacteristic = WriteCharacteristic()
+        
+        struct WriteCharacteristic {
+            
+            var semaphore: Semaphore?
+        }
+        
+        var notify = Notify()
+        
+        struct Notify {
+            
+            var semaphore: Semaphore?
+        }
+    }
+}
+
+internal extension AndroidCentral {
+    
+    struct Cache {
+        
+        let device: Android.Bluetooth.Device
+        let gatt: Android.Bluetooth.Gatt
+        let gattCallback: Android.Bluetooth.GattCallback
+    }
+}
+
+internal extension AndroidCentral {
+    
+    final class Semaphore {
+        
+        let semaphore: DispatchSemaphore
+        let timeout: TimeInterval
+        var error: Swift.Error?
+        
+        init(timeout: TimeInterval) {
+            
+            self.timeout = timeout
+            self.semaphore = DispatchSemaphore(value: 0)
+            self.error = nil
+        }
+        
+        func wait() throws {
+            
+            let dispatchTime: DispatchTime = .now() + timeout
+            
+            let success = semaphore.wait(timeout: dispatchTime) == .success
+            
+            if let error = self.error {
+                
+                throw error
+            }
+            
+            guard success else { throw CentralError.timeout }
+        }
+        
+        func stopWaiting(_ error: Swift.Error? = nil) {
+            
+            // store signal
+            self.error = error
+            
+            // stop blocking
+            semaphore.signal()
+        }
+    }
 }
 
 //#endif

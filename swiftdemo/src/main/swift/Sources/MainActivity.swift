@@ -35,6 +35,8 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     
     public var deviceAdapter: DeviceAdapter?
     
+    internal lazy var central = AndroidCentral()
+    
     override func onCreate(savedInstanceState: Android.OS.Bundle?) {
         
         NSLog("\(type(of: self)) \(#function)")
@@ -71,6 +73,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         NSLog("\(type(of: self)) \(#function)")
         
         let intentFilter = Android.Content.IntentFilter(action: Android.Bluetooth.Adapter.Action.stateChanged.rawValue)
+        
         registerReceiver(receiver: bluetoothChangeStateReceiver!, filter: intentFilter)
         
         if(bluetoothAdapter!.isEnabled()){
@@ -139,34 +142,32 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     
     public func startScanning(){
         
-        
-        //bluetoothAdapter?.lowEnergyScanner?.startScan(callback: scanCallback!)
-        
-        
         NSLog("\(type(of: self)) \(#function)scanData.peripheral")
         
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            
+            guard let central = self?.central else { return }
         
             do {
-                let androidCentral = AndroidCentral()
                 
-                try androidCentral.scan(filterDuplicates: false, shouldContinueScanning: { true }, foundDevice: {
-                    (scanData) in
+                let scanData = try central.scan(duration: 5)
+                
+                print("Found \(scanData.count) peripherals")
+                scanData.forEach { print($0) }
+                
+                for scanPeripheral in scanData {
                     
-                    NSLog("\(scanData.peripheral.identifier.rawValue) - \(scanData.rssi)")
+                    let deviceModel = DeviceModel(device: scanPeripheral.peripheral.device, rssi: Int(scanPeripheral.rssi))
                     
-                    let deviceModel = DeviceModel(device: scanData.peripheral.device, rssi: Int(scanData.rssi))
+                    self?.deviceAdapter?.addDevice(newDevice: deviceModel)
                     
-                    self.deviceAdapter?.addDevice(newDevice: deviceModel)
+                    try central.connect(to: scanPeripheral.peripheral)
                     
-                    try? androidCentral.connect(to: scanData.peripheral, timeout: 3000)
+                    try central.discoverServices(for: scanPeripheral.peripheral)
                     
-                    let uuid = [BluetoothUUID]()
-                    
-                    try androidCentral.discoverServices(uuid, for: scanData.peripheral, timeout: 3000)
-                    
-                    //androidCentral.disconnect(peripheral: scanData.peripheral)
-                })
+                    central.disconnect(peripheral: scanPeripheral.peripheral)
+                }
+                
             } catch {
                 NSLog("\(type(of: self)) \(#function) Scanning error")
                 assertionFailure("Scanning error ")
