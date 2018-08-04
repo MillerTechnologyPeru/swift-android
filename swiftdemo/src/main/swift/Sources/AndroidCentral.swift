@@ -156,8 +156,8 @@ public final class AndroidCentral: CentralProtocol {
         
         // store semaphore
         let semaphore = Semaphore(timeout: timeout)
-        accessQueue.sync { [unowned self] in self.internalState.connect.semaphore = semaphore }
-        defer { accessQueue.sync { [unowned self] in self.internalState.connect.semaphore = nil } }
+        accessQueue.sync { [unowned self] in self.internalState.discoverServices.semaphore = semaphore }
+        defer { accessQueue.sync { [unowned self] in self.internalState.discoverServices.semaphore = nil } }
         
         try accessQueue.sync { [unowned self] in
             
@@ -243,6 +243,8 @@ public final class AndroidCentral: CentralProtocol {
                     else { return }
                 
                 central.internalState.scan.foundDevice?(scanData)
+                central.internalState.scan.peripherals[peripheral] = InternalState.Scan.Device(scanData: scanData,
+                                                                                               scanResult: result)
                 
                 central.internalState.cache[peripheral] = Cache(device: result.device,
                                                                 central: central)
@@ -343,6 +345,10 @@ public final class AndroidCentral: CentralProtocol {
                 NSLog("Size: \(String(describing: gatt.getServices()?.size()))")
                 
                 central.internalState.cache[peripheral]?.update(services)
+                
+                // success
+                central.internalState.discoverServices.semaphore?.stopWaiting()
+                central.internalState.discoverServices.semaphore = nil
             }
         }
         
@@ -415,9 +421,16 @@ internal extension AndroidCentral {
         
         struct Scan {
             
-            //var peripherals = [Peripheral: (peripheral: CBPeripheral, scanResult: ScanData<Peripheral, AdvertisementData>)]()
+            var peripherals = [Peripheral: Device]()
             
             var foundDevice: ((ScanData<Peripheral, Advertisement>) -> ())?
+            
+            struct Device {
+                
+                let scanData: ScanData<Peripheral, AdvertisementData>
+                
+                let scanResult: Android.Bluetooth.LE.ScanResult
+            }
         }
         
         var connect = Connect()
