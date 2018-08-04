@@ -70,6 +70,11 @@ public final class AndroidCentral: CentralProtocol {
         guard let scanner = hostController.lowEnergyScanner
             else { throw AndroidCentralError.nullValue(\Android.Bluetooth.Adapter.lowEnergyScanner) }
         
+        accessQueue.sync { [unowned self] in
+            self.internalState.scan.peripherals.removeAll()
+            self.internalState.scan.foundDevice = foundDevice
+        }
+        
         self.log?("Scanning...")
         
         let scanCallback = ScanCallback()
@@ -98,10 +103,16 @@ public final class AndroidCentral: CentralProtocol {
         // attempt to connect (does not timeout)
         try accessQueue.sync { [unowned self] in
             
-            guard let cache = self.internalState.cache[peripheral]
+            guard let scanDevice = self.internalState.scan.peripherals[peripheral]
                 else { throw CentralError.unknownPeripheral }
             
-            cache.gatt = cache.device.connectGatt(context: self.context, autoConnect: false, callback: cache.gattCallback)
+            let callback = GattCallback(central: self)
+            
+            let gatt = scanDevice.scanResult.device.connectGatt(context: self.context,
+                                                                autoConnect: false,
+                                                                callback: callback)
+            
+            self.internalState.cache[peripheral] = Cache(gatt: gatt, callback: callback)
         }
         
         // throw async error
@@ -113,7 +124,8 @@ public final class AndroidCentral: CentralProtocol {
             accessQueue.sync { [unowned self] in
                 
                 // Close, disconnect or cancel connection
-                self.internalState.cache[peripheral]?.gatt?.disconnect()
+                self.internalState.cache[peripheral]?.gatt.disconnect()
+                self.internalState.cache[peripheral] = nil
             }
             
             throw CentralError.timeout
@@ -128,8 +140,8 @@ public final class AndroidCentral: CentralProtocol {
         NSLog("\(type(of: self)) \(#function)")
         
         accessQueue.sync { [unowned self] in
-            self.internalState.cache[peripheral]?.gatt?.disconnect()
-            self.internalState.cache[peripheral]?.gatt = nil
+            self.internalState.cache[peripheral]?.gatt.disconnect()
+            self.internalState.cache[peripheral] = nil
         }
     }
     
@@ -138,10 +150,8 @@ public final class AndroidCentral: CentralProtocol {
         NSLog("\(type(of: self)) \(#function)")
         
         accessQueue.sync { [unowned self] in
-            self.internalState.cache.values.forEach {
-                $0.gatt?.disconnect()
-                $0.gatt = nil
-            }
+            self.internalState.cache.values.forEach { $0.gatt.disconnect() }
+            self.internalState.cache.removeAll()
         }
     }
     
@@ -161,13 +171,13 @@ public final class AndroidCentral: CentralProtocol {
         
         try accessQueue.sync { [unowned self] in
             
-            guard let cache = self.internalState.cache[peripheral]
+            guard self.internalState.scan.peripherals.keys.contains(peripheral)
                 else { throw CentralError.unknownPeripheral }
             
-            guard let gatt = cache.gatt
+            guard let cache = self.internalState.cache[peripheral]
                 else { throw CentralError.disconnected }
             
-            guard gatt.discoverServices()
+            guard cache.gatt.discoverServices()
                 else { throw AndroidCentralError.binderFailure }
         }
         
@@ -227,7 +237,7 @@ public final class AndroidCentral: CentralProtocol {
         public override func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType,
                                           result: Android.Bluetooth.LE.ScanResult) {
             
-            NSLog("\(type(of: self)) \(#function)")
+            NSLog("\(type(of: self)) \(#function) \(result.device.address)")
             
             let peripheral = Peripheral(identifier: result.device.address)
             
@@ -245,9 +255,6 @@ public final class AndroidCentral: CentralProtocol {
                 central.internalState.scan.foundDevice?(scanData)
                 central.internalState.scan.peripherals[peripheral] = InternalState.Scan.Device(scanData: scanData,
                                                                                                scanResult: result)
-                
-                central.internalState.cache[peripheral] = Cache(device: result.device,
-                                                                central: central)
             }
         }
         
@@ -481,17 +488,16 @@ internal extension AndroidCentral {
     
     final class Cache {
         
-        let device: Android.Bluetooth.Device
-        
-        fileprivate init(device: Android.Bluetooth.Device, central: AndroidCentral) {
+        fileprivate init(gatt: Android.Bluetooth.Gatt,
+                         callback: GattCallback) {
             
-            self.device = device
-            self.gattCallback = GattCallback(central: central)
+            self.gatt = gatt
+            self.gattCallback = callback
         }
         
-        var gattCallback = GattCallback()
+        let gattCallback: GattCallback
         
-        var gatt: Android.Bluetooth.Gatt?
+        let gatt: Android.Bluetooth.Gatt
         
         var services = Services()
         
