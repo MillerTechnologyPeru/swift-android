@@ -153,7 +153,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         
             do {
                 
-                let scanData = try central.scan(duration: 5)
+                let scanData = try central.scan(duration: 10)
                 
                 print("Found \(scanData.count) peripherals")
                 scanData.forEach { print($0) }

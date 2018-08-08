@@ -13,6 +13,7 @@ import Bluetooth
 
 import Android
 import java_swift
+import java_util
 
 public enum AndroidCentralError: Error {
     
@@ -241,7 +242,9 @@ public final class AndroidCentral: CentralProtocol {
             
             let peripheral = Peripheral(identifier: result.device.address)
             
-            let advertisement = AdvertisementData(data: Data(result.scanRecord.bytes))
+            let record = result.scanRecord
+            
+            let advertisement = AdvertisementData(data: Data(record.bytes))
             
             let scanData = ScanData(peripheral: peripheral,
                                     rssi: Double(result.rssi),
@@ -251,7 +254,6 @@ public final class AndroidCentral: CentralProtocol {
                 
                 guard let central = self?.central
                     else { return }
-                
                 central.internalState.scan.foundDevice?(scanData)
                 central.internalState.scan.peripherals[peripheral] = InternalState.Scan.Device(scanData: scanData,
                                                                                                scanResult: result)
@@ -284,7 +286,7 @@ public final class AndroidCentral: CentralProtocol {
             super.init(javaObject: javaObject)
         }
         
-        public func onConnectionStateChange(gatt: Android.Bluetooth.Gatt,
+        public override func onConnectionStateChange(gatt: Android.Bluetooth.Gatt,
                                             status: AndroidBluetoothGatt.Status,
                                             newState: AndroidBluetoothDevice.State) {
             
@@ -323,7 +325,7 @@ public final class AndroidCentral: CentralProtocol {
             }
         }
         
-        public func onServicesDiscovered(gatt: Android.Bluetooth.Gatt,
+        public override func onServicesDiscovered(gatt: Android.Bluetooth.Gatt,
                                          status: AndroidBluetoothGatt.Status) {
             
             let peripheral = Peripheral(identifier: gatt.getDevice().address)
@@ -340,18 +342,13 @@ public final class AndroidCentral: CentralProtocol {
                 guard status == .success
                     else { central.internalState.discoverServices.semaphore?.stopWaiting(status); return }
                 
-                let services: [Android.Bluetooth.GattService] = gatt.getServices()?.withJavaObject {
-                    
-                    let service = Android.Bluetooth.GattService(javaObject: $0)
-                    NSLog("Service \(service.getUuid().toString())")
-                    
-                    // FIXME: Iterate Java List
-                    return [service]
-                } ?? []
+                gatt.services.forEach{ service in
+                    NSLog("UUID service = \(service.getUuid().toString())")
+                }
                 
-                NSLog("Size: \(String(describing: gatt.getServices()?.size()))")
+                NSLog("Size: \(String(describing: gatt.services.count))")
                 
-                central.internalState.cache[peripheral]?.update(services)
+                central.internalState.cache[peripheral]?.update(gatt.services)
                 
                 // success
                 central.internalState.discoverServices.semaphore?.stopWaiting()
@@ -359,54 +356,54 @@ public final class AndroidCentral: CentralProtocol {
             }
         }
         
-        public func onCharacteristicChanged(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic) {
+        public override func onCharacteristicChanged(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic) {
             NSLog("\(type(of: self)): \(#function)")
             
         }
         
-        public func onCharacteristicRead(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic, status: AndroidBluetoothGatt.Status) {
+        public override func onCharacteristicRead(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic, status: AndroidBluetoothGatt.Status) {
             NSLog("\(type(of: self)): \(#function)")
             
         }
         
-        public func onCharacteristicWrite(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic, status: AndroidBluetoothGatt.Status) {
+        public override func onCharacteristicWrite(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic, status: AndroidBluetoothGatt.Status) {
             NSLog("\(type(of: self)): \(#function)")
             
         }
         
-        public func onDescriptorRead(gatt: Android.Bluetooth.Gatt, descriptor: Android.Bluetooth.GattDescriptor, status: AndroidBluetoothGatt.Status) {
-            
-            NSLog("\(type(of: self)): \(#function)")
-            
-        }
-        
-        public func onDescriptorWrite(gatt: Android.Bluetooth.Gatt, descriptor: Android.Bluetooth.GattDescriptor, status: AndroidBluetoothGatt.Status) {
+        public override func onDescriptorRead(gatt: Android.Bluetooth.Gatt, descriptor: Android.Bluetooth.GattDescriptor, status: AndroidBluetoothGatt.Status) {
             
             NSLog("\(type(of: self)): \(#function)")
             
         }
         
-        public func onMtuChanged(gatt: Android.Bluetooth.Gatt, mtu: Int, status: AndroidBluetoothGatt.Status) {
+        public override func onDescriptorWrite(gatt: Android.Bluetooth.Gatt, descriptor: Android.Bluetooth.GattDescriptor, status: AndroidBluetoothGatt.Status) {
+            
             NSLog("\(type(of: self)): \(#function)")
             
         }
         
-        public func onPhyRead(gatt: Android.Bluetooth.Gatt, txPhy: AndroidBluetoothGatt.TxPhy, rxPhy: AndroidBluetoothGatt.RxPhy, status: AndroidBluetoothGatt.Status) {
+        public override func onMtuChanged(gatt: Android.Bluetooth.Gatt, mtu: Int, status: AndroidBluetoothGatt.Status) {
             NSLog("\(type(of: self)): \(#function)")
             
         }
         
-        public func onPhyUpdate(gatt: Android.Bluetooth.Gatt, txPhy: AndroidBluetoothGatt.TxPhy, rxPhy: AndroidBluetoothGatt.RxPhy, status: AndroidBluetoothGatt.Status) {
+        public override func onPhyRead(gatt: Android.Bluetooth.Gatt, txPhy: AndroidBluetoothGatt.TxPhy, rxPhy: AndroidBluetoothGatt.RxPhy, status: AndroidBluetoothGatt.Status) {
             NSLog("\(type(of: self)): \(#function)")
             
         }
         
-        public func onReadRemoteRssi(gatt: Android.Bluetooth.Gatt, rssi: Int, status: AndroidBluetoothGatt.Status) {
+        public override func onPhyUpdate(gatt: Android.Bluetooth.Gatt, txPhy: AndroidBluetoothGatt.TxPhy, rxPhy: AndroidBluetoothGatt.RxPhy, status: AndroidBluetoothGatt.Status) {
             NSLog("\(type(of: self)): \(#function)")
             
         }
         
-        public func onReliableWriteCompleted(gatt: Android.Bluetooth.Gatt, status: AndroidBluetoothGatt.Status) {
+        public override func onReadRemoteRssi(gatt: Android.Bluetooth.Gatt, rssi: Int, status: AndroidBluetoothGatt.Status) {
+            NSLog("\(type(of: self)): \(#function)")
+            
+        }
+        
+        public override func onReliableWriteCompleted(gatt: Android.Bluetooth.Gatt, status: AndroidBluetoothGatt.Status) {
             NSLog("\(type(of: self)): \(#function)")
             
         }
