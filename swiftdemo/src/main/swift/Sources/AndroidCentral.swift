@@ -200,6 +200,29 @@ public final class AndroidCentral: CentralProtocol {
                                         timeout: TimeInterval = .gattDefaultTimeout) throws -> [Characteristic<Peripheral>] {
         NSLog("\(type(of: self)) \(#function)")
         
+        guard hostController.isEnabled()
+            else { throw AndroidCentralError.bluetoothDisabled }
+        
+        // store semaphore
+        let semaphore = Semaphore(timeout: timeout)
+        accessQueue.sync { [unowned self] in self.internalState.discoverCharacteristics.semaphore = semaphore }
+        defer { accessQueue.sync { [unowned self] in self.internalState.discoverCharacteristics.semaphore = nil } }
+        
+        try accessQueue.sync { [unowned self] in
+            
+            guard let cache = self.internalState.cache[service.peripheral]
+                else { throw CentralError.disconnected }
+            
+            guard let gattService = cache.services.values[service.identifier]
+                else { throw AndroidCentralError.binderFailure }
+            /*
+            guard gattService.getCharacteristics()
+                else { throw AndroidCentralError.binderFailure }*/
+        }
+        
+        // throw async error
+        do { try semaphore.wait() }
+        
         fatalError("not implemented")
     }
     
