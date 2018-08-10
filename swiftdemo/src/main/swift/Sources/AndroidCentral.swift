@@ -109,9 +109,18 @@ public final class AndroidCentral: CentralProtocol {
             
             let callback = GattCallback(central: self)
             
-            let gatt = scanDevice.scanResult.device.connectGatt(context: self.context,
+            let gatt : AndroidBluetoothGatt
+            
+            if( Android.OS.Build.Version.Sdk.sdkInt.rawValue <= Android.OS.Build.VersionCodes.lollipopMr1.rawValue ) {
+                gatt = scanDevice.scanResult.device.connectGatt(context: self.context,
                                                                 autoConnect: false,
                                                                 callback: callback)
+            } else {
+                gatt = scanDevice.scanResult.device.connectGatt(context: self.context,
+                                                                autoConnect: false,
+                                                                callback: callback,
+                                                                transport: Android.Bluetooth.Device.Transport.le)
+            }
             
             self.internalState.cache[peripheral] = Cache(gatt: gatt, callback: callback)
         }
@@ -142,6 +151,7 @@ public final class AndroidCentral: CentralProtocol {
         
         accessQueue.sync { [unowned self] in
             self.internalState.cache[peripheral]?.gatt.disconnect()
+            self.internalState.cache[peripheral]?.gatt.close()
             self.internalState.cache[peripheral] = nil
         }
     }
@@ -151,7 +161,10 @@ public final class AndroidCentral: CentralProtocol {
         NSLog("\(type(of: self)) \(#function)")
         
         accessQueue.sync { [unowned self] in
-            self.internalState.cache.values.forEach { $0.gatt.disconnect() }
+            self.internalState.cache.values.forEach {
+                $0.gatt.disconnect()
+                $0.gatt.close()
+            }
             self.internalState.cache.removeAll()
         }
     }
@@ -191,7 +204,23 @@ public final class AndroidCentral: CentralProtocol {
             guard let cache = self.internalState.cache[peripheral]
                 else { throw CentralError.unknownPeripheral }
             
-            return [Service<Peripheral>]() // FIXME: Get values from callback
+            var services = [Service<Peripheral>]()
+            
+            cache.services.values.forEach{ identifier, service in
+                
+                guard let uuid = BluetoothUUID.init(rawValue: service.getUuid().toString()) else {
+                    NSLog("UUID is nil")
+                    return
+                }
+                
+                let isPrimary = service.getType() == AndroidBluetoothGattService.ServiceType.primary
+                
+                let service = Service.init(identifier: identifier, uuid: uuid, peripheral: peripheral, isPrimary: isPrimary)
+                
+                services.append(service)
+            }
+            
+            return services
         }
     }
     
@@ -215,9 +244,10 @@ public final class AndroidCentral: CentralProtocol {
             
             guard let gattService = cache.services.values[service.identifier]
                 else { throw AndroidCentralError.binderFailure }
-            /*
-            guard gattService.getCharacteristics()
-                else { throw AndroidCentralError.binderFailure }*/
+            
+            let characteristics = gattService.getCharacteristics()
+            
+            NSLog("\(gattService.getUuid().toString()) - char size \(characteristics?.size())")
         }
         
         // throw async error
@@ -261,7 +291,7 @@ public final class AndroidCentral: CentralProtocol {
         public override func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType,
                                           result: Android.Bluetooth.LE.ScanResult) {
             
-            NSLog("\(type(of: self)) \(#function) \(result.device.address)")
+            NSLog("\(type(of: self)) \(#function) name: \(result.device.getName()) address: \(result.device.address)")
             
             let peripheral = Peripheral(identifier: result.device.address)
             
@@ -356,6 +386,8 @@ public final class AndroidCentral: CentralProtocol {
             NSLog("\(type(of: self)): \(#function)")
             
             NSLog("\(peripheral) Status: \(status)")
+            
+            
             
             central?.accessQueue.async { [weak self] in
                 

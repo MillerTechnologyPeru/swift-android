@@ -11,6 +11,7 @@ import java_lang
 import java_util
 import Android
 import Bluetooth
+import GATT
 
 /// Needs to be implemented by app.
 @_silgen_name("SwiftAndroidMainActivity")
@@ -153,11 +154,39 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         
             do {
                 
-                let scanData = try central.scan(duration: 10)
+                let scanData = try central.scan(duration: 5)
                 
                 print("Found \(scanData.count) peripherals")
                 scanData.forEach { print($0) }
                 
+                var peripheralForConnecting: Peripheral?
+                
+                for scanPeripheral in scanData {
+                    
+                    if(scanPeripheral.peripheral.identifier.rawValue == "5D:43:E3:C3:D0:DF"){
+                        peripheralForConnecting = scanPeripheral.peripheral
+                    }
+                }
+                
+                guard let peripheral = peripheralForConnecting else {
+                    NSLog("Couldnt find the Peripheral (5D:43:E3:C3:D0:DF)")
+                    return
+                }
+                
+                try central.connect(to: peripheral)
+                
+                let services = try central.discoverServices(for: peripheral)
+                
+                services.forEach { print($0) }
+                
+                for service in services {
+                    
+                    try central.discoverCharacteristics(for: service)
+                }
+                
+                central.disconnect(peripheral: peripheral)
+                
+                /*
                 for scanPeripheral in scanData {
                     
                     ///let deviceModel = DeviceModel(device: scanPeripheral.peripheral, rssi: Int(scanPeripheral.rssi))
@@ -177,7 +206,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
                     }
                     
                     central.disconnect(peripheral: scanPeripheral.peripheral)
-                }
+                }*/
                 
             } catch {
                 NSLog("\(type(of: self)) \(#function) Scanning error")
