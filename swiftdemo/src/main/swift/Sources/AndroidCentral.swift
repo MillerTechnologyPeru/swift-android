@@ -253,7 +253,7 @@ public final class AndroidCentral: CentralProtocol {
         // throw async error
         do { try semaphore.wait() }
         
-        fatalError("not implemented")
+        return [Characteristic<Peripheral>]()
     }
     
     public func readValue(for characteristic: Characteristic<Peripheral>, timeout: TimeInterval) throws -> Data {

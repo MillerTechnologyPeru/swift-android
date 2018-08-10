@@ -34,7 +34,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     
     private var gattCallback: MySwiftGattCallback?
     
-    public var deviceAdapter: DeviceAdapter?
+    public var peripheralAdapter: PeripheralAdapter?
     
     internal lazy var central = AndroidCentral(hostController: Android.Bluetooth.Adapter.default!,
                                                context: SwiftDemoApplication.context!)
@@ -57,7 +57,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         
         gattCallback = MySwiftGattCallback(mainActivity: self)
         
-        deviceAdapter = DeviceAdapter(mainActivity: self)
+        peripheralAdapter = PeripheralAdapter(mainActivity: self)
         
         let context = Android.Content.Context(casting: self)
         let linearLayoutManager = Android.Widget.RecyclerView.LinearLayoutManager(context: context!)
@@ -67,7 +67,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
 
         let rvDevices = Android.Widget.RecyclerView(casting: findViewById(rvId)!)
         
-        rvDevices?.adapter = deviceAdapter!
+        rvDevices?.adapter = peripheralAdapter!
         
         rvDevices?.layoutManager = linearLayoutManager
     }
@@ -130,7 +130,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
             let permissions = [Android.ManifestPermission.accessCoarseLocation.rawValue]
             
             requestPermissions(permissions: permissions, requestCode: REQUEST_GPS_PERMISSION)
-        }else{
+        } else {
             
             NSLog("\(type(of: self)) \(#function) dont request permission")
             startDiscovery()
@@ -157,19 +157,19 @@ final class MainActivity: SwiftSupportAppCompatActivity {
                 let scanData = try central.scan(duration: 5)
                 
                 print("Found \(scanData.count) peripherals")
-                scanData.forEach { print($0) }
+                scanData.forEach { self?.peripheralAdapter?.addPeripheral($0.peripheral) }
                 
                 var peripheralForConnecting: Peripheral?
                 
                 for scanPeripheral in scanData {
                     
-                    if(scanPeripheral.peripheral.identifier.rawValue == "5D:43:E3:C3:D0:DF"){
+                    if(scanPeripheral.peripheral.identifier.rawValue == "47:49:9B:21:9F:F3"){
                         peripheralForConnecting = scanPeripheral.peripheral
                     }
                 }
                 
                 guard let peripheral = peripheralForConnecting else {
-                    NSLog("Couldnt find the Peripheral (5D:43:E3:C3:D0:DF)")
+                    NSLog("Couldnt find the Peripheral (47:49:9B:21:9F:F3)")
                     return
                 }
                 
@@ -184,7 +184,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
                     try central.discoverCharacteristics(for: service)
                 }
                 
-                central.disconnect(peripheral: peripheral)
+                //central.disconnect(peripheral: peripheral)
                 
                 /*
                 for scanPeripheral in scanData {

@@ -34,7 +34,7 @@ public class MySwiftScanCallback: Android.Bluetooth.LE.ScanCallback {
         
         let deviceModel = DeviceModel(device: device, rssi: rssi)
 
-        activity?.deviceAdapter?.addDevice(newDevice: deviceModel)
+        //activity?.deviceAdapter?.addDevice(newDevice: deviceModel)
     }
     
     public override func onBatchScanResults(results: [Android.Bluetooth.LE.ScanResult]) {
