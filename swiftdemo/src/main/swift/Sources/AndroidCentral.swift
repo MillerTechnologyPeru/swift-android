@@ -151,7 +151,7 @@ public final class AndroidCentral: CentralProtocol {
         
         accessQueue.sync { [unowned self] in
             self.internalState.cache[peripheral]?.gatt.disconnect()
-            self.internalState.cache[peripheral]?.gatt.close()
+            //self.internalState.cache[peripheral]?.gatt.close()
             self.internalState.cache[peripheral] = nil
         }
     }
@@ -163,7 +163,7 @@ public final class AndroidCentral: CentralProtocol {
         accessQueue.sync { [unowned self] in
             self.internalState.cache.values.forEach {
                 $0.gatt.disconnect()
-                $0.gatt.close()
+                //$0.gatt.close()
             }
             self.internalState.cache.removeAll()
         }

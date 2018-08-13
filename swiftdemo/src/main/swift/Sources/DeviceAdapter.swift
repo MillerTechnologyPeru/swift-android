@@ -78,6 +78,7 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
         deviceViewHolder.bind(deviceModel: deviceModelItem)
     }
     
+    /*
     class OnClickItemListener: Android.View.View.OnClickListener {
         
         private var mainActivity: MainActivity?
@@ -103,6 +104,7 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
             deviceDetailDialogFragment.show(manager: (mainActivity?.supportFragmentManager)!, tag: "")
         }
     }
+    */
     
     class DeviceViewHolder: Android.Widget.RecyclerView.ViewHolder {
         
@@ -134,9 +136,9 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
             self.tvAddress = Android.Widget.TextView(casting: tvAddressObject)
             self.tvRssi = Android.Widget.TextView(casting: tvRssiObject)
             
-            let onclick = OnClickItemListener(mainActivity: mainActivity)
+            //let onclick = OnClickItemListener(mainActivity: mainActivity)
             
-            itemView.setOnClickListener(l: onclick)
+            //itemView.setOnClickListener(l: onclick)
         }
         
         required init(javaObject: jobject?) {

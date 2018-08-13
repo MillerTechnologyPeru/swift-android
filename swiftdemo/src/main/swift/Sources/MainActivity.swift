@@ -70,6 +70,28 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         rvDevices?.adapter = peripheralAdapter!
         
         rvDevices?.layoutManager = linearLayoutManager
+        
+        peripheralAdapter?.onItemClick = { (peripheral) in
+            
+            do {
+                try self.central.connect(to: peripheral)
+                
+                let services = try self.central.discoverServices(for: peripheral)
+                
+                services.forEach { print($0) }
+                /*
+                for service in services {
+                    
+                    try self.central.discoverCharacteristics(for: service)
+                }*/
+                
+                try self.central.disconnect(peripheral: peripheral)
+            } catch {
+                NSLog("\(type(of: self)) \(#function) Connection error")
+                assertionFailure("Connection error ")
+                return
+            }
+        }
     }
     
     override func onResume() {
@@ -157,38 +179,11 @@ final class MainActivity: SwiftSupportAppCompatActivity {
                 let scanData = try central.scan(duration: 5)
                 
                 print("Found \(scanData.count) peripherals")
-                
-                let runnable = ShowPeripheralsTask(peripheralAdapter: (self?.peripheralAdapter!)!, data: scanData)
-                
-                self?.runOnMainThread(runnable: runnable)
-                /*
-                scanData.forEach {
-                    self?.peripheralAdapter?.addPeripheral($0.peripheral)
-                }
-                */
-                var peripheralForConnecting: Peripheral?
-                
-                for scanPeripheral in scanData {
-                    
-                    if(scanPeripheral.peripheral.identifier.rawValue == "47:49:9B:21:9F:F3"){
-                        peripheralForConnecting = scanPeripheral.peripheral
+
+                self?.runOnMainThread {
+                    scanData.forEach {
+                        self?.peripheralAdapter?.addPeripheral($0.peripheral)
                     }
-                }
-                
-                guard let peripheral = peripheralForConnecting else {
-                    NSLog("Couldnt find the Peripheral (47:49:9B:21:9F:F3)")
-                    return
-                }
-                
-                try central.connect(to: peripheral)
-                
-                let services = try central.discoverServices(for: peripheral)
-                
-                services.forEach { print($0) }
-                
-                for service in services {
-                    
-                    try central.discoverCharacteristics(for: service)
                 }
                 
                 //central.disconnect(peripheral: peripheral)
@@ -236,7 +231,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         
         NSLog("\(type(of: self)): \(#function)")
     }
-    
+    /*
     class ShowPeripheralsTask: SwiftRunnable {
         
         var peripheralAdapter: PeripheralAdapter?
@@ -261,5 +256,5 @@ final class MainActivity: SwiftSupportAppCompatActivity {
                 peripheralAdapter?.addPeripheral($0.peripheral)
             }
         }
-    }
+    }*/
 }

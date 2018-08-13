@@ -16,6 +16,7 @@ class PeripheralAdapter: Android.Widget.RecyclerView.Adapter {
     
     private var mainActivity: MainActivity?
     private var peripherals: [Peripheral] = [Peripheral]()
+    public var onItemClick: ((Peripheral) -> ())?
     
     public required init(javaObject: jobject?) {
         super.init(javaObject: javaObject)
@@ -71,6 +72,14 @@ class PeripheralAdapter: Android.Widget.RecyclerView.Adapter {
         let peripheralItem = peripherals[position]
         
         peripheralViewHolder.bind(peripheralItem)
+        
+        peripheralViewHolder.itemView?.setOnClickListener{
+            guard let onClick = self.onItemClick else {
+                return
+            }
+            
+            onClick(peripheralItem)
+        }
     }
     
     public override func getItemCount() -> Int {
@@ -82,6 +91,7 @@ class PeripheralAdapter: Android.Widget.RecyclerView.Adapter {
         fileprivate var tvName: Android.Widget.TextView?
         fileprivate var tvAddress: Android.Widget.TextView?
         fileprivate var tvRssi: Android.Widget.TextView?
+        fileprivate var itemView: Android.View.View?
         
         convenience init(itemView: Android.View.View, mainActivity: MainActivity) {
             NSLog("\(type(of: self)) \(#function) 1")
@@ -103,6 +113,7 @@ class PeripheralAdapter: Android.Widget.RecyclerView.Adapter {
             guard let tvRssiObject = itemView.findViewById(tvRssiId)
                 else { fatalError("No view for \(tvRssiId)") }
             
+            self.itemView = itemView
             self.tvName = Android.Widget.TextView(casting: tvNameObject)
             self.tvAddress = Android.Widget.TextView(casting: tvAddressObject)
             self.tvRssi = Android.Widget.TextView(casting: tvRssiObject)
