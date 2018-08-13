@@ -158,11 +158,9 @@ final class MainActivity: SwiftSupportAppCompatActivity {
                 
                 print("Found \(scanData.count) peripherals")
                 
-                let handler = Android.OS.Handler()
-                
                 let runnable = ShowPeripheralsTask(peripheralAdapter: (self?.peripheralAdapter!)!, data: scanData)
                 
-                handler.post(rectangle: runnable)
+                self?.runOnMainThread(runnable: runnable)
                 /*
                 scanData.forEach {
                     self?.peripheralAdapter?.addPeripheral($0.peripheral)
