@@ -28,7 +28,7 @@ public enum AndroidCentralError: Error {
 }
 
 public final class AndroidCentral: CentralProtocol {
-    
+
     // MARK: - Properties
     
     public var log: ((String) -> ())?
@@ -270,6 +270,12 @@ public final class AndroidCentral: CentralProtocol {
     public func notify(_ notification: ((Data) -> ())?, for characteristic: Characteristic<Peripheral>, timeout: TimeInterval) throws {
         NSLog("\(type(of: self)) \(#function)")
         
+    }
+    
+    public func maximumTransmissionUnit(for peripheral: Peripheral) throws -> ATTMaximumTransmissionUnit {
+        NSLog("\(type(of: self)) \(#function)")
+        
+        fatalError("not implemented")
     }
     
     //MARK: Android

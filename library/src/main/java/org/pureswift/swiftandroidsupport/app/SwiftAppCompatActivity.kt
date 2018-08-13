@@ -126,6 +126,10 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
         return super.getSupportFragmentManager()
     }
 
+    fun runOnMainThread(runnable: Runnable){
+        runOnUiThread(runnable)
+    }
+
     private external fun bind(): Long
 
     private external fun onCreateNative(__swiftObject: Long, savedInstanceState: Bundle?)

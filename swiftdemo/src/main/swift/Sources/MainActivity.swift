@@ -157,8 +157,17 @@ final class MainActivity: SwiftSupportAppCompatActivity {
                 let scanData = try central.scan(duration: 5)
                 
                 print("Found \(scanData.count) peripherals")
-                scanData.forEach { self?.peripheralAdapter?.addPeripheral($0.peripheral) }
                 
+                let handler = Android.OS.Handler()
+                
+                let runnable = ShowPeripheralsTask(peripheralAdapter: (self?.peripheralAdapter!)!, data: scanData)
+                
+                handler.post(rectangle: runnable)
+                /*
+                scanData.forEach {
+                    self?.peripheralAdapter?.addPeripheral($0.peripheral)
+                }
+                */
                 var peripheralForConnecting: Peripheral?
                 
                 for scanPeripheral in scanData {
@@ -228,5 +237,31 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     deinit {
         
         NSLog("\(type(of: self)): \(#function)")
+    }
+    
+    class ShowPeripheralsTask: SwiftRunnable {
+        
+        var peripheralAdapter: PeripheralAdapter?
+        var data: [ScanData<Peripheral, AdvertisementData>]?
+        
+        public convenience init(peripheralAdapter: PeripheralAdapter, data: [ScanData<Peripheral, AdvertisementData>]) {
+            
+            self.init(javaObject: nil)
+            self.bindNewObject()
+            
+            self.peripheralAdapter = peripheralAdapter
+            self.data = data
+        }
+        
+        public required init(javaObject: jobject?) {
+            super.init(javaObject: javaObject)
+        }
+        
+        override func run() {
+            NSLog("\(type(of: self)) \(#function)")
+            data?.forEach {
+                peripheralAdapter?.addPeripheral($0.peripheral)
+            }
+        }
     }
 }
