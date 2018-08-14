@@ -75,17 +75,24 @@ final class MainActivity: SwiftSupportAppCompatActivity {
             
             do {
                 try self.central.connect(to: peripheral)
-                
+                NSLog("Peripheral UUID: \(peripheral.identifier)")
                 let services = try self.central.discoverServices(for: peripheral)
-                
-                services.forEach { print($0) }
-                /*
-                for service in services {
-                    
-                    try self.central.discoverCharacteristics(for: service)
-                }*/
-                
-                try self.central.disconnect(peripheral: peripheral)
+                NSLog("services size \(services.count)")
+                try services.forEach {
+                    NSLog("///////////////////")
+                    NSLog("Service: \($0.uuid.rawValue)")
+                    let characteristics = try self.central.discoverCharacteristics(for: $0)
+                    NSLog("Its characteristics are \(characteristics.count)")
+                    characteristics.forEach{ char in
+                        NSLog("char: \(char.uuid.rawValue)")
+                        char.properties.forEach{
+                            NSLog("property: \($0)")
+                        }
+                    }
+                    NSLog("///////////////////")
+                }
+
+                self.central.disconnect(peripheral: peripheral)
             } catch {
                 NSLog("\(type(of: self)) \(#function) Connection error")
                 assertionFailure("Connection error ")

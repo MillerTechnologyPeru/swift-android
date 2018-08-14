@@ -208,7 +208,7 @@ public final class AndroidCentral: CentralProtocol {
             
             cache.services.values.forEach{ identifier, service in
                 
-                guard let uuid = BluetoothUUID.init(rawValue: service.getUuid().toString()) else {
+                guard let uuid = BluetoothUUID(rawValue: service.getUuid().toString()) else {
                     NSLog("UUID is nil")
                     return
                 }
@@ -231,7 +231,7 @@ public final class AndroidCentral: CentralProtocol {
         
         guard hostController.isEnabled()
             else { throw AndroidCentralError.bluetoothDisabled }
-        
+        /*
         // store semaphore
         let semaphore = Semaphore(timeout: timeout)
         accessQueue.sync { [unowned self] in self.internalState.discoverCharacteristics.semaphore = semaphore }
@@ -239,21 +239,44 @@ public final class AndroidCentral: CentralProtocol {
         
         try accessQueue.sync { [unowned self] in
             
-            guard let cache = self.internalState.cache[service.peripheral]
-                else { throw CentralError.disconnected }
             
-            guard let gattService = cache.services.values[service.identifier]
-                else { throw AndroidCentralError.binderFailure }
-            
-            let characteristics = gattService.getCharacteristics()
-            
-            NSLog("\(gattService.getUuid().toString()) - char size \(characteristics?.size())")
         }
         
         // throw async error
         do { try semaphore.wait() }
+        */
         
-        return [Characteristic<Peripheral>]()
+        guard let cache = self.internalState.cache[service.peripheral]
+            else { throw CentralError.disconnected }
+        
+        guard let gattService = cache.services.values[service.identifier]
+            else { throw AndroidCentralError.binderFailure }
+        
+        var characteristics = [Characteristic<Peripheral>]()
+        
+        let gattCharacteristics = gattService.getCharacteristics()
+        gattCharacteristics.forEach{ char in
+            //NSLog("CHAR uuid = \(char.getUuid().toString()), value = \(char.getValue())")
+            
+            let bluetoothUUID = BluetoothUUID(rawValue: char.getUuid().toString())
+            
+            guard let uuid = bluetoothUUID else {
+                NSLog("UUID is nil")
+                return
+            }
+            
+            let properties = BitMaskOptionSet<GATT.CharacteristicProperty>(rawValue: UInt8(char.getProperties()))
+            
+            let characteristic = Characteristic<Peripheral>(identifier: UInt(char.getInstanceId()),
+                                                            uuid: uuid,
+                                                            peripheral: service.peripheral,
+                                                            properties: properties)
+            characteristics.append(characteristic)
+        }
+        
+        //NSLog("\(gattService.getUuid().toString()) - char size \(characteristics.count)")
+        
+        return characteristics
     }
     
     public func readValue(for characteristic: Characteristic<Peripheral>, timeout: TimeInterval) throws -> Data {
@@ -393,8 +416,6 @@ public final class AndroidCentral: CentralProtocol {
             
             NSLog("\(peripheral) Status: \(status)")
             
-            
-            
             central?.accessQueue.async { [weak self] in
                 
                 guard let central = self?.central
@@ -402,12 +423,6 @@ public final class AndroidCentral: CentralProtocol {
                 
                 guard status == .success
                     else { central.internalState.discoverServices.semaphore?.stopWaiting(status); return }
-                
-                gatt.services.forEach{ service in
-                    NSLog("UUID service = \(service.getUuid().toString())")
-                }
-                
-                NSLog("Size: \(String(describing: gatt.services.count))")
                 
                 central.internalState.cache[peripheral]?.update(gatt.services)
                 
