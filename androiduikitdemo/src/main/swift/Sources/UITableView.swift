@@ -26,6 +26,7 @@ final public class UITableView: UIView {
     
     internal static let defaultRowHeight: CGFloat = 44
     
+    internal private(set) var registeredCells = [String: UITableViewCell.Type]()
     
     /// Initializes and returns a table view object having the given frame and style.
     public required init(frame: CGRect, style: UITableViewStyle = .plain) {
@@ -39,6 +40,7 @@ final public class UITableView: UIView {
         recyclerView = AndroidWidgetRecyclerView(context: context)
         
         recyclerView.layoutManager = AndroidWidgetRecyclerViewLinearLayoutManager(context: context)
+        
         //recyclerView.
         
         super.init(frame: frame)
@@ -49,52 +51,7 @@ final public class UITableView: UIView {
     /// Registers a class for use in creating new table cells.
     public func register(_ cellClass: UITableViewCell.Type?,
                          forCellReuseIdentifier identifier: String) {
-        
-    }
-}
-
-/// Default data source
-final class DefaultDataSource: AndroidWidgetRecyclerViewAdapter, UITableViewDataSource {
-    
-    private var uiTable: UITableView!
-    
-    convenience init(uiTable: UITableView) {
-        
-        NSLog("\(type(of: self)) \(#function)")
-        
-        self.init(javaObject: nil)
-        bindNewJavaObject()
-        
-        self.uiTable = uiTable
-    }
-    
-    required convenience init(javaObject: jobject?) {
-        self.init(javaObject: javaObject
-        )
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        fatalError("Should never request cell for table view with default data source")
-    }
-    
-    public override func getItemCount() -> Int {
-        return tableView(uiTable, numberOfRowsInSection: numberOfSections(in: uiTable))
-    }
-    
-    public override func onCreateViewHolder(parent: Android.View.ViewGroup, viewType: Int?) -> AndroidWidgetRecyclerView.ViewHolder {
-       // uiTable.register(, forCellReuseIdentifier: <#T##String#>)
-        
-    }
-    
-    public override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int) {
-        let indexPath = IndexPath.init(index: IndexPath.Element.init(exactly: position)!)
-        let view = tableView(uiTable, cellForRowAt: indexPath)
+        registeredCells[identifier] = cellClass
     }
 }
 
@@ -159,6 +116,49 @@ public let UITableViewAutomaticDimension: CGFloat = -1.0
 
 open class UITableViewRowAction {
     
+}
+
+class AndroidAdapter: AndroidWidgetRecyclerViewAdapter {
+    
+    private weak var tableView: UITableView?
+    
+    convenience init(tableView: UITableView){
+        self.init(javaObject: nil)
+        bindNewJavaObject()
+        
+        self.tableView = tableView
+    }
+    
+    required init(javaObject: jobject?) {
+        super.init(javaObject: javaObject)
+    }
+    
+    override func onCreateViewHolder(parent: Android.View.ViewGroup, viewType: Int?) -> AndroidWidgetRecyclerView.ViewHolder {
+        /*
+        guard let cellType = tableView?.registeredCells.first?.value else {
+            
+            
+        }*/
+        
+        fatalError()
+    }
+    
+    override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int) {
+        
+    }
+    
+    override func getItemCount() -> Int {
+        
+        guard let tableView = tableView else {
+            return 0
+        }
+        
+        guard let dataSource = tableView.dataSource else {
+            return 0
+        }
+        
+        return dataSource.numberOfSections(in: tableView)
+    }
 }
 
 /*
