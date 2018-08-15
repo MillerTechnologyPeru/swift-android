@@ -71,7 +71,9 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         
         rvDevices?.layoutManager = linearLayoutManager
         
-        peripheralAdapter?.onItemClick = { (peripheral) in
+        peripheralAdapter?.onItemClick = { (device) in
+            
+            let peripheral = device.peripheral
             
             do {
                 try self.central.connect(to: peripheral)
@@ -93,9 +95,10 @@ final class MainActivity: SwiftSupportAppCompatActivity {
                 }
 
                 self.central.disconnect(peripheral: peripheral)
+                
             } catch {
                 NSLog("\(type(of: self)) \(#function) Connection error")
-                assertionFailure("Connection error ")
+                NSLog("Connection error ")
                 return
             }
         }
@@ -189,7 +192,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
 
                 self?.runOnMainThread {
                     scanData.forEach {
-                        self?.peripheralAdapter?.addPeripheral($0.peripheral)
+                        self?.peripheralAdapter?.addPeripheral($0)
                     }
                 }
                 

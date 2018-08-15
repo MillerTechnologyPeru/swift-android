@@ -144,6 +144,30 @@ public final class AndroidCentral: CentralProtocol {
         
         //NSLog("Connected = device address = \(cache.gatt.getDevice().address)")
         //NSLog("Connected = device name = \(cache.gatt.getDevice().getName())")
+        
+        // negotiate MTU
+        let currentMTU = try self.maximumTransmissionUnit(for: peripheral)
+        if options.maximumTransmissionUnit != currentMTU {
+            
+            try request(mtu: options.maximumTransmissionUnit, for: peripheral)
+        }
+    }
+    
+    internal func request(mtu: ATTMaximumTransmissionUnit, for peripheral: Peripheral) throws {
+        
+        try accessQueue.sync { [unowned self] in
+            
+            guard let _ = self.internalState.scan.peripherals[peripheral]
+                else { throw CentralError.unknownPeripheral }
+            
+            guard let cache = self.internalState.cache[peripheral]
+                else { throw CentralError.disconnected }
+            
+            guard cache.gatt.requestMtu(mtu: Int(mtu.rawValue))
+                else { throw AndroidCentralError.binderFailure }
+        }
+        
+        // dont wait
     }
     
     public func disconnect(peripheral: Peripheral) {
@@ -466,7 +490,7 @@ public final class AndroidCentral: CentralProtocol {
                                           mtu: Int,
                                           status: Android.Bluetooth.Gatt.Status) {
             
-            NSLog("\(type(of: self)): \(#function)")
+            central?.log?("\(type(of: self)): \(#function) Peripheral \(Peripheral(gatt)) MTU \(mtu) Status \(status)")
             
             let peripheral = Peripheral(gatt)
             
@@ -475,7 +499,7 @@ public final class AndroidCentral: CentralProtocol {
                 guard let central = self?.central
                     else { return }
                 
-                //
+                // get new MTU value
                 guard let newMTU = ATTMaximumTransmissionUnit(rawValue: UInt16(mtu))
                     else { fatalError("Invalid MTU \(mtu)") }
                 

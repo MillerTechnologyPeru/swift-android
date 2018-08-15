@@ -14,9 +14,11 @@ import GATT
 
 class PeripheralAdapter: Android.Widget.RecyclerView.Adapter {
     
+    typealias Device = ScanData<Peripheral, AdvertisementData>
+    
     private var mainActivity: MainActivity?
-    private var peripherals: [Peripheral] = [Peripheral]()
-    public var onItemClick: ((Peripheral) -> ())?
+    private var peripherals = [Device]()
+    public var onItemClick: ((Device) -> ())?
     
     public required init(javaObject: jobject?) {
         super.init(javaObject: javaObject)
@@ -32,7 +34,7 @@ class PeripheralAdapter: Android.Widget.RecyclerView.Adapter {
         self.mainActivity = mainActivity
     }
     
-    func addPeripheral(_ newPeripheral: Peripheral){
+    func addPeripheral(_ newPeripheral: Device) {
         
         var alreadyExists = false
         var indextExistingItem = -1
@@ -40,7 +42,7 @@ class PeripheralAdapter: Android.Widget.RecyclerView.Adapter {
         for (index, peripheralItem) in peripherals.enumerated() {
             print("Item \(index): \(peripheralItem)")
             
-            if(peripheralItem.identifier == newPeripheral.identifier){
+            if (peripheralItem.peripheral.identifier == newPeripheral.peripheral.identifier) {
                 alreadyExists = true
                 indextExistingItem = index
                 break
@@ -88,6 +90,8 @@ class PeripheralAdapter: Android.Widget.RecyclerView.Adapter {
     
     class PeripheralViewHolder: Android.Widget.RecyclerView.ViewHolder {
         
+        typealias Device = ScanData<Peripheral, AdvertisementData>
+        
         fileprivate var tvName: Android.Widget.TextView?
         fileprivate var tvAddress: Android.Widget.TextView?
         fileprivate var tvRssi: Android.Widget.TextView?
@@ -127,11 +131,11 @@ class PeripheralAdapter: Android.Widget.RecyclerView.Adapter {
             super.init(javaObject: javaObject)
         }
         
-        public func bind(_ peripheral: Peripheral) {
+        public func bind(_ device: Device) {
             
-            tvName?.text = peripheral.identifier.rawValue
-            tvAddress?.text = peripheral.identifier.rawValue
-            tvRssi?.text = "00"
+            tvName?.text = device.peripheral.identifier.rawValue
+            tvAddress?.text = device.advertisementData.localName ?? ""
+            tvRssi?.text = "\(device.rssi)"
         }
         
         deinit {
