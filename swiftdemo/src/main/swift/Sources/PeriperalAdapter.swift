@@ -36,11 +36,13 @@ class PeripheralAdapter: Android.Widget.RecyclerView.Adapter {
     
     func addPeripheral(_ newPeripheral: Device) {
         
+        NSLog("\(type(of: self)) \(#function) \(newPeripheral)")
+        
         var alreadyExists = false
         var indextExistingItem = -1
         
         for (index, peripheralItem) in peripherals.enumerated() {
-            print("Item \(index): \(peripheralItem)")
+            NSLog("Item \(index): \(peripheralItem)")
             
             if (peripheralItem.peripheral.identifier == newPeripheral.peripheral.identifier) {
                 alreadyExists = true
@@ -98,7 +100,7 @@ class PeripheralAdapter: Android.Widget.RecyclerView.Adapter {
         fileprivate var itemView: Android.View.View?
         
         convenience init(itemView: Android.View.View, mainActivity: MainActivity) {
-            NSLog("\(type(of: self)) \(#function) 1")
+            NSLog("\(type(of: self)) \(#function)")
             
             self.init(javaObject: nil)
             

@@ -36,7 +36,7 @@ class DeviceAdapter: Android.Widget.RecyclerView.Adapter {
         var indextExistingItem = -1
         
         for (index, deviceItem) in devices.enumerated() {
-            print("Item \(index): \(deviceItem)")
+            NSLog("Item \(index): \(deviceItem)")
             
             if(deviceItem.device?.getAddress() == newDevice.device?.getAddress()){
                 alreadyExists = true

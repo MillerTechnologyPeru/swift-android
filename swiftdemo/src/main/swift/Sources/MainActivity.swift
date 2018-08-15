@@ -178,7 +178,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     
     public func startScanning(){
         
-        NSLog("\(type(of: self)) \(#function)scanData.peripheral")
+        NSLog("\(type(of: self)) \(#function)")
         
         scanQueue.async { [weak self] in
             
@@ -186,43 +186,19 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         
             do {
                 
-                let scanData = try central.scan(duration: 5)
-                
-                print("Found \(scanData.count) peripherals")
-
-                self?.runOnMainThread {
-                    scanData.forEach {
-                        self?.peripheralAdapter?.addPeripheral($0)
+                let start = Date()
+                let end = start + 5.0
+                try central.scan(shouldContinueScanning: { Date() < end }, foundDevice: { (scanData) in
+                    
+                    self?.runOnMainThread {
+                        self?.peripheralAdapter?.addPeripheral(scanData)
                     }
-                }
+                })
                 
-                //central.disconnect(peripheral: peripheral)
-                
-                /*
-                for scanPeripheral in scanData {
-                    
-                    ///let deviceModel = DeviceModel(device: scanPeripheral.peripheral, rssi: Int(scanPeripheral.rssi))
-                    
-                    //self?.deviceAdapter?.addDevice(newDevice: deviceModel)
-                    
-                    try central.connect(to: scanPeripheral.peripheral)
-                    
-                    let services = try central.discoverServices(for: scanPeripheral.peripheral)
-                    
-                    print("Found \(services.count) services")
-                    services.forEach { print($0) }
-                    
-                    for service in services {
-                        
-                        
-                    }
-                    
-                    central.disconnect(peripheral: scanPeripheral.peripheral)
-                }*/
                 
             } catch {
                 NSLog("\(type(of: self)) \(#function) Scanning error")
-                assertionFailure("Scanning error ")
+                NSLog("Scanning error: \(error)")
                 return
             }
         }
