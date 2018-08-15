@@ -23,7 +23,7 @@ public final class UIColor {
         self.androidColor = androidColor
     }
     
-    internal init(color: Int) {
+    internal init(color: Int64) {
         
         self.androidColor = Android.Graphics.Drawable.ColorDrawable(color: color)
     }
