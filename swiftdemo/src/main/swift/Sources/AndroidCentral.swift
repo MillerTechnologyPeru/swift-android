@@ -31,15 +31,17 @@ public final class AndroidCentral: CentralProtocol {
 
     // MARK: - Properties
     
-    public var log: ((String) -> ())?
+    public var log: ((String) -> ())? = { NSLog("AndroidCentral: \($0)") }
     
     public let hostController: Android.Bluetooth.Adapter
     
     public let context: Android.Content.Context
     
+    public let options: Options
+    
     internal private(set) var internalState = InternalState()
     
-    internal lazy var accessQueue: DispatchQueue = DispatchQueue(label: "\(type(of: self)) Access Queue", attributes: [])
+    internal lazy var accessQueue: DispatchQueue = DispatchQueue(label: "\(type(of: self)) Access Queue")
     
     // MARK: - Intialization
     
@@ -49,12 +51,12 @@ public final class AndroidCentral: CentralProtocol {
     }
     
     public init(hostController: Android.Bluetooth.Adapter,
-                context: Android.Content.Context) {
-        
-        NSLog("\(type(of: self)) \(#function)")
+                context: Android.Content.Context,
+                options: AndroidCentral.Options = Options()) {
         
         self.hostController = hostController
         self.context = context
+        self.options = options
     }
     
     // MARK: - Methods
@@ -62,8 +64,6 @@ public final class AndroidCentral: CentralProtocol {
     public func scan(filterDuplicates: Bool = true,
               shouldContinueScanning: () -> (Bool),
               foundDevice: @escaping (ScanData<Peripheral, AdvertisementData>) -> ()) throws {
-        
-        NSLog("\(type(of: self)) \(#function)")
         
         guard hostController.isEnabled()
             else { throw AndroidCentralError.bluetoothDisabled }
@@ -76,7 +76,7 @@ public final class AndroidCentral: CentralProtocol {
             self.internalState.scan.foundDevice = foundDevice
         }
         
-        self.log?("Scanning...")
+        log?("Scanning...")
         
         let scanCallback = ScanCallback()
         scanCallback.central = self
@@ -90,8 +90,6 @@ public final class AndroidCentral: CentralProtocol {
     }
     
     public func connect(to peripheral: Peripheral, timeout: TimeInterval = .gattDefaultTimeout) throws {
-        
-        NSLog("\(type(of: self)) \(#function)")
         
         guard hostController.isEnabled()
             else { throw AndroidCentralError.bluetoothDisabled }
@@ -109,13 +107,16 @@ public final class AndroidCentral: CentralProtocol {
             
             let callback = GattCallback(central: self)
             
-            let gatt : AndroidBluetoothGatt
+            let gatt: AndroidBluetoothGatt
             
-            if( Android.OS.Build.Version.Sdk.sdkInt.rawValue <= Android.OS.Build.VersionCodes.lollipopMr1.rawValue ) {
+            // call the correct method for connecting
+            if Android.OS.Build.Version.Sdk.sdkInt.rawValue <= Android.OS.Build.VersionCodes.lollipopMr1.rawValue {
+                
                 gatt = scanDevice.scanResult.device.connectGatt(context: self.context,
                                                                 autoConnect: false,
                                                                 callback: callback)
             } else {
+                
                 gatt = scanDevice.scanResult.device.connectGatt(context: self.context,
                                                                 autoConnect: false,
                                                                 callback: callback,
@@ -147,8 +148,6 @@ public final class AndroidCentral: CentralProtocol {
     
     public func disconnect(peripheral: Peripheral) {
         
-        NSLog("\(type(of: self)) \(#function)")
-        
         accessQueue.sync { [unowned self] in
             self.internalState.cache[peripheral]?.gatt.disconnect()
             //self.internalState.cache[peripheral]?.gatt.close()
@@ -157,8 +156,6 @@ public final class AndroidCentral: CentralProtocol {
     }
     
     public func disconnectAll() {
-        
-        NSLog("\(type(of: self)) \(#function)")
         
         accessQueue.sync { [unowned self] in
             self.internalState.cache.values.forEach {
@@ -172,8 +169,6 @@ public final class AndroidCentral: CentralProtocol {
     public func discoverServices(_ services: [BluetoothUUID] = [],
                                  for peripheral: Peripheral,
                                  timeout: TimeInterval = .gattDefaultTimeout) throws -> [Service<Peripheral>] {
-        
-        NSLog("\(type(of: self)) \(#function)")
         
         guard hostController.isEnabled()
             else { throw AndroidCentralError.bluetoothDisabled }
@@ -204,33 +199,34 @@ public final class AndroidCentral: CentralProtocol {
             guard let cache = self.internalState.cache[peripheral]
                 else { throw CentralError.unknownPeripheral }
             
-            var services = [Service<Peripheral>]()
-            
-            cache.services.values.forEach{ identifier, service in
+            return cache.services.values.compactMap { identifier, service in
                 
-                guard let uuid = BluetoothUUID(rawValue: service.getUuid().toString()) else {
-                    NSLog("UUID is nil")
-                    return
+                let uuidRawValue = service.getUuid().toString() ?? ""
+                
+                guard let uuid = BluetoothUUID(rawValue: uuidRawValue) else {
+                    self.log?("Invalid UUID \(uuidRawValue)")
+                    return nil
                 }
                 
                 let isPrimary = service.getType() == AndroidBluetoothGattService.ServiceType.primary
                 
-                let service = Service.init(identifier: identifier, uuid: uuid, peripheral: peripheral, isPrimary: isPrimary)
+                let service = Service(identifier: identifier,
+                                      uuid: uuid,
+                                      peripheral: peripheral,
+                                      isPrimary: isPrimary)
                 
-                services.append(service)
+                return service
             }
-            
-            return services
         }
     }
     
     public func discoverCharacteristics(_ characteristics: [BluetoothUUID] = [],
                                         for service: Service<Peripheral>,
                                         timeout: TimeInterval = .gattDefaultTimeout) throws -> [Characteristic<Peripheral>] {
-        NSLog("\(type(of: self)) \(#function)")
         
         guard hostController.isEnabled()
             else { throw AndroidCentralError.bluetoothDisabled }
+        
         /*
         // store semaphore
         let semaphore = Semaphore(timeout: timeout)
@@ -238,8 +234,8 @@ public final class AndroidCentral: CentralProtocol {
         defer { accessQueue.sync { [unowned self] in self.internalState.discoverCharacteristics.semaphore = nil } }
         
         try accessQueue.sync { [unowned self] in
-            
-            
+         
+            NSLog("\(gattService.getUuid().toString()) - char size \(characteristics.size())")
         }
         
         // throw async error
@@ -252,31 +248,26 @@ public final class AndroidCentral: CentralProtocol {
         guard let gattService = cache.services.values[service.identifier]
             else { throw AndroidCentralError.binderFailure }
         
-        var characteristics = [Characteristic<Peripheral>]()
-        
         let gattCharacteristics = gattService.getCharacteristics()
-        gattCharacteristics.forEach{ char in
-            //NSLog("CHAR uuid = \(char.getUuid().toString()), value = \(char.getValue())")
+        
+        return gattCharacteristics.compactMap { characteristic in
             
-            let bluetoothUUID = BluetoothUUID(rawValue: char.getUuid().toString())
+            let uuidRawValue = characteristic.getUuid().toString() ?? ""
             
-            guard let uuid = bluetoothUUID else {
-                NSLog("UUID is nil")
-                return
+            guard let uuid = BluetoothUUID(rawValue: uuidRawValue) else {
+                self.log?("Invalid UUID \(uuidRawValue)")
+                return nil
             }
             
-            let properties = BitMaskOptionSet<GATT.CharacteristicProperty>(rawValue: UInt8(char.getProperties()))
+            let properties = BitMaskOptionSet<GATT.CharacteristicProperty>(rawValue: UInt8(characteristic.getProperties()))
             
-            let characteristic = Characteristic<Peripheral>(identifier: UInt(char.getInstanceId()),
+            let characteristic = Characteristic<Peripheral>(identifier: UInt(characteristic.getInstanceId()),
                                                             uuid: uuid,
                                                             peripheral: service.peripheral,
                                                             properties: properties)
-            characteristics.append(characteristic)
+            
+            return characteristic
         }
-        
-        //NSLog("\(gattService.getUuid().toString()) - char size \(characteristics.count)")
-        
-        return characteristics
     }
     
     public func readValue(for characteristic: Characteristic<Peripheral>, timeout: TimeInterval) throws -> Data {
@@ -296,9 +287,18 @@ public final class AndroidCentral: CentralProtocol {
     }
     
     public func maximumTransmissionUnit(for peripheral: Peripheral) throws -> ATTMaximumTransmissionUnit {
-        NSLog("\(type(of: self)) \(#function)")
         
-        fatalError("not implemented")
+        guard hostController.isEnabled()
+            else { throw AndroidCentralError.bluetoothDisabled }
+        
+        // access the cached value
+        return try accessQueue.sync { [unowned self] in
+            
+            guard let cache = self.internalState.cache[peripheral]
+                else { throw CentralError.disconnected }
+            
+            return cache.maximumTransmissionUnit
+        }
     }
     
     //MARK: Android
@@ -320,7 +320,7 @@ public final class AndroidCentral: CentralProtocol {
         public override func onScanResult(callbackType: Android.Bluetooth.LE.ScanCallbackType,
                                           result: Android.Bluetooth.LE.ScanResult) {
             
-            NSLog("\(type(of: self)) \(#function) name: \(result.device.getName()) address: \(result.device.address)")
+            central?.log?("\(type(of: self)) \(#function) name: \(result.device.getName() ?? "") address: \(result.device.address)")
             
             let peripheral = Peripheral(identifier: result.device.address)
             
@@ -344,12 +344,12 @@ public final class AndroidCentral: CentralProtocol {
         
         public override func onBatchScanResults(results: [Android.Bluetooth.LE.ScanResult]) {
             
-            NSLog("\(type(of: self)): \(#function)")
+            central?.log?("\(type(of: self)): \(#function)")
         }
         
         public override func onScanFailed(error: AndroidBluetoothLowEnergyScanCallback.Error) {
  
-            NSLog("\(type(of: self)): \(#function)")
+            central?.log?("\(type(of: self)): \(#function)")
         }
     }
     
@@ -372,9 +372,9 @@ public final class AndroidCentral: CentralProtocol {
                                             status: AndroidBluetoothGatt.Status,
                                             newState: AndroidBluetoothDevice.State) {
             
-            NSLog("\(type(of: self)): \(#function)")
+            central?.log?("\(type(of: self)): \(#function)")
             
-            NSLog("Status: \(status) - newState = \(newState)")
+            central?.log?("Status: \(status) - newState = \(newState)")
             
             central?.accessQueue.async { [weak self] in
                 
@@ -408,13 +408,13 @@ public final class AndroidCentral: CentralProtocol {
         }
         
         public override func onServicesDiscovered(gatt: Android.Bluetooth.Gatt,
-                                         status: AndroidBluetoothGatt.Status) {
+                                                  status: AndroidBluetoothGatt.Status) {
             
-            let peripheral = Peripheral(identifier: gatt.getDevice().address)
+            let peripheral = Peripheral(gatt)
             
-            NSLog("\(type(of: self)): \(#function)")
+            central?.log?("\(type(of: self)): \(#function)")
             
-            NSLog("\(peripheral) Status: \(status)")
+            central?.log?("\(peripheral) Status: \(status)")
             
             central?.accessQueue.async { [weak self] in
                 
@@ -433,43 +433,65 @@ public final class AndroidCentral: CentralProtocol {
         }
         
         public override func onCharacteristicChanged(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic) {
-            NSLog("\(type(of: self)): \(#function)")
+            
+            central?.log?("\(type(of: self)): \(#function)")
             
         }
         
         public override func onCharacteristicRead(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic, status: AndroidBluetoothGatt.Status) {
-            NSLog("\(type(of: self)): \(#function)")
+            
+            central?.log?("\(type(of: self)): \(#function)")
             
         }
         
         public override func onCharacteristicWrite(gatt: Android.Bluetooth.Gatt, characteristic: Android.Bluetooth.GattCharacteristic, status: AndroidBluetoothGatt.Status) {
-            NSLog("\(type(of: self)): \(#function)")
+            
+            central?.log?("\(type(of: self)): \(#function)")
             
         }
         
         public override func onDescriptorRead(gatt: Android.Bluetooth.Gatt, descriptor: Android.Bluetooth.GattDescriptor, status: AndroidBluetoothGatt.Status) {
             
-            NSLog("\(type(of: self)): \(#function)")
+            central?.log?("\(type(of: self)): \(#function)")
             
         }
         
         public override func onDescriptorWrite(gatt: Android.Bluetooth.Gatt, descriptor: Android.Bluetooth.GattDescriptor, status: AndroidBluetoothGatt.Status) {
             
-            NSLog("\(type(of: self)): \(#function)")
+            central?.log?("\(type(of: self)): \(#function)")
             
         }
         
-        public override func onMtuChanged(gatt: Android.Bluetooth.Gatt, mtu: Int, status: AndroidBluetoothGatt.Status) {
+        public override func onMtuChanged(gatt: Android.Bluetooth.Gatt,
+                                          mtu: Int,
+                                          status: Android.Bluetooth.Gatt.Status) {
+            
             NSLog("\(type(of: self)): \(#function)")
             
+            let peripheral = Peripheral(gatt)
+            
+            central?.accessQueue.async { [weak self] in
+                
+                guard let central = self?.central
+                    else { return }
+                
+                //
+                guard let newMTU = ATTMaximumTransmissionUnit(rawValue: UInt16(mtu))
+                    else { fatalError("Invalid MTU \(mtu)") }
+                
+                // cache new MTU value
+                central.internalState.cache[peripheral]?.maximumTransmissionUnit = newMTU
+            }
         }
         
         public override func onPhyRead(gatt: Android.Bluetooth.Gatt, txPhy: AndroidBluetoothGatt.TxPhy, rxPhy: AndroidBluetoothGatt.RxPhy, status: AndroidBluetoothGatt.Status) {
+            
             NSLog("\(type(of: self)): \(#function)")
             
         }
         
         public override func onPhyUpdate(gatt: Android.Bluetooth.Gatt, txPhy: AndroidBluetoothGatt.TxPhy, rxPhy: AndroidBluetoothGatt.RxPhy, status: AndroidBluetoothGatt.Status) {
+            
             NSLog("\(type(of: self)): \(#function)")
             
         }
@@ -488,6 +510,20 @@ public final class AndroidCentral: CentralProtocol {
 }
 
 // MARK: - Supporting Types
+
+public extension AndroidCentral {
+    
+    /// Android GATT Central options
+    public struct Options {
+        
+        public let maximumTransmissionUnit: ATTMaximumTransmissionUnit
+        
+        public init(maximumTransmissionUnit: ATTMaximumTransmissionUnit = .max) {
+            
+            self.maximumTransmissionUnit = maximumTransmissionUnit
+        }
+    }
+}
 
 internal extension AndroidCentral {
     
@@ -559,6 +595,7 @@ internal extension AndroidCentral {
 
 internal extension AndroidCentral {
     
+    /// GATT cache for a connection or peripheral.
     final class Cache {
         
         fileprivate init(gatt: Android.Bluetooth.Gatt,
@@ -571,6 +608,8 @@ internal extension AndroidCentral {
         let gattCallback: GattCallback
         
         let gatt: Android.Bluetooth.Gatt
+        
+        fileprivate(set) var maximumTransmissionUnit: ATTMaximumTransmissionUnit = .default
         
         var services = Services()
         
@@ -626,6 +665,21 @@ internal extension AndroidCentral {
             // stop blocking
             semaphore.signal()
         }
+    }
+}
+
+// MARK: - Extentions
+
+fileprivate extension Peripheral {
+    
+    init(_ device: AndroidBluetoothDevice) {
+        
+        self.init(identifier: device.address)
+    }
+    
+    init(_ gatt: AndroidBluetoothGatt) {
+        
+        self.init(gatt.getDevice())
     }
 }
 
