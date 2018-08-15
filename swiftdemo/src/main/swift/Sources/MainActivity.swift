@@ -37,7 +37,8 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     public var peripheralAdapter: PeripheralAdapter?
     
     internal lazy var central = AndroidCentral(hostController: Android.Bluetooth.Adapter.default!,
-                                               context: SwiftDemoApplication.context!)
+                                               context: SwiftDemoApplication.context!,
+                                               options: AndroidCentral.Options(maximumTransmissionUnit: ATTMaximumTransmissionUnit(rawValue: 200)!))
     
     internal lazy var scanQueue: DispatchQueue = DispatchQueue(label: "Scan Queue")
     

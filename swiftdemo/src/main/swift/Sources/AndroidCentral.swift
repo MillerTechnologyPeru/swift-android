@@ -149,6 +149,8 @@ public final class AndroidCentral: CentralProtocol {
         let currentMTU = try self.maximumTransmissionUnit(for: peripheral)
         if options.maximumTransmissionUnit != currentMTU {
             
+            log?("Current MTU is \(currentMTU), requesting \(options.maximumTransmissionUnit)")
+            
             try request(mtu: options.maximumTransmissionUnit, for: peripheral)
         }
     }
@@ -548,6 +550,8 @@ public extension AndroidCentral {
         }
     }
 }
+
+// MARK: - Private Supporting Types
 
 internal extension AndroidCentral {
     
