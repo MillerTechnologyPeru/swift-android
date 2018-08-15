@@ -24,6 +24,7 @@ open class UITableViewCell: UIView {
     
     public var textLabel: UILabel?
     
+    internal var defaultViewHolder: DefaultViewHolder?
     // MARK: - Private
     
     internal static let defaultSize = CGSize(width: 320, height: UITableView.defaultRowHeight)
@@ -44,9 +45,9 @@ open class UITableViewCell: UIView {
         
         textLabel = UILabel.init(frame: frame)
         //self.setupTableViewCellCommon()
+        
+        defaultViewHolder = DefaultViewHolder.init(tableViewCell: self)
     }
-    
-    
 }
 
 internal class DefaultViewHolder: AndroidWidgetRecyclerViewViewHolder {

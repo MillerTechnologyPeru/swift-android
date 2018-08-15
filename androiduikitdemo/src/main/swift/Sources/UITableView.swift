@@ -28,6 +28,8 @@ final public class UITableView: UIView {
     
     internal private(set) var registeredCells = [String: UITableViewCell.Type]()
     
+    fileprivate var identifier: String?
+    
     /// Initializes and returns a table view object having the given frame and style.
     public required init(frame: CGRect, style: UITableViewStyle = .plain) {
         
@@ -51,6 +53,7 @@ final public class UITableView: UIView {
     /// Registers a class for use in creating new table cells.
     public func register(_ cellClass: UITableViewCell.Type?,
                          forCellReuseIdentifier identifier: String) {
+        self.identifier = identifier
         registeredCells[identifier] = cellClass
     }
     
@@ -146,11 +149,21 @@ class AndroidAdapter: AndroidWidgetRecyclerViewAdapter {
     override func onCreateViewHolder(parent: Android.View.ViewGroup, viewType: Int?) -> AndroidWidgetRecyclerView.ViewHolder {
         /*
         guard let cellType = tableView?.registeredCells.first?.value else {
-            
-            
         }*/
         
-        fatalError()
+        guard let tableView = tableView else {
+            fatalError("Missing TableView")
+        }
+        
+        guard let identifier = tableView.identifier else {
+            fatalError("Missing Identifier")
+        }
+        
+        guard let viewHolder = tableView.dequeueReusableCell(withIdentifier: identifier).defaultViewHolder else {
+            fatalError("Missing View Holder")
+        }
+        
+        return viewHolder
     }
     
     override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int) {
