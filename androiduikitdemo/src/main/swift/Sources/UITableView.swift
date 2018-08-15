@@ -53,6 +53,16 @@ final public class UITableView: UIView {
                          forCellReuseIdentifier identifier: String) {
         registeredCells[identifier] = cellClass
     }
+    
+    public func dequeueReusableCell(withIdentifier: String) -> UITableViewCell {
+        
+        //let cellType = registeredCells[withIdentifier]
+        
+        /*if(cellType == UITableViewCell.Type.self){
+        }*/
+        
+        return UITableViewCell(reuseIdentifier: withIdentifier)
+    }
 }
 
 public protocol UITableViewDataSource: class {

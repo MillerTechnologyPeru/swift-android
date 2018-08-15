@@ -30,12 +30,6 @@ open class UIView: UIResponder {
     
     /// Initializes and returns a newly allocated view object with the specified frame rectangle.
     public init(frame: CGRect) {
-        
-        guard let context = AndroidContext(casting: UIScreen.main.activity)
-            else { fatalError("Missing context") }
-        
-        self.androidView = Android.Widget.FrameLayout(context: context)
-        
         super.init()
         
         assert(androidView.javaObject != nil, "Android View not initialized")
@@ -54,7 +48,13 @@ open class UIView: UIResponder {
     // MARK: - Properties
     
     /// The backing Android View
-    internal let androidView: Android.Widget.FrameLayout
+    internal lazy private(set) var androidView: Android.Widget.FrameLayout = { [unowned self] in
+        
+        guard let context = AndroidContext(casting: UIScreen.main.activity)
+            else { fatalError("Missing context") }
+        
+        return Android.Widget.FrameLayout(context: context)
+        }()
     
     internal func updateAndroidView() {
                 

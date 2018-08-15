@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Android
+import java_swift
 
 /// A cell in a table view.
 ///
@@ -15,31 +17,53 @@ import Foundation
 /// editing of the cell contents.
 open class UITableViewCell: UIView {
     
+    /// A string used to identify a cell that is reusable.
+    public let reuseIdentifier: String?
+    
+    public let style: UITableViewCellStyle?
+    
+    public var textLabel: UILabel?
+    
+    // MARK: - Private
+    
+    internal static let defaultSize = CGSize(width: 320, height: UITableView.defaultRowHeight)
+    
     // MARK: - Initializing a `UITableViewCell` Object
     
     /// Initializes a table cell with a style and a reuse identifier and returns it to the caller.
-    public required init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    public required init(style: UITableViewCellStyle = UITableViewCellStyle.default, reuseIdentifier: String?) {
         
         self.style = style
         self.reuseIdentifier = reuseIdentifier
         
         // while `UIView.init()` creates a view with an empty frame,
         // UIKit creates a {0,0, 320, 44} cell with this initializer
-        super.init(frame: CGRect(origin: .zero, size: UITableViewCell.defaultSize))
+        let frame = CGRect(origin: .zero, size: UITableViewCell.defaultSize)
         
+        super.init(frame: frame)
+        
+        textLabel = UILabel.init(frame: frame)
         //self.setupTableViewCellCommon()
     }
     
-    // MARK: - Reusing Cells
     
-    /// A string used to identify a cell that is reusable.
-    public let reuseIdentifier: String?
+}
+
+internal class DefaultViewHolder: AndroidWidgetRecyclerViewViewHolder {
     
-    public let style: UITableViewCellStyle?
+    var textLabel: Android.Widget.TextView?
     
-    // MARK: - Private
+    convenience init(tableViewCell: UITableViewCell){
+        
+        self.init(javaObject: nil)
+        bindNewJavaObject(itemView: tableViewCell.androidView)
+        
+        self.textLabel = tableViewCell.textLabel?.androidTextView
+    }
     
-    internal static let defaultSize = CGSize(width: 320, height: UITableView.defaultRowHeight)
+    required init(javaObject: jobject?) {
+        super.init(javaObject: javaObject)
+    }
 }
 
 // MARK: - Supporting Types
