@@ -146,6 +146,10 @@ class AndroidAdapter: AndroidWidgetRecyclerViewAdapter {
         super.init(javaObject: javaObject)
     }
     
+    override func getItemViewType(position: Int) -> Int {
+        return 0
+    }
+    
     override func onCreateViewHolder(parent: Android.View.ViewGroup, viewType: Int?) -> AndroidWidgetRecyclerView.ViewHolder {
         /*
         guard let cellType = tableView?.registeredCells.first?.value else {
@@ -167,7 +171,9 @@ class AndroidAdapter: AndroidWidgetRecyclerViewAdapter {
     }
     
     override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int) {
+        let defaultViewHolder = DefaultViewHolder(casting: holder)
         
+        defaultViewHolder?.textLabel?.text = "hello"
     }
     
     override func getItemCount() -> Int {
