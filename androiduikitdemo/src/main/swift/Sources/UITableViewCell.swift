@@ -43,6 +43,8 @@ open class UITableViewCell: UIView {
         
         super.init(frame: frame)
         
+        NSLog("\((type: self)) \(#function)")
+        
         textLabel = UILabel.init(frame: frame)
         //self.setupTableViewCellCommon()
         
@@ -60,6 +62,8 @@ internal class DefaultViewHolder: AndroidWidgetRecyclerViewViewHolder {
         bindNewJavaObject(itemView: tableViewCell.androidView)
         
         self.textLabel = tableViewCell.textLabel?.androidTextView
+        
+        NSLog("\((type: self)) \(#function)")
     }
     
     required init(javaObject: jobject?) {

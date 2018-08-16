@@ -13,14 +13,22 @@ final public class UITableView: UIView {
     
     // MARK: - Android
     
-    internal var recyclerView: AndroidWidgetRecyclerView!
+    internal var recyclerView: AndroidWidgetRecyclerView?
     
     // MARK: - Initialization
     
     public var style: UITableViewStyle!
     
     /// The object that acts as the data source of the table view.
-    public weak var dataSource: UITableViewDataSource?
+    public weak var dataSource: UITableViewDataSource? {
+        get{
+            return nil
+        }
+    
+        set{
+            loadAdapter()
+        }
+    }
     
     // MARK: - Private
     
@@ -30,8 +38,12 @@ final public class UITableView: UIView {
     
     fileprivate var identifier: String?
     
+    fileprivate var androidAdapter: AndroidAdapter?
+    
     /// Initializes and returns a table view object having the given frame and style.
     public required init(frame: CGRect, style: UITableViewStyle = .plain) {
+        
+        super.init(frame: frame)
         
         // UITableView properties
         self.style = style
@@ -41,11 +53,23 @@ final public class UITableView: UIView {
         
         recyclerView = AndroidWidgetRecyclerView(context: context)
         
+        guard let recyclerView = recyclerView
+            else { fatalError("Missing Android RecyclerView") }
+        
+        NSLog("\(#function) recycclerview created")
+        
+        recyclerView.setBackgroundColor(color: AndroidGraphicsColor.BLUE)
+        
+        recyclerView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Int(frame.width), height: Int(frame.height))
+        
+        recyclerView.setX(x: Float(frame.minX))
+        recyclerView.setY(y: Float(frame.minY))
+        
         recyclerView.layoutManager = AndroidWidgetRecyclerViewLinearLayoutManager(context: context)
+
+        androidView.addView(recyclerView)
         
-        //recyclerView.
-        
-        super.init(frame: frame)
+        NSLog("\(#function) recycclerview added")
         // setup common
         //setupTableViewCommon()
     }
@@ -55,9 +79,13 @@ final public class UITableView: UIView {
                          forCellReuseIdentifier identifier: String) {
         self.identifier = identifier
         registeredCells[identifier] = cellClass
+        
+        NSLog("\(#function) identifier = \(identifier)")
     }
     
     public func dequeueReusableCell(withIdentifier: String) -> UITableViewCell {
+        
+        NSLog("\(#function)")
         
         //let cellType = registeredCells[withIdentifier]
         
@@ -65,6 +93,20 @@ final public class UITableView: UIView {
         }*/
         
         return UITableViewCell(reuseIdentifier: withIdentifier)
+    }
+    
+    private func loadAdapter(){
+        NSLog("\(type(of: self)) \(#function)")
+        
+        androidAdapter = AndroidAdapter(tableView: self)
+        
+        guard let adapter = androidAdapter
+            else { fatalError("Missing Android Adapter") }
+        
+        guard let recyclerView = recyclerView
+            else { fatalError("Missing Android RecyclerView") }
+        
+        recyclerView.adapter = adapter
     }
 }
 
@@ -140,6 +182,8 @@ class AndroidAdapter: AndroidWidgetRecyclerViewAdapter {
         bindNewJavaObject()
         
         self.tableView = tableView
+        
+        NSLog("\((type: self)) \(#function)")
     }
     
     required init(javaObject: jobject?) {
@@ -151,6 +195,9 @@ class AndroidAdapter: AndroidWidgetRecyclerViewAdapter {
     }
     
     override func onCreateViewHolder(parent: Android.View.ViewGroup, viewType: Int?) -> AndroidWidgetRecyclerView.ViewHolder {
+       
+        NSLog("\((type: self)) \(#function)")
+        
         /*
         guard let cellType = tableView?.registeredCells.first?.value else {
         }*/
@@ -173,6 +220,8 @@ class AndroidAdapter: AndroidWidgetRecyclerViewAdapter {
     override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int) {
         let defaultViewHolder = DefaultViewHolder(casting: holder)
         
+        NSLog("\((type: self)) \(#function)")
+        
         defaultViewHolder?.textLabel?.text = "hello"
     }
     
@@ -186,7 +235,7 @@ class AndroidAdapter: AndroidWidgetRecyclerViewAdapter {
             return 0
         }
         
-        return dataSource.numberOfSections(in: tableView)
+        return dataSource.tableView(tableView, numberOfRowsInSection: dataSource.numberOfSections(in: tableView))
     }
 }
 

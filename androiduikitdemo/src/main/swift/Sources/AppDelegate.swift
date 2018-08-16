@@ -26,7 +26,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         NSLog("UIScreen size: \(UIScreen.main.bounds.size)")
         NSLog("UIScreen native size: \(UIScreen.main.nativeBounds.size)")
         
-        let tableController = MainViewController()
+        //let tableController = MainViewController()
+        let tableController = UITableTestViewController()
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = .red
