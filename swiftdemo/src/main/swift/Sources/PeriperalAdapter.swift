@@ -86,6 +86,23 @@ class PeripheralAdapter: Android.Widget.RecyclerView.Adapter {
         }
     }
     
+    public override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int, payloads: [JavaObject]) {
+        
+        let peripheralViewHolder = holder as! PeripheralViewHolder
+        
+        let peripheralItem = peripherals[position]
+        
+        peripheralViewHolder.bind(peripheralItem)
+        
+        peripheralViewHolder.itemView?.setOnClickListener{
+            guard let onClick = self.onItemClick else {
+                return
+            }
+            
+            onClick(peripheralItem)
+        }
+    }
+    
     public override func getItemCount() -> Int {
         return peripherals.count
     }

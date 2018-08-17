@@ -353,13 +353,24 @@ public final class AndroidCentral: CentralProtocol {
             let record = result.scanRecord
             
             guard let advertisement = AdvertisementData(android: Data(record.bytes))
-                else { assertionFailure("\(#function) Could not initialize advertisment data"); return }
+                else { central?.log?("\(#function) Could not initialize advertisement data from \(record.bytes)"); return }
+            
+            let isConnectable: Bool
+            
+            if AndroidBuild.Version.Sdk.sdkInt.rawValue >= 26 {
+                
+                isConnectable = result.isConnectable
+                
+            } else {
+                
+                isConnectable = true // FIXME: ??
+            }
             
             let scanData = ScanData(peripheral: peripheral,
                                     date: Date(),
                                     rssi: Double(result.rssi),
                                     advertisementData: advertisement,
-                                    isConnectable: result.isConnectable)
+                                    isConnectable: isConnectable)
             
             central?.accessQueue.async { [weak self] in
                 
