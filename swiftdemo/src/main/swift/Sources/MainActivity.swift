@@ -188,7 +188,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
             do {
                 
                 let start = Date()
-                let end = start + 5.0
+                let end = start + 10.0
                 try central.scan(shouldContinueScanning: { Date() < end }, foundDevice: { (scanData) in
                     
                     self?.runOnMainThread {

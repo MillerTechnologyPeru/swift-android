@@ -411,7 +411,7 @@ public final class AndroidCentral: CentralProtocol {
                     
                 case (.success, .connected):
                     
-                    NSLog("GATT Connected")
+                    central.log?("GATT Connected")
                     
                     // if we are expecting a new connection
                     if central.internalState.connect.semaphore != nil {
@@ -422,7 +422,7 @@ public final class AndroidCentral: CentralProtocol {
                     
                 case (.success, .disconnected):
                     
-                    NSLog("GATT Disconnected")
+                    central.log?("GATT Disconnected")
                     
                     break // nothing for now
                     
