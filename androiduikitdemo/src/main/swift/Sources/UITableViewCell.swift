@@ -22,7 +22,7 @@ open class UITableViewCell: UIView {
     
     public let style: UITableViewCellStyle?
     
-    public var textLabel: UILabel?
+    public var textLabel: UILabel!
     
     internal var defaultViewHolder: DefaultViewHolder?
     // MARK: - Private
@@ -39,16 +39,21 @@ open class UITableViewCell: UIView {
         
         // while `UIView.init()` creates a view with an empty frame,
         // UIKit creates a {0,0, 320, 44} cell with this initializer
-        let frame = CGRect(origin: .zero, size: UITableViewCell.defaultSize)
+        let frame = CGRect(origin: .zero, size:  CGSize(width: 320, height: 100))
         
         super.init(frame: frame)
         
         NSLog("\((type: self)) \(#function)")
         
-        textLabel = UILabel.init(frame: frame)
+        textLabel = UILabel(frame: frame)
         //self.setupTableViewCellCommon()
         
-        defaultViewHolder = DefaultViewHolder.init(tableViewCell: self)
+        androidView.background = AndroidGraphicsDrawableColorDrawable.init(color: AndroidGraphicsColor.DKGRAY)
+        androidView.addView(textLabel.androidTextView!)
+        
+        defaultViewHolder = DefaultViewHolder(itemView: self.androidView)
+        
+        NSLog("\((type: self)) \(#function)")
     }
 }
 
@@ -56,18 +61,27 @@ internal class DefaultViewHolder: AndroidWidgetRecyclerViewViewHolder {
     
     var textLabel: Android.Widget.TextView?
     
-    convenience init(tableViewCell: UITableViewCell){
+    convenience init(itemView: AndroidView){
         
         self.init(javaObject: nil)
-        bindNewJavaObject(itemView: tableViewCell.androidView)
+        bindNewJavaObject(itemView: itemView)
         
-        self.textLabel = tableViewCell.textLabel?.androidTextView
+        let view = itemView.findViewById(1122334)
         
-        NSLog("\((type: self)) \(#function)")
+        guard let textView = view
+            else { fatalError("Missing Text View Label") }
+        
+        self.textLabel = AndroidTextView.init(casting: textView)
+        
+        NSLog("\((type: self)) \(#function) \(textLabel?.getId())")
     }
     
     required init(javaObject: jobject?) {
         super.init(javaObject: javaObject)
+    }
+    
+    deinit {
+        NSLog("\(type(of: self)) \(#function)")
     }
 }
 

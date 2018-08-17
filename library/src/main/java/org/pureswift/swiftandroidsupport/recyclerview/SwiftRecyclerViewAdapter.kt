@@ -28,12 +28,12 @@ class SwiftRecyclerViewAdapter(private val __swiftObject: Long): RecyclerView.Ad
 
         __onBindViewHolder(__swiftObject, holder.__swiftObject, position)
     }
-
+/*
     override fun onBindViewHolder(holder: SwiftRecyclerViewViewHolder, position: Int, payloads: MutableList<Any>) {
-
-        __onBindViewHolder(__swiftObject, holder.__swiftObject, position, payloads)
+        Log.e("Swift","onBindViewHolderWithPayload()")
+        __onBindViewHolderPayload(__swiftObject, holder.__swiftObject, position, payloads)
     }
-
+*/
     fun finalize() {
         Log.e("Swift","finalize()")
         __finalize(__swiftObject)
@@ -45,7 +45,7 @@ class SwiftRecyclerViewAdapter(private val __swiftObject: Long): RecyclerView.Ad
 
     private external fun __onBindViewHolder(__swiftObject: Long, holder: Long, position: Int)
 
-    private external fun __onBindViewHolder(__swiftObject: Long, holder: Long, position: Int, payloads: MutableList<Any>)
+    private external fun __onBindViewHolderPayload(__swiftObject: Long, holder: Long, position: Int, payloads: MutableList<Any>)
 
     private external fun __getItemViewType(__swiftObject: Long, position: Int): Int
 

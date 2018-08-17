@@ -62,6 +62,8 @@ open class UIView: UIResponder {
         androidView.setX(x: Float(frame.minX))
         androidView.setY(y: Float(frame.minY))
         
+        NSLog("\((type: self)) \(#function) \(Int(frame.width)) - \(Int(frame.height))")
+        
         // set size
         androidView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Int(frame.width), height: Int(frame.height))
         

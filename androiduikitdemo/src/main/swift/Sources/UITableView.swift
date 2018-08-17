@@ -21,11 +21,7 @@ final public class UITableView: UIView {
     
     /// The object that acts as the data source of the table view.
     public weak var dataSource: UITableViewDataSource? {
-        get{
-            return nil
-        }
-    
-        set{
+        didSet{
             loadAdapter()
         }
     }
@@ -56,14 +52,12 @@ final public class UITableView: UIView {
         guard let recyclerView = recyclerView
             else { fatalError("Missing Android RecyclerView") }
         
-        NSLog("\(#function) recycclerview created")
-        
-        recyclerView.setBackgroundColor(color: AndroidGraphicsColor.BLUE)
+        recyclerView.setBackgroundColor(color: AndroidGraphicsColor.CYAN)
         
         recyclerView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Int(frame.width), height: Int(frame.height))
         
-        recyclerView.setX(x: Float(frame.minX))
-        recyclerView.setY(y: Float(frame.minY))
+        //recyclerView.setX(x: Float(frame.minX))
+        //recyclerView.setY(y: Float(frame.minY))
         
         recyclerView.layoutManager = AndroidWidgetRecyclerViewLinearLayoutManager(context: context)
 
@@ -124,6 +118,87 @@ public extension UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int { return 1 }
 }
 
+
+// MARK: - Android
+
+class AndroidAdapter: AndroidWidgetRecyclerViewAdapter {
+    
+    private weak var tableView: UITableView?
+    
+    convenience init(tableView: UITableView){
+        self.init(javaObject: nil)
+        bindNewJavaObject()
+        
+        self.tableView = tableView
+        
+        NSLog("\((type: self)) \(#function)")
+    }
+    
+    required init(javaObject: jobject?) {
+        super.init(javaObject: javaObject)
+    }
+    
+    override func onCreateViewHolder(parent: Android.View.ViewGroup, viewType: Int?) -> AndroidWidgetRecyclerView.ViewHolder {
+        
+        NSLog("\((type: self)) \(#function)")
+        
+        /*
+         guard let cellType = tableView?.registeredCells.first?.value else {
+         }*/
+        
+        guard let tableView = tableView else {
+            fatalError("Missing TableView")
+        }
+        
+        guard let identifier = tableView.identifier else {
+            fatalError("Missing Identifier")
+        }
+        
+        guard let viewHolder = tableView.dequeueReusableCell(withIdentifier: identifier).defaultViewHolder else {
+            fatalError("Missing View Holder")
+        }
+        
+        return viewHolder
+    }
+    
+    override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int) {
+        
+        NSLog("\((type: self)) \(#function) \(position)")
+        
+        let defaultViewHolder = DefaultViewHolder(casting: holder)
+        
+        defaultViewHolder?.textLabel?.text = "hello \(position)"
+    }
+    
+    override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int, payloads: [JavaObject]) {
+        
+        NSLog("\((type: self)) \(#function) \(position)")
+        
+        let defaultViewHolder = DefaultViewHolder(casting: holder)
+        
+        guard let viewHolder = defaultViewHolder
+            else {fatalError("Missing View Holder")}
+
+        guard let label = viewHolder.textLabel
+            else { fatalError("Missing TextView") }
+        
+        label.text = "hello \(position)"
+    }
+    
+    override func getItemCount() -> Int {
+        /*
+        guard let tableView = tableView else {
+            return 0
+        }
+        
+        guard let dataSource = tableView.dataSource else {
+            return 0
+        }*/
+        
+        return 10//dataSource.tableView(tableView, numberOfRowsInSection: dataSource.numberOfSections(in: tableView))
+    }
+}
+
 // MARK: - Supporting Types
 
 /// The style of the table view.
@@ -171,72 +246,6 @@ public let UITableViewAutomaticDimension: CGFloat = -1.0
 
 open class UITableViewRowAction {
     
-}
-
-class AndroidAdapter: AndroidWidgetRecyclerViewAdapter {
-    
-    private weak var tableView: UITableView?
-    
-    convenience init(tableView: UITableView){
-        self.init(javaObject: nil)
-        bindNewJavaObject()
-        
-        self.tableView = tableView
-        
-        NSLog("\((type: self)) \(#function)")
-    }
-    
-    required init(javaObject: jobject?) {
-        super.init(javaObject: javaObject)
-    }
-    
-    override func getItemViewType(position: Int) -> Int {
-        return 0
-    }
-    
-    override func onCreateViewHolder(parent: Android.View.ViewGroup, viewType: Int?) -> AndroidWidgetRecyclerView.ViewHolder {
-       
-        NSLog("\((type: self)) \(#function)")
-        
-        /*
-        guard let cellType = tableView?.registeredCells.first?.value else {
-        }*/
-        
-        guard let tableView = tableView else {
-            fatalError("Missing TableView")
-        }
-        
-        guard let identifier = tableView.identifier else {
-            fatalError("Missing Identifier")
-        }
-        
-        guard let viewHolder = tableView.dequeueReusableCell(withIdentifier: identifier).defaultViewHolder else {
-            fatalError("Missing View Holder")
-        }
-        
-        return viewHolder
-    }
-    
-    override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int) {
-        let defaultViewHolder = DefaultViewHolder(casting: holder)
-        
-        NSLog("\((type: self)) \(#function)")
-        
-        defaultViewHolder?.textLabel?.text = "hello"
-    }
-    
-    override func getItemCount() -> Int {
-        
-        guard let tableView = tableView else {
-            return 0
-        }
-        
-        guard let dataSource = tableView.dataSource else {
-            return 0
-        }
-        
-        return dataSource.tableView(tableView, numberOfRowsInSection: dataSource.numberOfSections(in: tableView))
-    }
 }
 
 /*

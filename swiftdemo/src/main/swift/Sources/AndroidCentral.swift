@@ -352,7 +352,7 @@ public final class AndroidCentral: CentralProtocol {
             
             let record = result.scanRecord
             
-            guard let advertisement = AdvertisementData(android: Data(record.bytes))
+            guard let advertisement = AdvertisementData(data: Data(record.bytes))
                 else { central?.log?("\(#function) Could not initialize advertisement data from \(record.bytes)"); return }
             
             let isConnectable: Bool

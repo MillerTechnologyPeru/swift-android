@@ -33,15 +33,15 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource {
         view.backgroundColor = .green
         
         //let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
-        //let displayWidth: CGFloat = self.view.frame.width
-        //let displayHeight: CGFloat = self.view.frame.height
+        //let displayWidth: CGFloat = view.frame.width
+        //let displayHeight: CGFloat = view.frame.height
         let displayWidth: CGFloat = UIScreen.main.bounds.width
         let displayHeight: CGFloat = UIScreen.main.bounds.height
         
         NSLog("\(#function) displayWidth = \(displayWidth) ")
         NSLog("\(#function) displayHeight = \(displayHeight) ")
         
-        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: displayWidth, height: displayHeight))
+        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: displayWidth, height: 700))
         
         guard let tableView = tableView else {
             fatalError("Missing table view")
