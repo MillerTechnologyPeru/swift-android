@@ -357,7 +357,7 @@ public final class AndroidCentral: CentralProtocol {
             
             let isConnectable: Bool
             
-            if AndroidBuild.Version.Sdk.sdkInt.rawValue >= 26 {
+            if AndroidBuild.Version.Sdk.sdkInt.rawValue >= AndroidBuild.VersionCodes.O {
                 
                 isConnectable = result.isConnectable
                 
