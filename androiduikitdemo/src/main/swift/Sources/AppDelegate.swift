@@ -30,7 +30,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         let tableController = UITableTestViewController()
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.backgroundColor = .red
+        //self.window?.backgroundColor = .red
         self.window?.rootViewController = tableController
         self.window?.makeKeyAndVisible()
         

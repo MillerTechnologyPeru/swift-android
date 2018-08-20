@@ -28,9 +28,13 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource {
     
     private var tableView: UITableView?
     
+    private var data: [String] = []
+    
     override func viewDidLoad() {
         
-        view.backgroundColor = .green
+        for i in 0...100 {
+            data.append("item \(i)")
+        }
         
         //let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
         //let displayWidth: CGFloat = view.frame.width
@@ -64,6 +68,10 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")
+        
+        //let text = data[indexPath.row]
+        
+        //cell.textLabel?.text = text
         
         return cell
     }

@@ -63,8 +63,20 @@ final public class UITableView: UIView {
     /// Registers a class for use in creating new table cells.
     public func register(_ cellClass: UITableViewCell.Type?,
                          forCellReuseIdentifier identifier: String) {
+    
+        assert(identifier.isEmpty == false, "Identifier must not be an empty string")
+        
         self.identifier = identifier
-        registeredCells[identifier] = cellClass
+        //registeredCells[identifier] = cellClass
+        
+        if let cellClass = cellClass {
+            
+            self.registeredCells[identifier] = cellClass
+            
+        } else {
+            
+            self.registeredCells[identifier] = nil
+        }
         
         NSLog("\(#function) identifier = \(identifier)")
     }

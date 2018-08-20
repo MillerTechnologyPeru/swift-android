@@ -48,7 +48,7 @@ open class UITableViewCell: UIView {
         textLabel = UILabel(frame: frame)
         //self.setupTableViewCellCommon()
         
-        androidView.addView(textLabel.androidTextView!)
+        androidView.addView(textLabel.androidTextView)
         
         defaultViewHolder = DefaultViewHolder(tableViewCell: self)
         
