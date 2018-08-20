@@ -155,7 +155,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     private func verifyGspPermission() {
         NSLog("\(type(of: self)) \(#function)")
         
-        if(Android.OS.Build.Version.Sdk.sdkInt.rawValue >= Android.OS.Build.VersionCodes.m.rawValue
+        if(Android.OS.Build.Version.Sdk.sdkInt.rawValue >= Android.OS.Build.VersionCodes.M
             && checkSelfPermission(permission: Android.ManifestPermission.accessCoarseLocation.rawValue) != Android.Content.PM.PackageManager.Permission.granted.rawValue) {
             
             NSLog("\(type(of: self)) \(#function) request permission")
