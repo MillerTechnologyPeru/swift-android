@@ -51,19 +51,11 @@ final public class UITableView: UIView {
         
         guard let recyclerView = recyclerView
             else { fatalError("Missing Android RecyclerView") }
-        
-        recyclerView.setBackgroundColor(color: AndroidGraphicsColor.CYAN)
-        
+
         recyclerView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Int(frame.width), height: Int(frame.height))
-        
-        //recyclerView.setX(x: Float(frame.minX))
-        //recyclerView.setY(y: Float(frame.minY))
-        
         recyclerView.layoutManager = AndroidWidgetRecyclerViewLinearLayoutManager(context: context)
 
         androidView.addView(recyclerView)
-        
-        NSLog("\(#function) recycclerview added")
         // setup common
         //setupTableViewCommon()
     }
@@ -165,37 +157,22 @@ class AndroidAdapter: AndroidWidgetRecyclerViewAdapter {
         
         NSLog("\((type: self)) \(#function) \(position)")
         
-        let defaultViewHolder = DefaultViewHolder(casting: holder)
+        let defaultViewHolder = holder as? DefaultViewHolder
         
         defaultViewHolder?.textLabel?.text = "hello \(position)"
     }
     
-    override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int, payloads: [JavaObject]) {
-        
-        NSLog("\((type: self)) \(#function) \(position)")
-        
-        let defaultViewHolder = DefaultViewHolder(casting: holder)
-        
-        guard let viewHolder = defaultViewHolder
-            else {fatalError("Missing View Holder")}
-
-        guard let label = viewHolder.textLabel
-            else { fatalError("Missing TextView") }
-        
-        label.text = "hello \(position)"
-    }
-    
     override func getItemCount() -> Int {
-        /*
+        
         guard let tableView = tableView else {
             return 0
         }
         
         guard let dataSource = tableView.dataSource else {
             return 0
-        }*/
-        
-        return 10//dataSource.tableView(tableView, numberOfRowsInSection: dataSource.numberOfSections(in: tableView))
+        }
+
+        return dataSource.tableView(tableView, numberOfRowsInSection: dataSource.numberOfSections(in: tableView))
     }
 }
 

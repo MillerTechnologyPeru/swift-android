@@ -22,7 +22,9 @@ open class UILabel: UIView {
         return AndroidTextView(context: context)
     }()*/
     
-    var androidTextView: AndroidTextView?
+    internal var androidTextView: AndroidTextView?
+    
+    internal let androidTextViewId = Int.random()
     
     public var text: String? {
         set {
@@ -44,7 +46,7 @@ open class UILabel: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        NSLog("\((type: self)) \(#function) \(Int(frame.width)) - \(Int(frame.height))")
+        NSLog("\((type: self)) \(#function) ")
         // disable user interaction
         //self.isUserInteractionEnabled = false
         
@@ -52,9 +54,9 @@ open class UILabel: UIView {
             else { fatalError("Missing context") }
         
         androidTextView = AndroidTextView(context: context)
-        
-        androidTextView?.setId(1122334)
-        //androidTextView.layoutParams = AndroidFrameLayoutLayoutParams(width: Int(frame.width), height: Int(frame.height))
-        androidTextView?.layoutParams = AndroidFrameLayoutLayoutParams(width: AndroidFrameLayoutLayoutParams.MATCH_PARENT, height: AndroidFrameLayoutLayoutParams.WRAP_CONTENT)
+        androidTextView?.setId(androidTextViewId)
+        androidTextView?.setBackgroundColor(color: AndroidGraphicsColor.BLUE)
+        androidTextView?.layoutParams = AndroidViewGroupLayoutParams(width: Int(frame.width), height: Int(frame.height))
+        //androidTextView?.layoutParams = AndroidFrameLayoutLayoutParams(width: AndroidFrameLayoutLayoutParams.MATCH_PARENT, height: AndroidFrameLayoutLayoutParams.WRAP_CONTENT)
     }
 }

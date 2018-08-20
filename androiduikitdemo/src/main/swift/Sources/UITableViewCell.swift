@@ -39,7 +39,7 @@ open class UITableViewCell: UIView {
         
         // while `UIView.init()` creates a view with an empty frame,
         // UIKit creates a {0,0, 320, 44} cell with this initializer
-        let frame = CGRect(origin: .zero, size:  CGSize(width: 320, height: 100))
+        let frame = CGRect(origin: .zero, size: UITableViewCell.defaultSize)
         
         super.init(frame: frame)
         
@@ -48,10 +48,9 @@ open class UITableViewCell: UIView {
         textLabel = UILabel(frame: frame)
         //self.setupTableViewCellCommon()
         
-        androidView.background = AndroidGraphicsDrawableColorDrawable.init(color: AndroidGraphicsColor.DKGRAY)
         androidView.addView(textLabel.androidTextView!)
         
-        defaultViewHolder = DefaultViewHolder(itemView: self.androidView)
+        defaultViewHolder = DefaultViewHolder(tableViewCell: self)
         
         NSLog("\((type: self)) \(#function)")
     }
@@ -61,19 +60,17 @@ internal class DefaultViewHolder: AndroidWidgetRecyclerViewViewHolder {
     
     var textLabel: Android.Widget.TextView?
     
-    convenience init(itemView: AndroidView){
+    convenience init(tableViewCell: UITableViewCell){
         
         self.init(javaObject: nil)
-        bindNewJavaObject(itemView: itemView)
+        bindNewJavaObject(itemView: tableViewCell.androidView)
         
-        let view = itemView.findViewById(1122334)
+        let view = tableViewCell.androidView.findViewById(tableViewCell.textLabel.androidTextViewId)
         
         guard let textView = view
             else { fatalError("Missing Text View Label") }
         
         self.textLabel = AndroidTextView.init(casting: textView)
-        
-        NSLog("\((type: self)) \(#function) \(textLabel?.getId())")
     }
     
     required init(javaObject: jobject?) {
