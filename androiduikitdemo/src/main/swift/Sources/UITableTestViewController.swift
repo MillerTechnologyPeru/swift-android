@@ -14,7 +14,7 @@ import Android
 //import AndroidUIKit
 #endif
 
-final class UITableTestViewController: UIViewController, UITableViewDataSource {
+final class UITableTestViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -49,6 +49,7 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellReuseIdentifier")
         tableView.dataSource = self
+        tableView.delegate = self
         
         self.view.addSubview(tableView)
         
@@ -89,6 +90,11 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = "Data item: \(text)"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        NSLog("Click on Data item: \(data[indexPath.row])")
     }
     
 }

@@ -247,6 +247,20 @@ internal class UITableViewRecyclerViewAdapter: AndroidWidgetRecyclerViewAdapter 
         // create new cell
         let cell = cellType.init(reuseIdentifier: identifier)
         
+        cell.androidView.setOnClickListener {
+            
+            guard let tableView = self.tableView
+                else { assertionFailure("Missing table view"); return }
+            
+            guard let delegate = tableView.delegate
+                else { assertionFailure("Missing delegate"); return }
+            
+            // FIXME: Convert position to indexPath, support multiple sections
+            let indexPath = IndexPath(row: cell.viewHolder.adapterPosition, in: 0)
+            
+            delegate.tableView(tableView, didSelectRowAt: indexPath)
+        }
+        
         // hold strong reference to cell
         self.cells.insert(cell)
         
