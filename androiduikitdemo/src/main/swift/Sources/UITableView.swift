@@ -11,13 +11,64 @@ import java_swift
 
 final public class UITableView: UIView {
     
-    // MARK: - Android
-    
-    public private(set) var style: UITableViewStyle = .plain
+    // MARK: - Properties
     
     /// The object that acts as the data source of the table view.
     public weak var dataSource: UITableViewDataSource? {
         didSet { loadAdapter() }
+    }
+    
+    /// The object that acts as the delegate of the table view.
+    public weak var delegate: UITableViewDelegate?
+    
+    public private(set) var style: UITableViewStyle = .plain
+    
+    /// The height of each row (that is, table cell) in the table view.
+    public var rowHeight: CGFloat = UITableView.defaultRowHeight
+    
+    /// The estimated height of rows in the table view.
+    public var estimatedRowHeight: CGFloat = 0.0
+    
+    /// The estimated height of section headers in the table view.
+    public var estimatedSectionHeaderHeight: CGFloat = 0.0
+    
+    /// The estimated height of section footers in the table view.
+    public var estimatedSectionFooterHeight: CGFloat = 0.0
+    
+    /// The style for table cells used as separators.
+    public var separatorStyle: UITableViewCellSeparatorStyle = .singleLine
+    
+    /// The color of separator rows in the table view.
+    //public var separatorColor: UIColor? = UITableView.defaultSeparatorColor
+    
+    /// Specifies the default inset of cell separators.
+    //public var separatorInset: UIEdgeInsets = UITableView.defaultSeparatorInset
+    
+    /// The number of sections in the table view.
+    public var numberOfSections: Int {
+        
+        return dataSource?.numberOfSections(in: self) ?? 0
+    }
+    
+    /// The table cells that are visible in the table view.
+    ///
+    /// The value of this property is an array containing `UITableViewCell` objects,
+    /// each representing a visible cell in the table view.
+    public var visibleCells: [UITableViewCell] {
+        
+        guard let cells = adapter?.visibleCells.values
+            else { return [] }
+        
+        return Array(cells)
+    }
+    
+    /// An array of index paths each identifying a visible row in the table view.
+    public var indexPathsForVisibleRows: [IndexPath]? {
+        
+        guard let indexPaths = adapter?.visibleCells.keys
+            else { return nil }
+        
+        return Array(indexPaths)
     }
     
     // MARK: - Private Properties
@@ -109,6 +160,25 @@ final public class UITableView: UIView {
         return cell
     }
     
+    /// Returns the table cell at the specified index path.
+    ///
+    /// - Parameter indexPath: The index path locating the row in the table view.
+    ///
+    /// - Returns: An object representing a cell of the table,
+    /// or `nil` if the cell is not visible or `indexPath` is out of range.
+    public func cellForRow(at indexPath: IndexPath) -> UITableViewCell? {
+        
+        return adapter?.visibleCells[indexPath]
+    }
+    
+    /// Returns an index path representing the row and section of a given table-view cell.
+    ///
+    /// - Returns: An index path representing the row and section of the cell, or nil if the index path is invalid.
+    public func indexPath(for cell: UITableViewCell) -> IndexPath? {
+        
+        return adapter?.visibleCells.first(where: { $0.value === cell })?.key
+    }
+    
     // MARK: - Private Methods
     
     private func loadAdapter() {
@@ -146,6 +216,8 @@ internal class UITableViewRecyclerViewAdapter: AndroidWidgetRecyclerViewAdapter 
     
     /// All created cells
     internal private(set) var cells = Set<UITableViewCell>()
+    
+    internal private(set) var visibleCells = [IndexPath: UITableViewCell]()
     
     convenience init(tableView: UITableView) {
         self.init(javaObject: nil)
@@ -205,13 +277,18 @@ internal class UITableViewRecyclerViewAdapter: AndroidWidgetRecyclerViewAdapter 
         // add cell to reusable queue
         self.reusableCells[indexPath] = cell
         
-        defer { self.reusableCells[indexPath] = nil } // not reusable anymore
-        
         // data source should use `dequeueCell` to get an existing cell
         let returnedCell = dataSource.tableView(tableView, cellForRowAt: indexPath)
         
         // should not create new cells constantly
         assert(returnedCell === cell)
+        
+        // not reusable anymore
+        self.reusableCells[indexPath] = nil
+        
+        // mark as visible
+        self.visibleCells = self.visibleCells.filter({ $0.value !== cell })
+        self.visibleCells[indexPath] = cell
     }
     
     override func getItemCount() -> Int {
@@ -290,8 +367,7 @@ open class UITableViewRowAction {
     
 }
 
-/*
-public protocol UITableViewDelegate: UIScrollViewDelegate {
+public protocol UITableViewDelegate: class /* UIScrollViewDelegate */ {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
     
@@ -307,9 +383,9 @@ public protocol UITableViewDelegate: UIScrollViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
+    //func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
+    //func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
     
@@ -370,9 +446,9 @@ public extension UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { return tableView.rowHeight }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { return tableView.sectionHeaderHeight }
+    //func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { return tableView.sectionHeaderHeight }
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat { return tableView.sectionFooterHeight }
+    //func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat { return tableView.sectionFooterHeight }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat { return tableView.estimatedRowHeight }
     
@@ -419,4 +495,3 @@ public extension UITableViewDelegate {
         return proposedDestinationIndexPath
     }
 }
- */
