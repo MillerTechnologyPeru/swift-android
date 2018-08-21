@@ -141,9 +141,11 @@ internal class UITableViewRecyclerViewAdapter: AndroidWidgetRecyclerViewAdapter 
     
     internal private(set) weak var tableView: UITableView?
     
+    /// Cells ready for reuse
     internal private(set) var reusableCells = [IndexPath: UITableViewCell]()
     
-    internal private(set) var cells = [UITableViewCell]()
+    /// All created cells
+    internal private(set) var cells = Set<UITableViewCell>()
     
     convenience init(tableView: UITableView) {
         self.init(javaObject: nil)
@@ -174,7 +176,7 @@ internal class UITableViewRecyclerViewAdapter: AndroidWidgetRecyclerViewAdapter 
         let cell = cellType.init(reuseIdentifier: identifier)
         
         // hold strong reference to cell
-        self.cells.append(cell)
+        self.cells.insert(cell)
         
         // return Android view
         return cell.viewHolder
