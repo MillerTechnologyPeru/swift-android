@@ -32,10 +32,6 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         
-        for i in 0...100 {
-            data.append("item \(i)")
-        }
-        
         //let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
         //let displayWidth: CGFloat = view.frame.width
         //let displayHeight: CGFloat = view.frame.height
@@ -55,6 +51,22 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource {
         tableView.dataSource = self
         
         self.view.addSubview(tableView)
+        
+        for i in 0...100 {
+            data.append("item \(i)")
+        }
+        
+        let delay = DispatchTime.now() + .seconds(10)
+        
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: delay) {
+            for i in 101...200 {
+                self.data.append("item \(i)")
+                NSLog("item \(i)")
+            }
+            UIScreen.main.activity.runOnMainThread {
+                self.tableView?.reloadData()
+            }
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -56,8 +56,10 @@ final public class UITableView: UIView {
 
         androidView.addView(recyclerView)
         
-        // load cells
-        self.reloadData()
+        let adapter = UITableViewRecyclerViewAdapter(tableView: self)
+        
+        self.adapter = adapter
+        self.recyclerView?.adapter = adapter
     }
     
     // MARK: - Methods
@@ -113,9 +115,7 @@ final public class UITableView: UIView {
         
         NSLog("\(type(of: self)) \(#function)")
         
-        let adapter = UITableViewRecyclerViewAdapter(tableView: self)
-        self.adapter = adapter
-        self.recyclerView?.adapter = adapter
+        self.adapter?.notifyDataSetChanged()
     }
 }
 
