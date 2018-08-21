@@ -145,12 +145,17 @@ public final class UIScreen {
         
         let size: CGSize
         
-        let scale = CGFloat(activity.getResources()?.getDisplayMetrics()?.density ?? 1.0)
+        let androidDensity = activity.getResources()?.getDisplayMetrics()?.density ?? 1.0
+        
+        let scale = CGFloat(androidDensity)
         
         if let displayMetrics = activity.getResources()?.getDisplayMetrics() {
             
-            size = CGSize(width: CGFloat(displayMetrics.widthPixels),
-                          height: CGFloat(displayMetrics.heightPixels))
+            let androidWidthDp = Float(displayMetrics.widthPixels)/androidDensity
+            let androidHeightDp = Float(displayMetrics.heightPixels)/androidDensity
+            
+            size = CGSize(width: CGFloat(androidWidthDp),
+                          height: CGFloat(androidHeightDp))
             
         } else {
             
