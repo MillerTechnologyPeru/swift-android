@@ -62,16 +62,17 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 1 ? 20 : 0
+        
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")
         
-        //let text = data[indexPath.row]
+        let text = data[indexPath.row]
         
-        //cell.textLabel?.text = text
+        cell.textLabel?.text = "Data item: \(text)"
         
         return cell
     }
