@@ -13,28 +13,26 @@ final public class UITableView: UIView {
     
     // MARK: - Android
     
-    internal var recyclerView: AndroidWidgetRecyclerView?
-    
-    // MARK: - Initialization
-    
-    public var style: UITableViewStyle!
+    public private(set) var style: UITableViewStyle = .plain
     
     /// The object that acts as the data source of the table view.
     public weak var dataSource: UITableViewDataSource? {
-        didSet{
-            loadAdapter()
-        }
+        didSet { loadAdapter() }
     }
     
-    // MARK: - Private
+    // MARK: - Private Properties
     
     internal static let defaultRowHeight: CGFloat = 44
     
     internal private(set) var registeredCells = [String: UITableViewCell.Type]()
     
-    fileprivate var identifier: String?
+    // can be reloaded
+    fileprivate var adapter: UITableViewRecyclerViewAdapter?
     
-    fileprivate var androidAdapter: AndroidAdapter?
+    // only assigned once
+    fileprivate var recyclerView: AndroidWidgetRecyclerView!
+    
+    // MARK: - Initialization
     
     /// Initializes and returns a table view object having the given frame and style.
     public required init(frame: CGRect, style: UITableViewStyle = .plain) {
@@ -44,6 +42,7 @@ final public class UITableView: UIView {
         // UITableView properties
         self.style = style
         
+        // setup Android view
         guard let context = AndroidContext(casting: UIScreen.main.activity)
             else { fatalError("Missing context") }
         
@@ -56,8 +55,16 @@ final public class UITableView: UIView {
         recyclerView.layoutManager = AndroidWidgetRecyclerViewLinearLayoutManager(context: context)
 
         androidView.addView(recyclerView)
-        // setup common
-        //setupTableViewCommon()
+        
+        // load cells
+        self.reloadData()
+    }
+    
+    // MARK: - Methods
+    
+    public func reloadData() {
+        
+        self.loadAdapter()
     }
     
     /// Registers a class for use in creating new table cells.
@@ -66,47 +73,53 @@ final public class UITableView: UIView {
     
         assert(identifier.isEmpty == false, "Identifier must not be an empty string")
         
-        self.identifier = identifier
-        //registeredCells[identifier] = cellClass
-        
-        if let cellClass = cellClass {
-            
-            self.registeredCells[identifier] = cellClass
-            
-        } else {
-            
-            self.registeredCells[identifier] = nil
-        }
+        registeredCells[identifier] = cellClass
         
         NSLog("\(#function) identifier = \(identifier)")
     }
     
-    public func dequeueReusableCell(withIdentifier: String) -> UITableViewCell {
+    public func dequeueReusableCell(withIdentifier identifier: String) -> UITableViewCell {
         
         NSLog("\(#function)")
         
-        //let cellType = registeredCells[withIdentifier]
+        guard let adapter = self.adapter
+            else { fatalError("No adapter configured") }
         
-        /*if(cellType == UITableViewCell.Type.self){
-        }*/
+        // get cell from reusable cell pool
+        guard let cell = adapter.reusableCells.values.first(where: { $0.reuseIdentifier == identifier })
+            else { fatalError("No reusable cell for \(identifier)") }
         
-        return UITableViewCell(reuseIdentifier: withIdentifier)
+        return cell
     }
     
-    private func loadAdapter(){
+    public func dequeueReusableCell(withIdentifier identifier: String,
+                                    for indexPath: IndexPath) -> UITableViewCell {
+        
+        NSLog("\(#function)")
+        
+        guard let adapter = self.adapter
+            else { fatalError("No adapter configured") }
+        
+        // get cell from reusable cell pool
+        guard let cell = adapter.reusableCells[indexPath]
+            else { fatalError("No reusable cell for \(identifier)") }
+        
+        return cell
+    }
+    
+    // MARK: - Private Methods
+    
+    private func loadAdapter() {
+        
         NSLog("\(type(of: self)) \(#function)")
         
-        androidAdapter = AndroidAdapter(tableView: self)
-        
-        guard let adapter = androidAdapter
-            else { fatalError("Missing Android Adapter") }
-        
-        guard let recyclerView = recyclerView
-            else { fatalError("Missing Android RecyclerView") }
-        
-        recyclerView.adapter = adapter
+        let adapter = UITableViewRecyclerViewAdapter(tableView: self)
+        self.adapter = adapter
+        self.recyclerView?.adapter = adapter
     }
 }
+
+// MARK: - Supporting Types
 
 public protocol UITableViewDataSource: class {
     
@@ -122,14 +135,15 @@ public extension UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int { return 1 }
 }
 
-
 // MARK: - Android
 
-class AndroidAdapter: AndroidWidgetRecyclerViewAdapter {
+internal class UITableViewRecyclerViewAdapter: AndroidWidgetRecyclerViewAdapter {
     
-    private weak var tableView: UITableView?
+    internal private(set) weak var tableView: UITableView?
     
-    convenience init(tableView: UITableView){
+    internal private(set) var reusableCells = [IndexPath: UITableViewCell]()
+    
+    convenience init(tableView: UITableView) {
         self.init(javaObject: nil)
         bindNewJavaObject()
         
@@ -146,32 +160,46 @@ class AndroidAdapter: AndroidWidgetRecyclerViewAdapter {
         
         NSLog("\((type: self)) \(#function)")
         
-        /*
-         guard let cellType = tableView?.registeredCells.first?.value else {
-         }*/
-        
         guard let tableView = tableView else {
             fatalError("Missing TableView")
         }
         
-        guard let identifier = tableView.identifier else {
-            fatalError("Missing Identifier")
+        guard let (identifier, cellType) = tableView.registeredCells.first else {
+            fatalError("No cells registered")
         }
         
-        guard let viewHolder = tableView.dequeueReusableCell(withIdentifier: identifier).defaultViewHolder else {
-            fatalError("Missing View Holder")
-        }
+        // create new cell
+        let cell = cellType.init(reuseIdentifier: identifier)
         
-        return viewHolder
+        return cell.viewHolder
     }
     
     override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int) {
         
         NSLog("\((type: self)) \(#function) \(position)")
         
-        let defaultViewHolder = holder as? DefaultViewHolder
+        guard let viewHolder = holder as? UITableViewCellViewHolder
+            else { fatalError("Invalid view holder \(holder)") }
         
-        defaultViewHolder?.textLabel?.text = "hello \(position)"
+        // configure cell
+        guard let tableView = self.tableView,
+            let dataSource = tableView.dataSource,
+            let cell = viewHolder.tableViewCell
+            else { return }
+        
+        // FIXME: Convert position to indexPath, support multiple sections
+        let indexPath = IndexPath(row: position, in: 0)
+        
+        // add cell to reusable queue
+        self.reusableCells[indexPath] = cell
+        
+        defer { self.reusableCells[indexPath] = nil } // not reusable anymore
+        
+        // data source should use `dequeueCell` to get an existing cell
+        let returnedCell = dataSource.tableView(tableView, cellForRowAt: indexPath)
+        
+        // should not create new cells constantly
+        assert(returnedCell === cell)
     }
     
     override func getItemCount() -> Int {
@@ -185,6 +213,19 @@ class AndroidAdapter: AndroidWidgetRecyclerViewAdapter {
         }
 
         return dataSource.tableView(tableView, numberOfRowsInSection: dataSource.numberOfSections(in: tableView))
+    }
+}
+
+internal struct UITableViewCellCache {
+    
+    let cell: UITableViewCell
+    
+    var indexPath: IndexPath?
+    
+    init(_ cell: UITableViewCell) {
+        
+        self.cell = cell
+        self.indexPath = nil
     }
 }
 

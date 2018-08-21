@@ -20,11 +20,12 @@ open class UITableViewCell: UIView {
     /// A string used to identify a cell that is reusable.
     public let reuseIdentifier: String?
     
-    public let style: UITableViewCellStyle?
+    public let style: UITableViewCellStyle
     
-    public var textLabel: UILabel!
+    public private(set) var textLabel: UILabel!
     
-    internal var defaultViewHolder: DefaultViewHolder?
+    internal lazy var viewHolder: UITableViewCellViewHolder = UITableViewCellViewHolder(tableViewCell: self)
+    
     // MARK: - Private
     
     internal static let defaultSize = CGSize(width: 320, height: UITableView.defaultRowHeight)
@@ -32,7 +33,7 @@ open class UITableViewCell: UIView {
     // MARK: - Initializing a `UITableViewCell` Object
     
     /// Initializes a table cell with a style and a reuse identifier and returns it to the caller.
-    public required init(style: UITableViewCellStyle = UITableViewCellStyle.default, reuseIdentifier: String?) {
+    public required init(style: UITableViewCellStyle = .default, reuseIdentifier: String?) {
         
         self.style = style
         self.reuseIdentifier = reuseIdentifier
@@ -43,34 +44,23 @@ open class UITableViewCell: UIView {
         
         super.init(frame: frame)
         
-        NSLog("\((type: self)) \(#function)")
-        
-        textLabel = UILabel(frame: frame)
-        //self.setupTableViewCellCommon()
+        self.textLabel = UILabel(frame: frame)
         
         androidView.addView(textLabel.androidTextView)
-        
-        defaultViewHolder = DefaultViewHolder(tableViewCell: self)
         
         NSLog("\((type: self)) \(#function)")
     }
 }
 
-internal class DefaultViewHolder: AndroidWidgetRecyclerViewViewHolder {
+internal class UITableViewCellViewHolder: AndroidWidgetRecyclerViewViewHolder {
     
-    var textLabel: Android.Widget.TextView?
+    /// Weak reference to cell (used for configuration)
+    internal private(set) weak var tableViewCell: UITableViewCell?
     
-    convenience init(tableViewCell: UITableViewCell){
+    fileprivate convenience init(tableViewCell: UITableViewCell) {
         
         self.init(javaObject: nil)
         bindNewJavaObject(itemView: tableViewCell.androidView)
-        
-        let view = tableViewCell.androidView.findViewById(tableViewCell.textLabel.androidTextViewId)
-        
-        guard let textView = view
-            else { fatalError("Missing Text View Label") }
-        
-        self.textLabel = AndroidTextView.init(casting: textView)
     }
     
     required init(javaObject: jobject?) {
