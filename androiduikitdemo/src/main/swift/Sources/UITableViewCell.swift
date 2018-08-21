@@ -47,8 +47,6 @@ open class UITableViewCell: UIView {
         self.textLabel = UILabel(frame: frame)
         
         androidView.addView(textLabel.androidTextView)
-        
-        NSLog("\((type: self)) \(#function)")
     }
 }
 

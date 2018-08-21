@@ -57,15 +57,17 @@ open class UIView: UIResponder {
         }()
     
     internal func updateAndroidView() {
-                
-        // set origin
-        androidView.setX(x: Float(frame.minX))
-        androidView.setY(y: Float(frame.minY))
         
         NSLog("\((type: self)) \(#function) \(Int(frame.width)) - \(Int(frame.height))")
         
+        let frameDp = CGRect.applyDP(rect: frame)
+        
+        // set origin
+        androidView.setX(x: Float(frameDp.minX))
+        androidView.setY(y: Float(frameDp.minY))
+        
         // set size
-        androidView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Int(frame.width), height: Int(frame.height))
+        androidView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Int(frameDp.width), height: Int(frameDp.height))
         
         // set background color
         androidView.background = backgroundColor?.androidColor

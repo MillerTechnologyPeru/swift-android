@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 
 open class SwiftAppCompatActivity: AppCompatActivity() {
 
@@ -124,6 +125,10 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
 
     override fun getSupportFragmentManager(): FragmentManager {
         return super.getSupportFragmentManager()
+    }
+
+    override fun getWindowManager(): WindowManager {
+        return super.getWindowManager()
     }
 
     fun runOnMainThread(runnable: Runnable){

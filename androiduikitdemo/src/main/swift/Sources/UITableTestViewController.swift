@@ -41,7 +41,7 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         NSLog("\(#function) displayWidth = \(displayWidth) ")
         NSLog("\(#function) displayHeight = \(displayHeight) ")
         
-        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: displayWidth, height: 700))
+        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: displayWidth, height: displayHeight))
         
         guard let tableView = tableView else {
             fatalError("Missing table view")
@@ -80,8 +80,6 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        NSLog("\(#function)")
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")
         

@@ -102,7 +102,15 @@ final public class UITableView: UIView {
         guard let recyclerView = recyclerView
             else { fatalError("Missing Android RecyclerView") }
 
-        recyclerView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Int(frame.width), height: Int(frame.height))
+        let frameDp = CGRect.applyDP(rect: frame)
+        
+        // set origin
+        recyclerView.setX(x: Float(frameDp.minX))
+        recyclerView.setY(y: Float(frameDp.minY))
+        
+        // set size
+        recyclerView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Int(frameDp.width), height: Int(frameDp.height))
+        
         recyclerView.layoutManager = AndroidWidgetRecyclerViewLinearLayoutManager(context: context)
 
         androidView.addView(recyclerView)
@@ -127,14 +135,10 @@ final public class UITableView: UIView {
         assert(identifier.isEmpty == false, "Identifier must not be an empty string")
         
         registeredCells[identifier] = cellClass
-        
-        NSLog("\(#function) identifier = \(identifier)")
     }
     
     public func dequeueReusableCell(withIdentifier identifier: String) -> UITableViewCell {
-        
-        NSLog("\(#function)")
-        
+
         guard let adapter = self.adapter
             else { fatalError("No adapter configured") }
         
@@ -147,8 +151,6 @@ final public class UITableView: UIView {
     
     public func dequeueReusableCell(withIdentifier identifier: String,
                                     for indexPath: IndexPath) -> UITableViewCell {
-        
-        NSLog("\(#function)")
         
         guard let adapter = self.adapter
             else { fatalError("No adapter configured") }
@@ -182,8 +184,6 @@ final public class UITableView: UIView {
     // MARK: - Private Methods
     
     private func loadAdapter() {
-        
-        NSLog("\(type(of: self)) \(#function)")
         
         self.adapter?.notifyDataSetChanged()
     }
@@ -224,8 +224,6 @@ internal class UITableViewRecyclerViewAdapter: AndroidWidgetRecyclerViewAdapter 
         bindNewJavaObject()
         
         self.tableView = tableView
-        
-        NSLog("\((type: self)) \(#function)")
     }
     
     required init(javaObject: jobject?) {
@@ -233,8 +231,6 @@ internal class UITableViewRecyclerViewAdapter: AndroidWidgetRecyclerViewAdapter 
     }
     
     override func onCreateViewHolder(parent: Android.View.ViewGroup, viewType: Int?) -> AndroidWidgetRecyclerView.ViewHolder {
-        
-        NSLog("\((type: self)) \(#function)")
         
         guard let tableView = tableView else {
             fatalError("Missing TableView")
@@ -269,8 +265,6 @@ internal class UITableViewRecyclerViewAdapter: AndroidWidgetRecyclerViewAdapter 
     }
     
     override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int) {
-        
-        NSLog("\((type: self)) \(#function) \(position)")
         
         guard let viewHolder = holder as? UITableViewCellViewHolder
             else { fatalError("Invalid view holder \(holder)") }

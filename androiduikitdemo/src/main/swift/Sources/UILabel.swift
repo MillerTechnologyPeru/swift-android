@@ -50,6 +50,14 @@ open class UILabel: UIView {
         //self.isUserInteractionEnabled = false
         
         androidTextView.setId(androidTextViewId)
-        androidTextView.layoutParams = AndroidViewGroupLayoutParams(width: Int(frame.width), height: Int(frame.height))
+        
+        let frameDp = CGRect.applyDP(rect: frame)
+        
+        // set origin
+        androidTextView.setX(x: Float(frameDp.minX))
+        androidTextView.setY(y: Float(frameDp.minY))
+        
+        // set size
+        androidTextView.layoutParams = AndroidViewGroupLayoutParams(width: Int(frameDp.width), height: Int(frameDp.height))
     }
 }
