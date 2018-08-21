@@ -131,6 +131,11 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
         return super.getWindowManager()
     }
 
+    fun hasNavBar(resources: Resources): Boolean {
+        val id = resources.getIdentifier("config_showNavigationBar", "bool", "android")
+        return id > 0 && resources.getBoolean(id)
+    }
+
     fun runOnMainThread(runnable: Runnable){
         runOnUiThread(runnable)
     }
