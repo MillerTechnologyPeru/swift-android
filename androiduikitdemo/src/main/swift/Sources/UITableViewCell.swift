@@ -24,7 +24,7 @@ open class UITableViewCell: UIView {
     
     public private(set) var textLabel: UILabel!
     
-    internal lazy var viewHolder: UITableViewCellViewHolder = UITableViewCellViewHolder(tableViewCell: self)
+    internal lazy var viewHolder: UITableViewCellViewHolder = UITableViewCellViewHolder(cell: self)
     
     // MARK: - Private
     
@@ -54,13 +54,15 @@ open class UITableViewCell: UIView {
 
 internal class UITableViewCellViewHolder: AndroidWidgetRecyclerViewViewHolder {
     
-    /// Weak reference to cell (used for configuration)
-    internal private(set) weak var tableViewCell: UITableViewCell?
+    /// Reference to cell (used for configuration)
+    internal private(set) weak var cell: UITableViewCell?
     
-    fileprivate convenience init(tableViewCell: UITableViewCell) {
+    fileprivate convenience init(cell: UITableViewCell) {
         
         self.init(javaObject: nil)
-        bindNewJavaObject(itemView: tableViewCell.androidView)
+        bindNewJavaObject(itemView: cell.androidView)
+        
+        self.cell = cell
     }
     
     required init(javaObject: jobject?) {

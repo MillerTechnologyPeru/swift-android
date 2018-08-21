@@ -68,6 +68,8 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        NSLog("\(#function)")
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")
         
         let text = data[indexPath.row]

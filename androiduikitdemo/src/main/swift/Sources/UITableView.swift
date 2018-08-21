@@ -143,6 +143,8 @@ internal class UITableViewRecyclerViewAdapter: AndroidWidgetRecyclerViewAdapter 
     
     internal private(set) var reusableCells = [IndexPath: UITableViewCell]()
     
+    internal private(set) var cells = [UITableViewCell]()
+    
     convenience init(tableView: UITableView) {
         self.init(javaObject: nil)
         bindNewJavaObject()
@@ -171,6 +173,10 @@ internal class UITableViewRecyclerViewAdapter: AndroidWidgetRecyclerViewAdapter 
         // create new cell
         let cell = cellType.init(reuseIdentifier: identifier)
         
+        // hold strong reference to cell
+        self.cells.append(cell)
+        
+        // return Android view
         return cell.viewHolder
     }
     
@@ -182,10 +188,14 @@ internal class UITableViewRecyclerViewAdapter: AndroidWidgetRecyclerViewAdapter 
             else { fatalError("Invalid view holder \(holder)") }
         
         // configure cell
-        guard let tableView = self.tableView,
-            let dataSource = tableView.dataSource,
-            let cell = viewHolder.tableViewCell
-            else { return }
+        guard let tableView = self.tableView
+            else { assertionFailure("Missing table view"); return }
+        
+        guard let dataSource = tableView.dataSource
+            else { assertionFailure("Missing data source"); return }
+        
+        guard let cell = viewHolder.cell
+            else { assertionFailure("Missing cell"); return }
         
         // FIXME: Convert position to indexPath, support multiple sections
         let indexPath = IndexPath(row: position, in: 0)
