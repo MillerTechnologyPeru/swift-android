@@ -131,9 +131,18 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
         return super.getWindowManager()
     }
 
-    fun hasNavBar(resources: Resources): Boolean {
+    fun hasNavBar(): Boolean {
         val id = resources.getIdentifier("config_showNavigationBar", "bool", "android")
         return id > 0 && resources.getBoolean(id)
+    }
+
+    fun getStatusBarHeightPixels(): Int {
+        var statusBarHeight = 0
+        val resourceId = resources.getIdentifier("status_bar_height", "dimen", "android")
+        if (resourceId > 0) {
+            statusBarHeight = resources.getDimensionPixelSize(resourceId)
+        }
+        return statusBarHeight
     }
 
     fun runOnMainThread(runnable: Runnable){

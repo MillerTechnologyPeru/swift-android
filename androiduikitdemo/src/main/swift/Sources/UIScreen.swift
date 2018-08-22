@@ -143,27 +143,38 @@ public final class UIScreen {
     
     internal func updateSize() {
         
+        var androidDensity: Float = 0.0
+        var androidHeightPixels = 0
+        var androidWidthPixels = 0
+        var androidStatusBarHeightPixels = 0
+        
+        let displayMetrics = AndroidDisplayMetrics()
+        
+        activity.windowManager?.defaultDisplay?.getMetrics(outMetrics: displayMetrics)
+        
+        androidDensity = displayMetrics.density
+        androidHeightPixels = displayMetrics.heightPixels // status bar + content
+        androidWidthPixels = displayMetrics.widthPixels
+        androidStatusBarHeightPixels = activity.statusBarHeightPixels
+
         let size: CGSize
         
-        let androidDensity = activity.getResources()?.getDisplayMetrics()?.density ?? 1.0
-        
-        let scale = CGFloat(androidDensity)
-        
-        if let displayMetrics = activity.getResources()?.getDisplayMetrics() {
+        if androidHeightPixels > 0 && androidStatusBarHeightPixels > 0 {
             
-            let androidWidthDp = Float(displayMetrics.widthPixels)/androidDensity
-            let androidHeightDp = Float(displayMetrics.heightPixels)/androidDensity
+            let activityHeightPixels = androidHeightPixels - androidStatusBarHeightPixels //subtract status bar height
+            
+            let androidWidthDp = Float(androidWidthPixels)/androidDensity
+            let androidHeightDp = Float(activityHeightPixels)/androidDensity
             
             size = CGSize(width: CGFloat(androidWidthDp),
                           height: CGFloat(androidHeightDp))
-            
         } else {
             
             size = .zero
         }
         
         self.size = size
-        self.scale = scale
+        self.scale = CGFloat(androidDensity)
         self.needsLayout = true
         self.needsDisplay = true
     }
