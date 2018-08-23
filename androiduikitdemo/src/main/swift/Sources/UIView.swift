@@ -449,13 +449,16 @@ open class UIView: UIResponder {
     public func bringSubview(toFront view: UIView) {
         
         assert(subviews.contains(where: { $0 === view }), "\(view) is not a subview of \(self)")
-        
+        /*
         guard let index = subviews.index(where: { $0 === view })
             else { return }
         
         subviews.remove(at: index)
         
         subviews.append(view)
+        */
+        //androidView.bringToFront()
+        androidView.bringChildToFront(child: view.androidView)
     }
     
     /// Moves the specified subview so that it appears behind its siblings.

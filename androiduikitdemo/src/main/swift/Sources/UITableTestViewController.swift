@@ -32,9 +32,6 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
     
     override func viewDidLoad() {
         
-        //let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
-        //let displayWidth: CGFloat = view.frame.width
-        //let displayHeight: CGFloat = view.frame.height
         let displayWidth: CGFloat = UIScreen.main.bounds.width
         let displayHeight: CGFloat = UIScreen.main.bounds.height
         
