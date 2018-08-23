@@ -46,7 +46,7 @@ open class UIWindow: UIView {
     /// Makes the receiver the key window.
     public final func makeKey() {
         
-        UIScreen.main.setKeyWindow(self)
+        screen.setKeyWindow(self)
     }
     
     /// Called automatically to inform the window that it has become the key window.

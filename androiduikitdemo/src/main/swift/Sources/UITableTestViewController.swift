@@ -61,9 +61,16 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
                 self.data.append("item \(i)")
                 NSLog("item \(i)")
             }
-            UIScreen.main.activity.runOnMainThread {
-                self.tableView?.reloadData()
+            #if os(Android)
+            UIScreen.main.activity.runOnMainThread { [weak self] in
+                self?.tableView?.reloadData()
             }
+            #elseif os(iOS)
+            DispatchQueue.main.async {  [weak self] in
+                
+                self?.tableView?.reloadData()
+            }
+            #endif
         }
     }
     
@@ -78,7 +85,8 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")
+            else { fatalError("Could not dequeue cell") }
         
         let text = data[indexPath.row]
         
