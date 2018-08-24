@@ -42,7 +42,7 @@ open class UINavigationController: UIViewController {
         
         get { return _isNavigationBarHidden }
         
-        set {  }
+        set {  }  // FIXME:
     }
     
     private var _isNavigationBarHidden: Bool = false
@@ -71,7 +71,7 @@ open class UINavigationController: UIViewController {
         
         #if os(iOS)
         super.init(nibName: nil, bundle: nil)
-        #elseif os(Android)
+        #else
         super.init()
         #endif
         

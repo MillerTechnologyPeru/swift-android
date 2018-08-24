@@ -207,7 +207,7 @@ open class UIViewController: UIResponder {
     /// views are going to appear or disappear.
     /// You do this by calling the child view controller's `beginAppearanceTransition(_:animated:)`
     /// and `endAppearanceTransition()` methods.
-    public var shouldAutomaticallyForwardAppearanceMethods: Bool {
+    open var shouldAutomaticallyForwardAppearanceMethods: Bool {
         
         return true
     }
@@ -253,6 +253,12 @@ open class UIViewController: UIResponder {
     
     // MARK: - Responding to Containment Events
     
+    /// Called just before the view controller is added or removed from a container view controller.
+    open func willMove(toParentViewController parent: UIViewController?) { }
+    
+    /// Called after the view controller is added or removed from a container view controller.
+    open func didMove(toParentViewController parent: UIViewController?) { }
+    
     // MARK: - Getting Other Related View Controllers
     
     /// The view controller that presented this view controller.
@@ -295,5 +301,38 @@ open class UIViewController: UIResponder {
     internal override var firstResponder: UIResponder? {
         
         return self.view.firstResponder ?? super.firstResponder
+    }
+    
+    // MARK: - Navigation
+    
+    // Created on-demand so that a view controller may customize its navigation appearance.
+    public lazy var navigationItem: UINavigationItem = UINavigationItem(title: title ?? "")
+    
+    // If YES, then when this view controller is pushed into a controller hierarchy with a bottom bar (like a tab bar), the bottom bar will slide out. Default is NO.
+    public var hidesBottomBarWhenPushed: Bool = false
+    
+    // If this view controller has been pushed onto a navigation controller, return it.
+    public var navigationController: UINavigationController? {
+        
+        return nearestParentViewController(UINavigationController.self)
+    }
+    
+    private func nearestParentViewController <T: NSObject> (_ type: T.Type) -> T? {
+        
+        var controller: UIViewController? = self.parent
+        
+        while controller != nil {
+            
+            if let viewController = controller as? T {
+                
+                return viewController
+                
+            } else {
+                
+               controller = controller?.parent
+            }
+        }
+    
+        return nil
     }
 }

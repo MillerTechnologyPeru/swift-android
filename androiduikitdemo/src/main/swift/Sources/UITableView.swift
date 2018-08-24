@@ -137,16 +137,10 @@ final public class UITableView: UIView {
         registeredCells[identifier] = cellClass
     }
     
-    public func dequeueReusableCell(withIdentifier identifier: String) -> UITableViewCell {
-
-        guard let adapter = self.adapter
-            else { fatalError("No adapter configured") }
+    public func dequeueReusableCell(withIdentifier identifier: String) -> UITableViewCell? {
         
         // get cell from reusable cell pool
-        guard let cell = adapter.reusableCells.values.first(where: { $0.reuseIdentifier == identifier })
-            else { fatalError("No reusable cell for \(identifier)") }
-        
-        return cell
+        return adapter?.reusableCells.values.first(where: { $0.reuseIdentifier == identifier })
     }
     
     public func dequeueReusableCell(withIdentifier identifier: String,
