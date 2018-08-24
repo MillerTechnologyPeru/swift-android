@@ -36,8 +36,8 @@ final class MainViewController: UIViewController {
     
     //override var prefersStatusBarHidden: Bool { return true }
     
+    
     override func loadView() {
-        
         self.view = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 480))
     }
     
@@ -46,7 +46,7 @@ final class MainViewController: UIViewController {
         
         NSLog("\(#function) \(view.frame)")
         
-        view.backgroundColor = .blue
+        view.backgroundColor = .cyan
         
         let view1 = UIView(frame: CGRect(x: 20, y: 20,
                                          width: view.bounds.size.width - 40,
@@ -72,6 +72,16 @@ final class MainViewController: UIViewController {
         view2.addSubview(view3)
         self.view3 = view3
         
+        let view3_1 = UIView(frame: CGRect.init(x: 10, y: 10, width: 50, height: 20))
+        view3_1.autoresizingMask = [.flexibleWidth]
+        view3_1.backgroundColor = UIColor.magenta
+        view3.addSubview(view3_1)
+        
+        let view3_2 = UIView(frame: CGRect.init(x: 10, y: 35, width: 50, height: 15))
+        view3_2.autoresizingMask = [.flexibleWidth]
+        view3_2.backgroundColor = UIColor.orange
+        view3.addSubview(view3_2)
+        
         let view4 = UIView(frame: CGRect(x: view1.frame.origin.x + 40,
                                          y: view1.frame.origin.y + view1.frame.size.height + 20,
                                          width: view1.frame.size.width - 80,
@@ -80,6 +90,24 @@ final class MainViewController: UIViewController {
         view4.backgroundColor = .white
         view.addSubview(view4)
         self.view4 = view4
+        
+        let delay = DispatchTime.now() + .seconds(5)
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: delay) {
+            #if os(Android)
+            UIScreen.main.activity.runOnMainThread { [weak self] in
+                view4.addSubview(view3_2)
+            }
+            #endif
+        }
+        
+        let delay2 = DispatchTime.now() + .seconds(7)
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: delay2) {
+            #if os(Android)
+            UIScreen.main.activity.runOnMainThread { [weak self] in
+                view4.addSubview(view3_1)
+            }
+            #endif
+        }
         
         printViews()
     }
@@ -98,7 +126,7 @@ final class MainViewController: UIViewController {
         
         NSLog("\(#function)")
         
-        printViews()
+        //printViews()
     }
     
     private func printViews() {

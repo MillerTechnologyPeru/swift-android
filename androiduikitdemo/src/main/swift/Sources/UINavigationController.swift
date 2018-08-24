@@ -20,7 +20,7 @@ open class UINavigationController: UIViewController {
     /// The view controller at the top of the navigation stack.
     public var topViewController: UIViewController? {
         
-        return childViewControllers.last
+        return children.last
     }
     
     /// The view controller associated with the currently visible view in the navigation interface.
@@ -125,7 +125,7 @@ open class UINavigationController: UIViewController {
         let navigationBarRect = CGRect(x: bounds.minX,
                                        y: bounds.minY,
                                        width: bounds.width,
-                                       height: navigationBar.frame.size.height)
+                                       height: 48)//navigationBar.frame.size.height
         
         let toolbarRect = CGRect(x: bounds.minX,
                                  y: bounds.maxY - toolbar.frame.size.height,
@@ -166,6 +166,10 @@ open class UINavigationController: UIViewController {
         navigationBar.frame = navigationBarRect
         toolbar.frame = toolbarRect
         newVisibleViewController.view.frame = contentRect
+        
+        NSLog("navigationBarRect height \(navigationBarRect.height)")
+        NSLog("contentRect height \(contentRect.height)")
+        NSLog("toolbarRect height \(toolbarRect.height)")
         
         newVisibleViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.view.insertSubview(newVisibleViewController.view, at: 0)
@@ -209,7 +213,7 @@ public extension UINavigationController {
         self.viewControllers.forEach {
             if viewControllers.contains($0) == false {
                 $0.willMove(toParentViewController: nil)
-                $0.removeFromParentViewController()
+                $0.removeFromParent()
             }
         }
         
@@ -231,13 +235,13 @@ public extension UINavigationController {
     func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
         // assertions
-        precondition(viewController.isKind(of: UITabBarController.self) == false, "Cannot embed tab bar controller in navigation controller")
+        precondition(viewController is UITabBarController == false, "Cannot embed tab bar controller in navigation controller")
         precondition(viewControllers.contains(viewController) == false, "Already pushed view controller")
         precondition(viewController.parent == nil || viewController.parent == self, "Belongs to another parent \(viewController.parent!)")
         
         if viewController.parent !== self {
             
-            addChildViewController(viewController)
+            addChild(viewController)
         }
         
         updateVisibleViewController(animated: animated)

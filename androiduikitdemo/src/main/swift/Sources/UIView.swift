@@ -35,7 +35,8 @@ open class UIView: UIResponder {
         assert(androidView.javaObject != nil, "Android View not initialized")
         
         self.frame = frame
-        self.updateAndroidView()
+        
+        //self.updateAndroidView()
     }
     
     // MARK: - CustomStringConvertible
@@ -56,7 +57,7 @@ open class UIView: UIResponder {
         return Android.Widget.FrameLayout(context: context)
         }()
     
-    internal func updateAndroidView() {
+    internal func updateAndroidViewSize() {
         
         NSLog("\((type: self)) \(#function) \(Int(frame.width)) - \(Int(frame.height))")
         
@@ -70,7 +71,7 @@ open class UIView: UIResponder {
         androidView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Int(frameDp.width), height: Int(frameDp.height))
         
         // set background color
-        androidView.background = backgroundColor?.androidColor
+        //androidView.background = backgroundColor?.androidColor
     }
     
     // MARK: - Configuring a View’s Visual Appearance
@@ -78,7 +79,11 @@ open class UIView: UIResponder {
     /// The view’s background color.
     ///
     /// The default value is `nil`, which results in a transparent background color.
-    public final var backgroundColor: UIColor? { didSet { setNeedsDisplay() } }
+    public final var backgroundColor: UIColor? { didSet {
+            /*setNeedsDisplay()*/
+            androidView.background = backgroundColor?.androidColor
+        }
+    }
     
     /// A Boolean value that determines whether the view is hidden.
     ///
@@ -96,7 +101,11 @@ open class UIView: UIResponder {
     /// The value of this property reflects the state of the receiver only
     /// and does not account for the state of the receiver’s ancestors in the view hierarchy.
     /// Thus this property can be false but the receiver may still be hidden if an ancestor is hidden.
-    public final var isHidden: Bool = false { didSet { setNeedsDisplay() } }
+    public final var isHidden: Bool = false { didSet {
+        //setNeedsDisplay()
+        isHidden ? androidView.setVisibility(visibility: AndroidView.AndroidViewVisibility.invisible.rawValue) : androidView.setVisibility(visibility: AndroidView.AndroidViewVisibility.visible.rawValue)
+        }
+    }
     
     /// The view’s alpha value.
     ///
@@ -282,7 +291,7 @@ open class UIView: UIResponder {
         
         // FIXME: Do the docs state this happens?
         setNeedsLayout()
-        updateAndroidView()
+        updateAndroidViewSize()
         
         // Autoresize subviews
         if autoresizesSubviews, oldBounds.size != newBounds.size {
@@ -376,6 +385,8 @@ open class UIView: UIResponder {
     
     @inline(__always)
     private func addSubview(_ view: UIView, _ body: (inout [UIView], UIView) -> ()) {
+
+        NSLog("addSubview")
         
         let oldWindow = view.window
         let newWindow = self.window
@@ -485,13 +496,20 @@ open class UIView: UIResponder {
     /// - Note: Calling this method removes any constraints that refer to the view you are removing,
     /// or that refer to any view in the subtree of the view you are removing.
     public final func removeFromSuperview() {
-        
-        guard let index = superview?.subviews.index(where: { $0 === self })
+ 
+        guard let superview = self.superview
             else { return }
         
-        superview?.willRemoveSubview(self)
+        guard let index = superview.subviews.index(where: { $0 === self })
+            else { return }
         
-        superview?.subviews.remove(at: index)
+        superview.willRemoveSubview(self)
+        
+        superview.subviews.remove(at: index)
+        
+        let androidViewIndex = superview.androidView.indexOfChild(child: self.androidView)
+        
+        superview.androidView.removeViewAt(index: androidViewIndex)
     }
     
     /// Inserts a subview at the specified index.
@@ -856,7 +874,7 @@ open class UIView: UIResponder {
     
     public final func setNeedsDisplay(_ rect: CGRect? = nil) {
         
-        updateAndroidView()
+        updateAndroidViewSize()
         self.window?.screen.needsDisplay = true
     }
     

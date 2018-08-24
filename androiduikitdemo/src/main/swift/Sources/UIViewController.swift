@@ -153,21 +153,21 @@ open class UIViewController: UIResponder {
     
     // MARK: - Managing Child View Controllers in a Custom Container
     
-    public final private(set) var childViewControllers = [UIViewController]()
+    public final private(set) var children = [UIViewController]()
     
-    public final func addChildViewController(_ viewController: UIViewController) {
+    public final func addChild(_ viewController: UIViewController) {
         
-        childViewControllers.append(viewController)
+        children.append(viewController)
         
         viewController.parent = self
     }
     
-    public final func removeFromParentViewController() {
+    public final func removeFromParent() {
         
-        guard let index = parent?.childViewControllers.index(where: { $0 === self })
+        guard let index = parent?.children.index(where: { $0 === self })
             else { return }
         
-        parent?.childViewControllers.remove(at: index)
+        parent?.children.remove(at: index)
     }
     
     /// Transitions between two of the view controller's child view controllers.
@@ -221,7 +221,7 @@ open class UIViewController: UIResponder {
         
         if shouldAutomaticallyForwardAppearanceMethods {
             
-            childViewControllers
+            children
                 .filter { $0.isViewLoaded && $0.view.isDescendant(of: self.view) }
                 .forEach { $0.beginAppearanceTransition(isAppearing, animated: animated) }
         }
@@ -245,7 +245,7 @@ open class UIViewController: UIResponder {
         
         if shouldAutomaticallyForwardAppearanceMethods {
             
-            childViewControllers.forEach { $0.endAppearanceTransition() }
+            children.forEach { $0.endAppearanceTransition() }
         }
         
         //if isview
@@ -288,7 +288,7 @@ open class UIViewController: UIResponder {
     /// If you do, your implementation of this method must call the super implementation at some point.
     open func didReceiveMemoryWarning() {
         
-        childViewControllers.forEach { $0.didReceiveMemoryWarning() }
+        children.forEach { $0.didReceiveMemoryWarning() }
     }
     
     // MARK: - UIResponder
