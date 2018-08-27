@@ -145,6 +145,17 @@ open class SwiftAppCompatActivity: AppCompatActivity() {
         return statusBarHeight
     }
 
+    fun getActionBarHeighPixels(): Int {
+        var actionBarHeight = 0
+        val styledAttributes = theme.obtainStyledAttributes(
+                intArrayOf(android.R.attr.actionBarSize)
+        )
+        actionBarHeight = styledAttributes.getDimension(0, 0.0F).toInt()
+        styledAttributes.recycle()
+
+        return actionBarHeight
+    }
+
     fun runOnMainThread(runnable: Runnable){
         runOnUiThread(runnable)
     }
