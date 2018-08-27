@@ -164,10 +164,15 @@ open class UIViewController: UIResponder {
     
     public final func removeFromParent() {
         
-        guard let index = parent?.children.index(where: { $0 === self })
+        guard let parent = parent
             else { return }
         
-        parent?.children.remove(at: index)
+        guard let index = parent.children.index(where: { $0 === self })
+            else { return }
+        NSLog("\(#function) index for removing: \(index)")
+        parent.children.remove(at: index)
+        
+        parent.view.androidView.removeView(view: self.view.androidView)
     }
     
     /// Transitions between two of the view controller's child view controllers.

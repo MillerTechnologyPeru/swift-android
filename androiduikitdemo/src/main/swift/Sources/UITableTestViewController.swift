@@ -38,6 +38,8 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         NSLog("\(#function) displayWidth = \(displayWidth) ")
         NSLog("\(#function) displayHeight = \(displayHeight) ")
         
+        view.backgroundColor = UIColor.cyan
+        
         tableView = UITableView(frame: CGRect(x: 0, y: 0, width: displayWidth, height: displayHeight))
         
         guard let tableView = tableView else {
@@ -54,8 +56,8 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
             data.append("item \(i)")
         }
         
-        let delay = DispatchTime.now() + .seconds(10)
-        
+        /*
+        let delay = DispatchTime.now() + .seconds(1)
         DispatchQueue.global(qos: .background).asyncAfter(deadline: delay) {
             for i in 101...200 {
                 self.data.append("item \(i)")
@@ -71,7 +73,24 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
                 self?.tableView?.reloadData()
             }
             #endif
+        }*/
+        
+        let delay2 = DispatchTime.now() + .seconds(5)
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: delay2) {
+            #if os(Android)
+            UIScreen.main.activity.runOnMainThread { [weak self] in
+                
+                let mainController = MainViewController()
+                self?.navigationController?.pushViewController(mainController, animated: false)
+            }
+            #endif
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isToolbarHidden = true
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

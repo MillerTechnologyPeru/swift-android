@@ -29,12 +29,10 @@ open class UINavigationController: UIViewController {
     /// The view controllers currently on the navigation stack.
     public var viewControllers: [UIViewController] {
         
-        get { return _viewControllers }
-        
-        set { setViewControllers(newValue, animated: false) }
+        get { return children }
     }
     
-    private var _viewControllers = [UIViewController]()
+    //private var _viewControllers = [UIViewController]()
     
     public lazy var navigationBar = UINavigationBar()
     
@@ -86,19 +84,6 @@ open class UINavigationController: UIViewController {
         // setup
         self.navigationBar.delegate = self
         self.setViewControllers([rootViewController], animated: false)
-        
-        let delay = DispatchTime.now() + .seconds(5)
-        DispatchQueue.global(qos: .background).asyncAfter(deadline: delay) {
-            #if os(Android)
-            UIScreen.main.activity.runOnMainThread { [weak self] in
-                let mainViewController = MainViewController()
-
-                self?.isToolbarHidden = true
-                
-                self?.pushViewController(mainViewController, animated: false)
-            }
-            #endif
-        }
     }
     
     #if os(iOS)
@@ -144,8 +129,8 @@ open class UINavigationController: UIViewController {
 
         var contentRect = bounds
         
-        let androidActionBarHeight = CGFloat.applyDP(pixels: UIScreen.main.activity.actionBarHeighPixels) //https://material.io/design/components/app-bars-top.html#specs
-        let androidBottomNavigationBarHeight = CGFloat(56) //dp https://material.io/design/components/bottom-navigation.html#specs
+        let androidActionBarHeight = CGFloat.applyDP(pixels: UIScreen.main.activity.actionBarHeighPixels)
+        let androidBottomNavigationBarHeight = CGFloat(56)
         
         NSLog("actionBarHeigh dp \(androidActionBarHeight)")
         
@@ -161,13 +146,13 @@ open class UINavigationController: UIViewController {
         
         NSLog("\(isNavigationBarHidden)")
         NSLog("\(isToolbarHidden)")
-        if isNavigationBarHidden == false {
+        if !isNavigationBarHidden {
             
             contentRect.origin.y += navigationBarRect.height
             contentRect.size.height -= navigationBarRect.height
         }
         
-        if isToolbarHidden == false {
+        if !isToolbarHidden {
             
             contentRect.size.height -= toolbarRect.height
         }
@@ -195,12 +180,13 @@ open class UINavigationController: UIViewController {
         navigationBar.frame = navigationBarRect
         toolbar.frame = toolbarRect
         newVisibleViewController.view.frame = contentRect
-        
+        print("newVisibleViewController type: \(type(of: newVisibleViewController))")
         //NSLog("navigationview height \(self.)")
         
         NSLog("navigationBarRect height \(navigationBarRect.height)")
         NSLog("contentRect height \(contentRect.height)")
         NSLog("toolbarRect height \(toolbarRect.height)")
+        NSLog("viewchild = contentRect height \(newVisibleViewController.view.frame.height)")
         
         newVisibleViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.view.insertSubview(newVisibleViewController.view, at: 0)
@@ -235,16 +221,16 @@ open class UINavigationController: UIViewController {
 public extension UINavigationController {
     
     /// Replaces the view controllers currently managed by the navigation controller with the specified items.
-    public func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
+    public func setViewControllers(_ newViewControllers: [UIViewController], animated: Bool) {
         
-        precondition(viewControllers.isEmpty == false, "Missing root view controller")
+        precondition(newViewControllers.isEmpty == false, "Missing root view controller")
         
-        guard viewControllers != self.viewControllers
+        guard newViewControllers != self.viewControllers
             else { return } // no change
         
         // these view controllers are not in the new collection, so we must remove them as children
         self.viewControllers.forEach {
-            if viewControllers.contains($0) == false {
+            if newViewControllers.contains($0) == false {
                 $0.willMove(toParentViewController: nil)
                 $0.removeFromParent()
             }
@@ -254,8 +240,8 @@ public extension UINavigationController {
         self.navigationBar.items = nil
         
         // add items
-        viewControllers.forEach {
-            pushViewController($0, animated: animated && $0 === viewControllers.last)
+        newViewControllers.forEach {
+            pushViewController($0, animated: animated && $0 === newViewControllers.last)
         }
     }
 }
@@ -282,10 +268,50 @@ public extension UINavigationController {
         navigationBar.pushItem(viewController.navigationItem, animated: animated)
     }
     
+    func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
+        
+        var popped = [UIViewController]()
+        
+        if self.viewControllers.contains(viewController) {
+            while(self.topViewController !== viewController){
+                let poppedControllerReturn = self.popViewController(animated: false)
+                
+                guard let poppedController = poppedControllerReturn
+                    else { break }
+                
+                popped.append(poppedController)
+            }
+        }
+        
+        return popped
+    }
+    
     /// Pops the top view controller from the navigation stack and updates the display.
     func popViewController(animated: Bool) -> UIViewController? {
         
-        fatalError()
+        // don't allow popping the rootViewController
+        if self.viewControllers.count <= 1 {
+            return nil;
+        }
+        
+        let formerTopViewController = self.topViewController
+        
+        // the real thing seems to only bother calling -willMoveToParentViewController:
+        // here if the popped controller is the currently visible one. I have no idea why.
+        // if you pop several in a row, the ones buried in the stack don't seem to get called.
+        // it is possible that the real implementation is fancier and tracks if a child has
+        // been fully ever added or not before making this determination, but I haven't
+        // tried to test for that case yet since this was an easy thing to do to replicate
+        // the real world behavior I was seeing at the time of this writing.
+        if(formerTopViewController === visibleViewController){
+            willMove(toParentViewController: nil)
+        }
+        
+        formerTopViewController?.removeFromParent()
+        
+        updateVisibleViewController(animated: false)
+        
+        return formerTopViewController
     }
     
     /// Pops all the view controllers on the stack except the root view controller and updates the display.

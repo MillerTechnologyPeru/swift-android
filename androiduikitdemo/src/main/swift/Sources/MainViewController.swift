@@ -46,7 +46,7 @@ final class MainViewController: UIViewController {
         
         NSLog("\(#function) \(view.frame)")
         
-        view.backgroundColor = .cyan
+        view.backgroundColor = UIColor.lightGray
         
         let view1 = UIView(frame: CGRect(x: 20, y: 20,
                                          width: view.bounds.size.width - 40,
@@ -91,7 +91,10 @@ final class MainViewController: UIViewController {
         view.addSubview(view4)
         self.view4 = view4
         
-        let delay = DispatchTime.now() + .seconds(5)
+        let delay  = DispatchTime.now() + .seconds(2)
+        let delay2 = DispatchTime.now() + .seconds(3)
+        let delay3 = DispatchTime.now() + .seconds(4)
+        
         DispatchQueue.global(qos: .background).asyncAfter(deadline: delay) {
             #if os(Android)
             UIScreen.main.activity.runOnMainThread { [weak self] in
@@ -100,7 +103,6 @@ final class MainViewController: UIViewController {
             #endif
         }
         
-        let delay2 = DispatchTime.now() + .seconds(7)
         DispatchQueue.global(qos: .background).asyncAfter(deadline: delay2) {
             #if os(Android)
             UIScreen.main.activity.runOnMainThread { [weak self] in
@@ -109,7 +111,21 @@ final class MainViewController: UIViewController {
             #endif
         }
         
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: delay3) {
+            #if os(Android)
+            UIScreen.main.activity.runOnMainThread { [weak self] in
+                self?.navigationController?.popViewController(animated: false)
+            }
+            #endif
+        }
+        
         printViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isToolbarHidden = true
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     /*

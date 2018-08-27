@@ -250,6 +250,7 @@ open class UIView: UIResponder {
     open var frame: CGRect {
         get { return _frame }
         set {
+            NSLog("\(#function) frame: \(newValue)")
             let oldValue = _bounds
             _frame = newValue
             _bounds.size = newValue.size
@@ -285,7 +286,7 @@ open class UIView: UIResponder {
     private var _bounds = CGRect()
     
     private func boundsDidChange(from oldBounds: CGRect, to newBounds: CGRect) {
-        
+        NSLog("\(#function) oldBounds: \(oldBounds) and newBounds: \(newBounds)")
         // bounds changed
         guard oldBounds != newBounds else { return }
         
@@ -387,6 +388,7 @@ open class UIView: UIResponder {
     private func addSubview(_ view: UIView, _ body: (inout [UIView], UIView) -> ()) {
 
         NSLog("addSubview")
+        NSLog("\((type: self)) \(#function) \(Int(frame.width)) - \(Int(frame.height))")
         
         let oldWindow = view.window
         let newWindow = self.window
@@ -396,27 +398,27 @@ open class UIView: UIResponder {
             NSLog("it has superview")
             view.removeFromSuperview()
         }
-        
+        NSLog("addSubview 1")
         // store subview in array
         body(&subviews, view)
-        
+        NSLog("addSubview 2")
         view.willMove(toSuperview: self)
         
         // set super view weak reference
         view.superview = self
-        
+        NSLog("addSubview 3")
         // inform view of change
         if oldWindow?.screen !== newWindow?.screen {
             didMoveToScreen()
         }
         view.didMoveToSuperview()
-        
+        NSLog("addSubview 4")
         // Android
         androidView.addView(view.androidView)
-        
+        NSLog("addSubview5")
         // inform
         didAddSubview(view)
-        
+        NSLog("addSubview6")
         // force redraw
         setNeedsDisplay()
     }
@@ -510,7 +512,9 @@ open class UIView: UIResponder {
         
         let androidViewIndex = superview.androidView.indexOfChild(child: self.androidView)
         NSLog("\(#function) androidViewIndex: \(androidViewIndex)")
-        superview.androidView.removeViewAt(index: androidViewIndex)
+        if(androidViewIndex >= 0){
+            superview.androidView.removeViewAt(index: androidViewIndex)
+        }
     }
     
     /// Inserts a subview at the specified index.

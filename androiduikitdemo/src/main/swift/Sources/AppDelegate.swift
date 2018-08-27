@@ -32,7 +32,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: tableTestController)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.backgroundColor = .red
+        //self.window?.backgroundColor = .red
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
         
