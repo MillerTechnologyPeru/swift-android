@@ -76,7 +76,7 @@ public final class UIScreen {
     }
     
     internal static var _main: UIScreen?
-
+    
     // MARK: - Properties
     
     public var mirrored: UIScreen? { return nil }

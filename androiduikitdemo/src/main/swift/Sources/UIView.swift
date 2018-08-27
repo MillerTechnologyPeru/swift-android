@@ -393,6 +393,7 @@ open class UIView: UIResponder {
         
         // remove from previous superview
         if view.superview !== self {
+            NSLog("it has superview")
             view.removeFromSuperview()
         }
         
@@ -496,7 +497,7 @@ open class UIView: UIResponder {
     /// - Note: Calling this method removes any constraints that refer to the view you are removing,
     /// or that refer to any view in the subtree of the view you are removing.
     public final func removeFromSuperview() {
- 
+        NSLog("\(#function)")
         guard let superview = self.superview
             else { return }
         
@@ -508,7 +509,7 @@ open class UIView: UIResponder {
         superview.subviews.remove(at: index)
         
         let androidViewIndex = superview.androidView.indexOfChild(child: self.androidView)
-        
+        NSLog("\(#function) androidViewIndex: \(androidViewIndex)")
         superview.androidView.removeViewAt(index: androidViewIndex)
     }
     

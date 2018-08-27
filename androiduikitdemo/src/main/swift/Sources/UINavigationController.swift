@@ -42,7 +42,10 @@ open class UINavigationController: UIViewController {
         
         get { return _isNavigationBarHidden }
         
-        set {  }  // FIXME:
+        set {
+            navigationBar.isHidden = newValue
+            _isNavigationBarHidden = newValue
+        }
     }
     
     private var _isNavigationBarHidden: Bool = false
@@ -53,10 +56,13 @@ open class UINavigationController: UIViewController {
         
         get { return _isToolbarHidden }
         
-        set { } // FIXME:
+        set {
+            toolbar.isHidden = newValue
+            _isToolbarHidden = newValue
+        }
     }
     
-    private var _isToolbarHidden: Bool = true
+    private var _isToolbarHidden: Bool = false
     
     /// The delegate of the navigation controller object.
     public weak var delegate: UINavigationControllerDelegate?
@@ -75,9 +81,24 @@ open class UINavigationController: UIViewController {
         super.init()
         #endif
         
+        //self.view.backgroundColor = UIColor.purple
+        
         // setup
         self.navigationBar.delegate = self
         self.setViewControllers([rootViewController], animated: false)
+        
+        let delay = DispatchTime.now() + .seconds(5)
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: delay) {
+            #if os(Android)
+            UIScreen.main.activity.runOnMainThread { [weak self] in
+                let mainViewController = MainViewController()
+
+                self?.isToolbarHidden = true
+                
+                self?.pushViewController(mainViewController, animated: false)
+            }
+            #endif
+        }
     }
     
     #if os(iOS)
@@ -88,8 +109,7 @@ open class UINavigationController: UIViewController {
     #endif
     
     open override func loadView() {
-        
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 480))
+        let view = UIView(frame: UIScreen.main.bounds)
         view.clipsToBounds = true
         self.view = view
         
@@ -99,7 +119,9 @@ open class UINavigationController: UIViewController {
         // calculate frame
         let (contentRect, navigationBarRect, toolbarRect) = self.contentRect(for: view.bounds)
         navigationBar.frame = navigationBarRect
+        navigationBar.backgroundColor = .blue
         toolbar.frame = toolbarRect
+        toolbar.backgroundColor = .purple
         visibleViewControllerView.frame = contentRect
         
         // set resizing
@@ -107,7 +129,7 @@ open class UINavigationController: UIViewController {
         navigationBar.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
         visibleViewControllerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-        // add subviews
+        // add subviews\
         view.addSubview(visibleViewControllerView)
         view.addSubview(navigationBar)
         view.addSubview(toolbar)
@@ -119,26 +141,33 @@ open class UINavigationController: UIViewController {
     }
     
     private func contentRect(for bounds: CGRect) -> (content: CGRect, navigationBar: CGRect, toolbar: CGRect) {
-        
+
         var contentRect = bounds
+        
+        let androidActionBarHeight = CGFloat.applyDP(pixels: UIScreen.main.activity.actionBarHeighPixels) //https://material.io/design/components/app-bars-top.html#specs
+        let androidBottomNavigationBarHeight = CGFloat(56) //dp https://material.io/design/components/bottom-navigation.html#specs
+        
+        NSLog("actionBarHeigh dp \(androidActionBarHeight)")
         
         let navigationBarRect = CGRect(x: bounds.minX,
                                        y: bounds.minY,
                                        width: bounds.width,
-                                       height: 48)//navigationBar.frame.size.height
+                                       height: androidActionBarHeight)
         
         let toolbarRect = CGRect(x: bounds.minX,
                                  y: bounds.maxY - toolbar.frame.size.height,
                                  width: bounds.width,
-                                 height: toolbar.frame.size.height)
+                                 height: androidBottomNavigationBarHeight)
         
-        if isNavigationBarHidden {
+        NSLog("\(isNavigationBarHidden)")
+        NSLog("\(isToolbarHidden)")
+        if isNavigationBarHidden == false {
             
             contentRect.origin.y += navigationBarRect.height
             contentRect.size.height -= navigationBarRect.height
         }
         
-        if isToolbarHidden {
+        if isToolbarHidden == false {
             
             contentRect.size.height -= toolbarRect.height
         }
@@ -167,12 +196,16 @@ open class UINavigationController: UIViewController {
         toolbar.frame = toolbarRect
         newVisibleViewController.view.frame = contentRect
         
+        //NSLog("navigationview height \(self.)")
+        
         NSLog("navigationBarRect height \(navigationBarRect.height)")
         NSLog("contentRect height \(contentRect.height)")
         NSLog("toolbarRect height \(toolbarRect.height)")
         
         newVisibleViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.view.insertSubview(newVisibleViewController.view, at: 0)
+        
+        NSLog("view controller child height \(newVisibleViewController.view.frame.height)")
         
         // FIXME: Animate
         
