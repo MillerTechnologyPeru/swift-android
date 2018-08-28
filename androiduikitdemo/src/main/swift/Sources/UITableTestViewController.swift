@@ -80,8 +80,8 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
             #if os(Android)
             UIScreen.main.activity.runOnMainThread { [weak self] in
                 
-                let mainController = MainViewController()
-                self?.navigationController?.pushViewController(mainController, animated: false)
+                let child2ViewController = MainViewController()
+                self?.navigationController?.pushViewController(child2ViewController, animated: false)
             }
             #endif
         }
