@@ -12,13 +12,13 @@ import java_util
 import Android
 import Bluetooth
 import GATT
-
+/*
 /// Needs to be implemented by app.
 @_silgen_name("SwiftAndroidMainActivity")
 public func SwiftAndroidMainActivity() -> SwiftSupportAppCompatActivity.Type {
     NSLog("MainActivity bind \(#function)")
     return MainActivity.self
-}
+}*/
 
 // Like AppDelegate in iOS
 final class MainActivity: SwiftSupportAppCompatActivity {
