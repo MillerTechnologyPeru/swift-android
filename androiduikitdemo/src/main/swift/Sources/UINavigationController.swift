@@ -6,12 +6,8 @@
 //
 
 import Foundation
-
-#if os(iOS)
-import UIKit
-#elseif os(Android)
 import Android
-#endif
+import java_swift
 
 open class UINavigationController: UIViewController {
     
@@ -36,6 +32,7 @@ open class UINavigationController: UIViewController {
     
     public lazy var navigationBar = UINavigationBar()
     
+    /*
     public var isNavigationBarHidden: Bool {
         
         get { return _isNavigationBarHidden }
@@ -45,9 +42,10 @@ open class UINavigationController: UIViewController {
             _isNavigationBarHidden = newValue
         }
     }
+    */
     
     private var _isNavigationBarHidden: Bool = false
-    
+ 
     public lazy var toolbar = UIToolbar()
     
     public var isToolbarHidden: Bool {
@@ -144,9 +142,9 @@ open class UINavigationController: UIViewController {
                                  width: bounds.width,
                                  height: androidBottomNavigationBarHeight)
         
-        NSLog("\(isNavigationBarHidden)")
+        NSLog("\(_isNavigationBarHidden)")
         NSLog("\(isToolbarHidden)")
-        if !isNavigationBarHidden {
+        if !_isNavigationBarHidden {
             
             contentRect.origin.y += navigationBarRect.height
             contentRect.size.height -= navigationBarRect.height
@@ -321,11 +319,49 @@ public extension UINavigationController {
     }
 }
 
+// MARK: - Configuring Navigation Bars
+
+extension UINavigationController {
+    
+    /// Sets whether the navigation bar is hidden.
+    public func setNavigationBarHidden(_ hide: Bool, animated: Bool) {
+        
+        if(hide != _isNavigationBarHidden){
+            
+            _isNavigationBarHidden = hide
+            navigationBar.isHidden = hide
+            updateVisibleViewController(animated: false)
+        }else{
+            
+            navigationBar.isHidden = _isNavigationBarHidden
+        }
+    }
+}
+
 // MARK: - UINavigationBarDelegate
 
 extension UINavigationController: UINavigationBarDelegate {
     
     public func navigationBar(_ navigationBar: UINavigationBar, shouldPush item: UINavigationItem) -> Bool  {
+        
+        if(item.backBarButtonItem == nil && !item.hidesBackButton){
+            
+            let arrowBackId = UIScreen.main.activity.getIdentifier(name: "ic_arrow_back", type: "drawable")
+            let navigationVectorDrawableIcon = AndroidVectorDrawableCompat.create(res:  UIScreen.main.activity.resources!, resId: arrowBackId, theme: nil)
+            
+            guard let navigationVectorIcon = navigationVectorDrawableIcon
+                else { return true }
+            
+            var navIconDrawable = navigationVectorIcon as AndroidGraphicsDrawableDrawable
+            navIconDrawable = AndroidDrawableCompat.wrap(drawable: navIconDrawable)
+            AndroidDrawableCompat.setTint(drawable: navIconDrawable, color: AndroidGraphicsColor.WHITE)
+            
+            navigationBar.androidToolbar.navigationIcon = navIconDrawable
+            
+            navigationBar.androidToolbar.setNavigationOnClickListener {
+                self.popViewController(animated: false)
+            }
+        }
         
         return true
     }

@@ -18,7 +18,11 @@ open class UILabel: UIView {
         guard let context = AndroidContext(casting: UIScreen.main.activity)
             else { fatalError("Missing context") }
         
-        return AndroidTextView(context: context)
+        let textview = AndroidTextView(context: context)
+        
+        textview.color = UIColor.black.androidColor.color
+        
+        return textview
     }()
     
     //internal var androidTextView: AndroidTextView?

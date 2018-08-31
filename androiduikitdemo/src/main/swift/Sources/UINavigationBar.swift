@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Android
+import java_swift
 
 open class UINavigationBar: UIView {
     
@@ -35,7 +37,45 @@ open class UINavigationBar: UIView {
         return navigationStack[navigationStack.count - 2]
     }
     
+    internal private(set) lazy var androidToolbar: AndroidToolbar = { [unowned self] in
+        
+        let toolbar = AndroidToolbar.init(context: UIScreen.main.activity)
+        
+        toolbar.context?.setTheme(resId: UIScreen.main.activity.getIdentifier(name: "Dark_ActionBar", type: "style"))
+        toolbar.popupTheme = UIScreen.main.activity.getIdentifier(name: "Light", type: "style")
+
+        toolbar.title = "AndroidUIKit"
+        
+        // default background color
+        let colorPrimaryId = UIScreen.main.activity.getIdentifier(name: "colorPrimary", type: "color")
+        toolbar.setBackgroundColor(color: AndroidContextCompat.getColor(context: UIScreen.main.activity, colorRes: colorPrimaryId))
+        
+        return toolbar
+    }()
+    
     private var navigationStack = [UINavigationItem]()
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        updateAndroidToolbarSize()
+        
+        androidView.addView(androidToolbar)
+        
+        NSLog("\(type(of: self)) \(#function)")
+    }
+    
+    private func updateAndroidToolbarSize() {
+        
+        let frameDp = CGRect.applyDP(rect: frame)
+        
+        // set origin
+        androidToolbar.setX(x: Float(frameDp.minX))
+        androidToolbar.setY(y: Float(frameDp.minY))
+        
+        // set size
+        androidToolbar.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Int(frameDp.width), height: Int(frameDp.height))
+    }
     
     // Pushing a navigation item displays the item's title in the center of the navigation bar.
     // The previous top navigation item (if it exists) is displayed as a "back" button on the left.
@@ -47,7 +87,7 @@ open class UINavigationBar: UIView {
         navigationStack.append(item)
         
         // configure views
-        
+        androidToolbar.title = item.title ?? ""
         
         delegate?.navigationBar(self, didPush: item)
     }
@@ -64,6 +104,13 @@ open class UINavigationBar: UIView {
         
         _items = items
     }
+    
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        updateAndroidToolbarSize()
+    }
+    
 }
 
 private extension UINavigationBar {

@@ -75,7 +75,7 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
             #endif
         }*/
         
-        let delay2 = DispatchTime.now() + .seconds(5)
+        let delay2 = DispatchTime.now() + .seconds(3)
         DispatchQueue.global(qos: .background).asyncAfter(deadline: delay2) {
             #if os(Android)
             UIScreen.main.activity.runOnMainThread { [weak self] in
@@ -85,12 +85,15 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
             }
             #endif
         }
+        
+        navigationItem.title = "UITableView"
+        navigationItem.hidesBackButton = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isToolbarHidden = true
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

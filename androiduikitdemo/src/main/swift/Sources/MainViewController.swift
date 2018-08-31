@@ -91,9 +91,11 @@ final class MainViewController: UIViewController {
         view.addSubview(view4)
         self.view4 = view4
         
+        /*
         let delay  = DispatchTime.now() + .seconds(2)
         let delay2 = DispatchTime.now() + .seconds(3)
         let delay3 = DispatchTime.now() + .seconds(4)
+        
         
         DispatchQueue.global(qos: .background).asyncAfter(deadline: delay) {
             #if os(Android)
@@ -117,7 +119,9 @@ final class MainViewController: UIViewController {
                 self?.navigationController?.popViewController(animated: false)
             }
             #endif
-        }
+        }*/
+        
+        navigationItem.title = "Views Demo"
         
         printViews()
     }
@@ -125,7 +129,7 @@ final class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isToolbarHidden = true
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     /*

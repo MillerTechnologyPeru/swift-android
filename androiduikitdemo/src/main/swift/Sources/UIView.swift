@@ -250,7 +250,6 @@ open class UIView: UIResponder {
     open var frame: CGRect {
         get { return _frame }
         set {
-            NSLog("\(#function) frame: \(newValue)")
             let oldValue = _bounds
             _frame = newValue
             _bounds.size = newValue.size
