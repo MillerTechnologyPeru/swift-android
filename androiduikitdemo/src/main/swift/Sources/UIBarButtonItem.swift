@@ -6,14 +6,18 @@
 //
 
 import Foundation
+import Android
 
 /// A button specialized for placement on a toolbar or tab bar.
 open class UIBarButtonItem: UIBarItem {
     
     public var target: Any?
     
-    public var action: String?//FIXME
-    
+    #if os(iOS)
+    public var action: Selector?
+    #else
+    public var action: (() -> ())?
+    #endif
     public var style: UIBarButtonItem.Style?
     
     public var possibleTitles: Set<String>?
@@ -24,26 +28,40 @@ open class UIBarButtonItem: UIBarItem {
     
     public var tintColor: UIColor?
     
+    internal lazy var androidMenuItemId: Int = { [unowned self] in
+       return AndroidViewCompat.generateViewId()
+    }()
+    
     public init(customView: UIView) {
         super.init()
         
         self.customView = customView
     }
     
-    public init(barButtonSystemItem: UIBarButtonItem.SystemItem, target: Any?, action: String?) {
+    #if os(iOS)
+    public init(barButtonSystemItem: UIBarButtonItem.SystemItem, target: Any?, action: Selector?) {
         super.init()
         
         self.target = target
         self.action = action
     }
     
-    public init(title: String?, style: UIBarButtonItem.Style, target: Any?, action: String?) {
+    public init(title: String?, style: UIBarButtonItem.Style, target: Any?, action: Selector?) {
         super.init()
         
         self.title = title
         self.style = style
         self.action = action
     }
+    #else
+    public init(title: String?, style: UIBarButtonItem.Style, target: Any?, action: (() -> ())?) {
+        super.init()
+        
+        self.title = title
+        self.style = style
+        self.action = action
+    }
+    #endif
 }
 
 public extension UIBarButtonItem {

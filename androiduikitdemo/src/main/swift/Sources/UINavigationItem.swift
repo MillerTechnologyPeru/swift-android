@@ -34,7 +34,7 @@ open class UINavigationItem: NSObject {
     public var leftBarButtonItems: [UIBarButtonItem]?
     
     /// A custom bar button item displayed on the left (or leading) edge of the navigation bar when the receiver is the top navigation item.
-    public var leftBatButtonItem: UIBarButtonItem?
+    public var leftBarButtonItem: UIBarButtonItem?
     
     /// An array of custom bar button items to display on the right (or trailing) side of the navigation bar when the receiver is the top navigation item.
     public var rightBarButtonItems: [UIBarButtonItem]?

@@ -349,26 +349,9 @@ extension UINavigationController: UINavigationBarDelegate {
         
         NSLog("backbutton is nil \(item.backBarButtonItem == nil)")
         NSLog("backbutton is hidden \(item.hidesBackButton)")
+        
         if(item.backBarButtonItem == nil && !item.hidesBackButton){
-            
-            let arrowBackId = UIScreen.main.activity.getIdentifier(name: "ic_arrow_back", type: "drawable")
-            let navigationVectorDrawableIcon = AndroidVectorDrawableCompat.create(res:  UIScreen.main.activity.resources!, resId: arrowBackId, theme: nil)
-            
-            guard let navigationVectorIcon = navigationVectorDrawableIcon
-                else { return true }
-            
-            var navIconDrawable = navigationVectorIcon as AndroidGraphicsDrawableDrawable
-            navIconDrawable = AndroidDrawableCompat.wrap(drawable: navIconDrawable)
-            AndroidDrawableCompat.setTint(drawable: navIconDrawable, color: AndroidGraphicsColor.WHITE)
-            
-            navigationBar.androidToolbar.navigationIcon = navIconDrawable
-            
-            navigationBar.androidToolbar.setNavigationOnClickListener {
-                self.popViewController(animated: false)
-            }
-        }else {
-            navigationBar.androidToolbar.navigationIcon = nil
-            
+            showDefaultBackButton(androidToolbar: navigationBar.androidToolbar)
         }
         
         return true
@@ -381,11 +364,42 @@ extension UINavigationController: UINavigationBarDelegate {
     
     public func navigationBar(_ navigationBar: UINavigationBar, shouldPop item: UINavigationItem) -> Bool {
         NSLog("\(type(of: self)) \(#function)")
+        
+        if(item.backBarButtonItem == nil && !item.hidesBackButton){
+            navigationBar.androidToolbar.navigationIcon = nil
+        }
+        
         return true
     }
     
     public func navigationBar(_ navigationBar: UINavigationBar, didPop item: UINavigationItem) {
         NSLog("\(type(of: self)) \(#function)")
         
+        guard let topItem = navigationBar.topItem else {
+            return
+        }
+        
+        if(topItem.backBarButtonItem == nil && !topItem.hidesBackButton ){
+            showDefaultBackButton(androidToolbar: navigationBar.androidToolbar)
+        }
+    }
+    
+    private func showDefaultBackButton(androidToolbar: AndroidToolbar) {
+        
+            let arrowBackId = UIScreen.main.activity.getIdentifier(name: "ic_arrow_back", type: "drawable")
+            let navigationVectorDrawableIcon = AndroidVectorDrawableCompat.create(res:  UIScreen.main.activity.resources!, resId: arrowBackId, theme: nil)
+            
+            guard let navigationVectorIcon = navigationVectorDrawableIcon
+                else { return }
+            
+            var navIconDrawable = navigationVectorIcon as AndroidGraphicsDrawableDrawable
+            navIconDrawable = AndroidDrawableCompat.wrap(drawable: navIconDrawable)
+            AndroidDrawableCompat.setTint(drawable: navIconDrawable, color: AndroidGraphicsColor.WHITE)
+            
+            navigationBar.androidToolbar.navigationIcon = navIconDrawable
+            
+            navigationBar.androidToolbar.setNavigationOnClickListener {
+                self.popViewController(animated: false)
+        }
     }
 }

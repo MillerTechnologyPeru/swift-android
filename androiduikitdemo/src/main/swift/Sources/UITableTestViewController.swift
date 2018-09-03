@@ -75,14 +75,26 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
             #endif
         }*/
         
-        let leftItem = UIBarButtonItem.init(title: "LB", style: .done, target: nil, action: nil)
+        navigationItem.title = "UITableView"
+        navigationItem.hidesBackButton = true
+        
+        let leftItem = UIBarButtonItem.init(title: "Views", style: .done, target: nil, action: nil)
+        leftItem.action = {
+            NSLog("Clicked on Views")
+            let child2ViewController = MainViewController()
+            self.navigationController?.pushViewController(child2ViewController, animated: false)
+        }
         
         let rightItem = UIBarButtonItem.init(title: "RB", style: .done, target: nil, action: nil)
+        rightItem.action = {
+            NSLog("Hello Right Button")
+        }
         
-        navigationItem.leftBatButtonItem = leftItem
+        navigationItem.leftBarButtonItem = leftItem
         
         navigationItem.rightBarButtonItem = rightItem
         
+        /*
         let delay2 = DispatchTime.now() + .seconds(3)
         DispatchQueue.global(qos: .background).asyncAfter(deadline: delay2) {
             #if os(Android)
@@ -92,10 +104,7 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
                 self?.navigationController?.pushViewController(child2ViewController, animated: false)
             }
             #endif
-        }
-        
-        navigationItem.title = "UITableView"
-        navigationItem.hidesBackButton = true
+        }*/
     }
     
     override func viewWillAppear(_ animated: Bool) {

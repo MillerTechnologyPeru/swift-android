@@ -89,26 +89,61 @@ open class UINavigationBar: UIView {
         
         menu.clear()
         
-        if item.leftBatButtonItem != nil {
+        if item.leftBarButtonItem != nil {
             
-            menu.add(groupId: 2, itemId: AndroidViewCompat.generateViewId(), order: 1, title: item.leftBatButtonItem?.title ?? "")
+            guard let leftBarButtonItem = item.leftBarButtonItem
+                else { return }
+            
+            menu.add(groupId: 2, itemId: leftBarButtonItem.androidMenuItemId, order: 1, title: leftBarButtonItem.title ?? "")
                 .setShowAsAction(action: AndroidMenuItemForward.ShowAsAction.ifRoom)
         }
         
         item.leftBarButtonItems?.forEach { barButton in
-            menu.add(groupId: 2, itemId: AndroidViewCompat.generateViewId(), order: 1, title: barButton.title ?? "")
+            menu.add(groupId: 2, itemId: barButton.androidMenuItemId, order: 1, title: barButton.title ?? "")
                 .setShowAsAction(action: AndroidMenuItemForward.ShowAsAction.ifRoom)
         }
         
         if item.rightBarButtonItem != nil {
             
-            menu.add(groupId: 1, itemId: AndroidViewCompat.generateViewId(), order: 1, title: item.rightBarButtonItem?.title ?? "")
+            guard let rightBarButtonItem = item.rightBarButtonItem
+                else { return }
+            
+            menu.add(groupId: 1, itemId: rightBarButtonItem.androidMenuItemId, order: 1, title: rightBarButtonItem.title ?? "")
                 .setShowAsAction(action: AndroidMenuItemForward.ShowAsAction.ifRoom)
         }
         
         item.rightBarButtonItems?.forEach { barButton in
-            menu.add(groupId: 1, itemId: AndroidViewCompat.generateViewId(), order: 1, title: barButton.title ?? "")
+            menu.add(groupId: 1, itemId: barButton.androidMenuItemId, order: 1, title: barButton.title ?? "")
                 .setShowAsAction(action: AndroidMenuItemForward.ShowAsAction.ifRoom)
+        }
+        
+        androidToolbar.setOnMenuItemClickListener { menuItem in
+            
+            if item.leftBarButtonItem != nil && item.leftBarButtonItem?.androidMenuItemId == menuItem?.itemId {
+                item.leftBarButtonItem?.action?()
+                return true
+            }
+            
+            if item.rightBarButtonItem != nil && item.rightBarButtonItem?.androidMenuItemId == menuItem?.itemId {
+                item.rightBarButtonItem?.action?()
+                return true
+            }
+            
+            item.leftBarButtonItems?.forEach { barButton in
+                if(barButton.androidMenuItemId == menuItem?.itemId){
+                    barButton.action?()
+                    return
+                }
+            }
+            
+            item.rightBarButtonItems?.forEach { barButton in
+                if(barButton.androidMenuItemId == menuItem?.itemId){
+                    barButton.action?()
+                    return
+                }
+            }
+            
+            return false
         }
     }
     
@@ -140,7 +175,8 @@ open class UINavigationBar: UIView {
         guard let poppedItem = topItem
             else { return nil }
         
-        delegate?.navigationBar(self, shouldPop: poppedItem)
+        guard delegate?.navigationBar(self, shouldPop: poppedItem) ?? true
+            else { return nil }
         
         _navigationStack.removeLast()
         
