@@ -15,26 +15,26 @@ open class UINavigationBar: UIView {
     
     public var items: [UINavigationItem]? {
         
-        get { return _items }
+        get { return _navigationStack }
         
         set { setItems(newValue, animated: false) }
     }
     
-    private var _items: [UINavigationItem]?
+    private var _navigationStack = [UINavigationItem]()
     
     public var isTranslucent: Bool = true
     
     public var topItem: UINavigationItem? {
         
-        return navigationStack.last
+        return _navigationStack.last
     }
     
     public var backItem: UINavigationItem? {
         
-        guard navigationStack.count > 1
+        guard _navigationStack.count > 1
             else { return nil }
         
-        return navigationStack[navigationStack.count - 2]
+        return _navigationStack[_navigationStack.count - 2]
     }
     
     internal private(set) lazy var androidToolbar: AndroidToolbar = { [unowned self] in
@@ -53,7 +53,7 @@ open class UINavigationBar: UIView {
         return toolbar
     }()
     
-    private var navigationStack = [UINavigationItem]()
+    
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -77,6 +77,41 @@ open class UINavigationBar: UIView {
         androidToolbar.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Int(frameDp.width), height: Int(frameDp.height))
     }
     
+    private func updateAndroidToolbar(){
+        
+        guard let item = _navigationStack.last
+            else { return }
+        
+        // configure views
+        androidToolbar.title = item.title ?? ""
+        
+        let menu = androidToolbar.menu
+        
+        menu.clear()
+        
+        if item.leftBatButtonItem != nil {
+            
+            menu.add(groupId: 2, itemId: AndroidViewCompat.generateViewId(), order: 1, title: item.leftBatButtonItem?.title ?? "")
+                .setShowAsAction(action: AndroidMenuItemForward.ShowAsAction.ifRoom)
+        }
+        
+        item.leftBarButtonItems?.forEach { barButton in
+            menu.add(groupId: 2, itemId: AndroidViewCompat.generateViewId(), order: 1, title: barButton.title ?? "")
+                .setShowAsAction(action: AndroidMenuItemForward.ShowAsAction.ifRoom)
+        }
+        
+        if item.rightBarButtonItem != nil {
+            
+            menu.add(groupId: 1, itemId: AndroidViewCompat.generateViewId(), order: 1, title: item.rightBarButtonItem?.title ?? "")
+                .setShowAsAction(action: AndroidMenuItemForward.ShowAsAction.ifRoom)
+        }
+        
+        item.rightBarButtonItems?.forEach { barButton in
+            menu.add(groupId: 1, itemId: AndroidViewCompat.generateViewId(), order: 1, title: barButton.title ?? "")
+                .setShowAsAction(action: AndroidMenuItemForward.ShowAsAction.ifRoom)
+        }
+    }
+    
     // Pushing a navigation item displays the item's title in the center of the navigation bar.
     // The previous top navigation item (if it exists) is displayed as a "back" button on the left.
     public func pushItem(_ item: UINavigationItem, animated: Bool) {
@@ -84,10 +119,9 @@ open class UINavigationBar: UIView {
         guard delegate?.navigationBar(self, shouldPush: item) ?? true
             else { return }
         
-        navigationStack.append(item)
+        _navigationStack.append(item)
         
-        // configure views
-        androidToolbar.title = item.title ?? ""
+        updateAndroidToolbar()
         
         delegate?.navigationBar(self, didPush: item)
     }
@@ -95,14 +129,38 @@ open class UINavigationBar: UIView {
     // Returns the item that was popped.
     public func popItem(animated: Bool) -> UINavigationItem? {
         
-        fatalError()
+        NSLog("\(type(of: self)) \(#function) 1")
+        
+        NSLog("\(type(of: self)) \(#function) count \(_navigationStack.count)")
+        
+        if _navigationStack.count <= 1 {
+            return nil
+        }
+        NSLog("\(type(of: self)) \(#function) 2")
+        guard let poppedItem = topItem
+            else { return nil }
+        
+        delegate?.navigationBar(self, shouldPop: poppedItem)
+        
+        _navigationStack.removeLast()
+        
+        updateAndroidToolbar()
+        
+        NSLog("\(type(of: self)) \(#function) 3")
+        
+        delegate?.navigationBar(self, didPop: poppedItem)
+        return poppedItem
     }
     
     public func setItems(_ items: [UINavigationItem]?, animated: Bool) {
         
+        guard let items = items else {
+            
+            _navigationStack.removeAll()
+            return
+        }
         
-        
-        _items = items
+        _navigationStack = items
     }
     
     open override func layoutSubviews() {

@@ -75,6 +75,14 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
             #endif
         }*/
         
+        let leftItem = UIBarButtonItem.init(title: "LB", style: .done, target: nil, action: nil)
+        
+        let rightItem = UIBarButtonItem.init(title: "RB", style: .done, target: nil, action: nil)
+        
+        navigationItem.leftBatButtonItem = leftItem
+        
+        navigationItem.rightBarButtonItem = rightItem
+        
         let delay2 = DispatchTime.now() + .seconds(3)
         DispatchQueue.global(qos: .background).asyncAfter(deadline: delay2) {
             #if os(Android)

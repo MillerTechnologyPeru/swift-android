@@ -307,6 +307,8 @@ public extension UINavigationController {
         
         formerTopViewController?.removeFromParent()
         
+        navigationBar.popItem(animated: false)
+        
         updateVisibleViewController(animated: false)
         
         return formerTopViewController
@@ -343,7 +345,10 @@ extension UINavigationController {
 extension UINavigationController: UINavigationBarDelegate {
     
     public func navigationBar(_ navigationBar: UINavigationBar, shouldPush item: UINavigationItem) -> Bool  {
+        NSLog("\(type(of: self)) \(#function)")
         
+        NSLog("backbutton is nil \(item.backBarButtonItem == nil)")
+        NSLog("backbutton is hidden \(item.hidesBackButton)")
         if(item.backBarButtonItem == nil && !item.hidesBackButton){
             
             let arrowBackId = UIScreen.main.activity.getIdentifier(name: "ic_arrow_back", type: "drawable")
@@ -361,23 +366,26 @@ extension UINavigationController: UINavigationBarDelegate {
             navigationBar.androidToolbar.setNavigationOnClickListener {
                 self.popViewController(animated: false)
             }
+        }else {
+            navigationBar.androidToolbar.navigationIcon = nil
+            
         }
         
         return true
     }
     
     public func navigationBar(_ navigationBar: UINavigationBar, didPush item: UINavigationItem) {
-        
+        NSLog("\(type(of: self)) \(#function)")
         
     }
     
     public func navigationBar(_ navigationBar: UINavigationBar, shouldPop item: UINavigationItem) -> Bool {
-        
+        NSLog("\(type(of: self)) \(#function)")
         return true
     }
     
     public func navigationBar(_ navigationBar: UINavigationBar, didPop item: UINavigationItem) {
-        
+        NSLog("\(type(of: self)) \(#function)")
         
     }
 }
