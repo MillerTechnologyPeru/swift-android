@@ -1,1 +1,1 @@
-include ':library', ':swiftdemo', ':androiduikitdemo'
+include ':library'/*, ':swiftdemo', ':androiduikitdemo'*/
