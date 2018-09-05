@@ -6,8 +6,14 @@
 //
 
 import Foundation
+
+#if os(iOS)
+import UIKit
+#else
 import Android
 import java_swift
+#endif
+
 
 open class UINavigationController: UIViewController {
     
