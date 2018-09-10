@@ -82,10 +82,12 @@ final class TestAlertDialogActivity: SwiftSupportAppCompatActivity {
             .setMessage(message: "Message message message")
             .setPositiveButton(text: "OK", { dialog, which in
                 
+                AndroidToast.makeText(context: self, text: "PositiveButton clicked", duration: AndroidToast.Dutation.short).show()
                 dialog?.dismiss()
             })
             .setNegativeButton(text: "Cancel", { dialog, which in
                 
+                AndroidToast.makeText(context: self, text: "NegativeButton clicked", duration: AndroidToast.Dutation.short).show()
                 dialog?.dismiss()
             })
             .show()
@@ -98,14 +100,17 @@ final class TestAlertDialogActivity: SwiftSupportAppCompatActivity {
             .setMessage(message: "Message message message")
             .setPositiveButton(text: "OK", { dialog, which in
                 
-                dialog?.dismiss()
-            })
-            .setNeutralButton(text: "Neutral", { dialog, which in
-                
+                AndroidToast.makeText(context: self, text: "PositiveButton clicked", duration: AndroidToast.Dutation.short).show()
                 dialog?.dismiss()
             })
             .setNegativeButton(text: "Cancel", { dialog, which in
                 
+                AndroidToast.makeText(context: self, text: "NegativeButton clicked", duration: AndroidToast.Dutation.short).show()
+                dialog?.dismiss()
+            })
+            .setNeutralButton(text: "Neutral", { dialog, which in
+                
+                AndroidToast.makeText(context: self, text: "NeutralButton clicked", duration: AndroidToast.Dutation.short).show()
                 dialog?.dismiss()
             })
             .show()
@@ -113,17 +118,53 @@ final class TestAlertDialogActivity: SwiftSupportAppCompatActivity {
     
     private func showAlert3(){
         
-        AndroidAlertDialog.Builder.init(context: self)
+        let density = getDensity()
+        
+        let llPadding = Int(3 * density)
+        
+        let linearLayout = AndroidLinearLayout.init(context: self)
+        linearLayout.layoutParams = AndroidViewGroupLayoutParams.init(width: AndroidViewGroupLayoutParams.MATCH_PARENT, height: AndroidViewGroupLayoutParams.WRAP_CONTENT)
+        linearLayout.orientation = AndroidLinearLayout.VERTICAL
+        linearLayout.setPadding(left: 0, top: llPadding, right: llPadding, bottom: llPadding)
+        
+        let tvPaddingLeft = Int(24 * density)
+        let tvPaddingTop = Int(12 * density)
+        let tvPaddingRight = Int(24 * density)
+        let tvPaddingBottom = Int(6 * density)
+        
+        let textViewMessage = AndroidTextView.init(context: self)
+        textViewMessage.layoutParams = AndroidViewGroupLayoutParams.init(width: AndroidViewGroupLayoutParams.MATCH_PARENT, height: AndroidViewGroupLayoutParams.WRAP_CONTENT)
+        textViewMessage.setPadding(left: tvPaddingLeft, top: tvPaddingTop, right: tvPaddingRight, bottom: tvPaddingBottom)
+        textViewMessage.setTextSize(size: 16.0)
+        textViewMessage.color = AndroidGraphicsColor.BLACK
+        textViewMessage.text = "Message message message message message message"
+        
+        /*
+        let options = ["option 1","opcion 2","opcion 3","opcion 4","opcion 5","opcion 6","opcion 7"]
+        let adapter = AndroidArrayAdapter<String>(activity: self, items: options)
+        */
+        
+        let options = [100, 200, 300, 400, 500]
+        
+        let adapter = AndroidArrayAdapter<Int>(activity: self, items: options)
+        
+        let recyclerView = AndroidWidgetRecyclerView.init(context: self)
+        recyclerView.layoutParams = AndroidViewGroupLayoutParams.init(width: AndroidViewGroupLayoutParams.MATCH_PARENT, height: AndroidViewGroupLayoutParams.WRAP_CONTENT)
+        recyclerView.layoutManager = AndroidWidgetRecyclerViewLinearLayoutManager.init(context: self)
+        recyclerView.adapter = adapter
+        
+        linearLayout.addView(textViewMessage)
+        linearLayout.addView(recyclerView)
+        
+        let alertDialog = AndroidAlertDialog.Builder.init(context: self)
             .setTitle(title: "Title")
-            .setMessage(message: "Message message message")
-            .setPositiveButton(text: "OK", { dialog, which in
-                
-                dialog?.dismiss()
-            })
-            .setNegativeButton(text: "Cancel", { dialog, which in
-                
-                dialog?.dismiss()
-            })
+            .setView(view: linearLayout)
             .show()
+        
+        adapter.onClickBlock = { position in
+            
+            AndroidToast.makeText(context: self, text: "\(options[position])", duration: AndroidToast.Dutation.short).show()
+            alertDialog.dismiss()
+        }
     }
 }
