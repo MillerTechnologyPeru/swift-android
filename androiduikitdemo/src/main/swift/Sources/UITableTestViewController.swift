@@ -137,6 +137,60 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         NSLog("Click on Data item: \(data[indexPath.row])")
+        
+        let alertController = UIAlertController.init(title: "Title", message: "message", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let action1 = UIAlertAction.init(title: "Default 0", style: UIAlertActionStyle.default) { action in
+            
+            AndroidToast.makeText(context: UIScreen.main.activity, text: "You've pressed default 0", duration: AndroidToast.Dutation.short).show()
+            print("You've pressed default 0");
+        }
+        
+        let action12 = UIAlertAction.init(title: "Default 1", style: UIAlertActionStyle.default) { action in
+            
+            AndroidToast.makeText(context: UIScreen.main.activity, text: "You've pressed default 1 ", duration: AndroidToast.Dutation.short).show()
+            print("You've pressed default 1");
+        }
+        
+        let action13 = UIAlertAction.init(title: "Default 2", style: UIAlertActionStyle.default) { action in
+            
+            AndroidToast.makeText(context: UIScreen.main.activity, text: "You've pressed default 2", duration: AndroidToast.Dutation.short).show()
+            print("You've pressed default 2");
+        }
+        
+        let action14 = UIAlertAction.init(title: "Default 3", style: UIAlertActionStyle.default) { action in
+            
+            AndroidToast.makeText(context: UIScreen.main.activity, text: "You've pressed default 3", duration: AndroidToast.Dutation.short).show()
+            print("You've pressed default 3");
+        }
+
+        let action2 = UIAlertAction.init(title: "Cancel", style: UIAlertActionStyle.cancel) { action in
+            
+            AndroidToast.makeText(context: UIScreen.main.activity, text: "You've pressed cancel", duration: AndroidToast.Dutation.short).show()
+            print("You've pressed cancel");
+        }
+        
+        let action22 = UIAlertAction.init(title: "Cancel 2", style: UIAlertActionStyle.cancel) { action in
+            
+            AndroidToast.makeText(context: UIScreen.main.activity, text: "You've pressed cancel 2", duration: AndroidToast.Dutation.short).show()
+            print("You've pressed cancel 2");
+        }
+        
+        let action3 = UIAlertAction.init(title: "Destructive", style: UIAlertActionStyle.destructive) { action in
+            
+            AndroidToast.makeText(context: UIScreen.main.activity, text: "You've pressed the destructive", duration: AndroidToast.Dutation.short).show()
+            print("You've pressed the destructive");
+        }
+        
+        alertController.addAction(action1)
+//        alertController.addAction(action12)
+//        alertController.addAction(action13)
+//        alertController.addAction(action14)
+//        alertController.addAction(action2)
+//        alertController.addAction(action22)
+        alertController.addAction(action3)
+        
+        self.present(alertController, animated: false, completion: nil)
     }
     
 }
