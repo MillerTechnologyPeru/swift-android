@@ -67,5 +67,10 @@ final class TestSwipeRefreshActivity: SwiftSupportAppCompatActivity {
             
             swipeRefreshLayout.isRefreshing = false
         }
+        
+        swipeRefreshLayout.setOnRefreshListener {
+            
+            AndroidToast.makeText(context: self, text: "SwipeRefreshLayout working", duration: AndroidToast.Dutation.short).show()
+        }
     }
 }
