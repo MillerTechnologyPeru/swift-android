@@ -35,6 +35,13 @@ public final class AndroidUIKitMainActivity: SwiftSupportAppCompatActivity {
             
         }
     }
+    
+    public override func onPause() {
+        if(isFinishing()){
+            //FIXME: Release memory because the main activity is going to be destroyed.
+            NSLog("the main activity is going to be destroyed.")
+        }
+    }
 }
 
 public final class UIScreen {
@@ -56,7 +63,7 @@ public final class UIScreen {
     
     fileprivate static func mainScreen(for activity: SwiftSupport.App.AppCompatActivity) -> UIScreen  {
         
-        assert(_main == nil, "Main screen is already initialized")
+        //assert(_main == nil, "Main screen is already initialized")
         
         let screen = UIScreen(activity: activity)
         

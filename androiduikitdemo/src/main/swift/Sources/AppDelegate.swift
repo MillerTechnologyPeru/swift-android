@@ -27,13 +27,13 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         NSLog("UIScreen native size: \(UIScreen.main.nativeBounds.size)")
         
         //let viewController = MainViewController()
-        let tableTestController = UITableTestViewController()
+        //let tableTestController = UITableTestViewController()
         
-        let navigationController = UINavigationController(rootViewController: tableTestController)
+        //let navigationController = UINavigationController(rootViewController: tableTestController)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         //self.window?.backgroundColor = .red
-        self.window?.rootViewController = navigationController
+        self.window?.rootViewController = TestRefreshControlViewController()
         self.window?.makeKeyAndVisible()
         
         return true

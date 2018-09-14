@@ -102,14 +102,7 @@ final public class UITableView: UIView {
         guard let recyclerView = recyclerView
             else { fatalError("Missing Android RecyclerView") }
 
-        let frameDp = CGRect.applyDP(rect: frame)
-        
-        // set origin
-        recyclerView.setX(x: Float(frameDp.minX))
-        recyclerView.setY(y: Float(frameDp.minY))
-        
-        // set size
-        recyclerView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Int(frameDp.width), height: Int(frameDp.height))
+        updateRecyclerViewSize()
         
         recyclerView.layoutManager = AndroidWidgetRecyclerViewLinearLayoutManager(context: context)
 
@@ -119,6 +112,27 @@ final public class UITableView: UIView {
         
         self.adapter = adapter
         self.recyclerView?.adapter = adapter
+    }
+    
+    private func updateRecyclerViewSize(){
+        
+        guard let recyclerView = self.recyclerView
+            else { return }
+        
+        let frameDp = CGRect.applyDP(rect: bounds)
+        
+        // set origin
+        recyclerView.setX(x: Float(frameDp.minX))
+        recyclerView.setY(y: Float(frameDp.minY))
+        
+        // set size
+        recyclerView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Int(frameDp.width), height: Int(frameDp.height))
+    }
+    
+    override func updateAndroidViewSize() {
+        NSLog(" \(type(of: self)) \(#function)")
+        
+        updateRecyclerViewSize()
     }
     
     // MARK: - Methods

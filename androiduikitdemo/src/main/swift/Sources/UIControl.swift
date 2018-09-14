@@ -7,7 +7,7 @@
 
 import Foundation
 
-open class UIControl: UIView {
+open class UIControl {
     
     var state: UIControlState = []
     
@@ -106,8 +106,8 @@ public struct UIControlEvent: OptionSet {
     public static let allTouchEvents = UIControlEvent(rawValue: 0x00000FFF)
     public static let allEditingEvents = UIControlEvent(rawValue: 0x000F0000)
     public static let applicationReserved = UIControlEvent(rawValue: 0x0F000000)
-    public static let systemReserved = UIControlEvent(rawValue: 0xF0000000)
-    public static let allEvents = UIControlEvent(rawValue: 0xFFFFFFFF)
+    //public static let systemReserved = UIControlEvent(rawValue: 0xF0000000)
+    //public static let allEvents = UIControlEvent(rawValue: 0xFFFFFFFF)
 }
 
 extension UIControlEvent: Hashable {

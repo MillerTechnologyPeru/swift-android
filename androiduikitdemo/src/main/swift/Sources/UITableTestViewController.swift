@@ -29,7 +29,7 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
     private var tableView: UITableView?
     
     private var data: [String] = []
-    
+
     override func viewDidLoad() {
         
         let displayWidth: CGFloat = UIScreen.main.bounds.width
@@ -38,9 +38,33 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         NSLog("\(#function) displayWidth = \(displayWidth) ")
         NSLog("\(#function) displayHeight = \(displayHeight) ")
         
-        view.backgroundColor = UIColor.cyan
+        let refreshControl = UIRefreshControl(frame: CGRect(x: 0, y: 0, width: displayWidth, height: displayHeight))
         
-        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: displayWidth, height: displayHeight))
+        
+        let actionRefresh: () -> () = {
+            
+            AndroidToast.makeText(context: UIScreen.main.activity, text: "I'm refreshing :)", duration: AndroidToast.Dutation.short).show()
+            
+            let delay = DispatchTime.now() + .seconds(3)
+            
+            DispatchQueue.global(qos: .background).asyncAfter(deadline: delay) {
+                #if os(Android)
+                UIScreen.main.activity.runOnMainThread { [weak self] in
+                    
+                    refreshControl.endRefreshing()
+                }
+                #endif
+            }
+        }
+        
+        
+        refreshControl.addTarget(action: actionRefresh, for: UIControlEvent.touchDown)
+        //refreshControl.backgroundColor = UIColor.cyan
+        
+        self.view.androidView.addView(refreshControl.androidSwipeRefreshLayout)
+        //self.view.addSubview(refreshControl)
+        
+        tableView = UITableView(frame: .zero)
         
         guard let tableView = tableView else {
             fatalError("Missing table view")
@@ -49,9 +73,12 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellReuseIdentifier")
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-        self.view.addSubview(tableView)
-        
+        tableView.frame = refreshControl.frame
+        refreshControl.androidSwipeRefreshLayout.addView(tableView.androidView)
+        //self.view.addSubview(tableView)
+    
         for i in 0...100 {
             data.append("item \(i)")
         }

@@ -13,7 +13,7 @@ open class UIRefreshControl: UIControl {
     internal lazy var androidSwipeRefreshLayout: AndroidSwipeRefreshLayout = {
         
         let swipeRefreshLayout = AndroidSwipeRefreshLayout.init(context: UIScreen.main.activity)
-        
+        swipeRefreshLayout.layoutParams = AndroidFrameLayoutLayoutParams(width: AndroidFrameLayoutLayoutParams.WRAP_CONTENT, height: AndroidFrameLayoutLayoutParams.WRAP_CONTENT)
         //swipeRefreshLayout.setColorSchemeColors(colors: )
         
         return swipeRefreshLayout
@@ -31,10 +31,18 @@ open class UIRefreshControl: UIControl {
         }
     }
     
-    public init() {
-        super.init(frame: .zero)
+    public var frame: CGRect = .zero {
         
-         updateSwipeRefreshLayoutFrame()
+        didSet {
+            updateSwipeRefreshLayoutFrame()
+        }
+    }
+    
+    public init(frame: CGRect = .zero) {
+        super.init()
+        
+        self.frame = frame
+        self.updateSwipeRefreshLayoutFrame()
     }
     
     private func updateSwipeRefreshLayoutFrame() {
@@ -46,12 +54,10 @@ open class UIRefreshControl: UIControl {
         androidSwipeRefreshLayout.setY(y: Float(frameDp.minY))
         
         // set size
-        androidSwipeRefreshLayout.layoutParams = AndroidViewGroupLayoutParams(width: Int(frameDp.width), height: Int(frameDp.height))
-    }
-    
-    override func updateAndroidViewSize() {
-        
-        updateSwipeRefreshLayoutFrame()
+        let widthDp = Int(frameDp.width)
+        let heightDp = Int(frameDp.height)
+        NSLog("\(type(of: self)) \(#function) widthDp: \(widthDp) - heightDp: \(heightDp)")
+        androidSwipeRefreshLayout.layoutParams = AndroidFrameLayoutLayoutParams(width: widthDp, height: heightDp)
     }
     
     open override func targetAdded(action: @escaping () -> (), for event: UIControlEvent) {

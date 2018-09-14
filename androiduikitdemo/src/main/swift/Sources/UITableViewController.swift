@@ -18,31 +18,36 @@ open class UITableViewController: UIViewController, UITableViewDataSource, UITab
     var refreshControl: UIRefreshControl? {
         didSet {
             
+            NSLog("refreshControl was setted")
             guard let refreshControl = refreshControl
                 else { return }
             
-            /*
-            let recyclerViewIndex = tableView.androidView.indexOfChild(child: tableView.recyclerView)
-            NSLog("\(#function) recyclerViewIndex: \(recyclerViewIndex)")
+            guard let windowFrameLayout = tableView.superview?.androidView.parent
+                else { return }
             
-            if(recyclerViewIndex >= 0){
-                tableView.androidView.removeViewAt(index: recyclerViewIndex)
-            }*/
+            let androidViewIndex = windowFrameLayout.indexOfChild(child: tableView.androidView)
+            
+            NSLog("\(#function) androidViewIndex: \(androidViewIndex)")
+            
+            if(androidViewIndex >= 0){
+                windowFrameLayout.removeViewAt(index: androidViewIndex)
+            }
+            
+            windowFrameLayout.addView(refreshControl.androidSwipeRefreshLayout)
             
             refreshControl.androidSwipeRefreshLayout.addView(tableView.androidView)
-            
-            //tableView.androidView.addView(refreshControl.androidSwipeRefreshLayout)
         }
     }
     
     public var tableView: UITableView! {
-        
+
         return self.view as? UITableView
     }
     
     open override func loadView() {
         
         let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: 320, height: 480), style: style)
+        tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableView.dataSource = self
         tableView.delegate = self
         
