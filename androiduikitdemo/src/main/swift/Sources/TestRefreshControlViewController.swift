@@ -32,7 +32,7 @@ final class TestRefreshControlViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: self.cellReuseIdentifier)
         
-        for i in 0...100 {
+        for i in 0...10 {
             data.append("item \(i)")
         }
         
@@ -57,6 +57,15 @@ final class TestRefreshControlViewController: UITableViewController {
         refreshControl.addTarget(action: actionRefresh, for: UIControlEvent.touchDown)
         
         self.refreshControl = refreshControl
+        
+        let delay = DispatchTime.now() + .seconds(10)
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: delay) {
+            
+            UIScreen.main.activity.runOnMainThread { [weak self] in
+                
+                self?.refreshControl = nil
+            }
+        }
     }
     
     // MARK: - UITableViewDataSource

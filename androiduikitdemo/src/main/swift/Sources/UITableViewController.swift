@@ -16,26 +16,48 @@ open class UITableViewController: UIViewController, UITableViewDataSource, UITab
     public var clearsSelectionOnViewWillAppear: Bool = true
     
     var refreshControl: UIRefreshControl? {
-        didSet {
+        
+        willSet {
             
-            NSLog("refreshControl was setted")
+            guard newValue == nil
+                else { return }
+            
             guard let refreshControl = refreshControl
                 else { return }
             
-            guard let windowFrameLayout = tableView.superview?.androidView.parent
-                else { return }
+            refreshControl.endRefreshing()
             
-            let androidViewIndex = windowFrameLayout.indexOfChild(child: tableView.androidView)
-            
-            NSLog("\(#function) androidViewIndex: \(androidViewIndex)")
-            
-            if(androidViewIndex >= 0){
-                windowFrameLayout.removeViewAt(index: androidViewIndex)
+            let recyclerViewIndex = refreshControl.androidSwipeRefreshLayout.indexOfChild(child: tableView.recyclerView)
+            if(recyclerViewIndex >= 0){
+                
+                refreshControl.androidSwipeRefreshLayout.removeViewAt(index: recyclerViewIndex)
             }
             
-            windowFrameLayout.addView(refreshControl.androidSwipeRefreshLayout)
+            let swipeRefreshLayoutIndex = tableView.androidView.indexOfChild(child: refreshControl.androidSwipeRefreshLayout)
+            if(swipeRefreshLayoutIndex >= 0){
+                
+                tableView.androidView.removeViewAt(index: swipeRefreshLayoutIndex)
+            }
+   
+            tableView.androidView.addView(tableView.recyclerView)
+        }
+        
+        didSet {
             
-            refreshControl.androidSwipeRefreshLayout.addView(tableView.androidView)
+            guard let refreshControl = refreshControl
+                else { return }
+            
+            refreshControl.frame = tableView.frame
+            
+            tableView.androidView.addView(refreshControl.androidSwipeRefreshLayout)
+            
+             let recyclerViewIndex = tableView.androidView.indexOfChild(child: tableView.recyclerView)
+            
+             if(recyclerViewIndex >= 0){
+                tableView.androidView.removeViewAt(index: recyclerViewIndex)
+             }
+            
+            refreshControl.androidSwipeRefreshLayout.addView(tableView.recyclerView)
         }
     }
     
