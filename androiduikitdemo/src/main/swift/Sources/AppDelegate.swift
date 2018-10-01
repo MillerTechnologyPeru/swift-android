@@ -7,9 +7,11 @@
 
 import Foundation
 
+
 #if os(iOS)
 import UIKit
 #else
+import AndroidUIKit
 import Android
 #endif
 
@@ -27,13 +29,13 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         NSLog("UIScreen native size: \(UIScreen.main.nativeBounds.size)")
         
         //let viewController = MainViewController()
-        //let tableTestController = UITableTestViewController()
+        let tableTestController = TestRefreshControlViewController()
         
-        //let navigationController = UINavigationController(rootViewController: tableTestController)
+        let navigationController = UINavigationController(rootViewController: tableTestController)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         //self.window?.backgroundColor = .red
-        self.window?.rootViewController = TestRefreshControlViewController()
+        self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
         
         return true

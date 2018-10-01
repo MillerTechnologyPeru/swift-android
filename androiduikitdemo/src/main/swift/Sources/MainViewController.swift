@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 #else
 import Android
-//import AndroidUIKit
+import AndroidUIKit
 #endif
 
 final class MainViewController: UIViewController {
@@ -170,3 +170,4 @@ final class MainViewController: UIViewController {
     }
     */
 }
+

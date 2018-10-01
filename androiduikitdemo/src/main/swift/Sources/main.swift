@@ -5,7 +5,9 @@
 //  Created by Carlos Duclos on 7/13/18.
 //
 
+
 import Foundation
+
 
 #if os(iOS)
 
@@ -19,6 +21,7 @@ import java_swift
 import java_lang
 import java_util
 import Android
+import AndroidUIKit
 
 /// Needs to be implemented by app.
 @_silgen_name("SwiftAndroidMainApplication")

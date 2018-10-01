@@ -2,17 +2,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "androiduikit",
+    name: "androiduikitdemo",
     products: [
-        .library(name: "androiduikit", type: .dynamic, targets: ["androiduikittarget"]),
+        .library(name: "androiduikitdemo", type: .dynamic, targets: ["androiduikittarget"]),
     ],
     dependencies: [
-        .package(url: "git@github.com:PureSwift/Android.git", .branch("master"))
+        .package(url: "git@github.com:PureSwift/AndroidUIKit.git", .branch("master"))
     ],
     targets: [
         .target(
             name: "androiduikittarget",
-            dependencies: ["Android"],
+            dependencies: ["AndroidUIKit"],
             path: "Sources"
         ),
     ]

@@ -7,11 +7,12 @@
 
 import Foundation
 
+
 #if os(iOS)
 import UIKit
 #else
 import Android
-//import AndroidUIKit
+import AndroidUIKit
 #endif
 
 final class TestThirdViewController: UIViewController {
@@ -34,3 +35,4 @@ final class TestThirdViewController: UIViewController {
         navigationItem.title = "Test Third"
     }
 }
+

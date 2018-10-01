@@ -10,14 +10,14 @@ import java_swift
 import java_lang
 import java_util
 import Android
-
+/*
 /// Needs to be implemented by app.
 @_silgen_name("SwiftAndroidMainActivity")
 public func SwiftAndroidMainActivity() -> SwiftSupportAppCompatActivity.Type {
     NSLog("TestSwipeRefreshActivity bind \(#function)")
     return TestSwipeRefreshActivity.self
 }
-
+*/
 // Like AppDelegate in iOS
 final class TestSwipeRefreshActivity: SwiftSupportAppCompatActivity {
     

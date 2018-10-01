@@ -7,7 +7,7 @@ class AndroidUIKitDemoApplication: SwiftApplication() {
     companion object {
 
         init {
-            System.loadLibrary("androiduikit")
+            System.loadLibrary("androiduikitdemo")
         }
     }
 }

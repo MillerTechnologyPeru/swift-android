@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 #else
 import Android
-//import AndroidUIKit
+import AndroidUIKit
 #endif
 
 final class UITableTestViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -43,13 +43,13 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         
         let actionRefresh: () -> () = {
             
-            AndroidToast.makeText(context: UIScreen.main.activity, text: "I'm refreshing :)", duration: AndroidToast.Dutation.short).show()
+            AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "I'm refreshing :)", duration: AndroidToast.Dutation.short).show()
             
             let delay = DispatchTime.now() + .seconds(3)
             
             DispatchQueue.global(qos: .background).asyncAfter(deadline: delay) {
                 #if os(Android)
-                UIScreen.main.activity.runOnMainThread { [weak self] in
+                UIApplication.shared.androidActivity.runOnMainThread { [weak self] in
                     
                     refreshControl.endRefreshing()
                 }
@@ -58,10 +58,10 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         }
         
         
-        refreshControl.addTarget(action: actionRefresh, for: UIControlEvent.touchDown)
+        refreshControl.addTarget(action: actionRefresh, for: UIControlEvents.touchDown)
         //refreshControl.backgroundColor = UIColor.cyan
         
-        self.view.androidView.addView(refreshControl.androidSwipeRefreshLayout)
+        //self.view.androidView.addView(refreshControl.androidSwipeRefreshLayout)
         //self.view.addSubview(refreshControl)
         
         tableView = UITableView(frame: .zero)
@@ -76,7 +76,7 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         tableView.frame = refreshControl.frame
-        refreshControl.androidSwipeRefreshLayout.addView(tableView.androidView)
+        //refreshControl.androidSwipeRefreshLayout.addView(tableView.androidView)
         //self.view.addSubview(tableView)
     
         for i in 0...100 {
@@ -169,43 +169,43 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         
         let action1 = UIAlertAction.init(title: "Default 0", style: UIAlertActionStyle.default) { action in
             
-            AndroidToast.makeText(context: UIScreen.main.activity, text: "You've pressed default 0", duration: AndroidToast.Dutation.short).show()
+            AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "You've pressed default 0", duration: AndroidToast.Dutation.short).show()
             print("You've pressed default 0");
         }
         
         let action12 = UIAlertAction.init(title: "Default 1", style: UIAlertActionStyle.default) { action in
             
-            AndroidToast.makeText(context: UIScreen.main.activity, text: "You've pressed default 1 ", duration: AndroidToast.Dutation.short).show()
+            AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "You've pressed default 1 ", duration: AndroidToast.Dutation.short).show()
             print("You've pressed default 1");
         }
         
         let action13 = UIAlertAction.init(title: "Default 2", style: UIAlertActionStyle.default) { action in
             
-            AndroidToast.makeText(context: UIScreen.main.activity, text: "You've pressed default 2", duration: AndroidToast.Dutation.short).show()
+            AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "You've pressed default 2", duration: AndroidToast.Dutation.short).show()
             print("You've pressed default 2");
         }
         
         let action14 = UIAlertAction.init(title: "Default 3", style: UIAlertActionStyle.default) { action in
             
-            AndroidToast.makeText(context: UIScreen.main.activity, text: "You've pressed default 3", duration: AndroidToast.Dutation.short).show()
+            AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "You've pressed default 3", duration: AndroidToast.Dutation.short).show()
             print("You've pressed default 3");
         }
 
         let action2 = UIAlertAction.init(title: "Cancel", style: UIAlertActionStyle.cancel) { action in
             
-            AndroidToast.makeText(context: UIScreen.main.activity, text: "You've pressed cancel", duration: AndroidToast.Dutation.short).show()
+            AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "You've pressed cancel", duration: AndroidToast.Dutation.short).show()
             print("You've pressed cancel");
         }
         
         let action22 = UIAlertAction.init(title: "Cancel 2", style: UIAlertActionStyle.cancel) { action in
             
-            AndroidToast.makeText(context: UIScreen.main.activity, text: "You've pressed cancel 2", duration: AndroidToast.Dutation.short).show()
+            AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "You've pressed cancel 2", duration: AndroidToast.Dutation.short).show()
             print("You've pressed cancel 2");
         }
         
         let action3 = UIAlertAction.init(title: "Destructive", style: UIAlertActionStyle.destructive) { action in
             
-            AndroidToast.makeText(context: UIScreen.main.activity, text: "You've pressed the destructive", duration: AndroidToast.Dutation.short).show()
+            AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "You've pressed the destructive", duration: AndroidToast.Dutation.short).show()
             print("You've pressed the destructive");
         }
         
