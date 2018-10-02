@@ -40,7 +40,7 @@ final class TestRefreshControlViewController: UITableViewController {
         
         let actionRefresh: () -> () = {
             
-            AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "I'm refreshing, Madafaqas", duration: AndroidToast.Dutation.short).show()
+            AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "I'm refreshing, :)", duration: AndroidToast.Dutation.short).show()
             
             let delay = DispatchTime.now() + .seconds(3)
             
@@ -72,7 +72,26 @@ final class TestRefreshControlViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        return nil
+        let peripheralViewLayoutId = UIApplication.shared.androidActivity.getIdentifier(name: "list_header", type: "layout")
+        
+        let layoutInflarer = Android.View.LayoutInflater.from(context: UIApplication.shared.androidActivity)
+        
+        let itemView = layoutInflarer.inflate(resource: Android.R.Layout(rawValue: peripheralViewLayoutId), root: nil, attachToRoot: false)
+        
+        let tvHeaderId = UIApplication.shared.androidActivity.getIdentifier(name: "tvHeader", type: "id")
+        
+        guard let tvHeaderObject = itemView.findViewById(tvHeaderId)
+            else { fatalError("No view for \(tvHeaderId)") }
+        
+        let tvHeader = Android.Widget.TextView(casting: tvHeaderObject)
+        
+        tvHeader?.text = data[section].type
+        
+        let uiView = UIView.init(androidViewChild: itemView)
+        
+        uiView.androidView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Android.Widget.FrameLayout.FLayoutParams.MATCH_PARENT, height: Android.Widget.FrameLayout.FLayoutParams.WRAP_CONTENT)
+        
+        return uiView
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -91,9 +110,9 @@ final class TestRefreshControlViewController: UITableViewController {
         
         NSLog("section: \(indexPath.section) - row: \(indexPath.row)")
         
-        //let item = data[indexPath.max()!]
+        let item = data[indexPath.section].array[indexPath.row]
         
-        //cell.textLabel?.text = item
+        cell.textLabel?.text = item
         
         return cell
     }

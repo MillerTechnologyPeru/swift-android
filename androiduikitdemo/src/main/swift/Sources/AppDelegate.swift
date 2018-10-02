@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 #if os(iOS)
 import UIKit
 #else
