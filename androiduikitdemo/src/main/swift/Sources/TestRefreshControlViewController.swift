@@ -108,11 +108,24 @@ final class TestRefreshControlViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
         
-        NSLog("section: \(indexPath.section) - row: \(indexPath.row)")
+        let layoutName = "list_item"
+        
+        if cell.layoutName != layoutName {
+            cell.inflateAndroidLayout(layoutName: layoutName)
+        }
+        
+        let itemView = cell.getItemView()
+        
+        let tvItemId = UIApplication.shared.androidActivity.getIdentifier(name: "tvItem", type: "id")
+        
+        guard let tvItemObject = itemView.findViewById(tvItemId)
+            else { fatalError("No view for \(tvItemId)") }
+        
+        let tvItem = Android.Widget.TextView(casting: tvItemObject)
         
         let item = data[indexPath.section].array[indexPath.row]
         
-        cell.textLabel?.text = item
+        tvItem?.text = item
         
         return cell
     }
