@@ -77,7 +77,7 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         
         tableView.frame = refreshControl.frame
         //refreshControl.androidSwipeRefreshLayout.addView(tableView.androidView)
-        //self.view.addSubview(tableView)
+        self.view.addSubview(tableView)
     
         for i in 0...100 {
             data.append("item \(i)")
@@ -117,9 +117,25 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
             NSLog("Hello Right Button")
         }
         
+        let rightItem2 = UIBarButtonItem.init(title: "RB", style: .done, target: nil, action: nil)
+        rightItem2.action = {
+            NSLog("Hello Right Button 2")
+        }
+        
+        
+        let rightItem3 = UIBarButtonItem.init(title: "RB", style: .done, target: nil, action: nil)
+        rightItem3.action = {
+            NSLog("Hello Right Button 3")
+        }
+        
+        let rightItem4 = UIBarButtonItem.init(title: "RB", style: .done, target: nil, action: nil)
+        rightItem4.action = {
+            NSLog("Hello Right Button 4")
+        }
+        
         navigationItem.leftBarButtonItem = leftItem
         
-        navigationItem.rightBarButtonItem = rightItem
+        navigationItem.rightBarButtonItems = [rightItem, rightItem2, rightItem3, rightItem4]
         
         /*
         let delay2 = DispatchTime.now() + .seconds(3)
@@ -217,6 +233,9 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
 //        alertController.addAction(action22)
         alertController.addAction(action3)
         
+        alertController.addTextField(configurationHandler: { text in text.placeHolder = "FullName" })
+        alertController.addTextField()
+    
         self.present(alertController, animated: false, completion: nil)
     }
     

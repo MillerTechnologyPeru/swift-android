@@ -10,13 +10,13 @@ import java_swift
 import java_lang
 import java_util
 import Android
-/*
+
 /// Needs to be implemented by app.
 @_silgen_name("SwiftAndroidMainActivity")
 public func SwiftAndroidMainActivity() -> SwiftSupportAppCompatActivity.Type {
     NSLog("TestAlertDialogActivity bind \(#function)")
     return TestAlertDialogActivity.self
-}*/
+}
 
 // Like AppDelegate in iOS
 final class TestAlertDialogActivity: SwiftSupportAppCompatActivity {
@@ -53,9 +53,15 @@ final class TestAlertDialogActivity: SwiftSupportAppCompatActivity {
         button3.text = "Show Alert 3"
         button3.setY(y: 300 * metrics.density)
         
+        let button4 = AndroidButton.init(context: self)
+        button4.layoutParams = layoutparams
+        button4.text = "Show Alert 4"
+        button4.setY(y: 450 * metrics.density)
+        
         rootFrameLayout.addView(button1)
         rootFrameLayout.addView(button2)
         rootFrameLayout.addView(button3)
+        rootFrameLayout.addView(button4)
         
         setContentView(view: rootFrameLayout)
         
@@ -72,6 +78,11 @@ final class TestAlertDialogActivity: SwiftSupportAppCompatActivity {
         button3.setOnClickListener {
             
             self.showAlert3()
+        }
+        
+        button4.setOnClickListener {
+            
+            self.showAlert4()
         }
     }
     
@@ -166,5 +177,42 @@ final class TestAlertDialogActivity: SwiftSupportAppCompatActivity {
             AndroidToast.makeText(context: self, text: "\(options[position])", duration: AndroidToast.Dutation.short).show()
             alertDialog.dismiss()
         }
+    }
+    
+    private func showAlert4(){
+        
+        let density = getDensity()
+        
+        let dp3 = Int(3 * density)
+        let dp24 = Int(24 * density)
+        let dp12 = Int(12 * density)
+        let dp6 = Int(6 * density)
+        
+        let llParams = AndroidLinearLayoutLayoutParams(width: AndroidLinearLayoutLayoutParams.MATCH_PARENT, height: AndroidLinearLayoutLayoutParams.WRAP_CONTENT)
+
+        let linearLayout = AndroidLinearLayout.init(context: self)
+        linearLayout.layoutParams = llParams
+        linearLayout.setPadding(left: dp24, top: dp3, right: dp24, bottom: dp3)
+        linearLayout.orientation = AndroidLinearLayout.VERTICAL
+        
+        let textViewMessage = AndroidTextView.init(context: self)
+        textViewMessage.layoutParams = AndroidViewGroupLayoutParams.init(width: AndroidViewGroupLayoutParams.MATCH_PARENT, height: AndroidViewGroupLayoutParams.WRAP_CONTENT)
+        textViewMessage.setPadding(left: 0, top: dp12, right: 0, bottom: dp6)
+        textViewMessage.setTextSize(size: 16.0)
+        textViewMessage.color = AndroidGraphicsColor.BLACK
+        textViewMessage.text = "Message message message message message message"
+        
+        let editTextLayoutParams = AndroidLinearLayoutLayoutParams(width: AndroidLinearLayoutLayoutParams.MATCH_PARENT, height: AndroidLinearLayoutLayoutParams.WRAP_CONTENT)
+        editTextLayoutParams.setMargins(left: 0, top: 0, right: 0, bottom: 0)
+        let editText = AndroidEditText(context: self)
+        textViewMessage.layoutParams = editTextLayoutParams
+        
+        linearLayout.addView(textViewMessage)
+        linearLayout.addView(editText)
+        
+        let alertDialog = AndroidAlertDialog.Builder.init(context: self)
+            .setTitle(title: "Title")
+            .setView(view: linearLayout)
+            .show()
     }
 }

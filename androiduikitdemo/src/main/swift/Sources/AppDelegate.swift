@@ -28,7 +28,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         NSLog("UIScreen native size: \(UIScreen.main.nativeBounds.size)")
         
         //let viewController = MainViewController()
-        let tableTestController = TestRefreshControlViewController()
+        let tableTestController = UITableTestViewController()
         
         let navigationController = UINavigationController(rootViewController: tableTestController)
         
