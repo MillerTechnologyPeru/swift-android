@@ -105,6 +105,7 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         navigationItem.title = "UITableView"
         navigationItem.hidesBackButton = true
         
+        
         let leftItem = UIBarButtonItem.init(title: "Views", style: .done, target: nil, action: nil)
         leftItem.action = {
             NSLog("Clicked on Views")
@@ -137,6 +138,37 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         
         navigationItem.rightBarButtonItems = [rightItem, rightItem2, rightItem3, rightItem4]
         
+        
+        //TOOLBAR
+        
+         var items = [UIBarButtonItem]()
+        
+        let toolbarItem1 = UIBarButtonItem(title: "Breakfast", style: .done, target: self) {
+            
+            NSLog("Toolbar Item 1 clicked")
+        }
+        toolbarItem1.image = UIImage(named: "ic_free_breakfast")
+        
+        let toolbarItem2 = UIBarButtonItem(title: "Restaurant", style: .done, target: self) {
+            
+            NSLog("Toolbar Item 2 clicked")
+        }
+        toolbarItem2.image = UIImage.init(named: "ic_restaurant_menu")
+        
+        let toolbarItem3 = UIBarButtonItem(title: "Chat", style: .done, target: self) {
+            
+            NSLog("Toolbar Item 3 clicked")
+        }
+        
+        toolbarItem3.image = UIImage(named: "ic_chat")
+        
+        items.append(toolbarItem1)
+        items.append(toolbarItem2)
+        items.append(toolbarItem3)
+        
+        self.navigationController?.isToolbarHidden = false
+        self.navigationController?.toolbar.items = items
+
         /*
         let delay2 = DispatchTime.now() + .seconds(3)
         DispatchQueue.global(qos: .background).asyncAfter(deadline: delay2) {
@@ -152,7 +184,6 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isToolbarHidden = true
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
@@ -233,7 +264,7 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
 //        alertController.addAction(action22)
         alertController.addAction(action3)
         
-        alertController.addTextField(configurationHandler: { text in text.placeHolder = "FullName" })
+        alertController.addTextField(configurationHandler: { text in text.placeholder = "FullName" })
         alertController.addTextField()
     
         self.present(alertController, animated: false, completion: nil)
