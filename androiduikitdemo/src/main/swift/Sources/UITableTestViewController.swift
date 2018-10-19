@@ -76,10 +76,10 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         tableView.frame = refreshControl.frame
-        //refreshControl.androidSwipeRefreshLayout.addView(tableView.androidView)
+        
         self.view.addSubview(tableView)
     
-        for i in 0...100 {
+        for i in 0...20 {
             data.append("item \(i)")
         }
         
@@ -166,7 +166,7 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         items.append(toolbarItem2)
         items.append(toolbarItem3)
         
-        self.navigationController?.isToolbarHidden = false
+        
         self.navigationController?.toolbar.items = items
 
         /*
@@ -184,6 +184,7 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.isToolbarHidden = false
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
