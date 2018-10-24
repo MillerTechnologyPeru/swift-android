@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AndroidUIKit::AndroidUIKit"
+               BuildableName = "AndroidUIKit.framework"
+               BlueprintName = "AndroidUIKit"
+               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "androiduikitdemo::androiduikittarget"
                BuildableName = "androiduikittarget"
                BlueprintName = "androiduikittarget"
@@ -28,9 +42,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Android::Android"
-               BuildableName = "Android.framework"
-               BlueprintName = "Android"
+               BlueprintIdentifier = "java_lang::java_lang"
+               BuildableName = "java_lang.framework"
+               BlueprintName = "java_lang"
                ReferencedContainer = "container:androiduikitdemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,9 +70,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AndroidUIKit::AndroidUIKit"
-               BuildableName = "AndroidUIKit.framework"
-               BlueprintName = "AndroidUIKit"
+               BlueprintIdentifier = "JNI::JNI"
+               BuildableName = "JNI.framework"
+               BlueprintName = "JNI"
                ReferencedContainer = "container:androiduikitdemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -84,9 +98,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "JNI::JNI"
-               BuildableName = "JNI.framework"
-               BlueprintName = "JNI"
+               BlueprintIdentifier = "Android::Android"
+               BuildableName = "Android.framework"
+               BlueprintName = "Android"
                ReferencedContainer = "container:androiduikitdemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -101,20 +115,6 @@
                BlueprintIdentifier = "Bluetooth::Bluetooth"
                BuildableName = "Bluetooth.framework"
                BlueprintName = "Bluetooth"
-               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "java_lang::java_lang"
-               BuildableName = "java_lang.framework"
-               BlueprintName = "java_lang"
                ReferencedContainer = "container:androiduikitdemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -143,9 +143,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "androiduikitdemo::androiduikittarget"
-            BuildableName = "androiduikittarget"
-            BlueprintName = "androiduikittarget"
+            BlueprintIdentifier = "AndroidUIKit::AndroidUIKit"
+            BuildableName = "AndroidUIKit.framework"
+            BlueprintName = "AndroidUIKit"
             ReferencedContainer = "container:androiduikitdemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

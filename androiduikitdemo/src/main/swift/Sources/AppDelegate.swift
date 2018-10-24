@@ -34,7 +34,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         //self.window?.backgroundColor = .red
-        self.window?.rootViewController = navigationController
+        self.window?.rootViewController = UITabBarTestViewController()
         self.window?.makeKeyAndVisible()
         
         return true
