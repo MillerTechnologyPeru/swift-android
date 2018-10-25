@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		51873614217F979A008412B9 /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51873613217F979A008412B9 /* JavaVM.framework */; };
 		51873639217FD939008412B9 /* UITabBarTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51873638217FD939008412B9 /* UITabBarTestViewController.swift */; };
+		5187363B2181207E008412B9 /* TestUITabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5187363A2181207E008412B9 /* TestUITabBarViewController.swift */; };
 		OBJ_1144 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* AlertDialog.swift */; };
 		OBJ_1145 /* AlertDialogBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* AlertDialogBuilder.swift */; };
 		OBJ_1146 /* AndroidManifestPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* AndroidManifestPermission.swift */; };
@@ -1319,6 +1320,7 @@
 /* Begin PBXFileReference section */
 		51873613217F979A008412B9 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = System/Library/Frameworks/JavaVM.framework; sourceTree = SDKROOT; };
 		51873638217FD939008412B9 /* UITabBarTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarTestViewController.swift; sourceTree = "<group>"; };
+		5187363A2181207E008412B9 /* TestUITabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUITabBarViewController.swift; sourceTree = "<group>"; };
 		"Android::Android::Product" /* Android.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Android.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AndroidUIKit::AndroidUIKit::Product" /* AndroidUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AndroidUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Bluetooth::Bluetooth::Product" /* Bluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3562,6 +3564,7 @@
 				OBJ_15 /* UITableTestViewController.swift */,
 				OBJ_16 /* main.swift */,
 				51873638217FD939008412B9 /* UITabBarTestViewController.swift */,
+				5187363A2181207E008412B9 /* TestUITabBarViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -4738,6 +4741,7 @@
 				OBJ_1825 /* MainActivitytBindings_Listener.swift in Sources */,
 				OBJ_1826 /* MainActivitytBindings_Responder.swift in Sources */,
 				OBJ_1827 /* MainViewController.swift in Sources */,
+				5187363B2181207E008412B9 /* TestUITabBarViewController.swift in Sources */,
 				OBJ_1828 /* TestRefreshControlViewController.swift in Sources */,
 				OBJ_1829 /* TestThirdViewController.swift in Sources */,
 				OBJ_1830 /* UITableTestViewController.swift in Sources */,

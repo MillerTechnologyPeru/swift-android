@@ -27,14 +27,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         NSLog("UIScreen size: \(UIScreen.main.bounds.size)")
         NSLog("UIScreen native size: \(UIScreen.main.nativeBounds.size)")
         
-        //let viewController = MainViewController()
-        let tableTestController = UITableTestViewController()
-        
-        let navigationController = UINavigationController(rootViewController: tableTestController)
-        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         //self.window?.backgroundColor = .red
-        self.window?.rootViewController = UITabBarTestViewController()
+        self.window?.rootViewController = TestUITabBarViewController()
         self.window?.makeKeyAndVisible()
         
         return true
