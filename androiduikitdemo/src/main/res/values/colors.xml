@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#D3D3D3</color>
+    <color name="colorPrimaryDark">#a8a8a8</color>
     <color name="colorAccent">#FF4081</color>
     <color name="black">#FF000000</color>
     <color name="whitegrey">#FFF2F2F2</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="tabBarBackground">@color/colorPrimary</color>
+    <color name="tabBarItemNormal">@color/colorPrimaryDark</color>
+    <color name="tabBarItemSelectedColor">@color/black</color>
+    <color name="tabBarItemSelectedIndicatorColor">@color/colorAccent</color>
 </resources>
