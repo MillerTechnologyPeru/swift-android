@@ -32,38 +32,6 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
 
     override func viewDidLoad() {
         
-        let displayWidth: CGFloat = UIScreen.main.bounds.width
-        let displayHeight: CGFloat = UIScreen.main.bounds.height
-        
-        NSLog("\(#function) displayWidth = \(displayWidth) ")
-        NSLog("\(#function) displayHeight = \(displayHeight) ")
-        
-        let refreshControl = UIRefreshControl(frame: CGRect(x: 0, y: 0, width: displayWidth, height: displayHeight))
-        
-        
-        let actionRefresh: () -> () = {
-            
-            AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "I'm refreshing :)", duration: AndroidToast.Dutation.short).show()
-            
-            let delay = DispatchTime.now() + .seconds(3)
-            
-            DispatchQueue.global(qos: .background).asyncAfter(deadline: delay) {
-                #if os(Android)
-                UIApplication.shared.androidActivity.runOnMainThread { [weak self] in
-                    
-                    refreshControl.endRefreshing()
-                }
-                #endif
-            }
-        }
-        
-        
-        refreshControl.addTarget(action: actionRefresh, for: UIControlEvents.touchDown)
-        //refreshControl.backgroundColor = UIColor.cyan
-        
-        //self.view.androidView.addView(refreshControl.androidSwipeRefreshLayout)
-        //self.view.addSubview(refreshControl)
-        
         tableView = UITableView(frame: .zero)
         
         guard let tableView = tableView else {
@@ -75,36 +43,13 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         tableView.delegate = self
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-        tableView.frame = refreshControl.frame
-        
         self.view.addSubview(tableView)
     
         for i in 0...20 {
             data.append("item \(i)")
         }
         
-        /*
-        let delay = DispatchTime.now() + .seconds(1)
-        DispatchQueue.global(qos: .background).asyncAfter(deadline: delay) {
-            for i in 101...200 {
-                self.data.append("item \(i)")
-                NSLog("item \(i)")
-            }
-            #if os(Android)
-            UIScreen.main.activity.runOnMainThread { [weak self] in
-                self?.tableView?.reloadData()
-            }
-            #elseif os(iOS)
-            DispatchQueue.main.async {  [weak self] in
-                
-                self?.tableView?.reloadData()
-            }
-            #endif
-        }*/
-        
         navigationItem.title = "UITableView"
-        navigationItem.hidesBackButton = true
-        
         
         let leftItem = UIBarButtonItem.init(title: "Views", style: .done, target: nil, action: nil)
         leftItem.action = {

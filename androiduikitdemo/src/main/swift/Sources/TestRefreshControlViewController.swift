@@ -21,8 +21,8 @@ final class TestRefreshControlViewController: UITableViewController {
     
     var data: [Data] = [
         Data(type: "type 1", array: ["item 1","item 2","item 3","item 4","item 5"]),
-        Data(type: "type 2", array: ["item 1","item 2","item 3","item 4"]),
-        Data(type: "type 3", array: ["item 1","item 2"])
+        Data(type: "type 2", array: ["item 1","item 2","item 3","item 4","item 5","item 5","item 5","item 5","item 5"]),
+        Data(type: "type 3", array: ["item 1","item 2","item 5","item 5","item 5","item 5","item 5","item 5"])
     ]
     
     override func viewDidLoad() {
