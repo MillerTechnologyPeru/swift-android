@@ -21,7 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		518736622183BEC4008412B9 /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518736612183BEC4008412B9 /* JavaVM.framework */; };
+		5187368F2188A30F008412B9 /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5187368E2188A30F008412B9 /* JavaVM.framework */; };
 		OBJ_1146 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* AlertDialog.swift */; };
 		OBJ_1147 /* AlertDialogBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* AlertDialogBuilder.swift */; };
 		OBJ_1148 /* AndroidManifestPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* AndroidManifestPermission.swift */; };
@@ -634,9 +634,6 @@
 		OBJ_1808 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_184 /* Package.swift */; };
 		OBJ_1820 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_1825 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* AppDelegate.swift */; };
-		OBJ_1826 /* MainActivitytBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* MainActivitytBindings.swift */; };
-		OBJ_1827 /* MainActivitytBindings_Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* MainActivitytBindings_Listener.swift */; };
-		OBJ_1828 /* MainActivitytBindings_Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* MainActivitytBindings_Responder.swift */; };
 		OBJ_1829 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* MainViewController.swift */; };
 		OBJ_1830 /* TestRefreshControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* TestRefreshControlViewController.swift */; };
 		OBJ_1831 /* TestThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* TestThirdViewController.swift */; };
@@ -1161,154 +1158,154 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5187364A2183BC23008412B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "java_lang::java_lang";
-			remoteInfo = java_lang;
-		};
-		5187364B2183BC23008412B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "java_swift::java_swift";
-			remoteInfo = java_swift;
-		};
-		5187364C2183BC23008412B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "java_swift::java_swift";
-			remoteInfo = java_swift;
-		};
-		5187364D2183BC23008412B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "JNI::JNI";
-			remoteInfo = JNI;
-		};
-		5187364E2183BC23008412B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Bluetooth::Bluetooth";
-			remoteInfo = Bluetooth;
-		};
-		5187364F2183BC23008412B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "java_util::java_util";
-			remoteInfo = java_util;
-		};
-		518736502183BC23008412B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "java_lang::java_lang";
-			remoteInfo = java_lang;
-		};
-		518736512183BC23008412B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "java_swift::java_swift";
-			remoteInfo = java_swift;
-		};
-		518736522183BC23008412B9 /* PBXContainerItemProxy */ = {
+		518736772188A07D008412B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Android::Android";
 			remoteInfo = Android;
 		};
-		518736532183BC23008412B9 /* PBXContainerItemProxy */ = {
+		518736782188A07D008412B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "JNI::JNI";
 			remoteInfo = JNI;
 		};
-		518736542183BC23008412B9 /* PBXContainerItemProxy */ = {
+		518736792188A07D008412B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Bluetooth::Bluetooth";
 			remoteInfo = Bluetooth;
 		};
-		518736552183BC23008412B9 /* PBXContainerItemProxy */ = {
+		5187367A2188A07D008412B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_util::java_util";
 			remoteInfo = java_util;
 		};
-		518736562183BC23008412B9 /* PBXContainerItemProxy */ = {
+		5187367B2188A07D008412B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_lang::java_lang";
 			remoteInfo = java_lang;
 		};
-		518736572183BC23008412B9 /* PBXContainerItemProxy */ = {
+		5187367C2188A07D008412B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_swift::java_swift";
 			remoteInfo = java_swift;
 		};
-		518736582183BC23008412B9 /* PBXContainerItemProxy */ = {
+		5187367D2188A07D008412B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "java_swift::java_swift";
+			remoteInfo = java_swift;
+		};
+		5187367E2188A07D008412B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "java_lang::java_lang";
+			remoteInfo = java_lang;
+		};
+		5187367F2188A07D008412B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "java_swift::java_swift";
+			remoteInfo = java_swift;
+		};
+		518736802188A07D008412B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "JNI::JNI";
+			remoteInfo = JNI;
+		};
+		518736812188A07D008412B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Bluetooth::Bluetooth";
+			remoteInfo = Bluetooth;
+		};
+		518736822188A07D008412B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "java_util::java_util";
+			remoteInfo = java_util;
+		};
+		518736832188A07D008412B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "java_lang::java_lang";
+			remoteInfo = java_lang;
+		};
+		518736842188A07D008412B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "java_swift::java_swift";
+			remoteInfo = java_swift;
+		};
+		518736852188A07D008412B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "AndroidUIKit::AndroidUIKit";
 			remoteInfo = AndroidUIKit;
 		};
-		518736592183BC23008412B9 /* PBXContainerItemProxy */ = {
+		518736862188A07D008412B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Android::Android";
 			remoteInfo = Android;
 		};
-		5187365A2183BC23008412B9 /* PBXContainerItemProxy */ = {
+		518736872188A07D008412B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "JNI::JNI";
 			remoteInfo = JNI;
 		};
-		5187365B2183BC23008412B9 /* PBXContainerItemProxy */ = {
+		518736882188A07D008412B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Bluetooth::Bluetooth";
 			remoteInfo = Bluetooth;
 		};
-		5187365C2183BC23008412B9 /* PBXContainerItemProxy */ = {
+		518736892188A07D008412B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_util::java_util";
 			remoteInfo = java_util;
 		};
-		5187365D2183BC23008412B9 /* PBXContainerItemProxy */ = {
+		5187368A2188A07D008412B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_lang::java_lang";
 			remoteInfo = java_lang;
 		};
-		5187365E2183BC23008412B9 /* PBXContainerItemProxy */ = {
+		5187368B2188A07D008412B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_swift::java_swift";
 			remoteInfo = java_swift;
 		};
-		5187365F2183BC25008412B9 /* PBXContainerItemProxy */ = {
+		5187368C2188A07D008412B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -1318,12 +1315,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		518736612183BEC4008412B9 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = System/Library/Frameworks/JavaVM.framework; sourceTree = SDKROOT; };
+		5187368E2188A30F008412B9 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = System/Library/Frameworks/JavaVM.framework; sourceTree = SDKROOT; };
 		"Android::Android::Product" /* Android.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Android.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AndroidUIKit::AndroidUIKit::Product" /* AndroidUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AndroidUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Bluetooth::Bluetooth::Product" /* Bluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"JNI::JNI::Product" /* JNI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JNI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_10 /* MainActivitytBindings_Listener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActivitytBindings_Listener.swift; sourceTree = "<group>"; };
 		OBJ_100 /* BluetoothLePeriodicAdvertisingParametersBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothLePeriodicAdvertisingParametersBuilder.swift; sourceTree = "<group>"; };
 		OBJ_1000 /* Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integer.swift; sourceTree = "<group>"; };
 		OBJ_1001 /* InternalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalError.swift; sourceTree = "<group>"; };
@@ -1434,7 +1430,6 @@
 		OBJ_1097 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		OBJ_1098 /* TypeNotPresentException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeNotPresentException.swift; sourceTree = "<group>"; };
 		OBJ_1099 /* TypeVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeVariable.swift; sourceTree = "<group>"; };
-		OBJ_11 /* MainActivitytBindings_Responder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActivitytBindings_Responder.swift; sourceTree = "<group>"; };
 		OBJ_110 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		OBJ_1100 /* UndeclaredThrowableException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndeclaredThrowableException.swift; sourceTree = "<group>"; };
 		OBJ_1101 /* UnknownError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownError.swift; sourceTree = "<group>"; };
@@ -2329,7 +2324,6 @@
 		OBJ_897 /* ThreadPoolExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadPoolExecutor.swift; sourceTree = "<group>"; };
 		OBJ_898 /* TimeUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUnit.swift; sourceTree = "<group>"; };
 		OBJ_899 /* TimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZone.swift; sourceTree = "<group>"; };
-		OBJ_9 /* MainActivitytBindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActivitytBindings.swift; sourceTree = "<group>"; };
 		OBJ_90 /* BluetoothLeAdvertiseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothLeAdvertiseCallback.swift; sourceTree = "<group>"; };
 		OBJ_900 /* TimeZoneNameProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneNameProvider.swift; sourceTree = "<group>"; };
 		OBJ_901 /* TimeoutException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeoutException.swift; sourceTree = "<group>"; };
@@ -2511,7 +2505,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				518736622183BEC4008412B9 /* JavaVM.framework in Frameworks */,
+				5187368F2188A30F008412B9 /* JavaVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2527,10 +2521,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		518736602183BEC4008412B9 /* Frameworks */ = {
+		5187368D2188A30E008412B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				518736612183BEC4008412B9 /* JavaVM.framework */,
+				5187368E2188A30F008412B9 /* JavaVM.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2563,14 +2557,14 @@
 		OBJ_1132 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"java_util::java_util::Product" /* java_util.framework */,
-				"JNI::JNI::Product" /* JNI.framework */,
-				"Android::Android::Product" /* Android.framework */,
-				"java_swift::java_swift::Product" /* java_swift.framework */,
-				"Bluetooth::Bluetooth::Product" /* Bluetooth.framework */,
 				"AndroidUIKit::AndroidUIKit::Product" /* AndroidUIKit.framework */,
 				"java_lang::java_lang::Product" /* java_lang.framework */,
 				"androiduikitdemo::androiduikittarget::Product" /* androiduikittarget */,
+				"java_util::java_util::Product" /* java_util.framework */,
+				"JNI::JNI::Product" /* JNI.framework */,
+				"Bluetooth::Bluetooth::Product" /* Bluetooth.framework */,
+				"java_swift::java_swift::Product" /* java_swift.framework */,
+				"Android::Android::Product" /* Android.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -2600,7 +2594,7 @@
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_194 /* Bluetooth 2.5.2 */ = {
+		OBJ_194 /* Bluetooth 2.6.0 */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_195 /* Package.swift */,
@@ -3034,7 +3028,7 @@
 				OBJ_623 /* VendorCommand.swift */,
 				OBJ_624 /* iBeacon.swift */,
 			);
-			name = "Bluetooth 2.5.2";
+			name = "Bluetooth 2.6.0";
 			path = ".build/checkouts/Bluetooth.git--1679829496101537995/Sources";
 			sourceTree = SOURCE_ROOT;
 		};
@@ -3044,7 +3038,7 @@
 				OBJ_22 /* AndroidUIKit */,
 				OBJ_65 /* Android */,
 				OBJ_183 /* JNI 1.0.3 */,
-				OBJ_194 /* Bluetooth 2.5.2 */,
+				OBJ_194 /* Bluetooth 2.6.0 */,
 				OBJ_625 /* java_util 2.3.2 */,
 				OBJ_928 /* java_lang 2.3.2 */,
 				OBJ_1114 /* java_swift 2.3.3 */,
@@ -3102,7 +3096,7 @@
 			path = ".build/checkouts/AndroidUIKit.git--5425478966589778551/Sources";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -3111,9 +3105,8 @@
 				OBJ_20 /* AndroidUIKitDemo-iOS */,
 				OBJ_21 /* Dependencies */,
 				OBJ_1132 /* Products */,
-				518736602183BEC4008412B9 /* Frameworks */,
+				5187368D2188A30E008412B9 /* Frameworks */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_625 /* java_util 2.3.2 */ = {
@@ -3555,15 +3548,12 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_8 /* AppDelegate.swift */,
-				OBJ_9 /* MainActivitytBindings.swift */,
-				OBJ_10 /* MainActivitytBindings_Listener.swift */,
-				OBJ_11 /* MainActivitytBindings_Responder.swift */,
 				OBJ_12 /* MainViewController.swift */,
 				OBJ_13 /* TestRefreshControlViewController.swift */,
 				OBJ_14 /* TestThirdViewController.swift */,
+				OBJ_15 /* TestUITabBarViewController.swift */,
 				OBJ_16 /* UITabBarTestViewController.swift */,
 				OBJ_17 /* UITableTestViewController.swift */,
-				OBJ_15 /* TestUITabBarViewController.swift */,
 				OBJ_18 /* main.swift */,
 			);
 			path = Sources;
@@ -4041,7 +4031,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_1132 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -4736,9 +4726,6 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_1825 /* AppDelegate.swift in Sources */,
-				OBJ_1826 /* MainActivitytBindings.swift in Sources */,
-				OBJ_1827 /* MainActivitytBindings_Listener.swift in Sources */,
-				OBJ_1828 /* MainActivitytBindings_Responder.swift in Sources */,
 				OBJ_1829 /* MainViewController.swift in Sources */,
 				OBJ_1830 /* TestRefreshControlViewController.swift in Sources */,
 				OBJ_1831 /* TestThirdViewController.swift in Sources */,
@@ -5301,112 +5288,112 @@
 		OBJ_1268 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "JNI::JNI" /* JNI */;
-			targetProxy = 5187364D2183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 518736782188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1270 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Bluetooth::Bluetooth" /* Bluetooth */;
-			targetProxy = 5187364E2183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 518736792188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1272 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_util::java_util" /* java_util */;
-			targetProxy = 5187364F2183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 5187367A2188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1274 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_lang::java_lang" /* java_lang */;
-			targetProxy = 518736502183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 5187367E2188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1276 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_swift::java_swift" /* java_swift */;
-			targetProxy = 518736512183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 5187367F2188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1337 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Android::Android" /* Android */;
-			targetProxy = 518736522183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 518736772188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1338 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "JNI::JNI" /* JNI */;
-			targetProxy = 518736532183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 518736802188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1339 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Bluetooth::Bluetooth" /* Bluetooth */;
-			targetProxy = 518736542183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 518736812188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1340 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_util::java_util" /* java_util */;
-			targetProxy = 518736552183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 518736822188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1341 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_lang::java_lang" /* java_lang */;
-			targetProxy = 518736562183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 518736832188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1342 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_swift::java_swift" /* java_swift */;
-			targetProxy = 518736572183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 518736842188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1813 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "androiduikitdemo::androiduikittarget" /* androiduikittarget */;
-			targetProxy = 5187365F2183BC25008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 5187368C2188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1844 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "AndroidUIKit::AndroidUIKit" /* AndroidUIKit */;
-			targetProxy = 518736582183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 518736852188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1845 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Android::Android" /* Android */;
-			targetProxy = 518736592183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 518736862188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1846 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "JNI::JNI" /* JNI */;
-			targetProxy = 5187365A2183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 518736872188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1847 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Bluetooth::Bluetooth" /* Bluetooth */;
-			targetProxy = 5187365B2183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 518736882188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1848 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_util::java_util" /* java_util */;
-			targetProxy = 5187365C2183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 518736892188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1849 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_lang::java_lang" /* java_lang */;
-			targetProxy = 5187365D2183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 5187368A2188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_1850 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_swift::java_swift" /* java_swift */;
-			targetProxy = 5187365E2183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 5187368B2188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_2041 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_swift::java_swift" /* java_swift */;
-			targetProxy = 5187364B2183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 5187367C2188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_2383 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_lang::java_lang" /* java_lang */;
-			targetProxy = 5187364A2183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 5187367B2188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 		OBJ_2384 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_swift::java_swift" /* java_swift */;
-			targetProxy = 5187364C2183BC23008412B9 /* PBXContainerItemProxy */;
+			targetProxy = 5187367D2188A07D008412B9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -5569,7 +5556,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGET_NAME = Bluetooth;
 			};
 			name = Debug;
@@ -5592,7 +5579,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGET_NAME = Bluetooth;
 			};
 			name = Release;
@@ -5601,8 +5588,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 3 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 3.0;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -5610,8 +5597,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 3 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 3.0;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
