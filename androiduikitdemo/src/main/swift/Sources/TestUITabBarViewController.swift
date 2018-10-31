@@ -28,7 +28,7 @@ final class TestUITabBarViewController: UITabBarController {
         let thirdVCNavItem = UINavigationItem.init(title: "Third VC")
         thirdVCNavItem.rightBarButtonItem = UIBarButtonItem.init(title: "MR3", style: .done, target: nil, action: { NSLog("Hi, im MR3")})
         
-        let first = FirstViewController()
+        let first = UINavigationController(rootViewController: Nav2FirstViewController())
         first.navigationItem = firstVCNavItem
         first.tabBarItem = UITabBarItem.init(title: "Restaurants", image: UIImage.init(named: "ic_restaurant_menu"), tag: 0)
         
@@ -78,7 +78,7 @@ final class SecondViewController: UIViewController {
         
         NSLog("\(type(of: self)) \(#function)")
         
-        self.view.backgroundColor = UIColor.blue
+        self.view.backgroundColor = UIColor.green
     }
 }
 
@@ -245,5 +245,71 @@ final class NavThirdViewController: UIViewController {
         
         self.navigationController?.isToolbarHidden = false
         self.navigationController?.toolbar.items = items
+    }
+}
+
+final class Nav2FirstViewController: UIViewController {
+    
+    override func loadView() {
+        self.view = UIView(frame: CGRect(x: 0,
+                                         y: 0,
+                                         width: UIApplication.shared.androidActivity.screen.bounds.width,
+                                         height: UIApplication.shared.androidActivity.screen.bounds.height))
+    }
+    
+    override func viewDidLoad() {
+        
+        NSLog("\(type(of: self)) \(#function)")
+        
+        self.view.backgroundColor = UIColor.brown
+        
+        navigationItem.title = "First Nav2 VC"
+        
+        let rightItem = UIBarButtonItem.init(title: "22Click", style: .done, target: nil, action: nil)
+        rightItem.action = {
+            
+            let nav2SecondViewController = Nav2SecondViewController()
+            self.navigationController?.pushViewController(nav2SecondViewController, animated: false)
+        }
+        
+        navigationItem.rightBarButtonItems = [rightItem]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isToolbarHidden = true
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+}
+
+final class Nav2SecondViewController: UIViewController {
+    
+    override func loadView() {
+        self.view = UIView(frame: CGRect(x: 0,
+                                         y: 0,
+                                         width: UIApplication.shared.androidActivity.screen.bounds.width,
+                                         height: UIApplication.shared.androidActivity.screen.bounds.height))
+    }
+    
+    override func viewDidLoad() {
+        
+        NSLog("\(type(of: self)) \(#function)")
+        
+        self.view.backgroundColor = UIColor.cyan
+        
+        navigationItem.title = "Second Nav2 VC"
+        
+        let rightItem = UIBarButtonItem.init(title: "2Click", style: .done, target: nil, action: nil)
+        rightItem.action = {
+            
+        }
+        
+        navigationItem.rightBarButtonItems = [rightItem]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isToolbarHidden = true
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
 }

@@ -22,6 +22,9 @@
 
 /* Begin PBXBuildFile section */
 		5187368F2188A30F008412B9 /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5187368E2188A30F008412B9 /* JavaVM.framework */; };
+		518736912189FEFD008412B9 /* UITabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518736902189FEFD008412B9 /* UITabBarControllerDelegate.swift */; };
+		518736932189FF18008412B9 /* UIInterfaceOrientationMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518736922189FF18008412B9 /* UIInterfaceOrientationMask.swift */; };
+		518736952189FF2C008412B9 /* UIInterfaceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518736942189FF2C008412B9 /* UIInterfaceOrientation.swift */; };
 		OBJ_1146 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* AlertDialog.swift */; };
 		OBJ_1147 /* AlertDialogBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* AlertDialogBuilder.swift */; };
 		OBJ_1148 /* AndroidManifestPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* AndroidManifestPermission.swift */; };
@@ -1316,6 +1319,9 @@
 
 /* Begin PBXFileReference section */
 		5187368E2188A30F008412B9 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = System/Library/Frameworks/JavaVM.framework; sourceTree = SDKROOT; };
+		518736902189FEFD008412B9 /* UITabBarControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerDelegate.swift; sourceTree = "<group>"; };
+		518736922189FF18008412B9 /* UIInterfaceOrientationMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInterfaceOrientationMask.swift; sourceTree = "<group>"; };
+		518736942189FF2C008412B9 /* UIInterfaceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInterfaceOrientation.swift; sourceTree = "<group>"; };
 		"Android::Android::Product" /* Android.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Android.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AndroidUIKit::AndroidUIKit::Product" /* AndroidUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AndroidUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Bluetooth::Bluetooth::Product" /* Bluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3091,6 +3097,9 @@
 				OBJ_62 /* UIViewController.swift */,
 				OBJ_63 /* UIWindow.swift */,
 				OBJ_64 /* WeakReference.swift */,
+				518736902189FEFD008412B9 /* UITabBarControllerDelegate.swift */,
+				518736922189FF18008412B9 /* UIInterfaceOrientationMask.swift */,
+				518736942189FF2C008412B9 /* UIInterfaceOrientation.swift */,
 			);
 			name = AndroidUIKit;
 			path = ".build/checkouts/AndroidUIKit.git--5425478966589778551/Sources";
@@ -3551,9 +3560,9 @@
 				OBJ_12 /* MainViewController.swift */,
 				OBJ_13 /* TestRefreshControlViewController.swift */,
 				OBJ_14 /* TestThirdViewController.swift */,
-				OBJ_15 /* TestUITabBarViewController.swift */,
 				OBJ_16 /* UITabBarTestViewController.swift */,
 				OBJ_17 /* UITableTestViewController.swift */,
+				OBJ_15 /* TestUITabBarViewController.swift */,
 				OBJ_18 /* main.swift */,
 			);
 			path = Sources;
@@ -4207,6 +4216,7 @@
 				OBJ_1300 /* UIControl.swift in Sources */,
 				OBJ_1301 /* UIEvent.swift in Sources */,
 				OBJ_1302 /* UIImage.swift in Sources */,
+				518736952189FF2C008412B9 /* UIInterfaceOrientation.swift in Sources */,
 				OBJ_1303 /* UILabel.swift in Sources */,
 				OBJ_1304 /* UINavigationBar.swift in Sources */,
 				OBJ_1305 /* UINavigationBarDelegate.swift in Sources */,
@@ -4231,9 +4241,11 @@
 				OBJ_1324 /* UIViewAnimation.swift in Sources */,
 				OBJ_1325 /* UIViewAutoresizing.swift in Sources */,
 				OBJ_1326 /* UIViewContentMode.swift in Sources */,
+				518736912189FEFD008412B9 /* UITabBarControllerDelegate.swift in Sources */,
 				OBJ_1327 /* UIViewController.swift in Sources */,
 				OBJ_1328 /* UIWindow.swift in Sources */,
 				OBJ_1329 /* WeakReference.swift in Sources */,
+				518736932189FF18008412B9 /* UIInterfaceOrientationMask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
