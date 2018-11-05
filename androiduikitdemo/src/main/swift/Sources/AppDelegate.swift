@@ -29,8 +29,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         //self.window?.backgroundColor = .red
-        //self.window?.rootViewController = TestUITabBarViewController()
-        self.window?.rootViewController = UINavigationController.init(rootViewController: NavFirstViewController())
+        self.window?.rootViewController = TestUITabBarViewController()
+        //self.window?.rootViewController = UINavigationController.init(rootViewController: NavFirstViewController())
         self.window?.makeKeyAndVisible()
         
         return true
