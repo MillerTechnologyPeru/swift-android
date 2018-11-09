@@ -10,6 +10,7 @@ import java_swift
 import java_lang
 import java_util
 import Android
+import AndroidBluetooth
 
 class DeviceDetailDialogFragment: AndroidFullScreenDialogFragment {
     

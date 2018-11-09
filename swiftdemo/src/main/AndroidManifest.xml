@@ -7,6 +7,8 @@
     <!-- Its needed from Android 6.0 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:name=".SwiftDemoApplication"
         android:allowBackup="true"

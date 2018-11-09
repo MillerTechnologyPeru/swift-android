@@ -7,6 +7,7 @@
 
 import Foundation
 import Android
+import AndroidBluetooth
 import java_swift
 
 public class MySwiftGattCallback: Android.Bluetooth.GattCallback {

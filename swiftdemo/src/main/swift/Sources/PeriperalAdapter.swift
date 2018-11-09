@@ -10,8 +10,9 @@ import java_swift
 import java_lang
 import java_util
 import Android
+import AndroidBluetooth
 import GATT
-
+/*
 class PeripheralAdapter: Android.Widget.RecyclerView.Adapter {
     
     typealias Device = ScanData<Peripheral, AdvertisementData>
@@ -165,4 +166,4 @@ class PeripheralAdapter: Android.Widget.RecyclerView.Adapter {
     deinit {
         NSLog("\(type(of: self)) \(#function)")
     }
-}
+}*/

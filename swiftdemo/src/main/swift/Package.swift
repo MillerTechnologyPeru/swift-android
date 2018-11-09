@@ -8,12 +8,13 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "git@github.com:PureSwift/Android.git", .branch("master")),
+        .package(url: "git@github.com:PureSwift/AndroidBluetooth.git", .branch("master")),
         .package(url: "git@github.com:PureSwift/GATT.git", from: "2.1.1")
     ],
     targets: [
         .target(
             name: "swiftdemotarget",
-            dependencies: ["Android", "GATT"],
+            dependencies: ["Android", "AndroidBluetooth", "GATT"],
             path: "Sources"
         ),
     ]

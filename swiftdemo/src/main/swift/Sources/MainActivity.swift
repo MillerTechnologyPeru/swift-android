@@ -10,6 +10,7 @@ import java_swift
 import java_lang
 import java_util
 import Android
+import AndroidBluetooth
 import Bluetooth
 import GATT
 
@@ -35,7 +36,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
     
     private var gattCallback: MySwiftGattCallback?
     
-    public var peripheralAdapter: PeripheralAdapter?
+    //public var peripheralAdapter: PeripheralAdapter?
     
     internal lazy var central = AndroidCentral(hostController: Android.Bluetooth.Adapter.default!,
                                                context: SwiftDemoApplication.context!,
@@ -59,7 +60,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
         
         gattCallback = MySwiftGattCallback(mainActivity: self)
         
-        peripheralAdapter = PeripheralAdapter(mainActivity: self)
+        //peripheralAdapter = PeripheralAdapter(mainActivity: self)
         
         let context = Android.Content.Context(casting: self)
         let linearLayoutManager = Android.Widget.RecyclerView.LinearLayoutManager(context: context!)
@@ -69,10 +70,10 @@ final class MainActivity: SwiftSupportAppCompatActivity {
 
         let rvDevices = Android.Widget.RecyclerView(casting: findViewById(rvId)!)
         
-        rvDevices?.adapter = peripheralAdapter!
+        //rvDevices?.adapter = peripheralAdapter!
         
         rvDevices?.layoutManager = linearLayoutManager
-        
+        /*
         peripheralAdapter?.onItemClick = { (device) in
             
             let peripheral = device.peripheral
@@ -103,7 +104,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
                 NSLog("Connection error ")
                 return
             }
-        }
+        }*/
     }
     
     override func onResume() {
@@ -193,7 +194,7 @@ final class MainActivity: SwiftSupportAppCompatActivity {
                 try central.scan(shouldContinueScanning: { Date() < end }, foundDevice: { (scanData) in
                     
                     self?.runOnMainThread {
-                        self?.peripheralAdapter?.addPeripheral(scanData)
+                        //self?.peripheralAdapter?.addPeripheral(scanData)
                     }
                 })
                 

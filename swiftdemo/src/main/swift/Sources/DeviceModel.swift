@@ -7,6 +7,7 @@
 
 import Foundation
 import Android
+import AndroidBluetooth
 
 struct DeviceModel {
     var device: Android.Bluetooth.Device?
