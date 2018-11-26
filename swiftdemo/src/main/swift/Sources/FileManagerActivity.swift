@@ -99,13 +99,74 @@ final class FileManagerActivity: SwiftSupportAppCompatActivity {
     private func showFileExplorer() {
         
         log("\(type(of: self)) \(#function) show ")
-    
-        guard let resources = resources
-            else { return }
         
-        let themeResId = resources.getIdentifier(name: "Theme_Black_NoTitleBar_Fullscreen", type: "style", defPackage: "android")
+        let viewId = getIdentifier(name: "file_manager_layout", type: "layout")
         
-        let alertDialog = AndroidAlertDialog.Builder.init(context: self, themeResId: themeResId)
-        alertDialog.show()
+        let view = AndroidLayoutInflater.from(context: self).inflate(resource: Android.R.Layout(rawValue: viewId), root: nil)
+        
+        AndroidAlertDialog.Builder.init(context: self)
+            .setTitle(title: "Current path")
+            .setView(view: view)
+            .show()
+        
+        let storages = getStorages()
+        
+        navigations[indexNavigation] = storages
     }
+    
+    private var indexNavigation = 0
+    
+    private var navigations = [Int: [Item]]()
+    
+    private func getStorages() -> [Item] {
+        
+        var storages = [Item]()
+        
+        if(AndroidEnvironment.getExternalStorageDirectory() != nil){
+            
+            guard let internalStorage = AndroidEnvironment.getExternalStorageDirectory()
+                else { return [] }
+            
+            let path = internalStorage.getPath()
+            
+            storages.append(Item(type: ItemType.Storage, path: path, name: "Internal storage"))
+        }
+        
+        let _extStorages = self.getExternalFilesDirs(type: nil)
+        
+        guard var extStorages = _extStorages else {
+            log("Not Ext Storages")
+            return storages
+        }
+        
+        extStorages.remove(at: 0)
+        
+        let secondaryStoragePath = System.getenv("SECONDARY_STORAGE") ?? ""
+        
+        extStorages.forEach { storage in
+            
+            let path = storage.getPath().components(separatedBy: "Android/")[0]
+            
+            if( AndroidEnvironment.isExternalStorageRemovable(path: storage) || secondaryStoragePath.contains(path)){
+                
+                storages.append(Item(type: ItemType.Storage, path: path, name: "SD Card"))
+                log("SD Card: \(path)")
+            }
+        }
+        
+        return storages
+    }
+}
+
+public enum ItemType: Int {
+    case Storage
+    case Folder
+    case File
+}
+
+public struct Item {
+    
+    public let type: ItemType
+    public let path: String
+    public let name: String
 }
