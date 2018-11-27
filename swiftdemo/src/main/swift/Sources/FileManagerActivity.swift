@@ -101,7 +101,7 @@ final class FileManagerActivity: SwiftSupportAppCompatActivity {
         log("\(type(of: self)) \(#function) show ")
         
         let viewId = getIdentifier(name: "file_manager_layout", type: "layout")
-        
+
         let view = AndroidLayoutInflater.from(context: self).inflate(resource: Android.R.Layout(rawValue: viewId), root: nil)
         
         let dialog = AndroidDialog(context: self)
@@ -121,14 +121,87 @@ final class FileManagerActivity: SwiftSupportAppCompatActivity {
         
         dialog.window.attributes = layoutParams
         
-        let storages = getStorages()
+        let rvItemsId = getIdentifier(name: "rvItems", type: "id")
+        let tvFolderNameId = getIdentifier(name: "tvFolderName", type: "id")
+        let ivBackId = getIdentifier(name: "ivBack", type: "id")
+        let ivAddFolderId = getIdentifier(name: "ivAddFolder", type: "id")
         
-        navigations[indexNavigation] = storages
+         // New Folder Button
+        
+        let ivAddFolder = Android.Widget.ImageView(casting: view.findViewById(ivAddFolderId)!)
+        
+        
+        
+        
+        // Files and Folder Name
+        
+        let tvCurrentFolder = Android.Widget.TextView(casting: view.findViewById(tvFolderNameId)!)
+        let rvItems = Android.Widget.RecyclerView(casting: view.findViewById(rvItemsId)!)
+        
+        let adapter = ItemAdapter(activity: self)
+        
+        adapter.itemClick = { item in
+            
+            log("path: \(item.path)")
+            
+            let selectedFile = JavaFile.init(pathname: item.path)
+            
+            let children = selectedFile.listFiles()
+            
+            guard let files = children else {
+                
+                AndroidToast.makeText(context: self, text: "It does'nt content any file.", duration: AndroidToast.Dutation.short).show()
+                return
+            }
+            
+            var itemChildren: [Item] = [Item]()
+            
+            files.forEach { file in
+                
+                    let type = file.isDirectory() ? ItemType.Folder : ItemType.File
+                    itemChildren.append(Item.init(type: type, path: file.getPath(), name: file.getName()))
+            }
+            
+            self.currentFolder = "/\(item.name)/"
+            self.navigation.append(Navigation(folderName: self.currentFolder, files: itemChildren))
+            
+            tvCurrentFolder?.text = self.currentFolder
+            adapter.addItems(items: itemChildren)
+        }
+        
+        rvItems?.adapter = adapter
+        
+        let storages = getStorages()
+        navigation.append(Navigation(folderName: currentFolder, files: storages))
+        
+        tvCurrentFolder?.text = currentFolder
+        adapter.addItems(items: storages)
+        
+        // Back Button
+        
+        let ivBack = Android.Widget.ImageView(casting: view.findViewById(ivBackId)!)
+        
+        ivBack?.setOnClickListener {
+            
+            guard self.navigation.count > 1
+                else { return }
+            
+            self.navigation.removeLast()
+            
+            let navLastFolder = self.navigation.last
+            
+            guard let lastFolder = navLastFolder
+                else { return }
+            
+            self.currentFolder = lastFolder.folderName
+            tvCurrentFolder?.text = self.currentFolder
+            adapter.addItems(items: lastFolder.files)
+        }
     }
     
-    private var indexNavigation = 0
+    private var currentFolder = "Storages/"
     
-    private var navigations = [Int: [Item]]()
+    private var navigation = [Navigation]()
     
     private func getStorages() -> [Item] {
         
@@ -176,9 +249,149 @@ public enum ItemType: Int {
     case File
 }
 
+public struct Navigation {
+    
+    public let folderName: String
+    public let files: [Item]
+}
+
 public struct Item {
     
     public let type: ItemType
     public let path: String
     public let name: String
+}
+
+class ItemAdapter: Android.Widget.RecyclerView.Adapter {
+    
+    private var activity: SwiftSupportAppCompatActivity?
+    private var items = [Item]()
+    public var itemClick: ((Item) -> ())?
+    
+    public required init(javaObject: jobject?) {
+        super.init(javaObject: javaObject)
+    }
+    
+    convenience init(activity: SwiftSupportAppCompatActivity) {
+        
+        log("\(type(of: self)) \(#function)")
+        
+        self.init(javaObject: nil)
+        bindNewJavaObject()
+        
+        self.activity = activity
+    }
+    
+    public func addItems(items: [Item]){
+        
+        self.items.removeAll()
+        
+        self.items = items
+        
+        notifyDataSetChanged()
+    }
+    
+    override func getItemCount() -> Int {
+        return items.count
+    }
+    
+    override func onCreateViewHolder(parent: Android.View.ViewGroup, viewType: Int?) -> AndroidWidgetRecyclerView.ViewHolder {
+        
+        NSLog("\(type(of: self)) \(#function)")
+        
+        let itemViewResource = activity?.getIdentifier(name: "file_manager_layout_item", type: "layout")
+        
+        let itemView = Android.View.LayoutInflater.from(context: parent.context!).inflate(resource: Android.R.Layout(rawValue: itemViewResource!), root: parent, attachToRoot: false)
+        
+        return ItemViewHolder(itemView: itemView, activity: activity!)
+    }
+    
+    override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int) {
+        
+        let itemViewHolder = holder as! ItemViewHolder
+        
+        let item = items[position]
+        
+        itemViewHolder.bind(item)
+        
+        itemViewHolder.tvItemName?.setOnClickListener {
+            self.itemClick?(item)
+        }
+    }
+    
+    class ItemViewHolder: Android.Widget.RecyclerView.ViewHolder {
+        
+        private var activity: SwiftSupportAppCompatActivity?
+        fileprivate var itemView: Android.View.View?
+        fileprivate var tvItemName: Android.Widget.TextView?
+        fileprivate var cbSelect: Android.Widget.CheckBox?
+        fileprivate var ivItemType: Android.Widget.ImageView?
+        
+        convenience init(itemView: Android.View.View, activity: SwiftSupportAppCompatActivity) {
+            NSLog("\(type(of: self)) \(#function)")
+            
+            self.init(javaObject: nil)
+            
+            bindNewJavaObject(itemView: itemView)
+            
+            let cbSelectId = activity.getIdentifier(name: "cbSelect", type: "id")
+            let ivItemTypeId = activity.getIdentifier(name: "ivItemType", type: "id")
+            let tvItemNameId = activity.getIdentifier(name: "tvItemName", type: "id")
+            
+            guard let cbSelectObject = itemView.findViewById(cbSelectId)
+                else { fatalError("No view for \(cbSelectId)") }
+            
+            guard let ivItemTypeObject = itemView.findViewById(ivItemTypeId)
+                else { fatalError("No view for \(ivItemTypeId)") }
+            
+            guard let tvItemNameObject = itemView.findViewById(tvItemNameId)
+                else { fatalError("No view for \(tvItemNameId)") }
+            
+            self.itemView = itemView
+            self.activity = activity
+            
+            self.cbSelect = Android.Widget.CheckBox(casting: cbSelectObject)
+            self.ivItemType = Android.Widget.ImageView(casting: ivItemTypeObject)
+            self.tvItemName = Android.Widget.TextView(casting: tvItemNameObject)
+        }
+        
+        public required init(javaObject: jobject?) {
+            super.init(javaObject: javaObject)
+        }
+        
+        deinit {
+            log("\(type(of: self)) \(#function)")
+        }
+        
+        public func bind(_ item: Item) {
+            
+            self.tvItemName?.text = item.name
+            
+            var _imageId: Int? = 0
+            
+            switch item.type {
+            case .Storage:
+                
+                _imageId = activity?.getIdentifier(name: "ic_sd_storage", type: "drawable")
+            case .Folder:
+                
+                _imageId = activity?.getIdentifier(name: "ic_folder", type: "drawable")
+            case .File:
+                
+                _imageId = activity?.getIdentifier(name: "ic_file", type: "drawable")
+            }
+            
+            guard let imageId = _imageId
+                else { return }
+            
+            if imageId != 0 {
+                
+                self.ivItemType?.setImageResource(imageId)
+            }
+        }
+    }
+    
+    deinit {
+        log("\(type(of: self)) \(#function)")
+    }
 }
