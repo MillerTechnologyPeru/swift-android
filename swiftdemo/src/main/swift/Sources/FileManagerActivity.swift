@@ -104,10 +104,22 @@ final class FileManagerActivity: SwiftSupportAppCompatActivity {
         
         let view = AndroidLayoutInflater.from(context: self).inflate(resource: Android.R.Layout(rawValue: viewId), root: nil)
         
-        AndroidAlertDialog.Builder.init(context: self)
-            .setTitle(title: "Current path")
-            .setView(view: view)
-            .show()
+        let dialog = AndroidDialog(context: self)
+        dialog.requestWindowFeature(featureId: AndroidWindow.FEATURE_NO_TITLE)
+        dialog.setContentView(view: view)
+        dialog.show()
+        
+        let layoutParams = AndroidWindowManagerLayoutParams()
+        
+        guard let dialogLayuotparams = dialog.window.attributes
+            else { return }
+        
+        layoutParams.copyFrom(dialogLayuotparams)
+        
+        layoutParams.width = AndroidWindowManagerLayoutParams.MATCH_PARENT
+        layoutParams.height = AndroidWindowManagerLayoutParams.MATCH_PARENT
+        
+        dialog.window.attributes = layoutParams
         
         let storages = getStorages()
         

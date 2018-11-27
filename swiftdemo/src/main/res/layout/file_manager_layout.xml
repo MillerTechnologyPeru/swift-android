@@ -2,12 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:text="FILE MANAGER"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:weightSum="10"
+        android:layout_marginTop="6dp"
         android:layout_marginBottom="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -16,22 +27,24 @@
             android:id="@+id/ivBack"
             android:src="@drawable/ic_arrow_back_black"
             android:layout_width="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/tvFolderName"
-            android:text="ROOT"
+            android:text="/Android/"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
             android:textSize="18sp"
             android:layout_width="0dp"
-            android:layout_weight="6"
+            android:layout_weight="8"
             android:layout_height="wrap_content" />
 
         <ImageView
             android:id="@+id/ivAddFolder"
             android:src="@drawable/ic_add"
             android:layout_width="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
