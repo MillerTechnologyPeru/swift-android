@@ -359,6 +359,7 @@ class ItemAdapter: Android.Widget.RecyclerView.Adapter {
     private var activity: SwiftSupportAppCompatActivity?
     private var items = [Item]()
     public var itemClick: ((Item) -> ())?
+    public var checkItem: ((Bool, Item) -> ())?
     
     public required init(javaObject: jobject?) {
         super.init(javaObject: javaObject)
@@ -447,6 +448,12 @@ class ItemAdapter: Android.Widget.RecyclerView.Adapter {
         
         itemViewHolder.tvItemName?.setOnClickListener {
             self.itemClick?(item)
+        }
+        
+        itemViewHolder.cbSelect?.setOnCheckedChangeListener { buttonView, isChecked in
+            
+            
+            log("Checkbox checked \(isChecked): \(item.name).")
         }
     }
     
