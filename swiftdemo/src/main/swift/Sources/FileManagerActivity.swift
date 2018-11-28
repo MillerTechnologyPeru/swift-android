@@ -321,6 +321,11 @@ final class FileManagerActivity: SwiftSupportAppCompatActivity {
             itemChildren.append(Item.init(type: type, path: file.getPath(), name: file.getName()))
         }
         
+        itemChildren.sort { (lhs, rhs) in
+            
+            return rhs.type != ItemType.Folder
+        }
+        
         return itemChildren
     }
 }
@@ -386,11 +391,50 @@ class ItemAdapter: Android.Widget.RecyclerView.Adapter {
         
         NSLog("\(type(of: self)) \(#function)")
         
-        let itemViewResource = activity?.getIdentifier(name: "file_manager_layout_item", type: "layout")
+        guard let activity = activity
+            else { fatalError("Activity is null") }
         
-        let itemView = Android.View.LayoutInflater.from(context: parent.context!).inflate(resource: Android.R.Layout(rawValue: itemViewResource!), root: parent, attachToRoot: false)
+        let cbSelectId = AndroidViewCompat.generateViewId()
+        let ivItemTypeId = AndroidViewCompat.generateViewId()
+        let tvItemNameId = AndroidViewCompat.generateViewId()
         
-        return ItemViewHolder(itemView: itemView, activity: activity!)
+        let density = activity.getDensity()
+        
+        let dp4 = Int(4 * density)
+        let dp6 = Int(6 * density)
+        
+        let llParams = AndroidLinearLayoutLayoutParams(width: AndroidLinearLayoutLayoutParams.MATCH_PARENT, height: AndroidLinearLayoutLayoutParams.WRAP_CONTENT)
+        
+        let linearLayout = AndroidLinearLayout(context: activity)
+        linearLayout.layoutParams = llParams
+        linearLayout.setPadding(left: dp4, top: 0, right: 0, bottom: 0)
+        linearLayout.orientation = AndroidLinearLayout.HORIZONTAL
+        
+        let cbSelect = AndroidCheckBox(context: activity)
+        cbSelect.setId(cbSelectId)
+        cbSelect.layoutParams = AndroidLinearLayoutLayoutParams(width: AndroidLinearLayoutLayoutParams.WRAP_CONTENT, height: AndroidLinearLayoutLayoutParams.WRAP_CONTENT)
+        
+        let ivItemType = AndroidImageView(context: activity)
+        ivItemType.setId(ivItemTypeId)
+        let ivItemTypeParams = AndroidLinearLayoutLayoutParams(width: AndroidLinearLayoutLayoutParams.WRAP_CONTENT, height: AndroidLinearLayoutLayoutParams.MATCH_PARENT)
+        ivItemTypeParams.marginStart = dp4
+        ivItemType.layoutParams = ivItemTypeParams
+        
+        let tvItemName = AndroidTextView(context: activity)
+        tvItemName.setId(tvItemNameId)
+        let tvItemNameParams = AndroidLinearLayoutLayoutParams(width: AndroidLinearLayoutLayoutParams.MATCH_PARENT, height: AndroidLinearLayoutLayoutParams.WRAP_CONTENT)
+        tvItemNameParams.marginStart = dp6
+        tvItemName.layoutParams = tvItemNameParams
+        tvItemName.setTextSize(size: 16)
+        tvItemName.setMaxLines(maxLines: 1)
+        tvItemName.setHorizontallyScrolling(true)
+        tvItemName.setEllipsize(where: AndroidTextUtilsTruncateAt.END)
+        
+        linearLayout.addView(cbSelect)
+        linearLayout.addView(ivItemType)
+        linearLayout.addView(tvItemName)
+        
+        return ItemViewHolder(itemView: linearLayout, activity: activity, ids: [cbSelectId, ivItemTypeId, tvItemNameId])
     }
     
     override func onBindViewHolder(holder: AndroidWidgetRecyclerView.ViewHolder, position: Int) {
@@ -414,25 +458,21 @@ class ItemAdapter: Android.Widget.RecyclerView.Adapter {
         fileprivate var cbSelect: Android.Widget.CheckBox?
         fileprivate var ivItemType: Android.Widget.ImageView?
         
-        convenience init(itemView: Android.View.View, activity: SwiftSupportAppCompatActivity) {
+        convenience init(itemView: Android.View.View, activity: SwiftSupportAppCompatActivity, ids: [Int]) {
             NSLog("\(type(of: self)) \(#function)")
             
             self.init(javaObject: nil)
             
             bindNewJavaObject(itemView: itemView)
             
-            let cbSelectId = activity.getIdentifier(name: "cbSelect", type: "id")
-            let ivItemTypeId = activity.getIdentifier(name: "ivItemType", type: "id")
-            let tvItemNameId = activity.getIdentifier(name: "tvItemName", type: "id")
+            guard let cbSelectObject = itemView.findViewById(ids[0])
+                else { fatalError("No view for cbSelect: \(ids[0])") }
             
-            guard let cbSelectObject = itemView.findViewById(cbSelectId)
-                else { fatalError("No view for \(cbSelectId)") }
+            guard let ivItemTypeObject = itemView.findViewById(ids[1])
+                else { fatalError("No view for ivItemType: \(ids[1])") }
             
-            guard let ivItemTypeObject = itemView.findViewById(ivItemTypeId)
-                else { fatalError("No view for \(ivItemTypeId)") }
-            
-            guard let tvItemNameObject = itemView.findViewById(tvItemNameId)
-                else { fatalError("No view for \(tvItemNameId)") }
+            guard let tvItemNameObject = itemView.findViewById(ids[2])
+                else { fatalError("No view for tvItemName: \(ids[2])") }
             
             self.itemView = itemView
             self.activity = activity
