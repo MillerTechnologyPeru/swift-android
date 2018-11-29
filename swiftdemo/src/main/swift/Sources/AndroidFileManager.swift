@@ -1,8 +1,8 @@
 //
-//  FileManagerActivity.swift
-//  swiftdemotarget
+//  AndroidFileManager.swift
+//  Android
 //
-//  Created by Marco Estrella on 11/9/18.
+//  Created by Marco Estrella on 11/29/18.
 //
 
 import Foundation
@@ -11,181 +11,59 @@ import java_lang
 import java_util
 import Android
 
- /// Needs to be implemented by app.
- @_silgen_name("SwiftAndroidMainActivity")
- public func SwiftAndroidMainActivity() -> SwiftSupportAppCompatActivity.Type {
- NSLog("FileManagerActivity bind \(#function)")
- return FileManagerActivity.self
- }
-
-// Like AppDelegate in iOS
-final class FileManagerActivity: SwiftSupportAppCompatActivity, AndroidFileManagerDelegate {
+public protocol AndroidFileManagerDelegate {
     
-    private let REQUEST_WRITE_STORAGE_PERMISSION = 1001
-    
-    override func onCreate(savedInstanceState: Android.OS.Bundle?) {
-        
-        let metrics = AndroidDisplayMetrics()
-        windowManager?.defaultDisplay?.getMetrics(outMetrics: metrics)
-        
-        let rootFrameLayout = AndroidWidgetFrameLayout.init(context: self)
-        rootFrameLayout.layoutParams = AndroidFrameLayoutLayoutParams(width: metrics.widthPixels, height: metrics.heightPixels)
-
-        let buttonWidth = Int(150 * metrics.density)
-        let buttonHeight = Int(80 * metrics.density)
-        
-        let layoutparams = AndroidFrameLayoutLayoutParams(width: buttonWidth, height: buttonHeight)
-        
-        let margin = Int(16 * metrics.density)
-        
-        layoutparams.setMargins(left: margin, top: margin, right: margin, bottom: margin)
-        
-        let button1 = AndroidButton.init(context: self)
-        button1.layoutParams = layoutparams
-        button1.text = "Open File Explorer"
-        
-        rootFrameLayout.addView(button1)
-        
-        setContentView(view: rootFrameLayout)
-        
-        button1.setOnClickListener {
-            
-            self.checkPermission()
-        }
-    }
-    
-    private func checkPermission(){
-        
-        if(Android.OS.Build.Version.Sdk.sdkInt.rawValue >= Android.OS.Build.VersionCodes.M
-            && checkSelfPermission(permission: Android.ManifestPermission.writeExternalStorage.rawValue) != Android.Content.PM.PackageManager.Permission.granted.rawValue) {
-            
-            log("\(type(of: self)) \(#function) request permission")
-            
-            let permissions = [Android.ManifestPermission.writeExternalStorage.rawValue]
-            
-            requestPermissions(permissions: permissions, requestCode: REQUEST_WRITE_STORAGE_PERMISSION)
-        } else {
-            
-            log("\(type(of: self)) \(#function) dont request permission")
-            showFileExplorer()
-        }
-    }
-    
-    override func onActivityResult(requestCode: Int, resultCode: Int, data: Android.Content.Intent?) {
-        
-        log("\(type(of: self)) \(#function) - requestCode = \(requestCode) - resultCode = \(resultCode)")
-        if(resultCode == REQUEST_WRITE_STORAGE_PERMISSION && resultCode == SwiftSupportAppCompatActivity.RESULT_OK){
-            
-            showFileExplorer()
-        }
-    }
-    
-    override func onRequestPermissionsResult(requestCode: Int, permissions: [String], grantResults: [Int]) {
-        
-        log("\(type(of: self)) \(#function)")
-        
-        if(requestCode == REQUEST_WRITE_STORAGE_PERMISSION){
-            
-            if(grantResults[0] == Android.Content.PM.PackageManager.Permission.granted.rawValue){
-                
-                showFileExplorer()
-            }else{
-                log(" \(type(of: self)) \(#function) Write in Storage Permission is required")
-                AndroidToast.makeText(context: self, text: "Write in Storage Permission is required", duration: AndroidToast.Dutation.short).show()
-            }
-        }
-    }
-    
-    private func showFileExplorer() {
-        
-        let androidFileManager = AndroidFileManager.init(context: self)
-        androidFileManager.delegate = self
-        androidFileManager.show()
-    }
-    
-    func fileManagerResult(path: String) {
-        
-        AndroidToast.makeText(context: self, text: "path: \(path)", duration: AndroidToast.Dutation.short).show()
-    }
+    func fileManagerResult(path: String)
 }
-        
-        /*
-        log("\(type(of: self)) \(#function) show ")
-        var selectedFile: Item?
-        
-        let viewId = getIdentifier(name: "file_manager_layout", type: "layout")
 
-        let view = AndroidLayoutInflater.from(context: self).inflate(resource: Android.R.Layout(rawValue: viewId), root: nil)
+public class AndroidFileManager {
+    
+    private var context: SwiftSupportAppCompatActivity!
+    private var dialog: AndroidDialog!
+    private var adapter: ItemAdapter!
+    
+    private var view: AndroidView!
+    private var tvCurrentFolder: Android.Widget.TextView!
+    private var rvItems: Android.Widget.RecyclerView!
+    private var ivAddFolder: Android.Widget.ImageView!
+    private var ivBack: Android.Widget.ImageView!
+    private var btnCancel: Android.Widget.Button!
+    private var btnOk: Android.Widget.Button!
+    
+    private var selectedFile: Item?
+    private var currentFolder = ""
+    private var navigation = [Navigation]()
+    public var delegate: AndroidFileManagerDelegate?
+    
+    public init(context: SwiftSupportAppCompatActivity) {
+        self.context = context
         
-        let dialog = AndroidDialog(context: self)
+        let viewId = context.getIdentifier(name: "file_manager_layout", type: "layout")
+        
+        view = AndroidLayoutInflater.from(context: context).inflate(resource: Android.R.Layout(rawValue: viewId), root: nil)
+        
+        dialog = AndroidDialog(context: context)
         dialog.requestWindowFeature(featureId: AndroidWindow.FEATURE_NO_TITLE)
         dialog.setContentView(view: view)
-        dialog.show()
         
-        let layoutParams = AndroidWindowManagerLayoutParams()
+        let rvItemsId = context.getIdentifier(name: "rvItems", type: "id")
+        let tvFolderNameId = context.getIdentifier(name: "tvFolderName", type: "id")
+        let ivBackId = context.getIdentifier(name: "ivBack", type: "id")
+        let ivAddFolderId = context.getIdentifier(name: "ivAddFolder", type: "id")
+        let btnCancelId = context.getIdentifier(name: "btnCancel", type: "id")
+        let btnOkId = context.getIdentifier(name: "btnOk", type: "id")
         
-        guard let dialogLayuotparams = dialog.window.attributes
-            else { return }
+        tvCurrentFolder = Android.Widget.TextView(casting: view.findViewById(tvFolderNameId)!)
+        rvItems = Android.Widget.RecyclerView(casting: view.findViewById(rvItemsId)!)
+        ivAddFolder = Android.Widget.ImageView(casting: view.findViewById(ivAddFolderId)!)
+        ivBack = Android.Widget.ImageView(casting: view.findViewById(ivBackId)!)
+        btnCancel = Android.Widget.Button(casting: view.findViewById(btnCancelId)!)
+        btnOk = Android.Widget.Button(casting: view.findViewById(btnOkId)!)
         
-        layoutParams.copyFrom(dialogLayuotparams)
+        adapter = ItemAdapter(activity: context)
+        rvItems.adapter = adapter
         
-        layoutParams.width = AndroidWindowManagerLayoutParams.MATCH_PARENT
-        layoutParams.height = AndroidWindowManagerLayoutParams.MATCH_PARENT
-        
-        dialog.window.attributes = layoutParams
-        
-        let rvItemsId = getIdentifier(name: "rvItems", type: "id")
-        let tvFolderNameId = getIdentifier(name: "tvFolderName", type: "id")
-        let ivBackId = getIdentifier(name: "ivBack", type: "id")
-        let ivAddFolderId = getIdentifier(name: "ivAddFolder", type: "id")
-        let btnCancelId = getIdentifier(name: "btnCancel", type: "id")
-        let btnOkId = getIdentifier(name: "btnOk", type: "id")
-        
-        let tvCurrentFolder = Android.Widget.TextView(casting: view.findViewById(tvFolderNameId)!)
-        let rvItems = Android.Widget.RecyclerView(casting: view.findViewById(rvItemsId)!)
-        let ivAddFolder = Android.Widget.ImageView(casting: view.findViewById(ivAddFolderId)!)
-        let ivBack = Android.Widget.ImageView(casting: view.findViewById(ivBackId)!)
-        let btnCancel = Android.Widget.Button(casting: view.findViewById(btnCancelId)!)
-        let btnOk = Android.Widget.Button(casting: view.findViewById(btnOkId)!)
-        
-        // Files and Folder Name
-        
-        let adapter = ItemAdapter(activity: self)
-        
-        adapter.checkItem = { isChecked, item in
-            
-            log("Checkbox checked \(isChecked): \(item.name).")
-            
-            if isChecked {
-                
-                selectedFile = item
-                btnOk?.text = "SELECT FILE"
-            } else {
-                
-                selectedFile = nil
-                btnOk?.text = "SELECT FOLDER"
-            }
-        }
-        
-        adapter.itemClick = { item in
-            
-            log("path: \(item.path)")
-            btnOk?.text = "SELECT FOLDER"
-            btnOk?.setEnabled(enabled: true)
-            
-            let itemChildren = self.getItemsFromPath(path: item.path)
-            
-            self.currentFolder = "/\(item.name)/"
-            self.navigation.append(Navigation(folderName: self.currentFolder, path: item.path, files: itemChildren))
-            
-            tvCurrentFolder?.text = self.currentFolder
-            adapter.addItems(items: itemChildren)
-            
-            ivBack?.setVisibility(visibility: AndroidView.AndroidViewVisibility.visible.rawValue)
-            ivAddFolder?.setVisibility(visibility: AndroidView.AndroidViewVisibility.visible.rawValue)
-        }
-        
-        rvItems?.adapter = adapter
+        settingsAdapter()
         
         let storages = getStorages()
         navigation.append(Navigation(folderName: currentFolder, path: "/", files: storages))
@@ -194,7 +72,104 @@ final class FileManagerActivity: SwiftSupportAppCompatActivity, AndroidFileManag
         tvCurrentFolder?.text = currentFolder
         adapter.addItems(items: storages)
         
-        // Back Button
+        settingsBackButton()
+        settingsAddFolderButton()
+        
+        btnCancel?.setOnClickListener {
+            
+            self.dialog.dismiss()
+        }
+        
+        btnOk?.setOnClickListener {
+            
+            let path: String?
+            
+            if self.selectedFile != nil {
+                
+                path = self.selectedFile?.path
+            } else {
+                
+                path = self.navigation.last?.path
+            }
+            
+            self.delegate?.fileManagerResult(path: path!)
+            
+            self.dialog.dismiss()
+        }
+    }
+    
+    private func settingsAddFolderButton(){
+        
+        ivAddFolder?.setVisibility(visibility: AndroidView.AndroidViewVisibility.invisible.rawValue)
+        
+        ivAddFolder?.setOnClickListener {
+            
+            let density = self.context.getDensity()
+            
+            let dp3 = Int(3 * density)
+            let dp24 = Int(24 * density)
+            
+            let llParams = AndroidLinearLayoutLayoutParams(width: AndroidLinearLayoutLayoutParams.MATCH_PARENT, height: AndroidLinearLayoutLayoutParams.WRAP_CONTENT)
+            
+            let linearLayout = AndroidLinearLayout.init(context: self.context)
+            linearLayout.layoutParams = llParams
+            linearLayout.setPadding(left: dp24, top: dp3, right: dp24, bottom: dp3)
+            linearLayout.orientation = AndroidLinearLayout.VERTICAL
+            
+            let editTextLayoutParams = AndroidLinearLayoutLayoutParams(width: AndroidLinearLayoutLayoutParams.MATCH_PARENT, height: AndroidLinearLayoutLayoutParams.WRAP_CONTENT)
+            editTextLayoutParams.setMargins(left: 0, top: 0, right: 0, bottom: 0)
+            
+            let editText = AndroidEditText(context: self.context)
+            editText.layoutParams = editTextLayoutParams
+            editText.hint = "Enter name"
+            
+            linearLayout.addView(editText)
+            
+            let alertDialog = AndroidAlertDialog.Builder(context: self.context)
+                .setTitle(title: "New Folder")
+                .setView(view: linearLayout)
+                .setNegativeButton(text: "Cancel", {dialog,_ in
+                    
+                    dialog?.dismiss()
+                })
+                .setPositiveButton(text: "Ok", { dialog,_ in
+                    
+                    guard let newFolderName = editText.getText()?.toString(), !newFolderName.isEmpty  else {
+                        AndroidToast.makeText(context: self.context, text: "Folder Name is required", duration: AndroidToast.Dutation.short).show()
+                        return
+                    }
+                    
+                    guard let currentNavigation = self.navigation.last else {
+                        AndroidToast.makeText(context: self.context, text: "Couldn't create the folder", duration: AndroidToast.Dutation.short).show()
+                        return
+                    }
+                    
+                    let currentFile = JavaFile(pathname: currentNavigation.path)
+                    
+                    if currentFile.isDirectory() {
+                        
+                        if JavaFile(pathname: "\(currentNavigation.path)/\(newFolderName)").mkdir() {
+                            
+                            let itemChildren = self.getItemsFromPath(path: currentNavigation.path)
+                            
+                            currentNavigation.files = itemChildren
+                            
+                            self.adapter.addItems(items: itemChildren)
+                        } else {
+                            
+                            AndroidToast.makeText(context: self.context, text: "Couldn't create the folder", duration: AndroidToast.Dutation.short).show()
+                        }
+                    }
+                    
+                    dialog?.dismiss()
+                })
+                .create()
+            
+            alertDialog.show()
+        }
+    }
+    
+    private func settingsBackButton(){
         
         ivBack?.setVisibility(visibility: AndroidView.AndroidViewVisibility.invisible.rawValue)
         
@@ -212,118 +187,73 @@ final class FileManagerActivity: SwiftSupportAppCompatActivity, AndroidFileManag
             
             if self.navigation.count == 1 {
                 
-                ivBack?.setVisibility(visibility: AndroidView.AndroidViewVisibility.invisible.rawValue)
-                ivAddFolder?.setVisibility(visibility: AndroidView.AndroidViewVisibility.invisible.rawValue)
+                self.ivBack?.setVisibility(visibility: AndroidView.AndroidViewVisibility.invisible.rawValue)
+                self.ivAddFolder?.setVisibility(visibility: AndroidView.AndroidViewVisibility.invisible.rawValue)
                 self.currentFolder = "Storages list"
                 
-                btnOk?.setEnabled(enabled: false)
-                btnOk?.text = "SELECT FOLDER"
+                self.btnOk?.setEnabled(enabled: false)
+                self.btnOk?.text = "SELECT FOLDER"
             } else {
                 self.currentFolder = lastFolder.folderName
             }
             
-            tvCurrentFolder?.text = self.currentFolder
-            adapter.addItems(items: lastFolder.files)
-        }
-        
-        // New Folder Button
-        
-        ivAddFolder?.setVisibility(visibility: AndroidView.AndroidViewVisibility.invisible.rawValue)
-        
-        ivAddFolder?.setOnClickListener {
-            
-            let density = self.getDensity()
-            
-            let dp3 = Int(3 * density)
-            let dp24 = Int(24 * density)
-            
-            let llParams = AndroidLinearLayoutLayoutParams(width: AndroidLinearLayoutLayoutParams.MATCH_PARENT, height: AndroidLinearLayoutLayoutParams.WRAP_CONTENT)
-            
-            let linearLayout = AndroidLinearLayout.init(context: self)
-            linearLayout.layoutParams = llParams
-            linearLayout.setPadding(left: dp24, top: dp3, right: dp24, bottom: dp3)
-            linearLayout.orientation = AndroidLinearLayout.VERTICAL
-            
-            let editTextLayoutParams = AndroidLinearLayoutLayoutParams(width: AndroidLinearLayoutLayoutParams.MATCH_PARENT, height: AndroidLinearLayoutLayoutParams.WRAP_CONTENT)
-            editTextLayoutParams.setMargins(left: 0, top: 0, right: 0, bottom: 0)
-            
-            let editText = AndroidEditText(context: self)
-            editText.layoutParams = editTextLayoutParams
-            editText.hint = "Enter name"
-            
-            linearLayout.addView(editText)
-            
-            let alertDialog = AndroidAlertDialog.Builder(context: self)
-                .setTitle(title: "New Folder")
-                .setView(view: linearLayout)
-                .setNegativeButton(text: "Cancel", {dialog,_ in
-                    
-                    dialog?.dismiss()
-                })
-                .setPositiveButton(text: "Ok", { dialog,_ in
-                    
-                    guard let newFolderName = editText.getText()?.toString(), !newFolderName.isEmpty  else {
-                        AndroidToast.makeText(context: self, text: "Folder Name is required", duration: AndroidToast.Dutation.short).show()
-                        return
-                    }
-                    
-                    guard let currentNavigation = self.navigation.last else {
-                        AndroidToast.makeText(context: self, text: "Couldn't create the folder", duration: AndroidToast.Dutation.short).show()
-                        return
-                    }
-                    
-                    let currentFile = JavaFile(pathname: currentNavigation.path)
-                    
-                    if currentFile.isDirectory() {
-                        
-                        if JavaFile(pathname: "\(currentNavigation.path)/\(newFolderName)").mkdir() {
-                            
-                            let itemChildren = self.getItemsFromPath(path: currentNavigation.path)
-                            
-                            currentNavigation.files = itemChildren
-    
-                            adapter.addItems(items: itemChildren)
-                        } else {
-                            
-                            AndroidToast.makeText(context: self, text: "Couldn't create the folder", duration: AndroidToast.Dutation.short).show()
-                        }
-                    }
-                    
-                    dialog?.dismiss()
-                })
-                .create()
-            
-            alertDialog.show()
-        }
-        
-        //Buttons
-        
-        btnCancel?.setOnClickListener {
-            
-            dialog.dismiss()
-        }
-        
-        btnOk?.setOnClickListener {
-            
-            let path: String?
-            
-            if selectedFile != nil {
-                
-                path = selectedFile?.path
-            } else {
-                
-                path = self.navigation.last?.path
-            }
-            
-            AndroidToast.makeText(context: self, text: "path: \(path!)", duration: AndroidToast.Dutation.short).show()
-            
-            dialog.dismiss()
+            self.tvCurrentFolder?.text = self.currentFolder
+            self.adapter.addItems(items: lastFolder.files)
         }
     }
     
-    private var currentFolder = ""
+    private func settingsAdapter(){
     
-    private var navigation = [Navigation]()
+        adapter.checkItem = { isChecked, item in
+    
+            log("Checkbox checked \(isChecked): \(item.name).")
+    
+            if isChecked {
+    
+                self.selectedFile = item
+                self.btnOk?.text = "SELECT FILE"
+            } else {
+    
+                self.selectedFile = nil
+                self.btnOk?.text = "SELECT FOLDER"
+            }
+        }
+    
+        adapter.itemClick = { item in
+    
+            log("path: \(item.path)")
+            self.btnOk?.text = "SELECT FOLDER"
+            self.btnOk?.setEnabled(enabled: true)
+        
+            let itemChildren = self.getItemsFromPath(path: item.path)
+        
+            self.currentFolder = "/\(item.name)/"
+            self.navigation.append(Navigation(folderName: self.currentFolder, path: item.path, files: itemChildren))
+        
+            self.tvCurrentFolder?.text = self.currentFolder
+            self.adapter.addItems(items: itemChildren)
+        
+            self.ivBack?.setVisibility(visibility: AndroidView.AndroidViewVisibility.visible.rawValue)
+            self.ivAddFolder?.setVisibility(visibility: AndroidView.AndroidViewVisibility.visible.rawValue)
+        }
+    }
+    
+    public func show(){
+        
+        dialog.show()
+        
+        let layoutParams = AndroidWindowManagerLayoutParams()
+        
+        guard let dialogLayuotparams = dialog.window.attributes
+            else { return }
+        
+        layoutParams.copyFrom(dialogLayuotparams)
+        
+        layoutParams.width = AndroidWindowManagerLayoutParams.MATCH_PARENT
+        layoutParams.height = AndroidWindowManagerLayoutParams.MATCH_PARENT
+        
+        dialog.window.attributes = layoutParams
+    }
     
     private func getStorages() -> [Item] {
         
@@ -339,7 +269,7 @@ final class FileManagerActivity: SwiftSupportAppCompatActivity, AndroidFileManag
             storages.append(Item(type: ItemType.Storage, path: path, name: "Internal storage"))
         }
         
-        let _extStorages = self.getExternalFilesDirs(type: nil)
+        let _extStorages = context.getExternalFilesDirs(type: nil)
         
         guard var extStorages = _extStorages else {
             log("Not Ext Storages")
@@ -372,7 +302,7 @@ final class FileManagerActivity: SwiftSupportAppCompatActivity, AndroidFileManag
         
         guard let files = children else {
             
-            AndroidToast.makeText(context: self, text: "It does'nt content any file.", duration: AndroidToast.Dutation.short).show()
+            AndroidToast.makeText(context: context, text: "It does'nt content any file.", duration: AndroidToast.Dutation.short).show()
             return []
         }
         
@@ -390,15 +320,16 @@ final class FileManagerActivity: SwiftSupportAppCompatActivity, AndroidFileManag
         }
         
         return itemChildren
-    }*/
-/*
-public enum ItemType: Int {
+    }
+}
+
+fileprivate enum ItemType: Int {
     case Storage
     case Folder
     case File
 }
 
-public class Navigation {
+fileprivate class Navigation {
     
     public let folderName: String
     public let path: String
@@ -412,7 +343,7 @@ public class Navigation {
     }
 }
 
-public class Item {
+fileprivate class Item {
     
     public let type: ItemType
     public let path: String
@@ -427,7 +358,7 @@ public class Item {
     }
 }
 
-class ItemAdapter: Android.Widget.RecyclerView.Adapter {
+fileprivate class ItemAdapter: Android.Widget.RecyclerView.Adapter {
     
     private var activity: SwiftSupportAppCompatActivity?
     private var items = [Item]()
@@ -526,7 +457,7 @@ class ItemAdapter: Android.Widget.RecyclerView.Adapter {
             self.checkItem?(isChecked, item)
             
             if self.lastCheckedPosition != -1 && self.lastCheckedPosition != position {
-
+                
                 self.items[self.lastCheckedPosition].selected = false
                 self.notifyItemChanged(position: self.lastCheckedPosition)
             }
@@ -630,4 +561,3 @@ class ItemAdapter: Android.Widget.RecyclerView.Adapter {
         log("\(type(of: self)) \(#function)")
     }
 }
-*/

@@ -85,7 +85,7 @@
 
         <Button
             android:id="@+id/btnOk"
-            android:text="OK"
+            android:text="SELECT FOLDER"
             android:enabled="false"
             android:layout_alignParentEnd="true"
             android:layout_width="wrap_content"
