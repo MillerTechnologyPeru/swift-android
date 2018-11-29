@@ -125,15 +125,24 @@ final class FileManagerActivity: SwiftSupportAppCompatActivity {
         let tvFolderNameId = getIdentifier(name: "tvFolderName", type: "id")
         let ivBackId = getIdentifier(name: "ivBack", type: "id")
         let ivAddFolderId = getIdentifier(name: "ivAddFolder", type: "id")
+        let btnCancelId = getIdentifier(name: "btnCancel", type: "id")
+        let btnOkId = getIdentifier(name: "btnOk", type: "id")
         
         let tvCurrentFolder = Android.Widget.TextView(casting: view.findViewById(tvFolderNameId)!)
         let rvItems = Android.Widget.RecyclerView(casting: view.findViewById(rvItemsId)!)
         let ivAddFolder = Android.Widget.ImageView(casting: view.findViewById(ivAddFolderId)!)
         let ivBack = Android.Widget.ImageView(casting: view.findViewById(ivBackId)!)
+        let btnCancel = Android.Widget.Button(casting: view.findViewById(btnCancelId)!)
+        let btnOk = Android.Widget.Button(casting: view.findViewById(btnOkId)!)
         
         // Files and Folder Name
         
         let adapter = ItemAdapter(activity: self)
+        
+        adapter.checkItem = { isChecked, item in
+            
+            log("Checkbox checked \(isChecked): \(item.name).")
+        }
         
         adapter.itemClick = { item in
             
@@ -156,6 +165,7 @@ final class FileManagerActivity: SwiftSupportAppCompatActivity {
         let storages = getStorages()
         navigation.append(Navigation(folderName: currentFolder, path: "/", files: storages))
         
+        currentFolder = "Storages/"
         tvCurrentFolder?.text = currentFolder
         adapter.addItems(items: storages)
         
@@ -227,7 +237,7 @@ final class FileManagerActivity: SwiftSupportAppCompatActivity {
                         return
                     }
                     
-                    guard var currentNavigation = self.navigation.last else {
+                    guard let currentNavigation = self.navigation.last else {
                         AndroidToast.makeText(context: self, text: "Couldn't create the folder", duration: AndroidToast.Dutation.short).show()
                         return
                     }
@@ -240,8 +250,9 @@ final class FileManagerActivity: SwiftSupportAppCompatActivity {
                             
                             let itemChildren = self.getItemsFromPath(path: currentNavigation.path)
                             
-                            currentNavigation.updateFiles(newFiles: itemChildren)
-                            self.navigation[self.navigation.count-1] = currentNavigation
+                            currentNavigation.files = itemChildren
+                            //currentNavigation.updateFiles(newFiles: itemChildren)
+                            //self.navigation[self.navigation.count-1] = currentNavigation
     
                             adapter.addItems(items: itemChildren)
                         } else {
@@ -256,9 +267,21 @@ final class FileManagerActivity: SwiftSupportAppCompatActivity {
             
             alertDialog.show()
         }
+        
+        //Buttons
+        
+        btnCancel?.setOnClickListener {
+            
+            dialog.dismiss()
+        }
+        
+        btnOk?.setOnClickListener {
+            
+            
+        }
     }
     
-    private var currentFolder = "Storages/"
+    private var currentFolder = ""
     
     private var navigation = [Navigation]()
     
@@ -336,22 +359,40 @@ public enum ItemType: Int {
     case File
 }
 
-public struct Navigation {
+public class Navigation {
     
     public let folderName: String
     public let path: String
     public var files: [Item]
     
-    mutating func updateFiles( newFiles: [Item] ) {
-        self.files = newFiles
+    init(folderName: String, path: String, files: [Item]) {
+        
+        self.folderName = folderName
+        self.path = path
+        self.files = files
     }
+    /*mutating func updateFiles( newFiles: [Item] ) {
+        self.files = newFiles
+    }*/
 }
 
-public struct Item {
+public class Item {
     
     public let type: ItemType
     public let path: String
     public let name: String
+    public var selected: Bool
+    
+    init(type: ItemType, path: String, name: String) {
+        self.type = type
+        self.path = path
+        self.name = name
+        self.selected = false
+    }
+    
+    /*mutating func updateSelected(_ selected: Bool){
+        self.selected = selected
+    }*/
 }
 
 class ItemAdapter: Android.Widget.RecyclerView.Adapter {
@@ -360,6 +401,8 @@ class ItemAdapter: Android.Widget.RecyclerView.Adapter {
     private var items = [Item]()
     public var itemClick: ((Item) -> ())?
     public var checkItem: ((Bool, Item) -> ())?
+    
+    private var lastCheckedPosition = -1
     
     public required init(javaObject: jobject?) {
         super.init(javaObject: javaObject)
@@ -408,7 +451,7 @@ class ItemAdapter: Android.Widget.RecyclerView.Adapter {
         
         let linearLayout = AndroidLinearLayout(context: activity)
         linearLayout.layoutParams = llParams
-        linearLayout.setPadding(left: dp4, top: 0, right: 0, bottom: 0)
+        linearLayout.setPadding(left: dp4, top: dp4, right: dp4, bottom: dp4)
         linearLayout.orientation = AndroidLinearLayout.HORIZONTAL
         
         let cbSelect = AndroidCheckBox(context: activity)
@@ -443,17 +486,29 @@ class ItemAdapter: Android.Widget.RecyclerView.Adapter {
         let itemViewHolder = holder as! ItemViewHolder
         
         let item = items[position]
-        
         itemViewHolder.bind(item)
-        
-        itemViewHolder.tvItemName?.setOnClickListener {
-            self.itemClick?(item)
-        }
         
         itemViewHolder.cbSelect?.setOnCheckedChangeListener { buttonView, isChecked in
             
+            item.selected = isChecked
             
-            log("Checkbox checked \(isChecked): \(item.name).")
+            if self.lastCheckedPosition != -1 && self.lastCheckedPosition != position {
+
+                self.items[self.lastCheckedPosition].selected = false
+                self.notifyItemChanged(position: self.lastCheckedPosition)
+            }
+            
+            self.lastCheckedPosition = position
+        }
+        
+        if item.type == ItemType.File {
+            
+            itemViewHolder.tvItemName?.setOnClickListener(nil)
+            return
+        }
+        
+        itemViewHolder.tvItemName?.setOnClickListener {
+            self.itemClick?(item)
         }
     }
     
@@ -505,13 +560,26 @@ class ItemAdapter: Android.Widget.RecyclerView.Adapter {
             
             switch item.type {
             case .Storage:
+                
                 self.cbSelect?.setVisibility(visibility: AndroidView.AndroidViewVisibility.gone.rawValue)
                 _imageId = activity?.getIdentifier(name: "ic_sd_storage", type: "drawable")
             case .Folder:
-                self.cbSelect?.setVisibility(visibility: AndroidView.AndroidViewVisibility.visible.rawValue)
+                
+                self.cbSelect?.setVisibility(visibility: AndroidView.AndroidViewVisibility.gone.rawValue)
                 _imageId = activity?.getIdentifier(name: "ic_folder", type: "drawable")
             case .File:
-                self.cbSelect?.setVisibility(visibility: AndroidView.AndroidViewVisibility.visible.rawValue)
+                
+                let fileExtension = item.path.split(separator: ".")[1]
+                
+                if fileExtension == "json" || fileExtension == "climateconfig" {
+                    
+                    self.cbSelect?.setChecked(item.selected)
+                    self.cbSelect?.setVisibility(visibility: AndroidView.AndroidViewVisibility.visible.rawValue)
+                } else {
+                    
+                    self.cbSelect?.setVisibility(visibility: AndroidView.AndroidViewVisibility.gone.rawValue)
+                }
+                
                 _imageId = activity?.getIdentifier(name: "ic_file", type: "drawable")
             }
             
