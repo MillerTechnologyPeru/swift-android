@@ -11,12 +11,13 @@ import java_lang
 import java_util
 import Android
 
+/*
  /// Needs to be implemented by app.
  @_silgen_name("SwiftAndroidMainActivity")
  public func SwiftAndroidMainActivity() -> SwiftSupportAppCompatActivity.Type {
  NSLog("FileManagerActivity bind \(#function)")
  return FileManagerActivity.self
- }
+ }*/
 
 // Like AppDelegate in iOS
 final class FileManagerActivity: SwiftSupportAppCompatActivity, AndroidFileManagerDelegate {

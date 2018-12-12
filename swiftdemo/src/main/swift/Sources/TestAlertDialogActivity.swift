@@ -10,13 +10,13 @@ import java_swift
 import java_lang
 import java_util
 import Android
-/*
+
 /// Needs to be implemented by app.
 @_silgen_name("SwiftAndroidMainActivity")
 public func SwiftAndroidMainActivity() -> SwiftSupportAppCompatActivity.Type {
     NSLog("TestAlertDialogActivity bind \(#function)")
     return TestAlertDialogActivity.self
-}*/
+}
 
 // Like AppDelegate in iOS
 final class TestAlertDialogActivity: SwiftSupportAppCompatActivity {
@@ -31,7 +31,7 @@ final class TestAlertDialogActivity: SwiftSupportAppCompatActivity {
         rootFrameLayout.setBackgroundColor(color: AndroidGraphicsColor.CYAN)
         
         let buttonWidth = Int(150 * metrics.density)
-        let buttonHeight = Int(80 * metrics.density)
+        let buttonHeight = Int(50 * metrics.density)
         
         let layoutparams = AndroidFrameLayoutLayoutParams(width: buttonWidth, height: buttonHeight)
         
@@ -46,22 +46,58 @@ final class TestAlertDialogActivity: SwiftSupportAppCompatActivity {
         let button2 = AndroidButton.init(context: self)
         button2.layoutParams = layoutparams
         button2.text = "Show Alert 2"
-        button2.setY(y: 120 * metrics.density)
+        button2.setY(y: 70 * metrics.density)
         
         let button3 = AndroidButton.init(context: self)
         button3.layoutParams = layoutparams
         button3.text = "Show Alert 3"
-        button3.setY(y: 300 * metrics.density)
+        button3.setY(y: 150 * metrics.density)
         
         let button4 = AndroidButton.init(context: self)
         button4.layoutParams = layoutparams
         button4.text = "Show Alert 4"
-        button4.setY(y: 450 * metrics.density)
+        button4.setY(y: 220 * metrics.density)
+        
+        let button5 = AndroidButton(context: self)
+        button5.layoutParams = layoutparams
+        button5.text = "Show ProgressDialog"
+        button5.setY(y: 280 * metrics.density)
+        
+        let switchCompat = AndroidSwitchCompat(context: self)
+        switchCompat.setY(y: 340 * metrics.density)
+        switchCompat.setX(x: 12 * metrics.density)
+        switchCompat.text = "This is a SwitchCompat"
+        switchCompat.setShowText(false)
+        switchCompat.setTextOn("ON")
+        switchCompat.setTextOff("OFF")
+        switchCompat.layoutParams = AndroidFrameLayoutLayoutParams(width: AndroidFrameLayoutLayoutParams.WRAP_CONTENT, height: AndroidFrameLayoutLayoutParams.WRAP_CONTENT)
+        
+        switchCompat.setOnCheckedChangeListener { compoundButton, checked in
+            
+            log("Switch was checked? : \(checked)")
+        }
+        
+        let progressBar = AndroidProgressBar.init(context: self)
+        progressBar.setIndeterminate(true)
+        progressBar.layoutParams = AndroidFrameLayoutLayoutParams(width: buttonHeight, height: buttonHeight)
+        progressBar.setY(y: 400 * metrics.density)
+        progressBar.setX(x: 12 * metrics.density)
+        
+        let seekBar = AndroidSeekBar.init(context: self)
+        seekBar.layoutParams = AndroidFrameLayoutLayoutParams(width: buttonWidth, height: AndroidFrameLayoutLayoutParams.WRAP_CONTENT)
+        seekBar.setY(y: 470 * metrics.density)
+        seekBar.setX(x: 12 * metrics.density)
+        seekBar.setMax(10)
+        seekBar.setOnSeekBarChangeListener(OnSeekBarListener())
         
         rootFrameLayout.addView(button1)
         rootFrameLayout.addView(button2)
         rootFrameLayout.addView(button3)
         rootFrameLayout.addView(button4)
+        rootFrameLayout.addView(button5)
+        rootFrameLayout.addView(switchCompat)
+        rootFrameLayout.addView(progressBar)
+        rootFrameLayout.addView(seekBar)
         
         setContentView(view: rootFrameLayout)
         
@@ -84,6 +120,26 @@ final class TestAlertDialogActivity: SwiftSupportAppCompatActivity {
             
             self.showAlert4()
         }
+        
+        button5.setOnClickListener {
+            
+            self.showProgressDialog2()
+        }
+    }
+    
+    private func showProgressDialog(){
+        
+        let progressDialog = AndroidProgressDialog(context: self)
+        progressDialog.setIndeterminate(true)
+        progressDialog.setTitle("Wait")
+        progressDialog.setMessage("Downloading something...")
+        progressDialog.setCancelable(cancelable: true)
+        progressDialog.show()
+    }
+    
+    private func showProgressDialog2(){
+        
+        AndroidProgressDialog.show(context: self, title: "Wait", message: "Uploading something..", indeterminate: true, cancelable: true)
     }
     
     private func showAlert1(){
@@ -214,5 +270,21 @@ final class TestAlertDialogActivity: SwiftSupportAppCompatActivity {
             .setTitle(title: "Title")
             .setView(view: linearLayout)
             .show()
+    }
+}
+
+class OnSeekBarListener: AndroidOnSeekBarChangeListener {
+    
+    override func onProgressChanged(seekBar: AndroidSeekBar?, progress: Int, fromUser: Bool) {
+        
+        log("Seekbar->Progress: \(progress)")
+    }
+    
+    override func onStartTrackingTouch(seekBar: AndroidSeekBar?) {
+        
+    }
+    
+    override func onStopTrackingTouch(seekBar: AndroidSeekBar?) {
+        
     }
 }
