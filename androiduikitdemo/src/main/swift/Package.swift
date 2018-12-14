@@ -7,12 +7,13 @@ let package = Package(
         .library(name: "androiduikitdemo", type: .dynamic, targets: ["androiduikittarget"]),
     ],
     dependencies: [
-        .package(url: "git@github.com:PureSwift/AndroidUIKit.git", .branch("master"))
+        .package(url: "git@github.com:PureSwift/AndroidUIKit.git", .branch("master")),
+        .package(url: "git@github.com:PureSwift/AndroidBluetooth.git", .branch("master"))
     ],
     targets: [
         .target(
             name: "androiduikittarget",
-            dependencies: ["AndroidUIKit"],
+            dependencies: ["AndroidUIKit", "AndroidBluetooth"],
             path: "Sources"
         ),
     ]

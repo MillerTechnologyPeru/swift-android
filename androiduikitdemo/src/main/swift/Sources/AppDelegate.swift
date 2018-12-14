@@ -12,11 +12,12 @@ import UIKit
 #else
 import AndroidUIKit
 import Android
+import AndroidBluetooth
 #endif
 
-final class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    static var shared: AppDelegate { return UIApplication.shared.delegate as! AppDelegate }
+    //static var shared: AppDelegate { return UIApplication.shared.delegate as! AppDelegate }
     
     var window: UIWindow?
     
@@ -29,7 +30,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         //self.window?.backgroundColor = .red
-        self.window?.rootViewController = TestUITabBarViewController()
+        self.window?.rootViewController = TestDocPickerViewController()
         //self.window?.rootViewController = UINavigationController.init(rootViewController: NavFirstViewController())
         self.window?.makeKeyAndVisible()
         
@@ -60,3 +61,152 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
 }
+
+// MARK: - iOS
+
+#if os(iOS)
+
+typealias NativeAppDelegate = iOSAppDelegate
+
+@UIApplicationMain
+final class iOSAppDelegate: AppDelegate {
+    
+    static var shared: iOSAppDelegate { return UIApplication.shared.delegate as! iOSAppDelegate }
+}
+
+// MARK: - Android
+
+#elseif os(Android) || os(macOS)
+
+typealias NativeAppDelegate = AndroidAppDelegate
+
+final class AndroidAppDelegate: AppDelegate {
+    
+    static var shared: AndroidAppDelegate { return UIApplication.shared.delegate as! AndroidAppDelegate }
+    
+    var bluetoothEnabled: (() -> ())?
+    
+    override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        guard super.application(application, didFinishLaunchingWithOptions: launchOptions)
+            else { return false }
+        
+        NSLog("UIScreen scale: \(UIScreen.main.scale)")
+        NSLog("UIScreen native scale: \(UIScreen.main.nativeScale)")
+        NSLog("UIScreen size: \(UIScreen.main.bounds.size)")
+        NSLog("UIScreen native size: \(UIScreen.main.nativeBounds.size)")
+        
+        enableBluetooth()
+        
+        return true
+    }
+}
+#endif
+
+// MARK: - iOS Info Plist
+
+#if os(iOS)
+/// Version of the app.
+public let AppVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+
+/// Build of the app.
+public let AppBuild = Int(Bundle.main.infoDictionary!["CFBundleVersion"] as! String)!
+#endif
+
+// MARK: - Android Permissions
+
+#if os(Android) || os(macOS)
+
+extension AndroidAppDelegate {
+    
+    internal enum AndroidPermissionRequest {
+        
+        static let enableBluetooth = 1000
+        static let gpsAndWriteStorage = 2000
+    }
+}
+
+extension AndroidAppDelegate {
+    
+    func application(_ application: UIApplication, activityResult requestCode: Int, resultCode: Int, data: Android.Content.Intent?) {
+        
+        log("\(type(of: self)) \(#function) - requestCode = \(requestCode) - resultCode = \(resultCode)")
+        
+        if resultCode == AndroidPermissionRequest.enableBluetooth,
+            resultCode == SwiftSupportAppCompatActivity.RESULT_OK {
+            
+            // no need to request permissions
+            if requestLocationPermissions() {
+                
+                //
+                bluetoothEnabled?()
+            }
+        }
+    }
+    
+    func application(_ application: UIApplication, requestPermissionsResult requestCode: Int, permissions: [String], grantResults: [Int]) {
+        
+        log("\(type(of: self)) \(#function)")
+        
+        if requestCode == AndroidPermissionRequest.gpsAndWriteStorage {
+            
+            if grantResults[0] == Android.Content.PM.PackageManager.Permission.granted.rawValue {
+                
+                // permission granted, now we can scan
+                bluetoothEnabled?()
+                
+            } else {
+                
+                log("\(type(of: self)) \(#function) GPS Permission is required")
+            }
+        }
+    }
+}
+
+extension AndroidAppDelegate {
+    
+    /// Checks if permissions are needed.
+    @discardableResult
+    func enableBluetooth(hostController: Android.Bluetooth.Adapter = Android.Bluetooth.Adapter.default!) -> Bool {
+        
+        guard hostController.isEnabled() == false
+            else { return requestLocationPermissions() }
+        
+        let enableBluetoothIntent = Android.Content.Intent(action: Android.Bluetooth.Adapter.Action.requestEnable.rawValue)
+        
+        UIApplication.shared.androidActivity.startActivityForResult(intent: enableBluetoothIntent,
+                                                                    requestCode: AndroidPermissionRequest.enableBluetooth)
+        
+        log("\(type(of: self)) \(#function) enable Bluetooth")
+        
+        return false
+    }
+    
+    @discardableResult
+    func requestLocationPermissions() -> Bool {
+        
+        let activity = UIApplication.shared.androidActivity
+        
+        if Android.OS.Build.Version.Sdk.sdkInt.rawValue >= Android.OS.Build.VersionCodes.M,
+            activity.checkSelfPermission(permission: Android.ManifestPermission.accessCoarseLocation.rawValue) != Android.Content.PM.PackageManager.Permission.granted.rawValue {
+            
+            log("\(type(of: self)) \(#function) request permission")
+            
+            let permissions = [Android.ManifestPermission.accessCoarseLocation.rawValue, Android.ManifestPermission.writeExternalStorage.rawValue]
+            
+            activity.requestPermissions(permissions: permissions, requestCode: AndroidPermissionRequest.gpsAndWriteStorage)
+            
+            return false
+            
+        } else {
+            
+            log("\(type(of: self)) \(#function) dont need to request permissions")
+            
+            return true
+        }
+    }
+}
+
+#endif
+
+

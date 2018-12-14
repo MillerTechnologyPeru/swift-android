@@ -52,32 +52,41 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         navigationItem.title = "UITableView"
         
         let leftItem = UIBarButtonItem.init(title: "Views", style: .done, target: nil, action: nil)
+        #if os(Android) || os(macOS)
         leftItem.action = {
             NSLog("Clicked on Views")
             let child2ViewController = MainViewController()
             self.navigationController?.pushViewController(child2ViewController, animated: false)
         }
+        #endif
         
         let rightItem = UIBarButtonItem.init(title: "RB", style: .done, target: nil, action: nil)
+        #if os(Android) || os(macOS)
         rightItem.action = {
             NSLog("Hello Right Button")
         }
+        #endif
         
         let rightItem2 = UIBarButtonItem.init(title: "RB", style: .done, target: nil, action: nil)
+        #if os(Android) || os(macOS)
         rightItem2.action = {
             NSLog("Hello Right Button 2")
         }
-        
+        #endif
         
         let rightItem3 = UIBarButtonItem.init(title: "RB", style: .done, target: nil, action: nil)
+        #if os(Android) || os(macOS)
         rightItem3.action = {
             NSLog("Hello Right Button 3")
         }
+        #endif
         
         let rightItem4 = UIBarButtonItem.init(title: "RB", style: .done, target: nil, action: nil)
+        #if os(Android) || os(macOS)
         rightItem4.action = {
             NSLog("Hello Right Button 4")
         }
+        #endif
         
         navigationItem.leftBarButtonItem = leftItem
         
@@ -86,6 +95,7 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         
         //TOOLBAR
         
+        #if os(Android) || os(macOS)
          var items = [UIBarButtonItem]()
         
         let toolbarItem1 = UIBarButtonItem(title: "Breakfast", style: .done, target: self) {
@@ -104,7 +114,6 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
             
             NSLog("Toolbar Item 3 clicked")
         }
-        
         toolbarItem3.image = UIImage(named: "ic_chat")
         
         items.append(toolbarItem1)
@@ -113,18 +122,7 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         
         
         self.navigationController?.toolbar.items = items
-
-        /*
-        let delay2 = DispatchTime.now() + .seconds(3)
-        DispatchQueue.global(qos: .background).asyncAfter(deadline: delay2) {
-            #if os(Android)
-            UIScreen.main.activity.runOnMainThread { [weak self] in
-                
-                let child2ViewController = MainViewController()
-                self?.navigationController?.pushViewController(child2ViewController, animated: false)
-            }
-            #endif
-        }*/
+        #endif
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -162,43 +160,57 @@ final class UITableTestViewController: UIViewController, UITableViewDataSource, 
         
         let action1 = UIAlertAction.init(title: "Default 0", style: UIAlertActionStyle.default) { action in
             
+            #if os(Android) || os(macOS)
             AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "You've pressed default 0", duration: AndroidToast.Dutation.short).show()
+            #endif
             print("You've pressed default 0");
         }
         
         let action12 = UIAlertAction.init(title: "Default 1", style: UIAlertActionStyle.default) { action in
             
+            #if os(Android) || os(macOS)
             AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "You've pressed default 1 ", duration: AndroidToast.Dutation.short).show()
+            #endif
             print("You've pressed default 1");
         }
         
         let action13 = UIAlertAction.init(title: "Default 2", style: UIAlertActionStyle.default) { action in
             
+            #if os(Android) || os(macOS)
             AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "You've pressed default 2", duration: AndroidToast.Dutation.short).show()
+            #endif
             print("You've pressed default 2");
         }
         
         let action14 = UIAlertAction.init(title: "Default 3", style: UIAlertActionStyle.default) { action in
             
+            #if os(Android) || os(macOS)
             AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "You've pressed default 3", duration: AndroidToast.Dutation.short).show()
+            #endif
             print("You've pressed default 3");
         }
 
         let action2 = UIAlertAction.init(title: "Cancel", style: UIAlertActionStyle.cancel) { action in
             
+            #if os(Android) || os(macOS)
             AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "You've pressed cancel", duration: AndroidToast.Dutation.short).show()
+            #endif
             print("You've pressed cancel");
         }
         
         let action22 = UIAlertAction.init(title: "Cancel 2", style: UIAlertActionStyle.cancel) { action in
             
+            #if os(Android) || os(macOS)
             AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "You've pressed cancel 2", duration: AndroidToast.Dutation.short).show()
+            #endif
             print("You've pressed cancel 2");
         }
         
         let action3 = UIAlertAction.init(title: "Destructive", style: UIAlertActionStyle.destructive) { action in
             
+            #if os(Android) || os(macOS)
             AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "You've pressed the destructive", duration: AndroidToast.Dutation.short).show()
+            #endif
             print("You've pressed the destructive");
         }
         

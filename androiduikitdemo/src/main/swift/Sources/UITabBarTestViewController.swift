@@ -18,18 +18,19 @@ final class UITabBarTestViewController: UIViewController, UITabBarDelegate {
     override func loadView() {
         self.view = UIView(frame: CGRect(x: 0,
                                          y: 0,
-                                         width: UIApplication.shared.androidActivity.screen.bounds.width,
-                                         height: UIApplication.shared.androidActivity.screen.bounds.height))
+                                         width: UIScreen.main.bounds.width,
+                                         height: UIScreen.main.bounds.height))
+        self.view.backgroundColor = UIColor.white
     }
     
     override func viewDidLoad() {
         
         NSLog("\(type(of: self)) \(#function)")
         
-        let uiTabBar = UITabBar.init(frame: CGRect(x: 0,
-                                                   y: 0,
-                                                   width: UIApplication.shared.androidActivity.screen.bounds.width,
-                                                   height: 56))
+        let uiTabBar = UITabBar(frame: CGRect(x: 0,
+                                              y: 0,
+                                              width: UIScreen.main.bounds.width,
+                                              height: 56))
         
         var items = [UITabBarItem]()
         

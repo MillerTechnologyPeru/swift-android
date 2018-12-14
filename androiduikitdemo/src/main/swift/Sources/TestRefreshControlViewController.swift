@@ -40,7 +40,9 @@ final class TestRefreshControlViewController: UITableViewController {
         
         let actionRefresh: () -> () = {
             
+            #if os(Android) || os(macOS)
             AndroidToast.makeText(context: UIApplication.shared.androidActivity, text: "I'm refreshing, :)", duration: AndroidToast.Dutation.short).show()
+            #endif
             
             let delay = DispatchTime.now() + .seconds(3)
             
@@ -54,7 +56,9 @@ final class TestRefreshControlViewController: UITableViewController {
             }
         }
         
+        #if os(Android) || os(macOS)
         refreshControl.addTarget(action: actionRefresh, for: UIControlEvents.touchDown)
+        #endif
         
         self.refreshControl = refreshControl
         
@@ -72,6 +76,7 @@ final class TestRefreshControlViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
+        #if os(Android) || os(macOS)
         let peripheralViewLayoutId = UIApplication.shared.androidActivity.getIdentifier(name: "list_header", type: "layout")
         
         let layoutInflarer = Android.View.LayoutInflater.from(context: UIApplication.shared.androidActivity)
@@ -92,6 +97,9 @@ final class TestRefreshControlViewController: UITableViewController {
         uiView.androidView.layoutParams = Android.Widget.FrameLayout.FLayoutParams(width: Android.Widget.FrameLayout.FLayoutParams.MATCH_PARENT, height: Android.Widget.FrameLayout.FLayoutParams.WRAP_CONTENT)
         
         return uiView
+        #else
+        return nil
+        #endif
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -108,13 +116,14 @@ final class TestRefreshControlViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
         
+        #if os(Android) || os(macOS)
         let layoutName = "list_item"
         
         if cell.layoutName != layoutName {
-            cell.inflateAndroidLayout(layoutName: layoutName)
+            cell.inflateAndroidLayout(layoutName)
         }
         
-        let itemView = cell.getItemView()
+        let itemView = cell.androidView
         
         let tvItemId = UIApplication.shared.androidActivity.getIdentifier(name: "tvItem", type: "id")
         
@@ -126,6 +135,7 @@ final class TestRefreshControlViewController: UITableViewController {
         let item = data[indexPath.section].array[indexPath.row]
         
         tvItem?.text = item
+        #endif
         
         return cell
     }

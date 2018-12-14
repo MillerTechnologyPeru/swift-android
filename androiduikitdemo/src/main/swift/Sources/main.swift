@@ -13,7 +13,7 @@ import Foundation
 
 import UIKit
 
-UIApplicationMain(0, nil, nil, NSStringFromClass(AppDelegate.self))
+//UIApplicationMain(0, nil, nil, NSStringFromClass(AppDelegate.self))
 
 #else
 
@@ -29,7 +29,7 @@ public func SwiftAndroidMainApplication() -> SwiftApplication.Type {
     
     NSLog("\(#function)")
     
-    UIApplication.shared.delegate = AppDelegate()
+    UIApplication.shared.delegate = AndroidAppDelegate()
     
     return AndroidUIKitApplication.self
 }

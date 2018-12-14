@@ -121,11 +121,14 @@ final class MainViewController: UIViewController {
             #endif
         }*/
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "ThirdVC", style: .done, target: nil, action: {
+        #if os(Android) || os(macOS)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "ThirdVC", style: .done, target: nil, action: {
           
             let testThirdVC = TestThirdViewController()
             self.navigationController?.pushViewController(testThirdVC, animated: false)
         })
+        #endif
+        
         navigationItem.title = "Views Demo"
         
         printViews()

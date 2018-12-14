@@ -17,6 +17,7 @@ final class TestUITabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         
+        #if os(Android) || os(macOS)
         let firstVCNavItem = UINavigationItem.init(title: "First VC")
         firstVCNavItem.rightBarButtonItem = UIBarButtonItem.init(title: "Android", style: .done, target: nil, action: { NSLog("Hi, im Android")})
         firstVCNavItem.rightBarButtonItem?.image = UIImage.init(named: "ic_android")
@@ -44,6 +45,7 @@ final class TestUITabBarViewController: UITabBarController {
         fourth.tabBarItem = UITabBarItem.init(title: "Fourth", image: UIImage.init(named: "ic_android"), tag: 3)
         
         viewControllers = [first, second, third, fourth]
+        #endif
     }
 }
 
@@ -52,8 +54,8 @@ final class ThirdViewController: UIViewController {
     override func loadView() {
         self.view = UIView(frame: CGRect(x: 0,
                                          y: 0,
-                                         width: UIApplication.shared.androidActivity.screen.bounds.width,
-                                         height: UIApplication.shared.androidActivity.screen.bounds.height))
+                                         width: UIScreen.main.bounds.width,
+                                         height: UIScreen.main.bounds.height))
     }
     
     override func viewDidLoad() {
@@ -70,8 +72,8 @@ final class SecondViewController: UIViewController {
     override func loadView() {
         self.view = UIView(frame: CGRect(x: 0,
                                          y: 0,
-                                         width: UIApplication.shared.androidActivity.screen.bounds.width,
-                                         height: UIApplication.shared.androidActivity.screen.bounds.height))
+                                         width: UIScreen.main.bounds.width,
+                                         height: UIScreen.main.bounds.height))
     }
     
     override func viewDidLoad() {
@@ -87,8 +89,8 @@ final class FirstViewController: UIViewController {
     override func loadView() {
         self.view = UIView(frame: CGRect(x: 0,
                                          y: 0,
-                                         width: UIApplication.shared.androidActivity.screen.bounds.width,
-                                         height: UIApplication.shared.androidActivity.screen.bounds.height))
+                                         width: UIScreen.main.bounds.width,
+                                         height: UIScreen.main.bounds.height))
     }
     
     override func viewDidLoad() {
@@ -104,8 +106,8 @@ final class NavFirstViewController: UIViewController {
     override func loadView() {
         self.view = UIView(frame: CGRect(x: 0,
                                          y: 0,
-                                         width: UIApplication.shared.androidActivity.screen.bounds.width,
-                                         height: UIApplication.shared.androidActivity.screen.bounds.height))
+                                         width: UIScreen.main.bounds.width,
+                                         height: UIScreen.main.bounds.height))
     }
     
     override func viewDidLoad() {
@@ -117,16 +119,19 @@ final class NavFirstViewController: UIViewController {
         navigationItem.title = "First Nav VC"
         
         let rightItem = UIBarButtonItem.init(title: "Second", style: .done, target: nil, action: nil)
+        #if os(Android) || os(macOS)
         rightItem.action = {
             
             let secondViewController = NavSecondViewController()
             self.navigationController?.pushViewController(secondViewController, animated: false)
         }
+        #endif
         
         navigationItem.rightBarButtonItems = [rightItem]
         
         //TOOLBAR
         
+        #if os(Android) || os(macOS)
         var items = [UIBarButtonItem]()
         
         let toolbarItem1 = UIBarButtonItem(title: "Breakfast", style: .done, target: self) {
@@ -154,6 +159,7 @@ final class NavFirstViewController: UIViewController {
         
         self.navigationController?.isToolbarHidden = false
         self.navigationController?.toolbar.items = items
+        #endif
     }
 }
 
@@ -162,8 +168,8 @@ final class NavSecondViewController: UIViewController {
     override func loadView() {
         self.view = UIView(frame: CGRect(x: 0,
                                          y: 0,
-                                         width: UIApplication.shared.androidActivity.screen.bounds.width,
-                                         height: UIApplication.shared.androidActivity.screen.bounds.height))
+                                         width: UIScreen.main.bounds.width,
+                                         height: UIScreen.main.bounds.height))
     }
     
     override func viewDidLoad() {
@@ -175,11 +181,13 @@ final class NavSecondViewController: UIViewController {
         navigationItem.title = "Second Nav VC"
         
         let rightItem = UIBarButtonItem.init(title: "Click", style: .done, target: nil, action: nil)
+        #if os(Android) || os(macOS)
         rightItem.action = {
             
             let thirdViewController = NavThirdViewController()
             self.navigationController?.pushViewController(thirdViewController, animated: false)
         }
+        #endif
         
         navigationItem.rightBarButtonItems = [rightItem]
     }
@@ -196,8 +204,8 @@ final class NavThirdViewController: UIViewController {
     override func loadView() {
         self.view = UIView(frame: CGRect(x: 0,
                                          y: 0,
-                                         width: UIApplication.shared.androidActivity.screen.bounds.width,
-                                         height: UIApplication.shared.androidActivity.screen.bounds.height))
+                                         width: UIScreen.main.bounds.width,
+                                         height: UIScreen.main.bounds.height))
     }
     
     override func viewDidLoad() {
@@ -209,15 +217,17 @@ final class NavThirdViewController: UIViewController {
         navigationItem.title = "Third Nav VC"
         
         let rightItem = UIBarButtonItem.init(title: "Second", style: .done, target: nil, action: nil)
+        #if os(Android) || os(macOS)
         rightItem.action = {
             
             NSLog("HI5")
         }
+        #endif
         
         navigationItem.rightBarButtonItems = [rightItem]
         
         //TOOLBAR
-        
+        #if os(Android) || os(macOS)
         var items = [UIBarButtonItem]()
         
         let toolbarItem1 = UIBarButtonItem(title: "Breakfast", style: .done, target: self) {
@@ -245,6 +255,7 @@ final class NavThirdViewController: UIViewController {
         
         self.navigationController?.isToolbarHidden = false
         self.navigationController?.toolbar.items = items
+        #endif
     }
 }
 
@@ -253,8 +264,8 @@ final class Nav2FirstViewController: UIViewController {
     override func loadView() {
         self.view = UIView(frame: CGRect(x: 0,
                                          y: 0,
-                                         width: UIApplication.shared.androidActivity.screen.bounds.width,
-                                         height: UIApplication.shared.androidActivity.screen.bounds.height))
+                                         width: UIScreen.main.bounds.width,
+                                         height: UIScreen.main.bounds.height))
     }
     
     override func viewDidLoad() {
@@ -266,11 +277,13 @@ final class Nav2FirstViewController: UIViewController {
         navigationItem.title = "First Nav2 VC"
         
         let rightItem = UIBarButtonItem.init(title: "22Click", style: .done, target: nil, action: nil)
+        #if os(Android) || os(macOS)
         rightItem.action = {
             
             let nav2SecondViewController = Nav2SecondViewController()
             self.navigationController?.pushViewController(nav2SecondViewController, animated: false)
         }
+        #endif
         
         navigationItem.rightBarButtonItems = [rightItem]
     }
@@ -287,8 +300,8 @@ final class Nav2SecondViewController: UIViewController {
     override func loadView() {
         self.view = UIView(frame: CGRect(x: 0,
                                          y: 0,
-                                         width: UIApplication.shared.androidActivity.screen.bounds.width,
-                                         height: UIApplication.shared.androidActivity.screen.bounds.height))
+                                         width: UIScreen.main.bounds.width,
+                                         height: UIScreen.main.bounds.height))
     }
     
     override func viewDidLoad() {
@@ -300,9 +313,11 @@ final class Nav2SecondViewController: UIViewController {
         navigationItem.title = "Second Nav2 VC"
         
         let rightItem = UIBarButtonItem.init(title: "2Click", style: .done, target: nil, action: nil)
+        #if os(Android) || os(macOS)
         rightItem.action = {
             
         }
+        #endif
         
         navigationItem.rightBarButtonItems = [rightItem]
     }
