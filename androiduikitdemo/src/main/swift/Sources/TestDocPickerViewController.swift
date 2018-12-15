@@ -56,16 +56,15 @@ final class TestDocPickerViewController: UIViewController {
         #if os(iOS)
         let documentTypes = ["public.text", "public.image"]
         #else
-        let documentTypes = ["pdf", "png", "json"]
+        let documentTypes = ["apk", "climateconfig", "json"]
         #endif
         
         let docPickerVC = UIDocumentPickerViewController(documentTypes: documentTypes, in: .import)
         docPickerVC.delegate = self
-        
+        docPickerVC.allowsMultipleSelection = true
         self.present(docPickerVC, animated: false)
     }
 }
-
 
 extension TestDocPickerViewController: UIDocumentPickerDelegate {
     
@@ -75,7 +74,7 @@ extension TestDocPickerViewController: UIDocumentPickerDelegate {
         
         urls.forEach { url in
             
-            NSLog("\(#function) \(url.path)")
+            NSLog("\(#function) path \(url.path)")
         }
     }
     
