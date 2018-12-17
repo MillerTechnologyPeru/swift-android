@@ -56,12 +56,12 @@ final class TestDocPickerViewController: UIViewController {
         #if os(iOS)
         let documentTypes = ["public.text", "public.image"]
         #else
-        let documentTypes = ["apk", "climateconfig", "json"]
+        let documentTypes = ["apk", "climateconfig", "json", "jpeg"]
         #endif
         
-        let docPickerVC = UIDocumentPickerViewController(documentTypes: documentTypes, in: .import)
+        let docPickerVC = UIDocumentPickerViewController(documentTypes: documentTypes, in: .exportToService)
         docPickerVC.delegate = self
-        docPickerVC.allowsMultipleSelection = true
+        docPickerVC.allowsMultipleSelection = false
         self.present(docPickerVC, animated: false)
     }
 }

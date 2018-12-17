@@ -14,107 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "java_swift::java_swift"
-               BuildableName = "java_swift.framework"
-               BlueprintName = "java_swift"
-               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Android::Android"
                BuildableName = "Android.framework"
                BlueprintName = "Android"
-               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Bluetooth::Bluetooth"
-               BuildableName = "Bluetooth.framework"
-               BlueprintName = "Bluetooth"
-               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "GATT::GATT"
-               BuildableName = "GATT.framework"
-               BlueprintName = "GATT"
-               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "androiduikitdemo::androiduikittarget"
-               BuildableName = "androiduikittarget"
-               BlueprintName = "androiduikittarget"
-               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AndroidUIKit::AndroidUIKit"
-               BuildableName = "AndroidUIKit.framework"
-               BlueprintName = "AndroidUIKit"
-               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "java_util::java_util"
-               BuildableName = "java_util.framework"
-               BlueprintName = "java_util"
-               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "java_lang::java_lang"
-               BuildableName = "java_lang.framework"
-               BlueprintName = "java_lang"
                ReferencedContainer = "container:androiduikitdemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -140,9 +42,107 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "java_lang::java_lang"
+               BuildableName = "java_lang.framework"
+               BlueprintName = "java_lang"
+               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AndroidUIKit::AndroidUIKit"
+               BuildableName = "AndroidUIKit.framework"
+               BlueprintName = "AndroidUIKit"
+               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "androiduikitdemo::androiduikittarget"
+               BuildableName = "androiduikittarget"
+               BlueprintName = "androiduikittarget"
+               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "GATT::GATT"
+               BuildableName = "GATT.framework"
+               BlueprintName = "GATT"
+               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "java_util::java_util"
+               BuildableName = "java_util.framework"
+               BlueprintName = "java_util"
+               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "AndroidBluetooth::AndroidBluetooth"
                BuildableName = "AndroidBluetooth.framework"
                BlueprintName = "AndroidBluetooth"
+               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Bluetooth::Bluetooth"
+               BuildableName = "Bluetooth.framework"
+               BlueprintName = "Bluetooth"
+               ReferencedContainer = "container:androiduikitdemo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "java_swift::java_swift"
+               BuildableName = "java_swift.framework"
+               BlueprintName = "java_swift"
                ReferencedContainer = "container:androiduikitdemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -171,9 +171,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "java_swift::java_swift"
-            BuildableName = "java_swift.framework"
-            BlueprintName = "java_swift"
+            BlueprintIdentifier = "Android::Android"
+            BuildableName = "Android.framework"
+            BlueprintName = "Android"
             ReferencedContainer = "container:androiduikitdemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
