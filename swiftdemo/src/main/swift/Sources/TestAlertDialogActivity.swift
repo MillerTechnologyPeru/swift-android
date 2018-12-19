@@ -11,12 +11,13 @@ import java_lang
 import java_util
 import Android
 
+/*
 /// Needs to be implemented by app.
 @_silgen_name("SwiftAndroidMainActivity")
 public func SwiftAndroidMainActivity() -> SwiftSupportAppCompatActivity.Type {
     NSLog("TestAlertDialogActivity bind \(#function)")
     return TestAlertDialogActivity.self
-}
+}*/
 
 // Like AppDelegate in iOS
 final class TestAlertDialogActivity: SwiftSupportAppCompatActivity {
@@ -185,8 +186,6 @@ final class TestAlertDialogActivity: SwiftSupportAppCompatActivity {
     
     private func showAlert3(){
         
-        let density = getDensity()
-        
         let llPadding = Int(3 * density)
         
         let linearLayout = AndroidLinearLayout.init(context: self)
@@ -236,8 +235,6 @@ final class TestAlertDialogActivity: SwiftSupportAppCompatActivity {
     }
     
     private func showAlert4(){
-        
-        let density = getDensity()
         
         let dp3 = Int(3 * density)
         let dp24 = Int(24 * density)

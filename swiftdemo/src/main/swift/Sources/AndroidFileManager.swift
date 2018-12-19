@@ -104,7 +104,7 @@ public class AndroidFileManager {
         
         ivAddFolder?.setOnClickListener {
             
-            let density = self.context.getDensity()
+            let density = self.context.density
             
             let dp3 = Int(3 * density)
             let dp24 = Int(24 * density)
@@ -405,7 +405,7 @@ fileprivate class ItemAdapter: Android.Widget.RecyclerView.Adapter {
         let ivItemTypeId = AndroidViewCompat.generateViewId()
         let tvItemNameId = AndroidViewCompat.generateViewId()
         
-        let density = activity.getDensity()
+        let density = activity.density
         
         let dp4 = Int(4 * density)
         let dp6 = Int(6 * density)

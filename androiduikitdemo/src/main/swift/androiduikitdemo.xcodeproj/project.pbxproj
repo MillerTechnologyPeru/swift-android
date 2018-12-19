@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		5136AEE021C9885F0024B0FB /* textTextWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5136AEDF21C9885F0024B0FB /* textTextWatcher.swift */; };
+		5136AEE221C99A690024B0FB /* textEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5136AEE121C99A690024B0FB /* textEditable.swift */; };
 		514EED2121C450D000B91009 /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514EED2021C450CF00B91009 /* JavaVM.framework */; };
 		OBJ_1203 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_569 /* AlertDialog.swift */; };
 		OBJ_1204 /* AlertDialogBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_570 /* AlertDialogBuilder.swift */; };
@@ -1427,6 +1429,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5136AEDF21C9885F0024B0FB /* textTextWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textTextWatcher.swift; sourceTree = "<group>"; };
+		5136AEE121C99A690024B0FB /* textEditable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textEditable.swift; sourceTree = "<group>"; };
 		514EED2021C450CF00B91009 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = System/Library/Frameworks/JavaVM.framework; sourceTree = SDKROOT; };
 		"Android::Android::Product" /* Android.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Android.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AndroidBluetooth::AndroidBluetooth::Product" /* AndroidBluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AndroidBluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2838,7 +2842,7 @@
 			path = ".build/checkouts/AndroidBluetooth.git--4937628400324577347/Sources/AndroidBluetooth";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -2849,7 +2853,6 @@
 				OBJ_1187 /* Products */,
 				514EED1F21C450CD00B91009 /* Frameworks */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_519 /* AndroidUIKit */ = {
@@ -2996,6 +2999,7 @@
 				OBJ_644 /* WidgetLinearLayout.swift */,
 				OBJ_645 /* WidgetLinearLayoutLayoutParams.swift */,
 				OBJ_646 /* WidgetOnNavigationItemSelectedListener.swift */,
+				5136AEDF21C9885F0024B0FB /* textTextWatcher.swift */,
 				OBJ_647 /* WidgetProgressBar.swift */,
 				OBJ_648 /* WidgetSeekBar.swift */,
 				OBJ_649 /* WidgetSeekBarOnSeekBarChangeListener.swift */,
@@ -3017,6 +3021,7 @@
 				OBJ_665 /* ioReader.swift */,
 				OBJ_666 /* textTextUtilsTruncateAt.swift */,
 				OBJ_667 /* viewGravity.swift */,
+				5136AEE121C99A690024B0FB /* textEditable.swift */,
 			);
 			name = Android;
 			path = ".build/checkouts/Android.git-6854259997991990844/Sources/Android";
@@ -4385,7 +4390,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_1187 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -4505,8 +4510,10 @@
 				OBJ_1286 /* WidgetSwitchCompat.swift in Sources */,
 				OBJ_1287 /* WidgetTabLayout.swift in Sources */,
 				OBJ_1288 /* WidgetTabLayoutOnPageChangeListener.swift in Sources */,
+				5136AEE021C9885F0024B0FB /* textTextWatcher.swift in Sources */,
 				OBJ_1289 /* WidgetTabLayoutOnTabSelectedListener.swift in Sources */,
 				OBJ_1290 /* WidgetTabLayoutTab.swift in Sources */,
+				5136AEE221C99A690024B0FB /* textEditable.swift in Sources */,
 				OBJ_1291 /* WidgetToast.swift in Sources */,
 				OBJ_1292 /* WidgetViewPagerOnTabSelectedListener.swift in Sources */,
 				OBJ_1293 /* ioBufferedReader.swift in Sources */,
