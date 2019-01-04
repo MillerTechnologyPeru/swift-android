@@ -100,7 +100,7 @@ public class AndroidFileManager {
     
     private func settingsAddFolderButton(){
         
-        ivAddFolder?.setVisibility(visibility: AndroidView.AndroidViewVisibility.invisible.rawValue)
+        ivAddFolder?.visibility = .invisible
         
         ivAddFolder?.setOnClickListener {
             
@@ -171,7 +171,8 @@ public class AndroidFileManager {
     
     private func settingsBackButton(){
         
-        ivBack?.setVisibility(visibility: AndroidView.AndroidViewVisibility.invisible.rawValue)
+        ivBack?.visibility = .invisible
+        
         
         ivBack?.setOnClickListener {
             
@@ -187,8 +188,8 @@ public class AndroidFileManager {
             
             if self.navigation.count == 1 {
                 
-                self.ivBack?.setVisibility(visibility: AndroidView.AndroidViewVisibility.invisible.rawValue)
-                self.ivAddFolder?.setVisibility(visibility: AndroidView.AndroidViewVisibility.invisible.rawValue)
+                self.ivBack?.visibility = .invisible
+                self.ivAddFolder?.visibility = .invisible
                 self.currentFolder = "Storages list"
                 
                 self.btnOk?.setEnabled(enabled: false)
@@ -233,8 +234,8 @@ public class AndroidFileManager {
             self.tvCurrentFolder?.text = self.currentFolder
             self.adapter.addItems(items: itemChildren)
         
-            self.ivBack?.setVisibility(visibility: AndroidView.AndroidViewVisibility.visible.rawValue)
-            self.ivAddFolder?.setVisibility(visibility: AndroidView.AndroidViewVisibility.visible.rawValue)
+            self.ivBack?.visibility = .visible
+            self.ivAddFolder?.visibility = .visible
         }
     }
     
@@ -525,11 +526,11 @@ fileprivate class ItemAdapter: Android.Widget.RecyclerView.Adapter {
             switch item.type {
             case .Storage:
                 
-                self.cbSelect?.setVisibility(visibility: AndroidView.AndroidViewVisibility.gone.rawValue)
+                self.cbSelect?.visibility = .gone
                 _imageId = activity?.getIdentifier(name: "ic_sd_storage", type: "drawable")
             case .Folder:
                 
-                self.cbSelect?.setVisibility(visibility: AndroidView.AndroidViewVisibility.gone.rawValue)
+                self.cbSelect?.visibility = .gone
                 _imageId = activity?.getIdentifier(name: "ic_folder", type: "drawable")
             case .File:
                 
@@ -538,10 +539,10 @@ fileprivate class ItemAdapter: Android.Widget.RecyclerView.Adapter {
                 if fileExtension == "json" || fileExtension == "climateconfig" {
                     
                     self.cbSelect?.setChecked(item.selected)
-                    self.cbSelect?.setVisibility(visibility: AndroidView.AndroidViewVisibility.visible.rawValue)
+                    self.cbSelect?.visibility = .visible
                 } else {
                     
-                    self.cbSelect?.setVisibility(visibility: AndroidView.AndroidViewVisibility.gone.rawValue)
+                    self.cbSelect?.visibility = .gone
                 }
                 
                 _imageId = activity?.getIdentifier(name: "ic_file", type: "drawable")

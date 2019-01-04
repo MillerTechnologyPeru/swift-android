@@ -1,4 +1,4 @@
-// swift-tools-version:4.0
+// swift-tools-version:4.1
 import PackageDescription
 
 let package = Package(
@@ -7,15 +7,14 @@ let package = Package(
         .library(name: "swiftdemo", type: .dynamic, targets: ["swiftdemotarget"]),
     ],
     dependencies: [
-        .package(url: "git@github.com:PureSwift/Android.git", .branch("master")),
-        .package(url: "git@github.com:PureSwift/AndroidBluetooth.git", .branch("master")),
-        .package(url: "git@github.com:PureSwift/GATT.git", from: "2.1.1")
+        .package(url: "https://github.com/PureSwift/AndroidBluetooth.git", .branch("master")),
+        .package(url: "https://github.com/PureSwift/Android.git", .branch("master"))
     ],
     targets: [
         .target(
             name: "swiftdemotarget",
-            dependencies: ["Android", "AndroidBluetooth", "GATT"],
+            dependencies: ["Android", "AndroidBluetooth"],
             path: "Sources"
-        ),
+        )
     ]
 )
