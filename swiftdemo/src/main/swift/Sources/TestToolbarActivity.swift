@@ -11,13 +11,12 @@ import java_lang
 import java_util
 import Android
 
-/*
 /// Needs to be implemented by app.
 @_silgen_name("SwiftAndroidMainActivity")
 public func SwiftAndroidMainActivity() -> SwiftSupportAppCompatActivity.Type {
     NSLog("TestToolbarActivity bind \(#function)")
     return TestToolbarActivity.self
-}*/
+}
 
 // Like AppDelegate in iOS
 final class TestToolbarActivity: SwiftSupportAppCompatActivity {
@@ -72,7 +71,10 @@ final class TestToolbarActivity: SwiftSupportAppCompatActivity {
         
         let menu = toolbar.menu
         
-        let menuItem1 = menu.add(groupId: 0, itemId: AndroidViewCompat.generateViewId(), order: 0, title: "Item 1")
+        let menuItem1 = menu.add(groupId: 0, itemId: AndroidViewCompat.generateViewId(), order: 0, title: "SearchView")
+        menuItem1.setShowAsAction(action: AndroidMenuItemForward.ShowAsAction.always)
+        addSearchView(menuItem: menuItem1)
+        /*
         menuItem1.setIcon(bluetoothIconDrawable)
         menuItem1.setShowAsAction(action: AndroidMenuItemForward.ShowAsAction.always)
         
@@ -85,7 +87,7 @@ final class TestToolbarActivity: SwiftSupportAppCompatActivity {
         menu.add(groupId: 0, itemId: AndroidViewCompat.generateViewId(), order: 3, title: "Item 4")
         
         menu.add(groupId: 0, itemId: AndroidViewCompat.generateViewId(), order: 4, title: "Item 5")
-        
+        */
         rootFrameLayout.addView(toolbar)
         
         setContentView(view: rootFrameLayout)
@@ -96,5 +98,59 @@ final class TestToolbarActivity: SwiftSupportAppCompatActivity {
             
             return true
         }
+    }
+    
+    private func addSearchView(menuItem: AndroidMenuItemForward){
+        
+        let searchView = AndroidSearchView(context: self)
+        searchView.layoutParams = AndroidFrameLayoutLayoutParams(width: AndroidFrameLayoutLayoutParams.WRAP_CONTENT, height: AndroidFrameLayoutLayoutParams.WRAP_CONTENT)
+        searchView.setQueryHint("Write Something")
+        
+        menuItem.actionView = searchView
+        
+        searchView.setOnCloseListener { [weak self] in
+            
+            self?.toast("SeachView was closed")
+            
+            return false
+        }
+        
+        searchView.setOnQueryTextListener(SearchViewQueryListener(self, searchView))
+    }
+}
+
+class SearchViewQueryListener: AndroidSearchViewOnQueryTextListener {
+    
+    private var activity: SwiftSupportAppCompatActivity?
+    private var searchView: AndroidSearchView?
+    
+    init(_ activity: SwiftSupportAppCompatActivity, _ searchView: AndroidSearchView) {
+        
+        super.init(javaObject: nil)
+        self.bindNewJavaObject()
+        
+        self.activity = activity
+        self.searchView = searchView
+    }
+    
+    required public init(javaObject: jobject?) {
+        super.init(javaObject: javaObject)
+    }
+    
+    override func onQueryTextChange(newText: String?) -> Bool {
+        
+        log("newText: \(newText)")
+        //activity?.toast("newText: \(newText)")
+        
+        return false
+    }
+    
+    override func onQueryTextSubmit(query: String?) -> Bool {
+        
+        activity?.toast("query: \(query)")
+        
+        //searchView?.setIconified(true)
+        
+        return false
     }
 }
