@@ -56,7 +56,8 @@ final class UITabBarTestViewController: UITabBarController {
             #elseif os(Android) || os(macOS)
             let tabBarItem = UITabBarItem(
                 title: $0.title,
-                image: UIImage(named: $0.imageName)
+                image: UIImage(named: $0.imageName),
+                tag: 0
             )
             #endif
             navigationController.tabBarItem = tabBarItem

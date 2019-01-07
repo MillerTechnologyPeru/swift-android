@@ -11,8 +11,8 @@ import Foundation
 func log(_ message: String) {
     
     #if os(Android)
-    NSLog("\(message)")
+    NSLog("AndroidUIKitDemo: \(message)")
     #else
-    print("\(message)")
+    print("AndroidUIKitDemo: \(message)")
     #endif
 }
