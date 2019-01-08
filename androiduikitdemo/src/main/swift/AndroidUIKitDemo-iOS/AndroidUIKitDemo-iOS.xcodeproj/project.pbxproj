@@ -13,6 +13,8 @@
 		5137A41121C2D86B00E35731 /* TestUITabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5137A40B21C2D86B00E35731 /* TestUITabBarViewController.swift */; };
 		5137A41221C2D86B00E35731 /* TestThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5137A40C21C2D86B00E35731 /* TestThirdViewController.swift */; };
 		5137A41321C2D86B00E35731 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5137A40D21C2D86B00E35731 /* MainViewController.swift */; };
+		5139E4BA21E500B600997311 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139E4B821E500B600997311 /* Log.swift */; };
+		5139E4BB21E500B600997311 /* UISearchBarViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139E4B921E500B600997311 /* UISearchBarViewControler.swift */; };
 		6EBE0E65212F68890034A3D9 /* UITableTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE0E64212F68890034A3D9 /* UITableTestViewController.swift */; };
 		6EF52AA22102EA0400762974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EF52AA12102EA0400762974 /* Assets.xcassets */; };
 		6EF52AA52102EA0400762974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EF52AA32102EA0400762974 /* LaunchScreen.storyboard */; };
@@ -26,6 +28,8 @@
 		5137A40B21C2D86B00E35731 /* TestUITabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestUITabBarViewController.swift; path = ../../Sources/TestUITabBarViewController.swift; sourceTree = "<group>"; };
 		5137A40C21C2D86B00E35731 /* TestThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestThirdViewController.swift; path = ../../Sources/TestThirdViewController.swift; sourceTree = "<group>"; };
 		5137A40D21C2D86B00E35731 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../../Sources/MainViewController.swift; sourceTree = "<group>"; };
+		5139E4B821E500B600997311 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Log.swift; path = ../../Sources/Log.swift; sourceTree = "<group>"; };
+		5139E4B921E500B600997311 /* UISearchBarViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISearchBarViewControler.swift; path = ../../Sources/UISearchBarViewControler.swift; sourceTree = "<group>"; };
 		6EBE0E64212F68890034A3D9 /* UITableTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableTestViewController.swift; path = ../../Sources/UITableTestViewController.swift; sourceTree = "<group>"; };
 		6EF52A972102EA0200762974 /* AndroidUIKitDemo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AndroidUIKitDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EF52AA12102EA0400762974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		6EF52A992102EA0200762974 /* AndroidUIKitDemo-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				5139E4B821E500B600997311 /* Log.swift */,
+				5139E4B921E500B600997311 /* UISearchBarViewControler.swift */,
 				5137A40D21C2D86B00E35731 /* MainViewController.swift */,
 				5137A40821C2D86B00E35731 /* TestDocPickerViewController.swift */,
 				5137A40A21C2D86B00E35731 /* TestRefreshControlViewController.swift */,
@@ -151,7 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5137A40F21C2D86B00E35731 /* UITabBarTestViewController.swift in Sources */,
+				5139E4BB21E500B600997311 /* UISearchBarViewControler.swift in Sources */,
 				5137A41121C2D86B00E35731 /* TestUITabBarViewController.swift in Sources */,
+				5139E4BA21E500B600997311 /* Log.swift in Sources */,
 				5137A41221C2D86B00E35731 /* TestThirdViewController.swift in Sources */,
 				6EF52AB02102EA3C00762974 /* AppDelegate.swift in Sources */,
 				5137A41021C2D86B00E35731 /* TestRefreshControlViewController.swift in Sources */,
