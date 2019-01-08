@@ -21,7 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		5139E4B721E4F41100997311 /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5139E4B621E4F41100997311 /* JavaVM.framework */; };
+		5139E4DC21E535D900997311 /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5139E4DB21E535D800997311 /* JavaVM.framework */; };
+		5139E4DE21E5362F00997311 /* TestUISearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139E4DD21E5362F00997311 /* TestUISearchController.swift */; };
 		OBJ_1217 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_573 /* AlertDialog.swift */; };
 		OBJ_1218 /* AlertDialogBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_574 /* AlertDialogBuilder.swift */; };
 		OBJ_1219 /* AndroidManifestPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_575 /* AndroidManifestPermission.swift */; };
@@ -673,19 +674,19 @@
 		OBJ_1919 /* VendorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_518 /* VendorCommand.swift */; };
 		OBJ_1920 /* iBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_519 /* iBeacon.swift */; };
 		OBJ_1927 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* Package.swift */; };
-		OBJ_1932 /* AdvertisementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* AdvertisementData.swift */; };
-		OBJ_1933 /* Central.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* Central.swift */; };
-		OBJ_1934 /* CentralError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* CentralError.swift */; };
-		OBJ_1935 /* CentralProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* CentralProtocol.swift */; };
-		OBJ_1936 /* GATTCentral.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* GATTCentral.swift */; };
-		OBJ_1937 /* GATTClientConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* GATTClientConnection.swift */; };
-		OBJ_1938 /* GATTPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* GATTPeripheral.swift */; };
-		OBJ_1939 /* GATTServerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* GATTServerConnection.swift */; };
-		OBJ_1940 /* Peer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* Peer.swift */; };
-		OBJ_1941 /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* Peripheral.swift */; };
-		OBJ_1942 /* PeripheralProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* PeripheralProtocol.swift */; };
-		OBJ_1943 /* ScanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* ScanData.swift */; };
-		OBJ_1944 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* TimeInterval.swift */; };
+		OBJ_1932 /* AdvertisementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* AdvertisementData.swift */; };
+		OBJ_1933 /* Central.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* Central.swift */; };
+		OBJ_1934 /* CentralError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* CentralError.swift */; };
+		OBJ_1935 /* CentralProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* CentralProtocol.swift */; };
+		OBJ_1936 /* GATTCentral.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* GATTCentral.swift */; };
+		OBJ_1937 /* GATTClientConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* GATTClientConnection.swift */; };
+		OBJ_1938 /* GATTPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* GATTPeripheral.swift */; };
+		OBJ_1939 /* GATTServerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* GATTServerConnection.swift */; };
+		OBJ_1940 /* Peer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* Peer.swift */; };
+		OBJ_1941 /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* Peripheral.swift */; };
+		OBJ_1942 /* PeripheralProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* PeripheralProtocol.swift */; };
+		OBJ_1943 /* ScanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* ScanData.swift */; };
+		OBJ_1944 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* TimeInterval.swift */; };
 		OBJ_1946 /* Bluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Bluetooth::Bluetooth::Product" /* Bluetooth.framework */; };
 		OBJ_1953 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* Package.swift */; };
 		OBJ_1958 /* ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_685 /* ClassName.swift */; };
@@ -1232,210 +1233,210 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5139E49721E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4BC21E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "AndroidBluetooth::AndroidBluetooth";
 			remoteInfo = AndroidBluetooth;
 		};
-		5139E49821E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4BD21E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "GATT::GATT";
 			remoteInfo = GATT;
 		};
-		5139E49921E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4BE21E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Bluetooth::Bluetooth";
 			remoteInfo = Bluetooth;
 		};
-		5139E49A21E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4BF21E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Bluetooth::Bluetooth";
 			remoteInfo = Bluetooth;
 		};
-		5139E49B21E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4C021E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Android::Android";
 			remoteInfo = Android;
 		};
-		5139E49C21E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4C121E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "JNI::JNI";
 			remoteInfo = JNI;
 		};
-		5139E49D21E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4C221E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_util::java_util";
 			remoteInfo = java_util;
 		};
-		5139E49E21E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4C321E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_lang::java_lang";
 			remoteInfo = java_lang;
 		};
-		5139E49F21E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4C421E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_swift::java_swift";
 			remoteInfo = java_swift;
 		};
-		5139E4A021E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4C521E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_swift::java_swift";
 			remoteInfo = java_swift;
 		};
-		5139E4A121E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4C621E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_lang::java_lang";
 			remoteInfo = java_lang;
 		};
-		5139E4A221E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4C721E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_swift::java_swift";
 			remoteInfo = java_swift;
 		};
-		5139E4A321E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4C821E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "JNI::JNI";
 			remoteInfo = JNI;
 		};
-		5139E4A421E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4C921E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_util::java_util";
 			remoteInfo = java_util;
 		};
-		5139E4A521E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4CA21E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_lang::java_lang";
 			remoteInfo = java_lang;
 		};
-		5139E4A621E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4CB21E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_swift::java_swift";
 			remoteInfo = java_swift;
 		};
-		5139E4A721E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4CC21E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "GATT::GATT";
 			remoteInfo = GATT;
 		};
-		5139E4A821E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4CD21E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Bluetooth::Bluetooth";
 			remoteInfo = Bluetooth;
 		};
-		5139E4A921E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4CE21E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "AndroidUIKit::AndroidUIKit";
 			remoteInfo = AndroidUIKit;
 		};
-		5139E4AA21E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4CF21E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Android::Android";
 			remoteInfo = Android;
 		};
-		5139E4AB21E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4D021E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "JNI::JNI";
 			remoteInfo = JNI;
 		};
-		5139E4AC21E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4D121E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_util::java_util";
 			remoteInfo = java_util;
 		};
-		5139E4AD21E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4D221E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_lang::java_lang";
 			remoteInfo = java_lang;
 		};
-		5139E4AE21E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4D321E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_swift::java_swift";
 			remoteInfo = java_swift;
 		};
-		5139E4AF21E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4D421E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Android::Android";
 			remoteInfo = Android;
 		};
-		5139E4B021E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4D521E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "JNI::JNI";
 			remoteInfo = JNI;
 		};
-		5139E4B121E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4D621E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_util::java_util";
 			remoteInfo = java_util;
 		};
-		5139E4B221E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4D721E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_lang::java_lang";
 			remoteInfo = java_lang;
 		};
-		5139E4B321E4F02100997311 /* PBXContainerItemProxy */ = {
+		5139E4D821E52EAA00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "java_swift::java_swift";
 			remoteInfo = java_swift;
 		};
-		5139E4B421E4F02400997311 /* PBXContainerItemProxy */ = {
+		5139E4D921E52EAE00997311 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -1445,7 +1446,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5139E4B621E4F41100997311 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = System/Library/Frameworks/JavaVM.framework; sourceTree = SDKROOT; };
+		5139E4DB21E535D800997311 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = System/Library/Frameworks/JavaVM.framework; sourceTree = SDKROOT; };
+		5139E4DD21E5362F00997311 /* TestUISearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUISearchController.swift; sourceTree = "<group>"; };
 		"Android::Android::Product" /* Android.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Android.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AndroidBluetooth::AndroidBluetooth::Product" /* AndroidBluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AndroidBluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AndroidUIKit::AndroidUIKit::Product" /* AndroidUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AndroidUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2335,7 +2337,6 @@
 		OBJ_727 /* BaseStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStream.swift; sourceTree = "<group>"; };
 		OBJ_728 /* BiConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiConsumer.swift; sourceTree = "<group>"; };
 		OBJ_729 /* BiFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiFunction.swift; sourceTree = "<group>"; };
-		OBJ_73 /* AdvertisementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementData.swift; sourceTree = "<group>"; };
 		OBJ_730 /* BiPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiPredicate.swift; sourceTree = "<group>"; };
 		OBJ_731 /* BinaryOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryOperator.swift; sourceTree = "<group>"; };
 		OBJ_732 /* BitSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitSet.swift; sourceTree = "<group>"; };
@@ -2346,7 +2347,7 @@
 		OBJ_737 /* CRC32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRC32.swift; sourceTree = "<group>"; };
 		OBJ_738 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		OBJ_739 /* CalendarDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDataProvider.swift; sourceTree = "<group>"; };
-		OBJ_74 /* Central.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Central.swift; sourceTree = "<group>"; };
+		OBJ_74 /* AdvertisementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementData.swift; sourceTree = "<group>"; };
 		OBJ_740 /* CalendarNameProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarNameProvider.swift; sourceTree = "<group>"; };
 		OBJ_741 /* Callable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callable.swift; sourceTree = "<group>"; };
 		OBJ_742 /* CancellationException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellationException.swift; sourceTree = "<group>"; };
@@ -2357,7 +2358,7 @@
 		OBJ_747 /* Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections.swift; sourceTree = "<group>"; };
 		OBJ_748 /* Collector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collector.swift; sourceTree = "<group>"; };
 		OBJ_749 /* Collectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collectors.swift; sourceTree = "<group>"; };
-		OBJ_75 /* CentralError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralError.swift; sourceTree = "<group>"; };
+		OBJ_75 /* Central.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Central.swift; sourceTree = "<group>"; };
 		OBJ_750 /* CompletionException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionException.swift; sourceTree = "<group>"; };
 		OBJ_751 /* CompletionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionService.swift; sourceTree = "<group>"; };
 		OBJ_752 /* CompletionStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionStage.swift; sourceTree = "<group>"; };
@@ -2368,7 +2369,7 @@
 		OBJ_757 /* ConcurrentModificationException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentModificationException.swift; sourceTree = "<group>"; };
 		OBJ_758 /* ConcurrentNavigableMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentNavigableMap.swift; sourceTree = "<group>"; };
 		OBJ_759 /* ConcurrentSkipListMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentSkipListMap.swift; sourceTree = "<group>"; };
-		OBJ_76 /* CentralProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralProtocol.swift; sourceTree = "<group>"; };
+		OBJ_76 /* CentralError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralError.swift; sourceTree = "<group>"; };
 		OBJ_760 /* ConcurrentSkipListSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentSkipListSet.swift; sourceTree = "<group>"; };
 		OBJ_761 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		OBJ_762 /* ConsoleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleHandler.swift; sourceTree = "<group>"; };
@@ -2379,7 +2380,7 @@
 		OBJ_767 /* CountedCompleter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountedCompleter.swift; sourceTree = "<group>"; };
 		OBJ_768 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		OBJ_769 /* CurrencyNameProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyNameProvider.swift; sourceTree = "<group>"; };
-		OBJ_77 /* GATTCentral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GATTCentral.swift; sourceTree = "<group>"; };
+		OBJ_77 /* CentralProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralProtocol.swift; sourceTree = "<group>"; };
 		OBJ_770 /* CyclicBarrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclicBarrier.swift; sourceTree = "<group>"; };
 		OBJ_771 /* DataFormatException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormatException.swift; sourceTree = "<group>"; };
 		OBJ_772 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -2390,7 +2391,7 @@
 		OBJ_777 /* Delayed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delayed.swift; sourceTree = "<group>"; };
 		OBJ_778 /* Deque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deque.swift; sourceTree = "<group>"; };
 		OBJ_779 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
-		OBJ_78 /* GATTClientConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GATTClientConnection.swift; sourceTree = "<group>"; };
+		OBJ_78 /* GATTCentral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GATTCentral.swift; sourceTree = "<group>"; };
 		OBJ_780 /* DoubleAccumulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleAccumulator.swift; sourceTree = "<group>"; };
 		OBJ_781 /* DoubleAdder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleAdder.swift; sourceTree = "<group>"; };
 		OBJ_782 /* DoubleBinaryOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleBinaryOperator.swift; sourceTree = "<group>"; };
@@ -2401,7 +2402,7 @@
 		OBJ_787 /* DoubleSummaryStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleSummaryStatistics.swift; sourceTree = "<group>"; };
 		OBJ_788 /* DoubleSupplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleSupplier.swift; sourceTree = "<group>"; };
 		OBJ_789 /* DoubleToIntFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleToIntFunction.swift; sourceTree = "<group>"; };
-		OBJ_79 /* GATTPeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GATTPeripheral.swift; sourceTree = "<group>"; };
+		OBJ_79 /* GATTClientConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GATTClientConnection.swift; sourceTree = "<group>"; };
 		OBJ_790 /* DoubleToLongFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleToLongFunction.swift; sourceTree = "<group>"; };
 		OBJ_791 /* DoubleUnaryOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleUnaryOperator.swift; sourceTree = "<group>"; };
 		OBJ_792 /* DuplicateFormatFlagsException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateFormatFlagsException.swift; sourceTree = "<group>"; };
@@ -2413,7 +2414,7 @@
 		OBJ_798 /* EventListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListener.swift; sourceTree = "<group>"; };
 		OBJ_799 /* EventListenerProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListenerProxy.swift; sourceTree = "<group>"; };
 		OBJ_8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		OBJ_80 /* GATTServerConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GATTServerConnection.swift; sourceTree = "<group>"; };
+		OBJ_80 /* GATTPeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GATTPeripheral.swift; sourceTree = "<group>"; };
 		OBJ_800 /* EventObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventObject.swift; sourceTree = "<group>"; };
 		OBJ_801 /* Exchanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchanger.swift; sourceTree = "<group>"; };
 		OBJ_802 /* ExecutionException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionException.swift; sourceTree = "<group>"; };
@@ -2424,7 +2425,7 @@
 		OBJ_807 /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
 		OBJ_808 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		OBJ_809 /* ForkJoinPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkJoinPool.swift; sourceTree = "<group>"; };
-		OBJ_81 /* Peer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peer.swift; sourceTree = "<group>"; };
+		OBJ_81 /* GATTServerConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GATTServerConnection.swift; sourceTree = "<group>"; };
 		OBJ_810 /* ForkJoinTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkJoinTask.swift; sourceTree = "<group>"; };
 		OBJ_811 /* ForkJoinWorkerThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkJoinWorkerThread.swift; sourceTree = "<group>"; };
 		OBJ_812 /* FormatFlagsConversionMismatchException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatFlagsConversionMismatchException.swift; sourceTree = "<group>"; };
@@ -2435,7 +2436,7 @@
 		OBJ_817 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 		OBJ_818 /* Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
 		OBJ_819 /* FutureTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureTask.swift; sourceTree = "<group>"; };
-		OBJ_82 /* Peripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
+		OBJ_82 /* Peer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peer.swift; sourceTree = "<group>"; };
 		OBJ_820 /* GZIPInputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GZIPInputStream.swift; sourceTree = "<group>"; };
 		OBJ_821 /* GZIPOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GZIPOutputStream.swift; sourceTree = "<group>"; };
 		OBJ_822 /* GregorianCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GregorianCalendar.swift; sourceTree = "<group>"; };
@@ -2446,7 +2447,7 @@
 		OBJ_827 /* IllegalFormatCodePointException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllegalFormatCodePointException.swift; sourceTree = "<group>"; };
 		OBJ_828 /* IllegalFormatConversionException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllegalFormatConversionException.swift; sourceTree = "<group>"; };
 		OBJ_829 /* IllegalFormatException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllegalFormatException.swift; sourceTree = "<group>"; };
-		OBJ_83 /* PeripheralProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralProtocol.swift; sourceTree = "<group>"; };
+		OBJ_83 /* Peripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
 		OBJ_830 /* IllegalFormatFlagsException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllegalFormatFlagsException.swift; sourceTree = "<group>"; };
 		OBJ_831 /* IllegalFormatPrecisionException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllegalFormatPrecisionException.swift; sourceTree = "<group>"; };
 		OBJ_832 /* IllegalFormatWidthException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllegalFormatWidthException.swift; sourceTree = "<group>"; };
@@ -2457,7 +2458,7 @@
 		OBJ_837 /* InputMismatchException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMismatchException.swift; sourceTree = "<group>"; };
 		OBJ_838 /* IntBinaryOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntBinaryOperator.swift; sourceTree = "<group>"; };
 		OBJ_839 /* IntConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntConsumer.swift; sourceTree = "<group>"; };
-		OBJ_84 /* ScanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanData.swift; sourceTree = "<group>"; };
+		OBJ_84 /* PeripheralProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralProtocol.swift; sourceTree = "<group>"; };
 		OBJ_840 /* IntFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntFunction.swift; sourceTree = "<group>"; };
 		OBJ_841 /* IntPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntPredicate.swift; sourceTree = "<group>"; };
 		OBJ_842 /* IntStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntStream.swift; sourceTree = "<group>"; };
@@ -2468,7 +2469,7 @@
 		OBJ_847 /* IntUnaryOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntUnaryOperator.swift; sourceTree = "<group>"; };
 		OBJ_848 /* InvalidPreferencesFormatException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidPreferencesFormatException.swift; sourceTree = "<group>"; };
 		OBJ_849 /* InvalidPropertiesFormatException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidPropertiesFormatException.swift; sourceTree = "<group>"; };
-		OBJ_85 /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
+		OBJ_85 /* ScanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanData.swift; sourceTree = "<group>"; };
 		OBJ_850 /* Iterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iterator.swift; sourceTree = "<group>"; };
 		OBJ_851 /* JarEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarEntry.swift; sourceTree = "<group>"; };
 		OBJ_852 /* JarException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarException.swift; sourceTree = "<group>"; };
@@ -2479,6 +2480,7 @@
 		OBJ_857 /* JavaLocale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaLocale.swift; sourceTree = "<group>"; };
 		OBJ_858 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		OBJ_859 /* LinkedBlockingDeque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedBlockingDeque.swift; sourceTree = "<group>"; };
+		OBJ_86 /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		OBJ_860 /* LinkedBlockingQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedBlockingQueue.swift; sourceTree = "<group>"; };
 		OBJ_861 /* LinkedHashMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedHashMap.swift; sourceTree = "<group>"; };
 		OBJ_862 /* LinkedHashSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedHashSet.swift; sourceTree = "<group>"; };
@@ -2725,7 +2727,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				5139E4B721E4F41100997311 /* JavaVM.framework in Frameworks */,
+				5139E4DC21E535D900997311 /* JavaVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2741,10 +2743,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5139E4B521E4F41000997311 /* Frameworks */ = {
+		5139E4DA21E535D800997311 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5139E4B621E4F41100997311 /* JavaVM.framework */,
+				5139E4DB21E535D800997311 /* JavaVM.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2777,16 +2779,16 @@
 		OBJ_1201 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"GATT::GATT::Product" /* GATT.framework */,
-				"Android::Android::Product" /* Android.framework */,
-				"JNI::JNI::Product" /* JNI.framework */,
-				"java_lang::java_lang::Product" /* java_lang.framework */,
-				"AndroidBluetooth::AndroidBluetooth::Product" /* AndroidBluetooth.framework */,
 				"Bluetooth::Bluetooth::Product" /* Bluetooth.framework */,
-				"AndroidUIKit::AndroidUIKit::Product" /* AndroidUIKit.framework */,
-				"java_util::java_util::Product" /* java_util.framework */,
 				"java_swift::java_swift::Product" /* java_swift.framework */,
+				"GATT::GATT::Product" /* GATT.framework */,
 				"androiduikitdemo::androiduikittarget::Product" /* androiduikittarget */,
+				"AndroidBluetooth::AndroidBluetooth::Product" /* AndroidBluetooth.framework */,
+				"JNI::JNI::Product" /* JNI.framework */,
+				"java_util::java_util::Product" /* java_util.framework */,
+				"Android::Android::Product" /* Android.framework */,
+				"java_lang::java_lang::Product" /* java_lang.framework */,
+				"AndroidUIKit::AndroidUIKit::Product" /* AndroidUIKit.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -2883,7 +2885,7 @@
 				OBJ_23 /* AndroidUIKitDemo-iOS */,
 				OBJ_24 /* Dependencies */,
 				OBJ_1201 /* Products */,
-				5139E4B521E4F41000997311 /* Frameworks */,
+				5139E4DA21E535D800997311 /* Frameworks */,
 			);
 			name = "";
 			sourceTree = "<group>";
@@ -3414,6 +3416,7 @@
 				OBJ_16 /* TestThirdViewController.swift */,
 				OBJ_17 /* TestUITabBarViewController.swift */,
 				OBJ_18 /* UISearchBarViewControler.swift */,
+				5139E4DD21E5362F00997311 /* TestUISearchController.swift */,
 				OBJ_19 /* UITabBarTestViewController.swift */,
 				OBJ_20 /* UITableTestViewController.swift */,
 				OBJ_21 /* main.swift */,
@@ -3424,40 +3427,40 @@
 		OBJ_71 /* GATT */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_72 /* GATT */,
-				OBJ_86 /* DarwinGATT */,
+				OBJ_72 /* DarwinGATT */,
+				OBJ_73 /* GATT */,
 				OBJ_87 /* Package.swift */,
 			);
 			name = GATT;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_72 /* GATT */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_73 /* AdvertisementData.swift */,
-				OBJ_74 /* Central.swift */,
-				OBJ_75 /* CentralError.swift */,
-				OBJ_76 /* CentralProtocol.swift */,
-				OBJ_77 /* GATTCentral.swift */,
-				OBJ_78 /* GATTClientConnection.swift */,
-				OBJ_79 /* GATTPeripheral.swift */,
-				OBJ_80 /* GATTServerConnection.swift */,
-				OBJ_81 /* Peer.swift */,
-				OBJ_82 /* Peripheral.swift */,
-				OBJ_83 /* PeripheralProtocol.swift */,
-				OBJ_84 /* ScanData.swift */,
-				OBJ_85 /* TimeInterval.swift */,
-			);
-			name = GATT;
-			path = ".build/checkouts/GATT.git-461163235150303918/Sources/GATT";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_86 /* DarwinGATT */ = {
+		OBJ_72 /* DarwinGATT */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = DarwinGATT;
 			path = ".build/checkouts/GATT.git-461163235150303918/Sources/DarwinGATT";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_73 /* GATT */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_74 /* AdvertisementData.swift */,
+				OBJ_75 /* Central.swift */,
+				OBJ_76 /* CentralError.swift */,
+				OBJ_77 /* CentralProtocol.swift */,
+				OBJ_78 /* GATTCentral.swift */,
+				OBJ_79 /* GATTClientConnection.swift */,
+				OBJ_80 /* GATTPeripheral.swift */,
+				OBJ_81 /* GATTServerConnection.swift */,
+				OBJ_82 /* Peer.swift */,
+				OBJ_83 /* Peripheral.swift */,
+				OBJ_84 /* PeripheralProtocol.swift */,
+				OBJ_85 /* ScanData.swift */,
+				OBJ_86 /* TimeInterval.swift */,
+			);
+			name = GATT;
+			path = ".build/checkouts/GATT.git-461163235150303918/Sources/GATT";
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_88 /* Bluetooth */ = {
@@ -5232,6 +5235,7 @@
 				OBJ_1994 /* MainActivitytBindings_Responder.swift in Sources */,
 				OBJ_1995 /* MainViewController.swift in Sources */,
 				OBJ_1996 /* TestDocPickerViewController.swift in Sources */,
+				5139E4DE21E5362F00997311 /* TestUISearchController.swift in Sources */,
 				OBJ_1997 /* TestRefreshControlViewController.swift in Sources */,
 				OBJ_1998 /* TestThirdViewController.swift in Sources */,
 				OBJ_1999 /* TestUITabBarViewController.swift in Sources */,
@@ -5794,152 +5798,152 @@
 		OBJ_1331 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "JNI::JNI" /* JNI */;
-			targetProxy = 5139E49C21E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4C121E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1333 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_util::java_util" /* java_util */;
-			targetProxy = 5139E49D21E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4C221E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1335 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_lang::java_lang" /* java_lang */;
-			targetProxy = 5139E4A121E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4C621E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1337 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_swift::java_swift" /* java_swift */;
-			targetProxy = 5139E4A221E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4C721E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1395 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "GATT::GATT" /* GATT */;
-			targetProxy = 5139E49821E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4BD21E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1397 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Bluetooth::Bluetooth" /* Bluetooth */;
-			targetProxy = 5139E49A21E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4BF21E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1399 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Android::Android" /* Android */;
-			targetProxy = 5139E49B21E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4C021E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1400 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "JNI::JNI" /* JNI */;
-			targetProxy = 5139E4A321E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4C821E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1401 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_util::java_util" /* java_util */;
-			targetProxy = 5139E4A421E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4C921E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1402 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_lang::java_lang" /* java_lang */;
-			targetProxy = 5139E4A521E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4CA21E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1403 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_swift::java_swift" /* java_swift */;
-			targetProxy = 5139E4A621E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4CB21E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1476 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Android::Android" /* Android */;
-			targetProxy = 5139E4AA21E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4CF21E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1477 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "JNI::JNI" /* JNI */;
-			targetProxy = 5139E4AB21E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4D021E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1478 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_util::java_util" /* java_util */;
-			targetProxy = 5139E4AC21E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4D121E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1479 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_lang::java_lang" /* java_lang */;
-			targetProxy = 5139E4AD21E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4D221E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1480 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_swift::java_swift" /* java_swift */;
-			targetProxy = 5139E4AE21E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4D321E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1947 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Bluetooth::Bluetooth" /* Bluetooth */;
-			targetProxy = 5139E49921E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4BE21E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_1978 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "androiduikitdemo::androiduikittarget" /* androiduikittarget */;
-			targetProxy = 5139E4B421E4F02400997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4D921E52EAE00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_2014 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "AndroidBluetooth::AndroidBluetooth" /* AndroidBluetooth */;
-			targetProxy = 5139E49721E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4BC21E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_2015 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "GATT::GATT" /* GATT */;
-			targetProxy = 5139E4A721E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4CC21E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_2016 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Bluetooth::Bluetooth" /* Bluetooth */;
-			targetProxy = 5139E4A821E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4CD21E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_2017 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "AndroidUIKit::AndroidUIKit" /* AndroidUIKit */;
-			targetProxy = 5139E4A921E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4CE21E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_2018 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Android::Android" /* Android */;
-			targetProxy = 5139E4AF21E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4D421E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_2019 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "JNI::JNI" /* JNI */;
-			targetProxy = 5139E4B021E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4D521E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_2020 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_util::java_util" /* java_util */;
-			targetProxy = 5139E4B121E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4D621E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_2021 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_lang::java_lang" /* java_lang */;
-			targetProxy = 5139E4B221E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4D721E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_2022 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_swift::java_swift" /* java_swift */;
-			targetProxy = 5139E4B321E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4D821E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_2213 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_swift::java_swift" /* java_swift */;
-			targetProxy = 5139E49F21E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4C421E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_2555 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_lang::java_lang" /* java_lang */;
-			targetProxy = 5139E49E21E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4C321E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 		OBJ_2556 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "java_swift::java_swift" /* java_swift */;
-			targetProxy = 5139E4A021E4F02100997311 /* PBXContainerItemProxy */;
+			targetProxy = 5139E4C521E52EAA00997311 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

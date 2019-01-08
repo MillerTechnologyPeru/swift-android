@@ -28,7 +28,7 @@ final class UITabBarTestViewController: UITabBarController {
         ),
         TabItem(
             title: NSLocalizedString("Table", comment: "Table Tab Bar Item Name"),
-            viewController: TestThirdViewController(),
+            viewController: TestUISearchController(),
             imageName: "ic_chat"
         )
     ]

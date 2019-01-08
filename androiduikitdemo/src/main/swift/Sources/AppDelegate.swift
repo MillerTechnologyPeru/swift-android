@@ -30,8 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         //self.window?.backgroundColor = .red
-        self.window?.rootViewController = UISearchBarViewControler()
-        //self.window?.rootViewController = UINavigationController.init(rootViewController: NavFirstViewController())
+        //self.window?.rootViewController = UISearchBarViewControler()
+        //self.window?.rootViewController = UINavigationController(rootViewController: TestUISearchController())
+        self.window?.rootViewController = UITabBarTestViewController()
         self.window?.makeKeyAndVisible()
         
         return true
