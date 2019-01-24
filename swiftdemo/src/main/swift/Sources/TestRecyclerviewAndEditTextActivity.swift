@@ -23,6 +23,8 @@ final class TestRecyclerviewAndEditTextActivity: SwiftSupportAppCompatActivity {
     
     private var recyclerViewTotalHeight = 0
     private var adapter: MyAdapter?
+    private var activityRootView: AndroidView?
+    private var recyclerView: AndroidWidgetRecyclerView?
     
     override func onCreate(savedInstanceState: Android.OS.Bundle?) {
         
@@ -46,7 +48,10 @@ final class TestRecyclerviewAndEditTextActivity: SwiftSupportAppCompatActivity {
         
         recyclerViewTotalHeight = metrics2.heightPixels - dp150 - 48
         
-        let recyclerView = AndroidWidgetRecyclerView(context: self)
+        recyclerView = AndroidWidgetRecyclerView(context: self)
+        
+        guard let recyclerView = recyclerView else { return }
+        
         recyclerView.layoutParams = AndroidFrameLayoutLayoutParams.init(width: AndroidFrameLayoutLayoutParams.MATCH_PARENT, height: recyclerViewTotalHeight)
         recyclerView.layoutManager = AndroidWidgetRecyclerViewLinearLayoutManager(context: self)
         recyclerView.setBackgroundColor(color: AndroidGraphicsColor.CYAN)
@@ -60,15 +65,103 @@ final class TestRecyclerviewAndEditTextActivity: SwiftSupportAppCompatActivity {
         rootFrameLayout.addView(recyclerView)
         
         setContentView(view: rootFrameLayout)
+        
+        activityRootView = getActivityRootView()
     }
     
     override func onResume() {
         
+        registerGlobalLayoutListener()
     }
     
     override func onPause() {
         
+        unregisterGlobalLayoutListener()
+    }
+    
+    private var counter = 0
+    private var layoutListener: AndroidViewTreeObserver.OnGlobalLayoutListener?
+    private var r = AndroidRect()
+    private var wasOpened = false
+    
+    private func registerGlobalLayoutListener() {
         
+        let softInputMethod = self.window?.attributes?.softInputMode
+        
+        if AndroidWindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE != softInputMethod &&
+            AndroidWindowManager.LayoutParams.SOFT_INPUT_ADJUST_UNSPECIFIED != softInputMethod {
+            
+            log("Parameter:activity window SoftInputMethod is not ADJUST_RESIZE")
+            return
+        }
+        
+        layoutListener = AndroidViewTreeObserver.OnGlobalLayoutListener {
+            
+            guard let activityRootView = self.activityRootView
+                else { return }
+            
+            activityRootView.getWindowVisibleDisplayFrame(self.r)
+            
+            let screenHeight = activityRootView.rootView!.getHeight()
+            
+            let heightDiff = screenHeight - self.r.height()
+            log("OnGlobalLayoutListener: hd: \(heightDiff) = sh: \(screenHeight) - kh: \(self.r.height())")
+            let isOpen = Double(heightDiff) > ( Double(screenHeight) * 0.15)
+            
+            if isOpen == self.wasOpened {
+                
+                return
+            }
+            
+            self.wasOpened = isOpen
+            
+            if !isOpen {
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.150){
+                    
+                    self.runOnMainThread {
+                        
+                        log("reduceRecycler returning bigger")
+                        self.recyclerView?.layoutParams = AndroidFrameLayoutLayoutParams(width: AndroidFrameLayoutLayoutParams.MATCH_PARENT, height: self.recyclerViewTotalHeight)
+                    }
+                }
+            } else {
+                
+                if self.counter == 0 {
+                    self.adapter?.keyBoardHeight = self.r.height()
+                    self.counter = self.counter + 1
+                }
+            }
+            log("OnGlobalLayoutListener: isOpen: \(isOpen)")
+        }
+        
+        activityRootView?.viewTreeObserver?.addOnGlobalLayoutListener(layoutListener!)
+    }
+    
+    private func unregisterGlobalLayoutListener() {
+    
+        guard let layoutListener = layoutListener
+            else { return }
+        
+        activityRootView?.viewTreeObserver?.removeGlobalOnLayoutListener(layoutListener)
+    }
+    
+    private func getActivityRootView() -> AndroidView? {
+        
+        guard let resources = resources
+            else { return nil }
+        
+        let contentId = resources.getIdentifier(name: "content", type: "id", defPackage: "android")
+        
+        log("getActivityRootView: contentid: \(contentId)")
+        
+        guard let contentVG = self.findViewById(contentId),
+            let viewGroup = AndroidViewGroup(casting: contentVG)
+                else { return nil }
+        
+        log("getActivityRootView: return")
+        
+        return viewGroup.getChildAt(index: 0)
     }
     
     private func getList() -> [String] {
@@ -103,7 +196,6 @@ final class TestRecyclerviewAndEditTextActivity: SwiftSupportAppCompatActivity {
 
 class MyAdapter: Android.Widget.RecyclerView.Adapter {
     
-    public var selectedEditText: AndroidEditText?
     public var keyBoardHeight = 0
     private var counter = 0
     
@@ -174,9 +266,9 @@ class MyAdapter: Android.Widget.RecyclerView.Adapter {
         
         itemVH.etDetail?.setOnFocusChangeListener{ [weak self] view, hasFocus  in
             
+            log("setOnFocusChangeListener")
             if(hasFocus){
                 
-                self?.selectedEditText = itemVH.etDetail
                 if (self?.counter == 0){
                     
                     self?.counter += 1
@@ -184,12 +276,12 @@ class MyAdapter: Android.Widget.RecyclerView.Adapter {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.9){
                         
                         self?.activity?.runOnMainThread {
-                            
+                            log("reduceRecyclerviewHeight after 0.9")
                             self?.reduceRecyclerviewHeight()
                         }
                     }
                 } else {
-                    
+                    log("reduceRecyclerviewHeight")
                     self?.reduceRecyclerviewHeight()
                     self?.showKeyBoard(view: view!)
                 }
@@ -213,7 +305,7 @@ class MyAdapter: Android.Widget.RecyclerView.Adapter {
             else { return }
         
         let newHeight = recyclerViewHeight - keyBoardHeight
-        
+        log("rvh: \(recyclerViewHeight), kh: \(keyBoardHeight), newHeight: \(newHeight)")
         recyclerView.layoutParams = AndroidFrameLayoutLayoutParams(width: AndroidFrameLayoutLayoutParams.MATCH_PARENT, height: newHeight)
     }
     
