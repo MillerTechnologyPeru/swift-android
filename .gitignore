@@ -10,3 +10,4 @@ gradle
 .swiftpm
 .build
 swift/toolchain
+app/src/main/jniLibs/
