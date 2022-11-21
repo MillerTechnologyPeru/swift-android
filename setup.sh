@@ -13,7 +13,7 @@ ln -sf $XCTOOLCHAIN/usr/lib/clang/13.0.0 \
 # Install macOS dependencies
 if [[ $OSTYPE == 'darwin'* ]]; then
     echo "Install macOS build dependencies"
-    HOMEBREW_NO_AUTO_UPDATE=1 brew install wget cmake ninja android-ndk llvm
+    HOMEBREW_NO_AUTO_UPDATE=1 brew install wget cmake ninja android-ndk
 
     # Verify toolchain installed
     if [ ! -d ${XCTOOLCHAIN} ]
