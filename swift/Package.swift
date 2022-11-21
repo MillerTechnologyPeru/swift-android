@@ -14,12 +14,17 @@ let package = Package(
         ),
     ],
     dependencies: [
-        
+        .package(
+            url: "https://github.com/PureSwift/Android.git",
+            branch: "master"
+        )
     ],
     targets: [
         .target(
             name: "SwiftAndroidApp",
-            dependencies: []
+            dependencies: [
+                "Android"
+            ]
         ),
     ]
 )

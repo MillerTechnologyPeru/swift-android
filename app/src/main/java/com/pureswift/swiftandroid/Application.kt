@@ -9,6 +9,9 @@ class Application: android.app.Application() { //: SwiftApplication() {
 
         init {
             System.loadLibrary("SwiftAndroidApp")
+            didLaunch()
         }
+
+        private external fun didLaunch()
     }
 }
