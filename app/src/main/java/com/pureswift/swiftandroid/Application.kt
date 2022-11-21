@@ -8,8 +8,15 @@ class Application: android.app.Application() { //: SwiftApplication() {
     companion object {
 
         init {
-            System.loadLibrary("SwiftAndroidApp")
+            loadNativeLibrary()
             didLaunch()
+        }
+
+        fun loadNativeLibrary() {
+            System.loadLibrary("icuuc")
+            System.loadLibrary("icui18n")
+            System.loadLibrary("Foundation")
+            System.loadLibrary("SwiftAndroidApp")
         }
 
         private external fun didLaunch()

@@ -31,3 +31,19 @@ then
     echo "We need 'sudo' permission to create it (just this once)."
     sudo ln -s swift ${XCTOOLCHAIN}/usr/bin/swift-autolink-extract || exit 1
 fi
+
+# Copy Swift libraries
+mkdir -p $SRC_ROOT/app/src/main/jniLibs/$ANDROID_ARCH/
+cp -rf $SWIFT_SDK_PATH/usr/lib/swift/android/*.so \
+    $SRC_ROOT/app/src/main/jniLibs/$ANDROID_ARCH/
+# Copy C stdlib
+cp -rf $SWIFT_SDK_PATH/usr/lib/libc++_shared.so \
+    $SRC_ROOT/app/src/main/jniLibs/$ANDROID_ARCH/
+cp -rf $SWIFT_SDK_PATH/usr/lib/libicudata.so \
+    $SRC_ROOT/app/src/main/jniLibs/$ANDROID_ARCH/
+cp -rf $SWIFT_SDK_PATH/usr/lib/libicuuc.so \
+    $SRC_ROOT/app/src/main/jniLibs/$ANDROID_ARCH/
+cp -rf $SWIFT_SDK_PATH/usr/lib/libicui18n.so \
+    $SRC_ROOT/app/src/main/jniLibs/$ANDROID_ARCH/
+cp -rf $SWIFT_SDK_PATH/usr/lib/libandroid-spawn.so \
+    $SRC_ROOT/app/src/main/jniLibs/$ANDROID_ARCH/
