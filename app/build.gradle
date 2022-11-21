@@ -47,6 +47,15 @@ android {
         doNotStrip "*/armeabi-v7a/*.so"
         doNotStrip "*/x86_64/*.so"
     }
+
+    task buildSwift(type:Exec) {
+        println 'Build Swift sources'
+        commandLine './build-swift.sh'
+    }
+
+    tasks.withType(JavaCompile) {
+        compileTask -> compileTask.dependsOn buildSwift
+    }
 }
 
 dependencies {
