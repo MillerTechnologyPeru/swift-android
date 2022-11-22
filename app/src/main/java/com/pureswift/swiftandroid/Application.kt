@@ -1,9 +1,10 @@
 package com.pureswift.swiftandroid
 
-import android.app.Application
 //import org.pureswift.swiftandroidsupport.app.SwiftApplication
+//class Application: SwiftApplication() {
 
-class Application: android.app.Application() { //: SwiftApplication() {
+import android.app.Application
+class Application: android.app.Application() {
 
     companion object {
 
@@ -12,7 +13,7 @@ class Application: android.app.Application() { //: SwiftApplication() {
             didLaunch()
         }
 
-        fun loadNativeLibrary() {
+        private fun loadNativeLibrary() {
             System.loadLibrary("icuuc")
             System.loadLibrary("icui18n")
             System.loadLibrary("Foundation")
