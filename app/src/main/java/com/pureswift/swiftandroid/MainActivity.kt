@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.platform.LocalInspectionMode
 import com.pureswift.swiftandroid.ui.theme.SwiftAndroidTheme
 
 class MainActivity : ComponentActivity() {
@@ -33,10 +34,23 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = greetingNative(name))
+    Text(text = greeting(name))
+}
+
+@Composable
+fun greeting(name: String): String {
+    if (LocalInspectionMode.current) {
+        return greetingMock(name)
+    } else {
+        return greetingNative(name)
+    }
 }
 
 external fun greetingNative(name: String): String
+
+fun greetingMock(name: String): String {
+    return "Hello $name"
+}
 
 @Preview(showBackground = true)
 @Composable
