@@ -1,5 +1,8 @@
 import Foundation
 import Android
+import java_swift
+import java_lang
+import CJavaVM
 
 public final class SwiftAndroidApp: SwiftApplication {
 
@@ -29,4 +32,25 @@ public final class SwiftAndroidApp: SwiftApplication {
         NSLog("\(#function)")
         return SwiftAndroidApp.self
     }
+}
+
+func greeting(name: String) -> String {
+    var greeting = "Hello \(name)! ✋" + "\n"
+    greeting += SwiftAndroidApp.formatter.string(from: Date()) + "\n"
+    return greeting
+}
+
+@_silgen_name("Java_com_pureswift_swiftandroid_MainActivityKt_greetingNative")
+public func java_greeting(
+    _ __env: UnsafeMutablePointer<JNIEnv?>,
+    _ __this: jobject?,
+    _ __arg0: jobject?
+) -> jvalue {
+    assert(__arg0 != nil)
+    let name = String(javaObject: __arg0)
+    let string = greeting(name: name)
+    var __locals = [jobject]()
+    var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    __args[0] = JNIType.toJava( value: string, locals: &__locals )
+    return __args[0]
 }

@@ -33,8 +33,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    Text(text = greetingNative(name))
 }
+
+external fun greetingNative(name: String): String
 
 @Preview(showBackground = true)
 @Composable
