@@ -17,4 +17,8 @@ class Application: SwiftApplication() {
             System.loadLibrary("SwiftAndroidApp")
         }
     }
+
+    fun updateView(devices: java.util.ArrayList<BluetoothDevice>) {
+        android.util.Log.i("Application", "$devices")
+    }
 }

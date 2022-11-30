@@ -37,21 +37,24 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        Timer().schedule(3000) {
-            val devices = devices()
-            android.util.Log.i("Swift", "Load devices $devices")
-            setContent {
-                if (devices.isEmpty()) {
-                    Column {
-                        Greeting("Android")
-                        Text(text = "No Bluetooth devices")
-                    }
-                } else {
-                    LazyColumn {
-                        devices.map {
-                            item(key = it.id) {
-                                BluetoothScanResultView(it)
-                            }
+        Timer().schedule(5000) {
+            updateView()
+        }
+    }
+
+    fun updateView() {
+        val devices = devices()
+        setContent {
+            if (devices.isEmpty()) {
+                Column {
+                    Greeting("Android")
+                    Text(text = "No Bluetooth devices")
+                }
+            } else {
+                LazyColumn {
+                    devices.map {
+                        item(key = it.id) {
+                            BluetoothScanResultView(it)
                         }
                     }
                 }
