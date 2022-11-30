@@ -6,7 +6,25 @@
       "location" : "https://github.com/PureSwift/Android.git",
       "state" : {
         "branch" : "master",
-        "revision" : "4d54367375276a23999740b2b5b721017b4a01cf"
+        "revision" : "14932c09843c26781c9fe956e60af71be6743d1c"
+      }
+    },
+    {
+      "identity" : "androidbluetooth",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/PureSwift/AndroidBluetooth.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "1060ec56432a8e87ed0fdc679718233c92fa3506"
+      }
+    },
+    {
+      "identity" : "bluetooth",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/PureSwift/Bluetooth.git",
+      "state" : {
+        "revision" : "d493bd427c95913ea1f78091384dfa5321ac8593",
+        "version" : "6.2.2"
       }
     },
     {
@@ -16,6 +34,15 @@
       "state" : {
         "branch" : "master",
         "revision" : "3b19893aa50a724c467d341c482087c30323b190"
+      }
+    },
+    {
+      "identity" : "gatt",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/PureSwift/GATT.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "0bf40a7e52cfed3d8740b0a1fea776f9f338aa9c"
       }
     },
     {
@@ -33,7 +60,7 @@
       "location" : "https://github.com/PureSwift/java_swift.git",
       "state" : {
         "branch" : "master",
-        "revision" : "9c918d1d4c17cbb9476332c8494b1caa6cb10d89"
+        "revision" : "0de2d75c736b3524d1f1e5fc5d8ef8fe9064d8a0"
       }
     },
     {
