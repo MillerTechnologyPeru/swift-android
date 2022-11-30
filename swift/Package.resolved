@@ -6,7 +6,7 @@
       "location" : "https://github.com/PureSwift/Android.git",
       "state" : {
         "branch" : "master",
-        "revision" : "14932c09843c26781c9fe956e60af71be6743d1c"
+        "revision" : "f00c184a7f8f66acad8d58b85c4f64bd89ff423a"
       }
     },
     {
@@ -69,7 +69,7 @@
       "location" : "https://github.com/PureSwift/java_swift.git",
       "state" : {
         "branch" : "master",
-        "revision" : "0de2d75c736b3524d1f1e5fc5d8ef8fe9064d8a0"
+        "revision" : "e6b10cc6cdc82a8b31f84f2c390ccf8f20ea4369"
       }
     },
     {

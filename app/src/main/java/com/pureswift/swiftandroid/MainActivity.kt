@@ -17,37 +17,31 @@ import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.pureswift.swiftandroid.ui.theme.SwiftAndroidTheme
+import org.pureswift.swiftandroidsupport.app.SwiftComponentActivity
 import java.util.*
 import kotlin.concurrent.schedule
 
-class MainActivity : ComponentActivity() {
+class MainActivity : SwiftComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        println("MainActivity")
         android.util.Log.i("Activity", "Loading Main Activity")
 
         setContent {
             SwiftAndroidTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
-                    Greeting("Android")
+                    Text("Loading...")
                 }
             }
         }
-
-        Timer().schedule(5000) {
-            updateView()
-        }
     }
 
-    fun updateView() {
-        val devices = devices()
+    fun updateView(devices: ArrayList<BluetoothDevice>) {
         setContent {
             if (devices.isEmpty()) {
                 Column {
-                    Greeting("Android")
                     Text(text = "No Bluetooth devices")
                 }
             } else {
@@ -61,8 +55,6 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-
-    private external fun devices(): ArrayList<BluetoothDevice>
 }
 
 data class BluetoothDevice(
@@ -72,11 +64,6 @@ data class BluetoothDevice(
     val name: String? = null,
     val company: String? = null
 )
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = greeting(name))
-}
 
 @Composable
 fun BluetoothScanResultView(scanData: BluetoothDevice) {
@@ -89,28 +76,5 @@ fun BluetoothScanResultView(scanData: BluetoothDevice) {
         if (scanData.company != null) {
             Text("${scanData.company}")
         }
-    }
-}
-
-@Composable
-fun greeting(name: String): String {
-    if (LocalInspectionMode.current) {
-        return greetingMock(name)
-    } else {
-        return greetingNative(name)
-    }
-}
-
-external fun greetingNative(name: String): String
-
-fun greetingMock(name: String): String {
-    return "Hello $name"
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    SwiftAndroidTheme {
-        Greeting("Android")
     }
 }
