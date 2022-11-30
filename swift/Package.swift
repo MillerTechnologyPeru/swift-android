@@ -21,6 +21,10 @@ let package = Package(
         .package(
             url: "https://github.com/PureSwift/AndroidBluetooth.git",
             branch: "master"
+        ),
+        .package(
+            url: "https://github.com/PureSwift/JavaCoder.git",
+            branch: "master"
         )
     ],
     targets: [
@@ -28,7 +32,8 @@ let package = Package(
             name: "SwiftAndroidApp",
             dependencies: [
                 "Android",
-                "AndroidBluetooth"
+                "AndroidBluetooth",
+                "JavaCoder"
             ]
         ),
     ]

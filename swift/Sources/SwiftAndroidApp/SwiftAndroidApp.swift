@@ -1,9 +1,12 @@
 import Foundation
 import Android
 import AndroidBluetooth
+import Bluetooth
+import GATT
 import java_swift
 import java_lang
 import CJavaVM
+import JavaCoder
 
 public final class SwiftAndroidApp: SwiftApplication {
 
@@ -13,6 +16,8 @@ public final class SwiftAndroidApp: SwiftApplication {
         formatter.dateStyle = .full
         return formatter
     }()
+    
+    static var foundDevices = [String: BluetoothDevice]()
     
     public override func onCreate() {
         super.onCreate()
@@ -27,6 +32,9 @@ public final class SwiftAndroidApp: SwiftApplication {
         NSLog("\(Self.formatter.string(from: date))")
         NSLog("\(UUID())")
         
+        // Setup encoder
+        JavaCoderConfig.RegisterBasicJavaTypes()
+        
         // Request Bluetooth permissions
         
         Task {
@@ -37,7 +45,25 @@ public final class SwiftAndroidApp: SwiftApplication {
                 NSLog("Error: \(error)")
             }
         }
+        
+        Task {
+            
+        }
     }
+    
+}
+
+struct BluetoothDevice: Equatable, Hashable, Codable {
+    
+    let id: String
+    
+    let date: Foundation.Date
+    
+    let address: String
+    
+    let name: String?
+    
+    let company: String?
 }
 
 @_silgen_name("SwiftAndroidMainActivity")
@@ -76,7 +102,7 @@ public func java_greeting(
 func scan(context: Android.Content.Context) async throws {
     
     guard let hostController = Android.Bluetooth.Adapter.default else {
-        return
+        throw AndroidCentralError.bluetoothDisabled
     }
     let central = AndroidCentral(
         hostController: hostController,
@@ -92,5 +118,30 @@ func scan(context: Android.Content.Context) async throws {
         if let manufacturerData = scanData.advertisementData.manufacturerData {
             NSLog("\(manufacturerData.companyIdentifier)")
         }
+        let device = BluetoothDevice(
+            id: scanData.peripheral.description,
+            date: scanData.date,
+            address: scanData.peripheral.id.description,
+            name: scanData.advertisementData.localName,
+            company: scanData.advertisementData.manufacturerData?.companyIdentifier.name
+        )
+        SwiftAndroidApp.foundDevices[device.id] = device
+    }
+}
+
+@_silgen_name("Java_com_pureswift_swiftandroid_MainActivity_devices")
+public func java_devices(
+    _ __env: UnsafeMutablePointer<JNIEnv?>,
+    _ __this: jobject?
+) -> jobject? {
+    let encoder = JavaEncoder(forPackage: "com.pureswift.swiftandroid")
+    do {
+        let values = SwiftAndroidApp.foundDevices.values.sorted(by: { $0.id < $1.id })
+        NSLog("Found \(values.count) devices")
+        return try encoder.encode(values)
+    }
+    catch {
+        NSLog("Unable to encode Java Object. \(error)")
+        return nil
     }
 }
