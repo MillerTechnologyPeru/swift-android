@@ -1,16 +1,13 @@
 package com.pureswift.swiftandroid
 
-//import org.pureswift.swiftandroidsupport.app.SwiftApplication
-//class Application: SwiftApplication() {
+import org.pureswift.swiftandroidsupport.app.SwiftApplication
 
-import android.app.Application
-class Application: android.app.Application() {
+class Application: SwiftApplication() {
 
     companion object {
 
         init {
             loadNativeLibrary()
-            didLaunch()
         }
 
         private fun loadNativeLibrary() {
@@ -19,7 +16,5 @@ class Application: android.app.Application() {
             System.loadLibrary("Foundation")
             System.loadLibrary("SwiftAndroidApp")
         }
-
-        private external fun didLaunch()
     }
 }

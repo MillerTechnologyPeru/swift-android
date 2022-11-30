@@ -17,13 +17,18 @@ let package = Package(
         .package(
             url: "https://github.com/PureSwift/Android.git",
             branch: "master"
+        ),
+        .package(
+            url: "https://github.com/PureSwift/AndroidBluetooth.git",
+            branch: "master"
         )
     ],
     targets: [
         .target(
             name: "SwiftAndroidApp",
             dependencies: [
-                "Android"
+                "Android",
+                "AndroidBluetooth"
             ]
         ),
     ]
