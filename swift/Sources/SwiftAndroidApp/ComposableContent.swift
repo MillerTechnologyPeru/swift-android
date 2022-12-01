@@ -31,20 +31,20 @@ open class ComposableContent: JavaObject {
         )
     }
     
-    open func composeContents(compose: (JavaObject, Int32)) {
-        text("Hi ✋! \(Date())", compose)
+    open func composeContents(_ composer: Composer) {
+        text("Hi ✋! \(Date())", composer)
     }
     
     /// Composable Text builder
     ///
     /// `public final void text(java.lang.String, androidx.compose.runtime.Composer, int);`
-    public func text(_ text: String, _ compose: (JavaObject, Int32)) {
+    public func text(_ text: String, _ composer: Composer) {
         
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         __args[0] = JNIType.toJava(value: text, locals: &__locals)
-        __args[1] = JNIType.toJava(value: compose.0, locals: &__locals )
-        __args[2] = JNIType.toJava(value: compose.1, locals: &__locals )
+        __args[1] = jvalue(l: composer.object)
+        __args[2] = jvalue(i: composer.intValue)
         
         JNIMethod.CallVoidMethod(
             object: javaObject,
@@ -55,6 +55,13 @@ open class ComposableContent: JavaObject {
             locals: &__locals
         )
     }
+}
+
+public struct Composer {
+    
+    let object: jobject
+    
+    let intValue: jint
 }
 
 extension ComposableContent {
@@ -93,8 +100,11 @@ public extension ComposableContent {
     ) {
         
         let composableContent = ComposableContent.swiftObject(from: __swiftObject)
-        let composer = JavaObject(javaObject: __composer)
-        composableContent?.composeContents(compose: (composer, __composerInt))
+        let composer = Composer(
+            object: __composer,
+            intValue: __composerInt
+        )
+        composableContent?.composeContents(composer)
     }
     
     @_silgen_name("Java_com_pureswift_swiftandroid_ComposableContent_finalizeNative")
