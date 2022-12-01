@@ -9,6 +9,7 @@ import Foundation
 import Android
 import JNI
 import java_swift
+import java_lang
 
 /// Composable Content
 open class ComposableContent: JavaObject {
@@ -32,7 +33,11 @@ open class ComposableContent: JavaObject {
     }
     
     open func composeContents(_ composer: Composer) {
-        text("Hi ✋! \(Date())", composer)
+        let dataSource = LazyColumnDataSource(count: { 10 }, key: { JavaString("\($0)") }) { [unowned self] (row, composer) in
+            text("Hi row \(row) ✋! \(Date())", composer)
+        }
+        lazyColumn(dataSource, composer)
+        //text("Hi ✋! \(Date())", composer)
     }
     
     /// Composable Text builder
@@ -55,6 +60,24 @@ open class ComposableContent: JavaObject {
             locals: &__locals
         )
     }
+    
+    public func lazyColumn(_ dataSource: LazyColumnDataSource, _ composer: Composer) {
+        
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        __args[0] = JNIType.toJava(value: dataSource, locals: &__locals)
+        __args[1] = jvalue(l: composer.object)
+        __args[2] = jvalue(i: composer.intValue)
+        
+        JNIMethod.CallVoidMethod(
+            object: javaObject,
+            methodName: "lazyColumn",
+            methodSig: "(Lcom/pureswift/swiftandroid/LazyColumnDataSource;Landroidx/compose/runtime/Composer;I)V",
+            methodCache: &JNICache.MethodID.lazyColumn,
+            args: &__args,
+            locals: &__locals
+        )
+    }
 }
 
 public struct Composer {
@@ -72,6 +95,7 @@ extension ComposableContent {
             
             static var setContent: jmethodID?
             static var text: jmethodID?
+            static var lazyColumn: jmethodID?
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.pureswift.swiftandroid
 
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import org.pureswift.swiftandroidsupport.app.SwiftComponentActivity
@@ -18,7 +19,7 @@ open class ComposableContent(val activity: SwiftComponentActivity) {
     @Composable
     private external fun composeContents(__swiftObject: Long)
 
-    fun setContent() {
+    internal fun setContent() {
         activity.setContent {
             composeContents(__swiftObject)
         }
@@ -27,5 +28,16 @@ open class ComposableContent(val activity: SwiftComponentActivity) {
     @Composable
     fun text(text: String) {
         Text(text = text)
+    }
+
+    @Composable
+    fun lazyColumn(dataSource: LazyColumnDataSource) {
+        LazyColumn {
+            items(
+                count = dataSource.count(),
+                key = { dataSource.keyForRow(it) },
+                itemContent = { dataSource.content(it) }
+            )
+        }
     }
 }
