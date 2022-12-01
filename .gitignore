@@ -1,8 +1,13 @@
 *.iml
 .gradle
+gradle
 /local.properties
 .idea
 .DS_Store
 /build
 /captures
 .externalNativeBuild
+.swiftpm
+.build
+swift/toolchain
+app/src/main/jniLibs/
