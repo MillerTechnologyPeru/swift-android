@@ -57,6 +57,21 @@ public final class LazyColumnDataSource: JavaObject {
     }
 }
 
+public extension LazyColumnDataSource {
+    
+    convenience init<C>(
+        _ collection: C,
+        key: @escaping (C.Element) -> JavaObject,
+        content: @escaping (C.Element, Composer) -> ()
+    ) where C: RandomAccessCollection, C.Index == Int {
+        self.init(
+            count: { collection.count },
+            key: { key(collection[$0]) },
+            content: { content(collection[$0], $1) }
+        )
+    }
+}
+
 extension LazyColumnDataSource: JNIListener { }
 
 public extension LazyColumnDataSource {

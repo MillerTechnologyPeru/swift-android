@@ -33,11 +33,13 @@ open class ComposableContent: JavaObject {
     }
     
     open func composeContents(_ composer: Composer) {
-        let dataSource = LazyColumnDataSource(count: { 10 }, key: { JavaString("\($0)") }) { [unowned self] (row, composer) in
-            text("Hi row \(row) ✋! \(Date())", composer)
+        //text("Hi ✋! \(Date())", composer)
+        let data = (0 ..< 15)
+            .map { (UUID(), $0) }
+        let dataSource = LazyColumnDataSource(data, key: { JavaString("\($0.0)") }) { [unowned self] (element, composer) in
+            text("Row \(element.1) \(element.0) ✋! \(Date())", composer)
         }
         lazyColumn(dataSource, composer)
-        //text("Hi ✋! \(Date())", composer)
     }
     
     /// Composable Text builder
