@@ -16,27 +16,43 @@ import java_swift
 import java_lang
 import CJavaVM
 
+@available(macOS 13.0, *)
+@MainActor
 final class MainActivity: SwiftComponentActivity {
     
     var foundDevices = [String: BluetoothDevice]()
     
-    override func onCreate(savedInstanceState: Android.OS.Bundle?) {
+    override nonisolated func onCreate(savedInstanceState: Android.OS.Bundle?) {
         super.onCreate(savedInstanceState: savedInstanceState)
         
+        drainMainQueue()
+        
+        // setup activity
         didLoad()
     }
     
-    private func didLoad() {
+    private nonisolated func didLoad() {
         // TODO: Request Bluetooth permissions
         
         // Start scan
         Task {
             do {
-                try? await Task.sleep(for: .seconds(3))
                 try await scan()
             }
             catch {
                 NSLog("Error: \(error)")
+            }
+        }
+    }
+    
+    private nonisolated func drainMainQueue() {
+        // drain main queue
+        Task { [weak self] in
+            while let self = self {
+                try? await Task.sleep(for: .milliseconds(100))
+                self.runOnMainThread {
+                    RunLoop.main.run(until: Date() + 0.01)
+                }
             }
         }
     }
@@ -65,10 +81,24 @@ final class MainActivity: SwiftComponentActivity {
         )
     }
     
+    private func _updateView() {
+        
+        var __locals = [jobject]()
+        var __args = [jvalue]()
+        JNIMethod.CallVoidMethod(
+            object: javaObject,
+            methodName: "updateView",
+            methodSig: "()V",
+            methodCache: &JNICache.MethodID.updateView,
+            args: &__args,
+            locals: &__locals
+        )
+    }
+    
     private func scan() async throws {
         
         // setup central
-        guard let hostController = Android.Bluetooth.Adapter.default else {
+        guard let hostController = Android.Bluetooth.Adapter.default, hostController.isEnabled() else {
             throw AndroidCentralError.bluetoothDisabled
         }
         let central = AndroidCentral(
@@ -94,12 +124,9 @@ final class MainActivity: SwiftComponentActivity {
                 name: scanData.advertisementData.localName,
                 company: scanData.advertisementData.manufacturerData?.companyIdentifier.name
             )
-            self.foundDevices[device.id] = device
             // update UI
-            runOnMainThread { [unowned self] in
-                RunLoop.main.run(until: Date() + 0.01)
-                self.updateView()
-            }
+            self.foundDevices[device.id] = device
+            self.updateView()
         }
     }
 }
